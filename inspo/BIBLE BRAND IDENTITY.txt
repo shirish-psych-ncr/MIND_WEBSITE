@@ -1,0 +1,4223 @@
+# Qwen Conversation: Brand Identity Blueprint
+
+- Exported: 6/22/2026, 2:01:14 AM
+- Text method: API first, visible DOM fallback (fast default)
+- Text format: Markdown
+- Media method: Links plus embeds
+- Messages: 19
+- Media items: 78
+- URL: https://chat.qwen.ai/c/0000f973-1796-4fbb-b6e6-f318c98b73ef
+
+---
+
+## User 1
+
+extract analyse and curate all ui, ux, content, copywrite, branding, everything that makes or breaks a brand, extensive lists of what all the website covers and where and how, what stack, what elements and placements, everything, the very language of that page, and its literature. first, brainstorm and fix for yourself in place, everything you shall be extracting. also, the curation part must never include lardy overviews and explanations
+
+---
+
+## Assistant 2
+
+**EXTRACTION FRAMEWORK & TAXONOMY (FIXED)**
+
+**I. UI & Visual Design System**
+*   **Color Architecture:** Primary, secondary, tertiary, semantic (success/warning/error), neutrals, dark/light mode variables, gradient definitions (Hex/RGB/HSL).
+*   **Typography Scale:** Font families (display, body, mono), weights, size scales (rem/px), line-heights, letter-spacing, paragraph widths.
+*   **Geometry & Spacing:** Grid systems (columns, gutters), spacing scale (4pt/8pt), border radii, box-shadow depths, stroke widths.
+*   **Iconography & Imagery:** Icon style (stroke/filled/duotone), imagery style (photography, 3D, vector, abstract), image treatments (masks, overlays, aspect ratios).
+*   **Motion & Interaction:** Animation durations, easing curves (cubic-bezier), scroll-triggered effects, hover/focus states, page transitions, micro-interactions.
+
+**II. UX & Information Architecture**
+*   **Navigation Structures:** Global (header/footer), local (sidebar/breadcrumbs/tabs), mobile (hamburger/bottom bar), mega-menus, search functionality.
+*   **Layout & Composition:** Hero section anatomy, content block modularity, whitespace ratios, visual hierarchy, Z-pattern/F-pattern adherence.
+*   **State Management:** Default, hover, active, focus, disabled, loading (skeletons/spinners), empty, error, success, offline.
+*   **Accessibility (a11y):** WCAG compliance level, contrast ratios, ARIA implementation, keyboard navigation flow, screen reader optimization, focus indicators.
+*   **Responsive Behavior:** Breakpoints, element stacking order, touch-target sizing, mobile-specific feature toggling.
+
+**III. Content & Copywriting**
+*   **Voice & Tone:** Brand persona, formality index, emotional valence, empathy markers, authority indicators.
+*   **Structural Syntax:** Headline formulas, subhead hierarchy, paragraph length constraints, bulleted list formatting, bold/italic usage rules.
+*   **Conversion Copy:** CTA action verbs, urgency/scarcity triggers, value-prop clarity, friction-reducing microcopy (e.g., "No credit card required").
+*   **Microcopy & System Text:** Form labels, placeholder text, validation/error messages, tooltip copy, 404/500 page copy, cookie consent text.
+*   **Linguistic Patterns:** Jargon vs. plain language ratio, active vs. passive voice, sentence complexity, rhetorical devices, narrative arc (Problem-Agitate-Solve).
+
+**IV. Branding & Positioning**
+*   **Brand Identity:** Archetype, core values, mission/vision alignment, unique selling proposition (USP), points of parity/difference.
+*   **Trust & Authority:** Social proof types (client logos, video testimonials, text quotes, case study metrics), security badges, industry certifications, media mentions.
+*   **Psychological Triggers:** Reciprocity, commitment/consistency, social proof, authority, liking, scarcity (Cialdini’s principles application).
+
+**V. Element Placement & Page Literature**
+*   **Section Flow:** Above-the-fold priority, narrative pacing, scroll-depth engagement drops, visual anchor placement.
+*   **Component Hierarchy:** Feature grids, pricing table structures, testimonial carousels, FAQ accordions, comparison tables, team bios.
+*   **Conversion Mechanics:** Form length and field types, checkout flow steps, exit-intent trigger placements, sticky CTA behaviors.
+
+**VI. Technology & Infrastructure Stack**
+*   **Frontend:** Frameworks (React, Vue, Svelte, etc.), CSS architecture (Tailwind, BEM, CSS-in-JS), animation libraries (Framer, GSAP).
+*   **Backend & CMS:** Architecture (headless, monolithic, JAMstack), database, content management system (Contentful, Sanity, WordPress).
+*   **Performance & Hosting:** CDN providers, edge computing, image optimization pipelines, Core Web Vitals optimization tactics.
+*   **Analytics & Tracking:** Event tracking setups, heatmaps/session recording, A/B testing tools, tag management.
+*   **Third-Party Integrations:** Payment gateways, live chat/intercom, CRM connectors, marketing automation, personalization engines.
+
+**VII. SEO & Metadata Architecture**
+*   **On-Page SEO:** Title tag formulas, meta description structures, H1-H6 hierarchy, URL slug conventions, internal linking strategy.
+*   **Technical SEO:** Schema markup (JSON-LD), canonical tags, hreflang implementation, XML sitemap structure, robots.txt directives.
+
+***
+
+**STATUS:** Framework fixed. Awaiting target URL or specific web property to execute extraction.
+
+---
+
+## User 3
+
+<!DOCTYPE html>
+<html lang="en-AU" id="">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.8 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Services |</title>
+	<meta name="description" content="End-to-end brand building, positioning and strategy. Human-centred digital product design. Effective storytelling through content production." />
+	<link rel="canonical" href="https://olivergrace.com.au/services/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Services |" />
+	<meta property="og:description" content="End-to-end brand building, positioning and strategy. Human-centred digital product design. Effective storytelling through content production." />
+	<meta property="og:url" content="https://olivergrace.com.au/services/" />
+	<meta property="og:site_name" content="Oliver Grace" />
+	<meta property="article:modified_time" content="2023-09-05T21:42:02+00:00" />
+	<meta property="og:image" content="https://olivergrace.com.au/wp-content/uploads/2023/08/Oliver-Grace-Logo.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="675" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":["Article","BlogPosting"],"@id":"https:\/\/olivergrace.com.au\/services\/#article","isPartOf":{"@id":"https:\/\/olivergrace.com.au\/services\/"},"author":{"name":"og_admin","@id":"https:\/\/olivergrace.com.au\/#\/schema\/person\/0ec5820d1bc22e1b3ac42ecc2dcf84a2"},"headline":"Services","datePublished":"2023-04-18T10:58:58+00:00","dateModified":"2023-09-05T21:42:02+00:00","mainEntityOfPage":{"@id":"https:\/\/olivergrace.com.au\/services\/"},"wordCount":1,"publisher":{"@id":"https:\/\/olivergrace.com.au\/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https:\/\/olivergrace.com.au\/services\/","url":"https:\/\/olivergrace.com.au\/services\/","name":"Services |","isPartOf":{"@id":"https:\/\/olivergrace.com.au\/#website"},"datePublished":"2023-04-18T10:58:58+00:00","dateModified":"2023-09-05T21:42:02+00:00","description":"End-to-end brand building, positioning and strategy. Human-centred digital product design. Effective storytelling through content production.","breadcrumb":{"@id":"https:\/\/olivergrace.com.au\/services\/#breadcrumb"},"inLanguage":"en-AU","potentialAction":[{"@type":"ReadAction","target":["https:\/\/olivergrace.com.au\/services\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/olivergrace.com.au\/services\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/olivergrace.com.au\/"},{"@type":"ListItem","position":2,"name":"Services"}]},{"@type":"WebSite","@id":"https:\/\/olivergrace.com.au\/#website","url":"https:\/\/olivergrace.com.au\/","name":"Oliver Grace","description":"A strategic creative studio","publisher":{"@id":"https:\/\/olivergrace.com.au\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/olivergrace.com.au\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-AU"},{"@type":"Organization","@id":"https:\/\/olivergrace.com.au\/#organization","name":"Oliver Grace","alternateName":"OG","url":"https:\/\/olivergrace.com.au\/","logo":{"@type":"ImageObject","inLanguage":"en-AU","@id":"https:\/\/olivergrace.com.au\/#\/schema\/logo\/image\/","url":"https:\/\/olivergrace.com.au\/wp-content\/uploads\/2023\/08\/oliver-grace-logo.svg","contentUrl":"https:\/\/olivergrace.com.au\/wp-content\/uploads\/2023\/08\/oliver-grace-logo.svg","width":496,"height":496,"caption":"Oliver Grace"},"image":{"@id":"https:\/\/olivergrace.com.au\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.instagram.com\/olivergrace.studio\/","https:\/\/www.linkedin.com\/company\/oliver-grace\/about\/"]},{"@type":"Person","@id":"https:\/\/olivergrace.com.au\/#\/schema\/person\/0ec5820d1bc22e1b3ac42ecc2dcf84a2","name":"og_admin","image":{"@type":"ImageObject","inLanguage":"en-AU","@id":"https:\/\/secure.gravatar.com\/avatar\/a9ee644841377c6850bc7db1773aba0486c25e0704a3e0dc1ce0f95234526b9f?s=96&d=mm&r=g","url":"https:\/\/secure.gravatar.com\/avatar\/a9ee644841377c6850bc7db1773aba0486c25e0704a3e0dc1ce0f95234526b9f?s=96&d=mm&r=g","contentUrl":"https:\/\/secure.gravatar.com\/avatar\/a9ee644841377c6850bc7db1773aba0486c25e0704a3e0dc1ce0f95234526b9f?s=96&d=mm&r=g","caption":"og_admin"},"sameAs":["https:\/\/olivergrace.com.au"],"url":"https:\/\/olivergrace.com.au\/author\/og_admin\/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://olivergrace.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Folivergrace.com.au%2Fservices%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://olivergrace.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Folivergrace.com.au%2Fservices%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='jvm-rich-text-icons-icon-font-css-css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css?ver=7.0' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='contact-form-7-css' href='https://olivergrace.com.au/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1' media='all' />
+<link rel='stylesheet' id='style-css' href='https://olivergrace.com.au/wp-content/themes/olivergrace/assets/css/style.css?ver=1776075459' media='all' />
+<script id="jquery-core-js" src="https://olivergrace.com.au/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://olivergrace.com.au/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="gasp-js" src="https://olivergrace.com.au/wp-content/themes/olivergrace/assets/js/gsap.min.js?ver=7.0"></script>
+<script id="ScrollTrigger-js" src="https://olivergrace.com.au/wp-content/themes/olivergrace/assets/js/ScrollTrigger.min.js?ver=7.0"></script>
+<script id="rellax-js" src="https://olivergrace.com.au/wp-content/themes/olivergrace/assets/js/rellax.min.js?ver=7.0"></script>
+<script id="lenis-js" src="https://olivergrace.com.au/wp-content/themes/olivergrace/assets/js/lenis.min.js?ver=7.0"></script>
+<script id="animateNumber-js" src="https://olivergrace.com.au/wp-content/themes/olivergrace/assets/js/jquery.animateNumber.min.js?ver=7.0"></script>
+<script id="slick-js" src="https://olivergrace.com.au/wp-content/themes/olivergrace/assets/js/slick.min.js?ver=7.0"></script>
+<link rel="https://api.w.org/" href="https://olivergrace.com.au/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://olivergrace.com.au/wp-json/wp/v2/pages/10" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://olivergrace.com.au/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://olivergrace.com.au/?p=10' />
+<link rel="icon" href="https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-270x270.png" />
+<style id="wp-custom-css">
+.block-text .data .item  span:not(.num) {
+	font-family: var(--mtc-font-monospace);
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+@media (min-width: 1440px) {
+	.block-text .data .item  span:not(.num){ 
+		font-size: clamp(48px, 3.3333333333vw, 76px);
+	}
+}
+@media (max-width: 575.98px) {
+	.block-text .data .item  span:not(.num){ 
+		font-size: 28px;
+	}
+	.block-media--mockup .mockup .img.border-1 .img-box{
+		    border: solid 2px var(--border);
+	}
+}
+.new-template .wrapper.article li {
+	font-family: "Suisse" !important;
+	color: #8d8d8d;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24.8px;
+}
+@media (min-width: 1440px) {
+	.new-template .wrapper.article li{ 
+			font-size: clamp(16px, 1.1111111111vw, 25.3333333333px);
+			line-height: clamp(24.8px, 1.7222222222vw, 39.2666666667px);
+	}
+}
+@media (max-width: 575.98px) {
+	.new-template .wrapper.article li{ 
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
+</style>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-51PNNJ7WBX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-51PNNJ7WBX');
+</script>
+
+
+<!-- Hotjar Tracking Code for Oliver Grace -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6519074,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script></head>
+
+
+<body class="wp-singular page-template-default page page-id-10 wp-custom-logo wp-embed-responsive wp-theme-olivergrace">
+	<header class="navbar is-filter">
+		<div class="container">
+						<a href="https://olivergrace.com.au" title="Oliver Grace" class="navbar-brand">
+									<img class="is-dark" src="https://olivergrace.com.au/wp-content/uploads/2023/05/OG-LOGO-TAN.svg" alt="Oliver Grace" />
+					<img class="is-white" src="https://olivergrace.com.au/wp-content/uploads/2023/05/logo-white.svg" alt="Oliver Grace" />
+							</a>
+
+			<button class="navbar-toggler" type="button" data-target="#main-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="navbar-menu is-tablet">
+				<ul id="menu-header-menu" class="menu"><li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a title="Work" href="https://olivergrace.com.au/work/"><span class="before">Work</span><span class="after">Work</span></a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page active page_item page-item-10 active menu-item-22"><a title="Services" href="https://olivergrace.com.au/services/" aria-current="page"><span class="before">Services</span><span class="after">Services</span></a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a title="About" href="https://olivergrace.com.au/about/"><span class="before">About</span><span class="after">About</span></a></li>
+<li id="menu-item-1929" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1929"><a href="https://olivergrace.com.au/contact-us/"><span class="before">Contact</span><span class="after">Contact</span></a></li>
+</ul>			</div>
+			<div class="navbar-menu is-mobile" id="main-menu">
+
+				<div class="menu-box">
+					<ul id="menu-header-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a title="Work" href="https://olivergrace.com.au/work/"><span class="before">Work</span><span class="after">Work</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page active page_item page-item-10 active menu-item-22"><a title="Services" href="https://olivergrace.com.au/services/" aria-current="page"><span class="before">Services</span><span class="after">Services</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a title="About" href="https://olivergrace.com.au/about/"><span class="before">About</span><span class="after">About</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1929"><a href="https://olivergrace.com.au/contact-us/"><span class="before">Contact</span><span class="after">Contact</span></a></li>
+</ul>				</div>
+													<div class="menu-addresses">
+																				<div class="menu-address">
+								<div class="title">Find us</div>
+																	<p><a href="https://maps.app.goo.gl/Ns2yvKy63qVNUdH48" target="_blank">L3 80 Dorcas St, Southbank, Melbourne, Victoria 3006</a></p>
+															</div>
+																				<div class="menu-address">
+								<div class="title"></div>
+															</div>
+											</div>
+													<div class="menu-socials">
+						<ul class="d-flex align-items-center gap-3">
+																																<li>
+										<a href="https://www.instagram.com/olivergrace.studio/?hl=en" target="_blank" title="Instagram">
+											<span class="before fab fa-instagram"></span>
+											<span class="after fab fa-instagram"></span>
+										</a>
+									</li>
+																																								<li>
+										<a href="https://www.linkedin.com/company/oliver-grace/about/" target="_blank" title="Linkedin">
+											<span class="before fab fa-linkedin-in"></span>
+											<span class="after fab fa-linkedin-in"></span>
+										</a>
+									</li>
+																					</ul>
+					</div>
+							</div>
+			<div class="navbar-mask">
+			</div>
+										<div class="navbar-round-text">
+					<div class="cont">
+						<span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/05/og-roundel-02.svg);"></span>
+					</div>
+				</div>
+					</div>
+
+	</header>
+
+			<section class="block-banner-anchor d-none d-lg-block">
+			<div class="anchor">
+				<a class="item" href="#brand-strategy">Brand Strategy</a><a class="item" href="#experience-design">Experience Design</a><a class="item" href="#content-production">Content Production</a>			</div>
+		</section>
+	
+
+  	 		 			<main class="wrapper">
+ 				<div class="container">
+ 					<section class="block-banner wowo is-delay-nth is-anchor gsap-banner" id='acf-block-64755d0f49e3c'>
+  <div class="content">
+        <div class="row">
+                        <div class="col-12 col-xl-11 anim-scroll">
+            <div class="overline anim-scroll delay-anim-1">Our services</div>
+            <h1 class="title">
+                              <div class="gasp-lines"><span class='type'>C</span><span class='type'>r</span><span class='type'>e</span><span class='type'>a</span><span class='type'>t</span><span class='type'>i</span><span class='type'>v</span><span class='type'>e</span><span class='type'> </span><span class='type'>t</span><span class='type'>h</span><span class='type'>i</span><span class='type'>n</span><span class='type'>k</span><span class='type'>i</span><span class='type'>n</span><span class='type'>g</span><span class='type'>.</span><span class='type'> </span></div>
+                              <div class="gasp-lines"><span class='type'>C</span><span class='type'>r</span><span class='type'>e</span><span class='type'>a</span><span class='type'>t</span><span class='type'>i</span><span class='type'>v</span><span class='type'>e</span><span class='type'> </span><span class='type'>d</span><span class="highlight">o</span><span class='type'>i</span><span class='type'>n</span><span class="highlight">g</span><span class='type'>.</span></div>
+                          </h1>
+          </div>
+                  </div>
+
+          <div class="row anim-scroll delay-anim-3 pt-md-6 pt-lg-7">
+                  <div class="d-none d-lg-block col-4 col-xl-3">
+            <div class="anchor d-flex flex-column gap-2 align-items-start justify-content-start">
+                                                                <a class="tag" href="#brand-strategy"><span>Brand Strategy</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                                                                                <a class="tag" href="#experience-design"><span>Experience Design</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                                                                                <a class="tag" href="#content-production"><span>Content Production</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                                          </div>
+          </div>
+                          <div class="col-12 col-md-10 col-lg-6 offfset-md-2 offset-xl-3">
+            <div class="content">
+              <p><span style="font-weight: 400;">We are, at our core, a team of creative problem solvers. And that very much defines how we approach every challenge. Through a desire to understand, help and create, we’re able to draw from our wide range of in-house expertise.</span></p>
+            </div>
+          </div>
+              </div>
+    
+  </div>
+</section>
+
+<section class="block-single-visuals is-left"id='acf-block-64755d0f49e71'>
+  <div class="row">
+    <div class="col-12 col-md-10 col-xl-8">
+      <div class="image-box wowo anim-scroll">
+        <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/04/single-visuals-01.jpg);"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="block-content wowo fadeInUp" id='brand-strategy'>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+      <h2>Brand Strategy</h2>
+    </div>
+    <div class="col-12 col-md-6 col-lg-5 offset-0 offset-lg-1 offset-xl-2">
+      <p>We are advocates for long term brand building. Our end-to-end services include in-depth discovery and positioning, as well as the full development or reinvention of brand identities. Above all, we delight in the creation of distinctive assets that foster brand trust, loyalty and mental availability.</p>
+<ul>
+<li>Naming</li>
+<li>Positioning</li>
+<li>Architecture</li>
+<li>Creative direction</li>
+<li>Visual identity</li>
+<li>Verbal identity</li>
+</ul>
+    </div>
+  </div>
+</section>
+
+      <section class="block-twin-visuals  wowo is-delay-nth is-start"id='acf-block-64755d0f4a1f2'>
+      <div class="row  gy-5 gy-md-4 gy-xl-0 justify-content-start">
+                  <div class="col-7 col-md-6 col-lg-4 anim-scroll">
+            <div class="image-box image-1">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/04/twin-visuals-01.jpg);"></span>
+            </div>
+          </div>
+                          <div class="col-11 offset-1 offset-md-0 col-md-6 col-lg-7 anim-scroll">
+            <div class="image-box image-2">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/07/Nourishedlife_logo.gif);"></span>
+            </div>
+          </div>
+              </div>
+    </section>
+  
+
+
+<section class="block-content wowo fadeInUp" id='experience-design'>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+      <h2>Experience Design</h2>
+    </div>
+    <div class="col-12 col-md-6 col-lg-5 offset-0 offset-lg-1 offset-xl-2">
+      <p><span style="font-weight: 400;">We provide human-centred, expertly crafted digital product design and development. From collaborative ideation, to rapid prototyping, to pixel-perfect user interface design and development. Digital is our thing. </span></p>
+<ul>
+<li>Website creation</li>
+<li>Digital product creation</li>
+<li>CX/UX/MX strategy</li>
+<li>User research</li>
+<li>Prototyping &amp; testing</li>
+<li>Design Sprints</li>
+</ul>
+    </div>
+  </div>
+</section>
+
+  <section class="block-trio-visuals wowo is-delay-nth is-style4"id='acf-block-64755d0f49e95'>
+          <div class="row gy-5 gy-md-4 gy-xl-0">
+                  <div class="col-6 col-md-5 offset-md-1 col-xl-4 offset-xl-2 anim-scroll">
+            <div class="image-box image-1">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-04.jpg);"></span>
+            </div>
+          </div>
+                          <div class="col-8 offset-4 offset-md-0 col-md-6 anim-scroll">
+            <div class="image-box image-2">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-05.jpg);"></span>
+            </div>
+          </div>
+                          <div class="col-11 col-md-10 col-lg-9 col-xl-8 anim-scroll">
+            <div class="image-box image-3 pt-md-4">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-06.jpg);"></span>
+            </div>
+          </div>
+              </div>
+    
+  </section>
+
+
+
+<section class="block-content wowo fadeInUp" id='content-production'>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+      <h2>Content Creation</h2>
+    </div>
+    <div class="col-12 col-md-6 col-lg-5 offset-0 offset-lg-1 offset-xl-2">
+      <p><span style="font-weight: 400;">Whether we’ve been involved with brand development or an organisation needs to put their existing brand to work, we’re here to help. Copywriting, design, imagery, video and beyond — whatever is required to tell an effective story, we’ll get it done. On brand and on point.</span></p>
+<ul>
+<li data-stringify-indent="0" data-stringify-border="0">Content strategy</li>
+<li data-stringify-indent="0" data-stringify-border="0">Campaign design</li>
+<li data-stringify-indent="0" data-stringify-border="0">Copywriting</li>
+<li data-stringify-indent="0" data-stringify-border="0">Video/Animation</li>
+<li data-stringify-indent="0" data-stringify-border="0">Social Media</li>
+<li data-stringify-indent="0" data-stringify-border="0">Team training</li>
+</ul>
+    </div>
+  </div>
+</section>
+
+  <section class="block-trio-visuals wowo is-delay-nth is-style3"id='acf-block-64755d0f4a227'>
+          <div class="row gy-5 gy-md-4 gy-xl-0">
+                  <div class="col-10 offset-2 offset-md-0 col-md-8 col-lg-6 anim-scroll">
+            <div class="image-box image-1  pb-md-1">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-07.jpg);"></span>
+            </div>
+          </div>
+                          <div class="col-5 col-lg-4 col-xl-3 offset-lg-4 offset-xl-6 anim-scroll">
+            <div class="image-box image-2">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-08.jpg);"></span>
+            </div>
+          </div>
+                          <div class="col-5 col-lg-4 col-xl-3 anim-scroll">
+            <div class="image-box image-2">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/07/og-services-content-production-photoshoot.jpg);"></span>
+            </div>
+          </div>
+              </div>
+    
+  </section>
+
+
+<section class="block-banner wowo is-delay-nth is-inner gsap-banner" id='acf-block-64755d0f4a238'>
+  <div class="content">
+        <div class="row">
+              <div class="col-12 col-md-10 anim-scroll">
+          <div class="overline anim-scroll delay-anim-1">We build brand platforms, not just websites.</div>
+          <h1 class="title">
+                          <div class="gasp-lines"><span class='type'>w</span><span class='type'>e</span><span class='type'> </span><span class='type'>r</span><span class='type'>a</span><span class='type'>r</span><span class='type'>e</span><span class='type'>l</span><span class='type'>y</span><span class='type'> </span><span class='type'>d</span><span class="highlight">o</span><span class='type'> </span><span class='type'>a</span><span class='type'>n</span><span class='type'>y</span><span class='type'> </span><span class='type'>o</span><span class='type'>f</span><span class='type'> </span><span class='type'>t</span><span class='type'>h</span><span class='type'>e</span><span class='type'>s</span><span class='type'>e</span><span class='type'> </span><span class='type'>t</span><span class='type'>h</span><span class='type'>i</span><span class='type'>n</span><span class="highlight">g</span><span class='type'>s</span><span class='type'> </span><span class='type'>i</span><span class='type'>n</span><span class='type'> </span><span class='type'>i</span><span class='type'>s</span><span class='type'>o</span><span class='type'>l</span><span class='type'>a</span><span class='type'>t</span><span class='type'>i</span><span class='type'>o</span><span class='type'>n</span><span class='type'>.</span><span class='type'>.</span><span class='type'>.</span></div>
+                      </h1>
+        </div>
+          </div>
+
+                  <div class="row  anim-scroll delay-anim-3">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-6 offset-md-2 offset-lg-4 offset-xl-6">
+            <div class="content">
+              <p>Winning organisations understand the intrinsic nature of effective branding, user experience and content. We do our best work when we consider all three simultaneously.</p>
+            </div>
+          </div>
+        </div>
+          
+  </div>
+</section>
+
+      <section class="block-twin-visuals  wowo is-delay-nth is-end"id='acf-block-64755d0f4a24b'>
+      <div class="row  gy-5 gy-md-4 gy-xl-0 justify-content-md-end">
+                  <div class="col-7 col-md-6 col-lg-4 anim-scroll">
+            <div class="image-box image-1">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/04/twin-visuals-03.jpg);"></span>
+            </div>
+          </div>
+                          <div class="col-11 offset-1 offset-md-0 col-md-6 col-lg-7 anim-scroll">
+            <div class="image-box image-2">
+              <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/04/twin-visuals-04.jpg);"></span>
+            </div>
+          </div>
+              </div>
+    </section>
+  
+
+  <section class="block-cta  wowo fadeInUp" id='acf-block-64755d0f4a275'>
+    <div class="wrap">
+      <a class="content"  href="https://olivergrace.com.au/contact/" target="_self">
+        <div class="row">
+          <div class="col-12 col-md-7 offset-md-1">
+            <div class="overline">
+              Ready to get started?            </div>
+            <h2>
+              conversati<span classs='highlight'>o</span>n is <br/>where chan<span  classs='highlight'>g</span>e starts            </h2>
+          </div>
+          <div class="col-12 col-md-3 col-xl-2 offset-xl-1">
+            <div class=" wowo bounceIn delay-in-3">
+              <div class="button mb-0">
+                <div class="button-content">
+                  <span class="text d-none">Say Hello</span>
+                                      <div class="bg-image">
+                      <span style="background-image: url(https://olivergrace.com.au/wp-content/uploads/2023/05/Rotating-Text.svg);"></span>
+                    </div>
+                                    <div class="button-cont">
+                    <div class="icon">
+                      <img decoding="async" src="https://olivergrace.com.au/wp-content/themes/olivergrace/assets/images/mail-closed.svg" alt="email" class="close">
+                      <img decoding="async" src="https://olivergrace.com.au/wp-content/themes/olivergrace/assets/images/mail-open.svg" alt="email" class="open">
+                    </div>
+                    <div class="button-mask"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+ 				</div>
+ 			</main>
+ 		 	 
+
+ <footer class="footer">
+	<div id="footer">
+		<div class="container">
+			<div class="footer-top">
+				<div class="row gy-4 gy-lg-0">
+					<div class="col-12  col-lg-4 me-xl-auto">
+						<div class="footer-menu">
+							<ul id="menu-footer-menu" class="menu"><li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="https://olivergrace.com.au/work/"><span class="before">Work</span><span class="after">Work</span></a></li>
+<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page active page_item page-item-10 active menu-item-113"><a href="https://olivergrace.com.au/services/" aria-current="page"><span class="before">Services</span><span class="after">Services</span></a></li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="https://olivergrace.com.au/about/"><span class="before">About</span><span class="after">About</span></a></li>
+<li id="menu-item-114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114"><a href="https://www.linkedin.com/company/oliver-grace/jobs/?viewAsMember=true"><span class="before">Open Roles</span><span class="after">Open Roles</span></a></li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="https://olivergrace.com.au/?page_id=14"><span class="before">Contact us</span><span class="after">Contact us</span></a></li>
+</ul>						</div>
+					</div>
+																									<div class="col-6 col-sm-4  col-lg-3 col-xl-2">
+								<div class="footer-address">
+									<div class="title mb-3">Find us</div>
+																			<p><a href="https://maps.app.goo.gl/Ns2yvKy63qVNUdH48" target="_blank">L3 80 Dorcas St, Southbank, Melbourne, Victoria 3006</a></p>
+																	</div>
+							</div>
+																				<div class="col-6 col-sm-4  col-lg-3 col-xl-2">
+								<div class="footer-address">
+									<div class="title mb-3"></div>
+																	</div>
+							</div>
+																						<div class="col-12 col-xs-6 col-sm-4 col-lg-2">
+							<div class="footer-socials">
+								<div class="title mb-3">Follow us</div>
+								<ul class=" d-flex align-items-center ">
+																																								<li>
+												<a href="https://www.instagram.com/olivergrace.studio/?hl=en" target="_blank" title="Instagram">
+													<span class="before fab fa-instagram"></span>
+													<span class="after fab fa-instagram"></span>
+												</a>
+											</li>
+																																																		<li>
+												<a href="https://www.linkedin.com/company/oliver-grace/about/" target="_blank" title="Linkedin">
+													<span class="before fab fa-linkedin-in"></span>
+													<span class="after fab fa-linkedin-in"></span>
+												</a>
+											</li>
+																											</ul>
+							</div>
+						</div>
+									</div>
+			</div>
+											<div class="footer-center">
+					<div class="row justify-content-between gy-4 gy-lg-0">
+						<div class="col-12 col-lg-4">
+							<h6 class="mb-0">We share a newsletter quarterly. <br/>No junk, just inspiration.</h6>
+						</div>
+													<div class="col-12 col-lg-6">
+								<div class="footer-newsletter">
+									<div class="form form-dark">
+										
+<div class="wpcf7 no-js" id="wpcf7-f6-o1" lang="en-US" dir="ltr" data-wpcf7-id="6">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/services/#wpcf7-f6-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="6" /><input type="hidden" name="_wpcf7_version" value="6.1" /><input type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-o1" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" /><input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+</fieldset>
+<div class="input-group">
+<span class="wpcf7-form-control-wrap" data-name="email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" value="" type="email" name="email" /></span>
+<label for="email">Enter your email to subscribe</label>
+</div>
+<div  class="form-submit">
+<button type="submit" class="wpcf7-form-control has-spinner wpcf7-submit"><i class="fa-solid fa-arrow-right-long"></i></button>
+</div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+						<div class="footer-bottom">
+				<div class="row justify-content-between gy-4 gy-lg-0 flex-column-reverse flex-lg-row">
+											<div class="order-last order-sm-first col-12 col-lg-6 col-xl-4">
+							<div class="d-flex align-items-center">
+								<p class="mb-0">© 2025 Oliver Grace Pty Ltd</p>
+								<p class="mb-0"><a href="https://olivergrace.com.au/privacy-policy/">Privacy policy</a></p>
+							</div>
+						</div>
+																<div class="order-first order-sm-last col-12 col-lg-6">
+							<p>Oliver Grace acknowledges the Wurundjeri and Boon Wurrung people of the Kulin Nation as custodians who never ceded sovereignty of the lands on which we work. We pay respects to their elders past, present and emerging, and extend that respect to all Aboriginal and Torres Strait Islander peoples.</p>
+						</div>
+									</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<section class="cursor">
+	<div id="ball"><span>View work</span></div>
+</section>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/olivergrace/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-hooks-js" src="https://olivergrace.com.au/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="https://olivergrace.com.au/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="https://olivergrace.com.au/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2024-03-18 08:28:25+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_AU"},"Error:":["Error:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/olivergrace.com.au\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="https://olivergrace.com.au/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1"></script>
+<script id="script-js" src="https://olivergrace.com.au/wp-content/themes/olivergrace/assets/js/script.js?ver=1757050246"></script>
+<script id="google-recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LdGkYIsAAAAAC1JHDNGz6ZSZIQAec56I_2ai27B&#038;ver=3.0"></script>
+<script id="wp-polyfill-js" src="https://olivergrace.com.au/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"></script>
+<script id="wpcf7-recaptcha-js-before">
+var wpcf7_recaptcha = {
+    "sitekey": "6LdGkYIsAAAAAC1JHDNGz6ZSZIQAec56I_2ai27B",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+</script>
+<script id="wpcf7-recaptcha-js" src="https://olivergrace.com.au/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://olivergrace.com.au/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://olivergrace.com.au/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+
+</html>
+
+[media-3-1.png](https://olivergrace.com.au/wp-content/uploads/2023/08/Oliver-Grace-Logo.png)
+
+![media-3-1.png](https://olivergrace.com.au/wp-content/uploads/2023/08/Oliver-Grace-Logo.png)
+
+[media-3-2.png](https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-32x32.png)
+
+![media-3-2.png](https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-32x32.png)
+
+[media-3-3.png](https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-192x192.png)
+
+![media-3-3.png](https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-192x192.png)
+
+[media-3-4.png](https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-180x180.png)
+
+![media-3-4.png](https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-180x180.png)
+
+[media-3-5.png](https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-270x270.png)
+
+![media-3-5.png](https://olivergrace.com.au/wp-content/uploads/2023/04/cropped-favicon-270x270.png)
+
+[media-3-6.svg](https://olivergrace.com.au/wp-content/uploads/2023/05/OG-LOGO-TAN.svg)
+
+![media-3-6.svg](https://olivergrace.com.au/wp-content/uploads/2023/05/OG-LOGO-TAN.svg)
+
+[media-3-7.svg](https://olivergrace.com.au/wp-content/uploads/2023/05/logo-white.svg)
+
+![media-3-7.svg](https://olivergrace.com.au/wp-content/uploads/2023/05/logo-white.svg)
+
+[media-3-8.svg](https://olivergrace.com.au/wp-content/uploads/2023/05/og-roundel-02.svg)
+
+![media-3-8.svg](https://olivergrace.com.au/wp-content/uploads/2023/05/og-roundel-02.svg)
+
+[media-3-9.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/single-visuals-01.jpg)
+
+![media-3-9.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/single-visuals-01.jpg)
+
+[media-3-10.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/twin-visuals-01.jpg)
+
+![media-3-10.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/twin-visuals-01.jpg)
+
+[media-3-11.gif](https://olivergrace.com.au/wp-content/uploads/2023/07/Nourishedlife_logo.gif)
+
+![media-3-11.gif](https://olivergrace.com.au/wp-content/uploads/2023/07/Nourishedlife_logo.gif)
+
+[media-3-12.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-04.jpg)
+
+![media-3-12.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-04.jpg)
+
+[media-3-13.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-05.jpg)
+
+![media-3-13.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-05.jpg)
+
+[media-3-14.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-06.jpg)
+
+![media-3-14.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-06.jpg)
+
+[media-3-15.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-07.jpg)
+
+![media-3-15.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-07.jpg)
+
+[media-3-16.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-08.jpg)
+
+![media-3-16.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/trio-visuals-08.jpg)
+
+[media-3-17.jpg](https://olivergrace.com.au/wp-content/uploads/2023/07/og-services-content-production-photoshoot.jpg)
+
+![media-3-17.jpg](https://olivergrace.com.au/wp-content/uploads/2023/07/og-services-content-production-photoshoot.jpg)
+
+[media-3-18.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/twin-visuals-03.jpg)
+
+![media-3-18.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/twin-visuals-03.jpg)
+
+[media-3-19.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/twin-visuals-04.jpg)
+
+![media-3-19.jpg](https://olivergrace.com.au/wp-content/uploads/2023/04/twin-visuals-04.jpg)
+
+[media-3-20.svg](https://olivergrace.com.au/wp-content/uploads/2023/05/Rotating-Text.svg)
+
+![media-3-20.svg](https://olivergrace.com.au/wp-content/uploads/2023/05/Rotating-Text.svg)
+
+[media-3-21.svg](https://olivergrace.com.au/wp-content/themes/olivergrace/assets/images/mail-closed.svg)
+
+![media-3-21.svg](https://olivergrace.com.au/wp-content/themes/olivergrace/assets/images/mail-closed.svg)
+
+[media-3-22.svg](https://olivergrace.com.au/wp-content/themes/olivergrace/assets/images/mail-open.svg)
+
+![media-3-22.svg](https://olivergrace.com.au/wp-content/themes/olivergrace/assets/images/mail-open.svg)
+
+---
+
+## Assistant 4
+
+**I. UI & VISUAL DESIGN SYSTEM**
+
+*   **Color Architecture:**
+    *   *Core:* Black (`#000000`), White (`#ffffff`), Very Dark Gray (`#313131`), Very Light Gray (`#eeeeee`), Cyan-Bluish Gray (`#abb8c3`).
+    *   *Custom Vars:* `--border` (contextual stroke), `--mtc-font-monospace` (data text).
+    *   *Semantic/Gradients:* Extensive WordPress preset gradients (e.g., `vivid-cyan-blue-to-vivid-purple`, `midnight`) defined in `:root` but largely overridden by custom theme styling.
+*   **Typography Scale:**
+    *   *Families:* "Suisse" (Primary Display/Body), "Arimo" & "Lora" (Google Fonts fallback/secondary), `var(--mtc-font-monospace)` (Data/Stats).
+    *   *Fluid Sizing:* Heavy use of CSS `clamp()` for responsive scaling (e.g., `clamp(48px, 3.33vw, 76px)` for data spans, `clamp(16px, 1.11vw, 25.33px)` for list items).
+    *   *Weights:* 400 (Regular), 500, 600, 700.
+*   **Geometry & Spacing:**
+    *   *Grid:* Bootstrap 5-based 12-column fluid grid (`container`, `row`, `col-*`).
+    *   *Spacing Scale:* CSS variables mapped to rem (`--wp--preset--spacing--20` [0.44rem] to `--wp--preset--spacing--80` [5.06rem]).
+    *   *Borders:* 2px solid strokes on mobile mockups (`border: solid 2px var(--border)`).
+*   **Iconography & Imagery:**
+    *   *Icons:* Font Awesome 6.2.0 (Solid/Brands: `fa-arrow-right-long`, `fa-instagram`, `fa-linkedin-in`). Custom inline SVGs for UI (mail-closed/open, rotating text badge, roundel).
+    *   *Imagery Style:* High-contrast editorial photography, mixed with client deliverable mockups and animated GIFs (e.g., Nourished Life logo). Aspect ratios controlled via CSS background-image spans.
+*   **Motion & Interaction:**
+    *   *Scroll & Parallax:* Lenis (smooth scrolling), Rellax.js (parallax effects), GSAP + ScrollTrigger (scroll-triggered reveals).
+    *   *Text Animation:* Custom `gasp-lines` class for character-by-character or line-by-line reveal (`.type` spans).
+    *   *Micro-interactions:* Custom cursor (`#ball`) that expands and changes text to "View work" on hover over specific elements. Mail icon transitions from closed to open on CTA hover.
+
+**II. UX & INFORMATION ARCHITECTURE**
+
+*   **Navigation Structures:**
+    *   *Global Header:* Minimalist top bar. Logo (left), Menu (right: Work, Services, About, Contact). Logo swaps between dark/light variants.
+    *   *Local/Anchor:* Sticky desktop sub-nav (`block-banner-anchor`) linking to `#brand-strategy`, `#experience-design`, `#content-production`.
+    *   *Mobile:* Hamburger toggle revealing a full-screen overlay (`navbar-menu is-mobile`) containing the menu, physical address, social links, and a rotating SVG roundel.
+*   **Layout & Composition:**
+    *   *Asymmetry:* Deliberate offset columns (e.g., `offset-lg-1 offset-xl-2`) to create editorial tension.
+    *   *Visual Rhythm:* Strict alternation between text-heavy sections and staggered image grids (Single -> Twin -> Trio -> Trio -> Twin).
+*   **State Management:**
+    *   *Form States:* Contact Form 7 default states (`.init`, `.sending`, `.sent`) with hidden response outputs (`aria-hidden="true"`).
+    *   *Interactive States:* Button masks, icon swaps (mail closed/open), custom cursor text injection.
+*   **Accessibility (a11y):**
+    *   *Implementation:* `aria-current="page"` on active nav, `aria-required="true"` on email input, `aria-invalid="false"`, `screen-reader-text` utility class for skip links/hidden labels.
+    *   *Focus:* Custom focus states defined in WP core CSS (`--wp-admin-border-width-focus`).
+*   **Responsive Behavior:**
+    *   *Breakpoints:* Mobile-first approach utilizing Bootstrap sm/md/lg/xl tiers.
+    *   *Adaptations:* Anchor nav hidden on mobile (`d-none d-lg-block`). Image grids collapse to single columns on mobile. Font sizes scale down via `clamp()` and specific `@media (max-width: 575.98px)` overrides.
+
+**III. CONTENT & COPYWRITING**
+
+*   **Voice & Tone:**
+    *   *Persona:* Confident, concise, authoritative yet approachable. "Creative problem solvers."
+    *   *Style:* Punchy, declarative sentences. Low jargon, high impact.
+*   **Structural Syntax:**
+    *   *Overlines:* Small, uppercase or distinct introductory phrases above main headings (e.g., "Our services", "We build brand platforms, not just websites.").
+    *   *Highlighting:* Strategic use of `.highlight` class on specific vowels/consonants in H1/H2s (e.g., "d**o**i**n**g", "chan**g**e") to draw the eye.
+    *   *Lists:* Unordered lists for service deliverables, stripped of bullets, relying on whitespace and typography for hierarchy.
+*   **Conversion Copy:**
+    *   *CTA:* "Ready to get started?" -> "conversation is where change starts".
+    *   *Button:* "Say Hello" (visually hidden on mobile, replaced by icon/animation).
+    *   *Friction Reduction:* Newsletter copy: "No junk, just inspiration."
+*   **Microcopy & System Text:**
+    *   *Form:* Label "Enter your email to subscribe". Submit button uses an icon (`fa-arrow-right-long`) instead of text.
+    *   *Cursor:* "View work" (contextual).
+*   **Linguistic Patterns:**
+    *   *Rhetoric:* Rule of three ("understand, help and create"). Contrast ("brand platforms, not just websites"). Active voice dominant.
+
+**IV. BRANDING & POSITIONING**
+
+*   **Brand Identity:**
+    *   *Archetype:* Creator / Sage.
+    *   *Tagline/Core Belief:* "A strategic creative studio."
+    *   *USP:* Holistic integration. Refusal to silo disciplines ("we really do [not] do any of these things in isolation... consider all three simultaneously").
+*   **Trust & Authority:**
+    *   *Social Proof:* Client logo GIFs (Nourished Life), high-end editorial visual style.
+    *   *Cultural Grounding:* Explicit Acknowledgement of Country in the footer (Wurundjeri and Boon Wurrung people of the Kulin Nation), establishing local authenticity and corporate responsibility.
+    *   *Physical Presence:* Prominent display of Melbourne studio address in both mobile menu and footer.
+*   **Psychological Triggers:**
+    *   *Authority:* Confident assertions of expertise ("Digital is our thing").
+    *   *Exclusivity/Boutique Feel:* Minimalist design, lack of stock photography, focus on "in-house expertise".
+
+**V. ELEMENT PLACEMENT & PAGE LITERATURE**
+
+*   **Section Flow:**
+    1.  *Hero:* Overline + H1 (Animated) + Intro paragraph + Anchor links.
+    2.  *Visual Break:* Single offset image.
+    3.  *Service 1 (Brand Strategy):* 2-column text (H2 left, list right).
+    4.  *Visual Break:* Twin staggered images.
+    5.  *Service 2 (Experience Design):* 2-column text.
+    6.  *Visual Break:* Trio staggered images.
+    7.  *Service 3 (Content Creation):* 2-column text.
+    8.  *Visual Break:* Trio staggered images.
+    9.  *Manifesto/Interstitial:* Full-width banner reinforcing the holistic USP.
+    10. *Visual Break:* Twin staggered images.
+    11. *CTA:* Large typographic hook + animated button.
+    12. *Footer:* Mega-footer with newsletter, sitemap, legal, and cultural acknowledgment.
+*   **Component Hierarchy:**
+    *   *Service Blocks:* Strict 2-column layout. Left column: H2. Right column: Paragraph + `<ul>` of deliverables.
+    *   *Image Blocks:* Custom CSS classes (`block-single-visuals`, `block-twin-visuals`, `block-trio-visuals`) dictating complex, overlapping, or staggered grid placements using offset columns.
+
+**VI. TECHNOLOGY & INFRASTRUCTURE STACK**
+
+*   **Frontend:**
+    *   *Core:* Custom WordPress theme (`olivergrace`).
+    *   *CSS:* Bootstrap 5 (grid/utilities), custom `style.css`, inline WP block styles.
+    *   *JS Libraries:* jQuery 3.7.1, GSAP 3.x, ScrollTrigger, Rellax (parallax), Lenis (smooth scroll), Slick (carousels), animateNumber.
+*   **Backend & CMS:**
+    *   *Platform:* WordPress (REST API enabled).
+    *   *Plugins:* Yoast SEO v27.8, Contact Form 7 v6.1.
+    *   *Page Builder:* Advanced Custom Fields (ACF) implied by `id='acf-block-...'` section markers.
+*   **Performance & Hosting:**
+    *   *Optimization:* Speculation Rules API (`<script type="speculationrules">`) for conservative document prefetching. Image `contain-intrinsic-size` for layout shift prevention.
+    *   *Fonts:* Google Fonts API (Arimo, Lora) with `preconnect` and `display=swap`.
+*   **Analytics & Tracking:**
+    *   *Tracking:* Google Analytics 4 (G-51PNNJ7WBX), Hotjar (hjid: 6519074).
+    *   *Security:* Google reCAPTCHA v3 integrated with Contact Form 7.
+
+**VII. SEO & METADATA ARCHITECTURE**
+
+*   **On-Page SEO:**
+    *   *Title:* "Services |" (Note: Site name missing in title tag, likely appended dynamically or omitted).
+    *   *Meta Description:* "End-to-end brand building, positioning and strategy. Human-centred digital product design. Effective storytelling through content production."
+    *   *Canonical:* `https://olivergrace.com.au/services/`
+*   **Technical SEO:**
+    *   *Schema (JSON-LD):* Comprehensive Yoast graph including `WebPage`, `Article`, `BreadcrumbList`, `WebSite`, `Organization` (with `sameAs` for IG/LinkedIn), and `Person`.
+    *   *OpenGraph/Twitter:* Fully populated (`og:title`, `og:description`, `og:image` [1200x675 PNG], `twitter:card`).
+    *   *Robots:* `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`.
+
+---
+
+## User 5
+
+when ai makes a webpage 'responsive', it still displays rather poorly when shifting from laptop screen to a phone. but these two websites, they really handle this and more rather simply beautifully. just brilliant, like hover to reveal feeling monster of the kids on desktop, changes to displayed side by side when switching to iphone setting in developer console, everything is just so neat despite not being too fancy (looks beautiful tho). what many lines of text to render per block max
+extract and curate as before
+
+[Pasted_Text_1781809583436.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/dc72f4fa-3463-43ae-baee-f23764c855b3_Pasted_Text_1781809583436.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiJkYzcyZjRmYS0zNDYzLTQzYWUtYmFlZS1mMjM3NjRjODU1YjMiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.NjEqY9ZWcDKHnGm74EfwSCQcSSEFX0Ebw6Fx4QobFlk)
+
+[Pasted_Text_1781809583436.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/dc72f4fa-3463-43ae-baee-f23764c855b3_Pasted_Text_1781809583436.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiJkYzcyZjRmYS0zNDYzLTQzYWUtYmFlZS1mMjM3NjRjODU1YjMiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.NjEqY9ZWcDKHnGm74EfwSCQcSSEFX0Ebw6Fx4QobFlk)
+
+[Pasted_Text_1781809596675.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/70b41c15-a14f-4176-beec-5a0e5f6a3e1d_Pasted_Text_1781809596675.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiI3MGI0MWMxNS1hMTRmLTQxNzYtYmVlYy01YTBlNWY2YTNlMWQiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.RTtSnSmUu6Uf1m9wbFnldSGCTKcKJ8bcrK27IX9GgJ8)
+
+[Pasted_Text_1781809596675.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/70b41c15-a14f-4176-beec-5a0e5f6a3e1d_Pasted_Text_1781809596675.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiI3MGI0MWMxNS1hMTRmLTQxNzYtYmVlYy01YTBlNWY2YTNlMWQiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.RTtSnSmUu6Uf1m9wbFnldSGCTKcKJ8bcrK27IX9GgJ8)
+
+---
+
+## Assistant 6
+
+**I. UI & VISUAL DESIGN SYSTEM**
+
+*   **Color Architecture:** Dynamic, context-aware theming driven by CSS variables mapped to `data-theme` attributes (e.g., `analogous-ultralight-teal`, `analogous-dark-pink`). Variables control `--theme-background`, `--theme-text`, `--theme-scrim`, and `--theme-button`, allowing entire page sections to shift palettes seamlessly.
+*   **Typography Scale:** Variable fonts preloaded for performance and fluid scaling: `SegoeSerif_VF` (Editorial/Display) and `SegoeSans_VF` (Body/UI). Fluid sizing calculated via `calc()` and viewport widths (e.g., `font-size: calc(22.86905px + 1.19048vw)`). Strict hierarchy classes (`--h2` through `--h6`, `--p`).
+*   **Geometry & Spacing:** Modular spacer system (`spacer-1` to `spacer-8` with mobile-specific overrides) enforcing rhythmic whitespace. Grid layouts rely on custom flexbox utilities (`column--layout-40-60`, `column--layout-50-50`) rather than rigid 12-column frameworks.
+*   **Iconography & Imagery:** Custom inline SVGs for all UI controls (play, pause, share, copy, external links) ensuring crisp rendering and easy color inheritance. Strict aspect ratio enforcement via utility classes (`ratio--1-1`, `ratio--4-5`, `ratio--3-2`, `ratio--16-9`) to prevent layout shift.
+*   **Motion & Interaction:** Scroll-triggered reveals (`transition--in-up`). Parallax image grids (`js-parallax-grid`). Custom video player overlays with gradient scrims that fade based on interaction state.
+
+**II. UX & INFORMATION ARCHITECTURE**
+
+*   **Navigation Structures:** Integration of the Microsoft Universal Header (UHF) via web components (`<uhf-header>`), overlaid with a custom contextual navigation bar for "Unlocked" editorial categories.
+*   **Layout & Composition:** Asymmetrical editorial pairings. Text and media are balanced using 40/60 or 50/50 splits. "Full-width feature" blocks anchor the page with edge-to-edge media and overlay text.
+*   **State Management:** Video player states (play, pause, replay) with SVG icon swapping. Social share menus expand from collapsed icons to overlay scrims. Theme variables update dynamically via JS as users scroll through different `data-theme` sections.
+*   **Accessibility (a11y):** Dedicated A11y widget allowing users to toggle "Motion" (disabling parallax/transitions) and "High Contrast". Extensive ARIA labeling on custom media controls (`aria-controls`, `aria-pressed`). Screen-reader-only text (`.sr-text`) for icon-only buttons.
+*   **Responsive Behavior (The "Brilliant" Adaptation):** 
+    *   *Desktop:* Complex hover states (e.g., Feelings Monster gallery flips cards on `mouseenter`).
+    *   *Mobile (`max-width: 767px`):* Hover interactions gracefully degrade. The JS detects touch/mobile viewports and switches the gallery to a tap-to-flip mechanism or stacks the "front" and "back" content side-by-side/vertically. Column layouts collapse to single-file stacks. Font sizes scale down via fluid calculations.
+
+**III. CONTENT & COPYWRITING**
+
+*   **Editorial Constraints & Text Limits (The "Neatness" Factor):** The visual cleanliness is achieved through ruthless editorial truncation. 
+    *   **Headlines (H1-H3):** Max 2 lines.
+    *   **Eyebrows/Categories:** Strictly 1 line.
+    *   **Excerpts/Card Text:** Max 2 lines (approx. 100-120 characters). Enforced visually to prevent card bloat.
+    *   **Body Paragraphs:** Max 3-4 lines before a visual break, pullquote, or subheading.
+    *   **Pullquotes:** Max 2-3 lines, centered.
+*   **Voice & Tone:** Empathetic, authoritative, narrative-driven. Positions technology as a human enabler rather than the protagonist.
+*   **Structural Syntax:** Heavy use of "Eyebrows" to contextualize content before the headline. Bold, concise subheads. 
+*   **Conversion Copy:** Contextual, low-friction CTAs ("Read", "Discover 8080 Books", "Explore Microsoft Reflect").
+*   **Linguistic Patterns:** Storytelling arc (Human Challenge -> Technological Intervention -> Societal Impact). Academic credibility maintained via inline footnote superscripts linking to references.
+
+**IV. BRANDING & POSITIONING**
+
+*   **Brand Identity:** "Stories from the heart & soul of innovation." Archetype: Sage / Creator. Positions Microsoft not as a vendor, but as a publisher and thought leader.
+*   **Trust & Authority:** High-production video interviews with C-suite (Satya Nadella, Brad Smith). Citations linking to peer-reviewed journals (PNAS) and industry bodies (CASEL).
+*   **Psychological Triggers:** Emotional resonance (interactive Feelings Monster), social proof (educator testimonials), and authority (CEO dialogues).
+
+**V. ELEMENT PLACEMENT & PAGE LITERATURE**
+
+*   **Section Flow:**
+    1.  UHF Global Header + Contextual Nav.
+    2.  Hero/Full-width Feature (Video/Image with overlay text).
+    3.  Editorial Split (40/60 text/media pairing).
+    4.  Interactive Component (Hover gallery / Quiz / Parallax grid).
+    5.  Video Feature (Custom YouTube wrapper with social share overlay).
+    6.  Pullquote (Centered, large typography).
+    7.  Card Crosslinks (3-up grid of related stories).
+    8.  Collection Crosslink (Topic exploration).
+    9.  Social Footer & UHF Global Footer.
+*   **Component Hierarchy:**
+    *   `fullwidth-feature`: Hero banner with scrim overlay.
+    *   `story-card`: Standard article preview (Image + Eyebrow + Title + 2-line Excerpt).
+    *   `inset-card`: Darker, overlay-heavy card variant for high-contrast media.
+    *   `video-player`: Custom YouTube wrapper with poster image, overlay controls, and audio-described badges.
+    *   `feelings-monster-hover-gallery`: Interactive flip-card grid.
+
+**VI. TECHNOLOGY & INFRASTRUCTURE STACK**
+
+*   **Frontend:** Custom WordPress theme (`unlocked-theme`). Vanilla JS with custom modules for interactions (`compiled-scripts.js`). No heavy SPA frameworks; relies on modern DOM APIs, CSS Grid/Flexbox, and Web Components.
+*   **CSS Architecture:** BEM-like naming conventions (`block-headings__heading`), utility classes (`transition--in-up`), and heavy reliance on CSS Variables for dynamic theming.
+*   **Backend & CMS:** WordPress (REST API enabled). WPML for multilingual routing. Yoast SEO Premium. Advanced Custom Fields (ACF) implied by block ID structures.
+*   **Performance & Hosting:** Azure CDN (`js.monitor.azure.com`). Variable font preloading. Speculation Rules API (`<script type="speculationrules">`) for conservative document prefetching. Native lazy loading (`loading="lazy"`) and `decoding="async"` on all media.
+*   **Analytics & Tracking:** Microsoft 1DS Metrics, Clarity, Fathom, Meta Pixel, UET (Universal Event Tracking).
+*   **Third-Party Integrations:** Microsoft Universal Header/Footer (UHF). YouTube embeds via privacy-enhanced mode (`youtube-nocookie.com`).
+
+**VII. SEO & METADATA ARCHITECTURE**
+
+*   **On-Page SEO:** Yoast SEO Premium. Canonical URLs. OpenGraph and Twitter Cards fully populated with specific aspect ratio images (1200x675 for articles, 421x421 for collections).
+*   **Technical SEO:** JSON-LD Schema (WebPage, BreadcrumbList, WebSite, Organization). WPML `hreflang` implementation for global reach. Semantic HTML5 structure (`<main>`, `<article>`, `<aside>`, `<section>`).
+
+---
+
+## User 7
+
+extract and curate as before, extensively, myriadly
+
+[Pasted_Text_1781809892540.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/148f4444-40b5-4ca1-b241-f9b5d401dc49_Pasted_Text_1781809892540.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiIxNDhmNDQ0NC00MGI1LTRjYTEtYjI0MS1mOWI1ZDQwMWRjNDkiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.jqZwQUxWXwVSKukhd1FctyFq84JF5swGqGMYHs-R3tE)
+
+[Pasted_Text_1781809892540.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/148f4444-40b5-4ca1-b241-f9b5d401dc49_Pasted_Text_1781809892540.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiIxNDhmNDQ0NC00MGI1LTRjYTEtYjI0MS1mOWI1ZDQwMWRjNDkiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.jqZwQUxWXwVSKukhd1FctyFq84JF5swGqGMYHs-R3tE)
+
+---
+
+## Assistant 8
+
+**I. UI & VISUAL DESIGN SYSTEM**
+
+*   **Color Architecture:**
+    *   *Primary/Accents:* `#fcc4ba` (soft coral/pink), `#fe8a7c` (salmon), `#b9449e` (magenta/purple for primary CTAs), `#575177` (deep indigo for form backgrounds), `#ffa772` (vibrant orange for text highlights).
+    *   *Neutrals/Text:* `#ffffff` (white), `#0f172a` / `#0b1220` (deep navy/slate-900 for high-contrast body text), `#64748b` (slate-500 for muted secondary text), `#e2e8f0` (slate-200 for subtle borders).
+    *   *Overlays:* Cinematic, high-opacity dark overlays (e.g., `RGBA(22, 30, 42, 0.86)`, `rgba(52, 73, 94, 0.66)`) applied over background images to guarantee text legibility and set a moody, premium tone.
+    *   *Timeline Accents:* `#2dd4bf` (teal-400) used exclusively for the custom vertical timeline dots, borders, and hover states.
+*   **Typography Scale:**
+    *   *Families:* `Hind` and `Cabin` (loaded via Google Fonts with `display=swap`).
+    *   *Hierarchy:* Massive, commanding display titles (`.creator-title` scaling up to `4em`), paired with strong, condensed subtitles (`.creator-subtitle` at `2em`).
+    *   *Fluid Sizing:* CSS `clamp()` utilized in custom components (e.g., `clamp(28px, 3.2vw, 40px)` for timeline headers) to ensure seamless scaling between mobile and desktop.
+    *   *Emphasis:* Heavy reliance on `<strong>` tags and specific inline color overrides (`color: #000000`) to force contrast against semi-transparent or light backgrounds.
+*   **Geometry & Spacing:**
+    *   *Grid:* Bootstrap-derived 12-column fluid grid (`col-4`, `col-5`, `col-6`, `col-10`, `col-11`, `col-12`).
+    *   *Overlaps & Depth:* Aggressive use of negative margins (e.g., `margin-bottom: -30px`, `margin-top: -75px`) to pull sections together, create physical overlap (like the massive logo overlapping the hero), and break the standard boxy web layout.
+    *   *Borders & Radii:* Soft, approachable radii (`border-radius: 4px` on standard blocks, `16px` on timeline cards, `999px` on timeline dots).
+    *   *Shadows:* Subtle, diffused drop shadows (`0 10px 25px rgba(15, 23, 42, 0.08)`) to lift cards off the background.
+*   **Iconography & Imagery:**
+    *   *Icons:* Font Awesome 5 (`fab fa-facebook-f`, `fas fa-plus`/`fa-minus` for accordions).
+    *   *Custom SVGs:* Extensive use of specialized SVG illustrations for feature blocks (e.g., `despair-svgrepo-com`, `drugs-medicine-pills-svgrepo-com`, `speech-bubbles-svgrepo-com`) to visually map clinical symptoms.
+    *   *Photography:* High-quality, moody, cinematic stock imagery (Pexels) featuring isolated subjects, dark aesthetics, and emotional weight, heavily color-graded via CSS overlays.
+*   **Motion & Interaction:**
+    *   *Accordions:* CSS-driven expand/collapse using Font Awesome icon swapping (`\f067` to `\f068`) with `display:none` toggling.
+    *   *Carousels:* Slick Carousel implemented for the chronological career timeline and experience sections (dots, arrows, adaptive height).
+    *   *Hover States:* Timeline cards lift subtly on hover (`transform: translateY(-2px)`) with border-color shifts.
+    *   *Video Backgrounds:* Wistia background videos (`wistia_...`) playing silently behind hero and CTA sections, masked by dark overlays.
+    *   *Accessibility:* `@media (prefers-reduced-motion: reduce)` explicitly disables timeline hover transitions for vestibular safety.
+
+**II. UX & INFORMATION ARCHITECTURE**
+
+*   **Navigation Structures:**
+    *   *Header:* Minimalist, transparent overlay header. Features a persistent "Hello Bar" at the absolute top displaying a bold, declarative mission statement.
+    *   *Logo Placement:* Massive, centered logo block that physically overlaps the hero section (`margin-top: 16%; margin-bottom: -11%`), acting as a visual anchor rather than a traditional nav item.
+    *   *Page Structure:* Single-page, long-form narrative sales/landing page. No traditional multi-page dropdowns; relies on vertical scrolling storytelling.
+*   **Layout & Composition:**
+    *   *Asymmetry:* Deliberate misalignment of text and image blocks (e.g., `col-5` offset with `margin-left: 550px`) to create dynamic, editorial-style reading paths.
+    *   *Z-Pattern Narrative:* Strict adherence to a high-converting psychological flow: Problem -> Agitation -> Unique Mechanism -> Authority -> Process -> Social Proof -> Objection Handling (FAQ) -> CTA.
+*   **State Management:**
+    *   *Forms:* Native Kajabi embedded forms (`#kajabi-form`) with custom CSS overrides to constrain width (`max-width: 60%`) and style inputs.
+    *   *Modals:* Two-step opt-in modals and exit-intent popups defined in the DOM, ready for trigger.
+    *   *Accordions:* Collapsed by default to prevent cognitive overload, expanding only on user interaction.
+*   **Accessibility (a11y):**
+    *   *Contrast:* Strict adherence to high-contrast ratios (pure black on white, pure white on dark overlays).
+    *   *Semantics:* Proper use of `<header>`, `<main>`, `<section>`, `<footer>`, and hierarchical heading tags (`<h1>` through `<h6>`).
+    *   *Focus/Interaction:* Clear cursor pointers on accordion titles and interactive cards.
+*   **Responsive Behavior:**
+    *   *Breakpoints:* Mobile (`max-width: 767px`), Tablet/Desktop (`min-width: 768px`).
+    *   *Adaptations:* Text alignment shifts dynamically (e.g., `text-right` on desktop becomes `text-left` or `center` on mobile). Padding reduces significantly on mobile. Specific sections are hidden on certain devices (`hidden--mobile`, `hidden--desktop`) to preserve narrative pacing.
+
+**III. CONTENT & COPYWRITING**
+
+*   **Voice & Tone:**
+    *   *Persona:* Authoritative, clinical yet deeply empathetic, insider/industry-savvy, urgent but stabilizing.
+    *   *Style:* Direct, confident, addressing high-stakes scenarios. Blends clinical precision with creator-economy vernacular ("sh*t hits the fan", "handle, brand, or audience").
+*   **Structural Syntax:**
+    *   *Headlines:* High-impact, declarative, and deeply resonant with the target audience's pain points. (e.g., "When a Creator Is Struggling, Someone Has to Know What to Do.")
+    *   *Formatting:* Heavy use of bolding for key phrases to guide the skimming eye. Bullet points used strictly for lists of symptoms or service inclusions.
+    *   *Dividers:* Custom horizontal rules (`<hr style="width: 25%; ...">`) used to elegantly break up text blocks and create visual breathing room.
+*   **Conversion Copy:**
+    *   *CTAs:* Action-oriented but discreet. "Request Confidential Call", "Contact Us Now", "Submit an Inquiry".
+    *   *Friction Reduction:* Relentless emphasis on confidentiality, discretion, and low barriers to entry. "You Do Not Need a Plan Before Contacting Us."
+*   **Microcopy & System Text:**
+    *   *Hello Bar:* "WE EXIST BECAUSE MISUNDERSTANDING CREATORS AND THEIR TREATMENT NEEDS HAS REAL CONSEQUENCES."
+    *   *Contextual Warnings:* "This service is private, limited-capacity, and waitlists are case by case." / "Please contact local services for emergencies."
+*   **Linguistic Patterns:**
+    *   *Problem-Agitate-Solve (PAS):* Clearly defines the unique, compounding pressures of creator life (income can't pause, fear of losing relevance, teams with conflicting opinions) before offering the specialized clinical solution.
+    *   *Authority Markers:* Specific chronological milestones (2014, 2017, 2019, 2021), award mentions (#1 Wellness Influencer), and physical locations (Malibu, Santa Barbara, Laguna Beach) to build undeniable credibility.
+
+**IV. BRANDING & POSITIONING**
+
+*   **Brand Identity:**
+    *   *Archetype:* Sage / Caregiver.
+    *   *Niche:* Hyper-specialized at the exact intersection of clinical mental health/substance use treatment and the digital creator/influencer economy.
+    *   *Visual Vibe:* Premium, clinical but warm, cinematic, discreet, "fixer" aesthetic.
+*   **Trust & Authority:**
+    *   *Social Proof:* Anonymous but highly specific testimonials from "Agent", "Talent Manager", "Parent of Influencer", and "Confidential Creator Client".
+    *   *Credentials:* Dr. Courtney Tracy, licensed clinician, treatment center founder, advanced clinical training, direct experience with high-profile/public-facing individuals.
+    *   *Media/Recognition:* American Influencer Awards, Creator Conference 2022 keynote presentation.
+*   **Psychological Triggers:**
+    *   *Scarcity/Exclusivity:* "limited-capacity, and waitlists are case by case."
+    *   *In-group/Insider Status:* "She won't give you the BS advice like just do something else with your life...". Speaks directly to the unique failures of traditional therapy for this specific demographic.
+    *   *Urgency/Safety:* "When things feel urgent or overwhelming, we step in early to assess...". Positions the service as a critical safety net.
+
+**V. ELEMENT PLACEMENT & PAGE LITERATURE**
+
+*   **Section Flow:**
+    1.  *Hello Bar:* Core mission statement.
+    2.  *Hero:* Video BG, Massive overlapping Logo, Hidden H1/H2 for SEO.
+    3.  *The Problem:* "When a Creator Is Struggling..." (Context setting).
+    4.  *The Triggers:* "This service supports situations where..." (Symptom mapping).
+    5.  *CTA 1:* "Request Confidential Call".
+    6.  *When to Reach Out:* Specific behavioral indicators.
+    7.  *CTA 2:* "Contact Us Now".
+    8.  *What This Service Includes:* Assessment, Guidance, Coordination.
+    9.  *The Process:* 5-Step Timeline/Carousel (Request -> Assessment -> Review -> Recommend -> Coaching).
+    10. *Authority:* "Who is Dr. Courtney Tracy" (Bio & Photo).
+    11. *Video CTA:* Creator Conference Presentation embed.
+    12. *Why Creators Use This Service:* Industry realities & systemic failures.
+    13. *Experience & Background:* Slick Carousel Timeline (2014-2026 career milestones).
+    14. *Social Proof:* "Anonymous Results" (Testimonials).
+    15. *Final CTA:* "Contact Dr. Courtney" / "Submit an Inquiry".
+    16. *FAQ:* 2-column Accordions handling clinical and logistical objections.
+    17. *Embedded Form:* Kajabi confidential inquiry form.
+    18. *Footer:* Social links, Copyright.
+*   **Component Hierarchy:**
+    *   *Feature Blocks:* Icon + Bold Text (used extensively for lists of symptoms/services).
+    *   *Accordions:* 2-column grid on desktop, stacking on mobile, handling high-friction objections.
+    *   *Slick Carousels:* Used for the chronological timeline of Dr. Courtney's career to establish deep authority.
+    *   *Custom Timeline:* Vertical line with dots and cards (CSS custom build) for the 5-step process.
+
+**VI. TECHNOLOGY & INFRASTRUCTURE STACK**
+
+*   **Frontend:**
+    *   *Framework:* Kajabi (Encore theme base, heavily customized via inline CSS and theme settings).
+    *   *CSS:* Bootstrap grid system, extensive inline CSS overrides, custom CSS for timeline and theme settings.
+    *   *JS:* Slick Carousel, Wistia (video hosting/backgrounds), AOS (Animate on Scroll), Stimulus (Kajabi core).
+*   **Backend & CMS:**
+    *   *Platform:* Kajabi (Storefronts production).
+    *   *Forms:* Native Kajabi forms embedded via script (`embed.js`).
+*   **Performance & Hosting:**
+    *   *CDN:* Kajabi CDN (`kajabi-storefronts-production.kajabi-cdn.com`).
+    *   *Video:* Wistia (`wistia_...`), YouTube embeds (privacy-enhanced `youtube-nocookie.com`), Amazon S3 signed URLs for secure video downloads.
+*   **Analytics & Tracking:**
+    *   *Tracking:* RudderStack (`rudderanalytics`), Kajabi native tracking.
+    *   *Events:* Custom JS listener tracks "Site Link Clicked" capturing link text, href, and tag name for granular behavioral analysis.
+*   **Third-Party Integrations:**
+    *   *Socials:* Facebook, X (Twitter), Instagram, YouTube, LinkedIn, TikTok, Spotify.
+    *   *Fonts:* Google Fonts (Hind, Cabin).
+    *   *Icons:* Font Awesome 5.
+
+**VII. SEO & METADATA ARCHITECTURE**
+
+*   **On-Page SEO:**
+    *   *Title:* "Creator Mental Health Program - Consulting & Coaching"
+    *   *Meta Description:* Highly specific, keyword-rich ("expert treatment consultation & coaching for creators experiencing mental health or substance use crises...").
+    *   *Canonical:* `https://www.creatormentalhealth.com`
+*   **Technical SEO:**
+    *   *OpenGraph/Twitter Cards:* Fully populated with title, description, and `summary_large_image` card type.
+    *   *Schema/Structured Data:* Relies on Kajabi's native semantic HTML output; no explicit JSON-LD visible in the head.
+    *   *Hreflang/Locale:* `en` locale specified in meta tags.
+    *   *Security:* CSRF tokens (`csrf-param`, `csrf-token`) present for form security.
+
+---
+
+## User 9
+
+extract and curate from this next
+
+[Pasted_Text_1781810029812.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/3a27d606-62da-4b2a-a0b9-e96337f946f2_Pasted_Text_1781810029812.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiIzYTI3ZDYwNi02MmRhLTRiMmEtYTBiOS1lOTYzMzdmOTQ2ZjIiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.I2IKBdUYsNM3xqqk1VC-yaniGPrUS7b_9DzrcT5dD6g)
+
+[Pasted_Text_1781810029812.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/3a27d606-62da-4b2a-a0b9-e96337f946f2_Pasted_Text_1781810029812.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiIzYTI3ZDYwNi02MmRhLTRiMmEtYTBiOS1lOTYzMzdmOTQ2ZjIiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.I2IKBdUYsNM3xqqk1VC-yaniGPrUS7b_9DzrcT5dD6g)
+
+---
+
+## User 10
+
+next:
+<!DOCTYPE html><!-- Last Published: Thu Jun 04 2026 12:53:58 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.betherecertificate.org" data-wf-page="64f97afebaacccad71b31df9" data-wf-site="644fbcdb7589c45373c8199d" lang="en"><head><meta charset="utf-8"/><link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous"/><title>Earn your Be There Certificate</title><meta content="A free, online course to learn how to safely support someone who is struggling with their mental health. Learn at your own pace with interactive lessons you can save and come back to later." name="description"/><meta content="Earn your Be There Certificate" property="og:title"/><meta content="A free, online course to learn how to safely support someone who is struggling with their mental health. Learn at your own pace with interactive lessons you can save and come back to later." property="og:description"/><meta content="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64596ecefd3f982455776075_BTC-OG-image-FB.png" property="og:image"/><meta content="Earn your Be There Certificate" name="twitter:title"/><meta content="A free, online course to learn how to safely support someone who is struggling with their mental health. Learn at your own pace with interactive lessons you can save and come back to later." name="twitter:description"/><meta content="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64596ecefd3f982455776075_BTC-OG-image-FB.png" name="twitter:image"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/css/fs-btc.shared.3754c32a8.min.css" rel="stylesheet" type="text/css" integrity="sha384-N1TDKoGmGCKkWHYIHZqrU3e3y/OaKKMfN0uXdEh1JEaa8+CCsGBP+ANEBUPUil9/" crossorigin="anonymous"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Inconsolata:400,700"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe300f75399278ba6e76a_btc-favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe397dc6153f840d6d093_btc-webclip.png" rel="apple-touch-icon"/><!-- Wized Script -->
+<script async src="https://embed.wized.com/dyQRD4WOKyezgWcoG1pT.js"></script>
+<script async type="module" data-wized-id="dyQRD4WOKyezgWcoG1pT" src="https://embed.wized.com/v2/index.js"></script>
+
+<!-- [Attributes by Finsweet] Accessibility -->
+<script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-a11y@1/a11y.js"></script>
+
+<style>
+  /*Hide custom style element on published pages*/
+  .custom-styles {
+    display: none;
+  }
+
+  /*Wized Cloak - prevents content flashing */
+  [wized-cloak='hide'] {
+    opacity: 0 !important;
+    display: none !important;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
+  }
+</style>
+
+<!-- [Attributes by Finsweet] Disable scrolling -->
+<script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js"></script>
+
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-TJKRRMDH');
+</script>
+<!-- End Google Tag Manager --><!-- Code for carousel -->
+<link  rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> </head><body><div class="w-embed"><style>
+  .dialog-popover:popover-open {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  .dialog-popover::backdrop {
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.2s ease, display 0.2s allow-discrete, overlay 0.2s allow-discrete;
+  }
+
+  .dialog-popover:popover-open::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+</style></div><div class="wized"><div wized="onload_get_user" class="wized_load-user"></div></div><div class="page-wrapper"><div class="custom-styles"><div class="custom-styles_fluid w-embed"><style>
+	/*Fluid sizing */
+
+	:root {
+		/*Font size at 0px */
+		--font-from-0: 0.04;
+		/*Font size at the 478px */
+		--font-to-0: 19;
+		--vw-from-0: calc(1 / 100);
+		--vw-to-0: calc(478 / 100);
+		--coefficient-0: calc(
+			(var(--font-to-0) - var(--font-from-0)) / (var(--vw-to-0) - var(--vw-from-0))
+		);
+		--base-0: calc(
+			(var(--font-from-0) - var(--vw-from-0) * var(--coefficient-0)) / 16
+		);
+
+		/*Font size at 478px */
+		--font-from-1: 16;
+		/*Font size at 767px */
+		--font-to-1: 16;
+		--vw-from-1: calc(478 / 100);
+		--vw-to-1: calc(767 / 100);
+		--coefficient-1: calc(
+			(var(--font-to-1) - var(--font-from-1)) / (var(--vw-to-1) - var(--vw-from-1))
+		);
+		--base-1: calc(
+			(var(--font-from-1) - var(--vw-from-1) * var(--coefficient-1)) / 16
+		);
+
+		/*Font size at 767px */
+		--font-from-2: 16;
+		/*Font size at 991px */
+		--font-to-2: 16;
+		--vw-from-2: calc(767 / 100);
+		--vw-to-2: calc(991 / 100);
+		--coefficient-2: calc(
+			(var(--font-to-2) - var(--font-from-2)) / (var(--vw-to-2) - var(--vw-from-2))
+		);
+		--base-2: calc(
+			(var(--font-from-2) - var(--vw-from-2) * var(--coefficient-2)) / 16
+		);
+
+		/*Font size at 991px */
+		--font-from-3: 16;
+		/*Font size at 1440px */
+		--font-to-3: 16;
+		--vw-from-3: calc(991 / 100);
+		--vw-to-3: calc(1440 / 100);
+		--coefficient-3: calc(
+			(var(--font-to-3) - var(--font-from-3)) / (var(--vw-to-3) - var(--vw-from-3))
+		);
+		--base-3: calc(
+			(var(--font-from-3) - var(--vw-from-3) * var(--coefficient-3)) / 16
+		);
+
+		/*Font size at 1440px */
+		--font-from-4: 16;
+		/*Font size at 1920px */
+		--font-to-4: 18;
+		--vw-from-4: calc(1440 / 100);
+		--vw-to-4: calc(1920 / 100);
+		--coefficient-4: calc(
+			(var(--font-to-4) - var(--font-from-4)) / (var(--vw-to-4) - var(--vw-from-4))
+		);
+		--base-4: calc(
+			(var(--font-from-4) - var(--vw-from-4) * var(--coefficient-4)) / 16
+		);
+
+		/*Font size at 1920px */
+		--font-from-5: 18;
+		/*Font size at 2400px */
+		--font-to-5: 20;
+		--vw-from-5: calc(1920 / 100);
+		--vw-to-5: calc(2400 / 100);
+		--coefficient-5: calc(
+			(var(--font-to-5) - var(--font-from-5)) / (var(--vw-to-5) - var(--vw-from-5))
+		);
+		--base-5: calc(
+			(var(--font-from-5) - var(--vw-from-5) * var(--coefficient-5)) / 16
+		);
+	}
+
+	html {
+		font-size: calc(var(--base-5) * 1rem + var(--coefficient-5) * 1vw);
+	}
+	@media screen and (max-width: 1920px) {
+		html {
+			font-size: calc(var(--base-4) * 1rem + var(--coefficient-4) * 1vw);
+		}
+	}
+	@media screen and (max-width: 1440px) {
+		html {
+			font-size: calc(var(--base-3) * 1rem + var(--coefficient-3) * 1vw);
+		}
+	}
+	@media screen and (max-width: 991px) {
+		html {
+			font-size: calc(var(--base-2) * 1rem + var(--coefficient-2) * 1vw);
+		}
+	}
+	@media screen and (max-width: 767px) {
+		html {
+			font-size: calc(var(--base-1) * 1rem + var(--coefficient-1) * 1vw);
+		}
+	}
+	@media screen and (max-width: 478px) {
+		html {
+			font-size: calc(var(--base-0) * 1rem + var(--coefficient-0) * 1vw);
+		}
+	}
+</style></div><div class="custom-styles_general w-embed"><style>
+	/*Make text look crisper and more legible in all browsers*/
+
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-smooth: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	/*These classes are never overwritten*/
+
+	.position-static {
+		position: static !important;
+	}
+	.position-relative {
+		position: relative !important;
+	}
+	.position-absolute {
+		position: absolute !important;
+	}
+	.position-fixed {
+		position: fixed !important;
+	}
+	.position-sticky {
+		position: sticky !important;
+	}
+	.hide {
+		display: none !important;
+	}
+	@media screen and (max-width: 991px) {
+		.hide-tablet {
+			display: none !important;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		.hide-mobile-landscape {
+			display: none !important;
+		}
+	}
+	@media screen and (max-width: 479px) {
+		.hide-mobile {
+			display: none !important;
+		}
+	}
+	.margin-0 {
+		margin: 0rem !important;
+	}
+	.padding-0 {
+		padding: 0rem !important;
+	}
+	.margin-top {
+		margin-right: 0rem !important;
+		margin-bottom: 0rem !important;
+		margin-left: 0rem !important;
+	}
+	.padding-top {
+		padding-right: 0rem !important;
+		padding-bottom: 0rem !important;
+		padding-left: 0rem !important;
+	}
+	.margin-right {
+		margin-top: 0rem !important;
+		margin-bottom: 0rem !important;
+		margin-left: 0rem !important;
+	}
+	.padding-right {
+		padding-top: 0rem !important;
+		padding-bottom: 0rem !important;
+		padding-left: 0rem !important;
+	}
+	.margin-bottom {
+		margin-top: 0rem !important;
+		margin-right: 0rem !important;
+		margin-left: 0rem !important;
+	}
+	.padding-bottom {
+		padding-top: 0rem !important;
+		padding-right: 0rem !important;
+		padding-left: 0rem !important;
+	}
+	.margin-left {
+		margin-top: 0rem !important;
+		margin-right: 0rem !important;
+		margin-bottom: 0rem !important;
+	}
+	.padding-left {
+		padding-top: 0rem !important;
+		padding-right: 0rem !important;
+		padding-bottom: 0rem !important;
+	}
+	.margin-horizontal {
+		margin-top: 0rem !important;
+		margin-bottom: 0rem !important;
+	}
+	.padding-horizontal {
+		padding-top: 0rem !important;
+		padding-bottom: 0rem !important;
+	}
+	.margin-vertical {
+		margin-right: 0rem !important;
+		margin-left: 0rem !important;
+	}
+	.padding-vertical {
+		padding-right: 0rem !important;
+		padding-left: 0rem !important;
+	}
+
+	.container-medium,
+	.container-small,
+	.container-large {
+		margin-right: auto !important;
+		margin-left: auto !important;
+	}
+
+	.spacing-clear {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	/*Focus state style for keyboard navigation for the focusable elements*/
+
+	*[tabindex]:focus-visible,
+	input[type="file"]:focus-visible {
+		outline: 0.125rem solid #f65058;
+		outline-offset: 0.125rem;
+	}
+
+	/*Add custom colours to elements selection */
+	/*
+    ::-moz-selection {
+        color: ;
+        background: #ffb700;
+    }
+    ::selection {
+        color: ;
+        background: #ffb700;
+    }
+    */
+
+	/*Add useful classes that are impossible to create inside the default WF Designer*/
+
+	/* Prevent all click and hover interaction with an element */
+	.pointer-events-off, .button.is-disabled, .survey_nav .w-slider-dot{
+		pointer-events: none;
+	}
+	/* Enables all click and hover interaction with an element */
+	.pointer-events-on {
+		pointer-events: auto;
+	}
+    /* This class breaks words by letters if they overflow their parent container */
+	.text-break-all {
+		word-break: break-all;
+	}
+    /* Inline flex is absent from native Webflow Designer panel, this adds the class for it */
+	.display-inline-flex {
+		display: inline-flex;
+	}
+	/* Create a class that maintains a 1:1 ratio. If placing children inside they need to be absolutely positioned*/
+	.ratio-square {
+		aspect-ratio: 1 / 1;
+	}
+
+	/* Remove top margin on first element in any rich text element */
+
+	.w-richtext > :not(div):first-child,
+	.w-richtext > div:first-child > :first-child {
+		margin-top: 0;
+	}
+
+	/*Remove bottom margin from last elements in any rich text element*/
+
+	.w-richtext > :last-child {
+		margin-bottom: 0;
+	}
+
+	/*Remove bottom margin from the listed items when last in a group*/
+
+	.form_check-radio:last-child,
+	p:last-child,
+	ul:last-child,
+	ol:last-child,
+	li:last-child,
+	h1:last-child,
+	h2:last-child,
+	h3:last-child,
+	h4:last-child,
+	h5:last-child,
+	h6:last-child,
+	blockquote:last-child {
+		margin-bottom: 0;
+	}
+
+	/*Remove top margin from the headings when first in a group*/
+
+	h1:first-child,
+	h2:first-child,
+	h3:first-child,
+	h4:first-child,
+	h5:first-child,
+	h6:first-child,
+	blockquote:first-child {
+		margin-top: 0;
+	}
+
+	/*Make the following elements inherit typography styles from the parent and not have hardcoded values. Important: You will not be able to style for example "All Links" in Designer with this CSS applied. Uncomment this CSS to use it in the project. Leave this message for future hand-off.*/
+
+	a,
+	.w-input,
+	.w-select,
+	.w-tab-link,
+	.w-nav-link,
+	.w-dropdown-btn,
+	.w-dropdown-link,
+  .button_link {
+		color: inherit;
+		text-decoration: inherit;
+		font-size: inherit;
+	}
+
+
+	/* Reset default form style for custom select dropdown icon*/
+
+	.form_text-input.is-select {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+		background-position: right 0.5rem center !important;
+	}
+
+	/* Special functionality to show additional styles inside rich text elements when used on spans with an attribute of code="on". Note that inside the rich text we can create spans only by adding bold or italic to a selection */
+
+	.w-richtext [text-style="code"] {
+		padding-right: 0.25em;
+		padding-left: 0.25em;
+		border-radius: 0.125rem;
+		background-color: rgba(77, 101, 255, 0.1);
+		font-family: 'Inconsolata', monospace;
+	}
+
+	.w-richtext [text-style="class"] {
+		display: inline-block;
+		position: relative;
+		top: -0.125em;
+		padding: 0.125em 0.5em;
+		border-radius: 0.125rem;
+		background-color: #0073e6;
+		color: #fff;
+		font-size: 0.75em;
+		font-weight: inherit;
+	}
+
+	.w-richtext [text-style="tag"] {
+		display: inline-block;
+		position: relative;
+		top: -0.125em;
+		padding: 0.125em 0.5em;
+		border-radius: 0.125rem;
+		background-color: #be4aa5;
+		color: #fff;
+		font-size: 0.75em;
+		font-weight: inherit;
+	}
+
+	/* Fix empty space inside rich text elements when placed inside lists*/
+
+	li .w-richtext:before {
+		content: unset;
+	}
+  
+  
+  /* Nav links behaviour */
+ .header_link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0.125rem;
+    width: 0;
+    height: 0.125rem;
+    background: #f65058;
+    transition: width .3s;
+	}
+
+	 .header_link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+	}
+  
+   .footer_link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0.125rem;
+    width: 0;
+    height: 0.125rem;
+    background: #f65058;
+    transition: width .3s;
+	}
+
+	 .footer_link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+	}
+  
+  .rich-text.is-list-2 ul li:after {
+    content: '';
+    background: #FFCC52;
+    height: 0.5rem;
+    width: 0.5rem;
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    }
+    
+    .main-carousel_list.is-quote .slick-dots li button {
+    padding: 0;
+    background: transparent;
+    border: 0.125rem solid #000;
+    color: transparent;
+    font-size: 0 !important;
+    width: 1.5rem;
+    height: 0.5rem;
+    transition: background-color 100ms ease;
+    }
+    
+    .main-carousel_list.is-quote .slick-dots li.slick-active button {
+    background: #000;
+    }
+    
+  	.main-carousel_list.is-quote .slick-dots li button:hover {
+    background: #000;
+    }
+    
+	 .form_text-input:focus+.form_label.is-alt, .form_label.is-alt.is-filled, .form_text-input:focus+.form_label.is-alt-grey, .form_label.is-alt-grey.is-filled {
+    transform: translateY(-1.75rem);
+    }
+    
+    .header_hamburger-nav.is-no-langbar-black-bg .header_hamburger-close-line {
+    background-color: #ffcc52 !important;
+		}
+    
+    .tooltip_component:last-child, .test_component:last-child {
+    	margin-bottom: 0rem;
+    }
+    
+    .test_radio.is-incorrect .test_radio-button, .test_radio.is-incorrect .test_checkbox-checkbox {
+    background-image: url(https://assets.website-files.com/644fbcdb7589c45373c8199d/646bedbb7f58eefe94ade0f3_incorrecticon.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+		}
+    
+    .survey_nav > * {
+    width: 1.25rem;
+    height: 0.125rem;
+    background-color: #878787;
+    margin: 0;
+    }
+    
+  @media screen and (max-width: 767px) {
+    .survey_nav > * {
+    width: 100%;
+    max-width: 1.25rem;
+    }
+	}
+    
+  .survey_nav > *.w-active {
+    background-color: #F65058;
+    }
+    
+    .survey_radio-scale-radio:first-child .survey_radio-line {
+      transform: translate(50%, 0px);
+    }
+    
+  .survey_radio-scale-radio:last-child .survey_radio-line {
+      transform: translate(-50%, 0px);
+    }
+    
+    .survey_form-block .w-slide [aria-hidden="true"] {
+      height: 0px;
+    }
+    
+    .survey_nav {
+    	display: inline-flex !important;
+    }
+    
+    .test_radio.is-correct .test_radio-button, .test_radio.is-correct .test_checkbox-checkbox {
+ 	   display:none;
+		}
+    
+    .test_radio.is-correct .test_radio-icon {
+  	  width: 1rem;
+		}
+
+
+</style></div></div><a id="skip-link" href="#content" fs-anchor="remove" class="skip-link">Skip to main content</a><div class="cookie-consent"><div fs-cc="banner" class="fs-cc-banner_component"><div class="fs-cc-prefs_form"><div class="cookie-banner_content"><div class="fs-cc-prefs_space-small-top"><div class="heading-style-h5 margin-0">Cookies on our website</div><img loading="lazy" src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/649d7ca04d4c36c14d1e9c2b_Be-There-Certificate-logo.svg" alt="" class="cookie-logo"/></div><div id="w-node-f20f6917-48c1-3807-8c05-d1a26f6ef5f0-6f6ef5e8" class="text-size-small">We use <strong>essential cookies</strong> to make our website work.<br/><br/>With your permission, we’d also like to use a<strong>nalytics and marketing cookies</strong> to understand how people use our site, improve our programs, and measure campaign performance to help fund more work. <br/><br/>View our <a href="/utility/privacy-policy" class="text-style-link">Privacy Policy</a> for more information, or to change your preferences at any time.</div><div id="w-node-f20f6917-48c1-3807-8c05-d1a26f6ef601-6f6ef5e8" class="cookie_actions"><a fs-cc="allow" href="#" class="button w-button">Accept all cookies</a><a fs-cc="deny" href="#" class="button is-ghost-alt w-button">Deny all cookies</a><a fs-cc="open-preferences" href="#" class="button is-secondary">Preferences</a></div></div></div><div fs-cc="interaction" class="fs-cc-banner_trigger"></div><div class="fs-cc-prefs_overlay"></div></div><div fs-cc-scroll="disable" fs-cc="preferences" class="fs-cc-prefs_component w-form"><form id="cookie-preferences" name="wf-form-Cookie-Preferences" data-name="Cookie Preferences" method="get" class="fs-cc-prefs_form" data-wf-page-id="64f97afebaacccad71b31df9" data-wf-element-id="f20f6917-48c1-3807-8c05-d1a26f6ef60d"><div fs-cc="close" class="fs-cc-prefs_close"><div class="fs-cc-prefs_close-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.1266 16.773L16.7729 17.1266C16.5777 17.3218 16.2611 17.3218 16.0658 17.1266L12 13.0607L7.9341 17.1265C7.73888 17.3218 7.42229 17.3218 7.22702 17.1265L6.87347 16.773C6.6782 16.5777 6.6782 16.2612 6.87347 16.0659L10.9394 12L6.87347 7.93413C6.6782 7.73891 6.6782 7.42232 6.87347 7.22705L7.22702 6.8735C7.42228 6.67824 7.73888 6.67824 7.9341 6.8735L12 10.9394L16.0658 6.8735C16.2611 6.67824 16.5777 6.67824 16.7729 6.8735L17.1266 7.22705C17.3218 7.42231 17.3218 7.73891 17.1266 7.93413L13.0607 12L17.1266 16.0659C17.3218 16.2612 17.3218 16.5777 17.1266 16.773Z" fill="currentColor"/>
+</svg></div></div><div data-lenis-prevent="" class="fs-cc-prefs_content"><div class="fs-cc-prefs_space-small"><div class="heading-style-h5">Cookie Preferences</div></div><div class="fs-cc-prefs_space-small"><p class="text-size-tiny">When you visit websites, they may store or retrieve data in your browser. This storage is often necessary for the basic functionality of the website. The storage may be used for marketing, analytics, and personalization of the site, such as storing your preferences. Privacy is important to us, so you have the option of disabling certain types of storage that may not be necessary for the basic functioning of the website. Blocking categories may impact your experience on the website.</p></div><div class="actions full-width"><a fs-cc="deny" href="#" class="button is-ghost-alt is-spread w-button">Reject all cookies</a><a fs-cc="allow" href="#" class="button is-spread w-button">Allow all cookies</a></div><div class="fs-cc-prefs_option"><div class="fs-cc-prefs_toggle-wrapper"><div class="fs-cc-prefs_label">Essential</div><div class="category-tag">Always Active</div></div><div class="fs-cc-prefs_text">These items are required to enable basic website functionality.</div></div><div class="fs-cc-prefs_option hidden"><div class="fs-cc-prefs_toggle-wrapper"><div class="fs-cc-prefs_label">Marketing</div><label class="w-checkbox fs-cc-prefs_checkbox-field"><input type="checkbox" name="marketing-2" id="marketing-2" data-name="Marketing 2" fs-cc-checkbox="marketing" class="w-checkbox-input fs-cc-prefs_checkbox"/><span for="marketing-2" class="fs-cc-prefs_checkbox-label w-form-label">Essential</span><div class="fs-cc-prefs_toggle"></div></label></div><div class="fs-cc-prefs_text">These items are used to deliver advertising that is more relevant to you and your interests. They may also be used to limit the number of times you see an advertisement and measure the effectiveness of advertising campaigns. Advertising networks usually place them with the website operator’s permission.</div></div><div class="fs-cc-prefs_option hidden"><div class="fs-cc-prefs_toggle-wrapper"><div class="fs-cc-prefs_label">Personalization</div><label class="w-checkbox fs-cc-prefs_checkbox-field"><input type="checkbox" name="personalization-2" id="personalization-2" data-name="Personalization 2" fs-cc-checkbox="personalization" class="w-checkbox-input fs-cc-prefs_checkbox"/><span for="personalization-2" class="fs-cc-prefs_checkbox-label w-form-label">Essential</span><div class="fs-cc-prefs_toggle"></div></label></div><div class="fs-cc-prefs_text">These items allow the website to remember choices you make (such as your user name, language, or the region you are in) and provide enhanced, more personal features. For example, a website may provide you with local weather reports or traffic news by storing data about your current location.</div></div><div class="fs-cc-prefs_option"><div class="fs-cc-prefs_toggle-wrapper"><div class="fs-cc-prefs_label">Analytics</div><label class="w-checkbox fs-cc-prefs_checkbox-field"><input type="checkbox" name="analytics-2" id="analytics-2" data-name="Analytics 2" fs-cc-checkbox="analytics" class="w-checkbox-input fs-cc-prefs_checkbox"/><span for="analytics-2" class="fs-cc-prefs_checkbox-label w-form-label">Essential</span><div class="fs-cc-prefs_toggle"></div></label></div><div class="fs-cc-prefs_text">These items help the website operator understand how its website performs, how visitors interact with the site, and whether there may be technical issues. This storage type usually doesn’t collect information that identifies a visitor.</div></div><div class="fs-cc-prefs_buttons-wrapper"><a fs-cc="submit" href="#" class="button max-width-full w-button">Confirm and close</a></div><input type="submit" data-wait="Please wait..." class="fs-cc-prefs_submit-hide w-button" value="Submit"/><div class="hide w-embed"><style>
+/* smooth scrolling on iOS devices */
+.fs-cc-prefs_content{-webkit-overflow-scrolling: touch}
+</style></div></div></form><div class="w-form-done"></div><div class="w-form-fail"></div><div fs-cc="close" class="fs-cc-prefs_overlay"></div><div fs-cc="interaction" class="fs-cc-prefs_trigger"></div></div></div><header class="header_component"><div data-background="light" data-theme="dark" class="navbar_top_wrap"><div data-padding-bottom="none" data-padding-top="none" class="navbar_top_contain u-container"><div class="navbar_main_top_layout"><a id="donate_menu" href="https://www.jack.org/?utm_source=BTC&amp;utm_medium=Referral&amp;utm_content=Nav" class="navbar_top_link u-text-h6 is-current">Jack.org</a><a id="login_menu" href="https://edhub.jack.org/?utm_source=BTC&amp;utm_medium=Referral&amp;utm_content=Nav" class="navbar_top_link u-text-h6">edHUB</a><a id="login_menu" href="https://www.jack.org/jack-ride?utm_source=BTC&amp;utm_medium=Referral&amp;utm_content=Nav" class="navbar_top_link u-text-h6">Jack Ride</a><a id="login_menu" href="/" aria-current="page" class="navbar_top_link u-text-h6 btc_desktop w--current">Be There Certificate</a><a id="login_menu" href="https://www.betherecertificate.org/" class="navbar_top_link u-text-h6 btc_mobile">BTC</a></div></div></div><section class="header_language-bar padding-global"><div class="header_language-switcher"><a href="/es/home-espanol" class="text-style-link is-header-language w-inline-block"><div>ES</div></a><div>/</div><a href="/fr/home-francais" class="text-style-link is-header-language w-inline-block"><div>FR</div></a></div></section><nav class="header_nav padding-global"><a aria-label="Back to homepage" href="/" aria-current="page" class="header_logo w-inline-block w--current"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/649d7ca04d4c36c14d1e9c2b_Be-There-Certificate-logo.svg" loading="eager" alt="" class="header_logo-img"/></a><ul role="list" class="header_nav-group"><li class="header_nav-group-list-item hide-mobile-landscape"><div class="header_link-wrapper"><a href="/about" class="header_link">About</a></div></li><li class="header_nav-group-list-item hide-mobile-landscape"><div class="button_group"><div class="button is-secondary"><div class="button_inner-wrapper"><div class="button_fill is-secondary"></div><div class="button_icon"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5172 17.6392L17.2327 10.1776L18.1358 9.17411L17.2327 8.17066L10.5172 0.708984L8.28733 2.71588L12.7493 7.67361L0 7.67362V10.6736L12.7502 10.6736L8.28733 15.6323L10.5172 17.6392Z" fill="CurrentColor"/>
+</svg></div></div><a wized="onclick_resume_course" role="button" data-w-id="143def5d-9e6c-4e07-41a1-c615b7fa2d77" href="/be-there-certificate" class="button_link">Take the Course</a></div></div></div></li><li class="header_nav-group-list-item hide-mobile-landscape"><div class="button_group"><div class="button"><div class="button_inner-wrapper"><div class="button_fill is-secondary"></div><div class="button_icon"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5172 17.6392L17.2327 10.1776L18.1358 9.17411L17.2327 8.17066L10.5172 0.708984L8.28733 2.71588L12.7493 7.67361L0 7.67362V10.6736L12.7502 10.6736L8.28733 15.6323L10.5172 17.6392Z" fill="CurrentColor"/>
+</svg></div></div><a wized="" role="button" data-w-id="7ed89a23-db23-9dca-32f2-48dc9c279780" href="https://jack.org/donate" target="_blank" class="button_link">Donate Now</a></div></div></div></li></ul></nav><div class="header_hamburger-nav"><div class="header_hamburger-overlay"></div><div data-hover="false" data-delay="0" data-w-id="a4dcd445-bc51-3ec6-ba98-385ef1110357" class="header_hamburger-dropdown w-dropdown"><div aria-label="Open main navigation" data-w-id="a4dcd445-bc51-3ec6-ba98-385ef1110358" class="header_hamburger-toggle w-dropdown-toggle"><div class="header_hamburger-close-lines"><div class="header_hamburger-close-line is-1"><div class="header_hamburger-close-line-fill"></div></div><div class="header_hamburger-close-line is-2"><div class="header_hamburger-close-line-fill"></div></div><div class="header_hamburger-close-line is-3"><div class="header_hamburger-close-line-fill"></div></div></div></div><nav fs-scrolldisable-gap="true" fs-scrolldisable-element="when-visible" class="header_hamburger-dropdown-list-wrapper w-dropdown-list"><div class="header_hamburger-dropdown-list"><div class="header_hamburger-link-group"><div class="header_hamburger-course"><div class="button_group"><div class="button is-secondary"><div class="button_inner-wrapper"><div class="button_fill is-secondary"></div><div class="button_icon"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5172 17.6392L17.2327 10.1776L18.1358 9.17411L17.2327 8.17066L10.5172 0.708984L8.28733 2.71588L12.7493 7.67361L0 7.67362V10.6736L12.7502 10.6736L8.28733 15.6323L10.5172 17.6392Z" fill="CurrentColor"/>
+</svg></div></div><a wized="onclick_resume_course" role="button" data-w-id="a4dcd445-bc51-3ec6-ba98-385ef1110367" href="/be-there-certificate" class="button_link">Take the Course</a></div></div></div></div><div class="header_link-wrapper"><a href="/about" class="header_link">About</a></div><div class="header_link-wrapper"><a href="/be-there-certificate" class="header_link">Course Outline</a></div><div wized-cloak="hide" wized="nav_register" class="header_link-wrapper"><a href="/create-an-account" class="header_link">Register</a></div><div wized-cloak="hide" wized="nav_logout" class="header_link-wrapper"><a href="/log-out" class="header_link">Log Out</a></div><div wized-cloak="hide" wized="nav_login" class="header_link-wrapper"><a href="/log-in" class="header_link">Log In</a></div><div wized-cloak="hide" wized="nav_my_account" class="header_link-wrapper"><a href="/my-account" class="header_link">My Account</a></div><div wized="nav_data_dashboard" class="header_link-wrapper"><a href="/data-dashboard" class="header_link">Data Dashboard</a></div><div wized="nav_refresher" class="header_link-wrapper"><a id="refresher-link" href="#" class="header_link">*NEW* Be There Certificate Refreshers</a></div><div class="header_link-wrapper"><a href="/resources" class="header_link">Resources</a></div></div></div></nav></div></div></header><main id="content" tabindex="-1" class="main-wrapper"><div><div class="crisis-alert_overlay"></div><div data-hover="false" data-delay="0" data-w-id="0ea8b337-9cb8-216a-fa02-91a670abadf1" class="crisis-alert_component w-dropdown"><div aria-label="Open emergency information" class="crisis-alert_handle w-dropdown-toggle"><div class="icon-small is-open w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" width="100%" height="100%">
+  <path d="M14,0A14,14,0,1,0,28,14,14.0158,14.0158,0,0,0,14,0Zm.2059,21a1.4412,1.4412,0,1,1,1.4412-1.4412A1.4413,1.4413,0,0,1,14.2059,21Zm1.4416-5.9707a1.4415,1.4415,0,0,1-2.8829,0V8.853a1.4415,1.4415,0,0,1,2.8829,0Z" style="fill: CurrentColor"/>
+</svg></div><div class="icon-small is-close w-embed"><svg viewBox="0 0 16 16">
+  <rect width="2.01" height="13.31" x="6.99" y="1.35" fill="CurrentColor" rx="1.01" transform="rotate(-45 8.002 7.996)"/>
+  <rect width="13.31" height="2.01" x="1.35" y="6.99" fill="CurrentColor" rx="1.01" transform="rotate(-45 8.002 7.996)"/>
+</svg></div></div><nav class="crisis-alert_dropdown-list padding-global w-dropdown-list"><div class="rich-text-white w-richtext"><h6>In an Emergency</h6><p>This is not a site for personal disclosure of mental health distress, or suicidal thoughts or behaviours. If you or someone you know is in crisis, please call a helpline (<a href="https://betherecertificate.org/resources/" target="_blank">like these</a>), 9-1-1 or emergency services or go to your nearest emergency department for assistance.</p></div></nav></div></div><div data-w-id="3cec4862-03c5-95eb-6a54-5627662fcfca" class="section_main-hero padding-global padding-section-medium"><div class="main-hero_background-image-wrapper"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac8e5eb626e28ee9d7312_hero-background.svg" loading="eager" alt="" class="main-hero_background-image"/></div><div class="container-medium"><div class="text-align-center is-top-zindex"><h1 class="heading-style-h1">Be There Certificate<strong><em><sup>®</sup></em></strong></h1><div class="rich-text text-size-large margin-bottom margin-small w-richtext"><p>Learn to support someone struggling with their mental health through this online course created by Jack.org in partnership with Born This Way Foundation.</p></div><div class="margin-bottom margin-small"><div class="hero_logos-list"><a aria-label="Visit jack.org" href="https://jack.org/" target="_blank" class="hero_logo w-inline-block"><div class="svg w-embed"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 289.2 72" fill="CurrentColor" width="100%" height="100%">
+  <path d="M1.4 63.1c.6 0 1 .1 1.3.1h.7c1 0 1.8-.3 2.4-.8.5-.5.8-1.5.8-3V14.8h10.6v44.8c0 4.1-.8 7.1-2.4 9.1-1.6 2-4.8 2.9-9.5 2.9H3.9c-.6 0-1.4 0-2.4-.1l-.1-8.4zM17.2 9.8H6.5V0h10.7v9.8z"  />
+  <path d="M43.4 30.5c2-.2 3.4-.6 4.2-.9 1.5-.6 2.3-1.7 2.3-3 0-1.7-.6-2.8-1.8-3.5-1.2-.6-2.9-1-5.2-1-2.5 0-4.3.6-5.4 1.9-.8.9-1.3 2.2-1.5 3.7H25.8c.2-3.6 1.2-6.5 3-8.8 2.8-3.6 7.7-5.4 14.5-5.4 4.5 0 8.4.9 11.9 2.6 3.5 1.8 5.2 5.1 5.2 10v18.7c0 1.3 0 2.9.1 4.7.1 1.4.3 2.3.6 2.8s.9.9 1.6 1.2v1.6H51.2c-.3-.8-.5-1.6-.7-2.3-.1-.7-.2-1.5-.3-2.5-1.5 1.6-3.2 2.9-5.1 4.1-2.3 1.3-4.9 2-7.8 2-3.7 0-6.8-1.1-9.2-3.2-2.4-2.1-3.6-5.1-3.6-8.9 0-5 1.9-8.6 5.8-10.9 2.1-1.2 5.3-2.1 9.4-2.6l3.7-.3zm6.5 5c-.7.4-1.4.8-2.1 1s-1.6.5-2.8.8l-2.4.4c-2.3.4-3.9.9-4.9 1.5-1.7 1-2.5 2.5-2.5 4.5 0 1.8.5 3.1 1.5 3.9s2.3 1.2 3.7 1.2c2.3 0 4.5-.7 6.4-2 2-1.3 3-3.8 3-7.3l.1-4z"  />
+  <path d="M94.1 29.2c-.2-1.5-.7-2.9-1.5-4.1-1.2-1.6-3.1-2.5-5.6-2.5-3.6 0-6 1.8-7.4 5.3-.7 1.9-1 4.4-1 7.5 0 3 .3 5.4 1 7.2 1.3 3.4 3.7 5.1 7.2 5.1 2.5 0 4.3-.7 5.3-2s1.7-3.1 1.9-5.2h10.9c-.2 3.2-1.4 6.3-3.5 9.2-3.3 4.7-8.3 7-14.8 7s-11.4-1.9-14.5-5.8-4.6-8.9-4.6-15.1c0-7 1.7-12.4 5.1-16.3s8.1-5.8 14.1-5.8c5.1 0 9.3 1.1 12.5 3.4 3.2 2.3 5.2 6.3 5.8 12.1H94.1z"  />
+  <path d="M112.2.5h10.4v29.7L136 14.9h13.2L134.6 30l15.1 25.3h-12.9l-9.9-17.4-4.4 4.6v12.8h-10.3V.5z"  />
+  <g>
+    <path d="M154.5 44.1h11.3v11.2h-11.3V44.1z"  />
+  </g>
+  <g>
+    <path d="M209.9 50.3c-3.4 4.2-8.6 6.4-15.6 6.4s-12.2-2.1-15.6-6.4c-3.4-4.2-5.1-9.3-5.1-15.3 0-5.9 1.7-10.9 5.1-15.2 3.4-4.3 8.6-6.4 15.6-6.4s12.2 2.1 15.6 6.4S215 29.2 215 35c0 6-1.7 11.1-5.1 15.3zm-8.5-5.9c1.7-2.2 2.5-5.4 2.5-9.4 0-4.1-.8-7.2-2.5-9.4s-4.1-3.3-7.2-3.3c-3.1 0-5.5 1.1-7.2 3.3s-2.5 5.3-2.5 9.4.8 7.2 2.5 9.4 4.1 3.3 7.2 3.3c3.1 0 5.5-1.1 7.2-3.3z"  />
+    <path d="M245.2 13.7c.1 0 .4 0 .9.1v10.9c-.7-.1-1.3-.1-1.8-.1H243c-4.3 0-7.1 1.4-8.6 4.2-.8 1.6-1.2 4-1.2 7.2v19.4h-10.7V14.6h10.1v7.1c1.6-2.7 3.1-4.6 4.3-5.6 2-1.7 4.6-2.5 7.8-2.5.2 0 .4.1.5.1z"  />
+    <path d="M272.5 14.6c2.6 1.1 4.7 3 6.3 5.9v-5.9h10.4v38.6c0 5.2-.9 9.2-2.6 11.9-3 4.6-8.9 6.9-17.5 6.9-5.2 0-9.4-1-12.7-3.1-3.3-2-5.1-5.1-5.4-9.1h11.6c.3 1.2.8 2.1 1.5 2.7 1.1 1 3.1 1.5 5.8 1.5 3.8 0 6.4-1.3 7.7-3.8.8-1.6 1.3-4.4 1.3-8.3v-2.6c-1 1.7-2.1 3-3.3 3.9-2.1 1.6-4.9 2.4-8.2 2.4-5.2 0-9.4-1.8-12.5-5.5-3.1-3.7-4.7-8.6-4.7-14.9 0-6 1.5-11.1 4.5-15.2s7.3-6.2 12.8-6.2c1.7-.2 3.5.2 5 .8zm3.6 29.1c1.7-1.9 2.6-4.9 2.6-9 0-3.9-.8-6.8-2.4-8.8s-3.8-3-6.5-3c-3.7 0-6.3 1.8-7.7 5.3-.7 1.9-1.1 4.2-1.1 6.9 0 2.4.4 4.5 1.2 6.3 1.4 3.4 4 5.1 7.7 5.1 2.4 0 4.5-.9 6.2-2.8z"  />
+  </g>
+</svg></div></a><a aria-label="Visit Born This Way Foundation" href="https://bornthisway.foundation/" target="_blank" class="hero_logo w-inline-block"><div class="svg w-embed"><svg xmlns="http://www.w3.org/2000/svg" fill="CurrentColor" xml:space="preserve" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 1092.8 205.9" width="100%" height="100%">
+  <path d="M44.9 46.4v-.3c18.5-1 33.4-6.8 33.4-22.1C78.3 10.4 66.3.5 42.5.5c-7.4 0-14.9.3-22.2.3C11.8.8 8.1.5 3.2.5.9.5 0 .8 0 2.5 0 6 11.8 1.5 11.8 11v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.9 2 3.1 2 5 0 8.6-.3 17.1-.3 10.3 0 19.7.3 28.7.3 22.5 0 34.1-8.6 34.1-25.5.1-15.8-10.5-24.8-38.1-25.2zM28.7 3.9h10.6c13.3 0 21.9 6.9 21.9 20.7 0 13.2-6.4 20.4-24.1 20.4h-8.5V3.9zm13.9 89.8c-10.6 0-14-2.5-14-9.1V48.4h9.9c17 0 27.6 6.2 27.6 22.9 0 13.9-6.1 22.4-23.5 22.4z"  />
+  <path d="M140.4 99.1c23.9 0 50.8-18.5 50.8-50.3S164.4-1.4 140.4-1.4c-23.9 0-50.8 18.5-50.8 50.3s26.9 50.2 50.8 50.2zm0-97.1c18.5 0 32.1 14.9 32.1 46.9S159 95.7 140.4 95.7s-32.1-14.9-32.1-46.9S121.9 2 140.4 2z"  />
+  <path d="m273.7 84.5-7.8-15.9C258.8 54.3 252.6 52 239 50.5v-.3c20.4-1.4 34.3-10.2 34.3-24.5 0-12.2-10.8-25.2-38.4-25.2-5.5 0-11 .3-18.7.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.9 2 3.1 2 5 0 8.6-.3 17.1-.3 8.5 0 12.2.3 17.1.3 2.3 0 3.1-.3 3.1-2 0-3.5-11.8 1-11.8-8.5V52.4h2.3c10.8 0 13.6 3.1 23.5 21.5l12.3 22.9c12.6.1 22.4.3 24.4.3s2.8-.4 2.8-1.7c.1-3.5-10.1 1.3-16.2-10.9zm-49-35.5V4h8.4c13.4 0 21.5 5.9 21.5 22.2 0 16.4-8.1 22.8-23.4 22.8h-6.5z"  />
+  <path d="M308.6 96.8c5.9 0 9.8.3 14.9.3 2.3 0 3.1-.3 3.1-1.6 0-2-1.7-1.4-5.4-2.5-5.4-1.7-10.6-7.5-10.6-19.5V17.8h.3l60 79.9c.7 1 1.8 1.4 2.8 1.4 1.1 0 1.7-1 1.7-2V24.2c0-12 5.2-17.8 10.6-19.5 3.7-1.1 5.4-.6 5.4-2.5 0-1.3-.8-1.6-3.1-1.6-5.1 0-8.9.3-14.9.3-5.9 0-9.8-.3-14.9-.3-2.3 0-3.1.3-3.1 1.6 0 2 1.7 1.4 5.4 2.5 5.4 1.7 10.6 7.5 10.6 19.5v48.3h-.3L317.8.8h-13.2c-4.5 0-7.4-.3-10.8-.3-2.1 0-3.1.4-3.1 2 0 2.7 7.6-1.4 15.9 10.3v60.6c0 12-5.2 17.8-10.6 19.5-3.7 1.1-5.4.6-5.4 2.5 0 1.3.8 1.6 3.1 1.6 5.2.1 9-.2 14.9-.2z"  />
+  <path d="M423.8 96.8h22.5V19.6h28.6V0h-79.7v19.6h28.6z"  />
+  <path d="M505.6 57.8H543v39h22.4V0H543v37.1h-37.4V0h-22.4v96.8h22.4z"  />
+  <path d="M583.2 0h22.4v96.8h-22.4z"  />
+  <path d="M660.3 79.1c-13.1 0-20.1-7.1-23.5-20.9l-19 9.1c5.7 20.9 19.8 31.4 42.5 31.4 11.3 0 20.2-2.9 26.7-8.8s9.7-13.4 9.7-22.3c0-16-9.5-24.9-31-29.5-16.7-3.5-23-7.2-23-12.6 0-5.5 5.9-9.3 14.2-9.3 10.4 0 17.4 5.7 21.3 17l16.7-10c-6.8-17.1-18.7-25.3-37.6-25.3-10.5 0-19 2.5-25.3 7.6-6.4 5.1-9.5 11.8-9.5 20.2 0 15.4 10.1 25 30.4 29 14.9 2.8 21.7 7.1 21.7 14.2.1 5.9-5.6 10.2-14.3 10.2z"  />
+  <path d="m782.3 96.8 16.2-63.2 16.2 63.2h23.7L864.9 0h-23.7l-13 53.9-2.4 10.9-2.2-11.1L810.1 0h-23.2l-13.6 53.8-2.2 11.1c-.4-2.4-1.2-6.1-2.4-10.9l-13-54H732l26.6 96.8h23.7z"  />
+  <path d="m897.5 0-39.4 96.8h24.3l8.7-23.4h33.8l8.7 23.4H958L918.5 0h-21zm.7 54.4 5.8-15.8 4-11.5c1.2 3.9 2.5 7.7 4 11.5l5.8 15.8h-19.6z"  />
+  <path d="m1007.1 0-15.5 30.8-2.8 7.2c-.7-2.2-1.7-4.6-2.8-7.2L970.6 0h-25.2l32.2 60v36.8h22.4V60l32.1-60h-25z"  />
+  <path d="M71.1 109.3c-9.1 0-19.5.3-50.8.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.9 2 3.1 2 5 0 8.6-.3 17.1-.3 8.5 0 12.2.3 17.1.3 2.3 0 3.1-.3 3.1-2 0-3.5-11.8 1-11.8-8.5v-37.7h3.1c12.2 0 21.4 5 21.4 19.8 0 2.1.7 2.6 1.7 2.6 1.1 0 1.7-.4 1.7-2.6v-42.3c0-2.1-.6-2.7-1.7-2.7-1 0-1.7.6-1.7 2.7 0 14.3-9.2 19.1-21.4 19.1h-3.1v-41.6h3.1c16.9 0 28.9 2.4 37.5 14.7 6.9 9.9 6.5 13.4 8.2 13.4.9 0 1.1-.4 1.1-1.4 0-.7-.3-1.8-.8-3.7l-6.7-26.4z"  />
+  <path d="M135.4 107.4c-23.9 0-50.8 18.5-50.8 50.3 0 31.7 26.9 50.3 50.8 50.3s50.8-18.5 50.8-50.3c0-31.8-26.9-50.3-50.8-50.3zm0 97.1c-18.5 0-32.1-14.9-32.1-46.9s13.6-46.9 32.1-46.9 32.1 14.9 32.1 46.9-13.6 46.9-32.1 46.9z"  />
+  <path d="M286.3 109.3c-5.1 0-8.9.3-14.9.3-5.9 0-9.8-.3-14.9-.3-2.3 0-3.1.3-3.1 1.6 0 2 1.7 1.4 5.4 2.5 5.4 1.7 10.6 7.5 10.6 19.5v43.8c0 17-8.6 26.9-25.3 26.9-15.4 0-25.8-8.9-25.8-23.8v-60c0-9.5 11.8-5 11.8-8.5 0-1.7-.8-2-3.1-2-5 0-8.6.3-17.1.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v59.9c0 16 12.3 28.2 38.5 28.2 22.1 0 33.6-11.6 33.6-31.4V133c0-12 5.2-17.8 10.6-19.5 3.7-1.1 5.4-.6 5.4-2.5-.2-1.4-1-1.7-3.3-1.7z"  />
+  <path d="M389.5 109.3c-5.1 0-8.9.3-14.9.3-5.9 0-9.8-.3-14.9-.3-2.3 0-3.1.3-3.1 1.6 0 2 1.7 1.4 5.4 2.5 5.4 1.7 10.6 7.5 10.6 19.5v48.3h-.3L319 109.6h-13.2c-4.5 0-7.4-.3-10.8-.3-2.1 0-3.1.4-3.1 2 0 2.7 7.6-1.4 15.9 10.3v60.6c0 12-5.2 17.8-10.6 19.5-3.7 1.1-5.4.6-5.4 2.5 0 1.3.8 1.6 3.1 1.6 5.1 0 8.9-.3 14.9-.3 5.9 0 9.8.3 14.9.3 2.3 0 3.1-.3 3.1-1.6 0-2-1.7-1.4-5.4-2.5-5.4-1.7-10.6-7.5-10.6-19.5v-55.6h.3l60 79.9c.7 1 1.8 1.4 2.8 1.4 1.1 0 1.7-1 1.7-2V133c0-12 5.2-17.8 10.6-19.5 3.7-1.1 5.4-.6 5.4-2.5 0-1.4-.9-1.7-3.1-1.7z"  />
+  <path d="M438.1 109.3c-7.8 0-14.3.3-20.1.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.9 2 3.1 2 5 0 8.6-.3 17.1-.3 8.4 0 16.6.3 26.1.3 31.9 0 48.1-21.4 48.1-47.9 0-29-20.5-48.7-54.1-48.7zm3.9 93.2c-10.2 0-15.4-3.7-15.4-12.7v-77h14.6c21.7 0 32.4 19.3 32.4 46.3-.1 36-15.5 43.4-31.6 43.4z"  />
+  <path d="m574.5 196.8-30.2-66.7c-8.4-18.7-8.4-23.4-10.2-23.4-1.8 0-1.1 2-4.1 8.2-4 8.4-6.4 8.1-6.4 10.2 0 1.7 3.4 4.4 3.4 5.4 0 1.1-2.4 6.4-19.4 48.9-3.8 9.6-8.5 17.1-12.2 20.2-4 3.4-9.5 2-9.5 4.5 0 1.1.4 1.7 1.8 1.7 5.1 0 9.6-.3 14.3-.3 9.6 0 13 .3 16 .3 1.6 0 2.3 0 2.3-1.6 0-3.4-11.8 0-11.8-14.2 0-4.1 1.8-8.2 5.7-19.1h31.4l8.1 18.4c1 2.1 2.4 6.4 2.4 7.6 0 7.6-9.9 3.5-9.9 7.1 0 1.3.8 1.7 2.3 1.7 5.8 0 11.3-.3 17-.3 5.7 0 11.3.3 17 .3 1.4 0 2.4-.1 2.4-1.7.1-2.9-6.7 1.2-10.4-7.2zm-58.8-29.1 13.3-34.8 15.3 34.8h-28.6z"  />
+  <path d="M660.8 110c-.1-.8-.3-2.7-1.6-2.7-.8 0-1.1.6-1.8 1.1-.8.6-2.1 1.1-5.1 1.1H591c-3 0-4.2-.6-5.1-1.1-.7-.6-1-1.1-1.8-1.1-1.3 0-1.4 1.8-1.6 2.7l-4.5 23.2c-.6 2.7-1.4 6.1-1.4 7.8 0 .6.3 1.1 1.3 1.1.8 0 1.6-1.8 3.1-5.1 5.5-11.5 17.8-24.1 32.1-24.1l.1 82.4c0 9.5-14 5-14 8.5 0 1.7 1.4 2 3.7 2 6.7 0 10.3-.3 18.8-.3s12.2.3 18.8.3c2.3 0 3.7-.3 3.7-2 0-3.5-14 1-14-8.5V113c14.3 0 26.6 12.6 32.1 24.1 1.6 3.3 2.3 5.1 3.1 5.1 1 0 1.3-.6 1.3-1.1 0-1.7-.8-5.1-1.4-7.8l-4.5-23.3z"  />
+  <path d="M712 111.3c0-1.7-.9-2-3.1-2-5 0-8.6.3-17.1.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.8 2 3.1 2 5 0 8.6-.3 17.1-.3 8.5 0 12.2.3 17.1.3 2.3 0 3.1-.3 3.1-2 0-3.5-11.8 1-11.8-8.5v-75.6c.1-9.5 11.8-4.9 11.8-8.5z"  />
+  <path d="M767.8 107.4c-23.9 0-50.8 18.5-50.8 50.3 0 31.7 26.9 50.3 50.8 50.3s50.8-18.5 50.8-50.3c0-31.8-26.9-50.3-50.8-50.3zm0 97.1c-18.5 0-32.1-14.9-32.1-46.9s13.6-46.9 32.1-46.9 32.1 14.9 32.1 46.9-13.6 46.9-32.1 46.9z"  />
+  <path d="M916.8 109.3c-5.1 0-8.9.3-14.9.3-5.9 0-9.8-.3-14.9-.3-2.3 0-3.1.3-3.1 1.6 0 2 1.7 1.4 5.4 2.5 5.4 1.7 10.6 7.5 10.6 19.5v48.3h-.3l-53.4-71.6H833c-4.5 0-7.4-.3-10.8-.3-2.1 0-3.1.4-3.1 2 0 2.7 7.6-1.4 15.9 10.3v60.6c0 12-5.2 17.8-10.6 19.5-3.7 1.1-5.4.6-5.4 2.5 0 1.3.8 1.6 3.1 1.6 5.1 0 8.9-.3 14.9-.3 5.9 0 9.8.3 14.9.3 2.3 0 3.1-.3 3.1-1.6 0-2-1.7-1.4-5.4-2.5-5.4-1.7-10.6-7.5-10.6-19.5v-55.6h.3l60 79.9c.7 1 1.8 1.4 2.8 1.4 1.1 0 1.7-1 1.7-2V133c0-12 5.2-17.8 10.6-19.5 3.7-1.1 5.4-.6 5.4-2.5.1-1.4-.8-1.7-3-1.7z"  />
+  <path d="m1071.3 0-51 96.8h21.6L1092.8 0z"  />
+</svg></div></a></div></div><div class="button_group is-centered"><div wized="button_home_get_started" class="button"><div class="button_inner-wrapper"><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="button_fill"></div><a href="#" wized="onclick_get_started_home" role="button" data-w-id="1a7aa91e-e353-aab8-1088-534bf1252f43" class="button_link is-iconless">Get Started</a></div></div><div class="button"><div class="button_inner-wrapper"><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="button_fill"></div><a href="#" wized="onclick_resume_learning" role="button" data-w-id="1a7aa91e-e353-aab8-1088-534bf1252f48" class="button_link is-iconless">Resume Learning</a></div></div></div><div class="button_group is-centered hide"><div class="button"><div class="button_inner-wrapper"><div class="button_fill"></div><a href="/create-an-account" role="button" class="button_link is-iconless">Create Account</a></div></div><div class="button"><div class="button_inner-wrapper"><div class="button_fill"></div><a href="/log-in" role="button" class="button_link is-iconless">Log In</a></div></div></div></div><div class="main-hero_image pointer-events-off"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac7ce06bdc305bbfc349c_BeThere_1-1.svg" loading="eager" alt="" class="main-hero_image-gfx"/></div></div></div><section class="section_main-about padding-section-medium"><div class="grid-grid is-main-about"><div class="main-about_image"><div class="main-about_image-inner"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3.webp" loading="lazy" height="" alt="" width="557" srcset="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-500.webp 500w, https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-800.webp 800w, https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-1080.webp 1080w, https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3.webp 1114w" sizes="(max-width: 767px) 100vw, 557px" class="main-about_image-gfx"/></div></div><div id="w-node-_9db70a04-8ba7-9c28-a64f-0ab7b320172c-71b31df9" class="padding-global"><div class="text_centered-limited"><div class="rich-text is-list-1 w-richtext"><h2>About the Be There Certificate</h2><p>The Be There Certificate is a free, self-paced learning experience designed to increase mental health literacy and provide you with the knowledge, skills, and confidence needed to safely support anyone who may be struggling with their mental health. It provides a deep understanding of Be There’s 5 Golden Rules — a simple but actionable framework on how to recognize when someone might be struggling with their mental health, your role in supporting that person, and how to connect them to the help they deserve.</p><ul role="list"><li><strong>6 interactive lessons</strong></li><li><strong>Less than 2 hours</strong></li><li><strong>Free of charge</strong></li><li><strong>Available in French, English and Spanish</strong></li><li><strong>Videos and real life scenarios</strong></li><li><strong>Unlimited access</strong></li></ul></div></div></div></div></section><section class="section_main-overview padding-global padding-section-medium"><div class="main-overview_sticky"><div class="container-large"><div class="main-overview_part"><div class="main-overview-heading"><h2 class="text-center">You&#x27;ll learn:</h2></div><div class="grid-grid is-1col-mobile-landscape"><ul role="list" class="main-overview_list"><li class="main-overview_list-item is-1"><div class="main-overview_list-item-text"><div class="icon-xsmall is-main-overview w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 19.884 17.696" fill="CurrentColor">
+  <path d="M11.036,17.7h0l-.681-.681L8.313,14.973l-.681-.681.681-.681,2.357-2.357H0V6.44H10.669L8.313,4.084,7.632,3.4l.681-.681L10.355.681,11.036,0l.681.681,6.465,6.465L19.2,8.167l.681.681-.681.681-.681-.681.681.681L18.182,10.55l-6.465,6.465-.681-.681.681.681-.681.681Zm1.958-7.4h0l.026.026L9.213,14.123l1.969,1.969,7.3-7.3-.973-.973-1-1-.008.008-5.32-5.32L9.213,3.484l3.968,3.968H1.065v2.784H13.1l-.08.08Z"/>
+</svg></div><div class="text-size-large"><strong>How to recognize</strong> signs of struggle<br/></div></div></li><li class="main-overview_list-item is-2"><div class="main-overview_list-item-text"><div class="icon-xsmall is-main-overview w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 19.884 17.696" fill="CurrentColor">
+  <path d="M11.036,17.7h0l-.681-.681L8.313,14.973l-.681-.681.681-.681,2.357-2.357H0V6.44H10.669L8.313,4.084,7.632,3.4l.681-.681L10.355.681,11.036,0l.681.681,6.465,6.465L19.2,8.167l.681.681-.681.681-.681-.681.681.681L18.182,10.55l-6.465,6.465-.681-.681.681.681-.681.681Zm1.958-7.4h0l.026.026L9.213,14.123l1.969,1.969,7.3-7.3-.973-.973-1-1-.008.008-5.32-5.32L9.213,3.484l3.968,3.968H1.065v2.784H13.1l-.08.08Z"/>
+</svg></div><div class="text-size-large"><strong>What to say</strong> to start the conversation<br/></div></div></li><li class="main-overview_list-item is-3"><div class="main-overview_list-item-text"><div class="icon-xsmall is-main-overview w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 19.884 17.696" fill="CurrentColor">
+  <path d="M11.036,17.7h0l-.681-.681L8.313,14.973l-.681-.681.681-.681,2.357-2.357H0V6.44H10.669L8.313,4.084,7.632,3.4l.681-.681L10.355.681,11.036,0l.681.681,6.465,6.465L19.2,8.167l.681.681-.681.681-.681-.681.681.681L18.182,10.55l-6.465,6.465-.681-.681.681.681-.681.681Zm1.958-7.4h0l.026.026L9.213,14.123l1.969,1.969,7.3-7.3-.973-.973-1-1-.008.008-5.32-5.32L9.213,3.484l3.968,3.968H1.065v2.784H13.1l-.08.08Z"/>
+</svg></div><div class="text-size-large"><strong>How to build trust</strong> and offer practical support<br/></div></div></li><li class="main-overview_list-item is-4"><div class="main-overview_list-item-text"><div class="icon-xsmall is-main-overview w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 19.884 17.696" fill="CurrentColor">
+  <path d="M11.036,17.7h0l-.681-.681L8.313,14.973l-.681-.681.681-.681,2.357-2.357H0V6.44H10.669L8.313,4.084,7.632,3.4l.681-.681L10.355.681,11.036,0l.681.681,6.465,6.465L19.2,8.167l.681.681-.681.681-.681-.681.681.681L18.182,10.55l-6.465,6.465-.681-.681.681.681-.681.681Zm1.958-7.4h0l.026.026L9.213,14.123l1.969,1.969,7.3-7.3-.973-.973-1-1-.008.008-5.32-5.32L9.213,3.484l3.968,3.968H1.065v2.784H13.1l-.08.08Z"/>
+</svg></div><div class="text-size-large">Tips to <strong>become a better listener</strong><br/></div></div></li><li class="main-overview_list-item is-5"><div class="main-overview_list-item-text"><div class="icon-xsmall is-main-overview w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 19.884 17.696" fill="CurrentColor">
+  <path d="M11.036,17.7h0l-.681-.681L8.313,14.973l-.681-.681.681-.681,2.357-2.357H0V6.44H10.669L8.313,4.084,7.632,3.4l.681-.681L10.355.681,11.036,0l.681.681,6.465,6.465L19.2,8.167l.681.681-.681.681-.681-.681.681.681L18.182,10.55l-6.465,6.465-.681-.681.681.681-.681.681Zm1.958-7.4h0l.026.026L9.213,14.123l1.969,1.969,7.3-7.3-.973-.973-1-1-.008.008-5.32-5.32L9.213,3.484l3.968,3.968H1.065v2.784H13.1l-.08.08Z"/>
+</svg></div><div class="text-size-large">The importance of <strong>setting healthy boundaries</strong><br/></div></div></li><li class="main-overview_list-item is-6"><div class="main-overview_list-item-text"><div class="icon-xsmall is-main-overview w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 19.884 17.696" fill="CurrentColor">
+  <path d="M11.036,17.7h0l-.681-.681L8.313,14.973l-.681-.681.681-.681,2.357-2.357H0V6.44H10.669L8.313,4.084,7.632,3.4l.681-.681L10.355.681,11.036,0l.681.681,6.465,6.465L19.2,8.167l.681.681-.681.681-.681-.681.681.681L18.182,10.55l-6.465,6.465-.681-.681.681.681-.681.681Zm1.958-7.4h0l.026.026L9.213,14.123l1.969,1.969,7.3-7.3-.973-.973-1-1-.008.008-5.32-5.32L9.213,3.484l3.968,3.968H1.065v2.784H13.1l-.08.08Z"/>
+</svg></div><div class="text-size-large">How to help someone <strong>access professional and community resources</strong><br/></div></div></li><li class="main-overview_list-item is7"><div class="main-overview_list-item-text"><div class="icon-xsmall is-main-overview w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 19.884 17.696" fill="CurrentColor">
+  <path d="M11.036,17.7h0l-.681-.681L8.313,14.973l-.681-.681.681-.681,2.357-2.357H0V6.44H10.669L8.313,4.084,7.632,3.4l.681-.681L10.355.681,11.036,0l.681.681,6.465,6.465L19.2,8.167l.681.681-.681.681-.681-.681.681.681L18.182,10.55l-6.465,6.465-.681-.681.681.681-.681.681Zm1.958-7.4h0l.026.026L9.213,14.123l1.969,1.969,7.3-7.3-.973-.973-1-1-.008.008-5.32-5.32L9.213,3.484l3.968,3.968H1.065v2.784H13.1l-.08.08Z"/>
+</svg></div><div class="text-size-large">How to <strong>maintain your own mental health</strong><br/></div></div></li></ul><div id="w-node-_26c06962-1d39-ada0-1cad-364d3e906f12-71b31df9" class="main-overview_illustrations-list"><div class="main-overview_illustration is-1"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7853ce46e8d6cf47578_BeThere_21.svg" loading="lazy" alt="" class="main-overview_illustration-image"/></div><div class="main-overview_illustration is-2"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be786abf58d76c4f7a9e2_BeThere_23.svg" loading="lazy" alt="" class="main-overview_illustration-image"/></div><div class="main-overview_illustration is-3"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785a55dde753ec52967_BeThere_24.svg" loading="lazy" alt="" class="main-overview_illustration-image"/></div><div class="main-overview_illustration is-4"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785bdbc583e91b90c78_BeThere_32.svg" loading="lazy" alt="" class="main-overview_illustration-image"/></div><div class="main-overview_illustration is-5"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7854e63d5261f2634d4_BeThere_34.svg" loading="lazy" alt="" class="main-overview_illustration-image"/></div><div class="main-overview_illustration is-6"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be78525dbfdbc1d6cab32_BeThere_37.svg" loading="lazy" alt="" class="main-overview_illustration-image"/></div><div class="main-overview_illustration is-7"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7859c778551201c1575_BeThere_40b.svg" loading="lazy" alt="" class="main-overview_illustration-image"/></div></div></div></div></div></div><div class="main-overview_scroll"><div data-w-id="1c404459-d097-2ac6-7761-e20f176f4c6b" class="main-overview_image-scroll-part"></div><div data-w-id="78fbffcc-a140-506f-02d3-c4dcd3630fbf" class="main-overview_image-scroll-part"></div><div data-w-id="b36056c9-eb7c-90aa-5aaa-11d769040880" class="main-overview_image-scroll-part"></div><div data-w-id="f48b9767-9e9f-3964-007e-0fb3b63bbe34" class="main-overview_image-scroll-part"></div><div data-w-id="6fc9dffe-5766-aedc-fa12-52e6276a0146" class="main-overview_image-scroll-part"></div><div data-w-id="dee29158-4845-35bf-ad3b-e113683d1b09" class="main-overview_image-scroll-part"></div><div data-w-id="672449c9-c419-bf3d-5290-189e0e77acdd" class="main-overview_image-scroll-part"></div><div data-w-id="d070358d-2912-0f9e-4213-ee585e137674" class="main-overview_list-scroll-part is-1"></div><div data-w-id="528fe9ea-69d9-d40c-f100-a091597b3eea" class="main-overview_list-scroll-part is-2"></div><div data-w-id="94d8d63d-f7f0-1e8d-ed22-141f0ccd8c2c" class="main-overview_list-scroll-part is-3"></div><div data-w-id="f0158e0b-9696-9168-3ca2-0a5222f95fc2" class="main-overview_list-scroll-part is-4"></div><div data-w-id="14a7cabe-9b5b-42c9-6f17-fe2c9fd2c972" class="main-overview_list-scroll-part is-5"></div><div data-w-id="6e6a6516-7d13-c57f-88a6-e7e1d38044c0" class="main-overview_list-scroll-part is-6"></div><div data-w-id="c2c0bc28-2540-ac8c-53cb-57a48ed6f2dc" class="main-overview_list-scroll-part is-7"></div></div></section><section class="section_main-info padding-global padding-section-medium"><div class="container-large"><div class="grid-grid is-1col-mobile-landscape"><div id="w-node-c79d3088-b35b-c4c3-a6ed-e22f10b51eab-71b31df9" class="main-info_title"><h2 class="heading-style-h1">Why get certified:<br/></h2></div><div id="w-node-f487ada2-f8fb-e31c-c8ea-375d89613661-71b31df9" class="main-info_faq"><div class="main-info_accordion"><div style="border-color:rgb(236,236,236)" class="accordion_component"><a role="button" data-w-id="019cebe1-8daa-0b64-78fa-3e28b5f1605c" href="#" class="button is-accordion w-inline-block"><h3 class="heading-style-h5 margin-0">Support your loved ones</h3><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="button_icon is-accordion"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 2L12 12L2 2" stroke="CurrentColor" stroke-width="4"/>
+</svg></div></div></a><div style="opacity:0;display:none;height:0px" class="accordion_content"><div class="rich-text w-richtext"><p>Just talking about mental health isn’t enough. We need the knowledge, skills, and confidence to step up and be there for one another.<br/></p></div><div class="padding-xsmall"></div></div></div></div><div class="main-info_accordion"><div style="border-color:rgb(236,236,236)" class="accordion_component"><a role="button" data-w-id="14f24d47-2826-306a-0f87-77e0324dc67f" href="#" class="button is-accordion w-inline-block"><h3 class="heading-style-h5 margin-0">Improve your own mental health</h3><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="button_icon is-accordion"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 2L12 12L2 2" stroke="CurrentColor" stroke-width="4"/>
+</svg></div></div></a><div style="opacity:0;display:none;height:0px" class="accordion_content"><div class="rich-text w-richtext"><p>Your mental health is just as important as anyone else’s. Learn to recognize your limits and take care of yourself, even while supporting others.<br/></p></div><div class="padding-xsmall"></div></div></div></div><div class="main-info_accordion"><div style="border-color:rgb(236,236,236)" class="accordion_component"><a role="button" data-w-id="db8bc2bb-e7fe-4d82-eab8-c1d5d7576c3b" href="#" class="button is-accordion w-inline-block"><h3 class="heading-style-h5 margin-0">Build your resume</h3><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="button_icon is-accordion"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 2L12 12L2 2" stroke="CurrentColor" stroke-width="4"/>
+</svg></div></div></a><div style="opacity:0;display:none;height:0px" class="accordion_content"><div class="rich-text w-richtext"><p>It’s a competitive world out there! Whether applying to college, a new job or a volunteer opportunity, the Be There Certificate shows that you care about the people around you and know how to maintain your own mental health.<br/></p></div><div class="padding-xsmall"></div></div></div></div></div></div></div></section><section class="section_main-testimonials padding-global padding-section-medium"><div class="container-large"><div class="grid-grid is-main-testimonial-slider pointer-events-off is-1col-mobile-landscape"><div id="w-node-_2e7223f9-e215-6874-a480-cc0978a606e8-71b31df9" class="pointer-events-on w-dyn-list"><div role="list" class="main-carousel_list is-image w-dyn-items"><div role="listitem" class="w-dyn-item"><div id="w-node-_62874075-f5be-4595-64fa-da7e655600c7-71b31df9" class="ratio-square is-main-testimonials-slider-image"><img src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022.jpg" loading="eager" alt="Emily Sather" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-500.jpg 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-800.jpg 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-1080.jpg 1080w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022.jpg 1500w" class="img-cover"/></div></div><div role="listitem" class="w-dyn-item"><div id="w-node-_62874075-f5be-4595-64fa-da7e655600c7-71b31df9" class="ratio-square is-main-testimonials-slider-image"><img src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea91291a5004db41ae54e_Joyce.png" loading="eager" alt="Joyce Erogun" class="img-cover"/></div></div><div role="listitem" class="w-dyn-item"><div id="w-node-_62874075-f5be-4595-64fa-da7e655600c7-71b31df9" class="ratio-square is-main-testimonials-slider-image"><img src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea919f88acc0a701b5891_Angelica.png" loading="eager" alt="Angelica Buccini" class="img-cover"/></div></div></div></div><div id="w-node-de48f9f1-d7bd-4184-8f86-b0255b4d0f37-71b31df9" class="pointer-events-on w-dyn-list"><div role="list" class="main-carousel_list is-quote w-dyn-items"><div role="listitem" class="w-dyn-item"><div id="w-node-de48f9f1-d7bd-4184-8f86-b0255b4d0f3d-71b31df9" class="main-testimonials_quote"><div class="margin-bottom margin-small"><div class="main-testimonials_quote-symbol"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ebbc0ceeec5e79e45ec9c_ic-quote.svg" loading="lazy" alt="" class="max-width-full"/></div><div class="rich-text text-size-large text-weight-bold w-richtext"><p>The Be There Certificate is an essential resource for any person looking to strengthen their knowledge about how to support folks in times of stress or struggle, as well as ways to care for ourselves. One of my favourite components of the course is its diversity, not only in the learning content, but also in the ways that different experiences, cultures, bodies, and languages are celebrated throughout the course.</p></div></div><div class="main-testimonials_quote-author margin-bottom margin-small"><div class="text-weight-bold display-inline">Emily Sather</div><div class="main-testimonials_quote-author-divider">|</div><div class="display-inline">Mental Health Advocate, Disability Support Worker, Soon-to-be Social Worker</div></div><div class="main-testimonials_dots"><ul role="list" class="slick-dots"></ul></div></div></div><div role="listitem" class="w-dyn-item"><div id="w-node-de48f9f1-d7bd-4184-8f86-b0255b4d0f3d-71b31df9" class="main-testimonials_quote"><div class="margin-bottom margin-small"><div class="main-testimonials_quote-symbol"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ebbc0ceeec5e79e45ec9c_ic-quote.svg" loading="lazy" alt="" class="max-width-full"/></div><div class="rich-text text-size-large text-weight-bold w-richtext"><p>The Be There Certificate is a creative and engaging approach to learning how to safely support our friends and loved ones with their mental health. With encouraging prompts and a variety of interactive activities, the course supports several learning styles.</p></div></div><div class="main-testimonials_quote-author margin-bottom margin-small"><div class="text-weight-bold display-inline">Joyce Erogun</div><div class="main-testimonials_quote-author-divider">|</div><div class="display-inline">Student Engagement Team Lead, SMH-ON</div></div><div class="main-testimonials_dots"><ul role="list" class="slick-dots"></ul></div></div></div><div role="listitem" class="w-dyn-item"><div id="w-node-de48f9f1-d7bd-4184-8f86-b0255b4d0f3d-71b31df9" class="main-testimonials_quote"><div class="margin-bottom margin-small"><div class="main-testimonials_quote-symbol"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ebbc0ceeec5e79e45ec9c_ic-quote.svg" loading="lazy" alt="" class="max-width-full"/></div><div class="rich-text text-size-large text-weight-bold w-richtext"><p>This course was an easy-to-use, straight forward and interactive way to further strengthen how  I can be there for my loved ones! I’m thankful to have access to a tool like this and recommend it to anyone who also wants to learn how to support their loved ones through difficult times.</p></div></div><div class="main-testimonials_quote-author margin-bottom margin-small"><div class="text-weight-bold display-inline">Angelica Buccini</div><div class="main-testimonials_quote-author-divider">|</div><div class="display-inline">Youth mental health advocate</div></div><div class="main-testimonials_dots"><ul role="list" class="slick-dots"></ul></div></div></div></div></div></div></div></section><section class="section_main-clients padding-section-medium"><div class="padding-global"><div class="text-align-center margin-bottom margin-large"><h2 class="text-center">Thank you to our partners!<br/></h2></div></div><div class="client-logos_component"><div class="client-logos_component"><div class="hide w-embed"><style>
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 4rem));
+  }
+}
+
+.client-logos_group {
+  animation: scroll 60s linear infinite;
+}
+
+</style></div><div class="w-dyn-list"><div role="list" class="client-logos_group w-dyn-items"><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="eager" alt="Timelycare" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent.png 553w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="eager" alt="The Child Center of NY" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York.png 700w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="eager" alt="Starbucks Foundation" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo.png 1042w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="eager" alt="Sebastian Professional" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-1080.png 1080w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK.png 1500w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="eager" alt="Penner Family Foundation" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1080.png 1080w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1600.png 1600w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo.png 2400w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="eager" alt="Paramount" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo.png 1024w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="eager" alt="Joyba" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4003f6c38dfd8476b8510_Joyba_Logo.png" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="eager" alt="Cotton On Foundation" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01.png 1191w" class="img-contain"/></div></div></div><div class="w-dyn-list"><div role="list" class="client-logos_group w-dyn-items"><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="lazy" alt="Timelycare" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent.png 553w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="lazy" alt="The Child Center of NY" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York.png 700w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="lazy" alt="Starbucks Foundation" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo.png 1042w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="lazy" alt="Sebastian Professional" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-1080.png 1080w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK.png 1500w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="lazy" alt="Penner Family Foundation" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1080.png 1080w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1600.png 1600w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo.png 2400w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="lazy" alt="Paramount" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo.png 1024w" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="lazy" alt="Joyba" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4003f6c38dfd8476b8510_Joyba_Logo.png" class="img-contain"/></div><div role="listitem" class="client-logos_logo w-dyn-item"><img loading="lazy" alt="Cotton On Foundation" src="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01.png" sizes="100vw" srcset="https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-500.png 500w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-800.png 800w, https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01.png 1191w" class="img-contain"/></div></div></div></div></div></section><section class="section_main-faq padding-global padding-section-medium"><div class="container-large"><div class="text-align-center margin-bottom margin-large"><h2 class="text-center">FAQs<br/></h2></div><div id="w-node-a0782cd8-3bd6-de5e-2e55-33a215e81ac7-71b31df9" class="main-info_faq"><div class="margin-bottom margin-large"><div style="border-color:rgb(236,236,236)" class="accordion_component"><a role="button" data-w-id="a0782cd8-3bd6-de5e-2e55-33a215e81aca" href="#" class="button is-accordion w-inline-block"><h3 class="heading-style-h5 margin-0">Experiencing issues on the site?</h3><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="button_icon is-accordion"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 2L12 12L2 2" stroke="CurrentColor" stroke-width="4"/>
+</svg></div></div></a><div style="opacity:0;display:none;height:0px" class="accordion_content"><div class="rich-text is-list-2 is-quote-alert w-richtext"><ul role="list"><li>Accessing as a group? Sometimes our site struggles with loading when groups try to access it at once. Please refresh the page, if you&#x27;re still having issues please try again later.<br/></li></ul><blockquote>A gentle reminder to any groups to please refrain from completing the Be There Certificate course on one account. Our course was designed for individual use, and our team is unable to download individual certificates to send to groups. We kindly encourage everyone to please complete the course on your individual accounts.</blockquote><ul role="list"><li>Struggling to log in? Try signing up with an email address and password instead of the Facebook or Google sign in options.<br/></li></ul><ul role="list"><li>Struggling to load a page? Sometimes we experience loading difficulties when lots of people are learning how to Be There at once. It might help to refresh the page, wait a bit or come and learn again later.<br/></li></ul><ul role="list"><li>The page is crashing? Uh-oh, if the page has crashed or you see an &quot;application didn&#x27;t respond in time&quot; message, the site is too busy at the moment. Please try and refresh the page, or come back later.<br/></li></ul><ul role="list"><li>Repeating a section? If the continue button took you back to the section start, click Course Outline/Progress to see if it has saved. If it hasn’t, please complete this section again. We’re trying to fix this as soon as we can!<br/></li></ul><ul role="list"><li>Something else? Please contact <a href="mailto:bethere@jack.org">BeThere@Jack.org</a> with a description of what’s happened and we will get our best people on the case.<br/></li></ul></div><div class="padding-xsmall"></div></div></div><div style="border-color:rgb(236,236,236)" class="accordion_component"><a role="button" data-w-id="a0782cd8-3bd6-de5e-2e55-33a215e81ad7" href="#" class="button is-accordion w-inline-block"><h3 class="heading-style-h5 margin-0">Who provides the Be There Certificate?</h3><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="button_icon is-accordion"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 2L12 12L2 2" stroke="CurrentColor" stroke-width="4"/>
+</svg></div></div></a><div style="opacity:0;display:none;height:0px" class="accordion_content"><div class="rich-text is-list-2 w-richtext"><p>The Be There Certificate is offered by <a href="https://jack.org/" target="_blank"><strong>Jack.org</strong></a>, a Canadian youth mental health charity, in partnership with <a href="https://bornthisway.foundation/" target="_blank"><strong>Born This Way Foundation</strong></a>.<br/></p></div><div class="padding-xsmall"></div></div></div><div style="border-color:rgb(236,236,236)" class="accordion_component"><a role="button" data-w-id="a0782cd8-3bd6-de5e-2e55-33a215e81ae4" href="#" class="button is-accordion w-inline-block"><h3 class="heading-style-h5 margin-0">How can I be awarded the Be There Certificate?</h3><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="button_icon is-accordion"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 2L12 12L2 2" stroke="CurrentColor" stroke-width="4"/>
+</svg></div></div></a><div style="opacity:0;display:none;height:0px" class="accordion_content"><div class="rich-text is-list-2 w-richtext"><p>You can download a PDF of your certificate after completing all six modules of the free Be There Certificate online course.<br/></p></div><div class="padding-xsmall"></div></div></div><div style="border-color:rgb(236,236,236)" class="accordion_component"><a role="button" data-w-id="9d852290-b0ee-c5e1-1575-cf713c3392e3" href="#" class="button is-accordion w-inline-block"><h3 class="heading-style-h5 margin-0">What is the research behind the Be There Certificate?</h3><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="button_icon is-accordion"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 2L12 12L2 2" stroke="CurrentColor" stroke-width="4"/>
+</svg></div></div></a><div style="opacity:0;display:none;height:0px" class="accordion_content"><div class="rich-text is-list-2 w-richtext"><p>The Be There Certificate is based on the content on BeThere.org, a resource created by Jack.org in response to a needs assessment of over 1,200 youth. We compiled the top 73 most common questions we heard from young people and scoured dozens of websites, blogs, articles and other resources to find the answers. It wasn’t easy; existing resources are fragmented, hard to find and full of impersonal clinical jargon. But the answers are out there (we didn’t make this stuff up!) we just had to find it and translate it into accessible language. References can be found in our <a href="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ce6233548074ff326377a_Building-Be-There.pdf" target="_blank"><strong>Building Be There PDF</strong></a>.<br/></p></div><div class="padding-xsmall"></div></div></div></div><a href="/about/#faqs" class="text-style-link"><strong>Read all FAQs</strong></a></div></div></section><section data-w-id="1b2265f5-b070-4d0c-6d84-8cee04b65908" class="section_main-cta padding-global padding-section-medium"><div class="container-large z-index-10"><div class="grid-grid is-1col-mobile-landscape"><div><h3 class="heading-style-h3 margin-bottom margin-small">Let’s create a world where we can all better support one another.</h3><div class="button_group"><div class="button is-secondary"><div class="button_inner-wrapper"><div class="button_fill is-alt"></div><div class="button_icon"><div role="img" aria-hidden="true" focusable="false" class="icon-responsive w-embed"><svg width="100%" height="100%" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5172 17.6392L17.2327 10.1776L18.1358 9.17411L17.2327 8.17066L10.5172 0.708984L8.28733 2.71588L12.7493 7.67361L0 7.67362V10.6736L12.7502 10.6736L8.28733 15.6323L10.5172 17.6392Z" fill="CurrentColor"/>
+</svg></div></div><a role="button" wized="onclick_get_started" data-w-id="7fafbe13-35a0-e3ff-eac2-29434502787a" href="#" class="button_link">Get Started</a></div></div></div></div></div></div><div class="main-cta_background"><img src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645d38493523924c6fe5e21a_BeThere_3.svg" loading="lazy" alt="" class="img-contain is-main-cta-background"/></div></section></main><section class="footer padding-global padding-section-small"><div class="container-large"><p>The trademark BE THERE CERTIFICATE / CERTIFICAT ÊTRE LÀ is owned by <a target="_blank" href="http://jack.org/">Jack.org</a></p><div class="grid-grid is-footer"><div id="w-node-ea6943ae-ac6d-944b-f48c-22fac1b42092-c1b4208f" class="footer_logos"><h2 class="heading-style-h5 margin-bottom margin-xsmall">Created by<br/></h2><div class="footer_logos-list"><a aria-label="Visit jack.org" href="https://jack.org/" target="_blank" class="footer_logo w-inline-block"><div class="svg w-embed"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 289.2 72" fill="CurrentColor" width="100%" height="100%">
+  <path d="M1.4 63.1c.6 0 1 .1 1.3.1h.7c1 0 1.8-.3 2.4-.8.5-.5.8-1.5.8-3V14.8h10.6v44.8c0 4.1-.8 7.1-2.4 9.1-1.6 2-4.8 2.9-9.5 2.9H3.9c-.6 0-1.4 0-2.4-.1l-.1-8.4zM17.2 9.8H6.5V0h10.7v9.8z"  />
+  <path d="M43.4 30.5c2-.2 3.4-.6 4.2-.9 1.5-.6 2.3-1.7 2.3-3 0-1.7-.6-2.8-1.8-3.5-1.2-.6-2.9-1-5.2-1-2.5 0-4.3.6-5.4 1.9-.8.9-1.3 2.2-1.5 3.7H25.8c.2-3.6 1.2-6.5 3-8.8 2.8-3.6 7.7-5.4 14.5-5.4 4.5 0 8.4.9 11.9 2.6 3.5 1.8 5.2 5.1 5.2 10v18.7c0 1.3 0 2.9.1 4.7.1 1.4.3 2.3.6 2.8s.9.9 1.6 1.2v1.6H51.2c-.3-.8-.5-1.6-.7-2.3-.1-.7-.2-1.5-.3-2.5-1.5 1.6-3.2 2.9-5.1 4.1-2.3 1.3-4.9 2-7.8 2-3.7 0-6.8-1.1-9.2-3.2-2.4-2.1-3.6-5.1-3.6-8.9 0-5 1.9-8.6 5.8-10.9 2.1-1.2 5.3-2.1 9.4-2.6l3.7-.3zm6.5 5c-.7.4-1.4.8-2.1 1s-1.6.5-2.8.8l-2.4.4c-2.3.4-3.9.9-4.9 1.5-1.7 1-2.5 2.5-2.5 4.5 0 1.8.5 3.1 1.5 3.9s2.3 1.2 3.7 1.2c2.3 0 4.5-.7 6.4-2 2-1.3 3-3.8 3-7.3l.1-4z"  />
+  <path d="M94.1 29.2c-.2-1.5-.7-2.9-1.5-4.1-1.2-1.6-3.1-2.5-5.6-2.5-3.6 0-6 1.8-7.4 5.3-.7 1.9-1 4.4-1 7.5 0 3 .3 5.4 1 7.2 1.3 3.4 3.7 5.1 7.2 5.1 2.5 0 4.3-.7 5.3-2s1.7-3.1 1.9-5.2h10.9c-.2 3.2-1.4 6.3-3.5 9.2-3.3 4.7-8.3 7-14.8 7s-11.4-1.9-14.5-5.8-4.6-8.9-4.6-15.1c0-7 1.7-12.4 5.1-16.3s8.1-5.8 14.1-5.8c5.1 0 9.3 1.1 12.5 3.4 3.2 2.3 5.2 6.3 5.8 12.1H94.1z"  />
+  <path d="M112.2.5h10.4v29.7L136 14.9h13.2L134.6 30l15.1 25.3h-12.9l-9.9-17.4-4.4 4.6v12.8h-10.3V.5z"  />
+  <g>
+    <path d="M154.5 44.1h11.3v11.2h-11.3V44.1z"  />
+  </g>
+  <g>
+    <path d="M209.9 50.3c-3.4 4.2-8.6 6.4-15.6 6.4s-12.2-2.1-15.6-6.4c-3.4-4.2-5.1-9.3-5.1-15.3 0-5.9 1.7-10.9 5.1-15.2 3.4-4.3 8.6-6.4 15.6-6.4s12.2 2.1 15.6 6.4S215 29.2 215 35c0 6-1.7 11.1-5.1 15.3zm-8.5-5.9c1.7-2.2 2.5-5.4 2.5-9.4 0-4.1-.8-7.2-2.5-9.4s-4.1-3.3-7.2-3.3c-3.1 0-5.5 1.1-7.2 3.3s-2.5 5.3-2.5 9.4.8 7.2 2.5 9.4 4.1 3.3 7.2 3.3c3.1 0 5.5-1.1 7.2-3.3z"  />
+    <path d="M245.2 13.7c.1 0 .4 0 .9.1v10.9c-.7-.1-1.3-.1-1.8-.1H243c-4.3 0-7.1 1.4-8.6 4.2-.8 1.6-1.2 4-1.2 7.2v19.4h-10.7V14.6h10.1v7.1c1.6-2.7 3.1-4.6 4.3-5.6 2-1.7 4.6-2.5 7.8-2.5.2 0 .4.1.5.1z"  />
+    <path d="M272.5 14.6c2.6 1.1 4.7 3 6.3 5.9v-5.9h10.4v38.6c0 5.2-.9 9.2-2.6 11.9-3 4.6-8.9 6.9-17.5 6.9-5.2 0-9.4-1-12.7-3.1-3.3-2-5.1-5.1-5.4-9.1h11.6c.3 1.2.8 2.1 1.5 2.7 1.1 1 3.1 1.5 5.8 1.5 3.8 0 6.4-1.3 7.7-3.8.8-1.6 1.3-4.4 1.3-8.3v-2.6c-1 1.7-2.1 3-3.3 3.9-2.1 1.6-4.9 2.4-8.2 2.4-5.2 0-9.4-1.8-12.5-5.5-3.1-3.7-4.7-8.6-4.7-14.9 0-6 1.5-11.1 4.5-15.2s7.3-6.2 12.8-6.2c1.7-.2 3.5.2 5 .8zm3.6 29.1c1.7-1.9 2.6-4.9 2.6-9 0-3.9-.8-6.8-2.4-8.8s-3.8-3-6.5-3c-3.7 0-6.3 1.8-7.7 5.3-.7 1.9-1.1 4.2-1.1 6.9 0 2.4.4 4.5 1.2 6.3 1.4 3.4 4 5.1 7.7 5.1 2.4 0 4.5-.9 6.2-2.8z"  />
+  </g>
+</svg></div></a><a aria-label="Visit Born This Way Foundation" href="https://bornthisway.foundation/" target="_blank" class="footer_logo w-inline-block"><div class="svg w-embed"><svg xmlns="http://www.w3.org/2000/svg" fill="CurrentColor" xml:space="preserve" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 1092.8 205.9" width="100%" height="100%">
+  <path d="M44.9 46.4v-.3c18.5-1 33.4-6.8 33.4-22.1C78.3 10.4 66.3.5 42.5.5c-7.4 0-14.9.3-22.2.3C11.8.8 8.1.5 3.2.5.9.5 0 .8 0 2.5 0 6 11.8 1.5 11.8 11v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.9 2 3.1 2 5 0 8.6-.3 17.1-.3 10.3 0 19.7.3 28.7.3 22.5 0 34.1-8.6 34.1-25.5.1-15.8-10.5-24.8-38.1-25.2zM28.7 3.9h10.6c13.3 0 21.9 6.9 21.9 20.7 0 13.2-6.4 20.4-24.1 20.4h-8.5V3.9zm13.9 89.8c-10.6 0-14-2.5-14-9.1V48.4h9.9c17 0 27.6 6.2 27.6 22.9 0 13.9-6.1 22.4-23.5 22.4z"  />
+  <path d="M140.4 99.1c23.9 0 50.8-18.5 50.8-50.3S164.4-1.4 140.4-1.4c-23.9 0-50.8 18.5-50.8 50.3s26.9 50.2 50.8 50.2zm0-97.1c18.5 0 32.1 14.9 32.1 46.9S159 95.7 140.4 95.7s-32.1-14.9-32.1-46.9S121.9 2 140.4 2z"  />
+  <path d="m273.7 84.5-7.8-15.9C258.8 54.3 252.6 52 239 50.5v-.3c20.4-1.4 34.3-10.2 34.3-24.5 0-12.2-10.8-25.2-38.4-25.2-5.5 0-11 .3-18.7.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.9 2 3.1 2 5 0 8.6-.3 17.1-.3 8.5 0 12.2.3 17.1.3 2.3 0 3.1-.3 3.1-2 0-3.5-11.8 1-11.8-8.5V52.4h2.3c10.8 0 13.6 3.1 23.5 21.5l12.3 22.9c12.6.1 22.4.3 24.4.3s2.8-.4 2.8-1.7c.1-3.5-10.1 1.3-16.2-10.9zm-49-35.5V4h8.4c13.4 0 21.5 5.9 21.5 22.2 0 16.4-8.1 22.8-23.4 22.8h-6.5z"  />
+  <path d="M308.6 96.8c5.9 0 9.8.3 14.9.3 2.3 0 3.1-.3 3.1-1.6 0-2-1.7-1.4-5.4-2.5-5.4-1.7-10.6-7.5-10.6-19.5V17.8h.3l60 79.9c.7 1 1.8 1.4 2.8 1.4 1.1 0 1.7-1 1.7-2V24.2c0-12 5.2-17.8 10.6-19.5 3.7-1.1 5.4-.6 5.4-2.5 0-1.3-.8-1.6-3.1-1.6-5.1 0-8.9.3-14.9.3-5.9 0-9.8-.3-14.9-.3-2.3 0-3.1.3-3.1 1.6 0 2 1.7 1.4 5.4 2.5 5.4 1.7 10.6 7.5 10.6 19.5v48.3h-.3L317.8.8h-13.2c-4.5 0-7.4-.3-10.8-.3-2.1 0-3.1.4-3.1 2 0 2.7 7.6-1.4 15.9 10.3v60.6c0 12-5.2 17.8-10.6 19.5-3.7 1.1-5.4.6-5.4 2.5 0 1.3.8 1.6 3.1 1.6 5.2.1 9-.2 14.9-.2z"  />
+  <path d="M423.8 96.8h22.5V19.6h28.6V0h-79.7v19.6h28.6z"  />
+  <path d="M505.6 57.8H543v39h22.4V0H543v37.1h-37.4V0h-22.4v96.8h22.4z"  />
+  <path d="M583.2 0h22.4v96.8h-22.4z"  />
+  <path d="M660.3 79.1c-13.1 0-20.1-7.1-23.5-20.9l-19 9.1c5.7 20.9 19.8 31.4 42.5 31.4 11.3 0 20.2-2.9 26.7-8.8s9.7-13.4 9.7-22.3c0-16-9.5-24.9-31-29.5-16.7-3.5-23-7.2-23-12.6 0-5.5 5.9-9.3 14.2-9.3 10.4 0 17.4 5.7 21.3 17l16.7-10c-6.8-17.1-18.7-25.3-37.6-25.3-10.5 0-19 2.5-25.3 7.6-6.4 5.1-9.5 11.8-9.5 20.2 0 15.4 10.1 25 30.4 29 14.9 2.8 21.7 7.1 21.7 14.2.1 5.9-5.6 10.2-14.3 10.2z"  />
+  <path d="m782.3 96.8 16.2-63.2 16.2 63.2h23.7L864.9 0h-23.7l-13 53.9-2.4 10.9-2.2-11.1L810.1 0h-23.2l-13.6 53.8-2.2 11.1c-.4-2.4-1.2-6.1-2.4-10.9l-13-54H732l26.6 96.8h23.7z"  />
+  <path d="m897.5 0-39.4 96.8h24.3l8.7-23.4h33.8l8.7 23.4H958L918.5 0h-21zm.7 54.4 5.8-15.8 4-11.5c1.2 3.9 2.5 7.7 4 11.5l5.8 15.8h-19.6z"  />
+  <path d="m1007.1 0-15.5 30.8-2.8 7.2c-.7-2.2-1.7-4.6-2.8-7.2L970.6 0h-25.2l32.2 60v36.8h22.4V60l32.1-60h-25z"  />
+  <path d="M71.1 109.3c-9.1 0-19.5.3-50.8.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.9 2 3.1 2 5 0 8.6-.3 17.1-.3 8.5 0 12.2.3 17.1.3 2.3 0 3.1-.3 3.1-2 0-3.5-11.8 1-11.8-8.5v-37.7h3.1c12.2 0 21.4 5 21.4 19.8 0 2.1.7 2.6 1.7 2.6 1.1 0 1.7-.4 1.7-2.6v-42.3c0-2.1-.6-2.7-1.7-2.7-1 0-1.7.6-1.7 2.7 0 14.3-9.2 19.1-21.4 19.1h-3.1v-41.6h3.1c16.9 0 28.9 2.4 37.5 14.7 6.9 9.9 6.5 13.4 8.2 13.4.9 0 1.1-.4 1.1-1.4 0-.7-.3-1.8-.8-3.7l-6.7-26.4z"  />
+  <path d="M135.4 107.4c-23.9 0-50.8 18.5-50.8 50.3 0 31.7 26.9 50.3 50.8 50.3s50.8-18.5 50.8-50.3c0-31.8-26.9-50.3-50.8-50.3zm0 97.1c-18.5 0-32.1-14.9-32.1-46.9s13.6-46.9 32.1-46.9 32.1 14.9 32.1 46.9-13.6 46.9-32.1 46.9z"  />
+  <path d="M286.3 109.3c-5.1 0-8.9.3-14.9.3-5.9 0-9.8-.3-14.9-.3-2.3 0-3.1.3-3.1 1.6 0 2 1.7 1.4 5.4 2.5 5.4 1.7 10.6 7.5 10.6 19.5v43.8c0 17-8.6 26.9-25.3 26.9-15.4 0-25.8-8.9-25.8-23.8v-60c0-9.5 11.8-5 11.8-8.5 0-1.7-.8-2-3.1-2-5 0-8.6.3-17.1.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v59.9c0 16 12.3 28.2 38.5 28.2 22.1 0 33.6-11.6 33.6-31.4V133c0-12 5.2-17.8 10.6-19.5 3.7-1.1 5.4-.6 5.4-2.5-.2-1.4-1-1.7-3.3-1.7z"  />
+  <path d="M389.5 109.3c-5.1 0-8.9.3-14.9.3-5.9 0-9.8-.3-14.9-.3-2.3 0-3.1.3-3.1 1.6 0 2 1.7 1.4 5.4 2.5 5.4 1.7 10.6 7.5 10.6 19.5v48.3h-.3L319 109.6h-13.2c-4.5 0-7.4-.3-10.8-.3-2.1 0-3.1.4-3.1 2 0 2.7 7.6-1.4 15.9 10.3v60.6c0 12-5.2 17.8-10.6 19.5-3.7 1.1-5.4.6-5.4 2.5 0 1.3.8 1.6 3.1 1.6 5.1 0 8.9-.3 14.9-.3 5.9 0 9.8.3 14.9.3 2.3 0 3.1-.3 3.1-1.6 0-2-1.7-1.4-5.4-2.5-5.4-1.7-10.6-7.5-10.6-19.5v-55.6h.3l60 79.9c.7 1 1.8 1.4 2.8 1.4 1.1 0 1.7-1 1.7-2V133c0-12 5.2-17.8 10.6-19.5 3.7-1.1 5.4-.6 5.4-2.5 0-1.4-.9-1.7-3.1-1.7z"  />
+  <path d="M438.1 109.3c-7.8 0-14.3.3-20.1.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.9 2 3.1 2 5 0 8.6-.3 17.1-.3 8.4 0 16.6.3 26.1.3 31.9 0 48.1-21.4 48.1-47.9 0-29-20.5-48.7-54.1-48.7zm3.9 93.2c-10.2 0-15.4-3.7-15.4-12.7v-77h14.6c21.7 0 32.4 19.3 32.4 46.3-.1 36-15.5 43.4-31.6 43.4z"  />
+  <path d="m574.5 196.8-30.2-66.7c-8.4-18.7-8.4-23.4-10.2-23.4-1.8 0-1.1 2-4.1 8.2-4 8.4-6.4 8.1-6.4 10.2 0 1.7 3.4 4.4 3.4 5.4 0 1.1-2.4 6.4-19.4 48.9-3.8 9.6-8.5 17.1-12.2 20.2-4 3.4-9.5 2-9.5 4.5 0 1.1.4 1.7 1.8 1.7 5.1 0 9.6-.3 14.3-.3 9.6 0 13 .3 16 .3 1.6 0 2.3 0 2.3-1.6 0-3.4-11.8 0-11.8-14.2 0-4.1 1.8-8.2 5.7-19.1h31.4l8.1 18.4c1 2.1 2.4 6.4 2.4 7.6 0 7.6-9.9 3.5-9.9 7.1 0 1.3.8 1.7 2.3 1.7 5.8 0 11.3-.3 17-.3 5.7 0 11.3.3 17 .3 1.4 0 2.4-.1 2.4-1.7.1-2.9-6.7 1.2-10.4-7.2zm-58.8-29.1 13.3-34.8 15.3 34.8h-28.6z"  />
+  <path d="M660.8 110c-.1-.8-.3-2.7-1.6-2.7-.8 0-1.1.6-1.8 1.1-.8.6-2.1 1.1-5.1 1.1H591c-3 0-4.2-.6-5.1-1.1-.7-.6-1-1.1-1.8-1.1-1.3 0-1.4 1.8-1.6 2.7l-4.5 23.2c-.6 2.7-1.4 6.1-1.4 7.8 0 .6.3 1.1 1.3 1.1.8 0 1.6-1.8 3.1-5.1 5.5-11.5 17.8-24.1 32.1-24.1l.1 82.4c0 9.5-14 5-14 8.5 0 1.7 1.4 2 3.7 2 6.7 0 10.3-.3 18.8-.3s12.2.3 18.8.3c2.3 0 3.7-.3 3.7-2 0-3.5-14 1-14-8.5V113c14.3 0 26.6 12.6 32.1 24.1 1.6 3.3 2.3 5.1 3.1 5.1 1 0 1.3-.6 1.3-1.1 0-1.7-.8-5.1-1.4-7.8l-4.5-23.3z"  />
+  <path d="M712 111.3c0-1.7-.9-2-3.1-2-5 0-8.6.3-17.1.3-8.5 0-12.2-.3-17.1-.3-2.3 0-3.1.3-3.1 2 0 3.5 11.8-1 11.8 8.5v75.6c0 9.5-11.8 5-11.8 8.5 0 1.7.8 2 3.1 2 5 0 8.6-.3 17.1-.3 8.5 0 12.2.3 17.1.3 2.3 0 3.1-.3 3.1-2 0-3.5-11.8 1-11.8-8.5v-75.6c.1-9.5 11.8-4.9 11.8-8.5z"  />
+  <path d="M767.8 107.4c-23.9 0-50.8 18.5-50.8 50.3 0 31.7 26.9 50.3 50.8 50.3s50.8-18.5 50.8-50.3c0-31.8-26.9-50.3-50.8-50.3zm0 97.1c-18.5 0-32.1-14.9-32.1-46.9s13.6-46.9 32.1-46.9 32.1 14.9 32.1 46.9-13.6 46.9-32.1 46.9z"  />
+  <path d="M916.8 109.3c-5.1 0-8.9.3-14.9.3-5.9 0-9.8-.3-14.9-.3-2.3 0-3.1.3-3.1 1.6 0 2 1.7 1.4 5.4 2.5 5.4 1.7 10.6 7.5 10.6 19.5v48.3h-.3l-53.4-71.6H833c-4.5 0-7.4-.3-10.8-.3-2.1 0-3.1.4-3.1 2 0 2.7 7.6-1.4 15.9 10.3v60.6c0 12-5.2 17.8-10.6 19.5-3.7 1.1-5.4.6-5.4 2.5 0 1.3.8 1.6 3.1 1.6 5.1 0 8.9-.3 14.9-.3 5.9 0 9.8.3 14.9.3 2.3 0 3.1-.3 3.1-1.6 0-2-1.7-1.4-5.4-2.5-5.4-1.7-10.6-7.5-10.6-19.5v-55.6h.3l60 79.9c.7 1 1.8 1.4 2.8 1.4 1.1 0 1.7-1 1.7-2V133c0-12 5.2-17.8 10.6-19.5 3.7-1.1 5.4-.6 5.4-2.5.1-1.4-.8-1.7-3-1.7z"  />
+  <path d="m1071.3 0-51 96.8h21.6L1092.8 0z"  />
+</svg></div></a></div></div><div id="w-node-ea6943ae-ac6d-944b-f48c-22fac1b4209b-c1b4208f" class="footer_nav"><ul role="list" class="footer_nav-group"><li class="footer_nav-group-list-item"><div class="footer_link-wrapper"><a href="/about" class="footer_link">About</a></div></li><li class="footer_nav-group-list-item"><div class="footer_link-wrapper"><a href="/contact" class="footer_link">Contact</a></div></li><li class="footer_nav-group-list-item"><div class="footer_link-wrapper"><a href="/terms-of-service" class="footer_link">Terms of Service</a></div></li><li class="footer_nav-group-list-item"><div class="footer_link-wrapper"><a href="/resources" class="footer_link">Resources</a></div></li><li wized-cloak="hide" class="footer_nav-group-list-item"><div class="footer_link-wrapper"><a wized="footer_admin_dash_link" href="/admin/dashboard" class="footer_link">Admin</a></div></li></ul></div></div></div></section></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=644fbcdb7589c45373c8199d" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/js/fs-btc.schunk.5426bfe49b1b0008.js" type="text/javascript" integrity="sha384-nEzOGNZi8crtMhDXT434GJwnG1MuNlt5fu9OotSALWwwzxBV1AC/L1sOOAfHQ4oW" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/js/fs-btc.schunk.034158d5a0322eeb.js" type="text/javascript" integrity="sha384-D0k3usWbEO1M5jS1pwCsRoYeT2yWKGn2nkSa+6EHNy9XCAyF9hbp5wdzjy+Nk9qd" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/js/fs-btc.823009eb.80553c7694e255c1.js" type="text/javascript" integrity="sha384-WdrWl0dSfJKmGAfx0ZJZtAz8WEzUjVAn18fIH8bF+OcpybT+rDtw+RBZmFtYNa1G" crossorigin="anonymous"></script><!-- Remove anchor link id tag and # on urls within the same page -->
+<script>
+  'use strict';
+  document.addEventListener('DOMContentLoaded', function () {
+    const MENU_BUTTON_SELECTOR = '[fs-anchor="remove"]';
+    const menuBtns = document.querySelectorAll(MENU_BUTTON_SELECTOR);
+    menuBtns.forEach(function (menuBtn) {
+      menuBtn.addEventListener('click', function () {
+        //  allow hash to be set by adding small delay
+        setTimeout(removeHash);
+      });
+    });
+  });
+  // Remove the hash from the URL.
+  function removeHash() {
+    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+  }
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJKRRMDH" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><!-- Code for carousel -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Code for carousel -->
+<script>
+
+$('.main-carousel_list.is-quote').slick({
+adaptiveHeight: false,
+arrows: false,
+asNavFor: ".main-carousel_list.is-image",
+autoplay: true,
+dots: true
+});
+
+$('.main-carousel_list.is-image').slick({
+arrows: false,
+asNavFor: ".main-carousel_list.is-quote"
+});
+
+</script>
+
+
+<!-- Code for Referral system for partner links, and language cookie -->
+<script>
+window.Wized = window.Wized || []; 
+window.Wized.push((Wized) => {
+  // Your code goes here
+
+      
+    // Get the URL parameter 'referral' value
+    const urlParams = new URLSearchParams(window.location.search);
+    const referralToken = urlParams.get('referral');
+
+    // Check if the 'referral' cookie exists
+    const existingReferralCookie = Wized.data.c.referral;
+
+    // If the cookie doesn't exist and there's a referralToken from the URL parameter
+    if (!existingReferralCookie && referralToken) {
+        // Save the value to the 'referral' variable
+        const referral = referralToken;
+        Wized.data.c.referral = referral;
+       // await Wized.data.setCookie("referral", referral); // Set value of "c.referral"  
+        const value = Wized.data.c.referral; 
+    }; 
+
+// Get the current URL path
+const currentPath = window.location.pathname;
+
+// Check if URL path doesn't contain "/es/" or "/fr/"
+if (!currentPath.includes("/es/") && !currentPath.includes("/fr/")) {
+    // Code to execute when the URL path doesn't contain "/es/" or "/fr/"
+    	Wized.data.c.lang = "en";
+      // Wized.data.setCookie("lang", "en");
+     
+} else if (currentPath.includes("/es/")) {
+    // Code to execute when the URL path contains "/es/"
+    Wized.data.c.lang = "es";
+    
+} else if (currentPath.includes("/fr/")) {
+    // Code to execute when the URL path contains "/fr/"
+    Wized.data.c.lang = "fr";
+}
+
+
+}); 
+
+</script></body></html>
+
+[media-11-1.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64596ecefd3f982455776075_BTC-OG-image-FB.png)
+
+![media-11-1.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64596ecefd3f982455776075_BTC-OG-image-FB.png)
+
+[media-11-3.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe300f75399278ba6e76a_btc-favicon.png)
+
+![media-11-3.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe300f75399278ba6e76a_btc-favicon.png)
+
+[media-11-4.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe397dc6153f840d6d093_btc-webclip.png)
+
+![media-11-4.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe397dc6153f840d6d093_btc-webclip.png)
+
+[media-11-5.png](https://assets.website-files.com/644fbcdb7589c45373c8199d/646bedbb7f58eefe94ade0f3_incorrecticon.png)
+
+![media-11-5.png](https://assets.website-files.com/644fbcdb7589c45373c8199d/646bedbb7f58eefe94ade0f3_incorrecticon.png)
+
+[media-11-6.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/649d7ca04d4c36c14d1e9c2b_Be-There-Certificate-logo.svg)
+
+![media-11-6.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/649d7ca04d4c36c14d1e9c2b_Be-There-Certificate-logo.svg)
+
+[media-11-8.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac8e5eb626e28ee9d7312_hero-background.svg)
+
+![media-11-8.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac8e5eb626e28ee9d7312_hero-background.svg)
+
+[media-11-9.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac7ce06bdc305bbfc349c_BeThere_1-1.svg)
+
+![media-11-9.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac7ce06bdc305bbfc349c_BeThere_1-1.svg)
+
+[media-11-10.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3.webp)
+
+![media-11-10.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3.webp)
+
+[media-11-11.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-500.webp)
+
+![media-11-11.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-500.webp)
+
+[media-11-12.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-800.webp)
+
+![media-11-12.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-800.webp)
+
+[media-11-13.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-1080.webp)
+
+![media-11-13.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-1080.webp)
+
+[media-11-15.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7853ce46e8d6cf47578_BeThere_21.svg)
+
+![media-11-15.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7853ce46e8d6cf47578_BeThere_21.svg)
+
+[media-11-16.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be786abf58d76c4f7a9e2_BeThere_23.svg)
+
+![media-11-16.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be786abf58d76c4f7a9e2_BeThere_23.svg)
+
+[media-11-17.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785a55dde753ec52967_BeThere_24.svg)
+
+![media-11-17.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785a55dde753ec52967_BeThere_24.svg)
+
+[media-11-18.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785bdbc583e91b90c78_BeThere_32.svg)
+
+![media-11-18.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785bdbc583e91b90c78_BeThere_32.svg)
+
+[media-11-19.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7854e63d5261f2634d4_BeThere_34.svg)
+
+![media-11-19.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7854e63d5261f2634d4_BeThere_34.svg)
+
+[media-11-20.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be78525dbfdbc1d6cab32_BeThere_37.svg)
+
+![media-11-20.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be78525dbfdbc1d6cab32_BeThere_37.svg)
+
+[media-11-21.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7859c778551201c1575_BeThere_40b.svg)
+
+![media-11-21.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7859c778551201c1575_BeThere_40b.svg)
+
+[media-11-22.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022.jpg)
+
+![media-11-22.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022.jpg)
+
+[media-11-23.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-500.jpg)
+
+![media-11-23.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-500.jpg)
+
+[media-11-24.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-800.jpg)
+
+![media-11-24.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-800.jpg)
+
+[media-11-25.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-1080.jpg)
+
+![media-11-25.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-1080.jpg)
+
+[media-11-27.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea91291a5004db41ae54e_Joyce.png)
+
+![media-11-27.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea91291a5004db41ae54e_Joyce.png)
+
+[media-11-28.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea919f88acc0a701b5891_Angelica.png)
+
+![media-11-28.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea919f88acc0a701b5891_Angelica.png)
+
+[media-11-29.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ebbc0ceeec5e79e45ec9c_ic-quote.svg)
+
+![media-11-29.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ebbc0ceeec5e79e45ec9c_ic-quote.svg)
+
+[media-11-32.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent.png)
+
+![media-11-32.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent.png)
+
+[media-11-33.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent-p-500.png)
+
+![media-11-33.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent-p-500.png)
+
+[media-11-35.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York.png)
+
+![media-11-35.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York.png)
+
+[media-11-36.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York-p-500.png)
+
+![media-11-36.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York-p-500.png)
+
+[media-11-38.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo.png)
+
+![media-11-38.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo.png)
+
+[media-11-39.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-500.png)
+
+![media-11-39.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-500.png)
+
+[media-11-40.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-800.png)
+
+![media-11-40.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-800.png)
+
+[media-11-42.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK.png)
+
+![media-11-42.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK.png)
+
+[media-11-43.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-500.png)
+
+![media-11-43.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-500.png)
+
+[media-11-44.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-800.png)
+
+![media-11-44.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-800.png)
+
+[media-11-45.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-1080.png)
+
+![media-11-45.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-1080.png)
+
+[media-11-47.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo.png)
+
+![media-11-47.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo.png)
+
+[media-11-48.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-500.png)
+
+![media-11-48.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-500.png)
+
+[media-11-49.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-800.png)
+
+![media-11-49.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-800.png)
+
+[media-11-50.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1080.png)
+
+![media-11-50.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1080.png)
+
+[media-11-51.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1600.png)
+
+![media-11-51.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1600.png)
+
+[media-11-53.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo.png)
+
+![media-11-53.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo.png)
+
+[media-11-54.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-500.png)
+
+![media-11-54.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-500.png)
+
+[media-11-55.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-800.png)
+
+![media-11-55.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-800.png)
+
+[media-11-57.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4003f6c38dfd8476b8510_Joyba_Logo.png)
+
+![media-11-57.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4003f6c38dfd8476b8510_Joyba_Logo.png)
+
+[media-11-58.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01.png)
+
+![media-11-58.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01.png)
+
+[media-11-59.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-500.png)
+
+![media-11-59.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-500.png)
+
+[media-11-60.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-800.png)
+
+![media-11-60.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-800.png)
+
+[media-11-92.pdf](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ce6233548074ff326377a_Building-Be-There.pdf)
+
+[media-11-92.pdf](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ce6233548074ff326377a_Building-Be-There.pdf)
+
+[media-11-93.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645d38493523924c6fe5e21a_BeThere_3.svg)
+
+![media-11-93.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645d38493523924c6fe5e21a_BeThere_3.svg)
+
+---
+
+## Assistant 11
+
+**I. UI & VISUAL DESIGN SYSTEM**
+
+*   **Color Architecture:**
+    *   *Primary/Accents:* `#f65058` (vibrant coral/red for focus states, active nav underlines, and primary buttons), `#FFCC52` (warm yellow for custom list bullets), `#be4aa5` (magenta for rich text tags), `#0073e6` (blue for rich text classes).
+    *   *Neutrals/Text:* `#000000` (primary text), `#ffffff` (backgrounds), `rgb(236,236,236)` (subtle borders for accordions).
+    *   *Semantic:* High-contrast focus outlines (`0.125rem solid #f65058`) for keyboard navigation.
+*   **Typography Scale:**
+    *   *Families:* `Inconsolata` (monospace for code snippets), paired with Webflow’s native system sans-serif stack for UI/body text.
+    *   *Fluid Sizing (The "Brilliant" Math):* Implements a rigorous 6-step fluid typography engine using CSS variables. Calculates exact `font-size` via `calc(var(--base-X) * 1rem + var(--coefficient-X) * 1vw)` across breakpoints (0px, 478px, 767px, 991px, 1440px, 1920px, 2400px), ensuring perfect optical scaling without media-query jumps.
+    *   *Hierarchy:* Utility classes (`heading-style-h1`, `text-size-large`, `text-size-tiny`, `text-weight-bold`) enforce strict modular scale.
+*   **Geometry & Spacing:**
+    *   *Grid:* Webflow’s native CSS Grid and Flexbox (`grid-grid`, `container-large`, `container-medium`).
+    *   *Spacing:* Standardized utility classes (`padding-global`, `padding-section-medium`, `margin-xsmall`, `padding-xsmall`) maintain rhythmic whitespace.
+    *   *Borders:* Minimalist, sharp or micro-rounded corners. Accordion borders use subtle light gray (`rgb(236,236,236)`).
+*   **Iconography & Imagery:**
+    *   *Icons:* Custom inline SVGs for all UI controls (chevrons, arrows, quote marks, crisis alert info/close icons, hamburger menu), ensuring crisp rendering and `CurrentColor` inheritance.
+    *   *Imagery:* Custom vector illustrations for the hero and "You'll learn" sections (`BeThere_1-1.svg`, etc.). High-quality, square-cropped photography for testimonials (`ratio-square`, `img-cover`).
+*   **Motion & Interaction:**
+    *   *Hover States:* Nav links feature a sliding underline animation (`header_link::after` width transition from 0 to 100%).
+    *   *Carousels:* Slick Carousel powers the testimonials, syncing an image slider with a quote slider (autoplay, custom dots). Partner logos use a pure CSS infinite scroll (`@keyframes scroll`).
+    *   *Accordions:* Smooth height/opacity transitions for FAQ and "Why get certified" sections.
+    *   *Popovers:* Native HTML `<dialog>` / Popover API for the cookie consent modal (`dialog-popover:popover-open`), preventing content flashing.
+
+**II. UX & INFORMATION ARCHITECTURE**
+
+*   **Navigation Structures:**
+    *   *Global Header:* Dual-layer. Top utility bar (Jack.org, edHUB, Jack Ride). Main nav features logo, primary links, and dual CTAs (Take the Course, Donate Now).
+    *   *Language Switcher:* Prominent ES/FR toggle integrated directly into the header layout.
+    *   *Mobile:* Hamburger menu triggering a full-screen overlay with contextual links (Register, Log In, My Account) managed dynamically by Wized.
+*   **Layout & Composition:**
+    *   *Hero:* Centered value proposition, dual CTAs (Get Started / Resume Learning), anchored by a custom SVG background illustration.
+    *   *Sticky Scroll Narrative:* The "You'll learn" section uses a sticky scroll layout. As the user scrolls, text items pin and highlight in sync with corresponding passing illustrations, creating an interactive storytelling flow.
+*   **State Management:**
+    *   *Auth & Progress:* Wized (Webflow state management) dynamically toggles UI elements based on user login state and course progress (e.g., showing "Resume Learning" instead of "Get Started" if progress exists).
+    *   *Referral Tracking:* Custom script captures `?referral=` URL parameters and stores them in cookies for partner attribution.
+*   **Accessibility (a11y) & Safety:**
+    *   *Crisis Alert:* A persistent, highly visible dropdown in the header explicitly stating the site is *not* for personal distress disclosure, providing immediate helpline directions.
+    *   *Skip Link:* "Skip to main content" targeting `#content`.
+    *   *Focus States:* Custom `focus-visible` outlines for keyboard navigation.
+    *   *Finsweet Attributes:* `@finsweet/attributes-a11y` injected for enhanced accessibility compliance.
+*   **Responsive Behavior:**
+    *   *Breakpoints:* Mobile (478px), Mobile Landscape (767px), Tablet (991px), Desktop (1440px), Large (1920px+).
+    *   *Adaptations:* Fluid typography scales seamlessly. Grids collapse to single columns on mobile. Hamburger menu replaces desktop nav.
+
+**III. CONTENT & COPYWRITING**
+
+*   **Voice & Tone:**
+    *   *Persona:* Empathetic, encouraging, accessible, authoritative yet approachable.
+    *   *Style:* Clear, jargon-free, action-oriented. Focuses on empowerment, practical support, and community.
+*   **Structural Syntax:**
+    *   *Headings:* Benefit-driven and clear ("Why get certified", "You'll learn").
+    *   *Lists:* Bullet points utilize custom yellow dot icons (`rich-text.is-list-2 ul li:after`) for visual warmth.
+    *   *Emphasis:* Strategic bolding for key takeaways in the "You'll learn" section to guide the skimming eye.
+*   **Conversion Copy:**
+    *   *CTAs:* "Get Started", "Resume Learning", "Take the Course", "Donate Now".
+    *   *Friction Reduction:* Explicitly highlights "Free of charge", "Less than 2 hours", "Self-paced", "Available in French, English and Spanish".
+*   **Microcopy & System Text:**
+    *   *Cookie Consent:* Transparent and empathetic, explaining *why* cookies are used ("improve our programs, and measure campaign performance to help fund more work").
+    *   *Troubleshooting FAQ:* Empathetic, human-centric error handling ("Uh-oh, if the page has crashed... the site is too busy at the moment").
+*   **Linguistic Patterns:**
+    *   *Inclusive Language:* "folks", "loved ones", "we can all better support one another".
+    *   *Action-Oriented:* "Learn to support", "recognize signs", "build trust", "set healthy boundaries".
+
+**IV. BRANDING & POSITIONING**
+
+*   **Brand Identity:**
+    *   *Archetype:* Caregiver / Sage.
+    *   *Visual Vibe:* Warm, inviting, modern, illustrative, youth-friendly but professional.
+    *   *Partnerships:* Co-branded seamlessly with Jack.org and Born This Way Foundation.
+*   **Trust & Authority:**
+    *   *Social Proof:* Testimonials from mental health advocates, disability support workers, and students, displayed in a synced carousel.
+    *   *Partner Logos:* Infinite scroll carousel featuring major partners (Starbucks Foundation, Paramount, Sebastian Professional, Cotton On Foundation).
+    *   *Research Backing:* Explicit mention of the evidence base ("needs assessment of over 1,200 youth", linking to the "Building Be There PDF").
+*   **Psychological Triggers:**
+    *   *Altruism/Community:* "Let’s create a world where we can all better support one another."
+    *   *Self-Improvement:* "Improve your own mental health", "Build your resume".
+    *   *Urgency/Relevance:* Positions mental health literacy as a universal, pressing need.
+
+**V. ELEMENT PLACEMENT & PAGE LITERATURE**
+
+*   **Section Flow:**
+    1.  *Header:* Utility bar, Main Nav, Language Switcher.
+    2.  *Hero:* Value prop, Dual CTAs, Illustration.
+    3.  *About:* What it is, 6 bullet points.
+    4.  *Overview:* Sticky scroll narrative (7 learning outcomes with matching illustrations).
+    5.  *Why Get Certified:* 3 Accordion items (Loved ones, Own mental health, Resume).
+    6.  *Testimonials:* Synced Slick carousel (Images + Quotes).
+    7.  *Partners:* Infinite scroll logo carousel.
+    8.  *FAQs:* Accordion for technical and course questions.
+    9.  *Final CTA:* Motivational closing, "Get Started".
+    10. *Footer:* Partner logos, Nav, Copyright, Trademark info.
+*   **Component Hierarchy:**
+    *   *Crisis Alert:* Fixed/absolute positioned dropdown in the header area for immediate safety resources.
+    *   *Accordions:* Webflow native accordion component with custom SVG chevron rotation.
+    *   *Slick Carousel:* Custom implementation for syncing image and text sliders.
+    *   *Wized Components:* Dynamic elements that change based on user authentication and course progress.
+
+**VI. TECHNOLOGY & INFRASTRUCTURE STACK**
+
+*   **Frontend:**
+    *   *Platform:* Webflow (hosted on Webflow's global CDN).
+    *   *CSS:* Webflow's native CSS generation, heavily augmented with custom CSS (fluid typography math, slick carousel styles, keyframe animations).
+    *   *JS:* jQuery (Webflow default), Slick Carousel, Wized (for complex state management and API calls).
+*   **Backend & CMS:**
+    *   *CMS:* Webflow CMS (for testimonials, partner logos, FAQs).
+    *   *State Management:* Wized (handles user auth, course progress, referral tracking, language cookies).
+*   **Performance & Hosting:**
+    *   *CDN:* Webflow's global CDN (`cdn.prod.website-files.com`).
+    *   *Optimization:* SRI (Subresource Integrity) hashes on all external scripts and CSS for security. Lazy loading for images (`loading="lazy"`). Preconnect to Google Fonts and Webflow CDN.
+*   **Analytics & Tracking:**
+    *   *Tag Manager:* Google Tag Manager (GTM-TJKRRMDH).
+    *   *Referral Tracking:* Custom Wized script to capture `?referral=` URL parameters and store them in cookies for partner attribution.
+*   **Third-Party Integrations:**
+    *   *Accessibility:* Finsweet Attributes (A11y, Scroll Disable).
+    *   *Cookie Consent:* Finsweet Cookie Consent (fs-cc).
+    *   *Carousel:* Slick Carousel.
+
+**VII. SEO & METADATA ARCHITECTURE**
+
+*   **On-Page SEO:**
+    *   *Title:* "Earn your Be There Certificate"
+    *   *Meta Description:* "A free, online course to learn how to safely support someone who is struggling with their mental health. Learn at your own pace with interactive lessons you can save and come back to later."
+*   **Technical SEO:**
+    *   *OpenGraph/Twitter Cards:* Fully populated with title, description, and specific OG image (`BTC-OG-image-FB.png`).
+    *   *Semantic HTML:* Proper use of `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>`.
+    *   *Hreflang/Language:* Handled via URL structure (`/es/home-espanol`, `/fr/home-francais`) and Wized cookie logic to serve correct language paths.
+
+[media-11-1.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64596ecefd3f982455776075_BTC-OG-image-FB.png)
+
+![media-11-1.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64596ecefd3f982455776075_BTC-OG-image-FB.png)
+
+[media-11-3.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe300f75399278ba6e76a_btc-favicon.png)
+
+![media-11-3.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe300f75399278ba6e76a_btc-favicon.png)
+
+[media-11-4.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe397dc6153f840d6d093_btc-webclip.png)
+
+![media-11-4.png](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/648fe397dc6153f840d6d093_btc-webclip.png)
+
+[media-11-5.png](https://assets.website-files.com/644fbcdb7589c45373c8199d/646bedbb7f58eefe94ade0f3_incorrecticon.png)
+
+![media-11-5.png](https://assets.website-files.com/644fbcdb7589c45373c8199d/646bedbb7f58eefe94ade0f3_incorrecticon.png)
+
+[media-11-6.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/649d7ca04d4c36c14d1e9c2b_Be-There-Certificate-logo.svg)
+
+![media-11-6.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/649d7ca04d4c36c14d1e9c2b_Be-There-Certificate-logo.svg)
+
+[media-11-8.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac8e5eb626e28ee9d7312_hero-background.svg)
+
+![media-11-8.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac8e5eb626e28ee9d7312_hero-background.svg)
+
+[media-11-9.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac7ce06bdc305bbfc349c_BeThere_1-1.svg)
+
+![media-11-9.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ac7ce06bdc305bbfc349c_BeThere_1-1.svg)
+
+[media-11-10.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3.webp)
+
+![media-11-10.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3.webp)
+
+[media-11-11.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-500.webp)
+
+![media-11-11.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-500.webp)
+
+[media-11-12.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-800.webp)
+
+![media-11-12.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-800.webp)
+
+[media-11-13.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-1080.webp)
+
+![media-11-13.webp](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/64df26b93ee10a7ce7bed938_homepage-image-3-p-1080.webp)
+
+[media-11-15.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7853ce46e8d6cf47578_BeThere_21.svg)
+
+![media-11-15.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7853ce46e8d6cf47578_BeThere_21.svg)
+
+[media-11-16.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be786abf58d76c4f7a9e2_BeThere_23.svg)
+
+![media-11-16.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be786abf58d76c4f7a9e2_BeThere_23.svg)
+
+[media-11-17.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785a55dde753ec52967_BeThere_24.svg)
+
+![media-11-17.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785a55dde753ec52967_BeThere_24.svg)
+
+[media-11-18.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785bdbc583e91b90c78_BeThere_32.svg)
+
+![media-11-18.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be785bdbc583e91b90c78_BeThere_32.svg)
+
+[media-11-19.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7854e63d5261f2634d4_BeThere_34.svg)
+
+![media-11-19.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7854e63d5261f2634d4_BeThere_34.svg)
+
+[media-11-20.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be78525dbfdbc1d6cab32_BeThere_37.svg)
+
+![media-11-20.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be78525dbfdbc1d6cab32_BeThere_37.svg)
+
+[media-11-21.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7859c778551201c1575_BeThere_40b.svg)
+
+![media-11-21.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645be7859c778551201c1575_BeThere_40b.svg)
+
+[media-11-22.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022.jpg)
+
+![media-11-22.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022.jpg)
+
+[media-11-23.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-500.jpg)
+
+![media-11-23.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-500.jpg)
+
+[media-11-24.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-800.jpg)
+
+![media-11-24.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-800.jpg)
+
+[media-11-25.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-1080.jpg)
+
+![media-11-25.jpg](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea908a67b560f9e90ea07_pic-winter-2022-p-1080.jpg)
+
+[media-11-27.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea91291a5004db41ae54e_Joyce.png)
+
+![media-11-27.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea91291a5004db41ae54e_Joyce.png)
+
+[media-11-28.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea919f88acc0a701b5891_Angelica.png)
+
+![media-11-28.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/645ea919f88acc0a701b5891_Angelica.png)
+
+[media-11-29.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ebbc0ceeec5e79e45ec9c_ic-quote.svg)
+
+![media-11-29.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ebbc0ceeec5e79e45ec9c_ic-quote.svg)
+
+[media-11-32.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent.png)
+
+![media-11-32.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent.png)
+
+[media-11-33.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent-p-500.png)
+
+![media-11-33.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67eda26fd5709acb8ad4d617_Timelycare_logo_transparent-p-500.png)
+
+[media-11-35.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York.png)
+
+![media-11-35.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York.png)
+
+[media-11-36.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York-p-500.png)
+
+![media-11-36.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e401193c3a5ece3980f883_The%20Child%20Center%20of%20New%20York-p-500.png)
+
+[media-11-38.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo.png)
+
+![media-11-38.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo.png)
+
+[media-11-39.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-500.png)
+
+![media-11-39.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-500.png)
+
+[media-11-40.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-800.png)
+
+![media-11-40.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e400abc74f42bedc331dbc_Starbucks%20Foundation%20logo-p-800.png)
+
+[media-11-42.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK.png)
+
+![media-11-42.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK.png)
+
+[media-11-43.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-500.png)
+
+![media-11-43.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-500.png)
+
+[media-11-44.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-800.png)
+
+![media-11-44.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-800.png)
+
+[media-11-45.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-1080.png)
+
+![media-11-45.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67ed7e7bff077a394dc56162_Sebastian_LOGO_BLACK-p-1080.png)
+
+[media-11-47.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo.png)
+
+![media-11-47.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo.png)
+
+[media-11-48.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-500.png)
+
+![media-11-48.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-500.png)
+
+[media-11-49.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-800.png)
+
+![media-11-49.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-800.png)
+
+[media-11-50.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1080.png)
+
+![media-11-50.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1080.png)
+
+[media-11-51.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1600.png)
+
+![media-11-51.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4007e96f434fa29c063fc_Penner_Family_Logo-p-1600.png)
+
+[media-11-53.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo.png)
+
+![media-11-53.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo.png)
+
+[media-11-54.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-500.png)
+
+![media-11-54.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-500.png)
+
+[media-11-55.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-800.png)
+
+![media-11-55.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4005f6fae74782c710159_Paramount_Global_Logo-p-800.png)
+
+[media-11-57.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4003f6c38dfd8476b8510_Joyba_Logo.png)
+
+![media-11-57.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/67e4003f6c38dfd8476b8510_Joyba_Logo.png)
+
+[media-11-58.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01.png)
+
+![media-11-58.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01.png)
+
+[media-11-59.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-500.png)
+
+![media-11-59.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-500.png)
+
+[media-11-60.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-800.png)
+
+![media-11-60.png](https://cdn.prod.website-files.com/645ea7f6ebf501212d7f9002/68beffbdfd3a6f8bbe666197_COF002_Foundation_Logo_Trns-01-p-800.png)
+
+[media-11-92.pdf](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ce6233548074ff326377a_Building-Be-There.pdf)
+
+[media-11-92.pdf](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645ce6233548074ff326377a_Building-Be-There.pdf)
+
+[media-11-93.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645d38493523924c6fe5e21a_BeThere_3.svg)
+
+![media-11-93.svg](https://cdn.prod.website-files.com/644fbcdb7589c45373c8199d/645d38493523924c6fe5e21a_BeThere_3.svg)
+
+---
+
+## User 12
+
+the layoutting of the page and amongst all, first two seconds were enough to tell me who what and all
+
+[Pasted_Text_1781810768968.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/aef17c1d-faa6-4314-b73d-3f0cf5b27485_Pasted_Text_1781810768968.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiJhZWYxN2MxZC1mYWE2LTQzMTQtYjczZC0zZjBjZjViMjc0ODUiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.pvFm62l0Hul4gHY24XVA7dBV_BQXdtD-voJnzhC_bLM)
+
+[Pasted_Text_1781810768968.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/aef17c1d-faa6-4314-b73d-3f0cf5b27485_Pasted_Text_1781810768968.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiJhZWYxN2MxZC1mYWE2LTQzMTQtYjczZC0zZjBjZjViMjc0ODUiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.pvFm62l0Hul4gHY24XVA7dBV_BQXdtD-voJnzhC_bLM)
+
+---
+
+## Assistant 13
+
+**I. UI & VISUAL DESIGN SYSTEM**
+
+- **Color Architecture:** Slate blue/gray (`#47566A`) used for primary text instead of harsh black. This creates a clinical yet soft, empathetic tone. Clean white card backgrounds ensure high contrast and readability without feeling sterile.
+- **Typography Scale:** Elementor native hierarchy. Large, confident headings project authority; readable, well-spaced body text ensures approachability. 
+- **Geometry & Spacing:** Card-based grid layouts (`card-callouts`). Generous padding and flexbox alignments (`e-flex`, `is-layout-flex`) create breathing room, preventing the "clinical clutter" feel that plagues medical sites.
+- **Iconography:** Custom, minimalist SVG icons (e.g., clipboard/assessment) act as visual anchors. They communicate "medical/clinical" instantly without being intimidating.
+- **Motion & Interaction:** Static clarity. The design relies on layout, typography, and whitespace to guide the eye rather than distracting animations.
+
+**II. UX & INFORMATION ARCHITECTURE**
+
+- **The "First Two Seconds" Rule:** The hero section immediately resolves the user's core anxiety. It pairs clinical authority ("neuroscience", "expert diagnosis") with deep human empathy ("empathy and passion", "welcoming"). The user instantly knows: *They are highly qualified, and they will not treat me like a transaction.*
+- **Layout & Composition:** Instant scanning. The transition from the empathetic intro to the service cards allows the user to answer "What do they actually do?" in under three seconds. 
+- **State Management:** Clear hover states on cards and CTAs. Frictionless progression from reading to booking.
+- **Accessibility (a11y):** High contrast ratios, semantic HTML, and clear focus states for keyboard navigation.
+- **Responsive Behavior:** Elementor's flex/grid systems ensure the service cards stack vertically on mobile without breaking the visual hierarchy or hiding the core message.
+
+**III. CONTENT & COPYWRITING**
+
+- **Voice & Tone:** The Empathetic Expert. Authoritative but deeply human. Validates the user's struggle while projecting clinical competence.
+- **Structural Syntax:** Short, punchy paragraphs. The "We know X, but we also know Y" formula (e.g., "We know a lot about neuroscience... but we also know they don’t mean much without empathy") bridges logic and emotion instantly.
+- **Conversion Copy:** "Fast, expert ADHD diagnosis..." directly addresses the primary desire (speed and expertise). "Book Now" is low-friction and direct.
+- **Microcopy & Pain-Point Addressing:** The testimonial copy ("rather than someone who’s just there to book your appointment and take your money") is weaponized to directly attack the user's fear of transactional, cold healthcare.
+- **Linguistic Patterns:** Personalization ("Your ADHD journey is unique"). Validation ("understands how difficult this can be").
+
+**IV. BRANDING & POSITIONING**
+
+- **Brand Identity:** The Anti-Clinical Clinic. Archetype: Caregiver + Sage. Positions itself as the antidote to the cold, rushed, traditional medical system.
+- **Trust & Authority:** Built on hard keywords ("neuroscience", "psychoeducational assessments", "expert diagnosis") softened by emotional keywords ("empathy", "passion", "welcoming").
+- **Psychological Triggers:** 
+  - *Contrast:* Us vs. the transactional healthcare system.
+  - *Validation:* Acknowledging the emotional toll of the ADHD journey.
+  - *Social Proof:* Using a testimonial that highlights the *care team's attitude*, not just the medical outcome.
+
+**V. ELEMENT PLACEMENT & PAGE LITERATURE**
+
+- **Section Flow:**
+  1. *The Hook:* Empathy + Neuroscience (Establishes Who and How).
+  2. *The Offer:* Icon-led service cards (Establishes What).
+  3. *The Proof:* Testimonial addressing the emotional pain point (Establishes Why Us).
+  4. *The Action:* Direct "Book Now" CTA.
+- **Component Hierarchy:**
+  - `card-callouts`: The primary vehicle for service delivery. Icon + concise text.
+  - `elementor-widget-text-editor`: Used for narrative, empathetic copy rather than dry medical jargon.
+
+**VI. TECHNOLOGY & INFRASTRUCTURE STACK**
+
+- **Frontend:** WordPress + Elementor Pro. Evident from `elementor-element`, `e-con-full`, `data-widget_type` classes.
+- **CSS Architecture:** Elementor’s native flexbox and grid utilities (`is-layout-flex`, `is-layout-grid`, `aligncenter`). Custom CSS for specific card styling (`card-callouts__card__text`).
+- **Backend:** WordPress.
+- **Performance:** Inline SVGs for icons ensure crisp rendering at any size with minimal HTTP requests.
+
+**VII. SEO & METADATA ARCHITECTURE**
+
+- **On-Page SEO:** Keyword-rich headings and body text ("ADHD diagnosis", "psychoeducational assessments", "ADHD journey") naturally integrated into the empathetic copy.
+- **Technical SEO:** Clean, semantic HTML5 structure generated by Elementor. Clear heading hierarchy for search engine crawlers.
+
+[Pasted_Text_1781810768968.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/aef17c1d-faa6-4314-b73d-3f0cf5b27485_Pasted_Text_1781810768968.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiJhZWYxN2MxZC1mYWE2LTQzMTQtYjczZC0zZjBjZjViMjc0ODUiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.pvFm62l0Hul4gHY24XVA7dBV_BQXdtD-voJnzhC_bLM)
+
+[Pasted_Text_1781810768968.txt](https://cdn.qwenlm.ai/14fd58cc-e721-4158-9cbd-9db1a1ba02fd/aef17c1d-faa6-4314-b73d-3f0cf5b27485_Pasted_Text_1781810768968.txt?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMTRmZDU4Y2MtZTcyMS00MTU4LTljYmQtOWRiMWExYmEwMmZkIiwicmVzb3VyY2VfaWQiOiJhZWYxN2MxZC1mYWE2LTQzMTQtYjczZC0zZjBjZjViMjc0ODUiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.pvFm62l0Hul4gHY24XVA7dBV_BQXdtD-voJnzhC_bLM)
+
+---
+
+## User 14
+
+beautiful comic book/flyer visuals, extract and curate 
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+  
+  
+  
+            <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/wp-content/themes/sage/public/fonts/Alright/Alright-v2-Compressed-Medium.f9f68b.woff2">
+                <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/wp-content/themes/sage/public/fonts/Alright/Alright-v2-Normal-Black.7461f1.woff2">
+                <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/wp-content/themes/sage/public/fonts/Alright/Alright-v2-Normal-Bold.200649.woff2">
+                <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/wp-content/themes/sage/public/fonts/Alright/Alright-v2-Normal-Regular.7afdbe.woff2">
+                <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/wp-content/themes/sage/public/fonts/Alright/Alright-v2-Normal-Thin.2aadd4.woff2">
+      
+  
+      <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWJ796S"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+    <script src="https://www.googletagmanager.com/gtm.js?id=GTM-KWJ796S" async></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+    </script>
+
+    
+    <meta name="google-site-verification" content="ygWsnjPJQgwQtYoDrqt57__0pzPQbhUF63VmVxL3100" />
+  
+  
+  
+      <style>body::after {content: url("/wp-content/themes/sage/public/images/texture.60e0bce35081e989.png");height:0;overflow:hidden;position:absolute;visibility:hidden;width:0;}</style>
+  
+  
+  <script type="module">!function(){var t=navigator.userAgent,e=document.documentElement,n=e.className;if(n=n.replace("no-js","js"),/iPad|iPhone|iPod/.test(t)&&!window.MSStream&&(n+=" ua-ios"),e.className=n,"fonts"in document)try{document.fonts.ready.then(()=>{let t=new CustomEvent("fonts-loaded");e.dispatchEvent(t),e.classList.add("font-loaded")})}catch(t){}}();</script>
+
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" href="https://abortionfunds.org/" hreflang="en" />
+<link rel="alternate" href="https://abortionfunds.org/es/" hreflang="es" />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v25.6 (Yoast SEO v27.5) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Homepage - National Network of Abortion Funds</title>
+	<meta name="description" content="Our network of nearly 100 abortion funds builds power for abortion access. Find a fund, get support, donate, and join campaigns with NNAF." />
+	<link rel="canonical" href="https://abortionfunds.org/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Homepage" />
+	<meta property="og:description" content="Our network of nearly 100 abortion funds builds power for abortion access. Find a fund, get support, donate, and join campaigns with NNAF." />
+	<meta property="og:url" content="https://abortionfunds.org/" />
+	<meta property="og:site_name" content="National Network of Abortion Funds" />
+	<meta property="article:modified_time" content="2026-06-11T17:23:39+00:00" />
+	<meta property="og:image" content="https://abortionfunds.org/wp-content/uploads/2023/10/NNAF-logo-gold-stacked.png" />
+	<meta property="og:image:width" content="462" />
+	<meta property="og:image:height" content="519" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/abortionfunds.org\/","url":"https:\/\/abortionfunds.org\/","name":"Homepage - National Network of Abortion Funds","isPartOf":{"@id":"https:\/\/abortionfunds.org\/#website"},"about":{"@id":"https:\/\/abortionfunds.org\/#organization"},"datePublished":"2023-07-19T17:26:36+00:00","dateModified":"2026-06-11T17:23:39+00:00","description":"Our network of nearly 100 abortion funds builds power for abortion access. Find a fund, get support, donate, and join campaigns with NNAF.","breadcrumb":{"@id":"https:\/\/abortionfunds.org\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/abortionfunds.org\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/abortionfunds.org\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/abortionfunds.org\/#website","url":"https:\/\/abortionfunds.org\/","name":"National Network of Abortion Funds","description":"","publisher":{"@id":"https:\/\/abortionfunds.org\/#organization"},"alternateName":"NNAF","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/abortionfunds.org\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/abortionfunds.org\/#organization","name":"National Network of Abortion Funds","url":"https:\/\/abortionfunds.org\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/abortionfunds.org\/#\/schema\/logo\/image\/","url":"\/wp-content\/uploads\/2023\/10\/NNAF-logo-gold-stacked.png","contentUrl":"\/wp-content\/uploads\/2023\/10\/NNAF-logo-gold-stacked.png","width":462,"height":519,"caption":"National Network of Abortion Funds"},"image":{"@id":"https:\/\/abortionfunds.org\/#\/schema\/logo\/image\/"}}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);--wp--custom--typography--drop-cap: ;}.wp-block-group{--wp--preset--gradient--lavender-gradient: radial-gradient(at bottom left, #bfa2f5, transparent 50%), radial-gradient(at top right, #e5d9ef, transparent 70%);}:root { --wp--style--global--content-size: 840px;--wp--style--global--wide-size: 1140px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.wp-block-group.has-lavender-gradient-gradient-background{background: var(--wp--preset--gradient--lavender-gradient) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='app/0-css' href='/wp-content/themes/sage/public/css/app.d8ac55.css' media='all' />
+<link rel="https://api.w.org/" href="https://abortionfunds.org/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://abortionfunds.org/wp-json/wp/v2/pages/51" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://abortionfunds.org/wp/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://abortionfunds.org/' />
+<link rel="icon" href="/wp-content/uploads/2023/09/cropped-android-chrome-512x512-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="/wp-content/uploads/2023/09/cropped-android-chrome-512x512-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="/wp-content/uploads/2023/09/cropped-android-chrome-512x512-1-180x180.png" />
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2023/09/cropped-android-chrome-512x512-1-270x270.png" />
+</head>
+  <body class="home wp-singular page-template page-template-template-homepage page page-id-51 wp-embed-responsive wp-theme-sage">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 0; position: absolute; width: 0" focusable="false" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+  <!-- Clip path for line decorations -->
+  <clipPath id="clip0_2685_3966">
+    <rect width="563" height="410" fill="white"/>
+  </clipPath>
+  <!-- NOTE: IDs must match file names to work with the svg() helper -->
+  <!-- NOTE: “gradientUnits” doesn’t work on <linearGradient> in SVG sprites in Chrome -->
+  <symbol id="sprite-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12" preserveAspectRatio="xMidYMid meet">
+    <g fill="currentColor"><path fill="var(--icon-color)" d="M10 6.63H0V4.92h9.98L6.85 1.67 8.1.47l5.1 5.3-5.1 5.32-1.24-1.18L10 6.63z"/></g>
+  </symbol>
+  <symbol id="sprite-chev-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" preserveAspectRatio="xMidYMid meet">
+    <g fill="currentColor"><path fill="var(--icon-color)" d="m6.763.324 1.474 1.352L3.356 7l4.881 5.324-1.474 1.352L.643 7z"/></g>
+  </symbol>
+  <symbol id="sprite-chev-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" preserveAspectRatio="xMidYMid meet">
+    <g fill="currentColor"><path fill="var(--icon-color)" d="M2.118 13.676.644 12.324 5.524 7 .645 1.676 2.118.324 8.238 7z"/></g>
+  </symbol>
+  <symbol id="sprite-chev-down" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.5018 1.17139L6.84496 6.82824L1.18811 1.17139" stroke="var(--icon-color)" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="sprite-chev-circle-filled" xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+    <g fill="currentColor"><circle cx="11" cy="11.5" r="11" fill="#530B7B"/><path d="M16.3132 9L10.6564 14.6569L4.99951 9" stroke="white" stroke-width="2"/></g>
+  </symbol>
+  <symbol id="sprite-chev-circle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <g stroke="currrentColor"><circle cx="12" cy="12.2144" r="11" stroke="#530B7B" stroke-width="1.5"/><path d="M17.3132 9.71436L11.6564 15.3712L5.99951 9.71436" stroke="#530B7B" stroke-width="1.5"/></g>
+  </symbol>
+  <symbol id="sprite-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 21" preserveAspectRatio="xMidYMid meet">
+    <g fill="currentColor"><path fill="var(--icon-color)" d="M14.54 17.77V21H1.62v-3.23h12.92zM9.69 0v9.72l4.02-4L15.99 8l-8 8L0 8 2.28 5.7 6.46 9.9V0H9.7z"/></g>
+  </symbol>
+  <symbol id="sprite-external" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12" preserveAspectRatio="xMidYMid meet">
+    <g fill="currentColor"><path d="M11.5455 1.22798C11.5455 0.675699 11.0977 0.227983 10.5455 0.227984L1.54545 0.227984C0.993169 0.227984 0.545454 0.675699 0.545454 1.22798C0.545454 1.78027 0.993169 2.22798 1.54545 2.22798L9.54545 2.22798L9.54545 10.228C9.54545 10.7803 9.99317 11.228 10.5455 11.228C11.0977 11.228 11.5455 10.7803 11.5455 10.228L11.5455 1.22798ZM1.70711 11.4805L11.2526 1.93509L9.83835 0.520877L0.292893 10.0663L1.70711 11.4805Z" fill="var(--icon-color)"/></g>
+  </symbol>
+  <symbol id="sprite-info-circle" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.99902 16.5C13.1412 16.5 16.499 13.1421 16.499 9C16.499 4.85786 13.1412 1.5 8.99902 1.5C4.85689 1.5 1.49902 4.85786 1.49902 9C1.49902 10.4442 1.90721 11.793 2.6145 12.9375C3.3611 14.1455 4.44097 15.1257 5.72583 15.75C6.71493 16.2305 7.8255 16.5 8.99902 16.5Z" fill="#530B7B"/><path d="M9 12V9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 6H9.00713" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="sprite-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 88" preserveAspectRatio="xMidYMid meet">
+    <g fill="currentColor"><path fill="var(--icon-color)" d="m87.5 42.9.7-.6-3.4-3.9 2.4-5.2-.9-.4-2.2 4.8-4-4.6 5.5-3.2-.5-.8-5.7 3.3-3-3.4-.1-.6 7.4-2-.3-.9-7.3 2-.5-3.6 6.5-.1v-1l-6.6.1-.6-4.2 5.7 1.7.3-.9-6.1-1.8-.9-6.2-.9.1.8 5.8-3.7-1.1.4-2.9-.9-.1-.4 2.8-3.1-.9 2.5-6.3-.9-.3-2.5 6.4-1.6-.5-4-4.6 1.6-1-.5-.8-1.8 1.1L56.2 6l5.6-1.6-.3-.9-6 1.7L51.6.7l-.7.6 3.6 4.1-7.1 2.1-.9-6.4-.9.1.9 6.5-2.6.8-1.9-.6.9-6.7-.9-.1-.9 6.6-2.4-.7 1.1-2.4-.9-.4-1.2 2.6-4-1.2 3.7-4.2-.7-.6-4 4.6L27 3.7l-.3.9L32 6.2l-2.3 2.7-2.4-1.5-.5.8 2.3 1.5-2.3 2.3-1.8-2-.7.6 1.9 2.1-1 1.1-5.8 1.7-.3-2.3-.9.1.3 2.5-3.6 1 .8-5.3-.9-.1-.9 5.7L8 18.8l.3.9 5.5-1.6-.8 5.3-7 .1v1l6.8-.1-.3 2-1.4-.4-.3 1 1.5.5-.2 1.5-1.3 1.5L5 26.8l-.5.8 5.7 3.5L7.7 34 6 32l-.7.6 1.8 2-7 8 .7.6 6.9-7.9 2.9 3.3-.1.9-5.9 3.7.5.8 5.2-3.3-.7 4.8-8.1 2.2.3.9 7.6-2.1-1.1 7.3-6 .3.1 1 5.8-.3-.3 2.1-5.4-1.3-.2.9 5.5 1.3-1.3 8.8.9.1L8.7 58l4.8 1.2-4.4 9.5.9.4 4.5-9.6L24.9 62l.3 2.2-9.2 5.4.5.8 8.9-5.2.8 5.6-12.4 3.5.3.9 12.3-3.5.7 5-10.9-.1v1l11 .1.9 6.3.9-.1-.8-6.2H32L31 85l.9.1 1-7.4 8.2.1-3.5 9 .9.3 3.6-9.3h3.5l5.2 5.9.7-.6-4.7-5.3 9.5.1 1 7.2.9-.1-.9-7.1h3.3l-.3 2.2.9.1.3-2.3h4l-2.2 4.7.9.4 2.4-5.1h6.1v-1H67l2-4.3 6.7 1.6.2-.9-6.5-1.6 1.7-3.6 5.9 3.7.5-.8-6-3.7 4.5-9.7 3.8-1.1 1.4 10 .9-.1-1.4-10.1 6-1.7-.3-.9-5.9 1.7-.6-4.4 7.1-.4-.1-1-7.2.4-.1-.4 1-2.1 1.3.4.3-.9-1.2-.4 1.5-3.3 4.5 2.9.5-.8-4.6-2.9 1.5-3.3 3.1 3.7Zm-61.4 22 2.9-1.7 4.1 1 .4.4-.6 4.5-5.9 1.7-.9-5.9Zm35.4 5.3-5.7-1.4-.7-5 5.5-1.6 1.9 1.1-1 6.9Zm-18.9 3.3-4.4-4.9 5.9-1.7 1 .2-2.5 6.4Zm-31-35 .9-5.9 4.7 2.9-5.3 3.4-.3-.4Zm66.6 8.4.4 2.7-.3.6-13 .7 1.1-7.5 11.8 3.5ZM61.9 61.8l.9-.3-.1.7-.8-.4Zm-24.4 6-2.8-3.2 7.5 1.8-4.7 1.4Zm-1.8-54.3 4.3 2.8-.7 5.1-2.8 1.8-3.4-4 2.6-5.7Zm30.1 26.9-2.2 1.3-6.9-2.1 2.5-6.6 4.8-1.3 2.7 1.8-.9 6.9ZM64.3 51l-3.5.2-3.9-4.5 6.8-4 1.6.5-1 7.8Zm-3.5 10.1-6.6-4-.6-4.6 6.8-.4 3.2 3.7-.7 4.7-2.1.6Zm-15.1 4.3-1.6.5-9.5-2.3.5-4L46 53.2l3.6 2.2-3.9 10ZM24.6 53.1 23.1 43l4.4-1.2 8.4 5.2-.8 5.7-10.5.4Zm-2.2-15.6-.5-3.9 3.6-2.3.9.3-3 6.5-1-.6Zm8.3-13.2 4.1-.1-5.8 3.7 1.7-3.6Zm13.9-5.1 4 2.6.2 1.4-8.7.1.2-1.2 4.3-2.9Zm7.5 4.8 7.7 5-1.3 3.3-7.4 2L49.8 24h2.3Zm-2.2 30.5-2.6-1.6 3.3-.2-.7 1.8Zm-1-30.5 1.4 10.5-3.2.9-7.5-8.7.3-2.6 9-.1ZM51 51.7l-2.8.2 3.6-2.1-.8 1.9ZM39.4 28l6.7 7.7-1.4.4-6.2-1.8.9-6.3Zm11.4 10.8.1 1-1.2-1.3 1.1.3Zm-4-2.3.2.2-.5-.2h.3Zm-8.4-1.3 4.6 1.4-4.9 1.4.3-2.8Zm-.5 3.7 6.8-1.9 3.4 1 3.1 3.6.9 6.8-6 3.6H46l-9.1-5.6 1-7.5Zm14.5 4 1.4 1.6-.9 2.3-.5-3.9Zm2.1 2.5 1 1.1-1.8 1.1.8-2.2Zm-.3-1.9-2-2.4-.3-2 3.6 1.1-1.3 3.3Zm-5.5-6.3-.9-1 2.6-.7.3 2.4-2-.7Zm-10-11.5-1.4-1.6h1.6l-.2 1.6Zm-.1 1.3-.9 6.9-10-3 .7-1.5 8-5.1 2.2 2.7Zm-11.4 4.8 10.3 3-.4 3.3-9.4 2.6-3.5-2.2 3-6.7Zm9.7 7.4-.9 6.7-7.3-4.5 8.2-2.2Zm-.2 8.3 7.5 4.6-8.2.4.7-5Zm15.7 3.2.1 1H52l.4-1Zm1.1.9-.4-2.7 2.9-1.7 3.5 4.1-6 .3Zm2.8-5.6-1.4-1.6 1.5-3.9 6.1 1.8-6.2 3.7Zm-.5-6.7-4.1-1.2-.4-2.9 6.8-1.9-2.3 6Zm4.8-9.8L63 31l-3.3.9.9-2.4Zm-21.5-6.3h-.9l.9-.6v.6Zm-12.4 7.5-.2-.1.3-.2-.1.3Zm-3 8.7 2.7 1.6-3.4 1-.1-.8.8-1.8Zm12.2 14.1 8.4-.4-9 5.3.6-4.9Zm15.8-.8 1-.1.5 3.9-2.4-1.5.9-2.3ZM67 32.4l-1.7-1.1 1.9-.5-.2 1.6Zm.3-2.6-3.1.9-3.2-2.1 1.8-4.7 5.4-.1-.9 6ZM60.2 28l-6.4-4.1 8-.1-1.6 4.2Zm-10.5-4.9-.1-.7 1 .6-.9.1ZM47.9 17l.5 3.4-2.9-1.9 2.4-1.5Zm-7.5 3.7.5-3.9 2.8 1.8-3.3 2.1Zm-7.8-.5 2.7 3.1-4.1.1 1.4-3.2Zm-5 8.6-2.3 1.4-4.1-1.2-.6-4.7 9.1-.1-2.1 4.6Zm-3.4 2.1-2.5 1.6-.3-2.5 2.8.9ZM21 34.2l.4 2.7-2.3-1.4 1.9-1.3Zm1.9 4.7-.2.5-.1-.8.3.3Zm-1 4.4.3-.1 1.2 8.6-3.5-4 2-4.5ZM35 53.5l-.7 5.5-2.9 1.7-5.9-6.7 9.5-.5Zm-.9 6.7-.4 3.2-1.7-1.9 2.1-1.3Zm16.3-4.3 2.9 1.8.7 5.4-7.2 2.1 3.6-9.3Zm4.6 6.9-.6-4.5 5.1 3.2-4.5 1.3Zm8.8-8.2-2.2-2.5 2.5-.1-.3 2.6Zm1.8-12.4-.7-.2.8-.4-.1.6Zm2.1-8.2 4.2 2.7-5.1 3 .9-5.7Zm5.2 2.2-5-3.2.3-2.4 6.9-1.9.6.6.7 4.9-3.5 2Zm-4.6-6.7.8-5.8h1.7l3.6 4.1-6.1 1.7Zm1-6.7.1-.7.6.7h-.7Zm-1 0-5.1.1 2.1-5.5 3.3 3.7-.3 1.7Zm-6.1.1-9.8.1-2.9-1.9-.6-4.7 6.1-3.9 8.2 2.4 1.4 1.6-2.4 6.4Zm-13.5-7.5-.7-4.9 5.7 1.7-5 3.2ZM47 10.2l.8 5.8-3.2 2-3.5-2.3.8-5.8 2.2-.6 2.9.9Zm-6.8 5-4-2.6.5-1.1 4.2-1.2-.7 4.9Zm-4.9-3.1-.2-.1.3-.1-.1.2Zm-1.4.2 1 .6-2.5 5.5-3.9-4.5 5.4-1.6Zm-6.5 1.9 4.5 5.2-1.8 3.9-9.7.1-.3-2.3 5.6-6.4 1.7-.5Zm-8.1 7.9.2 1.4h-1.4l1.2-1.4Zm-2.1 2.3h2.4l.6 4.4-5.4-1.6 2.4-2.8Zm-3 3.6 6.2 1.8.5 3.3-2.7 1.7-5.4-3.3.3-2.2 1.1-1.3Zm3.9 8 3.4 2.1.4 3-.6 1.4-4.9 1.4-3.8-4.3 5.5-3.6Zm2.6 7.6L19.1 47 17 44.6l3.7-1Zm-1.3 5.2 3.9 4.5-6.2.3 2.3-4.8Zm11 12.4-1.6 1-3.2-.8-.9-6.7 5.7 6.5Zm.7.8.9 1-1.9-.5 1-.5Zm3.2 3.6 2.2 2.5-2.7.8.5-3.3Zm12.1.6 7.8-2.2.6 4.5-8.5-2.1.1-.2Zm18-9.4 2.3 2.6-2.8.8.5-3.4Zm3.3 2.4-3.1-3.6.5-3.6 12.7-.7-2.7 5.8-7.4 2.1Zm-1.2-16.7.2-1.5 6.1-3.6 4.4 2.8.8 5.8-11.5-3.5Zm7.3-5.7 2.7-1.6.5 3.7-3.2-2.1Zm3.4-3.2-.4-3 1.9 2.2-1.5.8Zm-5.1-9.9h2.8l.5 3.9-3.3-3.9Zm-.8-.9-1.7-1.9.5-3.8 4 1.2.6 4.5h-3.4Zm-2.6-2.9-3.1-3.5.2-.6 3.3 1-.4 3.1Zm-12.7-8 2.9-1.8 3.1 3.6-6-1.8Zm-1.2-.4-6.9-2-.2-1.2 7.7-2.2 2.9 3.3-3.5 2.1Zm-7.9-2.3-1.2-.3 1.1-.3.1.6ZM42 9v-.2l.3.1-.3.1Zm-1 .2-3.8 1.1 1.2-2.7 2.7.8-.1.8Zm-5.1 1.5-1.9.5L30.6 9l2.5-2.9 4.3 1.3-1.5 3.3Zm-3.1.9-5.1 1.5-.3-.4L30 9.8l2.8 1.8ZM20 19.8l-.5-3.3 4.5-1.3-4 4.6Zm-.9 1-2.3 2.7h-2.9l.9-5.6 3.9-1.1.4 4ZM16 24.4l-2.1 2.4-.5-.1.3-2.3H16ZM11.8 31l-.1-.1.2-.2-.1.3Zm-.2 1-.8 5.6-2.5-2.8 2.7-3.1.6.3Zm-.3 8.3.4-.2 3.6 4.1-4.8 1.3.8-5.2Zm4.7 4.6 2.7 3.1-2.6 5.6-6.9.4 1.1-7.5 5.7-1.6Zm-.3 9.7-1.8 4-5.1-1.2.4-2.4 6.5-.4Zm1-.1 6.9-.4 1 7-9.9-2.4 2-4.2Zm10.9 8.4-1.7 1-.2-1.4 1.9.4Zm5.1 7.2-.9 6.9h-4l-.7-5.2 5.6-1.7Zm1-.2 3.5-1 5 5.6-1 2.6-8.5-.1 1-7.1Zm9.2 5.4 1.6 1.8h-2.3l.7-1.8Zm.4-1 2.7-6.9 9 2.2 1 7.6-10.2-.1-2.5-2.8Zm13.6 2.9-1-7.4 5.5 1.3-.9 6.1h-3.6Zm5.4-5.9 5.5 1.3-2.1 4.5h-4.3l.9-5.8Zm.2-.9.9-6.5 6.7 4.1-1.8 3.9-5.8-1.5Zm1.1-7.6.2-1.6 3.6-1 2.4 2.8.7-.6-2.1-2.5 6.2-1.8-4.1 8.9-6.9-4.2Zm15.2-11.4.6 4.4-3.1.9 2.5-5.3Zm.4-4.2.4.1-.3.7-.1-.8Zm-.2-1-.8-5.4 3.4 2.2-1.6 3.5-1-.3Zm-.9-6.6-.7-4.9 1.9-1.1 4.4 5-1.7 3.6-3.9-2.6ZM126.4 43.2c.2-.6.9-1 1.5-1h6.8c.6 0 1.3.4 1.5 1l13.5 34.9c.2.5-.1 1-.7 1h-7.7c-.6 0-1.2-.4-1.5-1l-1.3-3.5c-.2-.5-.7-.9-1.2-.9h-12.2c-.5 0-1 .4-1.2.9l-1.3 3.5c-.2.6-.8 1-1.5 1h-7.7c-.5 0-.9-.6-.7-1l13.7-34.9Zm7.9 22c.5 0 .7-.5.6-.9l-3.2-9.1a.3.3 0 0 0-.6 0l-3.3 9.1c-.1.4.1.9.6.9h5.9Zm19.7 14c-.6 0-1.1-.5-1.1-1.1V43.4c0-.6.5-1.1 1.1-1.1h16.6c7.7 0 11.5 4.3 11.5 10.2 0 3.4-1.4 5.7-3.6 7.3-.3.2-.3.7 0 .9a8.6 8.6 0 0 1 5.1 8.2c0 6.1-4.4 10.4-11.6 10.4h-18v-.1Zm16.1-28.4H163c-.5 0-.9.4-.9.9v4c0 .5.4.9.9.9h6.6c2.5 0 3.4-1.2 3.4-2.9s-1-2.9-2.9-2.9Zm1.1 13.3H163c-.5 0-.9.4-.9.9v4.6c0 .5.4.9.9.9h8.2c2.5 0 3.4-1.4 3.4-3.3-.1-1.8-1-3.1-3.4-3.1Zm14.8-3.4c0-10.6 8.6-19.2 18.9-19.2a19 19 0 0 1 18.9 19.2 19 19 0 0 1-18.9 19.2A19.1 19.1 0 0 1 186 60.7Zm9.2 0a9.9 9.9 0 0 0 9.7 10.1c5.5 0 9.7-4.5 9.7-10.1a9.8 9.8 0 0 0-9.7-10.1 9.9 9.9 0 0 0-9.7 10.1Zm32.3-17.4c0-.6.5-1.1 1.1-1.1h16.3c9.1 0 13.3 6.2 13.3 13.5 0 4.9-2 9.4-6.2 11.9-.5.2-.5.8-.3 1.2l6.5 9.4c.3.4 0 .9-.5.9H249c-.7 0-1.3-.4-1.7-.9l-5.6-8.2c-.3-.5-.9-.8-1.5-.8h-2.8c-.5 0-.9.4-.9.9v7.8c0 .6-.5 1.1-1.1 1.1h-6.9c-.6 0-1.1-.5-1.1-1.1V43.3h.1Zm16.9 7.5h-6.9c-.5 0-.9.4-.9.9v8c0 .5.4.9.9.9h6.9c3.6 0 5-2.3 5-4.9 0-2.7-1.4-4.9-5-4.9Zm16.5.6c-.6 0-1.1-.5-1.1-1.1v-6.9c0-.6.5-1.1 1.1-1.1H290c.6 0 1.1.5 1.1 1.1v6.9c0 .6-.5 1.1-1.1 1.1h-9.1c-.5 0-.9.4-.9.9V78c0 .6-.5 1.1-1.1 1.1H272c-.6 0-1.1-.5-1.1-1.1V52.3c0-.5-.4-.9-.9-.9h-9.1Zm33.4-8.1c0-.6.5-1.1 1.1-1.1h6.9c.6 0 1.1.5 1.1 1.1V78c0 .6-.5 1.1-1.1 1.1h-6.9c-.6 0-1.1-.5-1.1-1.1V43.3Zm12.9 17.4c0-10.6 8.6-19.2 18.9-19.2A19 19 0 0 1 345 60.7a19 19 0 0 1-18.9 19.2 19.1 19.1 0 0 1-18.9-19.2Zm9.2 0a9.9 9.9 0 0 0 9.7 10.1c5.5 0 9.7-4.5 9.7-10.1a9.8 9.8 0 0 0-9.7-10.1 10 10 0 0 0-9.7 10.1ZM357.8 78c0 .6-.5 1.1-1.1 1.1h-6.9c-.6 0-1.1-.5-1.1-1.1V43.3c0-.6.5-1.1 1.1-1.1h5.6c.7 0 1.4.3 1.8.9l14.6 19c.2.3.5.1.5-.2V43.3c0-.6.5-1.1 1.1-1.1h6.9c.6 0 1.1.5 1.1 1.1V78c0 .6-.5 1.1-1.1 1.1h-5.5c-.7 0-1.4-.3-1.8-.9l-14.6-19c-.2-.3-.5-.1-.5.2V78h-.1Zm47.9 1.2c-.6 0-1.1-.5-1.1-1.1V43.4c0-.6.5-1.1 1.1-1.1h24.2c.6 0 1.1.5 1.1 1.1v6.9c0 .6-.5 1.1-1.1 1.1h-15.3c-.5 0-.9.4-.9.9v4.6c0 .5.4.9.9.9h12.5c.6 0 1.1.5 1.1 1.1v6.3c0 .6-.5 1.1-1.1 1.1h-12.5c-.5 0-.9.4-.9.9V78c0 .6-.5 1.1-1.1 1.1h-6.9v.1ZM458 43.3c0-.6.5-1.1 1.1-1.1h6.9c.6 0 1.1.5 1.1 1.1V63c0 9.5-5.7 16.9-16.4 16.9s-16.3-7.4-16.3-16.9V43.3c0-.6.5-1.1 1.1-1.1h6.9c.6 0 1.1.5 1.1 1.1v19.1c0 5.4 2.5 8.3 7.2 8.3 4.8 0 7.3-2.9 7.3-8.3V43.3ZM481.1 78c0 .6-.5 1.1-1.1 1.1h-6.9c-.6 0-1.1-.5-1.1-1.1V43.3c0-.6.5-1.1 1.1-1.1h5.6c.7 0 1.4.3 1.8.9l14.6 19c.2.3.5.1.5-.2V43.3c0-.6.5-1.1 1.1-1.1h6.9c.6 0 1.1.5 1.1 1.1V78c0 .6-.5 1.1-1.1 1.1h-5.5c-.7 0-1.4-.3-1.8-.9l-14.6-19c-.2-.3-.5-.1-.5.2V78h-.1Zm30.1 1.2c-.6 0-1.1-.5-1.1-1.1V43.4c0-.6.5-1.1 1.1-1.1h15.4c11.1 0 16.8 8.4 16.8 18.5s-5.7 18.5-16.8 18.5h-15.4v-.1ZM526 51.4h-5.8c-.5 0-.9.4-.9.9V69c0 .5.4 1 .9 1h5.8c5.4 0 8.3-3.8 8.3-9.3 0-5.6-2.9-9.3-8.3-9.3Zm20.1 18c0-.7.5-1.3 1.2-1.3h6.2c1 0 1.3.2 1.8 1.2.6 1.2 2.5 2.4 5.7 2.4 3.4 0 4.5-1.2 4.5-2.3 0-1.6-1.8-2.5-6.1-4-5.7-1.9-13.1-4.8-13.1-12.4 0-7.1 5.8-11.5 13.9-11.5 8.3 0 14.1 4.5 14.5 11.1 0 .7-.5 1.3-1.2 1.3h-6.3c-.9 0-1.3-.4-1.6-1.3-.5-1.6-2.3-3-5.3-3-3.1 0-4.3 1.3-4.3 2.5 0 1.5 1.6 2.2 5.9 3.7 4.9 1.8 13.3 4.8 13.3 12.9 0 7.2-6 11-14.1 11-8.1.2-14.4-3.5-15-10.3ZM121.5 30.3c0 .4-.3.8-.7.8h-4.5c-.4 0-.7-.3-.7-.8V7.4c0-.4.3-.8.7-.8h3.6c.4 0 .9.2 1.1.6l9.4 12.5c.1.2.4.1.4-.1V7.4c0-.4.3-.8.7-.8h4.4c.4 0 .7.3.7.8v22.9c0 .4-.3.8-.7.8h-3.6c-.4 0-.9-.2-1.1-.6L121.9 18c-.1-.2-.4-.1-.4.1v12.2Zm29-22.9c.2-.4.6-.7 1-.7h4.4c.4 0 .8.3 1 .7l8.7 23c.1.3-.1.7-.4.7h-5a1 1 0 0 1-.9-.7l-.8-2.3a.9.9 0 0 0-.8-.6h-7.8c-.4 0-.7.3-.8.6l-.8 2.3a1 1 0 0 1-.9.7h-5c-.4 0-.6-.4-.4-.7l8.5-23Zm5 14.4c.3 0 .5-.3.4-.6l-2.1-6c-.1-.2-.4-.2-.4 0l-2.1 6c-.1.3.1.6.4.6h3.8Zm10.8-9.1c-.4 0-.7-.3-.7-.8V7.3c0-.4.3-.8.7-.8H185c.4 0 .7.3.7.8V12c0 .4-.3.8-.7.8h-5.8c-.3 0-.6.3-.6.6v17c0 .4-.3.8-.7.8h-4.5c-.4 0-.7-.3-.7-.8v-17c0-.3-.3-.6-.6-.6h-5.8v-.1Zm24.5-5.3c0-.4.3-.8.7-.8h4.5c.4 0 .7.3.7.8v22.9c0 .4-.3.8-.7.8h-4.5c-.4 0-.7-.3-.7-.8V7.4ZM202 18.9c0-7 5.6-12.7 12.2-12.7 6.7 0 12.2 5.7 12.2 12.7 0 7-5.5 12.7-12.2 12.7A12.7 12.7 0 0 1 202 18.9Zm5.9 0c0 3.7 2.8 6.6 6.2 6.6 3.5 0 6.2-2.9 6.2-6.6 0-3.7-2.7-6.6-6.2-6.6-3.4-.1-6.2 2.9-6.2 6.6Zm29.7 11.4c0 .4-.3.8-.7.8h-4.5c-.4 0-.7-.3-.7-.8V7.4c0-.4.3-.8.7-.8h3.6c.4 0 .9.2 1.1.6l9.4 12.5c.1.2.4.1.4-.1V7.4c0-.4.3-.8.7-.8h4.4c.4 0 .7.3.7.8v22.9c0 .4-.3.8-.7.8h-3.6c-.4 0-.9-.2-1.1-.6L237.9 18c-.1-.2-.4-.1-.4.1v12.2h.1Zm28.9-22.9c.2-.4.6-.7 1-.7h4.4c.4 0 .8.3 1 .7l8.7 23c.1.3-.1.7-.4.7h-5a1 1 0 0 1-.9-.7l-.8-2.3a.9.9 0 0 0-.8-.6h-7.8c-.4 0-.7.3-.8.6l-.8 2.3a1 1 0 0 1-.9.7h-5c-.4 0-.6-.4-.4-.7l8.5-23Zm5.1 14.4c.3 0 .5-.3.4-.6l-2.1-6c-.1-.2-.4-.2-.4 0l-2.1 6c-.1.3.1.6.4.6h3.8Zm15.6 9.3c-.4 0-.7-.3-.7-.8V7.4c0-.4.3-.8.7-.8h4.4c.4 0 .7.3.7.8v17c0 .3.3.6.6.6h9.7c.4 0 .7.3.7.8v4.5c0 .4-.3.8-.7.8h-15.4Zm41.9-.8c0 .4-.3.8-.7.8h-4.5c-.4 0-.7-.3-.7-.8V7.4c0-.4.3-.8.7-.8h3.6c.4 0 .9.2 1.1.6l9.4 12.5c.1.2.4.1.4-.1V7.4c0-.4.3-.8.7-.8h4.4c.4 0 .7.3.7.8v22.9c0 .4-.3.8-.7.8H340c-.4 0-.9-.2-1.1-.6L329.4 18c-.1-.2-.3-.1-.3.1v12.2Zm22.3.8c-.4 0-.7-.3-.7-.8V7.4c0-.4.3-.8.7-.8h16.2c.4 0 .7.3.7.8V12c0 .4-.3.8-.7.8h-10.4c-.3 0-.6.3-.6.6v2.3c0 .3.3.6.6.6h8.3c.4 0 .7.3.7.8v4.2c0 .4-.3.8-.7.8h-8.3c-.3 0-.6.3-.6.6v1.9c0 .3.3.6.6.6h10.4c.4 0 .7.3.7.8v4.5c0 .4-.3.8-.7.8h-16.2v-.2Zm22-18.4c-.4 0-.7-.3-.7-.8V7.3c0-.4.3-.8.7-.8h18.7c.4 0 .7.3.7.8V12c0 .4-.3.8-.7.8h-5.8c-.3 0-.6.3-.6.6v17c0 .4-.3.8-.7.8h-4.5c-.4 0-.7-.3-.7-.8v-17c0-.3-.3-.6-.6-.6h-5.8v-.1Zm35.5 17.6a1 1 0 0 1-.9.7h-4.7a1 1 0 0 1-.9-.7l-6.1-23c-.1-.3.2-.7.5-.7h4.8c.4 0 .8.3.9.7l3.4 13.2c0 .2.3.2.3 0l3.9-13.2c.1-.4.5-.7.9-.7h3.8c.4 0 .8.3.9.7l3.9 13.2c.1.2.3.2.3 0l3.4-13.2c.1-.4.5-.7.9-.7h4.9c.3 0 .6.4.5.7l-6.1 23a1 1 0 0 1-.9.7h-4.7a1 1 0 0 1-.9-.7l-4-12.9c-.1-.2-.3-.2-.3 0l-3.8 12.9ZM433 18.9c0-7 5.6-12.7 12.2-12.7 6.7 0 12.2 5.7 12.2 12.7 0 7-5.5 12.7-12.2 12.7A12.6 12.6 0 0 1 433 18.9Zm5.9 0c0 3.7 2.8 6.6 6.2 6.6 3.5 0 6.2-2.9 6.2-6.6 0-3.7-2.7-6.6-6.2-6.6-3.4-.1-6.2 2.9-6.2 6.6Zm23.8-11.5c0-.4.3-.8.7-.8h10.5c5.9 0 8.6 4.1 8.6 8.9 0 3.2-1.3 6.2-4 7.8-.3.2-.4.5-.2.8l4.2 6.2c.2.3 0 .6-.3.6h-5.6c-.4 0-.9-.3-1.1-.6l-3.6-5.4c-.2-.3-.6-.5-.9-.5h-1.8c-.3 0-.6.3-.6.6v5.2c0 .4-.3.8-.7.8h-4.4c-.4 0-.7-.3-.7-.8V7.4h-.1Zm10.8 5h-4.4c-.3 0-.6.3-.6.6v5.3c0 .3.3.6.6.6h4.4c2.4 0 3.2-1.5 3.2-3.2.1-1.9-.8-3.3-3.2-3.3Zm15.3 18.7c-.4 0-.7-.3-.7-.8V7.4c0-.4.3-.8.7-.8h4.5c.4 0 .7.3.7.8v7c0 .2.3.3.4.2l6.3-7.4c.3-.3.7-.6 1.2-.6h6.2c.3 0 .4.3.2.6l-8.2 9.4c-.2.3-.3.7-.1 1l8.8 12.8c.2.3 0 .6-.3.6h-5.9c-.4 0-.9-.3-1.1-.6l-5.6-8.1c-.2-.3-.6-.3-.7 0l-.8.9c-.2.3-.4.7-.4 1.1v6c0 .4-.3.8-.7.8h-4.5Zm38.8-12.2c0-7 5.6-12.7 12.2-12.7 6.7 0 12.2 5.7 12.2 12.7 0 7-5.5 12.7-12.2 12.7a12.7 12.7 0 0 1-12.2-12.7Zm6 0c0 3.7 2.8 6.6 6.2 6.6 3.5 0 6.2-2.9 6.2-6.6 0-3.7-2.7-6.6-6.2-6.6-3.4-.1-6.2 2.9-6.2 6.6Zm24.5 12.2c-.4 0-.7-.3-.7-.8V7.4c0-.4.3-.8.7-.8h15.6c.4 0 .7.3.7.8V12c0 .4-.3.8-.7.8h-9.9c-.3 0-.6.3-.6.6v3.1c0 .3.3.6.6.6h8.1c.4 0 .7.3.7.8V22c0 .4-.3.8-.7.8h-8.1c-.3 0-.6.3-.6.6v7c0 .4-.3.8-.7.8h-4.4v-.1Z"/></g>
+  </symbol>
+</svg>
+        <a class="SkipLink" href="#title">Skip to content</a>
+
+
+    
+    
+    <header class="Header l-padding">
+  <div class="Header-wrap">
+    <div class="Header-top">
+      
+              <h1 class="Header-logo">
+              <a class="Header-logo-link" href="https://abortionfunds.org/">
+          <span class="u-screenreader">National Network of Abortion Funds</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 88" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true" width="241" height="36.819444444444" class="Header-logo" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#sprite-logo"/></svg>
+        </a>
+              </h1>
+      
+      
+      <button class="Header-navToggle" data-expands="nav-mobile" data-expands-height data-expands-breakpoint="1000">
+        <span class="Header-navToggle-icon"></span>
+        <span class="Header-navToggle-text -menu">Menu</span>
+        <span class="Header-navToggle-text -close">Close</span>
+      </button>
+
+      
+      <ul class="Nav-list Nav-utility -desktop" role="list">
+  <li class="Nav-utility-item -search">
+    <a class="Nav-utility-link -search"
+      href="/search/">
+      <span class="u-screenreader">Search</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none" focusable="false" aria-hidden="true" class="Nav-utility-link-search-icon">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.8026 9.51652C1.8026 5.73089 4.80345 2.6942 8.46591 2.6942C12.1284 2.6942 15.1292 5.73089 15.1292 9.51652C15.1292 13.3021 12.1284 16.3388 8.46591 16.3388C4.80345 16.3388 1.8026 13.3021 1.8026 9.51652ZM8.46591 0.891602C3.77273 0.891602 0 4.77088 0 9.51652C0 14.2622 3.77273 18.1414 8.46591 18.1414C10.5777 18.1414 12.5031 17.356 13.9823 16.0596L18.9268 21.108L20.1881 19.8202L15.207 14.7343C16.2902 13.2833 16.9318 11.4736 16.9318 9.51652C16.9318 4.77088 13.1591 0.891602 8.46591 0.891602Z" fill="#530B7B"/>
+</svg>
+    </a>
+  </li>
+  
+      <li class="Nav-utility-item -lang">
+      <a class="Nav-utility-link Nav-languageToggle" href="https://abortionfunds.org/es/">
+        Español
+      </a>
+    </li>
+    <li class="Nav-item Nav-utility-item has-menu">
+              
+                <a class="Nav-toggle Nav-utility-link level-0"
+          href="#"
+          data-expands="for-funds"
+          data-expands-height
+          aria-label="For Funds">
+          
+          <span class="Nav-toggle-text">
+            For <span class="Nav-toggle-lastWord u-nowrap">Funds<svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none" focusable="false" aria-hidden="true" class="icon" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#sprite-chev-down"/></svg></span>
+          </span>
+        </a>
+        
+        <div class="Nav-sublist Nav-utility-sublist level-0" id="for-funds">
+          <ul class="Nav-sublist-list Nav-utility-sublist-list" role="list">
+            
+                        
+            <li class="Nav-item Nav-utility-item">
+              
+        <a class="Nav-link Nav-utility-link level-1"
+          href="https://abortionfunds.org/become-a-member-fund/"
+          >
+                      Become a Member Fund
+                  </a>
+          </li>
+            </ul>
+        </div>
+          </li>
+    <li class="Nav-utility-item"><a class="Nav-utility-link f-link-underline" href="https://shop.abortionfunds.org">Shop</a></li>
+
+  <li class="Nav-utility-item">
+          <a class="btn-solid-fire" href="https://abortionfunds.org/donate/">
+        Donate
+      </a>
+      </li>
+</ul>
+    </div><!-- end Header-top -->
+
+    
+    <nav class="Header-nav Nav-content" id="nav" aria-label="Main">
+      
+      <ul class="Nav-list Nav-primary -desktop -en" role="list">
+  <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-0"
+          href="https://abortionfunds.org/find-a-fund/"
+          >
+                      Find an Abortion Fund
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-0"
+          href="https://abortionfunds.org/need-an-abortion/"
+          >
+                      Need an Abortion?
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item has-menu">
+              
+                <a class="Nav-toggle Nav-primary-link level-0"
+          href="#"
+          data-expands="abortion-justice-resources"
+          data-expands-height
+          aria-label="Abortion Justice Resources">
+          
+          <span class="Nav-toggle-text">
+            Abortion Justice <span class="Nav-toggle-lastWord u-nowrap">Resources<svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none" focusable="false" aria-hidden="true" class="icon" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#sprite-chev-down"/></svg></span>
+          </span>
+        </a>
+        
+        <div class="Nav-sublist Nav-primary-sublist level-0" id="abortion-justice-resources">
+          <ul class="Nav-sublist-list Nav-primary-sublist-list" role="list">
+            
+                        
+            <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/abortion-funds-fast-facts/"
+          >
+                      Fast Facts About Abortion Funds
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/how-to-talk-about-abortion/"
+          >
+                      How to Talk About Abortion
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/intersectionality-reproductive-justice/"
+          >
+                      Intersectionality &amp; Reproductive Justice
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/glossary-of-abortion-and-abortion-justice-terms/"
+          >
+                      NNAF Glossary
+                  </a>
+          </li>
+            </ul>
+        </div>
+          </li>
+          <li class="Nav-item Nav-primary-item has-menu">
+              
+                <a class="Nav-toggle Nav-primary-link level-0"
+          href="#"
+          data-expands="about-nnaf"
+          data-expands-height
+          aria-label="About NNAF">
+          
+          <span class="Nav-toggle-text">
+            About <span class="Nav-toggle-lastWord u-nowrap">NNAF<svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none" focusable="false" aria-hidden="true" class="icon" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#sprite-chev-down"/></svg></span>
+          </span>
+        </a>
+        
+        <div class="Nav-sublist Nav-primary-sublist level-0" id="about-nnaf">
+          <ul class="Nav-sublist-list Nav-primary-sublist-list" role="list">
+            
+                        
+            <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/what-we-do/"
+          >
+                      What We Do
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/our-programs/"
+          >
+                      Our Programs
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="/post-type/news/"
+          >
+                      News
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/for-the-press/"
+          >
+                      For the Press
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/work-with-nnaf/"
+          >
+                      Work with NNAF
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/contact-us/"
+          >
+                      Contact Us
+                  </a>
+          </li>
+            </ul>
+        </div>
+          </li>
+          <li class="Nav-item Nav-primary-item has-menu">
+              
+                <a class="Nav-toggle Nav-primary-link level-0"
+          href="#"
+          data-expands="get-involved"
+          data-expands-height
+          aria-label="Get Involved">
+          
+          <span class="Nav-toggle-text">
+            Get <span class="Nav-toggle-lastWord u-nowrap">Involved<svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none" focusable="false" aria-hidden="true" class="icon" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#sprite-chev-down"/></svg></span>
+          </span>
+        </a>
+        
+        <div class="Nav-sublist Nav-primary-sublist level-0" id="get-involved">
+          <ul class="Nav-sublist-list Nav-primary-sublist-list" role="list">
+            
+                        
+            <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/local-fund-events/"
+          >
+                      Local Fund Events
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/our-campaigns/"
+          >
+                      Our Campaigns
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/how-to-support-abortion-funds/"
+          >
+                      Support Abortion Funds
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/become-a-monthly-donor/"
+          >
+                      Become a Monthly Donor
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/become-a-member-fund/"
+          >
+                      Become a Member Fund
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-item">
+              
+        <a class="Nav-link Nav-primary-link level-1"
+          href="https://abortionfunds.org/ways-to-give/"
+          >
+                      Ways to Give
+                  </a>
+          </li>
+            </ul>
+        </div>
+          </li>
+  </ul>
+
+      
+      <div class="Header-nav-mobile Nav-content-mobile" id="nav-mobile">
+        
+        <ul class="Nav-list Nav-primary -mobile" role="list">
+  <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-0"
+          href="https://abortionfunds.org/find-a-fund/"
+          >
+                      Find an Abortion Fund
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-0"
+          href="https://abortionfunds.org/need-an-abortion/"
+          >
+                      Need an Abortion?
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item has-menu">
+              
+                <a class="Nav-toggle Nav-primary-mobile-link level-0"
+          href="#"
+          data-expands="abortion-justice-resources-mobile"
+          data-expands-height
+          aria-label="Abortion Justice Resources">
+          
+          <span class="Nav-toggle-text">
+            Abortion Justice <span class="Nav-toggle-lastWord u-nowrap">Resources<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14.636363636364" viewBox="0 0 22 23" fill="none" focusable="false" aria-hidden="true" class="icon">
+<circle cx="11" cy="11.5" r="11" fill="#530B7B"/>
+<path d="M16.3132 9L10.6564 14.6569L4.99951 9" stroke="white" stroke-width="2"/>
+</svg></span>
+          </span>
+        </a>
+        
+        <div class="Nav-sublist Nav-primary-mobile-sublist level-0" id="abortion-justice-resources-mobile">
+          <ul class="Nav-sublist-list Nav-primary-mobile-sublist-list" role="list">
+            
+                        
+            <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/abortion-funds-fast-facts/"
+          >
+                      Fast Facts About Abortion Funds
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/how-to-talk-about-abortion/"
+          >
+                      How to Talk About Abortion
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/intersectionality-reproductive-justice/"
+          >
+                      Intersectionality &amp; Reproductive Justice
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/glossary-of-abortion-and-abortion-justice-terms/"
+          >
+                      NNAF Glossary
+                  </a>
+          </li>
+            </ul>
+        </div>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item has-menu">
+              
+                <a class="Nav-toggle Nav-primary-mobile-link level-0"
+          href="#"
+          data-expands="about-nnaf-mobile"
+          data-expands-height
+          aria-label="About NNAF">
+          
+          <span class="Nav-toggle-text">
+            About <span class="Nav-toggle-lastWord u-nowrap">NNAF<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14.636363636364" viewBox="0 0 22 23" fill="none" focusable="false" aria-hidden="true" class="icon">
+<circle cx="11" cy="11.5" r="11" fill="#530B7B"/>
+<path d="M16.3132 9L10.6564 14.6569L4.99951 9" stroke="white" stroke-width="2"/>
+</svg></span>
+          </span>
+        </a>
+        
+        <div class="Nav-sublist Nav-primary-mobile-sublist level-0" id="about-nnaf-mobile">
+          <ul class="Nav-sublist-list Nav-primary-mobile-sublist-list" role="list">
+            
+                        
+            <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/what-we-do/"
+          >
+                      What We Do
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/our-programs/"
+          >
+                      Our Programs
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="/post-type/news/"
+          >
+                      News
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/for-the-press/"
+          >
+                      For the Press
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/work-with-nnaf/"
+          >
+                      Work with NNAF
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/contact-us/"
+          >
+                      Contact Us
+                  </a>
+          </li>
+            </ul>
+        </div>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item has-menu">
+              
+                <a class="Nav-toggle Nav-primary-mobile-link level-0"
+          href="#"
+          data-expands="get-involved-mobile"
+          data-expands-height
+          aria-label="Get Involved">
+          
+          <span class="Nav-toggle-text">
+            Get <span class="Nav-toggle-lastWord u-nowrap">Involved<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14.636363636364" viewBox="0 0 22 23" fill="none" focusable="false" aria-hidden="true" class="icon">
+<circle cx="11" cy="11.5" r="11" fill="#530B7B"/>
+<path d="M16.3132 9L10.6564 14.6569L4.99951 9" stroke="white" stroke-width="2"/>
+</svg></span>
+          </span>
+        </a>
+        
+        <div class="Nav-sublist Nav-primary-mobile-sublist level-0" id="get-involved-mobile">
+          <ul class="Nav-sublist-list Nav-primary-mobile-sublist-list" role="list">
+            
+                        
+            <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/local-fund-events/"
+          >
+                      Local Fund Events
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/our-campaigns/"
+          >
+                      Our Campaigns
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/how-to-support-abortion-funds/"
+          >
+                      Support Abortion Funds
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/become-a-monthly-donor/"
+          >
+                      Become a Monthly Donor
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/become-a-member-fund/"
+          >
+                      Become a Member Fund
+                  </a>
+          </li>
+          <li class="Nav-item Nav-primary-mobile-item">
+              
+        <a class="Nav-link Nav-primary-mobile-link level-1"
+          href="https://abortionfunds.org/ways-to-give/"
+          >
+                      Ways to Give
+                  </a>
+          </li>
+            </ul>
+        </div>
+          </li>
+  </ul>
+
+        
+        <div class="Nav-list Nav-utility -mobile">
+  <div class="Nav-utility-wrap">
+          <a class="Nav-utility-link-donate btn-solid-fire"
+        href="https://abortionfunds.org/donate/">
+        Donate
+      </a>
+        <a class="Nav-utility-link f-link-underline" href="https://shop.abortionfunds.org">
+      Shop
+    </a>
+  </div>
+
+  <ul class="Nav-utility-mobile-list" role="list">
+    <li class="Nav-item Nav-utility-mobile-item has-menu">
+              
+                <span class="is-label Nav-toggle Nav-utility-mobile-link level-0">
+          For Funds
+        </span>
+        
+        <ul class="Nav-sublist-list Nav-utility-mobile-sublist-list" role="list">
+          
+                    
+          <li class="Nav-item Nav-utility-mobile-item">
+              
+        <a class="Nav-link Nav-utility-mobile-link level-1"
+          href="https://abortionfunds.org/become-a-member-fund/"
+          >
+                      Become a Member Fund
+                  </a>
+          </li>
+          </ul>
+          </li>
+    </ul>
+
+  <div class="Nav-utility-mobile-wrap">
+    
+          <a class="Nav-languageToggle Nav-utility-mobile-link" href="https://abortionfunds.org/es/">
+        Español
+      </a>
+    
+    <a class="Nav-utility-link -search"
+      href="/search/">
+      <span class="u-screenreader">Search</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none" focusable="false" aria-hidden="true" class="Nav-utility-mobile-link-search-icon">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.8026 9.51652C1.8026 5.73089 4.80345 2.6942 8.46591 2.6942C12.1284 2.6942 15.1292 5.73089 15.1292 9.51652C15.1292 13.3021 12.1284 16.3388 8.46591 16.3388C4.80345 16.3388 1.8026 13.3021 1.8026 9.51652ZM8.46591 0.891602C3.77273 0.891602 0 4.77088 0 9.51652C0 14.2622 3.77273 18.1414 8.46591 18.1414C10.5777 18.1414 12.5031 17.356 13.9823 16.0596L18.9268 21.108L20.1881 19.8202L15.207 14.7343C16.2902 13.2833 16.9318 11.4736 16.9318 9.51652C16.9318 4.77088 13.1591 0.891602 8.46591 0.891602Z" fill="#530B7B"/>
+</svg>
+    </a>
+
+  </div>
+</div>
+
+      </div>
+  </nav>
+
+  </div><!-- end Header-wrap -->
+</header>
+    <main class="Main" id="main">
+      
+                     <div class="HomepageHero l-padding -en">
+  <svg xmlns="http://www.w3.org/2000/svg" width="356" height="369" viewBox="0 0 356 369" fill="none" focusable="false" aria-hidden="true" class="HomepageHero-deco">
+<g style="mix-blend-mode:multiply" opacity="0.7">
+<path d="M46.4704 29.0694L-6.80282 368M-39 304.778L183.652 2M355 13.0694L-16.8028 160.333M267.887 29.0694L-29 88.5555M291.5 2L-16.8028 220.5M-18.4563 155.222L125.27 29.0694" stroke="#CCA138" stroke-width="3"/>
+</g>
+</svg>
+  <div class="HomepageHero-content l-wrap">
+    <p class="HomepageHero-headline f-h1" id="title">
+      <span class="HomepageHero-headline-upper c-violet">
+        Building
+      </span>
+      <span class="HomepageHero-headline-lower c-fuchsia">
+        Power
+      </span>
+    </p>
+
+    <p class="HomepageHero-description c-violet">
+      Toward a Common Goal: Abortion Access For All
+    </p>
+
+          <img alt="Person shouts into a megaphone at a rally supporting abortion funds, with signs urging fund abortion now and build power." class="HomepageHero-image" sizes="(max-width: 999px) 100vw, (max-width: 1365px) 42.8vw, 585px" src="/wp-content/uploads/2023/10/Individual_Speaking-simplified-252x300.jpg" srcset="/wp-content/uploads/2023/10/Individual_Speaking-simplified-252x300.jpg 252w, /wp-content/uploads/2023/10/Individual_Speaking-simplified-859x1024.jpg 859w, /wp-content/uploads/2023/10/Individual_Speaking-simplified-768x916.jpg 768w, /wp-content/uploads/2023/10/Individual_Speaking-simplified-1288x1536.jpg 1288w, /wp-content/uploads/2023/10/Individual_Speaking-simplified.jpg 1342w">
+      </div>
+</div>
+    <div class="l-padding">
+    <div class="Hompage u-richtext f-scale l-wrap--wide l-block-wrap">
+      <div class="CoverBlockButton l-fullwidth l-padding">
+    <div class="CoverBlockButton-wrap l-wrap--medium">
+      <h2 class="CoverBlockButton-headline f-h2">What is the National Network of Abortion Funds? </h2>
+      <p class="CoverBlockButton-description">NNAF is a network of nearly 100 abortion funds. Abortion funds are grassroots organizations that support people seeking abortion access. 
+
+Together, we’re organizing at the crossroads of racial, economic, and reproductive justice. 
+</p>
+      <div class="CoverBlockButton-ctas">
+        <a href="https://abortionfunds.org/what-we-do/" class="CoverBlockButton-cta btn-solid-violet">Learn About NNAF</a>
+
+                  <a href="https://abortionfunds.org/abortion-funds-fast-facts/" class="CoverBlockButton-cta btn-border-yellow">Learn About Abortion Funds</a>
+              </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482 660" focusable="false" aria-hidden="true" class="CoverBlockButton-svg">
+  <path fill-rule="evenodd" d="M371.44 139.164 396.957.728l2.951.544-26.49 143.715 46.502 136.96-2.84.964-44.777-131.876-26.905 145.966 19.367 148.774 32.02-33.961 47.768-174.78 2.894.791-46.282 169.344 43.744-46.397 2.182 2.058-47.609 50.497-24.507 89.669 105.442-44.449 1.166 2.764-107.614 45.365-.864 3.163 6.733 51.724 53.549-5.948.331 2.981-53.493 5.942 5.262 40.422-2.975.387-5.269-40.477-19.779 2.197-10.517 38.482-2.894-.791 10.204-37.335-59.931 6.657-15.782 85.621-2.95-.544 15.618-84.731-48.722 5.412-28.399 30.12-2.182-2.058 25.975-27.55-52.524 5.834-48.277 20.351-1.166-2.764 38.957-16.422L1.166 606.644l-.332-2.982 183.763-20.412 83.898-35.367 34.318-36.4 39.549-214.562-29.85-229.298 2.975-.388 28.648 220.067 26.191-142.09-26.246-77.3 2.84-.965 24.52 72.217Zm-27.815 167.457-37.02 200.841 55.502-58.867-18.482-141.974Zm18.982 145.816-57.004 60.46-3.865 20.972 67.752-28.561-6.883-52.871Zm7.284 55.958-68.804 29.004-6.193 33.599 60.213-6.688 14.945-54.681-.161-1.234Zm1.164 8.942-12.74 46.617 18.541-2.06-5.801-44.557Zm-79.275 54.007 5.999-32.551-27.536 11.608-24.575 26.065 46.112-5.122Zm-50.717 5.634 22.337-23.692-68.317 28.799 45.98-5.107Zm34.275-31.98 23.092-9.734 3.381-18.345-26.473 28.079Zm96.763-42.867-6.836-52.513 29.837-31.646-23.001 84.159Z" clip-rule="evenodd" opacity=".9"/>
+</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 394" focusable="false" aria-hidden="true" class="CoverBlockButton-svg-mobile">
+  <path fill-rule="evenodd" d="M245.615 93.077 228.762 1.135l1.476-.27 15.738 85.859 4.327-76.267 1.497.085-4.677 82.44 17.292 94.337-1.476.27-16.176-88.253-11.772 207.484 6.279-5.301 38.986-142.558 1.447.396-38.411 140.454 40.724-34.384.968 1.146-42.39 35.791-6.593 24.108 66.708-28.103.582 1.383-67.793 28.56-2.178 7.961-1.573 27.73 41.318-4.586.165 1.491-41.569 4.614-1.412 24.893-1.498-.085 1.398-24.64-5.026.558-6.652 24.323-1.447-.396 6.495-23.749-65.397 7.26-23.255 19.634-.968-1.146 21.546-18.191-38.501 4.274-30.4 12.807-.583-1.382 25.737-10.843L1.083 391.118l-.166-1.491 115.645-12.837 70.969-29.898 45.882-38.74 12.202-215.075Zm-12.319 217.137-41.125 34.723 40.114-16.899 1.011-17.824Zm-1.105 19.491-43.867 18.481-28.144 23.762 63.765-7.079 7.887-28.839.359-6.325Zm1.536-.607.003-.041.01-.005-.013.046Zm.516-1.885-.419.176 1.05-18.507 5.698-4.811-6.329 23.142Zm-2.818 15.992-5.876 21.486 4.686-.52 1.19-20.966Zm-73.922 29.04 26.18-22.104-61.875 26.067 35.695-3.963Z" clip-rule="evenodd" opacity=".9"/>
+</svg>
+  </div>
+      <div class="DoublePromo l-fullwidth">
+  <div class="DoublePromo-wrap">
+    <div class="DoublePromo-text-wrap ">
+      <h2 class="DoublePromo-headline f-h1">
+        Need an Abortion?       </h2>
+      <p class="DoublePromo-description f-alright-bold">
+        An abortion fund can help. Search our list of funds, get tips for finding a clinic, understand Medicaid coverage, and more.      </p>
+      <a class="DoublePromo-cta btn-solid-fire" href="https://abortionfunds.org/need-an-abortion/">
+        Need an Abortion?       </a>
+    </div>
+
+          <div class="DoublePromo-image">
+        <img alt="Two people on phones coordinate support from abortion funds, with a laptop showing a sticker that says Fund Abortions and a child in the background." class="DoublePromo-image-src" sizes="(max-width: 767px) 100vw, 44vw" src="/wp-content/uploads/2023/10/Hotline-300x227.jpg" srcset="/wp-content/uploads/2023/10/Hotline-300x227.jpg 300w, /wp-content/uploads/2023/10/Hotline-1024x775.jpg 1024w, /wp-content/uploads/2023/10/Hotline-768x581.jpg 768w, /wp-content/uploads/2023/10/Hotline-1536x1162.jpg 1536w, /wp-content/uploads/2023/10/Hotline-2048x1550.jpg 2048w">      </div>
+      </div>
+</div>
+      <div class="IndividualMember">
+    <div class="IndividualMember-wrap">
+      <div class="IndividualMember-text-wrap">
+        <h2 class="IndividualMember-headline">
+          Become a Monthly Donor
+        </h2>
+        <p class="IndividualMember-description">
+          Support abortion access all year long! Donate monthly to NNAF and support a community of pro-choice advocates and&nbsp;activists.
+        </p>
+        <a href="https://abortionfunds.org/become-a-monthly-donor/" class="IndividualMember-cta btn-solid-violet">Make Donating a Monthly Practice! </a>
+      </div>
+
+      <div class="IndividualMember-image">
+        <img alt="Three people plan together at a table, organizing for abortion funds and Reproductive Justice." class="IndividualMember-image-src" sizes="(max-width: 767px) 100vw, 44vw" src="/wp-content/uploads/2023/10/Kitchen_Talk-300x227.jpg" srcset="/wp-content/uploads/2023/10/Kitchen_Talk-300x227.jpg 300w, /wp-content/uploads/2023/10/Kitchen_Talk-1024x775.jpg 1024w, /wp-content/uploads/2023/10/Kitchen_Talk-768x581.jpg 768w, /wp-content/uploads/2023/10/Kitchen_Talk-1536x1162.jpg 1536w, /wp-content/uploads/2023/10/Kitchen_Talk-2048x1550.jpg 2048w">
+      </div>
+    </div>
+  </div>
+      <div class="DoublePromo DoublePromo-left l-fullwidth">
+  <div class="DoublePromo-wrap">
+          <div class="DoublePromo-image">
+        <img alt="A group of pro-abortion activists are at a protest holding a large sign that says Accessible abortions for all." class="DoublePromo-image-src" sizes="(max-width: 767px) 100vw, 44vw" src="/wp-content/uploads/2023/10/ProtestCrowd_View-300x227.jpg" srcset="/wp-content/uploads/2023/10/ProtestCrowd_View-300x227.jpg 300w, /wp-content/uploads/2023/10/ProtestCrowd_View-1024x775.jpg 1024w, /wp-content/uploads/2023/10/ProtestCrowd_View-768x581.jpg 768w, /wp-content/uploads/2023/10/ProtestCrowd_View-1536x1162.jpg 1536w, /wp-content/uploads/2023/10/ProtestCrowd_View-2048x1550.jpg 2048w">
+      </div>
+    
+    <div class="DoublePromo-text-wrap ">
+      <h2 class="DoublePromo-headline f-h1">
+        Donate Today!      </h2>
+      <p class="DoublePromo-description f-alright-bold">
+        Protect abortion access. Donate now.      </p>
+
+      <a class="DoublePromo-cta btn-solid-fire" href="https://abortionfunds.org/donate/">
+        Support abortion access!      </a>
+
+          </div>
+  </div>
+</div>
+      <div class="FiftyFiftyPromo">
+  <div class="FiftyFiftyPromo-wrap">
+    <div class="FiftyFiftyPromo-left">
+      <a href="https://abortionfunds.org/campaign/heart-to-heart-conversations/" class="FiftyFiftyPromo-left-link">
+        <h2 class="FiftyFiftyPromo-left-headline f-h1">
+          Learn How to Talk to People About Abortion
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 58" focusable="false" aria-hidden="true" class="FiftyFiftyPromo-left-headline-svg">
+  <path fill-rule="evenodd" d="M0 23.119h31L16 8l8-8 28 28.5-27.5 29L16 49l15-15H0V23.119Z" clip-rule="evenodd"/>
+</svg>
+        </h2>
+      </a>
+      <p class="FiftyFiftyPromo-left-description">
+        Get Started with our Heart-to-Heart Conversation Kits!
+      </p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 719 701" focusable="false" aria-hidden="true" width="717" height="699.05006954103" class="FiftyFiftyPromo-left-svg">
+  <path fill-rule="evenodd" d="M653.849 90.391 585.141 7.173l-2.313 1.91 65.441 79.261L408.263.302l-1.033 2.816 244.823 89.81 53.037 64.237 2.313-1.91-49.769-60.28 48.096 17.643 1.033-2.816-52.914-19.41Zm13.956 446.067 36.973-177.055 2.936.614-36.201 173.359a23283.447 23283.447 0 0 0 31.254-26.027c4.256-3.551 7.635-6.374 9.951-8.308l2.651-2.216.911-.762.003-.003.963 1.15c.963 1.15.963 1.151.962 1.151l-.003.002-.912.763-2.652 2.217a22354.951 22354.951 0 0 1-44.114 36.753l-20.347 97.436 60.863-8.308.406 2.972-61.92 8.453-12.815 61.367-2.936-.613 12.597-60.323-118.878 16.228c-9.838 7.817-18.024 14.185-23.774 18.437-2.9 2.145-5.209 3.773-6.807 4.778-.782.492-1.469.883-1.998 1.099-.22.09-.627.243-1.07.228a1.665 1.665 0 0 1-1.078-.432 1.63 1.63 0 0 1-.524-1.208h3c0-.24-.076-.661-.447-1.001a1.332 1.332 0 0 0-.849-.357.966.966 0 0 0-.234.019c-.041.01-.026.012.069-.026.269-.11.768-.379 1.534-.861 1.497-.942 3.73-2.513 6.621-4.651 4.919-3.638 11.657-8.853 19.722-15.228l-260.713 35.59-.406-2.972 265.732-36.276c37.528-29.84 98.746-80.44 141.53-115.989Zm-.986 4.719c-41.116 34.152-97.821 81.004-134.734 110.477l114.941-15.691 19.793-94.786ZM44.812 607.62 20.268 466.969l2.956-.516 25.829 148.018 38.969 62.949L85.47 679l-35.034-56.593 11.787 67.544-2.956.516-13.071-74.91L.97 542.5l2.55-1.58 41.29 66.7Z" clip-rule="evenodd"/>
+</svg>
+    </div>
+    <div class="FiftyFiftyPromo-right">
+      <h2 class="FiftyFiftyPromo-right-headline f-h3">
+        Featured News
+      </h2>
+              <ul class="FiftyFiftyPromo-right-list" role="list">
+              <li class="FiftyFiftyPromo-right-item">
+          <a href="/care-not-control-repression-youth-resistance" class="FiftyFiftyPromo-right-item-link">
+            Care Not Control: Repression &amp; Youth Resistance
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="21.333333333333" viewBox="0 0 9 16" focusable="false" aria-hidden="true" class="FiftyFiftyPromo-right-item-svg">
+<path clip-rule="evenodd" d="M6.00001 8L0 2.21429L1.67804 0.5L9 8L1.67804 15.5L0 13.7857L6.00001 8Z"/>
+</svg>
+          </a>
+          <p class="FiftyFiftyPromo-right-item-date">June 10, 2026</p>
+        </li>
+              <li class="FiftyFiftyPromo-right-item">
+          <a href="/2025-membership-enrollment-survey-press-release" class="FiftyFiftyPromo-right-item-link">
+            2025 Membership Enrollment Survey: Press Release
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="21.333333333333" viewBox="0 0 9 16" focusable="false" aria-hidden="true" class="FiftyFiftyPromo-right-item-svg">
+<path clip-rule="evenodd" d="M6.00001 8L0 2.21429L1.67804 0.5L9 8L1.67804 15.5L0 13.7857L6.00001 8Z"/>
+</svg>
+          </a>
+          <p class="FiftyFiftyPromo-right-item-date">June 01, 2026</p>
+        </li>
+              <li class="FiftyFiftyPromo-right-item">
+          <a href="/care-not-control-the-problem-is-patriarchy-part-two" class="FiftyFiftyPromo-right-item-link">
+            Care Not Control: The Problem is Patriarchy, Part Two
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="21.333333333333" viewBox="0 0 9 16" focusable="false" aria-hidden="true" class="FiftyFiftyPromo-right-item-svg">
+<path clip-rule="evenodd" d="M6.00001 8L0 2.21429L1.67804 0.5L9 8L1.67804 15.5L0 13.7857L6.00001 8Z"/>
+</svg>
+          </a>
+          <p class="FiftyFiftyPromo-right-item-date">May 27, 2026</p>
+        </li>
+              </ul>
+            <a href="/post-type/news/" class="FiftyFiftyPromo-right-btn btn-border">
+        View All
+      </a>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+            </main>
+        <footer class="Footer bg-violet l-padding" id="footer">
+  <div class="Footer-wrap">
+    <div class="Footer-signup">
+              <p class="Footer-signup-headline">Subscribe to Get Updates from the National Network of Abortion Funds.</p>
+      
+      
+      <form class="Footer-signup-form js-cm-form u-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="A61C50BEC994754B1D79C5819EC1255CD626CE15AEB752D18402FA2C579C6D020BB239A9A13D629F5F1DC71730D994E1087D0FF2D5D22A94366DC77FBBA45311">
+        
+        <input type="hidden" id="fieldjjihwl" name="cm-f-jjihwl" value="2023_Redesign_Footer">
+        
+                  <input type="hidden" aria-label="Content Language" id="fielddluhhrr" name="cm-fo-dluhhrr" value="6982816">
+                
+        <div class="Footer-signup-input">
+          <label for="fieldName">
+            <span class="u-screenreader">Full Name</span>
+          </label>
+          <input type="text"
+            id="fieldName"
+            name="cm-name"
+            maxlength="200"
+            placeholder="Full Name"
+            autocomplete="name">
+        </div>
+        
+        <div class="Footer-signup-input">
+          <label for="fieldEmail">
+            <span class="u-screenreader">Email</span>
+          </label>
+          <input class="js-cm-email-input qa-input-email"
+            type="email"
+            id="fieldEmail"
+            name="cm-vhrou-vhrou"
+            maxlength="200"
+            placeholder="Email"
+            autocomplete="home email"
+            required>
+        </div>
+        
+        <button type="submit" class="js-cm-submit-button sc-jWBwVP fClqPV">
+          Subscribe
+        </button>
+      </form>
+      <script src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js" defer></script>
+    </div>
+
+    <div class="Footer-bottom">
+      <div class="Footer-content">
+        
+        <div class="Footer-logo">
+          <a class="Footer-logo-link" href="https://abortionfunds.org/">
+            <span class="u-screenreader">National Network of Abortion Funds</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 88" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true" width="241" height="36.819444444444" class="Header-logo" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#sprite-logo"/></svg>
+          </a>
+        </div>
+
+        <div class="Footer-bottom-lists">
+          
+          <ul class="Footer-social" role="list">
+                                          <li class="Footer-social-item">
+                  <a class="Footer-social-link" href="https://www.facebook.com/NationalNetworkofAbortionFunds">
+                    <span class="u-screenreader">Facebook</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24.545454545455" viewBox="0 0 11 18" focusable="false" aria-hidden="true" class="icon facebook">
+<g clip-path="url(#clip0_125_2080)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 1.5348C5.07599 0.659634 6.26297 0.167969 7.50065 0.167969H10.0007C10.2768 0.167969 10.5007 0.391826 10.5007 0.667969V4.0013C10.5007 4.27744 10.2768 4.5013 10.0007 4.5013H7.50065C7.41225 4.5013 7.32746 4.53642 7.26495 4.59893C7.20244 4.66145 7.16732 4.74623 7.16732 4.83464V6.83464H10.0007C10.1546 6.83464 10.3 6.90557 10.3948 7.02693C10.4895 7.14829 10.5231 7.30653 10.4857 7.4559L9.65239 10.7892C9.59674 11.0118 9.39675 11.168 9.16732 11.168H7.16732V17.3346C7.16732 17.6108 6.94346 17.8346 6.66732 17.8346H3.33398C3.05784 17.8346 2.83398 17.6108 2.83398 17.3346V11.168H0.833984C0.557842 11.168 0.333984 10.9441 0.333984 10.668V7.33464C0.333984 7.05849 0.557842 6.83464 0.833984 6.83464H2.83398V4.83464C2.83398 3.59696 3.32565 2.40997 4.20082 1.5348ZM7.50065 1.16797C6.52819 1.16797 5.59556 1.55428 4.90793 2.24191C4.22029 2.92954 3.83398 3.86217 3.83398 4.83464V7.33464C3.83398 7.61078 3.61013 7.83464 3.33398 7.83464H1.33398V10.168H3.33398C3.61013 10.168 3.83398 10.3918 3.83398 10.668V16.8346H6.16732V10.668C6.16732 10.3918 6.39117 10.168 6.66732 10.168H8.77693L9.36026 7.83464H6.66732C6.39117 7.83464 6.16732 7.61078 6.16732 7.33464V4.83464C6.16732 4.48101 6.30779 4.14188 6.55784 3.89183C6.80789 3.64178 7.14703 3.5013 7.50065 3.5013H9.50065V1.16797H7.50065Z"/>
+</g>
+<defs>
+<clipPath id="clip0_125_2080_60b6f5">
+<rect width="11" height="18" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                  </a>
+                </li>
+                                                        <li class="Footer-social-item">
+                  <a class="Footer-social-link" href="https://www.instagram.com/abortionfunds/">
+                    <span class="u-screenreader">Instagram</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 18 18" focusable="false" aria-hidden="true" class="icon instagram">
+<g clip-path="url(#clip0_125_2082)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.83268 1.16797C2.80764 1.16797 1.16602 2.80959 1.16602 4.83464V13.168C1.16602 15.193 2.80764 16.8346 4.83268 16.8346H13.166C15.1911 16.8346 16.8327 15.193 16.8327 13.168V4.83464C16.8327 2.80959 15.1911 1.16797 13.166 1.16797H4.83268ZM0.166016 4.83464C0.166016 2.25731 2.25535 0.167969 4.83268 0.167969H13.166C15.7433 0.167969 17.8327 2.25731 17.8327 4.83464V13.168C17.8327 15.7453 15.7433 17.8346 13.166 17.8346H4.83268C2.25535 17.8346 0.166016 15.7453 0.166016 13.168V4.83464Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.45207 6.15956C8.86256 6.07214 8.2605 6.17283 7.73151 6.44731C7.20253 6.72179 6.77357 7.15608 6.50563 7.68841C6.2377 8.22073 6.14443 8.82399 6.23911 9.41238C6.33379 10.0008 6.61159 10.5443 7.03299 10.9657C7.4544 11.3871 7.99795 11.6649 8.58633 11.7596C9.17472 11.8543 9.77797 11.761 10.3103 11.4931C10.8426 11.2251 11.2769 10.7962 11.5514 10.2672C11.8259 9.73821 11.9266 9.13615 11.8391 8.54664C11.75 7.94532 11.4698 7.38862 11.0399 6.95877C10.6101 6.52893 10.0534 6.24873 9.45207 6.15956ZM7.27094 5.55969C7.98662 5.18833 8.80118 5.0521 9.59875 5.17037C10.4123 5.29101 11.1655 5.67011 11.747 6.25167C12.3286 6.83323 12.7077 7.58641 12.8283 8.39996C12.9466 9.19753 12.8104 10.0121 12.439 10.7278C12.0677 11.4434 11.4801 12.0238 10.7599 12.3863C10.0397 12.7488 9.22351 12.875 8.42746 12.7469C7.63141 12.6188 6.89602 12.243 6.32589 11.6728C5.75575 11.1027 5.37991 10.3673 5.25181 9.57125C5.12372 8.77519 5.2499 7.95902 5.6124 7.23882C5.9749 6.51861 6.55526 5.93104 7.27094 5.55969Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.084 4.41797C13.084 4.14183 13.3078 3.91797 13.584 3.91797H13.5923C13.8685 3.91797 14.0923 4.14183 14.0923 4.41797C14.0923 4.69411 13.8685 4.91797 13.5923 4.91797H13.584C13.3078 4.91797 13.084 4.69411 13.084 4.41797Z"/>
+</g>
+<defs>
+<clipPath id="clip0_125_2082_e7253d">
+<rect width="18" height="18" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                  </a>
+                </li>
+                                                        <li class="Footer-social-item">
+                  <a class="Footer-social-link" href="https://twitter.com/abortionfunds">
+                    <span class="u-screenreader">X</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="none" focusable="false" aria-hidden="true" class="icon twitter">
+<path d="M11.9027 8.46864L19.3482 0H17.5838L11.119 7.3532L5.95547 0H0L7.8082 11.1193L0 20H1.76443L8.59152 12.2348L14.0445 20H20L11.9023 8.46864H11.9027ZM9.48608 11.2173L8.69495 10.1101L2.40018 1.29968H5.11025L10.1902 8.40994L10.9813 9.51718L17.5847 18.7594H14.8746L9.48608 11.2177V11.2173Z"/>
+</svg>
+                  </a>
+                </li>
+                                    </ul>
+
+          
+          <div class="Footer-nav-wrap">
+            <div class="Footer-nav">
+              <ul class="Footer-nav-list" role="list">
+    <li class="Footer-nav-item">
+              
+        <a class="Footer-nav-link level-0"
+          href="/post-type/news/"
+          >
+                      News
+                  </a>
+          </li>
+          <li class="Footer-nav-item">
+              
+        <a class="Footer-nav-link level-0"
+          href="https://shop.abortionfunds.org/"
+          >
+                      Shop
+                  </a>
+          </li>
+          <li class="Footer-nav-item">
+              
+        <a class="Footer-nav-link level-0"
+          href="https://abortionfunds.org/find-a-fund/"
+          >
+                      Find an Abortion Fund
+                  </a>
+          </li>
+          <li class="Footer-nav-item">
+              
+        <a class="Footer-nav-link level-0"
+          href="https://abortionfunds.org/need-an-abortion/"
+          >
+                      Need an Abortion?
+                  </a>
+          </li>
+          <li class="Footer-nav-item">
+              
+        <a class="Footer-nav-link level-0 is-external"
+          href="https://abortionfunds.bamboohr.com/careers"
+          >
+                      Jobs at <span class="u-nowrap">NNAF<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 12 12" fill="none" focusable="false" aria-hidden="true" class="icon" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#sprite-external"/></svg></span>
+                  </a>
+          </li>
+          <li class="Footer-nav-item">
+              
+        <a class="Footer-nav-link level-0"
+          href="https://abortionfunds.org/contact-us/"
+          >
+                      Contact Us
+                  </a>
+          </li>
+          <li class="Footer-nav-item">
+              
+        <a class="Footer-nav-link level-0"
+          href="https://abortionfunds.org/privacy-policy/"
+          >
+                      Privacy Policy
+                  </a>
+          </li>
+    </ul>
+            </div>
+            <p class="Footer-credit mt-3">
+              Site strategy, design and development created in collaboration with <a class="c-white" href="https://www.threespot.com">Threespot</a>.
+            </p>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 70" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true" class="Footer-deco l-fullwidth">
+  <path d="M8.51 79.88h17.35V14.5h12.39V1.13H-4V14.5H8.51v65.36ZM41.88 79.88h17.35V46.45h8.67v33.41h17.34V1.13H67.9V33.2h-8.67V1.13H41.88v78.75ZM92.4 79.88h17.34V1.13H92.4v78.75ZM134.74 81c13.5 0 20.82-7.31 20.82-20.36 0-9.34-4.09-16.65-14.75-27-7.68-7.43-10.15-10.91-10.15-15.08 0-4.05 1.48-6.18 4.46-6.18 3.71 0 4.95 2.58 5.32 12.6l15.61-1.8C155.2 6.98 148.75 0 135.24 0c-13.13 0-20.57 8.21-20.57 20.7 0 8.55 3.84 14.4 15.12 25.31 7.56 7.43 9.79 11.14 9.79 15.98 0 4.61-1.5 6.63-4.46 6.63-3.84 0-5.33-2.47-5.83-13.27l-15.98 1.91c.62 16.65 7.43 23.74 21.43 23.74ZM172.2 79.88h17.34v-32.3h13.88V34.43h-13.88v-19.9h17.22V1.11H172.2v78.75ZM210.62 79.88h17.34V1.13h-17.34v78.75ZM258.29 80.89c7.3 0 13.88-2.14 18.7-5.29V39.04h-21.3v12.82h5.82v15.86c-1 .45-2.1.68-3.22.68-5.58 0-7.19-2.48-7.19-19.69V32.3c0-17.21 1.37-19.46 5.2-19.46 3.6 0 4.34 2.24 4.71 15.18l16.73-1.57C276.5 7.2 270.68 0 256.55 0c-16.6 0-23.16 9.34-23.16 35.77v9.45c0 27.12 6.93 35.67 24.9 35.67ZM283.21 79.88h17.35V46.45h8.67v33.41h17.35V1.13h-17.35V33.2h-8.67V1.13H283.2v78.75ZM342.65 79.88H360V14.5h12.38V1.13h-42.24V14.5h12.51v65.36ZM388.06 79.88h17.34V1.13h-17.34v78.75ZM430.4 81c13.51 0 20.82-7.31 20.82-20.36 0-9.34-4.09-16.65-14.74-27-7.68-7.43-10.16-10.91-10.16-15.08 0-4.05 1.49-6.18 4.46-6.18 3.72 0 4.95 2.58 5.33 12.6l15.6-1.8C450.86 6.98 444.42 0 430.92 0c-13.14 0-20.58 8.21-20.58 20.7 0 8.55 3.85 14.4 15.12 25.31 7.56 7.43 9.79 11.14 9.79 15.98 0 4.61-1.49 6.63-4.46 6.63-3.84 0-5.33-2.47-5.82-13.27l-15.99 1.91C409.6 73.91 416.41 81 430.41 81ZM455.82 79.88h14.62V35.44h.25l12.51 44.44h14.5V1.13h-14.75v41.73h-.12L471.18 1.13h-15.36v78.75ZM504.39 31.39h13l1.74-30.27h-16.35l1.6 30.27ZM534.56 79.88h17.34V14.5h12.4V1.13h-42.26V14.5h12.52v65.36ZM600.9 81c16.23 0 22.55-9.9 22.55-35.77v-9.57C623.45 9.9 617.13 0 600.9 0s-22.54 9.9-22.54 35.66v9.57c0 25.87 6.31 35.77 22.54 35.77Zm0-12.83c-3.71 0-4.83-2.58-4.83-19.46V32.3c0-16.88 1.12-19.46 4.83-19.46 3.72 0 4.84 2.58 4.84 19.46V48.7c0 16.88-1.12 19.46-4.84 19.46ZM635.73 79.88h23.9l10.41-78.75h-15.98l-5.94 60.63h-.38l-5.82-60.63h-16.73l10.53 78.75ZM673.74 79.88h34.94v-13.4h-17.6V46.36h13.88V33.41h-13.88v-18.9h17.22V1.13h-34.56v78.75ZM713.6 79.88h16.98V51.4h3.84l5.95 28.47h17.22l-8.67-33.2c5.08-3.93 7.68-10.34 7.68-18.9v-1.8c0-15.97-8.3-24.86-24.04-24.86h-18.95v78.75Zm16.98-40.05V14.18h2.35c4.59 0 6.32 2.92 6.32 11.25v3.26c0 8.21-1.73 11.14-6.32 11.14h-2.35ZM761.32 79.88h17.72v-21.5h-17.72v21.5ZM797.4 79.88h14.62V35.44h.25l12.51 44.44h14.5V1.13h-14.75v41.73h-.12L812.76 1.13H797.4v78.75ZM867.4 81c16.23 0 22.55-9.9 22.55-35.77v-9.57C889.95 9.9 883.63 0 867.4 0s-22.55 9.9-22.55 35.66v9.57c0 25.87 6.32 35.77 22.55 35.77Zm0-12.83c-3.72 0-4.83-2.58-4.83-19.46V32.3c0-16.88 1.11-19.46 4.83-19.46 3.72 0 4.83 2.58 4.83 19.46V48.7c0 16.88-1.11 19.46-4.83 19.46ZM902.88 79.88h17.34V14.5h12.39V1.13h-42.25V14.5h12.51v65.36ZM948.28 79.88h34.94v-13.4h-17.59V46.36h13.88V33.41h-13.88v-18.9h17.22V1.13h-34.57v78.75ZM995.1 79.88h23.9l10.41-78.75h-15.98l-5.95 60.63h-.37l-5.82-60.63h-16.73l10.53 78.75ZM1033.1 79.88h34.94v-13.4h-17.59V46.36h13.88V33.41h-13.88v-18.9h17.22V1.13h-34.57v78.75ZM1072.97 79.88h14.62V35.44h.25l12.51 44.44h14.5V1.13h-14.74v41.73h-.13l-11.64-41.73h-15.37v78.75ZM1154.52 81c14.37 0 20.69-7.65 21.93-27.34l-16.85-1.35c-.37 13.5-1.36 15.86-4.58 15.86-3.72 0-4.84-2.58-4.84-19.46V32.3c0-16.88 1.12-19.46 4.84-19.46 3.22 0 4.21 2.24 4.46 15.18l16.72-1.57C1174.96 7.42 1169.39 0 1155.51 0c-16.72 0-23.04 9.79-23.04 35.77v9.45c0 26.44 5.94 35.78 22.05 35.78ZM1180.36 79.88h34.57v-13.4h-17.23V1.13h-17.34v78.75ZM1237.78 81c16.23 0 22.55-9.9 22.55-35.77v-9.57c0-25.76-6.32-35.66-22.55-35.66s-22.55 9.9-22.55 35.66v9.57c0 25.87 6.32 35.77 22.55 35.77Zm0-12.83c-3.72 0-4.83-2.58-4.83-19.46V32.3c0-16.88 1.11-19.46 4.83-19.46 3.71 0 4.83 2.58 4.83 19.46V48.7c0 16.88-1.12 19.46-4.83 19.46ZM1283.87 81c13.5 0 20.81-7.31 20.81-20.36 0-9.34-4.09-16.65-14.74-27-7.68-7.43-10.16-10.91-10.16-15.08 0-4.05 1.49-6.18 4.46-6.18 3.72 0 4.96 2.58 5.33 12.6l15.61-1.8c-.87-16.2-7.31-23.18-20.82-23.18-13.13 0-20.56 8.21-20.56 20.7 0 8.55 3.84 14.4 15.11 25.31 7.56 7.43 9.79 11.14 9.79 15.98 0 4.61-1.49 6.63-4.46 6.63-3.84 0-5.33-2.47-5.82-13.27l-15.99 1.91c.62 16.65 7.44 23.74 21.44 23.74ZM1309.28 79.88h34.94v-13.4h-17.59V46.36h13.87V33.41h-13.87v-18.9h17.22V1.13h-34.57v78.75ZM1348.28 79.88H1366v-21.5h-17.72v21.5Z"/>
+</svg>
+</footer>
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp/wp-*.php","/wp/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/sage/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script src="/wp-content/themes/sage/resources/scripts/lib/algoliasearch-lite.umd.js?ver=260618-70859" id="algolia-client-js" defer data-handle="algolia-client"></script>
+<script src="/wp-content/themes/sage/resources/scripts/lib/instantsearch.production.min.js?ver=260618-70859" id="algolia-instant-search-js" defer data-handle="algolia-instant-search"></script>
+<script id="algolia-search-js-extra">
+var nnafAlgolia = {"indexPrefix":""};
+//# sourceURL=algolia-search-js-extra
+</script>
+<script src="/wp-content/themes/sage/resources/scripts/modules/algolia-search.js?ver=260618-70859" id="algolia-search-js" defer data-handle="algolia-search"></script>
+<script id="gforms_recaptcha_recaptcha-js-extra">
+var gforms_recaptcha_recaptcha_strings = {"nonce":"3ebd6df341","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"1","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LcGzKAqAAAAABYHFAyg8EsowIk0UHWpygpGD4F-"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+</script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcGzKAqAAAAABYHFAyg8EsowIk0UHWpygpGD4F-&amp;ver=2.2.2" id="gforms_recaptcha_recaptcha-js" defer data-wp-strategy="defer" defer data-handle="gforms_recaptcha_recaptcha"></script>
+<script src="/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.2.2" id="gforms_recaptcha_frontend-js" defer data-wp-strategy="defer" defer data-handle="gforms_recaptcha_frontend"></script>
+<script src="/wp-content/themes/sage/public/js/app.33eb29.js" id="app/0-js" type="module" data-handle="app/0"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://abortionfunds.org/wp/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://abortionfunds.org/wp/wp-includes/js/wp-emoji-loader.min.js
+</script>
+  </body>
+</html>
+
+[media-15-1.png](https://abortionfunds.org/wp-content/uploads/2023/10/NNAF-logo-gold-stacked.png)
+
+![media-15-1.png](https://abortionfunds.org/wp-content/uploads/2023/10/NNAF-logo-gold-stacked.png)
+
+---
+
+## Assistant 15
+
+**I. UI & VISUAL DESIGN SYSTEM**
+
+*   **Color Architecture:** High-contrast, risograph-inspired activist palette. Deep Violet (`#530B7B`), Fuchsia/Magenta (`c-fuchsia`), Fire/Orange (`btn-solid-fire`), Gold/Yellow (`#CCA138`), and stark White. Colors are applied via utility classes (`c-violet`, `bg-violet`) to create bold, unmissable color-blocking.
+*   **Typography Scale:** "Alright Sans" (Alright-v2) preloaded in five weights (Thin to Black). Used in massive, aggressive display sizes (`f-h1`, `f-h2`, `f-alright-bold`) to mimic punk-zine or protest flyer typography. 
+*   **Geometry & "Flyer" Textures:** The "comic book/flyer" aesthetic is achieved through complex, hand-drawn style inline SVGs (`HomepageHero-deco`, `CoverBlockButton-svg`, `FiftyFiftyPromo-left-svg`). These use `mix-blend-mode: multiply` and varying opacities to simulate risograph misregistration, halftone textures, and layered paper prints.
+*   **Iconography:** Custom inline SVG sprite system (`sprite-arrow-right`, `sprite-chev-down`, `sprite-logo`, `sprite-external`) utilizing `currentColor` and specific brand fills (`#530B7B`) for crisp, scalable, and themable iconography.
+*   **Motion & Interaction:** Minimalist and utilitarian. Relies on CSS transitions for hover states and the Speculation Rules API for instant page transitions, avoiding heavy, distracting animations in favor of raw, immediate content delivery.
+
+**II. UX & INFORMATION ARCHITECTURE**
+
+*   **Navigation Structures:** Dual-layer header. Utility bar (Search, ES/EN language toggle, Shop, Donate). Primary bar (Find a Fund, Need an Abortion?, Resources, About, Get Involved). Mobile utilizes a slide-out, accordion-style menu for deep nesting without clutter.
+*   **Layout & Composition:** Asymmetrical, editorial, zine-style layouts. Utilizes `DoublePromo` (50/50 text/image splits), `FiftyFiftyPromo`, and `IndividualMember` blocks. The layout breaks traditional corporate grids, favoring overlapping elements and bold typographic anchors.
+*   **State Management:** Accessible expandable menus (`data-expands`, `aria-label`), high-contrast focus states for keyboard navigation, and screen-reader-only text (`u-screenreader`) for icon-only links.
+*   **Responsive Behavior:** Mobile-first fluid grids. Multi-level desktop dropdowns collapse into touch-friendly, full-width accordions on mobile. Image `srcset` ensures optimal delivery across all viewports.
+
+**III. CONTENT & COPYWRITING**
+
+*   **Voice & Tone:** Unapologetic, urgent, grassroots, empowering, and direct. Rejects clinical detachment in favor of activist solidarity and immediate utility.
+*   **Structural Syntax:** Massive, punchy headlines ("Building Power", "Need an Abortion?"). Short, actionable descriptions. Heavy use of imperative verbs.
+*   **Conversion Copy:** Frictionless, high-urgency CTAs. "Donate", "Find an Abortion Fund", "Make Donating a Monthly Practice!", "Support abortion access!".
+*   **Linguistic Patterns:** Action-oriented verbs, collective pronouns ("Together, we’re organizing"), and direct, empathetic address ("An abortion fund can help").
+
+**IV. BRANDING & POSITIONING**
+
+*   **Brand Identity:** Grassroots agitator / Community caregiver. Archetype: Rebel + Caregiver. 
+*   **Visual Vibe:** DIY zine, risograph print, activist flyer, punk-rock meets modern digital accessibility. The visual language signals disruption, urgency, and grassroots authenticity.
+*   **Trust & Authority:** Built on direct utility (immediate access to "Find a Fund"), intersectional framework ("racial, economic, and reproductive justice"), and transparent network structure (nearly 100 funds).
+*   **Psychological Triggers:** Urgency ("Donate Today!"), Community/Belonging ("Support a community of pro-choice advocates"), and Empowerment ("Building Power").
+
+**V. ELEMENT PLACEMENT & PAGE LITERATURE**
+
+*   **Section Flow:**
+    1.  *Hero:* "Building Power" (Violet/Fuchsia split) + Rally imagery + Megaphone SVG decorations.
+    2.  *Intro:* "What is NNAF?" + dual CTAs (Learn About NNAF / Learn About Funds).
+    3.  *Utility 1:* "Need an Abortion?" (Direct, immediate help focus).
+    4.  *Utility 2:* "Become a Monthly Donor" (Sustaining the movement).
+    5.  *Utility 3:* "Donate Today!" (Urgent, one-time action).
+    6.  *Engagement:* "Learn How to Talk to People About Abortion" + Featured News list.
+    7.  *Footer:* Newsletter signup, Socials, Sitemap, Agency credit.
+*   **Component Hierarchy:** `HomepageHero`, `CoverBlockButton`, `DoublePromo`, `IndividualMember`, `FiftyFiftyPromo`. Each component pairs bold, flyer-style typography with high-contrast, documentary-style photography or custom SVG illustrations.
+
+**VI. TECHNOLOGY & INFRASTRUCTURE STACK**
+
+*   **Frontend:** Custom WordPress "Sage" theme (Webpack/Vite bundled, indicated by `app.33eb29.js` and `app.d8ac55.css`). 
+*   **Backend/CMS:** WordPress (Yoast SEO Premium).
+*   **Search:** Algolia InstantSearch (dedicated JS modules for faceted, instant results).
+*   **Forms:** Gravity Forms + reCAPTCHA v3 for spam protection.
+*   **Email/CRM:** Campaign Monitor (Createsend) for the footer newsletter subscription.
+*   **Performance:** Speculation Rules API (`<script type="speculationrules">`) for conservative document prefetching. Font preloading (`Alright-v2`), responsive image `srcset`, and deferred JS execution.
+
+**VII. SEO & METADATA ARCHITECTURE**
+
+*   **On-Page SEO:** Yoast SEO Premium. Bilingual support via `hreflang="en"` and `hreflang="es"` (Spanish).
+*   **Technical SEO:** JSON-LD Schema (WebPage, BreadcrumbList, WebSite, Organization). Semantic HTML5 structure (`<header>`, `<main>`, `<footer>`, `<nav>`).
+*   **OpenGraph:** Fully populated with title, description, and custom NNAF logo image (`NNAF-logo-gold-stacked.png`) for rich social sharing.
+
+[media-15-1.png](https://abortionfunds.org/wp-content/uploads/2023/10/NNAF-logo-gold-stacked.png)
+
+![media-15-1.png](https://abortionfunds.org/wp-content/uploads/2023/10/NNAF-logo-gold-stacked.png)
+
+---
+
+## User 16
+
+convert everything extracted and curate in chat into one mega curation of all
+
+---
+
+## Assistant 17
+
+# THE MEGA CURATION: CROSS-BRAND DIGITAL ECOSYSTEM ANALYSIS
+
+## I. UI & VISUAL DESIGN SYSTEMS
+
+### Color Architecture
+*   **Activist Risograph (NNAF):** High-contrast, zine-inspired palette. Deep Violet (`#530B7B`), Fuchsia, Fire/Orange (`btn-solid-fire`), Gold (`#CCA138`), and stark White. Applied via utility classes (`c-violet`, `bg-violet`) for aggressive color-blocking.
+*   **Dynamic Editorial (MS Unlocked):** Context-aware theming driven by CSS variables mapped to `data-theme` attributes (e.g., `analogous-ultralight-teal`, `analogous-dark-pink`). Variables control `--theme-background`, `--theme-text`, and `--theme-scrim`, allowing entire page sections to shift palettes seamlessly.
+*   **Cinematic Clinical (Creator MH):** Moody, high-opacity dark overlays (`RGBA(22, 30, 42, 0.86)`) over background images. Accents include soft coral (`#fcc4ba`), salmon (`#fe8a7c`), magenta (`#b9449e`), and deep indigo (`#575177`).
+*   **Empathetic Slate (Springboard):** Slate blue/gray (`#47566A`) used for primary text instead of harsh black to create a clinical yet soft tone. Clean white card backgrounds ensure high contrast without sterility.
+*   **Warm Accessible (Be There):** Vibrant coral/red (`#f65058`) for focus states and active nav underlines. Warm yellow (`#FFCC52`) for custom list bullets. Magenta (`#be4aa5`) and blue (`#0073e6`) for rich text tags.
+*   **Minimalist Editorial (Oliver Grace):** Monochromatic base (Black `#000000`, White `#ffffff`, Dark Gray `#313131`) with extensive WordPress preset gradients overridden by custom theme styling. Contextual stroke variables (`--border`).
+
+### Typography & Fluid Scaling
+*   **Mathematical Fluidity (Be There):** 6-step fluid typography engine using CSS variables. Calculates exact `font-size` via `calc(var(--base-X) * 1rem + var(--coefficient-X) * 1vw)` across breakpoints (0px, 478px, 767px, 991px, 1440px, 1920px, 2400px), ensuring perfect optical scaling without media-query jumps.
+*   **Variable Fonts (MS Unlocked):** `SegoeSerif_VF` (Editorial/Display) and `SegoeSans_VF` (Body/UI) preloaded for performance and fluid scaling via `calc()` and viewport widths.
+*   **Punk-Zine Display (NNAF):** "Alright Sans" (Alright-v2) preloaded in five weights (Thin to Black). Used in massive, aggressive display sizes (`f-h1`, `f-h2`, `f-alright-bold`) to mimic protest flyer typography.
+*   **Custom Editorial (Oliver Grace):** "Suisse" (Primary Display/Body), "Arimo" & "Lora" (fallbacks), `var(--mtc-font-monospace)` (Data/Stats). Heavy use of CSS `clamp()` (e.g., `clamp(48px, 3.33vw, 76px)`).
+*   **Approachable Sans (Creator MH / Springboard):** `Hind` and `Cabin` (Creator MH) with massive `4em` display titles. Elementor native hierarchy (Springboard) with readable, well-spaced body text.
+
+### Geometry, Spacing & Textures
+*   **Zine Textures & Overlaps (NNAF):** Complex, hand-drawn style inline SVGs using `mix-blend-mode: multiply` and varying opacities to simulate risograph misregistration, halftone textures, and layered paper prints. Aggressive negative margins to break boxy layouts.
+*   **Sticky Scroll & Asymmetry (Be There / MS Unlocked):** Be There uses sticky scroll layouts where text pins and highlights in sync with passing illustrations. MS Unlocked uses 40/60 or 50/50 asymmetrical editorial pairings.
+*   **Card-Based Clinical (Springboard):** Card-based grid layouts (`card-callouts`). Generous padding and flexbox alignments create breathing room, preventing "clinical clutter."
+*   **Modular Spacing (Oliver Grace):** CSS variables mapped to rem (`--wp--preset--spacing--20` [0.44rem] to `--wp--preset--spacing--80` [5.06rem]). Strict alternation between text-heavy sections and staggered image grids (Single -> Twin -> Trio).
+
+### Iconography & Imagery
+*   **SVG Sprites & Custom Vectors (NNAF / Be There):** NNAF uses a custom inline SVG sprite system (`sprite-arrow-right`, `sprite-chev-down`) utilizing `currentColor`. Be There uses custom vector illustrations for the hero and "You'll learn" sections.
+*   **Cinematic & Documentary (Creator MH / Oliver Grace):** Creator MH uses high-quality, moody stock imagery (Pexels) heavily color-graded via CSS overlays. Oliver Grace uses high-contrast editorial photography mixed with client deliverable mockups and animated GIFs.
+*   **Masking & Clipping (Springboard):** Extensive use of SVG `<mask>` and `<clipPath>` elements to create complex, organic shapes for clinical icons and UI elements.
+
+### Motion & Interaction Design
+*   **Scroll & Parallax (Oliver Grace):** Lenis (smooth scrolling), Rellax.js (parallax effects), GSAP + ScrollTrigger (scroll-triggered reveals), custom `gasp-lines` for character-by-character text animation. Custom cursor (`#ball`) that expands and changes text to "View work".
+*   **Hover-to-Reveal & Sync (MS Unlocked / Be There):** MS Unlocked features complex hover states (e.g., Feelings Monster gallery flips cards on `mouseenter`, degrading to tap/stack on mobile). Be There syncs an image slider with a quote slider via Slick Carousel.
+*   **Infinite Scroll (Be There / NNAF):** Pure CSS infinite scroll (`@keyframes scroll`) for partner logos.
+*   **Utilitarian Transitions (NNAF / Springboard):** NNAF relies on CSS transitions for hover states and the Speculation Rules API for instant page transitions. Springboard uses Elementor's native entrance animations and CSS accordion toggles.
+
+## II. UX & INFORMATION ARCHITECTURE
+
+### Navigation & Wayfinding
+*   **Dual-Layer Utility (NNAF / MS Unlocked):** NNAF features a utility bar (Search, ES/EN toggle, Shop, Donate) and a primary bar (Find a Fund, Need an Abortion?, Resources). MS Unlocked integrates the Microsoft Universal Header (UHF) via web components, overlaid with a custom contextual navigation bar.
+*   **Contextual Anchors (Oliver Grace):** Sticky desktop sub-nav (`block-banner-anchor`) linking to specific page sections (`#brand-strategy`, `#experience-design`).
+*   **Dynamic Mobile Menus (Be There / NNAF):** Be There uses Wized to dynamically toggle UI elements (Register, Log In, My Account) based on user state. NNAF uses a slide-out, accordion-style menu for deep nesting.
+*   **Transparent Overlays (Creator MH):** Minimalist, transparent overlay header with a persistent "Hello Bar" at the absolute top displaying a bold, declarative mission statement.
+
+### Layout & Composition Paradigms
+*   **Z-Pattern PAS (Creator MH):** Strict adherence to Problem -> Agitation -> Unique Mechanism -> Authority -> Process -> Social Proof -> Objection Handling (FAQ) -> CTA.
+*   **Editorial Storytelling (MS Unlocked / Oliver Grace):** Asymmetrical editorial pairings. Text and media are balanced using 40/60 or 50/50 splits. "Full-width feature" blocks anchor the page with edge-to-edge media and overlay text.
+*   **Asymmetrical Zine (NNAF):** Breaks traditional corporate grids, favoring overlapping elements, bold typographic anchors, and multi-level desktop dropdowns that collapse into touch-friendly accordions.
+
+### State Management & Dynamic UI
+*   **Auth & Progress (Be There):** Wized dynamically toggles UI elements based on user login state and course progress (e.g., showing "Resume Learning" instead of "Get Started"). Referral tracking captures `?referral=` URL parameters and stores them in cookies.
+*   **Form & Modal States (Creator MH / Be There):** Creator MH uses native Kajabi embedded forms with custom CSS overrides. Be There uses the native HTML `<dialog>` / Popover API for the cookie consent modal, preventing content flashing.
+*   **Interactive Accordions (Springboard / Creator MH):** CSS-driven expand/collapse using Font Awesome icon swapping (`\f067` to `\f068`) with `display:none` toggling.
+
+### Accessibility (a11y) & Safety
+*   **Crisis Intervention (Be There):** Persistent, highly visible dropdown in the header explicitly stating the site is *not* for personal distress disclosure, providing immediate helpline directions.
+*   **Vestibular & Motor Safety (Oliver Grace / Be There):** `@media (prefers-reduced-motion: reduce)` explicitly disables timeline hover transitions. Be There uses Finsweet Attributes (`@finsweet/attributes-a11y`) and scroll disable scripts.
+*   **Focus & Contrast (NNAF / Be There):** NNAF uses custom `focus-visible` outlines (`0.125rem solid #f65058`). Be There uses high-contrast focus states and screen-reader-only text (`u-screenreader`) for icon-only links.
+
+### Responsive Degradation & Adaptation
+*   **Hover-to-Tap Degradation (MS Unlocked):** JS detects touch/mobile viewports and switches hover galleries to tap-to-flip mechanisms or stacks content vertically.
+*   **Fluid Math Scaling (Be There):** Grids collapse to single columns on mobile, but typography scales seamlessly via the 6-step CSS variable engine.
+*   **Device-Specific Hiding (Creator MH):** Specific sections are hidden on certain devices (`hidden--mobile`, `hidden--desktop`) to preserve narrative pacing and prevent mobile clutter.
+
+## III. CONTENT & COPYWRITING
+
+### Voice, Tone & Archetypes
+*   **Unapologetic Activist (NNAF):** Grassroots agitator / Community caregiver (Rebel + Caregiver). Urgent, empowering, direct. Rejects clinical detachment for activist solidarity.
+*   **Editorial Sage (MS Unlocked / Oliver Grace):** Thought leader / Creator. Positions the brand as a publisher. Empathetic, authoritative, narrative-driven.
+*   **Insider Clinical (Creator MH):** Authoritative, clinical yet deeply empathetic, insider-savvy. Blends clinical precision with creator-economy vernacular ("sh*t hits the fan").
+*   **Empathetic Expert (Springboard / Be There):** Caregiver / Sage. Validates the user's struggle while projecting clinical competence. Warm, inviting, accessible.
+
+### Structural Syntax & Editorial Constraints
+*   **Ruthless Truncation (MS Unlocked):** Headlines max 2 lines. Eyebrows strictly 1 line. Excerpts max 2 lines (approx. 100-120 characters). Body paragraphs max 3-4 lines before a visual break.
+*   **Massive Punchy Headers (NNAF / Creator MH):** High-impact, declarative headlines. Heavy use of imperative verbs and bolding for key phrases to guide the skimming eye.
+*   **The "We know X but Y" Formula (Springboard):** Bridges logic and emotion instantly (e.g., "We know a lot about neuroscience... but we also know they don’t mean much without empathy").
+*   **Custom Bullets & Dividers (Be There / Creator MH):** Be There uses custom yellow dot icons for visual warmth. Creator MH uses custom horizontal rules (`<hr style="width: 25%;">`) to elegantly break up text blocks.
+
+### Conversion Mechanics & Friction Reduction
+*   **Frictionless Utility (Be There / NNAF):** Explicitly highlights "Free of charge", "Less than 2 hours", "Self-paced". CTAs are direct and action-oriented ("Find an Abortion Fund", "Get Started").
+*   **Confidentiality Focus (Creator MH):** Relentless emphasis on discretion and low barriers to entry. "You Do Not Need a Plan Before Contacting Us." "Request Confidential Call".
+*   **Holistic USP (Oliver Grace):** Refusal to silo disciplines ("we really do [not] do any of these things in isolation... consider all three simultaneously").
+
+### Linguistic Patterns & Psychological Triggers
+*   **In-Group/Insider Status (Creator MH):** Speaks directly to the unique failures of traditional therapy for specific demographics.
+*   **Altruism & Community (Be There / NNAF):** "Let’s create a world where we can all better support one another." "Together, we’re organizing."
+*   **Urgency & Scarcity (Creator MH / NNAF):** "limited-capacity, and waitlists are case by case." "Donate Today! Protect abortion access."
+
+## IV. BRANDING & POSITIONING
+
+### Trust, Authority & Social Proof
+*   **Anonymous High-Stakes Testimonials (Creator MH):** Highly specific, anonymous quotes from "Agent", "Talent Manager", "Parent of Influencer", and "Confidential Creator Client" addressing emotional pain points.
+*   **Partner Infinite Scrolls (Be There / NNAF):** Major partners (Starbucks Foundation, Paramount) displayed in infinite scroll carousels to establish institutional backing.
+*   **Clinical Keywords + Empathy (Springboard):** Built on hard keywords ("neuroscience", "psychoeducational assessments") softened by emotional keywords ("empathy", "passion", "welcoming").
+*   **Grassroots Utility (NNAF):** Built on direct utility (immediate access to "Find a Fund") and transparent network structure (nearly 100 funds).
+
+### Niche Positioning & Market Differentiation
+*   **Hyper-Specialized Intersections (Creator MH):** Exact intersection of clinical mental health/substance use treatment and the digital creator/influencer economy.
+*   **The Anti-Clinical Clinic (Springboard):** Positions itself as the antidote to the cold, rushed, traditional medical system.
+*   **DIY Zine / Activist Flyer (NNAF):** Visual language signals disruption, urgency, and grassroots authenticity, rejecting corporate polish.
+*   **Human-Centric Tech (MS Unlocked):** Positions technology as a human enabler rather than the protagonist.
+
+## V. ELEMENT PLACEMENT & PAGE LITERATURE
+
+### Narrative Section Flows
+*   **Utility-First (NNAF):** Hero ("Building Power") -> Intro -> Utility 1 ("Need an Abortion?") -> Utility 2 ("Monthly Donor") -> Utility 3 ("Donate Today!") -> Engagement ("Heart-to-Heart") -> Footer.
+*   **Interactive Education (Be There):** Hero -> About (6 bullets) -> Sticky Scroll Narrative (7 outcomes) -> Accordion ("Why Get Certified") -> Synced Carousel (Testimonials) -> Partners -> FAQs -> Final CTA.
+*   **PAS Sales Letter (Creator MH):** Hello Bar -> Hero -> Problem -> Triggers -> CTA -> Process (Timeline) -> Authority (Bio) -> Video CTA -> Industry Realities -> Career Timeline -> Anonymous Proof -> FAQ -> Embedded Form.
+*   **Editorial Feature (MS Unlocked):** UHF Header -> Hero/Full-width Feature -> Editorial Split (40/60) -> Interactive Component -> Video Feature -> Pullquote -> Card Crosslinks -> Collection Crosslink.
+
+### Component Hierarchies
+*   **`fullwidth-feature` / `story-card` (MS Unlocked):** Hero banner with scrim overlay; standard article preview (Image + Eyebrow + Title + 2-line Excerpt).
+*   **`DoublePromo` / `FiftyFiftyPromo` (NNAF):** 50/50 text/image splits with bold, flyer-style typography and documentary photography.
+*   **`card-callouts` (Springboard):** Icon + concise text vehicle for service delivery.
+*   **`block-twin-visuals` / `block-trio-visuals` (Oliver Grace):** Custom CSS classes dictating complex, overlapping, or staggered grid placements using offset columns.
+
+## VI. TECHNOLOGY & INFRASTRUCTURE STACKS
+
+### Frontend & CSS Architecture
+*   **Webflow + Wized (Be There):** Webflow's native CSS generation augmented with custom CSS (fluid typography math, slick carousel). Wized handles complex state management and API calls.
+*   **Webpack / Sage Theme (NNAF):** Custom WordPress "Sage" theme (Webpack/Vite bundled). BEM-like naming conventions, utility classes, and heavy reliance on CSS Variables.
+*   **WordPress + Custom Themes (Oliver Grace / MS Unlocked):** Oliver Grace uses Bootstrap 5, GSAP, Lenis, Rellax. MS Unlocked uses custom JS modules, CSS Grid/Flexbox, and Web Components.
+*   **Kajabi (Creator MH):** Encore theme base, heavily customized via inline CSS, Slick Carousel, Wistia, AOS.
+*   **Elementor Pro (Springboard):** Elementor's native flexbox and grid utilities, custom SVG masks, and entrance animations.
+
+### Backend, CMS & State Management
+*   **WordPress (Oliver Grace / MS Unlocked / NNAF / Springboard):** Yoast SEO Premium, ACF (implied), Gravity Forms (NNAF), WPML (MS Unlocked).
+*   **Webflow CMS (Be There):** Native CMS for testimonials, partner logos, FAQs.
+*   **Kajabi (Creator MH):** Storefronts production, native forms embedded via script.
+*   **State Management:** Wized (Be There) for auth/progress. Custom JS (NNAF) for referral tracking.
+
+### Performance, Hosting & Tracking
+*   **CDNs & Prefetching:** NNAF and Oliver Grace use the Speculation Rules API (`<script type="speculationrules">`) for conservative document prefetching. Webflow CDN (Be There), Kajabi CDN (Creator MH), Azure CDN (MS Unlocked).
+*   **Analytics & Tagging:** GTM (NNAF, Oliver Grace), RudderStack (Creator MH), Microsoft 1DS/Clarity (MS Unlocked), Hotjar (Oliver Grace).
+*   **Search & Forms:** Algolia InstantSearch (NNAF), Gravity Forms + reCAPTCHA v3 (NNAF), Campaign Monitor (NNAF), Contact Form 7 + reCAPTCHA v3 (Oliver Grace).
+
+## VII. SEO & METADATA ARCHITECTURE
+
+### Technical SEO & Schema
+*   **JSON-LD Schema:** Yoast graphs (Oliver Grace, Springboard) including `WebPage`, `Article`, `BreadcrumbList`, `WebSite`, `Organization`. NNAF and Be There rely on native semantic HTML5 output.
+*   **Hreflang & Internationalization:** MS Unlocked uses WPML `hreflang`. NNAF uses `hreflang="en"` and `hreflang="es"`. Be There handles language via URL structure (`/es/`, `/fr/`) and Wized cookie logic.
+*   **Semantic HTML:** Strict adherence to `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>`, and hierarchical heading tags across all properties.
+
+### On-Page & OpenGraph
+*   **Title & Meta Descriptions:** Highly specific, keyword-rich, and benefit-driven across all sites. (e.g., "Creator Mental Health Program - Consulting & Coaching", "Earn your Be There Certificate").
+*   **OpenGraph/Twitter Cards:** Fully populated with title, description, and specific aspect ratio images (1200x675 for articles, custom logos for homepages) to ensure rich social sharing.
+*   **Robots Directives:** `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1` universally applied to maximize search engine visibility and snippet generation.
+
+---
+
+## User 18
+
+combine these two deduplicated:
+. MASTER UI & VISUAL DESIGN TAXONOMY
+Color Architecture & Theming
+Activist/High-Contrast: Deep Violet (#530B7B), Fuchsia, Fire/Orange, Gold (#CCA138). Applied via utility classes for unmissable color-blocking (NNAF).
+Dynamic Editorial: CSS variables mapped to data-theme attributes (e.g., --theme-background, --theme-text, --theme-scrim). Allows entire page sections to shift palettes seamlessly without reloading (Microsoft Unlocked).
+Clinical/Empathetic: Slate blue/gray (#47566A) instead of harsh black for text. Soft corals (#fcc4ba), deep indigos (#575177), and cinematic dark overlays (RGBA(22, 30, 42, 0.86)) to soften medical/mental health contexts (Springboard, Creator Mental Health).
+Boutique Agency: Monochrome base with hyper-specific semantic accents (e.g., Teal #2dd4bf for timelines, custom CSS variables for borders) (Oliver Grace).
+Typography & Fluid Scaling Engines
+Variable & Preloaded Fonts: SegoeSerif_VF / SegoeSans_VF (Microsoft), Alright Sans (NNAF), Suisse (Oliver Grace). Preloaded via <link rel="preload"> to prevent FOIT/FOUT.
+The Fluid Math: Rigorous CSS calc() engines replacing media queries. Example: font-size: calc(var(--base-X) * 1rem + var(--coefficient-X) * 1vw) mapped across 6 distinct breakpoints (0px to 2400px) for perfect optical scaling (Microsoft, NNAF).
+Hierarchy & Limits:
+H1/H2: Max 2 lines. Massive, aggressive display sizes for activists; elegant, clamped sizes for editorial.
+Eyebrows/Categories: Strictly 1 line, uppercase or distinct tracking.
+Excerpts/Cards: Max 2 lines (approx. 100-120 characters). Ruthlessly truncated via CSS or CMS limits to prevent card bloat.
+Body Paragraphs: Max 3-4 lines before a visual break, pullquote, or subheading.
+Geometry, Texture & "Vibe" Engineering
+Risograph/Zine Textures: Complex inline SVGs using mix-blend-mode: multiply and varying opacities to simulate halftone misregistration and layered paper prints (NNAF).
+Cinematic Overlays: High-opacity dark gradients over background videos/images to guarantee text legibility and set a moody, premium tone (Creator Mental Health).
+Spacing & Grids: Modular spacer systems (spacer-1 to spacer-8). Asymmetrical editorial pairings (40/60 or 50/50 splits) utilizing custom flexbox utilities rather than rigid 12-column frameworks (Microsoft). Aggressive negative margins (margin-top: -75px) to force physical overlaps and break boxy layouts (Creator).
+Iconography & Motion Mechanics
+SVG Sprites & Inheritance: Custom inline SVG sprite systems utilizing currentColor for crisp, scalable, and themable iconography (NNAF, Microsoft).
+Scroll & Parallax: Lenis (smooth scrolling), GSAP + ScrollTrigger (scroll-triggered reveals), and custom JS parallax grids where text items pin and highlight in sync with passing illustrations (Microsoft).
+Micro-interactions: Hover-to-reveal flip cards (Feelings Monster), sliding underline nav animations (::after width transitions), and custom cursors that inject contextual text ("View work") on hover (Oliver Grace).
+II. MASTER UX & INFORMATION ARCHITECTURE
+Navigation Paradigms
+Dual-Layer Headers: Top utility bar (Language toggle, Search, Donate/Shop) + Main contextual nav (NNAF, Microsoft UHF).
+Sticky Anchors: Desktop-only sub-nav linking to page sections (#brand-strategy), hidden on mobile to preserve vertical narrative pacing (Oliver Grace).
+Mega-Menus & Accordions: Deep nesting handled via touch-friendly, full-width accordions on mobile, replacing desktop dropdowns (NNAF, Microsoft).
+Layout & Scroll Narratives
+Sticky-Scroll Storytelling: Text blocks pin to the viewport while corresponding imagery scrolls past, creating an interactive, documentary-style reading flow (Microsoft).
+The "First Two Seconds" Rule: Hero sections immediately resolve core user anxiety by pairing hard authority (neuroscience, grassroots network size) with deep human empathy (Springboard, NNAF).
+Z-Pattern Agitation: Strict adherence to Problem -> Agitation -> Unique Mechanism -> Authority -> Process -> Social Proof -> Objection Handling -> CTA (Creator Mental Health).
+State Management & Safety Nets
+Crisis Alerts: Persistent, highly visible dropdowns in the header explicitly stating the site is not for personal distress disclosure, providing immediate helpline directions (NNAF, Microsoft).
+Dynamic Auth States: Wized/Webflow state management dynamically toggles UI elements based on user login state and course progress (e.g., swapping "Get Started" for "Resume Learning") (Microsoft/NNAF).
+Accessibility (a11y): Dedicated A11y widgets allowing users to toggle "Motion" (disabling parallax) and "High Contrast". Custom focus-visible outlines. Screen-reader-only text (.sr-text) for icon-only buttons.
+III. MASTER CONTENT & COPYWRITING FRAMEWORKS
+Voice & Tone Matrix
+Grassroots Agitator: Unapologetic, urgent, imperative verbs. Rejects clinical detachment for activist solidarity ("Building Power", "Donate Today!") (NNAF).
+Editorial Sage: Empathetic, authoritative, narrative-driven. Positions technology/brands as human enablers. Uses academic credibility via inline footnotes (Microsoft).
+The Empathetic Expert: Validates the user's struggle while projecting clinical competence. "We know X, but we also know Y" formula bridging logic and emotion (Springboard, Creator).
+Boutique Authority: Confident, concise, low jargon. "Creative problem solvers." Rule of three and stark contrasts (Oliver Grace).
+Structural Syntax & Linguistic Patterns
+Eyebrows: Small, distinct introductory phrases above main headings to contextualize content before the headline strikes.
+Highlighting: Strategic use of .highlight classes on specific vowels/consonants in H1/H2s to draw the eye and create typographic tension (Oliver Grace).
+Problem-Agitate-Solve (PAS): Clearly defines compounding pressures (e.g., creator income can't pause, fear of losing relevance) before offering the specialized mechanism (Creator).
+Inclusive/Collective Language: "Folks", "loved ones", "Together, we’re organizing" (NNAF, Microsoft).
+Conversion & Microcopy
+Friction Reduction: Relentless emphasis on confidentiality, low barriers, and immediate utility ("You Do Not Need a Plan Before Contacting Us", "Free of charge", "Less than 2 hours").
+Weaponized Testimonials: Using social proof to directly attack the user's fear of the industry standard (e.g., "rather than someone who’s just there to book your appointment and take your money") (Springboard, Creator).
+Contextual Warnings: "This service is private, limited-capacity, and waitlists are case by case." (Scarcity + Exclusivity).
+IV. MASTER BRANDING & POSITIONING STRATEGIES
+Archetypes & Visual Signifiers
+Rebel + Caregiver: DIY zine aesthetics, risograph textures, high-contrast color blocking. Signals disruption and grassroots authenticity (NNAF).
+Sage + Creator: Variable fonts, parallax grids, interactive data visualizations, high-production video interviews. Signals thought leadership and innovation (Microsoft, Oliver Grace).
+Caregiver + Sage: Card-based grids, slate blues, minimalist SVG icons, soft clinical aesthetics. Signals safety, approachability, and medical competence (Springboard, Creator).
+Trust & Authority Building
+Hard Data + Human Impact: Pairing "needs assessment of over 1,200 youth" with intimate, documentary-style photography (NNAF, Microsoft).
+Chronological Milestones: Slick carousels mapping specific years, awards, and physical locations to build undeniable, compounding credibility (Creator, Oliver Grace).
+Intersectionality: Explicitly framing services at the crossroads of racial, economic, and reproductive/medical justice (NNAF, Microsoft).
+V. MASTER PAGE LITERATURE & ELEMENT PLACEMENT
+The Universal Narrative Flow
+The Hook/Utility: Crisis alert, Language toggle, immediate value prop.
+The Agitation/Context: "When a Creator Is Struggling..." / "The hidden power of feelings" (Context setting).
+The Mechanism: Interactive components (Hover galleries, Sticky-scroll lists, Symptom mapping).
+The Proof: Synced carousels (Images + Quotes), Partner logo infinite scrolls, Chronological timelines.
+The Objection Handling: 2-column Accordions handling clinical, logistical, and financial friction.
+The Action: High-contrast, full-width CTA blocks with cinematic backgrounds.
+Component Hierarchy
+Interactive Galleries: CSS/JS flip-cards that degrade gracefully from desktop mouseenter to mobile tap or vertical stacking (Microsoft).
+Accordions: CSS-driven expand/collapse using SVG icon swapping, heavily utilized for FAQ and high-friction objection handling (Creator, NNAF).
+Infinite Scrollers: Pure CSS @keyframes marquee animations for partner/client logos to establish immediate scale without user interaction (NNAF, Microsoft).
+Custom Timelines: Vertical lines with dots and cards, or horizontal Slick carousels, used to map processes or career histories (Creator, Oliver Grace).
+VI. MASTER TECHNOLOGY & INFRASTRUCTURE STACKS
+CMS & Frameworks
+Custom Webpack/Sage (WP): Headless-like architecture, Algolia InstantSearch, Wized for complex state management (NNAF).
+Custom WP Themes (ACF): Heavy reliance on Advanced Custom Fields for modular block building, GSAP/Lenis for motion (Oliver Grace, Microsoft).
+Webflow: Native CSS grid/flexbox, Finsweet Attributes for A11y and Cookie Consent, Slick Carousel integrations (Be There Certificate).
+Elementor Pro (WP): Flexbox containers, Mega Menus, native motion effects, heavy inline CSS overrides (Springboard).
+Kajabi: Native storefronts, embedded forms, Wistia video backgrounds, RudderStack analytics (Creator).
+Performance & Edge Mechanics
+Speculation Rules API: <script type="speculationrules"> for conservative document prefetching, enabling instant page transitions (NNAF, Oliver Grace, Be There).
+Font & Asset Preloading: <link rel="preload" as="font"> and <link rel="dns-prefetch"> to eliminate render-blocking delays.
+Image Optimization: Native loading="lazy", decoding="async", and aggressive srcset definitions. contain-intrinsic-size used to prevent Cumulative Layout Shift (CLS).
+Analytics & Tracking
+Enterprise: Microsoft 1DS Metrics, Clarity, Fathom, Meta Pixel, UET (Microsoft).
+Behavioral: Hotjar, RudderStack, Google Tag Manager, Algolia click-tracking.
+Referral/Attribution: Custom JS listeners capturing URL parameters (?referral=) and storing them in cookies for partner tracking (Be There).
+VII. MASTER SEO & METADATA ARCHITECTURE
+On-Page & Technical SEO
+Schema (JSON-LD): Comprehensive Yoast/custom graphs including WebPage, Article, BreadcrumbList, WebSite, Organization (with sameAs), and Person.
+Hreflang & Localization: Handled via URL structure (/es/, /fr/) and WPML cookie logic to serve correct language paths and alternate tags.
+OpenGraph/Twitter Cards: Fully populated with specific aspect ratio images (1200x675 for articles, 421x421 for collections, 1920x1080 for campaigns).
+Semantic HTML5: Strict adherence to <header>, <main>, <article>, <aside>, <section>, and hierarchical heading tags (<h1> through <h6>) to ensure crawler comprehension and screen-reader parity.
+
+AND 
+
+# THE MEGA CURATION: CROSS-BRAND DIGITAL ECOSYSTEM ANALYSIS
+
+## I. UI & VISUAL DESIGN SYSTEMS
+
+### Color Architecture
+*   **Activist Risograph (NNAF):** High-contrast, zine-inspired palette. Deep Violet (`#530B7B`), Fuchsia, Fire/Orange (`btn-solid-fire`), Gold (`#CCA138`), and stark White. Applied via utility classes (`c-violet`, `bg-violet`) for aggressive color-blocking.
+*   **Dynamic Editorial (MS Unlocked):** Context-aware theming driven by CSS variables mapped to `data-theme` attributes (e.g., `analogous-ultralight-teal`, `analogous-dark-pink`). Variables control `--theme-background`, `--theme-text`, and `--theme-scrim`, allowing entire page sections to shift palettes seamlessly.
+*   **Cinematic Clinical (Creator MH):** Moody, high-opacity dark overlays (`RGBA(22, 30, 42, 0.86)`) over background images. Accents include soft coral (`#fcc4ba`), salmon (`#fe8a7c`), magenta (`#b9449e`), and deep indigo (`#575177`).
+*   **Empathetic Slate (Springboard):** Slate blue/gray (`#47566A`) used for primary text instead of harsh black to create a clinical yet soft tone. Clean white card backgrounds ensure high contrast without sterility.
+*   **Warm Accessible (Be There):** Vibrant coral/red (`#f65058`) for focus states and active nav underlines. Warm yellow (`#FFCC52`) for custom list bullets. Magenta (`#be4aa5`) and blue (`#0073e6`) for rich text tags.
+*   **Minimalist Editorial (Oliver Grace):** Monochromatic base (Black `#000000`, White `#ffffff`, Dark Gray `#313131`) with extensive WordPress preset gradients overridden by custom theme styling. Contextual stroke variables (`--border`).
+
+### Typography & Fluid Scaling
+*   **Mathematical Fluidity (Be There):** 6-step fluid typography engine using CSS variables. Calculates exact `font-size` via `calc(var(--base-X) * 1rem + var(--coefficient-X) * 1vw)` across breakpoints (0px, 478px, 767px, 991px, 1440px, 1920px, 2400px), ensuring perfect optical scaling without media-query jumps.
+*   **Variable Fonts (MS Unlocked):** `SegoeSerif_VF` (Editorial/Display) and `SegoeSans_VF` (Body/UI) preloaded for performance and fluid scaling via `calc()` and viewport widths.
+*   **Punk-Zine Display (NNAF):** "Alright Sans" (Alright-v2) preloaded in five weights (Thin to Black). Used in massive, aggressive display sizes (`f-h1`, `f-h2`, `f-alright-bold`) to mimic protest flyer typography.
+*   **Custom Editorial (Oliver Grace):** "Suisse" (Primary Display/Body), "Arimo" & "Lora" (fallbacks), `var(--mtc-font-monospace)` (Data/Stats). Heavy use of CSS `clamp()` (e.g., `clamp(48px, 3.33vw, 76px)`).
+*   **Approachable Sans (Creator MH / Springboard):** `Hind` and `Cabin` (Creator MH) with massive `4em` display titles. Elementor native hierarchy (Springboard) with readable, well-spaced body text.
+
+### Geometry, Spacing & Textures
+*   **Zine Textures & Overlaps (NNAF):** Complex, hand-drawn style inline SVGs using `mix-blend-mode: multiply` and varying opacities to simulate risograph misregistration, halftone textures, and layered paper prints. Aggressive negative margins to break boxy layouts.
+*   **Sticky Scroll & Asymmetry (Be There / MS Unlocked):** Be There uses sticky scroll layouts where text pins and highlights in sync with passing illustrations. MS Unlocked uses 40/60 or 50/50 asymmetrical editorial pairings.
+*   **Card-Based Clinical (Springboard):** Card-based grid layouts (`card-callouts`). Generous padding and flexbox alignments create breathing room, preventing "clinical clutter."
+*   **Modular Spacing (Oliver Grace):** CSS variables mapped to rem (`--wp--preset--spacing--20` [0.44rem] to `--wp--preset--spacing--80` [5.06rem]). Strict alternation between text-heavy sections and staggered image grids (Single -> Twin -> Trio).
+
+### Iconography & Imagery
+*   **SVG Sprites & Custom Vectors (NNAF / Be There):** NNAF uses a custom inline SVG sprite system (`sprite-arrow-right`, `sprite-chev-down`) utilizing `currentColor`. Be There uses custom vector illustrations for the hero and "You'll learn" sections.
+*   **Cinematic & Documentary (Creator MH / Oliver Grace):** Creator MH uses high-quality, moody stock imagery (Pexels) heavily color-graded via CSS overlays. Oliver Grace uses high-contrast editorial photography mixed with client deliverable mockups and animated GIFs.
+*   **Masking & Clipping (Springboard):** Extensive use of SVG `<mask>` and `<clipPath>` elements to create complex, organic shapes for clinical icons and UI elements.
+
+### Motion & Interaction Design
+*   **Scroll & Parallax (Oliver Grace):** Lenis (smooth scrolling), Rellax.js (parallax effects), GSAP + ScrollTrigger (scroll-triggered reveals), custom `gasp-lines` for character-by-character text animation. Custom cursor (`#ball`) that expands and changes text to "View work".
+*   **Hover-to-Reveal & Sync (MS Unlocked / Be There):** MS Unlocked features complex hover states (e.g., Feelings Monster gallery flips cards on `mouseenter`, degrading to tap/stack on mobile). Be There syncs an image slider with a quote slider via Slick Carousel.
+*   **Infinite Scroll (Be There / NNAF):** Pure CSS infinite scroll (`@keyframes scroll`) for partner logos.
+*   **Utilitarian Transitions (NNAF / Springboard):** NNAF relies on CSS transitions for hover states and the Speculation Rules API for instant page transitions. Springboard uses Elementor's native entrance animations and CSS accordion toggles.
+
+## II. UX & INFORMATION ARCHITECTURE
+
+### Navigation & Wayfinding
+*   **Dual-Layer Utility (NNAF / MS Unlocked):** NNAF features a utility bar (Search, ES/EN toggle, Shop, Donate) and a primary bar (Find a Fund, Need an Abortion?, Resources). MS Unlocked integrates the Microsoft Universal Header (UHF) via web components, overlaid with a custom contextual navigation bar.
+*   **Contextual Anchors (Oliver Grace):** Sticky desktop sub-nav (`block-banner-anchor`) linking to specific page sections (`#brand-strategy`, `#experience-design`).
+*   **Dynamic Mobile Menus (Be There / NNAF):** Be There uses Wized to dynamically toggle UI elements (Register, Log In, My Account) based on user state. NNAF uses a slide-out, accordion-style menu for deep nesting.
+*   **Transparent Overlays (Creator MH):** Minimalist, transparent overlay header with a persistent "Hello Bar" at the absolute top displaying a bold, declarative mission statement.
+
+### Layout & Composition Paradigms
+*   **Z-Pattern PAS (Creator MH):** Strict adherence to Problem -> Agitation -> Unique Mechanism -> Authority -> Process -> Social Proof -> Objection Handling (FAQ) -> CTA.
+*   **Editorial Storytelling (MS Unlocked / Oliver Grace):** Asymmetrical editorial pairings. Text and media are balanced using 40/60 or 50/50 splits. "Full-width feature" blocks anchor the page with edge-to-edge media and overlay text.
+*   **Asymmetrical Zine (NNAF):** Breaks traditional corporate grids, favoring overlapping elements, bold typographic anchors, and multi-level desktop dropdowns that collapse into touch-friendly accordions.
+
+### State Management & Dynamic UI
+*   **Auth & Progress (Be There):** Wized dynamically toggles UI elements based on user login state and course progress (e.g., showing "Resume Learning" instead of "Get Started"). Referral tracking captures `?referral=` URL parameters and stores them in cookies.
+*   **Form & Modal States (Creator MH / Be There):** Creator MH uses native Kajabi embedded forms with custom CSS overrides. Be There uses the native HTML `<dialog>` / Popover API for the cookie consent modal, preventing content flashing.
+*   **Interactive Accordions (Springboard / Creator MH):** CSS-driven expand/collapse using Font Awesome icon swapping (`\f067` to `\f068`) with `display:none` toggling.
+
+### Accessibility (a11y) & Safety
+*   **Crisis Intervention (Be There):** Persistent, highly visible dropdown in the header explicitly stating the site is *not* for personal distress disclosure, providing immediate helpline directions.
+*   **Vestibular & Motor Safety (Oliver Grace / Be There):** `@media (prefers-reduced-motion: reduce)` explicitly disables timeline hover transitions. Be There uses Finsweet Attributes (`@finsweet/attributes-a11y`) and scroll disable scripts.
+*   **Focus & Contrast (NNAF / Be There):** NNAF uses custom `focus-visible` outlines (`0.125rem solid #f65058`). Be There uses high-contrast focus states and screen-reader-only text (`u-screenreader`) for icon-only links.
+
+### Responsive Degradation & Adaptation
+*   **Hover-to-Tap Degradation (MS Unlocked):** JS detects touch/mobile viewports and switches hover galleries to tap-to-flip mechanisms or stacks content vertically.
+*   **Fluid Math Scaling (Be There):** Grids collapse to single columns on mobile, but typography scales seamlessly via the 6-step CSS variable engine.
+*   **Device-Specific Hiding (Creator MH):** Specific sections are hidden on certain devices (`hidden--mobile`, `hidden--desktop`) to preserve narrative pacing and prevent mobile clutter.
+
+## III. CONTENT & COPYWRITING
+
+### Voice, Tone & Archetypes
+*   **Unapologetic Activist (NNAF):** Grassroots agitator / Community caregiver (Rebel + Caregiver). Urgent, empowering, direct. Rejects clinical detachment for activist solidarity.
+*   **Editorial Sage (MS Unlocked / Oliver Grace):** Thought leader / Creator. Positions the brand as a publisher. Empathetic, authoritative, narrative-driven.
+*   **Insider Clinical (Creator MH):** Authoritative, clinical yet deeply empathetic, insider-savvy. Blends clinical precision with creator-economy vernacular ("sh*t hits the fan").
+*   **Empathetic Expert (Springboard / Be There):** Caregiver / Sage. Validates the user's struggle while projecting clinical competence. Warm, inviting, accessible.
+
+### Structural Syntax & Editorial Constraints
+*   **Ruthless Truncation (MS Unlocked):** Headlines max 2 lines. Eyebrows strictly 1 line. Excerpts max 2 lines (approx. 100-120 characters). Body paragraphs max 3-4 lines before a visual break.
+*   **Massive Punchy Headers (NNAF / Creator MH):** High-impact, declarative headlines. Heavy use of imperative verbs and bolding for key phrases to guide the skimming eye.
+*   **The "We know X but Y" Formula (Springboard):** Bridges logic and emotion instantly (e.g., "We know a lot about neuroscience... but we also know they don’t mean much without empathy").
+*   **Custom Bullets & Dividers (Be There / Creator MH):** Be There uses custom yellow dot icons for visual warmth. Creator MH uses custom horizontal rules (`<hr style="width: 25%;">`) to elegantly break up text blocks.
+
+### Conversion Mechanics & Friction Reduction
+*   **Frictionless Utility (Be There / NNAF):** Explicitly highlights "Free of charge", "Less than 2 hours", "Self-paced". CTAs are direct and action-oriented ("Find an Abortion Fund", "Get Started").
+*   **Confidentiality Focus (Creator MH):** Relentless emphasis on discretion and low barriers to entry. "You Do Not Need a Plan Before Contacting Us." "Request Confidential Call".
+*   **Holistic USP (Oliver Grace):** Refusal to silo disciplines ("we really do [not] do any of these things in isolation... consider all three simultaneously").
+
+### Linguistic Patterns & Psychological Triggers
+*   **In-Group/Insider Status (Creator MH):** Speaks directly to the unique failures of traditional therapy for specific demographics.
+*   **Altruism & Community (Be There / NNAF):** "Let’s create a world where we can all better support one another." "Together, we’re organizing."
+*   **Urgency & Scarcity (Creator MH / NNAF):** "limited-capacity, and waitlists are case by case." "Donate Today! Protect abortion access."
+
+## IV. BRANDING & POSITIONING
+
+### Trust, Authority & Social Proof
+*   **Anonymous High-Stakes Testimonials (Creator MH):** Highly specific, anonymous quotes from "Agent", "Talent Manager", "Parent of Influencer", and "Confidential Creator Client" addressing emotional pain points.
+*   **Partner Infinite Scrolls (Be There / NNAF):** Major partners (Starbucks Foundation, Paramount) displayed in infinite scroll carousels to establish institutional backing.
+*   **Clinical Keywords + Empathy (Springboard):** Built on hard keywords ("neuroscience", "psychoeducational assessments") softened by emotional keywords ("empathy", "passion", "welcoming").
+*   **Grassroots Utility (NNAF):** Built on direct utility (immediate access to "Find a Fund") and transparent network structure (nearly 100 funds).
+
+### Niche Positioning & Market Differentiation
+*   **Hyper-Specialized Intersections (Creator MH):** Exact intersection of clinical mental health/substance use treatment and the digital creator/influencer economy.
+*   **The Anti-Clinical Clinic (Springboard):** Positions itself as the antidote to the cold, rushed, traditional medical system.
+*   **DIY Zine / Activist Flyer (NNAF):** Visual language signals disruption, urgency, and grassroots authenticity, rejecting corporate polish.
+*   **Human-Centric Tech (MS Unlocked):** Positions technology as a human enabler rather than the protagonist.
+
+## V. ELEMENT PLACEMENT & PAGE LITERATURE
+
+### Narrative Section Flows
+*   **Utility-First (NNAF):** Hero ("Building Power") -> Intro -> Utility 1 ("Need an Abortion?") -> Utility 2 ("Monthly Donor") -> Utility 3 ("Donate Today!") -> Engagement ("Heart-to-Heart") -> Footer.
+*   **Interactive Education (Be There):** Hero -> About (6 bullets) -> Sticky Scroll Narrative (7 outcomes) -> Accordion ("Why Get Certified") -> Synced Carousel (Testimonials) -> Partners -> FAQs -> Final CTA.
+*   **PAS Sales Letter (Creator MH):** Hello Bar -> Hero -> Problem -> Triggers -> CTA -> Process (Timeline) -> Authority (Bio) -> Video CTA -> Industry Realities -> Career Timeline -> Anonymous Proof -> FAQ -> Embedded Form.
+*   **Editorial Feature (MS Unlocked):** UHF Header -> Hero/Full-width Feature -> Editorial Split (40/60) -> Interactive Component -> Video Feature -> Pullquote -> Card Crosslinks -> Collection Crosslink.
+
+### Component Hierarchies
+*   **`fullwidth-feature` / `story-card` (MS Unlocked):** Hero banner with scrim overlay; standard article preview (Image + Eyebrow + Title + 2-line Excerpt).
+*   **`DoublePromo` / `FiftyFiftyPromo` (NNAF):** 50/50 text/image splits with bold, flyer-style typography and documentary photography.
+*   **`card-callouts` (Springboard):** Icon + concise text vehicle for service delivery.
+*   **`block-twin-visuals` / `block-trio-visuals` (Oliver Grace):** Custom CSS classes dictating complex, overlapping, or staggered grid placements using offset columns.
+
+## VI. TECHNOLOGY & INFRASTRUCTURE STACKS
+
+### Frontend & CSS Architecture
+*   **Webflow + Wized (Be There):** Webflow's native CSS generation augmented with custom CSS (fluid typography math, slick carousel). Wized handles complex state management and API calls.
+*   **Webpack / Sage Theme (NNAF):** Custom WordPress "Sage" theme (Webpack/Vite bundled). BEM-like naming conventions, utility classes, and heavy reliance on CSS Variables.
+*   **WordPress + Custom Themes (Oliver Grace / MS Unlocked):** Oliver Grace uses Bootstrap 5, GSAP, Lenis, Rellax. MS Unlocked uses custom JS modules, CSS Grid/Flexbox, and Web Components.
+*   **Kajabi (Creator MH):** Encore theme base, heavily customized via inline CSS, Slick Carousel, Wistia, AOS.
+*   **Elementor Pro (Springboard):** Elementor's native flexbox and grid utilities, custom SVG masks, and entrance animations.
+
+### Backend, CMS & State Management
+*   **WordPress (Oliver Grace / MS Unlocked / NNAF / Springboard):** Yoast SEO Premium, ACF (implied), Gravity Forms (NNAF), WPML (MS Unlocked).
+*   **Webflow CMS (Be There):** Native CMS for testimonials, partner logos, FAQs.
+*   **Kajabi (Creator MH):** Storefronts production, native forms embedded via script.
+*   **State Management:** Wized (Be There) for auth/progress. Custom JS (NNAF) for referral tracking.
+
+### Performance, Hosting & Tracking
+*   **CDNs & Prefetching:** NNAF and Oliver Grace use the Speculation Rules API (`<script type="speculationrules">`) for conservative document prefetching. Webflow CDN (Be There), Kajabi CDN (Creator MH), Azure CDN (MS Unlocked).
+*   **Analytics & Tagging:** GTM (NNAF, Oliver Grace), RudderStack (Creator MH), Microsoft 1DS/Clarity (MS Unlocked), Hotjar (Oliver Grace).
+*   **Search & Forms:** Algolia InstantSearch (NNAF), Gravity Forms + reCAPTCHA v3 (NNAF), Campaign Monitor (NNAF), Contact Form 7 + reCAPTCHA v3 (Oliver Grace).
+
+## VII. SEO & METADATA ARCHITECTURE
+
+### Technical SEO & Schema
+*   **JSON-LD Schema:** Yoast graphs (Oliver Grace, Springboard) including `WebPage`, `Article`, `BreadcrumbList`, `WebSite`, `Organization`. NNAF and Be There rely on native semantic HTML5 output.
+*   **Hreflang & Internationalization:** MS Unlocked uses WPML `hreflang`. NNAF uses `hreflang="en"` and `hreflang="es"`. Be There handles language via URL structure (`/es/`, `/fr/`) and Wized cookie logic.
+*   **Semantic HTML:** Strict adherence to `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>`, and hierarchical heading tags across all properties.
+
+### On-Page & OpenGraph
+*   **Title & Meta Descriptions:** Highly specific, keyword-rich, and benefit-driven across all sites. (e.g., "Creator Mental Health Program - Consulting & Coaching", "Earn your Be There Certificate").
+*   **OpenGraph/Twitter Cards:** Fully populated with title, description, and specific aspect ratio images (1200x675 for articles, custom logos for homepages) to ensure rich social sharing.
+*   **Robots Directives:** `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1` universally applied to maximize search engine visibility and snippet generation.
+
+---
+
+## Assistant 19
+
+# THE MASTER DIGITAL ECOSYSTEM TAXONOMY
+
+## I. UI & VISUAL DESIGN SYSTEMS
+
+### Color Architecture & Theming
+*   **Activist/High-Contrast (NNAF):** Deep Violet (`#530B7B`), Fuchsia, Fire/Orange, Gold (`#CCA138`). Applied via utility classes (`c-violet`, `bg-violet`) for aggressive, unmissable color-blocking.
+*   **Dynamic Editorial (MS Unlocked):** Context-aware theming driven by CSS variables mapped to `data-theme` attributes (e.g., `--theme-background`, `--theme-text`, `--theme-scrim`). Allows entire page sections to shift palettes seamlessly without reloading.
+*   **Cinematic Clinical (Creator MH):** Moody, high-opacity dark overlays (`RGBA(22, 30, 42, 0.86)`) over background images. Accents include soft coral (`#fcc4ba`), salmon (`#fe8a7c`), magenta (`#b9449e`), and deep indigo (`#575177`).
+*   **Empathetic Slate (Springboard):** Slate blue/gray (`#47566A`) used for primary text instead of harsh black to soften medical contexts. Clean white card backgrounds ensure high contrast without sterility.
+*   **Warm Accessible (Be There):** Vibrant coral/red (`#f65058`) for focus states and active nav underlines. Warm yellow (`#FFCC52`) for custom list bullets. Magenta (`#be4aa5`) and blue (`#0073e6`) for rich text tags.
+*   **Minimalist Editorial (Oliver Grace):** Monochromatic base (Black `#000000`, White `#ffffff`, Dark Gray `#313131`) with extensive WordPress preset gradients overridden by custom theme styling and contextual stroke variables (`--border`).
+
+### Typography & Fluid Scaling Engines
+*   **Variable & Preloaded Fonts:** `SegoeSerif_VF` / `SegoeSans_VF` (MS), Alright Sans (NNAF), Suisse (OG). Preloaded via `<link rel="preload">` to prevent FOIT/FOUT.
+*   **The Fluid Math:** Rigorous CSS `calc()` engines replacing media queries. Example: `font-size: calc(var(--base-X) * 1rem + var(--coefficient-X) * 1vw)` mapped across 6 distinct breakpoints (0px to 2400px) for perfect optical scaling (Be There, MS). CSS `clamp()` used for specific element scaling (OG).
+*   **Hierarchy & Limits:**
+    *   **H1/H2:** Max 2 lines. Massive, aggressive display sizes for activists; elegant, clamped sizes for editorial.
+    *   **Eyebrows/Categories:** Strictly 1 line, uppercase or distinct tracking.
+    *   **Excerpts/Cards:** Max 2 lines (approx. 100-120 characters). Ruthlessly truncated via CSS or CMS limits to prevent card bloat.
+    *   **Body Paragraphs:** Max 3-4 lines before a visual break, pullquote, or subheading.
+
+### Geometry, Texture & "Vibe" Engineering
+*   **Risograph/Zine Textures (NNAF):** Complex inline SVGs using `mix-blend-mode: multiply` and varying opacities to simulate halftone misregistration and layered paper prints. Aggressive negative margins to break boxy layouts.
+*   **Cinematic Overlays (Creator MH):** High-opacity dark gradients over background videos/images to guarantee text legibility and set a moody, premium tone.
+*   **Spacing & Grids:** Modular spacer systems (`spacer-1` to `spacer-8`). Asymmetrical editorial pairings (40/60 or 50/50 splits) utilizing custom flexbox utilities. Card-based grids with generous padding to prevent "clinical clutter" (Springboard).
+*   **Masking & Clipping (Springboard):** Extensive use of SVG `<mask>` and `<clipPath>` elements to create complex, organic shapes for clinical icons and UI elements.
+
+### Iconography & Motion Mechanics
+*   **SVG Sprites & Inheritance:** Custom inline SVG sprite systems utilizing `currentColor` for crisp, scalable, and themable iconography (NNAF, MS). Custom vector illustrations for heroes (Be There).
+*   **Scroll & Parallax:** Lenis (smooth scrolling), GSAP + ScrollTrigger (scroll-triggered reveals). Sticky-scroll storytelling where text items pin and highlight in sync with passing illustrations (MS).
+*   **Micro-interactions:** Hover-to-reveal flip cards (MS), sliding underline nav animations (`::after` width transitions), and custom cursors that inject contextual text ("View work") on hover (OG).
+*   **Infinite Scrollers:** Pure CSS `@keyframes` marquee animations for partner/client logos to establish immediate scale without user interaction (Be There, NNAF).
+
+## II. UX & INFORMATION ARCHITECTURE
+
+### Navigation & Wayfinding
+*   **Dual-Layer Headers:** Top utility bar (Language toggle, Search, Donate/Shop) + Main contextual nav (NNAF, MS UHF).
+*   **Sticky Anchors:** Desktop-only sub-nav linking to page sections (`#brand-strategy`), hidden on mobile to preserve vertical narrative pacing (OG).
+*   **Mega-Menus & Accordions:** Deep nesting handled via touch-friendly, full-width accordions on mobile, replacing desktop dropdowns (NNAF, MS).
+*   **Transparent Overlays:** Minimalist header with a persistent "Hello Bar" at the absolute top displaying a bold, declarative mission statement (Creator MH).
+
+### Layout & Composition Paradigms
+*   **The "First Two Seconds" Rule:** Hero sections immediately resolve core user anxiety by pairing hard authority (neuroscience, grassroots network size) with deep human empathy (Springboard, NNAF).
+*   **Z-Pattern Agitation (PAS):** Strict adherence to Problem -> Agitation -> Unique Mechanism -> Authority -> Process -> Social Proof -> Objection Handling -> CTA (Creator MH).
+*   **Editorial Storytelling:** Asymmetrical editorial pairings. Text and media balanced using 40/60 or 50/50 splits. "Full-width feature" blocks anchor the page with edge-to-edge media and overlay text (MS, OG).
+
+### State Management & Safety Nets
+*   **Crisis Alerts:** Persistent, highly visible dropdowns in the header explicitly stating the site is *not* for personal distress disclosure, providing immediate helpline directions (Be There, NNAF).
+*   **Dynamic Auth States:** Wized/Webflow state management dynamically toggles UI elements based on user login state and course progress (e.g., swapping "Get Started" for "Resume Learning"). Referral tracking captures `?referral=` URL parameters into cookies (Be There).
+*   **Form & Modal States:** Native HTML `<dialog>` / Popover API for cookie consent modals, preventing content flashing (Be There). Native Kajabi embedded forms with custom CSS overrides (Creator MH).
+*   **Interactive Accordions:** CSS-driven expand/collapse using SVG/Font Awesome icon swapping (`\f067` to `\f068`) with `display:none` toggling (Springboard, Creator MH).
+
+### Accessibility (a11y) & Responsive Adaptation
+*   **Vestibular & Motor Safety:** `@media (prefers-reduced-motion: reduce)` explicitly disables timeline hover transitions. Dedicated A11y widgets allowing users to toggle "Motion" and "High Contrast" (Be There).
+*   **Focus & Contrast:** Custom `focus-visible` outlines (`0.125rem solid #f65058`). Screen-reader-only text (`.sr-text` / `.u-screenreader`) for icon-only buttons (NNAF, Be There).
+*   **Hover-to-Tap Degradation:** JS detects touch/mobile viewports and switches hover galleries to tap-to-flip mechanisms or stacks content vertically (MS).
+*   **Device-Specific Hiding:** Specific sections hidden on certain devices (`hidden--mobile`, `hidden--desktop`) to preserve narrative pacing and prevent mobile clutter (Creator MH).
+
+## III. CONTENT & COPYWRITING
+
+### Voice, Tone & Archetypes
+*   **Unapologetic Activist (NNAF):** Grassroots agitator / Community caregiver. Urgent, empowering, direct. Rejects clinical detachment for activist solidarity.
+*   **Editorial Sage (MS, OG):** Thought leader / Creator. Positions the brand as a publisher. Empathetic, authoritative, narrative-driven.
+*   **Insider Clinical (Creator MH):** Authoritative, clinical yet deeply empathetic, insider-savvy. Blends clinical precision with creator-economy vernacular.
+*   **Empathetic Expert (Springboard, Be There):** Caregiver / Sage. Validates the user's struggle while projecting clinical competence. Warm, inviting, accessible.
+
+### Structural Syntax & Linguistic Patterns
+*   **Eyebrows:** Small, distinct introductory phrases above main headings to contextualize content before the headline strikes.
+*   **Highlighting:** Strategic use of `.highlight` classes on specific vowels/consonants in H1/H2s to draw the eye and create typographic tension (OG).
+*   **The "We know X but Y" Formula:** Bridges logic and emotion instantly (e.g., "We know a lot about neuroscience... but we also know they don’t mean much without empathy") (Springboard).
+*   **Inclusive/Collective Language:** "Folks", "loved ones", "Together, we’re organizing" (NNAF, MS).
+*   **Custom Bullets & Dividers:** Custom yellow dot icons for visual warmth (Be There). Custom horizontal rules (`<hr style="width: 25%;">`) to elegantly break up text blocks (Creator MH).
+
+### Conversion Mechanics & Friction Reduction
+*   **Frictionless Utility:** Explicitly highlights "Free of charge", "Less than 2 hours", "Self-paced". CTAs are direct and action-oriented (Be There, NNAF).
+*   **Confidentiality Focus:** Relentless emphasis on discretion and low barriers to entry. "You Do Not Need a Plan Before Contacting Us." "Request Confidential Call" (Creator MH).
+*   **Weaponized Testimonials:** Using social proof to directly attack the user's fear of the industry standard (e.g., "rather than someone who’s just there to book your appointment and take your money") (Springboard, Creator MH).
+*   **Contextual Warnings/Scarcity:** "This service is private, limited-capacity, and waitlists are case by case." (Creator MH).
+
+## IV. BRANDING & POSITIONING
+
+### Archetypes & Visual Signifiers
+*   **Rebel + Caregiver (NNAF):** DIY zine aesthetics, risograph textures, high-contrast color blocking. Signals disruption and grassroots authenticity.
+*   **Sage + Creator (MS, OG):** Variable fonts, parallax grids, interactive data visualizations, high-production video. Signals thought leadership and innovation.
+*   **Caregiver + Sage (Springboard, Creator MH):** Card-based grids, slate blues, minimalist SVG icons, soft clinical aesthetics. Signals safety, approachability, and medical competence.
+
+### Trust, Authority & Niche Positioning
+*   **Hard Data + Human Impact:** Pairing "needs assessment of over 1,200 youth" with intimate, documentary-style photography (NNAF, MS).
+*   **Chronological Milestones:** Slick carousels mapping specific years, awards, and physical locations to build undeniable, compounding credibility (Creator MH, OG).
+*   **Intersectionality:** Explicitly framing services at the crossroads of racial, economic, and reproductive/medical justice (NNAF, MS).
+*   **Hyper-Specialized Intersections:** Exact intersection of clinical mental health/substance use treatment and the digital creator/influencer economy (Creator MH).
+*   **The Anti-Clinical Clinic:** Positions itself as the antidote to the cold, rushed, traditional medical system (Springboard).
+
+## V. ELEMENT PLACEMENT & PAGE LITERATURE
+
+### The Universal Narrative Flow
+1.  **The Hook/Utility:** Crisis alert, Language toggle, immediate value prop.
+2.  **The Agitation/Context:** "When a Creator Is Struggling..." / "The hidden power of feelings" (Context setting).
+3.  **The Mechanism:** Interactive components (Hover galleries, Sticky-scroll lists, Symptom mapping).
+4.  **The Proof:** Synced carousels (Images + Quotes), Partner logo infinite scrolls, Chronological timelines.
+5.  **The Objection Handling:** 2-column Accordions handling clinical, logistical, and financial friction.
+6.  **The Action:** High-contrast, full-width CTA blocks with cinematic backgrounds.
+
+### Component Hierarchies
+*   **`fullwidth-feature` / `story-card` (MS):** Hero banner with scrim overlay; standard article preview (Image + Eyebrow + Title + 2-line Excerpt).
+*   **`DoublePromo` / `FiftyFiftyPromo` (NNAF):** 50/50 text/image splits with bold, flyer-style typography and documentary photography.
+*   **`card-callouts` (Springboard):** Icon + concise text vehicle for service delivery.
+*   **`block-twin-visuals` / `block-trio-visuals` (OG):** Custom CSS classes dictating complex, overlapping, or staggered grid placements using offset columns.
+*   **Interactive Galleries:** CSS/JS flip-cards that degrade gracefully from desktop `mouseenter` to mobile tap or vertical stacking (MS).
+*   **Custom Timelines:** Vertical lines with dots and cards, or horizontal Slick carousels, used to map processes or career histories (Creator MH, OG).
+
+## VI. TECHNOLOGY & INFRASTRUCTURE STACKS
+
+### CMS & Frameworks
+*   **Custom Webpack/Sage (WP):** Headless-like architecture, Algolia InstantSearch, Wized for complex state management (NNAF).
+*   **Custom WP Themes (ACF):** Heavy reliance on Advanced Custom Fields for modular block building, GSAP/Lenis for motion (OG, MS).
+*   **Webflow + Wized:** Native CSS grid/flexbox, Finsweet Attributes for A11y and Cookie Consent, Slick Carousel integrations (Be There).
+*   **Elementor Pro (WP):** Flexbox containers, Mega Menus, native motion effects, heavy inline CSS overrides (Springboard).
+*   **Kajabi:** Native storefronts, embedded forms, Wistia video backgrounds, RudderStack analytics (Creator MH).
+
+### Performance, Edge Mechanics & Tracking
+*   **Speculation Rules API:** `<script type="speculationrules">` for conservative document prefetching, enabling instant page transitions (NNAF, OG, Be There).
+*   **Asset Preloading:** `<link rel="preload" as="font">` and `<link rel="dns-prefetch">` to eliminate render-blocking delays. Native `loading="lazy"`, `decoding="async"`, and `contain-intrinsic-size` used to prevent Cumulative Layout Shift (CLS).
+*   **Analytics:** Enterprise (MS 1DS Metrics, Clarity, Fathom), Behavioral (Hotjar, RudderStack, GTM), Search (Algolia click-tracking).
+*   **Search & Forms:** Algolia InstantSearch, Gravity Forms + reCAPTCHA v3, Campaign Monitor, Contact Form 7.
+
+## VII. SEO & METADATA ARCHITECTURE
+
+### Technical SEO & Schema
+*   **JSON-LD Schema:** Comprehensive Yoast/custom graphs including `WebPage`, `Article`, `BreadcrumbList`, `WebSite`, `Organization` (with `sameAs`), and `Person`.
+*   **Hreflang & Localization:** Handled via URL structure (`/es/`, `/fr/`) and WPML cookie logic to serve correct language paths and alternate tags.
+*   **Semantic HTML5:** Strict adherence to `<header>`, `<main>`, `<article>`, `<aside>`, `<section>`, and hierarchical heading tags (`<h1>` through `<h6>`) to ensure crawler comprehension and screen-reader parity.
+
+### On-Page & OpenGraph
+*   **Title & Meta Descriptions:** Highly specific, keyword-rich, and benefit-driven across all properties.
+*   **OpenGraph/Twitter Cards:** Fully populated with specific aspect ratio images (1200x675 for articles, 421x421 for collections, 1920x1080 for campaigns) to ensure rich social sharing.
+*   **Robots Directives:** `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1` universally applied to maximize search engine visibility and snippet generation.
