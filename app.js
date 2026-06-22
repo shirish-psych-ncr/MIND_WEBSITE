@@ -605,3 +605,68 @@ function track(type, metadata = {}) {
 }
 
 document.addEventListener("DOMContentLoaded", initApp);
+
+// Mobile Menu Toggle Functionality
+function initMobileMenu() {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const panel = document.querySelector('.mobile-panel');
+  const overlay = document.querySelector('.mobile-panel-overlay');
+  const closeBtn = document.querySelector('.close-mobile-menu');
+  
+  if (!toggle || !panel) return;
+  
+  function openMenu() {
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeMenu() {
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  
+  toggle.addEventListener('click', openMenu);
+  if (overlay) overlay.addEventListener('click', closeMenu);
+  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+  
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && panel.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+}
+
+// Sticky Sub-nav on Scroll
+function initStickySubNav() {
+  const subNav = document.querySelector('.sub-nav');
+  if (!subNav) return;
+  
+  let lastScroll = window.scrollY;
+  const stickyPoint = 150;
+  
+  const update = () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > stickyPoint) {
+      subNav.classList.add('sticky');
+    } else {
+      subNav.classList.remove('sticky');
+    }
+    lastScroll = currentScroll;
+  };
+  
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+}
+
+// Add to initApp
+const originalInitApp = initApp;
+initApp = function() {
+  originalInitApp();
+  initMobileMenu();
+  initStickySubNav();
+}
