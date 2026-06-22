@@ -173,12 +173,7 @@ textarea {
 }
 
 .top-banner {
-  background: var(--secondary);
-  color: var(--ink);
-  padding: var(--space-sm) var(--space-md);
-  text-align: center;
-  font-size: var(--text-sm);
-  font-weight: 700;
+  display: none;
 }
 
 /* Hello Bar - Mission-critical announcements */
@@ -1211,6 +1206,16 @@ h3 {
     bottom: 150px;
     max-width: none;
   }
+  
+  /* Mobile: show hello-bar at bottom */
+  .hello-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 84;
+    top: auto;
+  }
 }
 
 /* ============================================
@@ -1230,12 +1235,19 @@ h3 {
 }
 
 /* ============================================
-   UTILITY BAR - Top quick access links
+   UTILITY BAR - Top quick access links (Desktop only)
    ============================================ */
 .utility-bar {
-  background: var(--bg-soft);
-  border-bottom: 1px solid var(--line);
-  padding: var(--space-xs) 0;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .utility-bar {
+    display: block;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--line);
+    padding: var(--space-xs) 0;
+  }
 }
 
 .utility-row {
