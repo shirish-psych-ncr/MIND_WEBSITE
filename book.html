@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Appointment | Mind Grace Clinic</title>
+    <meta name="description" content="Request a psychiatric or child development appointment in Greater Noida. Share only basic details, choose a preferred time, and continue by WhatsApp, email, or phone." />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Critical CSS fallback to ensure .hidden works even if styles.css fails -->
+    <style>
+      .hidden { display: none !important; }
+      /* Smooth scroll for better UX when form opens */
+      html { scroll-behavior: smooth; }
+      /* Optional: loading state styling */
+      [data-booking-form-wrap].loading::after {
+        content: "Loading form…";
+        display: block;
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+      }
+/* Container for responsive iframe with reliable internal scrolling */
+.iframe-container {
+  width: 100%;
+  max-height: 75vh; /* Slightly taller to accommodate full form + scrollbar */
+  min-height: 450px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow-y: auto; /* Enable vertical scroll */
+  overflow-x: hidden;
+  background: #fff;
+  scrollbar-gutter: stable both-edges; /* Prevents layout shift + reserves space */
+  padding-bottom: 4px; /* Prevents bottom scrollbar clip */
+  box-sizing: border-box;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 3200px; /* Tall enough for Google Form content + internal scroll */
+  min-height: 3200px; /* Force minimum to avoid collapse */
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure container itself can scroll if needed (rare edge case) */
+.iframe-container::-webkit-scrollbar {
+  width: 10px;
+}
+.iframe-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.iframe-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 5px;
+}
+.iframe-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .iframe-container {
+    max-height: 70vh;
+    min-height: 400px;
+    border-radius: 8px;
+    padding-bottom: 8px; /* Extra space for mobile scrollbars */
+  }
+  .iframe-container iframe {
+    height: 3400px; /* Slightly taller on mobile for safety */
+    min-height: 3400px;
+  }
+}
+
+/* Smooth fade-in when form appears */
+[data-booking-form-wrap]:not(.hidden) {
+  animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+    </style>
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Mind Grace Clinic",
+        "url": "https://www.dranitasharma.in/book.html",
+        "telephone": "+91-96678-63295",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "J-123, Gamma-2",
+          "addressLocality": "Greater Noida",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "201310",
+          "addressCountry": "IN"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="progress"><div class="progress-bar" data-progress></div></div>
+    <div class="top-banner">Routine booking only. If there is immediate danger, call 112 or go to the nearest hospital.</div>
+
+    <header class="site-header">
+      <div class="shell header-row">
+        <a class="brand-wrap" href="index.html">
+          <img class="logo" src="res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" />
+          <div>
+            <p class="brand-kicker">Booking</p>
+            <p class="brand-name">Request an appointment</p>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="process.html">Process</a>
+          <a href="faq.html">FAQ</a>
+          <a href="location.html">Location</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a class="button-outline" href="tel:+919667863295" data-track="call_click">Call</a>
+          <a class="button" href="https://wa.me/919667863295?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment." data-track="whatsapp_click">WhatsApp</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="content" class="section">
+      <div class="shell stack">
+        <section class="surface panel">
+          <p class="eyebrow">Start here</p>
+          <h1 style="margin-top:12px;">Book a confidential consultation in Greater Noida</h1>
+          <p class="lead" style="margin-top:16px;">
+            Share only the basics: your name, contact details, the main concern, and a preferred time.
+            After that, you can continue on WhatsApp, by email, or by phone.
+          </p>
+          <div class="cta-row" style="margin-top:18px;">
+            <span class="office-pill" data-office-status>Clinic hours update</span>
+            <a class="button-ghost" href="process.html">What to expect</a>
+            <a class="button-ghost" href="faq.html#confidentiality">Confidentiality FAQ</a>
+          </div>
+        </section>
+
+        <div class="booking-layout">
+          <section class="surface panel" data-qualification-gate>
+            <p class="eyebrow">Before you continue</p>
+            <h2 style="margin-top:12px;">Please confirm this is the right fit</h2>
+            <ul class="qualification-list" style="margin-top:18px;">
+              <li>We provide outpatient psychiatric care for adults, adolescents, and child development concerns.</li>
+              <li>This is not an emergency or crisis service. Immediate safety concerns should go to 112 or the nearest hospital.</li>
+              <li>The first consultation is usually around 45 minutes. Follow-up visits may be recommended depending on your needs.</li>
+              <li>Please keep this form brief. You do not need to share a full medical history here.</li>
+            </ul>
+            <div class="notice" style="margin-top:18px;">
+              If you prefer a faster route, you can also call or send a WhatsApp message during clinic hours.
+            </div>
+            <div class="cta-row" style="margin-top:18px;">
+              <button class="button" type="button" data-open-booking-form>I understand, continue</button>
+              <a class="button-ghost" href="https://wa.me/919667863295?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment.">Book on WhatsApp</a>
+            </div>
+          </section>
+
+          <div class="stack">
+           <!-- Form section: hidden by default, revealed via JS -->
+<section class="surface panel hidden" data-booking-form-wrap>
+  <div class="iframe-container">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfr5yRtw_iWqw6rnigQ-pgw86Q_6ipIScgzS5lqf0DIdpF0ag/viewform?embedded=true" 
+      width="100%" 
+      height="100%" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0"
+      title="Appointment Request Form"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      id="booking-iframe">
+      Loading…
+    </iframe>
+  </div>
+  <!-- Optional: fallback link if iframe fails -->
+  <p class="text-center" style="margin-top:12px; font-size:0.9rem;">
+    Form not loading? 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfr5yRtw_iWqw6rnigQ-pgw86Q_6ipIScgzS5lqf0DIdpF0ag/viewform" target="_blank" rel="noopener">Open in new tab</a>
+  </p>
+</section>
+            <aside class="surface-dark panel">
+              <p class="eyebrow gold">Useful before you book</p>
+              <div class="timeline" style="margin-top:18px;">
+                <div class="timeline-step">Most first visits focus on understanding the pattern, not rushing to a label.</div>
+                <div class="timeline-step">If this is a child-development concern, parent guidance may be part of the first conversation.</div>
+                <div class="timeline-step">You can bring past prescriptions or reports if you have them, but they are not required.</div>
+              </div>
+              <div class="notice" style="margin-top:18px; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.88);">
+                <strong style="color:white;">After-hours note:</strong> you can still complete the request form and send a WhatsApp message. Calls may be returned during the next open session.
+              </div>
+              <div class="cta-row" style="margin-top:18px;">
+                <a class="button" href="location.html">See location</a>
+                <a class="button-outline" href="faq.html">Read FAQ</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-grid">
+        <div>
+          <h3>Mind Grace Clinic</h3>
+          <p class="lead">Confidential outpatient psychiatric and child development support in Greater Noida.</p>
+        </div>
+        <div>
+          <h3>Plan your visit</h3>
+          <div class="stack">
+            <a href="process.html">What to expect</a>
+            <a href="faq.html">Questions before booking</a>
+            <a href="location.html">Location and landmarks</a>
+          </div>
+        </div>
+        <div>
+          <h3>If urgent help is needed</h3>
+          <div class="stack">
+            <a href="emergency.html">Emergency support</a>
+            <a href="tel:112">Call 112</a>
+            <a href="https://wa.me/919667863295">WhatsApp clinic</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="book.html">Book</a>
+      <a href="location.html">Location</a>
+    </nav>
+    
+    <!-- Load app.js first (preserves existing functionality) -->
+    <script src="app.js"></script>
+    
+    <!-- Fallback JS: ensures form toggle works even if app.js fails or is missing -->
+    <script>
+      
+	  document.addEventListener('DOMContentLoaded', function() {
+        const openBtn = document.querySelector('[data-open-booking-form]');
+        const formWrap = document.querySelector('[data-booking-form-wrap]');
+        
+        if (openBtn && formWrap) {
+          openBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove hidden class to show form
+            formWrap.classList.remove('hidden');
+            // After revealing the form
+if (openBtn && formWrap) {
+  openBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    formWrap.classList.remove('hidden');
+    formWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    // Optional: add loading state while iframe loads
+    const container = formWrap.querySelector('.iframe-container');
+    const iframe = document.getElementById('booking-iframe');
+    
+    if (container && iframe) {
+      container.style.opacity = '0.6';
+      iframe.addEventListener('load', () => {
+        container.style.opacity = '1';
+      }, { once: true });
+    }
+  });
+}
+            // Optional: scroll smoothly to the form
+            formWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Optional: update progress bar if present
+            const progressEl = document.querySelector('[data-progress]');
+            if (progressEl) {
+              progressEl.style.width = '100%';
+            }
+            
+            // Track event if analytics are set up
+            if (typeof gtag === 'function') {
+              gtag('event', 'form_opened', {
+                'event_category': 'booking',
+                'event_label': 'qualification_gate_passed'
+              });
+            }
+          });
+        }
+        
+        // Bonus: Preload iframe on hover/focus to reduce perceived load time
+        const iframe = formWrap?.querySelector('iframe');
+        if (iframe && !iframe.dataset.preloaded) {
+          openBtn?.addEventListener('mouseenter', () => {
+            if (iframe.src.indexOf('viewform?embedded=true') === -1) {
+              iframe.src = iframe.dataset.src || iframe.src;
+            }
+            iframe.dataset.preloaded = 'true';
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

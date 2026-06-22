@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Child Development Articles | Aasha Blog</title>
+    <meta name="description" content="Discover child development and parent guidance articles by concern, tag, and practical starting point." />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="progress"><div class="progress-bar" data-progress></div></div>
+
+    <header class="site-header">
+      <div class="shell header-row">
+        <a class="brand-wrap" href="../index.html">
+          <img class="logo" src="../res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic Logo" />
+          <div>
+            <p class="brand-kicker">Discovery Hub</p>
+            <p class="brand-name">Child Development Articles</p>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="../index.html">Home</a>
+          <a href="index.html">Blog</a>
+          <a href="../aasha.html">Aasha</a>
+          <a href="../book.html">Book</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="shell surface-soft panel">
+        <p class="eyebrow">Parent-first discovery engine</p>
+        <h1 style="margin-top:12px;">Start with what you are noticing at home, school, or in development</h1>
+        <p class="lead" style="margin-top:16px;">
+          This hub is designed for parent questions, concern-led traffic, and practical internal linking across
+          autism, speech delay, ADHD, sensory issues, and school support.
+        </p>
+        <div class="three-col" style="margin-top:20px;">
+          <div class="card">
+            <h3>Articles loaded</h3>
+            <p class="lead" style="margin-top:10px;" data-total-posts>0</p>
+          </div>
+          <div class="card">
+            <h3>Tags indexed</h3>
+            <p class="lead" style="margin-top:10px;" data-total-tags>0</p>
+          </div>
+          <div class="card">
+            <h3>Feed model</h3>
+            <p style="margin-top:10px;">Pinned fundamentals mixed with reshuffled discovery on every load.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="shell section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Section 1</p>
+            <h2 style="margin-top:10px;">Concern entry grid</h2>
+          </div>
+          <p class="notice" style="margin:0;">Each selection narrows the article feed by parent concern.</p>
+        </div>
+        <div class="filter-grid" data-symptom-grid></div>
+      </div>
+
+      <div class="shell section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">UX layer</p>
+            <h2 style="margin-top:10px;">Smart shortcuts</h2>
+          </div>
+          <p class="notice" style="margin:0;" data-active-state>Loading article discovery...</p>
+        </div>
+        <div class="filter-grid" data-discovery-controls></div>
+      </div>
+
+      <div class="shell section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Section 2</p>
+            <h2 style="margin-top:10px;">Explore articles</h2>
+          </div>
+          <p class="notice" style="margin:0;">Shuffled on each visit while keeping core parent guides visible.</p>
+        </div>
+        <div class="discovery-grid" data-feed-grid></div>
+      </div>
+
+      <div class="shell section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Section 3</p>
+            <h2 style="margin-top:10px;">Start here</h2>
+          </div>
+          <p class="notice" style="margin:0;">Pinned guidance to stabilize the discovery experience.</p>
+        </div>
+        <div class="discovery-grid" data-pinned-grid></div>
+      </div>
+
+      <div class="shell section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Section 4</p>
+            <h2 style="margin-top:10px;">Category clusters</h2>
+          </div>
+          <p class="notice" style="margin:0;">Problem clusters keep related articles linked together.</p>
+        </div>
+        <div class="filter-grid" data-cluster-grid></div>
+      </div>
+
+      <div class="shell section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Beginner mode</p>
+            <h2 style="margin-top:10px;">Not sure where to start?</h2>
+          </div>
+          <p class="notice" style="margin:0;">Beginner-tagged parent guides are reshuffled each time.</p>
+        </div>
+        <div class="discovery-grid" data-beginner-grid></div>
+      </div>
+
+      <div class="shell section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Section 5</p>
+            <h2 style="margin-top:10px;">You might also relate to...</h2>
+          </div>
+          <p class="notice" style="margin:0;">Random supporting reads keep the discovery loop active.</p>
+        </div>
+        <div class="discovery-grid" data-loop-grid></div>
+      </div>
+    </main>
+
+    <nav class="mobile-nav">
+      <a href="../index.html">Home</a>
+      <a href="../conditions.html">Conditions</a>
+      <a href="../book.html">Book</a>
+      <a href="../about.html">About</a>
+    </nav>
+
+    <script>
+      window.BLOG_DISCOVERY_CONFIG = {
+        sourceDir: "pages/child/",
+        posts: [
+          "pages/child/early-signs-of-autism.html",
+          "pages/child/school-concerns-and-adhd.html",
+          "pages/child/sensory-overload-at-home.html",
+          "pages/child/speech-delay-red-flags.html"
+        ],
+        pinned: [
+          "pages/child/speech-delay-red-flags.html",
+          "pages/child/early-signs-of-autism.html",
+          "pages/child/school-concerns-and-adhd.html"
+        ],
+        mostSearched: [
+          "pages/child/speech-delay-red-flags.html",
+          "pages/child/early-signs-of-autism.html",
+          "pages/child/sensory-overload-at-home.html"
+        ],
+        symptoms: ["speech-delay", "autism", "school", "adhd", "sensory", "behavior"],
+        clusters: [
+          { label: "Autism & Early Signs", tags: ["autism", "red-flags"] },
+          { label: "Speech & Communication", tags: ["speech-delay", "communication"] },
+          { label: "School & Focus", tags: ["school", "adhd", "focus"] },
+          { label: "Sensory & Regulation", tags: ["sensory", "behavior"] },
+          { label: "Parent Questions", tags: ["parent-guidance"] }
+        ]
+      };
+    </script>
+    <script src="blog-discovery.js"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

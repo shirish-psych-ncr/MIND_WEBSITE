@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Booking Confirmation | Mind Grace Clinic</title>
+    <meta name="description" content="Review your appointment request details and continue by WhatsApp, email, or phone with Mind Grace Clinic in Greater Noida." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="progress"><div class="progress-bar" data-progress></div></div>
+    <div class="top-banner">If the concern becomes urgent, use emergency services or the nearest hospital instead of waiting for routine confirmation.</div>
+
+    <header class="site-header">
+      <div class="shell header-row">
+        <a class="brand-wrap" href="index.html">
+          <img class="logo" src="res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" />
+          <div>
+            <p class="brand-kicker">Booking confirmation</p>
+            <p class="brand-name">Mind Grace Clinic</p>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="process.html">Process</a>
+          <a href="location.html">Location</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="section" data-thank-you>
+      <div class="shell stack">
+        <section class="surface panel">
+          <p class="eyebrow">Next step</p>
+          <h1 style="margin-top:12px;">Your appointment request summary is ready</h1>
+          <p class="lead" style="margin-top:16px;">
+            Thank you, <span data-booking-name>there</span>. Please use one of the options below so the clinic can coordinate your visit.
+          </p>
+        </section>
+
+        <section class="surface panel" data-thank-you-details>
+          <div class="two-col">
+            <div>
+              <h2>Request details</h2>
+              <p class="notice" style="margin-top:12px;">
+                Appointment ID: <strong data-appointment-id>MG-00000000</strong>
+              </p>
+              <p style="margin-top:16px;">Route: <strong data-booking-route>Mind Grace</strong></p>
+              <pre style="white-space:pre-wrap; margin-top:16px; background:#fbfcfc; border:1px solid var(--line); border-radius:18px; padding:18px;" data-booking-summary></pre>
+            </div>
+            <div>
+              <h2>Continue now</h2>
+              <div class="stack" style="margin-top:16px;">
+                <a class="button" data-whatsapp-summary href="https://wa.me/919667863295">Send on WhatsApp</a>
+                <a class="button-ghost" data-email-summary href="mailto:dranitasharma86@gmail.com">Send by email</a>
+                <a class="button-ghost" href="tel:+919667863295">Call the clinic</a>
+              </div>
+              <div class="notice" style="margin-top:18px;">
+                If you have already sent your request by WhatsApp or email, you do not need to repeat it.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="surface-soft panel hidden" data-thank-you-fallback>
+          <h2>No booking summary was found</h2>
+          <p class="lead" style="margin-top:12px;">
+            Please return to the booking page and submit the form again, or contact the clinic directly.
+          </p>
+          <div class="cta-row" style="margin-top:18px;">
+            <a class="button" href="book.html">Go back to booking</a>
+            <a class="button-ghost" href="https://wa.me/919667863295">WhatsApp clinic</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="book.html">Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <script src="app.js"></script>
+  </body>
+</html>
