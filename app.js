@@ -608,7 +608,7 @@ document.addEventListener("DOMContentLoaded", initApp);
 
 // Mobile Menu Toggle Functionality
 function initMobileMenu() {
-  const toggle = document.querySelector('.mobile-menu-toggle');
+  const toggle = document.querySelector('.mobile-toggle');
   const panel = document.querySelector('.mobile-panel');
   const overlay = document.querySelector('.mobile-panel-overlay');
   const closeBtn = document.querySelector('.close-mobile-menu');
