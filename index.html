@@ -146,7 +146,7 @@
 
     <header class="site-header">
       <!-- Top Contact Bar -->
-      <div class="contact-bar" style="background: rgba(255,255,255,0.08); padding: 8px 0; font-size: var(--text-xs); color: var(--grey);">
+      <div class="top-contact-bar" style="background: var(--white); border-bottom: 1px solid var(--powder-blue); padding: 6px 0; font-size: var(--text-xs); color: var(--grey);">
         <div class="shell" style="text-align: center;">Greater Noida | +91-96678-63295</div>
       </div>
       
@@ -155,7 +155,7 @@
         <a class="brand-wrap" href="index.html">
           <img class="logo" src="res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" loading="eager" fetchpriority="high" />
           <div>
-            <p class="brand-name" style="color: white; margin: 0;">Mind Grace Clinic</p>
+            <p class="brand-name">Mind Grace Clinic</p>
             <p class="doctor-name" style="color: var(--grey); margin: 4px 0 0; font-size: var(--text-sm);">Dr Anita Sharma MD</p>
           </div>
         </a>
@@ -216,56 +216,44 @@
     </div>
 
     <main id="content">
-      <!-- Hero Section with First Two Seconds Rule -->
-      <section class="hero" aria-labelledby="hero-heading">
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-heading" style="background: var(--shadow-grey);">
         <div class="shell split-hero">
-          <div class="surface-dark panel">
-            <div class="pill-row">
-              <span class="pill">Confidential care</span>
-              <span class="pill">Greater Noida clinic</span>
-              <span class="pill">Metro-accessible</span>
-            </div>
-
-            <p class="eyebrow gold" style="margin-top:24px;">Psychiatric care for adults and developmental support for children</p>
-            <h1 style="margin-top:14px;">Compassionate psychiatric care in Greater Noida</h1>
-            <p class="lead" style="margin-top:18px;">
-              If you are dealing with anxiety, low mood, overthinking, sleep trouble, focus concerns, or questions about your child’s development,
+          <div class="panel">
+            <p class="eyebrow" style="color: var(--petal-pink); margin-top:24px;">Psychiatric care for adults and developmental support for children</p>
+            <h1 style="margin-top:14px; color: white;">Compassionate psychiatric care in Greater Noida</h1>
+            <p class="lead" style="margin-top:18px; color: rgba(255,255,255,0.9);">
+              If you are dealing with anxiety, low mood, overthinking, sleep trouble, focus concerns, or questions about your child's development,
               you can begin with a clear, confidential first consultation.
             </p>
-            <p data-returning-copy style="margin-top:12px;">
+            <p style="margin-top:12px; color: rgba(255,255,255,0.8);">
               Serving Alpha-1, Delta-1, Pari Chowk, Knowledge Park, and surrounding Greater Noida areas.
             </p>
 
             <div class="cta-row" style="margin-top:22px;">
               <a class="button" href="book.html" data-track="cta_click">Book appointment</a>
-              <a class="button-outline" href="process.html" data-track="cta_click">What to expect</a>
+              <a class="button-outline" href="process.html" data-track="cta_click" style="border-color: var(--powder-blue); color: white;">What to expect</a>
             </div>
 
             <div class="three-col" style="margin-top:28px;">
-              <div class="kpi">
-                <p class="kpi-title">Adults</p>
-                <p class="kpi-copy">Anxiety, panic, mood changes, sleep concerns, adult ADHD, and related stress patterns.</p>
+              <div class="kpi" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">
+                <p class="kpi-title" style="color: var(--petal-pink);">Adults</p>
+                <p class="kpi-copy" style="color: rgba(255,255,255,0.75);">Anxiety, panic, mood changes, sleep concerns, adult ADHD, and related stress patterns.</p>
               </div>
-              <div class="kpi">
-                <p class="kpi-title">Children</p>
-                <p class="kpi-copy">Autism, speech delay, school concerns, sensory needs, and parent guidance.</p>
+              <div class="kpi" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">
+                <p class="kpi-title" style="color: var(--petal-pink);">Children</p>
+                <p class="kpi-copy" style="color: rgba(255,255,255,0.75);">Autism, speech delay, school concerns, sensory needs, and parent guidance.</p>
               </div>
-              <div class="kpi">
-                <p class="kpi-title">Visit style</p>
-                <p class="kpi-copy">Calm, structured, and practical, with treatment options explained in plain language.</p>
+              <div class="kpi" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">
+                <p class="kpi-title" style="color: var(--petal-pink);">Visit style</p>
+                <p class="kpi-copy" style="color: rgba(255,255,255,0.75);">Calm, structured, and practical, with treatment options explained in plain language.</p>
               </div>
             </div>
           </div>
 
           <div class="stack">
-            <div class="surface hero-media block-single-visuals">
+            <div class="hero-media block-single-visuals" style="background: white; border-radius: var(--radius-xl); overflow: hidden;">
               <img src="res/Dr_Anita_Sharma_Personal_Photo.jpg" alt="Dr Anita Sharma in a professional clinic portrait" loading="eager" fetchpriority="high" decoding="async" />
-              <div class="hero-media-copy">
-                <strong>Clear guidance. Respectful pace. Thoughtful treatment planning.</strong>
-                <p style="margin:8px 0 0; color:var(--ink-soft);">
-                  Adult psychiatry, child development support, and parent guidance in one clinical ecosystem.
-                </p>
-              </div>
             </div>
             <div class="two-col block-twin-visuals">
               <div class="image-card">
@@ -280,12 +268,11 @@
           </div>
         </div>
       </section>
-
       <section class="section">
-        <div class="shell surface panel">
+        <div class="shell panel" style="background: var(--white);">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Start with the concern</p>
+              <p class="eyebrow">Common reasons for visiting</p>
               <h2 style="margin-top:12px;">Common reasons people reach out</h2>
             </div>
           </div>
@@ -303,7 +290,7 @@
 
       <section class="section">
         <div class="shell two-col">
-          <div class="surface panel">
+          <div class="panel" style="background: var(--white);">
             <p class="eyebrow">How care begins</p>
             <h2 style="margin-top:12px;">A simpler first-visit path</h2>
             <div class="timeline" style="margin-top:18px;">
@@ -317,7 +304,7 @@
             </div>
           </div>
 
-          <div class="surface-soft panel">
+          <div class="panel" style="background: var(--icy-aqua);">
             <p class="eyebrow">Easy to reach</p>
             <h2 style="margin-top:12px;">Greater Noida location support</h2>
             <ul class="icon-list" style="margin-top:18px;">
@@ -336,8 +323,8 @@
 
       <section class="section">
         <div class="shell two-col">
-          <div class="surface-dark panel">
-            <p class="eyebrow gold">Mind Grace Clinic</p>
+          <div class="panel" style="background: var(--shadow-grey); color: white;">
+            <p class="eyebrow" style="color: var(--petal-pink);">Mind Grace Clinic</p>
             <h2 style="margin-top:12px;">Adult psychiatry</h2>
             <ul class="icon-list" style="margin-top:18px;">
               <li>Psychiatric consultation and diagnosis</li>
@@ -349,7 +336,7 @@
               <a class="button-ghost" href="mind-grace.html">About Mind Grace</a>
             </div>
           </div>
-          <div class="surface panel">
+          <div class="panel" style="background: var(--white);">
             <p class="eyebrow">Aasha Early Intervention</p>
             <h2 style="margin-top:12px;">Child development support</h2>
             <ul class="icon-list" style="margin-top:18px;">
@@ -365,7 +352,7 @@
       </section>
 
       <section class="section">
-        <div class="shell surface panel">
+        <div class="shell panel" style="background: var(--white);">
           <div class="section-head">
             <div>
               <p class="eyebrow">Learn more</p>
@@ -421,9 +408,6 @@
       </div>
     </footer>
 
-    <div class="sticky-cta" data-sticky-cta>
-      <a class="button" href="book.html">Book appointment</a>
-    </div>
 
     <div class="consent" data-consent>
       <strong>Privacy note</strong>
@@ -457,12 +441,6 @@
       </div>
     </div>
 
-    <nav class="mobile-nav" aria-label="Mobile">
-      <a href="index.html">Home</a>
-      <a href="faq.html">FAQ</a>
-      <a href="book.html">Book</a>
-      <a href="location.html">Location</a>
-    </nav>
     <script src="app.js"></script>
   </body>
 </html>
