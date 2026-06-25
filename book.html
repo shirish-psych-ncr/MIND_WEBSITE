@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
     
     <!-- Critical CSS fallback to ensure .hidden works even if styles.css fails -->
-    <style>
+    <link rel="stylesheet" href="css-tools/tools-book.css" />
       .hidden { display: none !important; }
       /* Smooth scroll for better UX when form opens */
       html { scroll-behavior: smooth; }
@@ -88,6 +88,9 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
+  </head>
+  </head>
+  </head>
         "@type": "MedicalBusiness",
         "name": "Mind Grace Clinic",
         "url": "https://www.dranitasharma.in/book.html",
@@ -250,71 +253,8 @@
       <a href="location.html">Location</a>
     </nav>
     
-    <!-- Load app.js first (preserves existing functionality) -->
+
     <script src="app.js"></script>
-    
-    <!-- Fallback JS: ensures form toggle works even if app.js fails or is missing -->
-    <script>
-      
-	  document.addEventListener('DOMContentLoaded', function() {
-        const openBtn = document.querySelector('[data-open-booking-form]');
-        const formWrap = document.querySelector('[data-booking-form-wrap]');
-        
-        if (openBtn && formWrap) {
-          openBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove hidden class to show form
-            formWrap.classList.remove('hidden');
-            // After revealing the form
-if (openBtn && formWrap) {
-  openBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    formWrap.classList.remove('hidden');
-    formWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    
-    // Optional: add loading state while iframe loads
-    const container = formWrap.querySelector('.iframe-container');
-    const iframe = document.getElementById('booking-iframe');
-    
-    if (container && iframe) {
-      container.style.opacity = '0.6';
-      iframe.addEventListener('load', () => {
-        container.style.opacity = '1';
-      }, { once: true });
-    }
-  });
-}
-            // Optional: scroll smoothly to the form
-            formWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            
-            // Optional: update progress bar if present
-            const progressEl = document.querySelector('[data-progress]');
-            if (progressEl) {
-              progressEl.style.width = '100%';
-            }
-            
-            // Track event if analytics are set up
-            if (typeof gtag === 'function') {
-              gtag('event', 'form_opened', {
-                'event_category': 'booking',
-                'event_label': 'qualification_gate_passed'
-              });
-            }
-          });
-        }
-        
-        // Bonus: Preload iframe on hover/focus to reduce perceived load time
-        const iframe = formWrap?.querySelector('iframe');
-        if (iframe && !iframe.dataset.preloaded) {
-          openBtn?.addEventListener('mouseenter', () => {
-            if (iframe.src.indexOf('viewform?embedded=true') === -1) {
-              iframe.src = iframe.dataset.src || iframe.src;
-            }
-            iframe.dataset.preloaded = 'true';
-          });
-        }
-      });
-    </script>
+    <script src="js/tools-book.js"></script>
   </body>
 </html>
