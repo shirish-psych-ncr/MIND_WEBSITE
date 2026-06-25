@@ -212,7 +212,23 @@ textarea {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Top Contact Bar - subtle grey text above header */
+.top-contact-bar {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--grey);
+  font-size: var(--text-xs);
+  padding: var(--space-xs) 0;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
 .shell {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* Container alias for shell */
+.container {
   width: min(var(--max), calc(100% - 32px));
   margin: 0 auto;
 }
@@ -225,13 +241,21 @@ textarea {
   padding: 16px 0;
 }
 
-.brand-kicker {
-  margin: 0 0 4px;
-  color: var(--primary);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-wrap .logo {
+  height: 48px;
+  width: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .brand-name {
@@ -239,6 +263,15 @@ textarea {
   color: white;
   font-size: 22px;
   font-weight: 700;
+  line-height: 1.2;
+}
+
+.doctor-name {
+  margin: 0;
+  color: var(--powder-blue);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
 .nav {
@@ -247,19 +280,65 @@ textarea {
   gap: 22px;
 }
 
+/* Nav menu for new class naming */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
 .nav a,
-.nav button {
+.nav button,
+.nav-link {
   color: rgba(255, 255, 255, 0.88);
   font-size: var(--text-sm);
   background: none;
   border: 0;
   cursor: pointer;
   transition: color 0.15s ease;
+  text-decoration: none;
 }
 
 .nav a:hover,
-.nav button:hover {
+.nav button:hover,
+.nav-link:hover {
   color: white;
+}
+
+/* Primary button in nav */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 var(--space-lg);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  background: var(--petal-pink);
+  color: var(--shadow-grey);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  color: var(--shadow-grey);
+}
+
+/* Mobile toggle button */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm);
+  color: white;
+  font-size: 24px;
 }
 
 /* Focus states for accessibility */
@@ -353,6 +432,22 @@ textarea {
 
 .hero {
   padding: var(--space-3xl) 0;
+  background: var(--shadow-grey);
+  color: var(--white);
+}
+
+.hero .eyebrow {
+  color: var(--petal-pink);
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+  color: var(--white);
+}
+
+.hero .lead {
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .hero-grid {
@@ -532,6 +627,22 @@ h3 {
 
 .section {
   padding: var(--space-3xl) 0;
+  background: var(--white);
+}
+
+/* Alternating section backgrounds using Icy Aqua */
+.section:nth-of-type(even) {
+  background: var(--icy-aqua);
+}
+
+/* Override for sections that should stay white */
+.section.bg-white {
+  background: var(--white);
+}
+
+/* Override for sections that should be Icy Aqua */
+.section.bg-aqua {
+  background: var(--icy-aqua);
 }
 
 .section + .section {
@@ -674,11 +785,27 @@ h3 {
   display: none !important;
 }
 
-.footer {
+.footer,
+.site-footer {
   margin-top: 48px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: var(--shadow-grey);
   color: var(--white);
+}
+
+.footer h3,
+.site-footer h3 {
+  color: var(--white);
+}
+
+.footer a,
+.site-footer a {
+  color: var(--powder-blue);
+}
+
+.footer a:hover,
+.site-footer a:hover {
+  color: var(--petal-pink);
 }
 
 .footer-grid {
@@ -1175,8 +1302,13 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .nav {
+  .nav,
+  .nav-menu {
     display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
   }
 
   .header-actions .button-outline {
