@@ -146,42 +146,35 @@
 
     <header class="site-header">
       <!-- Top Contact Bar -->
-      <div class="top-contact-bar" style="background: var(--white); border-bottom: 1px solid var(--powder-blue); padding: 6px 0; font-size: var(--text-xs); color: var(--grey);">
-        <div class="shell" style="text-align: center;">Greater Noida | +91-96678-63295</div>
+      <div class="top-contact-bar">
+        <div class="container">Greater Noida | +91-96678-63295</div>
       </div>
       
-      <!-- Main Navigation Header -->
-      <div class="shell header-row">
+      <div class="container header-row">
         <a class="brand-wrap" href="index.html">
           <img class="logo" src="res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" loading="eager" fetchpriority="high" />
-          <div>
+          <div class="brand-text">
             <p class="brand-name">Mind Grace Clinic</p>
-            <p class="doctor-name" style="color: var(--grey); margin: 4px 0 0; font-size: var(--text-sm);">Dr Anita Sharma MD</p>
+            <p class="doctor-name">Dr Anita Sharma MD</p>
           </div>
         </a>
         
-        <!-- Desktop Contextual Nav -->
-        <nav class="nav desktop-nav" aria-label="Primary">
-          <a href="about.html">About</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="services.html">Services</a>
-          <a href="process.html">Process</a>
-          <a href="resources.html">Resources</a>
-          <a href="faq.html">FAQ</a>
-          <a href="location.html">Location</a>
-          <a href="blog/index.html">Blog</a>
-        </nav>
-        
-        <div class="header-actions">
-          <a class="button" data-track="cta_click" href="book.html">Book Appointment</a>
-        </div>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-panel">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+        <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span>&#9776;</span>
         </button>
+
+        <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="gallery.html">Gallery</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="process.html">Process</a>
+          <a class="nav-link" href="resources.html">Resources</a>
+          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="location.html">Location</a>
+          <a class="nav-link" href="blog/index.html">Blog</a>
+          <a class="btn-primary" href="book.html">Book Appointment</a>
+        </nav>
       </div>
     </header>
     
@@ -217,42 +210,42 @@
 
     <main id="content">
       <!-- Hero Section -->
-      <section class="hero" aria-labelledby="hero-heading" style="background: var(--shadow-grey);">
+      <section class="hero" aria-labelledby="hero-heading">
         <div class="shell split-hero">
           <div class="panel">
-            <p class="eyebrow" style="color: var(--petal-pink); margin-top:24px;">Psychiatric care for adults and developmental support for children</p>
-            <h1 style="margin-top:14px; color: white;">Compassionate psychiatric care in Greater Noida</h1>
-            <p class="lead" style="margin-top:18px; color: rgba(255,255,255,0.9);">
+            <p class="eyebrow">Psychiatric care for adults and developmental support for children</p>
+            <h1>Compassionate psychiatric care in Greater Noida</h1>
+            <p class="lead">
               If you are dealing with anxiety, low mood, overthinking, sleep trouble, focus concerns, or questions about your child's development,
               you can begin with a clear, confidential first consultation.
             </p>
-            <p style="margin-top:12px; color: rgba(255,255,255,0.8);">
+            <p>
               Serving Alpha-1, Delta-1, Pari Chowk, Knowledge Park, and surrounding Greater Noida areas.
             </p>
 
-            <div class="cta-row" style="margin-top:22px;">
+            <div class="cta-row">
               <a class="button" href="book.html" data-track="cta_click">Book appointment</a>
-              <a class="button-outline" href="process.html" data-track="cta_click" style="border-color: var(--powder-blue); color: white;">What to expect</a>
+              <a class="button-outline" href="process.html" data-track="cta_click">What to expect</a>
             </div>
 
-            <div class="three-col" style="margin-top:28px;">
-              <div class="kpi" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">
-                <p class="kpi-title" style="color: var(--petal-pink);">Adults</p>
-                <p class="kpi-copy" style="color: rgba(255,255,255,0.75);">Anxiety, panic, mood changes, sleep concerns, adult ADHD, and related stress patterns.</p>
+            <div class="three-col">
+              <div class="kpi">
+                <p class="kpi-title">Adults</p>
+                <p class="kpi-copy">Anxiety, panic, mood changes, sleep concerns, adult ADHD, and related stress patterns.</p>
               </div>
-              <div class="kpi" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">
-                <p class="kpi-title" style="color: var(--petal-pink);">Children</p>
-                <p class="kpi-copy" style="color: rgba(255,255,255,0.75);">Autism, speech delay, school concerns, sensory needs, and parent guidance.</p>
+              <div class="kpi">
+                <p class="kpi-title">Children</p>
+                <p class="kpi-copy">Autism, speech delay, school concerns, sensory needs, and parent guidance.</p>
               </div>
-              <div class="kpi" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">
-                <p class="kpi-title" style="color: var(--petal-pink);">Visit style</p>
-                <p class="kpi-copy" style="color: rgba(255,255,255,0.75);">Calm, structured, and practical, with treatment options explained in plain language.</p>
+              <div class="kpi">
+                <p class="kpi-title">Visit style</p>
+                <p class="kpi-copy">Calm, structured, and practical, with treatment options explained in plain language.</p>
               </div>
             </div>
           </div>
 
           <div class="stack">
-            <div class="hero-media block-single-visuals" style="background: white; border-radius: var(--radius-xl); overflow: hidden;">
+            <div class="hero-media block-single-visuals">
               <img src="res/Dr_Anita_Sharma_Personal_Photo.jpg" alt="Dr Anita Sharma in a professional clinic portrait" loading="eager" fetchpriority="high" decoding="async" />
             </div>
             <div class="two-col block-twin-visuals">
@@ -269,11 +262,11 @@
         </div>
       </section>
       <section class="section">
-        <div class="shell panel" style="background: var(--white);">
+        <div class="shell panel">
           <div class="section-head">
             <div>
               <p class="eyebrow">Common reasons for visiting</p>
-              <h2 style="margin-top:12px;">Common reasons people reach out</h2>
+              <h2>Common reasons people reach out</h2>
             </div>
           </div>
           <div class="card-grid">
@@ -282,7 +275,7 @@
             <a class="card" href="conditions.html#adult-adhd"><h3>Focus and ADHD concerns</h3><p>Disorganization, procrastination, overwhelm, and task paralysis.</p></a>
             <a class="card" href="conditions.html#speech-language-delay"><h3>Speech and learning concerns</h3><p>Delayed talking, school concerns, or difficulty keeping up.</p></a>
           </div>
-          <div class="cta-row" style="margin-top:18px; justify-content:center;">
+          <div class="cta-row">
             <a class="button-ghost" href="testimonials.html">Read patient stories</a>
           </div>
         </div>
@@ -290,30 +283,30 @@
 
       <section class="section">
         <div class="shell two-col">
-          <div class="panel" style="background: var(--white);">
+          <div class="panel">
             <p class="eyebrow">How care begins</p>
-            <h2 style="margin-top:12px;">A simpler first-visit path</h2>
-            <div class="timeline" style="margin-top:18px;">
+            <h2>A simpler first-visit path</h2>
+            <div class="timeline">
               <div class="timeline-step">Share the main concern through the booking page, phone call, or WhatsApp.</div>
               <div class="timeline-step">Attend a first consultation focused on understanding the pattern clearly.</div>
               <div class="timeline-step">Leave with a practical plan for treatment, follow-up, or developmental support.</div>
             </div>
-            <div class="cta-row" style="margin-top:18px;">
+            <div class="cta-row">
               <a class="button" href="process.html">See the full process</a>
               <a class="button-ghost" href="approach.html">Our approach</a>
             </div>
           </div>
 
-          <div class="panel" style="background: var(--icy-aqua);">
+          <div class="panel">
             <p class="eyebrow">Easy to reach</p>
-            <h2 style="margin-top:12px;">Greater Noida location support</h2>
-            <ul class="icon-list" style="margin-top:18px;">
+            <h2>Greater Noida location support</h2>
+            <ul class="icon-list">
               <li>Alpha-1 Metro Station: around 8 minutes by road</li>
               <li>Delta-1 Metro Station: around 8 minutes by road</li>
               <li>Pari Chowk and Knowledge Park routes covered</li>
               <li>Schools, university, and corporate routes nearby</li>
             </ul>
-            <div class="cta-row" style="margin-top:18px;">
+            <div class="cta-row">
               <a class="button" href="location.html">Open location page</a>
               <a class="button-ghost" href="contact.html">Call or message</a>
             </div>
@@ -323,28 +316,28 @@
 
       <section class="section">
         <div class="shell two-col">
-          <div class="panel" style="background: var(--shadow-grey); color: white;">
-            <p class="eyebrow" style="color: var(--petal-pink);">Mind Grace Clinic</p>
-            <h2 style="margin-top:12px;">Adult psychiatry</h2>
-            <ul class="icon-list" style="margin-top:18px;">
+          <div class="panel">
+            <p class="eyebrow">Mind Grace Clinic</p>
+            <h2>Adult psychiatry</h2>
+            <ul class="icon-list">
               <li>Psychiatric consultation and diagnosis</li>
               <li>Medication planning when appropriate</li>
               <li>Sleep, mood, anxiety, adult ADHD, and stress support</li>
             </ul>
-            <div class="cta-row" style="margin-top:18px;">
+            <div class="cta-row">
               <a class="button" href="services.html#adult-services">Explore adult services</a>
               <a class="button-ghost" href="mind-grace.html">About Mind Grace</a>
             </div>
           </div>
-          <div class="panel" style="background: var(--white);">
+          <div class="panel">
             <p class="eyebrow">Aasha Early Intervention</p>
-            <h2 style="margin-top:12px;">Child development support</h2>
-            <ul class="icon-list" style="margin-top:18px;">
+            <h2>Child development support</h2>
+            <ul class="icon-list">
               <li>Speech therapy and occupational therapy pathways</li>
               <li>Autism, school concerns, sensory needs, and parent guidance</li>
               <li>Development-focused support under one roof</li>
             </ul>
-            <div class="cta-row" style="margin-top:18px;">
+            <div class="cta-row">
               <a class="button" href="services.html#child-services">Explore child services</a>
             </div>
           </div>
@@ -352,11 +345,11 @@
       </section>
 
       <section class="section">
-        <div class="shell panel" style="background: var(--white);">
+        <div class="shell panel">
           <div class="section-head">
             <div>
               <p class="eyebrow">Learn more</p>
-              <h2 style="margin-top:12px;">Helpful reading and tools</h2>
+              <h2>Helpful reading and tools</h2>
             </div>
           </div>
           <div class="card-grid">
@@ -411,17 +404,17 @@
 
     <div class="consent" data-consent>
       <strong>Privacy note</strong>
-      <p style="line-height:1.7;">This site stores basic browsing preferences on your device to support booking and navigation. Non-essential tracking stays off unless you enable it separately in the future.</p>
+      <p>This site stores basic browsing preferences on your device to support booking and navigation. Non-essential tracking stays off unless you enable it separately in the future.</p>
       <button class="button" data-consent-accept type="button">I understand</button>
     </div>
 
     <div class="overlay" data-search-overlay>
       <div class="overlay-card">
-        <div class="cta-row" style="justify-content:space-between;">
+        <div class="cta-row">
           <h3>Search the website</h3>
           <button class="button-ghost" data-close-search type="button">Close</button>
         </div>
-        <label class="label" style="margin-top:14px;">
+        <label class="label">
           Search conditions, services, FAQs, or pages
           <input class="search-box" data-search-input placeholder="Try anxiety, ADHD, location, fees, process..." />
         </label>
