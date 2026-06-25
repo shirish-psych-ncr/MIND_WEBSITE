@@ -1167,8 +1167,32 @@ h3 {
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--primary-dark);
+  color: var(--petal-pink);
   font-weight: 700;
+}
+
+/* Info cards for rebuilt infographics - white bg, subtle border */
+.info-card {
+  padding: var(--space-xl);
+  border: 1px solid var(--powder-blue);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.info-card h3 {
+  color: var(--steel-blue);
+  margin-bottom: var(--space-md);
+  font-size: var(--text-lg);
+}
+
+.info-card .icon-list {
+  color: var(--shadow-grey);
 }
 
 .share-row {
