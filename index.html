@@ -145,27 +145,9 @@
     <div class="top-banner" role="alert" aria-live="polite">If you need immediate safety support, call 112 or go to the nearest hospital. This website is for routine information and appointment planning.</div>
 
     <header class="site-header">
-      <!-- Hello Bar for mission-critical announcements -->
-      <div class="hello-bar" role="banner" aria-label="Important notice">
-        <span class="hello-bar-text">Serving Greater Noida, Alpha-1, Delta-1, Pari Chowk & Knowledge Park areas | Call +91-96678-63295</span>
-      </div>
-      
-      <!-- Top Utility Bar -->
-      <div class="utility-bar">
-        <div class="shell utility-row">
-          <div class="utility-left">
-            <span class="utility-label">Quick access:</span>
-            <a href="tel:+919667863295" class="utility-link" aria-label="Call clinic">Call</a>
-            <a href="contact.html" class="utility-link" aria-label="WhatsApp">WhatsApp</a>
-            <a href="emergency.html" class="utility-link urgency" aria-label="Emergency support">Emergency?</a>
-          </div>
-          <div class="utility-right">
-            <button type="button" data-open-search class="utility-link" aria-label="Search site">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-              <span class="sr-text">Search</span>
-            </button>
-          </div>
-        </div>
+      <!-- Top Contact Bar -->
+      <div class="contact-bar" style="background: rgba(255,255,255,0.08); padding: 8px 0; font-size: var(--text-xs); color: var(--grey);">
+        <div class="shell" style="text-align: center;">Greater Noida | +91-96678-63295</div>
       </div>
       
       <!-- Main Navigation Header -->
@@ -173,14 +155,14 @@
         <a class="brand-wrap" href="index.html">
           <img class="logo" src="res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" loading="eager" fetchpriority="high" />
           <div>
-            <p class="brand-kicker">Mind Grace Clinic + Aasha Early Intervention</p>
-            <p class="brand-name">Dr Anita Sharma MD</p>
+            <p class="brand-name" style="color: white; margin: 0;">Mind Grace Clinic</p>
+            <p class="doctor-name" style="color: var(--grey); margin: 4px 0 0; font-size: var(--text-sm);">Dr Anita Sharma MD</p>
           </div>
         </a>
         
         <!-- Desktop Contextual Nav -->
         <nav class="nav desktop-nav" aria-label="Primary">
-          <a href="about.html" aria-current="page">About</a>
+          <a href="about.html">About</a>
           <a href="gallery.html">Gallery</a>
           <a href="services.html">Services</a>
           <a href="process.html">Process</a>
@@ -191,7 +173,6 @@
         </nav>
         
         <div class="header-actions">
-          <a class="button-outline" data-track="call_click" href="tel:+919667863295">Call</a>
           <a class="button" data-track="cta_click" href="book.html">Book Appointment</a>
         </div>
         
@@ -201,17 +182,6 @@
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
         </button>
-      </div>
-      
-      <!-- Sticky Desktop Sub-nav (hidden on mobile) -->
-      <div class="sub-nav d-none d-lg-block" role="navigation" aria-label="Section links">
-        <div class="shell">
-          <a href="#adult-services">Adult Psychiatry</a>
-          <a href="#child-services">Child Development</a>
-          <a href="conditions.html">Conditions</a>
-          <a href="testimonials.html">Patient Stories</a>
-          <a href="fees.html">Fees</a>
-        </div>
       </div>
     </header>
     

@@ -1,3 +1,4 @@
+```gitignore
 # Compiled and build artifacts
 *.pyc
 __pycache__/
@@ -9,36 +10,27 @@ __pycache__/
 *.so
 *.a
 *.out
+
 # Dependencies
-.venv/
-venv/
 node_modules/
-.mypy_cache/
-.pytest_cache/
-dist/
-build/
-target/
-.gradle/
+venv/
+.venv/
+.env
+.env.local
+*.env.*
+
 # Logs and temp files
 *.log
 *.tmp
 *.swp
 *.swo
-# Environment
-.env
-.env.local
-*.env.*
-# Editors
-.vscode/
-.idea/
-# Coverage
-coverage/
-htmlcov/
-.coverage
-# System files
-.DS_Store
-Thumbs.db
-# Compressed files
+
+# Build directories
+dist/
+build/
+target/
+*.jar
+*.war
 *.zip
 *.gz
 *.tar
@@ -61,3 +53,23 @@ Thumbs.db
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Editors
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+```
+
+Wait, I need to reconsider. The only modified files are `index.html` and `styles.css`, which are source files, not build artifacts or dependencies. There are no compiled files, dependency directories, or temporary files in the changes provided.
+
+```gitignore
+
+```

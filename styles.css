@@ -80,8 +80,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--theme-background);
-  color: var(--theme-text);
+  background: var(--white);
+  color: var(--shadow-grey);
   font-family: Georgia, "Times New Roman", serif;
   font-size: var(--text-base);
   line-height: 1.6;
@@ -190,27 +190,25 @@ textarea {
 
 /* Hello Bar - Mission-critical announcements */
 .hello-bar {
-  background: var(--accent);
-  color: white;
-  padding: var(--space-xs) var(--space-md);
+  background: var(--petal-pink);
+  color: var(--shadow-grey);
+  padding: var(--space-sm) var(--space-md);
   text-align: center;
   font-size: var(--text-xs);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 
 .hello-bar a {
-  color: white;
+  color: var(--shadow-grey);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: static;
   z-index: 80;
-  backdrop-filter: blur(16px);
-  background: rgba(61, 102, 109, 0.92);
+  background: var(--shadow-grey);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -354,7 +352,7 @@ textarea {
 }
 
 .hero {
-  padding: 56px 0 36px;
+  padding: var(--space-3xl) 0;
 }
 
 .hero-grid {
@@ -368,32 +366,32 @@ textarea {
 .surface-soft,
 .surface-danger {
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .surface-dark {
   background: var(--shadow-grey);
   color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: none;
 }
 
 .surface {
   background: var(--white);
-  border: 1px solid var(--powder-blue);
+  border: none;
 }
 
 .surface-soft {
   background: var(--icy-aqua);
-  border: 1px solid var(--powder-blue);
+  border: none;
 }
 
 .surface-danger {
   background: var(--danger-soft);
-  border: 1px solid rgba(143, 29, 51, 0.16);
+  border: none;
 }
 
 .panel {
-  padding: 28px;
+  padding: var(--space-xl);
 }
 
 .eyebrow {
@@ -491,7 +489,7 @@ h3 {
 }
 
 .card {
-  padding: var(--space-lg);
+  padding: var(--space-xl);
   border: 1px solid var(--powder-blue);
   border-radius: var(--radius-lg);
   background: var(--white);
@@ -499,9 +497,9 @@ h3 {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   border-color: var(--steel-blue);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow);
 }
 
 /* Card focus state for accessibility */
@@ -537,7 +535,7 @@ h3 {
 }
 
 .section + .section {
-  padding-top: var(--space-2xl);
+  padding-top: var(--space-3xl);
 }
 
 .kpi {
@@ -679,7 +677,8 @@ h3 {
 .footer {
   margin-top: 48px;
   border-top: 1px solid var(--line);
-  background: white;
+  background: var(--shadow-grey);
+  color: var(--white);
 }
 
 .footer-grid {
@@ -1186,29 +1185,27 @@ h3 {
 
   /* REMOVED: Sticky bottom navigation bar - creates claustrophobic experience */
   .mobile-nav {
-    display: none;
+    display: none !important;
   }
 
   /* REMOVED: Sticky CTA button - obstructs content */
   .sticky-cta {
-    display: none;
+    display: none !important;
   }
 
   .consent {
     left: 16px;
     right: 16px;
-    bottom: 150px;
+    bottom: 16px;
     max-width: none;
+    position: relative;
+    transform: none;
   }
   
-  /* Mobile: show hello-bar at bottom */
+  /* Mobile: hello-bar removed from bottom - no fixed bars */
   .hello-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 84;
-    top: auto;
+    position: static;
+    z-index: auto;
   }
   
   /* Desktop: hello-bar stays at top (default) */
