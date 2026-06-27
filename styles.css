@@ -747,10 +747,10 @@
 
 /* 1. CONSTRAIN THE MASSIVE LOGO */
 .brand-wrap img, .logo, header img, .brand-wrap svg {
-  width: 48px !important;
-  height: 48px !important;
-  max-width: 48px !important;
-  max-height: 48px !important;
+  width: 110px !important;
+  height: 89px !important;
+  max-width: 170px !important;
+  max-height: 119px !important;
   object-fit: contain !important;
   flex-shrink: 0 !important;
 }
@@ -758,8 +758,8 @@
 /* 2. LOCK HEADER HEIGHT (Prevents it from stretching & blurring the page) */
 .site-header {
   height: auto !important;
-  min-height: 64px !important;
-  max-height: 80px !important;
+  min-height: 94px !important;
+  max-height: 130px !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
 }
@@ -768,7 +768,7 @@
 /* This bridges the gap between the new CSS and your existing JS */
 .mobile-nav-overlay, .mobile-panel-overlay {
   opacity: 0 !important;
-  visibility: hidden !important;
+  visibility: visible !important;
   pointer-events: none !important;
   transition: opacity 0.3s ease, visibility 0.3s ease !important;
 }
@@ -780,7 +780,7 @@
 
 .mobile-nav-panel, .mobile-panel {
   transform: translateX(100%) !important;
-  visibility: hidden !important;
+  visibility: visible !important;
   pointer-events: none !important;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s !important;
 }
@@ -790,12 +790,3 @@
   pointer-events: auto !important;
 }
 
-/* 4. FIX DESKTOP NAV VISIBILITY (In case JS toggled .is-open on desktop) */
-.nav-desktop, .nav, .nav-menu {
-  display: flex !important;
-}
-@media (max-width: 768px) {
-  .nav-desktop, .nav, .nav-menu {
-    display: none !important;
-  }
-}
