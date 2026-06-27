@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#AA44A0" />
-
+    
     <title>Psychiatric Care In Greater Noida | Mind Grace Clinic</title>
     <meta name="description" content="Compassionate psychiatric care and child development support in Greater Noida, with easy access from Alpha-1, Delta-1, Pari Chowk, and Knowledge Park." />
-
+    
     <!-- OpenGraph / Social Sharing -->
     <meta property="og:title" content="Psychiatric Care In Greater Noida | Mind Grace Clinic" />
     <meta property="og:description" content="Confidential care for anxiety, sleep concerns, mood changes, adult ADHD, and child development support in Greater Noida." />
-    <meta property="og:image" content="https://mindgraceclinic.com/res/Dr_Anita_Sharma_Personal_Photo.jpg" />
+    <meta property="og:image" content="/res/Dr_Anita_Sharma_Personal_Photo.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -19,44 +19,30 @@
     <meta property="og:site_name" content="Mind Grace Clinic" />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:type" content="website" />
-
+    
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Psychiatric Care In Greater Noida | Mind Grace Clinic" />
     <meta name="twitter:description" content="Confidential care for anxiety, sleep concerns, mood changes, adult ADHD, and child development support in Greater Noida." />
-    <meta name="twitter:image" content="https://mindgraceclinic.com/res/Dr_Anita_Sharma_Personal_Photo.jpg" />
-
+    <meta name="twitter:image" content="/res/Dr_Anita_Sharma_Personal_Photo.jpg" />
+    
     <!-- Robots & Indexing -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-
+    
     <!-- DNS Prefetch & Preconnect -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Critical CSS (above-the-fold only) -->
+    
+    <!-- Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    
+    <!-- Main Stylesheet -->
     <link rel="preload" as="style" href="styles.css" />
     <link rel="stylesheet" href="styles.css" />
-
-    <!-- Speculation Rules API -->
-    <script type="speculationrules">
-      {
-        "prefetch": [
-          {
-            "source": "document",
-            "where": {
-              "and": [
-                { "href_matches": ["/*"] },
-                { "not": { "href_matches": ["/admin/*", "/patient/*"] } }
-              ]
-            },
-            "eagerness": "moderate"
-          }
-        ]
-      }
-    </script>
-
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
@@ -75,34 +61,12 @@
               "postalCode": "201310",
               "addressCountry": "IN"
             },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 28.4910152,
-              "longitude": 77.5132324
-            },
-            "areaServed": ["Greater Noida", "Alpha-1", "Delta-1", "Pari Chowk", "Knowledge Park", "Surajpur"],
-            "sameAs": [
-              "https://www.facebook.com/mindgraceclinic",
-              "https://www.instagram.com/mindgraceclinic",
-              "https://www.linkedin.com/company/mindgraceclinic"
-            ]
+            "areaServed": ["Greater Noida", "Alpha-1", "Delta-1", "Pari Chowk", "Knowledge Park"]
           },
           {
             "@type": "Physician",
             "name": "Dr. Anita Sharma",
-            "medicalSpecialty": ["Psychiatry", "Child Development"],
-            "telephone": "+91-96678-63295",
-            "email": "contact@mindgraceclinic.com"
-          },
-          {
-            "@type": "WebSite",
-            "name": "Mind Grace Clinic",
-            "url": "https://mindgraceclinic.com",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://mindgraceclinic.com/?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
+            "medicalSpecialty": ["Psychiatry", "Child Development"]
           }
         ]
       }
@@ -110,114 +74,85 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to Main Content</a>
-
+    
     <!-- Emergency Banner -->
-    <div class="top-banner" role="alert" aria-live="polite">
-      <p>If you need immediate safety support, call 112 or go to the nearest hospital. This website is for routine information and appointment planning.</p>
+    <div class="alert alert-error" role="alert" style="margin: 0; border-radius: 0; text-align: center;">
+      If you need immediate safety support, call 112 or go to the nearest hospital. This website is for routine information and appointment planning.
     </div>
 
     <!-- Header -->
     <header class="site-header">
-      <!-- Top Contact Bar -->
-      <div class="top-contact-bar">
-        <div class="container">
-          <span>Greater Noida | <a href="tel:+919667863295" class="top-contact-link">+91-96678-63295</a></span>
-        </div>
-      </div>
-
       <div class="container header-row">
         <a class="brand-wrap" href="index.html" aria-label="Mind Grace Clinic Home">
-          <img class="logo" src="res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" width="110" height="89" loading="eager" fetchpriority="high" />
+          <img class="logo" src="res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" width="48" height="48" loading="eager" fetchpriority="high" />
           <div class="brand-text">
             <p class="brand-name">Mind Grace Clinic</p>
             <p class="doctor-name">Dr Anita Sharma MD</p>
           </div>
         </a>
-
-        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel" id="mobile-menu-toggle">
-          <span class="hamburger-icon" aria-hidden="true">&#9776;</span>
+        
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+          <span aria-hidden="true">&#9776;</span>
         </button>
 
-        <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+        <nav class="nav-desktop" aria-label="Main Navigation">
           <a class="nav-link" href="index.html" aria-current="page">Home</a>
           <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="gallery.html">Gallery</a>
           <a class="nav-link" href="services.html">Services</a>
           <a class="nav-link" href="process.html">Process</a>
           <a class="nav-link" href="resources.html">Resources</a>
           <a class="nav-link" href="faq.html">FAQ</a>
           <a class="nav-link" href="location.html">Location</a>
-          <a class="nav-link" href="blog/index.html">Blog</a>
-          <a class="btn btn-primary" href="book.html" data-track="cta_click">Book Appointment</a>
+          <a class="btn btn-primary" href="book-appointment.html">Book Appointment</a>
         </nav>
       </div>
     </header>
-
-    <!-- Mobile Navigation Overlay -->
+    
+    <!-- Mobile Navigation -->
     <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
-
-    <!-- Mobile Navigation Panel -->
-    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true" aria-labelledby="mobile-menu-heading">
+    <aside class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true" aria-labelledby="mobile-menu-heading">
       <div class="mobile-nav-header">
         <h2 id="mobile-menu-heading">Menu</h2>
-        <button type="button" class="mobile-nav-close" aria-label="Close menu" id="mobile-nav-close">
+        <button type="button" class="btn btn-ghost" aria-label="Close menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M18 6 6 18M6 6l12 12" />
+            <path d="M18 6 6 18M6 6l12 12"/>
           </svg>
         </button>
       </div>
-      <nav class="mobile-nav-list" role="navigation" aria-label="Mobile Navigation">
+      <nav class="mobile-nav-list" aria-label="Mobile Navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
         <a href="services.html">Services</a>
         <a href="process.html">Process</a>
         <a href="resources.html">Resources</a>
         <a href="faq.html">FAQ</a>
         <a href="location.html">Location</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact.html">Contact</a>
+        <a href="book-appointment.html">Book Appointment</a>
       </nav>
       <div class="mobile-nav-actions">
         <a class="btn btn-outline" href="tel:+919667863295">Call Now</a>
-        <a class="btn btn-primary" href="book.html">Book Appointment</a>
+        <a class="btn btn-primary" href="book-appointment.html">Book Appointment</a>
       </div>
-    </div>
+    </aside>
 
     <!-- Main Content -->
     <main id="main-content">
-      <!-- Breadcrumb -->
-      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-        <div class="container">
-          <ol class="breadcrumb-list">
-            <li class="breadcrumb-item">
-              <a href="index.html">Home</a>
-            </li>
-            <li class="breadcrumb-separator" aria-hidden="true">/</li>
-            <li class="breadcrumb-item breadcrumb-current" aria-current="page">Psychiatric Care</li>
-          </ol>
-        </div>
-      </nav>
-
       <!-- Hero Section -->
       <section class="hero" aria-labelledby="hero-heading">
         <div class="container">
-          <div class="split-hero">
-            <div class="hero-content">
+          <div class="hero-grid">
+            <div>
               <p class="eyebrow">Psychiatric care for adults and developmental support for children</p>
               <h1 id="hero-heading">Compassionate psychiatric care in Greater Noida</h1>
               <p class="lead">
                 If you are dealing with anxiety, low mood, overthinking, sleep trouble, focus concerns, or questions about your child's development,
                 you can begin with a clear, confidential first consultation.
               </p>
-              <p class="hero-subtext">
-                Serving Alpha-1, Delta-1, Pari Chowk, Knowledge Park, and surrounding Greater Noida areas.
-              </p>
+              <p>Serving Alpha-1, Delta-1, Pari Chowk, Knowledge Park, and surrounding Greater Noida areas.</p>
 
               <div class="cta-row">
-                <a class="btn btn-primary" href="book.html" data-track="cta_click">Book appointment</a>
-                <a class="btn btn-outline" href="process.html" data-track="cta_click">What to expect</a>
+                <a class="btn btn-primary" href="book-appointment.html">Book appointment</a>
+                <a class="btn btn-outline" href="process.html">What to expect</a>
               </div>
 
               <div class="kpi-grid">
@@ -236,74 +171,33 @@
               </div>
             </div>
 
-            <div class="hero-visuals stack">
-              <div class="hero-media">
-                <img
-                  src="res/Dr_Anita_Sharma_Personal_Photo.avif"
-                  srcset="
-                    res/Dr_Anita_Sharma_Personal_Photo-480w.avif 480w,
-                    res/Dr_Anita_Sharma_Personal_Photo-768w.avif 768w,
-                    res/Dr_Anita_Sharma_Personal_Photo-1200w.avif 1200w
-                  "
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  alt="Dr Anita Sharma in a professional clinic portrait"
-                  width="600"
-                  height="800"
-                  loading="eager"
-                  fetchpriority="high"
-                  decoding="async"
-                />
-              </div>
-
-              <div class="hero-infographics">
-                <div class="info-card info-card-adult">
-                  <h3>Adult Care</h3>
-                  <ul class="icon-list">
-                    <li>Anxiety &amp; panic management</li>
-                    <li>Depression &amp; burnout support</li>
-                    <li>ADHD assessment &amp; treatment</li>
-                    <li>Sleep &amp; stress concerns</li>
-                  </ul>
-                </div>
-                <div class="info-card info-card-child">
-                  <h3>Child Development</h3>
-                  <ul class="icon-list">
-                    <li>Autism spectrum support</li>
-                    <li>Speech &amp; language delay</li>
-                    <li>Learning difficulties</li>
-                    <li>Behavioral guidance</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="hero-image">
+              <img src="res/Dr_Anita_Sharma_Personal_Photo.jpg" alt="Dr Anita Sharma in a professional clinic portrait" width="600" height="800" loading="eager" fetchpriority="high" decoding="async" />
             </div>
           </div>
         </div>
       </section>
 
       <!-- Common Reasons Section -->
-      <section class="section section-light" aria-labelledby="reasons-heading">
+      <section class="section" aria-labelledby="reasons-heading">
         <div class="container">
           <div class="panel">
-            <div class="section-head">
-              <div>
-                <p class="eyebrow">Common reasons for visiting</p>
-                <h2 id="reasons-heading">Common reasons people reach out</h2>
-              </div>
-            </div>
-            <div class="card-grid">
-              <a class="card" href="conditions.html#anxiety" data-track="card_click">
+            <p class="eyebrow">Common reasons for visiting</p>
+            <h2 id="reasons-heading">Common reasons people reach out</h2>
+            <div class="grid-auto">
+              <a class="card" href="conditions.html#anxiety">
                 <h3 class="card-title">Anxiety and panic</h3>
                 <p class="card-text">Overthinking, racing thoughts, physical tension, or avoidance.</p>
               </a>
-              <a class="card" href="conditions.html#depression" data-track="card_click">
+              <a class="card" href="conditions.html#depression">
                 <h3 class="card-title">Low mood and burnout</h3>
                 <p class="card-text">Emotional heaviness, loss of interest, or feeling shut down.</p>
               </a>
-              <a class="card" href="conditions.html#adult-adhd" data-track="card_click">
+              <a class="card" href="conditions.html#adult-adhd">
                 <h3 class="card-title">Focus and ADHD concerns</h3>
                 <p class="card-text">Disorganization, procrastination, overwhelm, and task paralysis.</p>
               </a>
-              <a class="card" href="conditions.html#speech-language-delay" data-track="card_click">
+              <a class="card" href="conditions.html#speech-language-delay">
                 <h3 class="card-title">Speech and learning concerns</h3>
                 <p class="card-text">Delayed talking, school concerns, or difficulty keeping up.</p>
               </a>
@@ -316,27 +210,17 @@
       </section>
 
       <!-- Process & Location Section -->
-      <section class="section section-canvas" aria-labelledby="process-heading">
+      <section class="section section-alt" aria-labelledby="process-heading">
         <div class="container">
-          <div class="two-col">
+          <div class="grid-auto">
             <div class="panel">
               <p class="eyebrow">How care begins</p>
               <h2 id="process-heading">A simpler first-visit path</h2>
-              <div class="timeline">
-                <div class="timeline-line" aria-hidden="true"></div>
-                <div class="timeline-step">
-                  <div class="timeline-dot" aria-hidden="true"></div>
-                  <p>Share the main concern through the booking page, phone call, or WhatsApp.</p>
-                </div>
-                <div class="timeline-step">
-                  <div class="timeline-dot" aria-hidden="true"></div>
-                  <p>Attend a first consultation focused on understanding the pattern clearly.</p>
-                </div>
-                <div class="timeline-step">
-                  <div class="timeline-dot" aria-hidden="true"></div>
-                  <p>Leave with a practical plan for treatment, follow-up, or developmental support.</p>
-                </div>
-              </div>
+              <ul>
+                <li>Share the main concern through the booking page, phone call, or WhatsApp.</li>
+                <li>Attend a first consultation focused on understanding the pattern clearly.</li>
+                <li>Leave with a practical plan for treatment, follow-up, or developmental support.</li>
+              </ul>
               <div class="cta-row">
                 <a class="btn btn-primary" href="process.html">See the full process</a>
                 <a class="btn btn-ghost" href="approach.html">Our approach</a>
@@ -346,7 +230,7 @@
             <div class="panel">
               <p class="eyebrow">Easy to reach</p>
               <h2>Greater Noida location support</h2>
-              <ul class="icon-list">
+              <ul>
                 <li>Alpha-1 Metro Station: around 8 minutes by road</li>
                 <li>Delta-1 Metro Station: around 8 minutes by road</li>
                 <li>Pari Chowk and Knowledge Park routes covered</li>
@@ -362,13 +246,13 @@
       </section>
 
       <!-- Services Section -->
-      <section class="section section-light" aria-labelledby="services-heading">
+      <section class="section" aria-labelledby="services-heading">
         <div class="container">
-          <div class="two-col">
+          <div class="grid-auto">
             <div class="panel">
               <p class="eyebrow">Mind Grace Clinic</p>
               <h2 id="services-heading">Adult psychiatry</h2>
-              <ul class="icon-list">
+              <ul>
                 <li>Psychiatric consultation and diagnosis</li>
                 <li>Medication planning when appropriate</li>
                 <li>Sleep, mood, anxiety, adult ADHD, and stress support</li>
@@ -381,7 +265,7 @@
             <div class="panel">
               <p class="eyebrow">Aasha Early Intervention</p>
               <h2>Child development support</h2>
-              <ul class="icon-list">
+              <ul>
                 <li>Speech therapy and occupational therapy pathways</li>
                 <li>Autism, school concerns, sensory needs, and parent guidance</li>
                 <li>Development-focused support under one roof</li>
@@ -395,25 +279,21 @@
       </section>
 
       <!-- Resources Section -->
-      <section class="section section-canvas" aria-labelledby="resources-heading">
+      <section class="section section-alt" aria-labelledby="resources-heading">
         <div class="container">
           <div class="panel">
-            <div class="section-head">
-              <div>
-                <p class="eyebrow">Learn more</p>
-                <h2 id="resources-heading">Helpful reading and tools</h2>
-              </div>
-            </div>
-            <div class="card-grid">
-              <a class="card" href="blog/adult.html" data-track="card_click">
+            <p class="eyebrow">Learn more</p>
+            <h2 id="resources-heading">Helpful reading and tools</h2>
+            <div class="grid-auto">
+              <a class="card" href="blog/adult.html">
                 <h3 class="card-title">Adult mental health articles</h3>
                 <p class="card-text">Explore anxiety, overthinking, sleep, ADHD, burnout, and related concerns.</p>
               </a>
-              <a class="card" href="blog/children.html" data-track="card_click">
+              <a class="card" href="blog/children.html">
                 <h3 class="card-title">Child development articles</h3>
                 <p class="card-text">Explore autism, speech, behaviour, school concerns, and parent guidance topics.</p>
               </a>
-              <a class="card" href="resources.html" data-track="card_click">
+              <a class="card" href="resources.html">
                 <h3 class="card-title">Guided tools</h3>
                 <p class="card-text">Use breathing, grounding, and calming tools alongside clinical support.</p>
               </a>
@@ -426,38 +306,34 @@
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col footer-col-brand">
-            <h3>Mind Grace Clinic</h3>
+        <div class="grid-footer">
+          <div class="footer-col">
+            <h4>Mind Grace Clinic</h4>
             <p class="lead">Psychiatric care and child development support in Greater Noida with practical access from metro, school, university, and Knowledge Park routes.</p>
           </div>
           <div class="footer-col">
-            <h3>Explore</h3>
+            <h4>Explore</h4>
             <ul>
               <li><a href="about.html">About</a></li>
               <li><a href="services.html">Services</a></li>
               <li><a href="process.html">Process</a></li>
-              <li><a href="approach.html">Approach</a></li>
               <li><a href="faq.html">FAQ</a></li>
               <li><a href="location.html">Location</a></li>
-              <li><a href="blog/index.html">Blog</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h3>Contact and safety</h3>
+            <h4>Contact and safety</h4>
             <ul>
-              <li><a href="book.html">Book appointment</a></li>
+              <li><a href="book-appointment.html">Book appointment</a></li>
               <li><a href="tel:+919667863295">+91-96678-63295</a></li>
               <li><a href="mailto:contact@mindgraceclinic.com">contact@mindgraceclinic.com</a></li>
               <li><a href="emergency.html">Emergency support</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h3>Information</h3>
+            <h4>Information</h4>
             <ul>
               <li><a href="fees.html">Fees &amp; Payments</a></li>
-              <li><a href="mind-grace.html">Mind Grace Clinic</a></li>
               <li><a href="privacy.html">Privacy Policy</a></li>
               <li><a href="consent.html">Consent</a></li>
             </ul>
@@ -466,72 +342,7 @@
       </div>
     </footer>
 
-    <!-- Consent Banner -->
-    <div class="consent-banner" data-consent role="dialog" aria-label="Privacy consent">
-      <div class="container consent-banner-inner">
-        <div class="consent-content">
-          <strong class="consent-title">Privacy note</strong>
-          <p class="consent-text">This site stores basic browsing preferences on your device to support booking and navigation. Non-essential tracking stays off unless you enable it separately in the future.</p>
-        </div>
-        <button class="btn btn-primary" data-consent-accept type="button">I understand</button>
-      </div>
-    </div>
-
-    <!-- Search Modal -->
-    <div class="modal" data-search-overlay role="dialog" aria-modal="true" aria-label="Search the website">
-      <div class="modal-overlay" data-close-search aria-hidden="true"></div>
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Search the website</h3>
-          <button class="modal-close" data-close-search type="button" aria-label="Close search">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M18 6 6 18M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <form class="search-form" data-search-form role="search">
-          <label for="search-input">
-            <span class="sr-only">Search conditions, services, FAQs, or pages</span>
-          </label>
-          <input
-            id="search-input"
-            class="search-box"
-            data-search-input
-            type="search"
-            placeholder="Try anxiety, ADHD, location, fees, process..."
-            autocomplete="off"
-          />
-        </form>
-        <div class="search-results" data-search-results role="region" aria-live="polite"></div>
-      </div>
-    </div>
-
-    <!-- Exit Intent Modal -->
-    <div class="modal" data-exit-modal role="dialog" aria-modal="true" aria-label="Ready to take the next step?">
-      <div class="modal-overlay" data-exit-dismiss aria-hidden="true"></div>
-      <div class="modal-content">
-        <h3>Ready to take the next step?</h3>
-        <p class="lead">If you already know the concern, you can book directly. If you still need clarity, the process and FAQ pages can help first.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="book.html">Book now</a>
-          <a class="btn btn-ghost" href="process.html">Read the process</a>
-          <button class="btn btn-ghost" type="button" data-exit-dismiss>Keep browsing</button>
-        </div>
-      </div>
-    </div>
-
     <!-- JavaScript -->
     <script src="app.js" defer></script>
-
-    <!-- Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-          navigator.serviceWorker.register('/sw.js').catch(function () {
-            // PWA is an enhancement; silent fail is acceptable
-          });
-        });
-      }
-    </script>
   </body>
 </html>
