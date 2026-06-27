@@ -608,34 +608,47 @@ document.addEventListener("DOMContentLoaded", initApp);
 
 // Mobile Menu Toggle Functionality
 function initMobileMenu() {
-  const toggle = document.querySelector('.mobile-toggle');
-  const panel = document.querySelector('.mobile-panel');
-  const overlay = document.querySelector('.mobile-panel-overlay');
-  const closeBtn = document.querySelector('.close-mobile-menu');
-  
+  const toggle = document.querySelector("#mobile-toggle");
+  const panel = document.querySelector("#mobile-nav-panel");
+  const overlay = document.querySelector("#mobile-nav-overlay");
+  const closeBtn = document.querySelector("#mobile-close");
+
   if (!toggle || !panel) return;
-  
+
   function openMenu() {
-    panel.classList.add('open');
-    panel.setAttribute('aria-hidden', 'false');
-    toggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    panel.classList.add("is-open");
+    panel.setAttribute("aria-hidden", "false");
+    panel.removeAttribute("inert");
+    toggle.setAttribute("aria-expanded", "true");
+    if (overlay) {
+      overlay.classList.add("is-open");
+      overlay.setAttribute("aria-hidden", "false");
+      overlay.removeAttribute("inert");
+    }
+    document.body.style.overflow = "hidden";
   }
-  
+
   function closeMenu() {
-    panel.classList.remove('open');
-    panel.setAttribute('aria-hidden', 'true');
-    toggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    panel.classList.remove("is-open");
+    panel.setAttribute("aria-hidden", "true");
+    panel.setAttribute("inert", "");
+    toggle.setAttribute("aria-expanded", "false");
+    if (overlay) {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      overlay.setAttribute("inert", "");
+    }
+    document.body.style.overflow = "";
+    toggle.focus();
   }
-  
-  toggle.addEventListener('click', openMenu);
-  if (overlay) overlay.addEventListener('click', closeMenu);
-  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-  
+
+  toggle.addEventListener("click", openMenu);
+  if (overlay) overlay.addEventListener("click", closeMenu);
+  if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+
   // Close on escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && panel.classList.contains('open')) {
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && panel.classList.contains("is-open")) {
       closeMenu();
     }
   });
