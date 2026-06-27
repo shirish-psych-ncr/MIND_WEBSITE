@@ -1,55 +1,46 @@
-.gitignore
+```gitignore
 # Compiled and build artifacts
 *.pyc
 __pycache__/
 *.o
 *.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
-
-# Dependencies
-node_modules/
-venv/
-.venv/
-.env
-.env.local
-*.env.*
-
-# Build directories
 dist/
 build/
 target/
-*.min.js
-*.min.css
 
-# Logs and temporary files
+# Dependencies
+.venv/
+venv/
+node_modules/
+.julia/
+zig-cache/
+.deps/
+
+# Logs and temp files
 *.log
 *.tmp
 *.swp
 *.swo
 
-# OS generated files
+# Environment
+.env
+.env.local
+.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
 .DS_Store
 Thumbs.db
 
-# Coverage reports
+# Coverage
 coverage/
 htmlcov/
 .coverage
-
-# Editor specific
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# MyPy cache
-.mypy_cache/
-# PyTest cache
-.pytest_cache/
 
 # Compressed files
 *.zip
@@ -74,4 +65,4 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-
+```

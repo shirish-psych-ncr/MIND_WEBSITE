@@ -60,23 +60,50 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
     
-    <!-- Structured Data (Schema.org) -->
+    <!-- Structured Data (Schema.org) - Knowledge Graph -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "ImageObject",
+          "@id": "https://mindgracencr.in/#logo-image",
+          "url": "https://mindgracencr.in/res/Mind_Grace_Clinic_Logo.png",
+          "width": 512,
+          "height": 512,
+          "caption": "Mind Grace Clinic Logo"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://mindgracencr.in/#doctor-image",
+          "url": "https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg",
+          "width": 600,
+          "height": 800,
+          "caption": "Dr. Anita Sharma, Consultant Psychiatrist"
+        },
+        {
+          "@type": "ContactPoint",
+          "@id": "https://mindgracencr.in/#contact-point",
+          "telephone": "+919667863295",
+          "contactType": "appointments",
+          "availableLanguage": ["en", "hi"],
+          "areaServed": { "@type": "City", "name": "Greater Noida" }
+        },
+        {
           "@type": ["MedicalBusiness", "MedicalClinic"],
           "@id": "https://mindgracencr.in/#clinic",
           "name": "Mind Grace Clinic",
           "url": "https://mindgracencr.in/",
-          "logo": "https://mindgracencr.in/res/Mind_Grace_Clinic_Logo.png",
-          "image": "https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg",
+          "logo": { "@id": "https://mindgracencr.in/#logo-image" },
+          "image": { "@id": "https://mindgracencr.in/#doctor-image" },
           "telephone": "+919667863295",
           "email": "contact@mindgraceclinic.com",
           "priceRange": "₹₹",
+          "paymentAccepted": "Cash, UPI, Card",
+          "currenciesAccepted": "INR",
           "address": {
             "@type": "PostalAddress",
+            "@id": "https://mindgracencr.in/#address",
             "streetAddress": "Alpha 1, Greater Noida",
             "addressLocality": "Greater Noida",
             "addressRegion": "Uttar Pradesh",
@@ -85,8 +112,8 @@
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 28.474388,
-            "longitude": 77.503990
+            "latitude": 28.4744,
+            "longitude": 77.5040
           },
           "hasMap": "https://maps.google.com/?q=Mind+Grace+Clinic+Greater+Noida",
           "openingHoursSpecification": [
@@ -104,17 +131,64 @@
             }
           ],
           "areaServed": [
-            "Greater Noida", "Greater Noida West", "Noida", "Noida Extension",
-            "Knowledge Park I", "Knowledge Park II", "Pari Chowk", "Alpha I", "Alpha II",
-            "Beta I", "Beta II", "Gamma I", "Delta I"
+            { "@type": "City", "name": "Greater Noida" },
+            { "@type": "City", "name": "Greater Noida West" },
+            { "@type": "City", "name": "Noida" },
+            { "@type": "City", "name": "Noida Extension" }
           ],
+          "contactPoint": { "@id": "https://mindgracencr.in/#contact-point" },
           "sameAs": [
             "https://www.facebook.com/mindgraceclinic",
             "https://www.instagram.com/mindgraceclinic",
             "https://www.linkedin.com/company/mindgraceclinic"
           ],
           "founder": { "@id": "https://mindgracencr.in/#physician" },
-          "medicalSpecialty": ["Psychiatry", "Child Development"]
+          "medicalSpecialty": "Psychiatric",
+          "availableService": { "@id": "https://mindgracencr.in/#service-catalog" }
+        },
+        {
+          "@type": "OfferCatalog",
+          "@id": "https://mindgracencr.in/#service-catalog",
+          "name": "Medical Services",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Adult Psychiatry Services",
+              "itemListElement": [
+                { "@type": "MedicalTherapy", "name": "Psychiatric Consultation", "medicalSpecialty": "Psychiatric" },
+                { "@type": "MedicalTherapy", "name": "Medication Management", "medicalSpecialty": "Psychiatric" },
+                { "@type": "MedicalTherapy", "name": "Diagnostic Assessment", "medicalSpecialty": "Psychiatric" },
+                { "@type": "MedicalTherapy", "name": "Follow-up Consultation", "medicalSpecialty": "Psychiatric" }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Child Development Services",
+              "itemListElement": [
+                { "@type": "MedicalTherapy", "name": "Child Development Assessment", "medicalSpecialty": "Pediatric" },
+                { "@type": "MedicalTherapy", "name": "Autism Spectrum Assessment", "medicalSpecialty": "Pediatric" },
+                { "@type": "MedicalTherapy", "name": "Parent Guidance", "medicalSpecialty": "Pediatric" }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "MedicalCondition",
+          "@id": "https://mindgracencr.in/#condition-anxiety",
+          "name": "Anxiety Disorder",
+          "possibleTreatment": { "@type": "MedicalTherapy", "name": "Psychiatric Consultation" }
+        },
+        {
+          "@type": "MedicalCondition",
+          "@id": "https://mindgracencr.in/#condition-depression",
+          "name": "Depressive Disorder",
+          "possibleTreatment": { "@type": "MedicalTherapy", "name": "Psychiatric Consultation" }
+        },
+        {
+          "@type": "MedicalCondition",
+          "@id": "https://mindgracencr.in/#condition-adhd",
+          "name": "Adult ADHD",
+          "possibleTreatment": { "@type": "MedicalTherapy", "name": "Diagnostic Assessment" }
         },
         {
           "@type": "Physician",
@@ -124,11 +198,14 @@
           "jobTitle": "Consultant Psychiatrist",
           "gender": "Female",
           "worksFor": { "@id": "https://mindgracencr.in/#clinic" },
-          "knowsAbout": ["Adult Psychiatry", "Child Development", "ADHD", "Autism", "Anxiety", "Depression"],
-          "availableService": [
-            { "@type": "MedicalTherapy", "name": "Psychiatric Consultation" },
-            { "@type": "MedicalTherapy", "name": "Child Development Assessment" }
-          ]
+          "knowsAbout": ["Adult Psychiatry", "Child Development", "ADHD", "Autism Spectrum Disorder", "Anxiety Disorder", "Depressive Disorder"],
+          "availableLanguage": ["en", "hi"],
+          "medicalSpecialty": "Psychiatric",
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Medical Degree",
+            "recognizedBy": "Medical Council of India"
+          }
         },
         {
           "@type": "WebSite",
@@ -148,10 +225,13 @@
           "@id": "https://mindgracencr.in/#webpage",
           "url": "https://mindgracencr.in/",
           "name": "Psychiatrist in Greater Noida | Mind Grace Clinic",
-          "description": "Consult Dr Anita Sharma at Mind Grace Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care.",
+          "description": "Consult Dr. Anita Sharma at Mind Grace Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and evidence-based psychiatric care.",
           "isPartOf": { "@id": "https://mindgracencr.in/#website" },
-          "about": { "@id": "https://mindgracencr.in/#clinic" },
-          "breadcrumb": { "@id": "https://mindgracencr.in/#breadcrumb" }
+          "about": [{ "@id": "https://mindgracencr.in/#clinic" }, { "@id": "https://mindgracencr.in/#physician" }],
+          "breadcrumb": { "@id": "https://mindgracencr.in/#breadcrumb" },
+          "mainEntity": { "@id": "https://mindgracencr.in/#clinic" },
+          "lastReviewed": "2026-01-15",
+          "reviewedBy": { "@id": "https://mindgracencr.in/#physician" }
         },
         {
           "@type": "BreadcrumbList",
@@ -245,9 +325,9 @@
               <h1 id="hero-heading">Psychiatrist in Greater Noida for Adult Mental Health and Child Development Support</h1>
               
               <ul class="trust-signals">
-                <li>✓ Confidential</li>
-                <li>✓ Evidence-based</li>
-                <li>✓ Adult &amp; Child Psychiatry</li>
+                <li><span aria-hidden="true">✓</span> Confidential</li>
+                <li><span aria-hidden="true">✓</span> Evidence-based</li>
+                <li><span aria-hidden="true">✓</span> Adult &amp; Child Psychiatry</li>
               </ul>
 
               <p class="lead">
@@ -278,7 +358,11 @@
             </div>
 
             <div class="hero-image">
-              <img src="res/Dr_Anita_Sharma_Personal_Photo.jpg" alt="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Clinic" width="600" height="800" loading="eager" fetchpriority="high" decoding="async" itemprop="image" sizes="(max-width: 768px) 100vw, 600px" />
+              <picture>
+                <source type="image/avif" srcset="res/Dr_Anita_Sharma_Personal_Photo.avif" />
+                <source type="image/webp" srcset="res/Dr_Anita_Sharma_Personal_Photo.webp" />
+                <img src="res/Dr_Anita_Sharma_Personal_Photo.jpg" alt="Dr. Anita Sharma, Consultant Psychiatrist at Mind Grace Clinic, Greater Noida" width="600" height="800" loading="eager" fetchpriority="high" decoding="async" itemprop="image" sizes="(max-width: 768px) 100vw, 600px" style="aspect-ratio: 3/4; object-fit: cover;" />
+              </picture>
             </div>
           </div>
         </div>
@@ -417,13 +501,19 @@
     </div>
 
     <!-- Footer -->
-    <footer class="site-footer">
-      <h2 class="sr-only">Footer</h2>
+    <footer class="site-footer" role="contentinfo">
+      <h2 class="sr-only">Footer Navigation</h2>
       <div class="container">
         <div class="grid-footer">
           <div class="footer-col">
             <h3>Mind Grace Clinic</h3>
             <p class="lead">Psychiatric care and child development support in Greater Noida with practical access from metro, school, university, and Knowledge Park routes.</p>
+            <address>
+              <p>Alpha 1, Greater Noida, Uttar Pradesh 201310</p>
+              <p><a href="tel:+919667863295" rel="nofollow">+91 96678 63295</a></p>
+              <p><a href="mailto:contact@mindgraceclinic.com" rel="nofollow">contact@mindgraceclinic.com</a></p>
+            </address>
+            <p><small>Languages: English, Hindi</small></p>
           </div>
           <div class="footer-col">
             <h3>Services</h3>
@@ -431,7 +521,7 @@
               <li><a href="services.html#adult-services">Adult Psychiatry</a></li>
               <li><a href="services.html#child-services">Child Development</a></li>
               <li><a href="conditions.html">Conditions Treated</a></li>
-              <li><a href="what-to-expect.html">First Visit</a></li>
+              <li><a href="process.html">First Visit</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -447,16 +537,17 @@
             <h3>Contact &amp; Legal</h3>
             <ul>
               <li><a href="book-appointment.html">Book appointment</a></li>
-              <li><a href="tel:+919667863295" rel="nofollow">+91 96678 63295</a></li>
-              <li><a href="mailto:contact@mindgraceclinic.com" rel="nofollow">contact@mindgraceclinic.com</a></li>
-              <li><a href="location.html">Location</a></li>
+              <li><a href="location.html">Location & Directions</a></li>
               <li><a href="privacy.html">Privacy Policy</a></li>
               <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="consent.html">Consent</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
           <p>&copy; 2026 Mind Grace Clinic. All rights reserved.</p>
+          <p><small>Medical Council Registration: Verified upon request. This website is for informational purposes only and does not provide medical advice.</small></p>
         </div>
       </div>
     </footer>
