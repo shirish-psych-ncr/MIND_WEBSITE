@@ -38,26 +38,26 @@
   color-scheme: light dark;
 
   /* BRAND PRIMATIVES (Never used directly in components) */
-  --color-plum-50: #F6F2F5;
-  --color-plum-100: #E8DFE7;
-  --color-plum-200: #D4C4D1;
-  --color-plum-300: #B89FB0;
-  --color-plum-400: #9A758B;
-  --color-plum-500: #80506A;
-  --color-plum-600: #6B4C63;
-  --color-plum-700: #5E2A56;
-  --color-plum-800: #4A2344;
-  --color-plum-900: #3A1C36;
-  --color-plum-950: #1F0E1A;
+  --color-plum-50: #FFF0F5;
+  --color-plum-100: #FCE4EC;
+  --color-plum-200: #F8BBD9;
+  --color-plum-300: #F48FB1;
+  --color-plum-400: #EC407A;
+  --color-plum-500: #D63384;
+  --color-plum-600: #C2185B;
+  --color-plum-700: #A61E4D;
+  --color-plum-800: #880E4F;
+  --color-plum-900: #7A1B3F;
+  --color-plum-950: #4A1428;
   
   --color-rose-50: #FEF2F4;
   --color-rose-100: #FEE2E7;
   --color-rose-200: #FCC8D0;
   --color-rose-300: #F8A2B0;
   --color-rose-400: #F26F85;
-  --color-rose-500: #E84560;
-  --color-rose-600: #AA44A0;
-  --color-rose-700: #912F47;
+  --color-rose-500: #D63384;
+  --color-rose-600: #A61E4D;
+  --color-rose-700: #7A1B3F;
   
   --color-teal-50: #F0FDFA;
   --color-teal-100: #CCFBF1;
