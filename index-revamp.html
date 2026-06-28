@@ -1,19 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#6D3DF5" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4C28B8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="author" content="Mind Grace Clinic" />
+    <meta name="publisher" content="Mind Grace Clinic" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    
     <title>Mind Grace Clinic | Compassionate Psychiatric Care in Greater Noida</title>
-    <meta name="description" content="Compassionate psychiatric care and child development support in Greater Noida. Serving Alpha-1, Delta-1, Pari Chowk, and Knowledge Park areas." />
+    <meta name="description" content="Confidential, evidence-based psychiatric care for adults & child development support in Greater Noida. Serving Alpha-1, Delta-1, Pari Chowk & Knowledge Park areas." />
+    
+    <link rel="canonical" href="https://mindgracencr.in/" />
+    <link rel="alternate" hreflang="en-IN" href="https://mindgracencr.in/" />
+    <link rel="alternate" hreflang="x-default" href="https://mindgracencr.in/" />
     
     <!-- OpenGraph / Social Sharing -->
     <meta property="og:title" content="Mind Grace Clinic | Compassionate Psychiatric Care" />
-    <meta property="og:description" content="Confidential care for anxiety, sleep concerns, mood changes, adult ADHD, and child development support in Greater Noida." />
+    <meta property="og:description" content="Confidential, evidence-based care for anxiety, sleep concerns, mood changes, adult ADHD, and child development support in Greater Noida." />
     <meta property="og:image" content="res/Dr_Anita_Sharma_Personal_Photo.jpg" />
+    <meta property="og:image:secure_url" content="res/Dr_Anita_Sharma_Personal_Photo.jpg" />
+    <meta property="og:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Clinic" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
     <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:url" content="https://mindgraceclinic.com" />
+    <meta property="og:url" content="https://mindgracencr.in/" />
     <meta property="og:site_name" content="Mind Grace Clinic" />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:type" content="website" />
@@ -21,28 +34,66 @@
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mind Grace Clinic | Compassionate Psychiatric Care" />
-    <meta name="twitter:description" content="Confidential care for anxiety, sleep concerns, mood changes, adult ADHD, and child development support in Greater Noida." />
+    <meta name="twitter:description" content="Confidential, evidence-based care for anxiety, sleep concerns, mood changes, adult ADHD, and child development support in Greater Noida." />
     <meta name="twitter:image" content="res/Dr_Anita_Sharma_Personal_Photo.jpg" />
+    <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Clinic" />
     
-    <!-- Font Preloading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Robots & Indexing -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    
+    <!-- PWA / Mobile Web App -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Mind Grace Clinic" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" href="/res/apple-touch-icon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/res/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/res/favicon-16x16.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    
+    <!-- DNS Prefetch & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" /></noscript>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Main Stylesheet -->
     <link rel="preload" as="style" href="styles-revamp.css" />
     <link rel="stylesheet" href="styles-revamp.css" />
+    
+    <!-- Critical CSS Inline -->
+    <style>
+      /* Critical above-the-fold styles */
+      :root{--primary:#6D3DF5;--primary-hover:#5A2FD5;--bg-base:#FAF8FF;--text-heading:#231942;--text-body:#4E4862}
+      body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg-base);color:var(--text-body)}
+      .skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:#fff;padding:8px 16px;z-index:1000;transition:top .3s}
+      .skip-link:focus{top:0}
+      .alert-banner{background:#FEF2F2;color:#991B1B;padding:12px 16px;text-align:center;font-size:14px}
+      .alert-banner a{color:#991B1B;font-weight:600}
+    </style>
     
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "MedicalBusiness",
+            "@type": ["MedicalBusiness", "MedicalClinic"],
+            "@id": "https://mindgracencr.in/#clinic",
             "name": "Mind Grace Clinic",
-            "telephone": "+91-96678-63295",
-            "email": "dranitasharma86@gmail.com",
+            "url": "https://mindgracencr.in/",
+            "telephone": "+919667863295",
+            "email": "contact@mindgraceclinic.com",
+            "priceRange": "₹₹",
+            "paymentAccepted": "Cash, UPI, Card",
+            "currenciesAccepted": "INR",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "J-123, Gamma-2",
+              "streetAddress": "Alpha 1, Greater Noida",
               "addressLocality": "Greater Noida",
               "addressRegion": "Uttar Pradesh",
               "postalCode": "201310",
@@ -50,10 +101,73 @@
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 28.4910152,
-              "longitude": 77.5132324
+              "latitude": 28.4744,
+              "longitude": 77.5040
             },
-            "areaServed": ["Greater Noida", "Alpha-1", "Delta-1", "Pari Chowk", "Knowledge Park", "Surajpur"]
+            "hasMap": "https://maps.google.com/?q=Mind+Grace+Clinic+Greater+Noida",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "19:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "14:00"
+              }
+            ],
+            "areaServed": [
+              { "@type": "City", "name": "Greater Noida" },
+              { "@type": "City", "name": "Greater Noida West" },
+              { "@type": "City", "name": "Noida" },
+              { "@type": "City", "name": "Noida Extension" }
+            ],
+            "medicalSpecialty": "Psychiatric",
+            "founder": { "@id": "https://mindgracencr.in/#physician" }
+          },
+          {
+            "@type": "Physician",
+            "@id": "https://mindgracencr.in/#physician",
+            "name": "Dr. Anita Sharma",
+            "honorificPrefix": "Dr.",
+            "jobTitle": "Consultant Psychiatrist",
+            "gender": "Female",
+            "worksFor": { "@id": "https://mindgracencr.in/#clinic" },
+            "knowsAbout": ["Adult Psychiatry", "Child Development", "ADHD", "Autism Spectrum Disorder", "Anxiety Disorder", "Depressive Disorder"],
+            "availableLanguage": ["en", "hi"],
+            "medicalSpecialty": "Psychiatric"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://mindgracencr.in/#website",
+            "url": "https://mindgracencr.in/",
+            "name": "Mind Grace Clinic",
+            "publisher": { "@id": "https://mindgracencr.in/#clinic" },
+            "inLanguage": "en-IN"
+          },
+          {
+            "@type": "MedicalWebPage",
+            "@id": "https://mindgracencr.in/#webpage",
+            "url": "https://mindgracencr.in/",
+            "name": "Mind Grace Clinic | Compassionate Psychiatric Care in Greater Noida",
+            "description": "Confidential, evidence-based psychiatric care for adults & child development support in Greater Noida.",
+            "isPartOf": { "@id": "https://mindgracencr.in/#website" },
+            "breadcrumb": { "@id": "https://mindgracencr.in/#breadcrumb" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://mindgracencr.in/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://mindgracencr.in/"
+              }
+            ]
           }
         ]
       }
@@ -62,8 +176,11 @@
   <body>
     <a class="skip-link" href="#content">Skip to Main Content</a>
     
-    <div class="top-banner" role="alert" aria-live="polite">
-      If you need immediate safety support, call 112 or go to the nearest hospital. This website is for routine information and appointment planning.
+    <!-- Emergency Banner -->
+    <div class="alert-banner" role="alert" aria-live="assertive">
+      <div class="container">
+        <p>If you or someone else is in immediate danger, <a href="tel:112" rel="nofollow">Call 112</a> or visit the nearest emergency department.</p>
+      </div>
     </div>
 
     <header class="site-header">
