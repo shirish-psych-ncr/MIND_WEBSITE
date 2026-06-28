@@ -140,4 +140,4 @@ const observer = new IntersectionObserver((entries) => {
 | Load time | <500ms | - | TODO: Measure |
 | Interaction latency | <100ms | - | TODO: Measure |
 
-*Ref: /css-tools/*, /js/tools-*.*, tool pages. Auto-update on tool changes.*
+*Ref: /css-tools/*, /js/tools-*.*, tool pages. Auto-update on tool changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §6-§8, worker.md §2-§4. END_ON_SYNC.*
