@@ -97,4 +97,4 @@
 - [ ] Add footer sitemap links
 - [ ] Ensure nav consistency across all pages
 
-*Ref: All .html files. Auto-update on page changes. Next: Extract component patterns from each page.*
+*Ref: All .html files. Auto-update on page changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §1-§6, worker.md §1-§10. END_ON_SYNC.*
