@@ -1,4 +1,188 @@
+===============================================
+# Engineering Knowledge Base
+===============================================
+
+## An AI Cognitive Architecture for Autonomous Software Engineering
+
+> *"Code implements behaviour. Knowledge implements understanding. Architecture preserves reasoning. Memory preserves continuity. Automation preserves truth."*
+
+---
+
+# Preface
+
+This repository is designed as an **Engineering Knowledge Base** rather than a conventional software repository. Its purpose is not simply to store source code, but to externalize the complete cognitive model of a software system so that both humans and autonomous coding agents can reconstruct project understanding before modifying implementation.
+
+Instead of treating documentation as secondary to code, this architecture treats documentation as the canonical representation of engineering intent. Source code becomes one expression of that intent rather than its only authoritative form.
+
+Each document within this knowledge base owns exactly one cognitive responsibility. Together they form a layered architecture that separates governance, reasoning, architecture, implementation, design, operational state, and repository intelligence into independent but interconnected domains. This separation minimizes knowledge duplication, reduces architectural entropy, enables deterministic AI reasoning, and allows the repository to evolve without losing coherence.
+
+The objective is to transform a software repository into a self-describing engineering system capable of preserving not only implementation, but also rationale, philosophy, structure, evolution, and operational continuity across contributors, AI sessions, technologies, and time.
+
+---
+
+# Repository Knowledge Stack
+
+```
+Vision
+        ↓
+Engineering Philosophy
+        ↓
+Repository Governance
+        ↓
+Architectural Intelligence
+        ↓
+AI Cognitive Intelligence
+        ↓
+Operational Intelligence
+        ↓
+Design Intelligence
+        ↓
+Information Intelligence
+        ↓
+Behaviour Intelligence
+        ↓
+Resource Intelligence
+        ↓
+Implementation
+        ↓
+Automation
+        ↓
+Continuous Evolution
+```
+
+---
+
+# Table of Contents
+
+## Part I — Engineering Philosophy
+
+### Engineering Knowledge Base as an AI Cognitive Architecture
+
+The conceptual foundation of the repository. Defines the philosophy that documentation is executable engineering knowledge rather than supplementary reference material. Introduces repository cognition, documentation stratification, knowledge gravity, architectural memory, AI ownership, information compression, and long-term repository evolution.
+
+---
+
+## Part II — Cognitive Intelligence
+
+### `skills.md`
+
+**AI Capability Graph, Operational Intelligence & Cognitive Skill Registry**
+
+Defines how autonomous engineering agents think rather than what they build. Documents reasoning models, abstraction mechanisms, planning strategies, validation intelligence, architectural inference, documentation behaviour, debugging methodology, knowledge synthesis, and continuous learning.
+
+---
+
+### `memory.md`
+
+**Repository Cognitive Memory, Evolution Engine & Operational Continuity Layer**
+
+Maintains engineering continuity across sessions by preserving architectural decisions, repository identity, active migrations, operational state, unresolved questions, technical debt, historical evolution, and accumulated engineering knowledge while continuously compressing obsolete context.
+
+---
+
+## Part III — Structural Intelligence
+
+### `architecture.md`
+
+**System Architecture Intelligence, Structural Cognition & Repository Topology**
+
+Defines the repository's conceptual structure, architectural philosophy, domain boundaries, dependency hierarchy, information flow, subsystem relationships, scalability strategy, governance constraints, and long-term structural evolution.
+
+---
+
+### `worker.md`
+
+**Engineering Execution Engine, Implementation Architecture & Operational Runtime Intelligence**
+
+Transforms architectural intent into implementation. Documents engineering workflow, validation pipelines, execution order, dependency resolution, automation strategy, build behaviour, deployment processes, runtime considerations, and operational engineering practices.
+
+---
+
+## Part IV — Experience Intelligence
+
+### `design.md`
+
+**Design Intelligence, Visual Language Architecture & Human Experience System**
+
+Defines the repository's visual cognition. Documents design philosophy, semantic tokens, interaction language, accessibility principles, information hierarchy, responsive behaviour, experience continuity, and system-wide visual governance.
+
+---
+
+### `pages.md`
+
+**Information Architecture, Navigation Intelligence & Experience Topology Registry**
+
+Models the conceptual geography of the application. Defines page ownership, user journeys, navigation architecture, content organization, information hierarchy, semantic relationships, and overall experience topology.
+
+---
+
+### `tools.md`
+
+**Interactive Systems Intelligence, Behaviour Architecture & Capability Registry**
+
+Defines every interactive capability as an autonomous behavioural system. Documents interaction models, state transitions, behavioural composition, validation, accessibility, lifecycle, performance, and reusable behaviour primitives.
+
+---
+
+## Part V — Repository Resources
+
+### `assets.md`
+
+**Digital Asset Intelligence, Lifecycle Architecture & Repository Resource Registry**
+
+Models every repository asset as an engineering resource rather than a file. Documents asset identity, ownership, lifecycle, optimization, accessibility, dependency mapping, branding, provenance, performance characteristics, and operational management.
+
+---
+
+## Part VI — Repository Principles
+
+Throughout this knowledge base, several foundational principles remain invariant:
+
+* Every concept has exactly one canonical source of truth.
+* Stable knowledge is written; volatile knowledge is generated.
+* Architecture governs implementation rather than emerging from it.
+* Documentation explains intent rather than implementation.
+* Automation maintains reality rather than humans maintaining inventories.
+* AI reconstructs understanding before generating code.
+* Repository evolution preserves reasoning instead of merely preserving files.
+* Engineering quality is measured by long-term comprehensibility rather than short-term implementation speed.
+
+---
+
+# Reading Order
+
+For autonomous coding agents:
+
+> Philosophy → Skills → Memory → Architecture → Worker → Design → Pages → Tools → Assets → Implementation
+
+For software architects:
+
+> Philosophy → Architecture → Worker → Memory → Design → Assets → Pages → Tools
+
+For designers:
+
+> Philosophy → Design → Pages → Assets → Architecture
+
+For maintainers:
+
+> Memory → Worker → Architecture → Skills → Repository Documentation
+
+For onboarding contributors:
+
+> Philosophy → Architecture → Design → Pages → Worker → Remaining Knowledge Domains
+
+---
+
+# Intended Outcome
+
+When fully maintained, this repository should function as an **AI-native engineering operating system** in which every implementation decision can be traced back to architectural intent, every architectural decision can be traced back to engineering philosophy, every behavioural system is discoverable through documentation, every resource possesses explicit ownership, every dependency remains understandable, every change preserves repository coherence, and every future contributor—human or autonomous—can begin with comprehension instead of reconstruction.
+
+
+===============================================
+
 # Engineering Knowledge Base as an AI Cognitive Architecture
+
+===============================================
 
 ## Fundamental Premise
 
