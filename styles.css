@@ -1,13 +1,14 @@
 /* =========================================
    10-VECTOR BIOLOGICAL & STRUCTURAL SYSTEM
-   Production-Ready Master Stylesheet v2.1
+   Production-Ready Master Stylesheet v2.2
    All Errors Fixed & Optimized
    ========================================= */
 
-/* 1. LAYER DEFINITIONS */
-@layer reset, base, layout, components, utilities, overrides;
+/* 1. LAYER DEFINITIONS - Cascade Order */
+@layer reset, tokens, base, layout, components, utilities, state, overrides;
 
 /* 2. ROOT VARIABLES & DESIGN TOKENS */
+@layer tokens {
 :root {
   color-scheme: light dark;
 
@@ -80,6 +81,7 @@
   --transition-base: 0.2s ease;
   --transition-slow: 0.3s ease;
   --transition-cubic: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 }
 
 /* =========================================
@@ -174,17 +176,9 @@
    @layer base (Typography & Elements)
    ========================================= */
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--text-secondary);
-    font-weight: 700;
-    line-height: 1.2;
-    text-wrap: balance;
-    margin-block-end: var(--space-md);
-    margin-block-start: 0;
-  }
-
-  h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); }
-  h2 { font-size: clamp(1.875rem, 4vw, 2.75rem); }
+  /* Fluid Typography Scale - Responsive by default */
+  h1 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.02em; }
+  h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); letter-spacing: -0.01em; }
   h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
   h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   h5 { font-size: clamp(1.125rem, 1.5vw, 1.25rem); }
@@ -202,7 +196,7 @@
     color: var(--text-on-dark);
   }
 
-  /* Screen Reader Only */
+  /* Screen Reader Only - WCAG 2.1 Compliant */
   .sr-only {
     position: absolute;
     width: 1px;
@@ -213,6 +207,16 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+  }
+
+  /* Base Typography Defaults */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-secondary);
+    font-weight: 700;
+    line-height: 1.2;
+    text-wrap: balance;
+    margin-block-end: var(--space-md);
+    margin-block-start: 0;
   }
 }
 
@@ -349,12 +353,12 @@
     font-weight: 500;
   }
 
-  /* HEADER & NAVIGATION - Fixed logo size */
+  /* HEADER & NAVIGATION - Enhanced for clinical trust */
   .site-header {
-    background-color: hsl(310 43% 96% / 0.95);
+    background-color: hsl(310 43% 96% / 0.98);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-block-end: 1px solid hsl(var(--shadow-h) var(--shadow-s) var(--shadow-l) / 0.1);
+    border-block-end: 1px solid hsl(var(--shadow-h) var(--shadow-s) var(--shadow-l) / 0.08);
     padding-block: var(--space-md);
     position: sticky;
     inset-block-start: 0;
@@ -362,31 +366,12 @@
     contain: layout style paint;
   }
 
-  .top-contact-bar {
-    background-color: var(--bio-canvas);
-    padding-block: var(--space-sm);
-    border-block-end: 1px solid hsl(var(--shadow-h) var(--shadow-s) var(--shadow-l) / 0.1);
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-  }
-
-  .top-contact-link {
-    color: var(--bio-base);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .top-contact-link:hover {
-    color: var(--bio-depth);
-    text-decoration: underline;
-  }
-
   .header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--space-md);
+    gap: var(--space-lg);
   }
 
   .brand-wrap {
@@ -405,7 +390,7 @@
   }
 
   .brand-name { 
-    font-size: 1.25rem; 
+    font-size: 1.125rem; 
     font-weight: 700; 
     color: var(--bio-base); 
     margin: 0;
@@ -413,12 +398,13 @@
   }
 
   .doctor-name { 
-    font-size: 0.875rem; 
+    font-size: 0.8125rem; 
     color: var(--text-secondary); 
     margin: 0;
+    font-weight: 500;
   }
 
-  /* LOGO - CRITICAL FIX: Constrain size */
+  /* LOGO - Constrained size for consistency */
   .logo,
   .brand-wrap img,
   .brand-wrap svg {
@@ -441,7 +427,7 @@
     color: var(--text-secondary);
     font-weight: 500;
     text-decoration: none;
-    padding: var(--space-sm);
+    padding: var(--space-sm) var(--space-xs);
     min-height: 44px;
     display: inline-flex;
     align-items: center;
@@ -456,44 +442,51 @@
 
   .nav-link[aria-current="page"] {
     color: var(--bio-base);
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .nav-link[aria-current="page"]::after {
     content: '';
     position: absolute;
-    inset-block-end: -4px;
+    inset-block-end: -2px;
     inset-inline: 0;
     height: 2px;
     background: var(--bio-base);
     border-radius: var(--radius-full);
   }
 
+  /* Mobile Toggle - Accessible */
   .mobile-toggle {
     display: none;
     background: none;
     border: none;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     font-size: 1.5rem;
     color: var(--text-secondary);
     cursor: pointer;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
-    transition: background-color var(--transition-base);
+    transition: background-color var(--transition-base), color var(--transition-base);
     line-height: 1;
   }
 
   .mobile-toggle:hover {
-    background-color: hsl(var(--bio-base) / 0.1);
+    background-color: hsl(var(--bio-base) / 0.08);
+    color: var(--bio-base);
+  }
+
+  .mobile-toggle:focus-visible {
+    outline: 3px solid var(--bio-base);
+    outline-offset: 2px;
   }
 
   /* Mobile Nav - Single Unified System */
   .mobile-nav-overlay {
     position: fixed;
     inset: 0;
-    background: hsl(var(--bio-absolute) / 0.5);
+    background: hsl(var(--bio-absolute) / 0.6);
     z-index: var(--z-overlay-backdrop);
     opacity: 0;
     visibility: hidden;
@@ -586,7 +579,7 @@
 
   .mobile-nav-list a:hover, 
   .mobile-nav-list a:focus-visible {
-    background: hsl(var(--bio-base) / 0.1);
+    background: hsl(var(--bio-base) / 0.08);
     color: var(--bio-base);
   }
 
@@ -603,7 +596,7 @@
     .mobile-toggle { display: inline-flex; }
   }
 
-  /* BUTTONS - Fixed alignment & CLS */
+  /* BUTTONS - Clinical-grade interaction */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -611,7 +604,7 @@
     gap: var(--space-sm);
     padding: 0.75rem 1.5rem;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9375rem;
     line-height: 1;
     border-radius: var(--radius-md);
     border: 2px solid transparent;
@@ -620,12 +613,12 @@
     transition: background-color var(--transition-base), 
                 color var(--transition-base), 
                 border-color var(--transition-base), 
-                box-shadow var(--transition-base);
+                transform var(--transition-fast);
     min-height: 44px;
     white-space: nowrap;
   }
   
-  .btn:active { 
+  .btn:active:not(:disabled) { 
     transform: scale(0.98); 
   }
 
@@ -639,12 +632,10 @@
   .btn-primary {
     background-color: var(--bio-base);
     color: var(--text-on-dark);
-    box-shadow: var(--shadow-sm);
   }
 
   .btn-primary:hover {
     background-color: var(--bio-depth);
-    box-shadow: var(--shadow-md);
     color: var(--text-on-dark);
   }
 
@@ -654,7 +645,7 @@
   }
 
   .btn-secondary:hover {
-    background-color: hsl(var(--bio-calm) / 0.85);
+    background-color: hsl(176 53% 55% / 0.85);
     color: var(--bio-ground);
   }
 
@@ -676,7 +667,7 @@
   }
 
   .btn-ghost:hover {
-    background: hsl(var(--bio-base) / 0.1);
+    background: hsl(var(--bio-base) / 0.08);
     color: var(--bio-depth);
   }
 
@@ -1378,6 +1369,32 @@
   /* Visibility */
   .visible { visibility: visible; }
   .invisible { visibility: hidden; }
+}
+
+/* =========================================
+   @layer state (Focus, Hover, Active States)
+   ========================================= */
+@layer state {
+  /* Focus Visible - Enhanced for accessibility */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--bio-base);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Reduced Motion - Respect user preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 /* =========================================
