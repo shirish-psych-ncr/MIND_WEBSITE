@@ -119,8 +119,11 @@ Successful AI assistance is measured by reduced ambiguity;;reduced onboarding ti
 The ideal repository behaves like an executable knowledge system;;source code implements behaviour;;documentation implements understanding;;automation synchronizes reality;;AI maintains coherence;;Git preserves evolution;;future contributors inherit reasoning instead of merely inheriting files;;every engineering decision becomes discoverable;;every architectural assumption becomes explicit;;every implementation becomes traceable back to design intent;;every future AI session starts with comprehension instead of reconstruction.
 
 ---
+===============================================
 
 # skills.md — AI Capability Graph, Operational Intelligence & Cognitive Skill Registry
+
+===============================================
 
 ## Foundational Purpose
 
@@ -307,8 +310,11 @@ Skills rarely execute independently;;context reconstruction activates architectu
 A mature AI operating under `skills.md` should require progressively less conversational context;;reconstruct project intent directly from repository knowledge;;make architecturally consistent decisions without repeated prompting;;predict downstream consequences before implementation;;reduce documentation entropy with every change;;increase repository coherence over time;;behave less like an autocomplete engine and more like a continuously learning systems architect whose primary output is sustainable engineering knowledge rather than merely functional code.
 
 ---
+===============================================
 
 # assets.md — Digital Asset Intelligence, Lifecycle Architecture & Repository Resource Registry
+
+===============================================
 
 ## Foundational Purpose
 
@@ -489,8 +495,11 @@ Assets should integrate naturally with pages.md through consumption relationship
 A mature `assets.md` enables any AI or developer to understand every digital resource without opening the filesystem;;predict where an asset is used before searching;;identify optimization opportunities before profiling;;recognize ownership before editing;;understand lifecycle before replacement;;distinguish canonical resources from derivatives;;reconstruct repository visual architecture from documentation alone;;maintain long-term consistency across branding, performance, accessibility, deployment, documentation, and engineering workflows while minimizing duplication and maximizing discoverability.
 
 ---
+===============================================
 
 # design.md — Design Intelligence, Visual Language Architecture & Human Experience System
+
+===============================================
 
 ## Foundational Purpose
 
@@ -671,8 +680,11 @@ Generate design token inventories;;generate component usage reports;;generate ty
 A mature `design.md` enables an AI to reconstruct the complete visual language before reading CSS;;predict component behaviour before opening implementation files;;infer appropriate layouts for entirely new features;;extend interfaces without introducing stylistic drift;;maintain accessibility and clinical trust automatically;;reason about perception, cognition, interaction, hierarchy, and identity as one unified system;;ensure that every future interface feels as though it was designed by the same enduring design philosophy rather than by different contributors across different years.
 
 ---
+===============================================
 
 # memory.md — Repository Cognitive Memory, Evolution Engine & Operational Continuity Layer
+
+===============================================
 
 ## Foundational Purpose
 
@@ -842,7 +854,11 @@ A mature `memory.md` allows any AI session to understand the repository's curren
 
 ---
 
+===============================================
+
 # pages.md — Information Architecture, Navigation Intelligence & Experience Topology Registry
+
+===============================================
 
 ## Foundational Purpose
 
@@ -1015,3 +1031,542 @@ Generate complete page inventories;;generate navigation graphs;;generate journey
 ## Success Criteria
 
 A mature `pages.md` enables any AI or developer to reconstruct the complete information architecture before opening a browser;;predict the existence, purpose, relationships, ownership, and navigation of pages before inspecting implementation;;identify structural weaknesses without reading source code;;extend products without introducing navigational fragmentation;;maintain conceptual coherence across hundreds of pages;;ensure every new destination strengthens the overall knowledge network rather than increasing architectural entropy;;transform the repository into a navigable experience ecosystem whose structure remains understandable regardless of implementation technology.
+
+
+===============================================
+
+# tools.md — Interactive Systems Intelligence, Behaviour Architecture & Capability Registry
+
+===============================================
+
+## Foundational Purpose
+
+`tools.md` is not a catalogue of widgets;;it is the repository's interactive behaviour architecture;;it defines every executable user-facing capability as an autonomous behavioural system with purpose, cognition, interaction, lifecycle, dependencies, accessibility, performance, validation, and evolution;;its objective is to describe how tools think, behave, communicate, and integrate rather than merely how they are implemented;;every tool represents a self-contained experience subsystem whose identity remains stable across redesigns, refactors, framework migrations, and implementation rewrites.
+
+---
+
+## Tool Philosophy
+
+A tool is not a feature;;a tool is an intentional behavioural environment;;its responsibility is to transform user state rather than simply receive input;;every interaction should have measurable purpose;;every behavioural system should be explainable independently of technology;;tools are reusable capabilities rather than isolated pages;;implementation expresses behaviour rather than defining it.
+
+---
+
+## Behaviour Architecture
+
+Purpose creates behaviour;;behaviour creates interaction;;interaction creates state transitions;;state transitions create feedback;;feedback creates understanding;;understanding creates confidence;;confidence enables successful task completion;;tools therefore exist as behavioural systems rather than software modules.
+
+---
+
+## Tool Taxonomy
+
+Clinical Tools;;Therapeutic Tools;;Educational Tools;;Assessment Tools;;Visualization Tools;;Grounding Tools;;Decision Support Tools;;Navigation Tools;;Productivity Tools;;Content Tools;;Communication Tools;;Administrative Tools;;Developer Tools;;Diagnostic Tools;;Simulation Tools;;Interactive Learning Tools;;Exploration Tools;;Automation Tools;;Monitoring Tools;;Experimental Tools.
+
+---
+
+## Tool Identity
+
+Canonical Identifier;;Logical Name;;Purpose;;Primary Outcome;;Secondary Outcomes;;Behaviour Category;;Clinical Classification;;Interaction Model;;Lifecycle Status;;Complexity Level;;Ownership;;Dependencies;;Consumers;;Repository Authority.
+
+---
+
+## Behaviour Modeling
+
+Initial State;;Activation Conditions;;Interaction Loop;;Internal State;;External State;;Transitions;;User Inputs;;System Responses;;Feedback Cycle;;Completion Criteria;;Cancellation Behaviour;;Recovery Behaviour;;Persistence Strategy;;Termination Conditions.
+
+---
+
+## Cognitive Role
+
+Guide;;Teach;;Assess;;Transform;;Inform;;Explore;;Validate;;Support Decisions;;Reduce Anxiety;;Encourage Reflection;;Increase Awareness;;Organize Information;;Visualize Relationships;;Facilitate Learning;;Enable Task Completion.
+
+---
+
+## Interaction Intelligence
+
+Every interaction should have intention;;every action produces understandable consequences;;feedback reduces uncertainty;;system responses remain predictable;;interactions support exploration without punishment;;users maintain control;;behaviour communicates continuously;;interactions remain reversible whenever possible;;tools should guide rather than command;;behaviour should feel conversational rather than mechanical.
+
+---
+
+## State Intelligence
+
+Idle;;Preparing;;Active;;Paused;;Waiting;;Processing;;Rendering;;Validating;;Completed;;Cancelled;;Error;;Recovery;;Archived Session;;State transitions should remain deterministic;;state history should remain understandable;;users should never lose orientation during behavioural changes.
+
+---
+
+## Lifecycle Intelligence
+
+Concept;;Prototype;;Experimental;;Internal Testing;;Accessibility Review;;Clinical Review;;Performance Validation;;Production;;Optimized;;Extended;;Deprecated;;Merged;;Archived;;Historical Reference;;each stage represents behavioural maturity rather than implementation maturity.
+
+---
+
+## Functional Intelligence
+
+Primary capability;;supporting capability;;optional capability;;future capability;;behavioural constraints;;operational assumptions;;environmental requirements;;device capabilities;;input modalities;;output modalities;;offline capability;;synchronization requirements;;automation compatibility.
+
+---
+
+## User Experience Intelligence
+
+Expected emotional state before interaction;;desired emotional state after interaction;;entry assumptions;;required knowledge;;learning curve;;attention requirements;;interaction duration;;friction tolerance;;success perception;;confidence building;;exit expectations;;follow-up recommendations.
+
+---
+
+## Clinical Intelligence
+
+Therapeutic objective;;clinical appropriateness;;intended population;;contraindications;;professional oversight requirements;;educational boundaries;;ethical considerations;;evidence alignment;;risk awareness;;supportive language;;non-diagnostic communication;;scope limitations;;appropriate referrals.
+
+---
+
+## Accessibility Intelligence
+
+Keyboard operability;;screen reader compatibility;;alternative interaction modes;;touch accessibility;;motor accessibility;;cognitive accessibility;;reduced motion;;color independence;;focus continuity;;interaction predictability;;language simplicity;;inclusive behavioural design rather than post-hoc compliance.
+
+---
+
+## Performance Intelligence
+
+Behavioural startup cost;;runtime cost;;memory consumption;;interaction latency;;hydration requirements;;CPU intensity;;GPU intensity;;network dependency;;lazy loading suitability;;resource prioritization;;background processing;;cleanup behaviour;;performance budgets defined by user experience rather than implementation metrics.
+
+---
+
+## Interaction Patterns
+
+Guided Sequence;;Open Exploration;;Progressive Disclosure;;Continuous Feedback;;Stepwise Workflow;;Branching Decision Tree;;Interactive Visualization;;Simulation;;Real-time Response;;Collaborative Interaction;;Passive Observation;;Adaptive Guidance;;Contextual Assistance.
+
+---
+
+## Dependency Intelligence
+
+Consumes components;;consumes assets;;consumes schemas;;consumes content;;consumes services;;publishes events;;shares state;;inherits design language;;inherits accessibility standards;;inherits engineering constraints;;AI should understand behavioural dependencies before technical dependencies.
+
+---
+
+## Composition Intelligence
+
+Simple tools compose into complex experiences;;shared behavioural primitives become interaction libraries;;common state machines become reusable patterns;;common validation becomes infrastructure;;common feedback becomes design language;;tools evolve through composition rather than duplication.
+
+---
+
+## Behavioural Consistency
+
+Activation remains familiar;;feedback remains recognizable;;navigation remains predictable;;language remains consistent;;completion remains understandable;;recovery remains reliable;;error communication remains supportive;;behaviour reflects repository philosophy rather than individual implementation preferences.
+
+---
+
+## Error Intelligence
+
+Prevent failure before reporting failure;;errors explain behaviour rather than implementation;;provide recovery;;preserve user progress;;distinguish temporary from permanent issues;;capture diagnostics;;maintain trust;;never allow behavioural ambiguity;;transform interruption into guidance.
+
+---
+
+## Validation Intelligence
+
+Functional correctness;;behavioural correctness;;interaction correctness;;clinical correctness;;accessibility correctness;;performance correctness;;semantic correctness;;design consistency;;state integrity;;dependency integrity;;AI should validate behavioural intent before validating code execution.
+
+---
+
+## Tool Communication
+
+Tools communicate continuously;;status;;progress;;expectations;;constraints;;completion;;availability;;limitations;;confidence;;recommended next actions;;communication reduces cognitive effort;;interfaces explain themselves through behaviour before documentation.
+
+---
+
+## AI Behaviour Reasoning
+
+Infer behavioural goals before reading implementation;;identify interaction model before inspecting JavaScript;;predict state transitions before execution;;recognize reusable behavioural primitives;;recommend behavioural consolidation;;separate user intention from implementation mechanics;;preserve interaction philosophy while modernizing technology.
+
+---
+
+## Behaviour Evolution
+
+Tools mature through behavioural refinement rather than feature accumulation;;successful interaction patterns become reusable primitives;;complex workflows become simplified;;shared logic becomes infrastructure;;behaviour grows more understandable while implementation becomes more sophisticated;;AI should reduce behavioural entropy with every iteration.
+
+---
+
+## Tool Registry Intelligence
+
+Every tool records ownership;;purpose;;dependencies;;capabilities;;limitations;;usage frequency;;maintenance status;;performance profile;;accessibility profile;;clinical review status;;integration relationships;;behavioural maturity;;registry functions as repository-wide behavioural knowledge rather than implementation inventory.
+
+---
+
+## Automation Strategy
+
+Generate behavioural inventories;;generate dependency graphs;;generate interaction maps;;generate state machine documentation;;generate capability matrices;;generate accessibility coverage;;generate performance summaries;;generate behavioural regression reports;;generate lifecycle dashboards;;generate integration maps;;generate orphaned tool detection;;never manually maintain information derivable from behavioural analysis or repository inspection.
+
+---
+
+## Cross-Domain Integration
+
+`tools.md` inherits governance from instructions.md;;uses reasoning principles defined by skills.md;;records behavioural evolution through memory.md;;implements architectural constraints from worker.md;;expresses visual language defined by design.md;;consumes assets catalogued in assets.md;;appears within journeys documented in pages.md;;binds schemas to user interaction;;its purpose is to function as the repository's behavioural constitution, ensuring every interactive capability behaves as a coherent extension of the same product philosophy.
+
+---
+
+## Success Criteria
+
+A mature `tools.md` allows any AI or engineer to reconstruct the complete behavioural architecture of every interactive capability before opening source code;;predict state transitions, interaction patterns, accessibility requirements, performance implications, and user outcomes without inspecting implementation;;identify reusable behavioural systems;;reduce interaction inconsistency;;support long-term evolution through composable behaviour;;ensure every new tool strengthens the repository's behavioural language rather than introducing isolated interaction paradigms;;transform the repository from a collection of scripts into a coherent ecosystem of intentional, explainable, reusable behavioural systems.
+
+
+===============================================
+
+# worker.md — Engineering Execution Engine, Implementation Architecture & Operational Runtime Intelligence
+
+===============================================
+
+## Foundational Purpose
+
+`worker.md` is not a build guide;;it is the repository's execution intelligence layer;;it defines how architecture becomes implementation, how intent becomes code, how standards become enforceable systems, and how autonomous engineering work proceeds from planning through deployment;;it functions as the operational blueprint for AI coding agents, ensuring every implementation follows deterministic engineering behaviour instead of improvisation;;its responsibility is not explaining *what* the repository is, but *how work is performed inside it*.
+
+---
+
+## Execution Philosophy
+
+Engineering is controlled transformation rather than code production;;implementation is the final stage of reasoning rather than the beginning;;every generated line of code should be predictable from repository knowledge;;execution should preserve architectural intent;;implementation should minimize entropy;;engineering velocity should emerge from reusable systems instead of repeated invention;;the worker exists to operationalize philosophy rather than replace it.
+
+---
+
+## Operational Role
+
+Implementation Engine;;Execution Coordinator;;Build Intelligence;;Dependency Orchestrator;;Validation Coordinator;;Automation Controller;;Quality Enforcer;;Deployment Integrator;;Recovery Executor;;Runtime Observer;;Engineering Translator;;System Integrator.
+
+---
+
+## Engineering Pipeline
+
+Intent;;Context Reconstruction;;Architectural Validation;;Dependency Discovery;;Planning;;Task Decomposition;;Implementation;;Compilation;;Static Validation;;Runtime Validation;;Accessibility Validation;;Performance Validation;;Documentation Synchronization;;Knowledge Compression;;Deployment;;Post-deployment Verification.
+
+---
+
+## Worker Taxonomy
+
+Architecture Worker;;Frontend Worker;;Backend Worker;;Content Worker;;Asset Worker;;Testing Worker;;Accessibility Worker;;SEO Worker;;Performance Worker;;Security Worker;;Migration Worker;;Documentation Worker;;Automation Worker;;Deployment Worker;;Maintenance Worker;;Recovery Worker;;Refactoring Worker;;Integration Worker.
+
+---
+
+## Execution Intelligence
+
+Every implementation begins by reconstructing architectural intent;;discover existing abstractions before creating new ones;;predict implementation impact before modification;;estimate dependency propagation;;determine validation requirements;;identify affected documentation;;identify affected assets;;identify affected pages;;predict downstream consequences;;implementation proceeds only after contextual certainty reaches acceptable confidence.
+
+---
+
+## Task Decomposition
+
+Large objectives become systems;;systems become milestones;;milestones become engineering tasks;;tasks become implementation units;;implementation units become atomic commits;;atomic commits become validated repository evolution;;every decomposition should reduce uncertainty without losing architectural context.
+
+---
+
+## Repository Inspection
+
+Inspect architecture before implementation;;inspect documentation before code;;inspect dependencies before installation;;inspect components before creation;;inspect assets before generation;;inspect schemas before modeling;;inspect routing before pages;;inspect tests before modification;;inspection precedes execution.
+
+---
+
+## Dependency Intelligence
+
+Internal dependencies;;external dependencies;;runtime dependencies;;build dependencies;;design dependencies;;content dependencies;;schema dependencies;;toolchain dependencies;;deployment dependencies;;documentation dependencies;;worker should reason about dependency ecosystems rather than isolated packages.
+
+---
+
+## Build Intelligence
+
+Compilation strategy;;incremental builds;;dependency graph resolution;;tree shaking;;bundling;;asset optimization;;type generation;;content generation;;route generation;;cache management;;artifact validation;;distribution packaging;;worker understands build systems as knowledge pipelines rather than compiler invocations.
+
+---
+
+## Runtime Intelligence
+
+Application initialization;;module loading;;hydration;;state initialization;;event registration;;resource acquisition;;cleanup behaviour;;error recovery;;performance monitoring;;resource disposal;;runtime consistency;;worker reasons about execution lifecycle instead of merely producing executable code.
+
+---
+
+## Engineering Constraints
+
+Respect architecture;;respect design system;;respect accessibility;;respect repository conventions;;reuse abstractions;;avoid duplicated implementation;;maintain deterministic output;;prefer explicitness over convenience;;optimize for maintainability;;every constraint protects long-term coherence rather than immediate productivity.
+
+---
+
+## Validation Intelligence
+
+Compilation validation;;type validation;;schema validation;;behaviour validation;;interaction validation;;visual validation;;accessibility validation;;performance validation;;security validation;;deployment validation;;documentation validation;;repository consistency validation;;validation exists to protect architectural integrity rather than detect syntax errors.
+
+---
+
+## Quality Intelligence
+
+Correctness;;Consistency;;Maintainability;;Readability;;Predictability;;Extensibility;;Performance;;Accessibility;;Security;;Documentation Quality;;Architectural Alignment;;Operational Stability;;quality is measured against repository philosophy rather than coding style alone.
+
+---
+
+## Automation Intelligence
+
+Generate repetitive implementation;;generate inventories;;generate schemas;;generate documentation;;generate reports;;generate testing artifacts;;generate build metadata;;generate dependency maps;;generate release summaries;;generate migration reports;;automation replaces deterministic labour rather than engineering judgement.
+
+---
+
+## Refactoring Intelligence
+
+Recognize architectural drift;;identify duplicated implementation;;improve cohesion;;reduce coupling;;simplify abstractions;;promote reusable behaviour;;eliminate obsolete patterns;;maintain behavioural equivalence;;improve repository intelligibility;;worker continuously transforms accumulated implementation into cleaner systems.
+
+---
+
+## Integration Intelligence
+
+Integrate components;;integrate assets;;integrate schemas;;integrate pages;;integrate services;;integrate tooling;;integrate automation;;integrate testing;;integrate deployment;;integration should strengthen architectural cohesion rather than merely establish compatibility.
+
+---
+
+## Error Intelligence
+
+Detect failures early;;identify root causes;;distinguish implementation errors from architectural errors;;preserve diagnostic information;;recommend deterministic recovery;;prevent cascading failures;;maintain repository consistency;;capture engineering lessons;;convert recurring failures into permanent safeguards.
+
+---
+
+## Recovery Intelligence
+
+Checkpoint execution;;safe rollback;;partial rebuilds;;dependency reconstruction;;cache invalidation;;repository restoration;;documentation regeneration;;configuration recovery;;build recovery;;operational continuity;;worker treats recovery as an engineered capability rather than emergency improvisation.
+
+---
+
+## Migration Intelligence
+
+Translate architecture across technologies;;maintain conceptual identity;;stage implementation incrementally;;preserve compatibility;;identify migration blockers;;maintain rollback paths;;validate parity;;document transitions;;worker enables technological evolution without conceptual fragmentation.
+
+---
+
+## Performance Intelligence
+
+Estimate implementation cost;;identify runtime bottlenecks;;predict hydration impact;;measure bundle growth;;optimize execution order;;minimize rendering work;;reduce unnecessary computation;;prioritize perceived responsiveness;;maintain engineering performance budgets throughout implementation.
+
+---
+
+## Security Intelligence
+
+Safe defaults;;least privilege;;dependency verification;;secret isolation;;input validation;;output encoding;;content security awareness;;deployment hardening;;privacy preservation;;security integrated into engineering workflow rather than appended afterwards.
+
+---
+
+## AI Engineering Behaviour
+
+Understand before generating;;predict before modifying;;reuse before creating;;validate before committing;;document before forgetting;;compress before concluding;;every engineering action should increase repository coherence;;worker behaves as systems engineer rather than autocomplete engine.
+
+---
+
+## Operational Memory
+
+Track active tasks;;track completed work;;track validation status;;track implementation assumptions;;track unresolved blockers;;track generated artifacts;;track pending documentation;;track migration progress;;operational state remains synchronized with repository memory while avoiding duplication of permanent knowledge.
+
+---
+
+## Worker Communication
+
+Execution status;;current objective;;dependency assumptions;;validation outcomes;;warnings;;known limitations;;recommended next actions;;confidence estimates;;engineering rationale;;worker communicates operational state continuously so autonomous agents remain synchronized throughout implementation.
+
+---
+
+## Engineering Lifecycle
+
+Plan;;Inspect;;Model;;Implement;;Validate;;Optimize;;Document;;Synchronize;;Deploy;;Observe;;Refine;;Archive;;every implementation cycle should leave the repository more understandable, more maintainable, and more internally consistent than before execution began.
+
+---
+
+## Automation Strategy
+
+Automatically discover affected files;;automatically determine dependency impact;;automatically schedule validation;;automatically regenerate derived documentation;;automatically refresh registries;;automatically produce engineering reports;;automatically verify repository consistency;;automatically identify stale implementations;;automatically detect architectural drift;;never require deterministic engineering reasoning to be performed manually.
+
+---
+
+## Cross-Domain Integration
+
+`worker.md` operationalizes governance defined in instructions.md;;implements architectural knowledge preserved in memory.md;;applies reasoning patterns described by skills.md;;renders interfaces constrained by design.md;;manipulates resources catalogued by assets.md;;constructs journeys documented by pages.md;;implements behaviours defined in tools.md;;coordinates schemas, components, automation, testing, deployment, and documentation into one executable engineering workflow;;its role is to transform repository knowledge into reliable implementation without violating the philosophy established by the rest of the knowledge base.
+
+---
+
+## Success Criteria
+
+A mature `worker.md` enables any autonomous coding agent to reconstruct the repository's engineering workflow before writing code;;predict execution order, dependency propagation, validation requirements, documentation updates, build implications, and deployment consequences automatically;;implement features with minimal architectural drift;;maintain deterministic engineering behaviour across contributors and technologies;;reduce operational entropy with every execution cycle;;transform implementation from isolated coding tasks into a disciplined, continuously improving engineering system whose behaviour remains consistent regardless of the individual performing the work.
+
+
+===============================================
+
+# architecture.md — System Architecture Intelligence, Structural Cognition & Repository Topology
+
+===============================================
+
+## Foundational Purpose
+
+`architecture.md` is not a folder diagram;;it is the repository's structural intelligence layer;;it externalizes the conceptual organization, systemic relationships, governing abstractions, dependency boundaries, information flow, execution topology, and evolutionary direction of the entire system;;its responsibility is to answer why the system is shaped the way it is, how every subsystem relates to every other subsystem, what principles govern those relationships, and how the architecture can evolve without losing coherence;;it should allow any AI or engineer to mentally reconstruct the entire repository before reading a single implementation file.
+
+---
+
+## Architectural Philosophy
+
+Architecture exists to preserve understanding as systems grow;;implementation changes continuously whereas architecture should remain recognizable;;structure should emerge from responsibilities rather than technologies;;systems should evolve through extension instead of accumulation;;complexity should be organized rather than eliminated;;architecture exists to reduce cognitive cost for every future engineering decision;;good architecture makes future implementation predictable.
+
+---
+
+## Repository Ontology
+
+Vision creates philosophy;;philosophy creates architecture;;architecture creates systems;;systems create domains;;domains create modules;;modules create components;;components create behaviour;;behaviour creates experiences;;experiences fulfill product objectives;;architecture therefore represents relationships rather than files.
+
+---
+
+## Architectural Taxonomy
+
+Business Architecture;;Domain Architecture;;Application Architecture;;Information Architecture;;Experience Architecture;;Interaction Architecture;;Content Architecture;;Data Architecture;;Component Architecture;;Infrastructure Architecture;;Deployment Architecture;;Security Architecture;;Performance Architecture;;Accessibility Architecture;;Documentation Architecture;;Automation Architecture;;Knowledge Architecture.
+
+---
+
+## Architectural Identity
+
+System Name;;Repository Purpose;;Architectural Style;;Guiding Principles;;Primary Paradigm;;Technology Independence;;Repository Scale;;System Complexity;;Operational Scope;;Evolution Strategy;;Architectural Confidence;;Maturity Level;;Repository Identity.
+
+---
+
+## System Boundaries
+
+Core Domain;;Supporting Domains;;Infrastructure;;External Systems;;Integration Boundaries;;Ownership Boundaries;;Responsibility Boundaries;;Trust Boundaries;;Runtime Boundaries;;Deployment Boundaries;;Knowledge Boundaries;;architectural boundaries should exist to preserve independence rather than create isolation.
+
+---
+
+## Domain Architecture
+
+Every domain owns a conceptual responsibility;;domains communicate through explicit contracts;;knowledge remains localized;;implementation remains replaceable;;cross-domain interactions remain intentional;;domains evolve independently;;architectural cohesion outweighs implementation convenience;;AI should reason about domains before modules.
+
+---
+
+## Layered Architecture
+
+Purpose Layer;;Governance Layer;;Knowledge Layer;;Architecture Layer;;Execution Layer;;Presentation Layer;;Interaction Layer;;Infrastructure Layer;;Deployment Layer;;Observation Layer;;Historical Layer;;layers communicate intentionally;;higher layers define meaning;;lower layers implement capability.
+
+---
+
+## Dependency Architecture
+
+Dependencies flow downward in abstraction;;higher-level concepts never depend on lower-level implementation;;stable systems become foundations;;volatile systems depend upon stable systems;;dependency direction reflects conceptual authority rather than convenience;;cycles indicate architectural ambiguity;;AI should detect dependency violations before implementation begins.
+
+---
+
+## Structural Intelligence
+
+Every subsystem has identity;;responsibility;;interfaces;;dependencies;;consumers;;providers;;constraints;;lifecycle;;evolution path;;ownership;;system architecture is defined through relationships instead of directory structures.
+
+---
+
+## Information Flow
+
+Intent;;Requirements;;Architecture;;Planning;;Implementation;;Validation;;Documentation;;Deployment;;Observation;;Evolution;;information flows from abstraction toward execution while feedback flows upward toward architecture;;closed feedback loops continuously improve structural integrity.
+
+---
+
+## Behaviour Topology
+
+Systems collaborate;;domains coordinate;;components compose;;events propagate;;state synchronizes;;users experience continuity;;architecture governs collaboration rather than execution;;behaviour should emerge naturally from structural organization.
+
+---
+
+## Communication Architecture
+
+Internal communication;;external communication;;event propagation;;state synchronization;;contract validation;;service interaction;;component composition;;knowledge exchange;;documentation references;;automation communication;;every communication path should remain explicit and understandable.
+
+---
+
+## Architectural Constraints
+
+Single Responsibility;;Separation of Concerns;;Explicit Ownership;;Deterministic Dependencies;;Progressive Enhancement;;Accessibility by Default;;Performance Budgets;;Documentation First;;Automation Where Deterministic;;Technology Agnosticism;;architectural constraints exist to preserve long-term coherence rather than restrict implementation freedom.
+
+---
+
+## Modularity Intelligence
+
+Modules encapsulate responsibility;;expose minimal interfaces;;hide implementation;;minimize coupling;;maximize cohesion;;enable replacement;;encourage reuse;;support independent evolution;;allow testing in isolation;;remain conceptually understandable without implementation knowledge.
+
+---
+
+## Composition Intelligence
+
+Architecture prefers composition over inheritance;;systems compose domains;;domains compose modules;;modules compose components;;components compose interactions;;composition preserves flexibility;;shared behaviour becomes infrastructure;;architectural reuse occurs through composition rather than duplication.
+
+---
+
+## Evolution Intelligence
+
+Architectures evolve by strengthening abstractions;;local improvements become global conventions;;temporary solutions become reusable infrastructure;;obsolete systems become historical knowledge;;migration preserves conceptual continuity;;growth increases expressiveness rather than complexity;;AI should evolve architecture through refinement instead of replacement.
+
+---
+
+## Scalability Intelligence
+
+Scale through organization rather than expansion;;new domains integrate without restructuring existing knowledge;;new components inherit architectural language;;new technologies occupy predefined boundaries;;growth preserves discoverability;;architectural scalability is measured by cognitive stability rather than repository size.
+
+---
+
+## Resilience Intelligence
+
+Subsystem independence;;graceful degradation;;fault isolation;;recoverable failures;;redundant knowledge;;predictable recovery;;stable interfaces;;incremental migration;;architecture should absorb change without widespread structural disruption.
+
+---
+
+## Knowledge Architecture
+
+Repository knowledge remains layered;;governance documents define philosophy;;architecture defines relationships;;design defines visual language;;skills define reasoning;;worker defines execution;;pages define topology;;assets define resources;;tools define behaviour;;memory defines continuity;;each knowledge domain owns one conceptual responsibility;;architecture coordinates rather than duplicates them.
+
+---
+
+## Runtime Architecture
+
+Initialization;;configuration;;resource discovery;;dependency resolution;;hydration;;interaction;;state management;;rendering;;cleanup;;monitoring;;runtime architecture explains operational behaviour without exposing implementation specifics. 
+
+---
+
+## Infrastructure Architecture
+
+Development environment;;build systems;;toolchains;;deployment environments;;hosting;;storage;;network;;observability;;automation;;CI/CD;;infrastructure serves architecture rather than dictating it;;implementation technologies remain replaceable beneath stable structural principles.
+
+---
+
+## Security Architecture
+
+Trust boundaries;;privilege separation;;input boundaries;;output boundaries;;identity flow;;data protection;;configuration isolation;;deployment security;;dependency trust;;architectural security emerges from system organization before implementation safeguards.
+
+---
+
+## Performance Architecture
+
+Critical rendering path;;resource hierarchy;;loading strategy;;hydration boundaries;;caching hierarchy;;bundle partitioning;;lazy execution;;background work;;observability;;performance architecture optimizes systemic behaviour rather than isolated functions.
+
+---
+
+## AI Architectural Reasoning
+
+Infer repository philosophy before proposing architecture;;identify conceptual responsibilities before suggesting modules;;recognize existing structural language;;reuse architectural patterns;;protect stable abstractions;;predict dependency propagation;;evaluate structural impact before implementation;;recommend architectural improvements only when systemic benefit exceeds migration cost.
+
+---
+
+## Architectural Governance
+
+Architecture changes deliberately;;major structural modifications require explicit rationale;;new abstractions justify themselves through repeated necessity;;temporary architecture remains explicitly temporary;;deprecated structures remain documented until safely removed;;governance prevents accidental architectural drift.
+
+---
+
+## Architectural Entropy
+
+Entropy emerges through duplicated responsibilities;;ambiguous ownership;;circular dependencies;;technology-driven organization;;undocumented abstractions;;temporary structures becoming permanent;;AI should continuously consolidate responsibilities, clarify boundaries, reduce unnecessary layers, strengthen conceptual ownership, and simplify structural reasoning without reducing expressive capability.
+
+---
+
+## Automation Strategy
+
+Generate architecture graphs;;generate dependency matrices;;generate domain maps;;generate subsystem inventories;;generate communication diagrams;;generate module relationships;;generate ownership reports;;generate architectural drift detection;;generate coupling analysis;;generate cohesion analysis;;generate architectural fitness reports;;never manually maintain information derivable from repository structure.
+
+---
+
+## Cross-Domain Integration
+
+`architecture.md` exists directly beneath governance and above every operational document;;instructions.md governs architectural evolution;;memory.md records architectural history;;skills.md defines how AI reasons about structure;;worker.md operationalizes architecture into implementation;;design.md expresses architecture visually;;pages.md manifests architecture as information topology;;tools.md manifests architecture as behavioural systems;;assets.md supplies repository resources;;schemas, components, testing, deployment, and automation derive their organization from architectural decisions;;architecture functions as the central nervous system that coordinates every knowledge domain without replacing their individual responsibilities.
+
+---
+
+## Success Criteria
+
+A mature `architecture.md` enables any AI or engineer to reconstruct the entire conceptual structure of the repository before reading implementation;;identify domain boundaries, dependency directions, subsystem responsibilities, communication paths, evolution strategy, governance constraints, and scalability model automatically;;predict where any new capability belongs before creating it;;prevent architectural drift across years of development;;maintain structural coherence independent of programming language, framework, or deployment platform;;transform the repository from a collection of technologies into a stable, self-describing engineering organism whose structure remains intelligible regardless of how many times its implementation evolves.
+
+
