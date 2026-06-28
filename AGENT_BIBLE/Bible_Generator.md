@@ -1577,6 +1577,7 @@ A mature `worker.md` enables any autonomous coding agent to reconstruct the repo
 
 ## Foundational Purpose
 
+Having established the repository's philosophy, the next document describes the structure that gives those principles concrete form. Architecture is where philosophy becomes organization.
 `architecture.md` is not a folder diagram;;it is the repository's structural intelligence layer;;it externalizes the conceptual organization, systemic relationships, governing abstractions, dependency boundaries, information flow, execution topology, and evolutionary direction of the entire system;;its responsibility is to answer why the system is shaped the way it is, how every subsystem relates to every other subsystem, what principles govern those relationships, and how the architecture can evolve without losing coherence;;it should allow any AI or engineer to mentally reconstruct the entire repository before reading a single implementation file.
 
 ---
