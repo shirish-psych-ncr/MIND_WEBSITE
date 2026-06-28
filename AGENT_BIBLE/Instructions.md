@@ -1,4 +1,4 @@
-# AGENT_BIBLE [v3.0] — Mind Grace Clinic
+# AGENT_BIBLE [v4.0] — Mind Grace Clinic
 **Role:** Sr-FE/Design-Lead | **Mode:** Clinical-Grade | **Update:** Auto(post-turn) | **KB:** 7-docs | **Sync:** End-turn
 
 ## AXIOMS (Priority Order)
@@ -6,6 +6,7 @@
 2. **A11y:** WCAG 2.2 AA (0 violations mandatory)
 3. **Perf:** LCP<2.5s, INP<200ms, CLS<0.1, JS<50kb
 4. **Maintain:** TS-Strict, Zod, CSS-Layers, no hardcoded values
+5. **Responsive:** Orientation-first (landscape/portrait), JS-driven, graceful fallbacks
 
 ---
 
@@ -13,8 +14,8 @@
 | File | Purpose | Pri | Read-Time | Cross-Ref |
 |---|---|---|---|---|
 | memory.md | State, Δ-log, queue, recover | P0 | First | worker.md §10 |
-| design.md | Tokens, layout, a11y, breakpoints | P0 | Second | assets.md §6 |
-| worker.md | Arch, hydration, security, QA | P0 | Third | tools.md §2 |
+| design.md | Tokens, layout, a11y, breakpoints, orientation-rules | P0 | Second | assets.md §6 |
+| worker.md | Arch, hydration, security, QA, JS-patterns | P0 | Third | tools.md §2 |
 | assets.md | Asset registry, optimization | P1 | Fourth | design.md §7 |
 | pages.md | Page inventory, migration | P1 | Fifth | worker.md §1 |
 | tools.md | Tool specs, hydration matrix | P1 | Sixth | design.md §8 |
@@ -28,8 +29,8 @@ FOR each turn:
   1. READ all 7 KB docs (memory→Instructions order)
   2. EXECUTE task (plan→execute→validate per worker.md §6)
   3. COMPRESS memory.md (Δ-log append, state sync, queue update)
-  4. SYNC design.md (new tokens/components/breakpoints per §1-§5)
-  5. SYNC worker.md (new scripts/tools/deploy per §2-§9)
+  4. SYNC design.md (new tokens/components/breakpoints/orientation-rules per §1-§6)
+  5. SYNC worker.md (new scripts/tools/deploy/JS-patterns per §2-§9)
   6. SYNC assets.md (if asset changes per §1-§5)
   7. SYNC pages.md (if page changes per §1-§6)
   8. SYNC tools.md (if tool changes per §1-§5)
@@ -44,32 +45,34 @@ FOR each turn:
 - **Values:** Tokens only `var(--x)`. NO hex, NO px, NO magic numbers → design.md §1-§2
 - **TS:** Strict mode. NO `any`, type all props, Zod for content → worker.md §7
 - **HTML:** Semantic. NO div-soup, use `<main>`, `<article>`, `<nav>`, `<section>`
-- **JS:** Hydrate surgically. NO framework bloat, vanilla islands → tools.md §2
+- **JS:** Hydrate surgically. NO framework bloat, vanilla islands, graceful fallbacks → tools.md §2
 - **Assets:** All from `/res/` or `/blog/res/`. Preload LCP, lazy load rest → assets.md §6
 - **Motion:** Respect `prefers-reduced-motion`. Disable parallax/fades if set → design.md §6
+- **Responsive:** Orientation-first detection, JS-driven nav/forms, CSS for layout → design.md §5
 
 ---
 
-## RESPONSIVE_RULES (MobileFirst) → See design.md §4-§5
-- **Default:** Mobile (<768px), single column, full-width buttons
-- **@media(min-width: 768px):** Tablet, 2-column grids
-- **@media(min-width: 1024px):** Desktop, 3-column grids
+## RESPONSIVE_RULES (Orientation-First, MobileFirst) → See design.md §4-§5
+- **THE RULING:** Single orientation detection (`@media (orientation: landscape/portrait)`) → body class `.view-mode-horizontal` or `.view-mode-vertical`
+- **Portrait (<768px default):** Single column, full-width buttons, stacked hero, mobile nav drawer
+- **Landscape (≥768px):** 2-3 column grids, side-by-side hero, desktop nav
 - **Type:** Fluid `clamp(min, vw, max)` for ALL headings → design.md §3
 - **Touch:** min-h:44px, min-w:44px for interactive elements → design.md §6
-- **Grid:** 1col → 2col → 3col (card-grid, kpi-grid)
+- **Grid:** 1col → 2col → 3col (card-grid, kpi-grid) via orientation class
 - **Images:** srcset for responsive, loading="lazy" for non-LCP → assets.md §5
+- **JS Fallbacks:** Graceful degradation if JS disabled, progressive enhancement → worker.md §4
 
 ---
 
 ## ASSET_PIPELINE → See assets.md §1-§6
-- **Logo:** `/res/Mind_Grace_Clinic_Logo.png` (preload, fetchpriority=high)
+- **Logo:** `/res/Mind_Grace_Clinic_Logo_Pink.svg` (preload, fetchpriority=high, inline SVG in header)
 - **Doctor:** `/res/Dr_Anita_Sharma_Personal_Photo.jpg` (preload, sizes attribute)
 - **Location:** `/res/Location_street_view_*.jpg` (lazy load)
 - **Interiors:** `/res/mind-grace-*.jpg` (lazy load, gallery)
 - **AASHA:** `/res/aasha-*.jpg` (lazy load, OT/Speech/SpecEd pages)
 - **Brochures:** `/res/*_Brochure.png` (lazy load, resources)
 - **Blog Assets:** `/blog/res/*.png, *.jpg` (lazy load, article covers)
-- **Icons:** SVG inline or sprite, `aria-hidden="true"` if decorative
+- **Icons:** SVG inline or sprite, `aria-hidden="true"` if decorative, base64 for favicon
 - **Tools:** `/css-tools/*.css` (@layer components), `/js/tools-*.js` (defer/hydrate)
 - **Format:** WebP/AVIF preferred (TODO: convert), fallback PNG/JPG → assets.md §5
 - **Optimization:** Compress >2MB files, add width/height to prevent CLS
@@ -91,6 +94,7 @@ FOR each turn:
 - **Conflict:** A11y > Perf > Design > Features (priority order)
 - **Missing Asset:** → Check /res/, /blog/res/, if missing add to memory.md [Queue]
 - **Broken Link:** → Add to pages.md audit, fix or redirect → pages.md §7
+- **JS Fails:** → CSS-only fallbacks, graceful degradation → worker.md §4
 
 ---
 
@@ -98,8 +102,8 @@ FOR each turn:
 ```
 START_TURN:
   READ memory.md → Get state, queue, recover, delta
-  READ design.md → Get tokens, layout, a11y, breakpoints
-  READ worker.md → Get arch, hydration, security, QA
+  READ design.md → Get tokens, layout, a11y, breakpoints, orientation-rules
+  READ worker.md → Get arch, hydration, security, QA, JS-patterns
   READ assets.md → Get asset paths, optimization status
   READ pages.md → Get page structure, migration priority
   READ tools.md → Get tool specs, hydration matrix
@@ -111,8 +115,8 @@ START_TURN:
   
   END_TURN:
     COMPRESS memory.md (append Δ, update state/queue/recover)
-    SYNC design.md (if new tokens/components per §1-§5)
-    SYNC worker.md (if new scripts/tools per §2-§9)
+    SYNC design.md (if new tokens/components/orientation-rules per §1-§6)
+    SYNC worker.md (if new scripts/tools/JS-patterns per §2-§9)
     SYNC assets.md (if asset changes per §1-§5)
     SYNC pages.md (if page changes per §1-§6)
     SYNC tools.md (if tool changes per §1-§5)
@@ -136,13 +140,13 @@ START_TURN:
 ## KB_STATS (Current State) → See memory.md §STATE
 | Doc | Lines | Size | Purpose | Last Updated | Cross-Ref |
 |---|---|---|---|---|---|
-| memory.md | ~50L | ~2KB | Session state, delta log | T8 | worker.md §10 |
-| design.md | ~75L | ~3KB | Tokens, layout, a11y | T8 | assets.md §6 |
-| worker.md | ~120L | ~5KB | Arch, hydration, security | T8 | tools.md §2 |
-| assets.md | ~85L | ~4KB | Asset registry, opt queue | T8 | design.md §7 |
-| pages.md | ~100L | ~5KB | Page inventory, migration | T8 | worker.md §1 |
-| tools.md | ~145L | ~7KB | Tool specs, hydration | T8 | design.md §8 |
-| Instructions.md | ~150L | ~6KB | Protocol, workflow | T8 | memory.md §Δ_LOG |
-| **TOTAL** | **~625L** | **~32KB** | **7 docs** | **T8** | **All synced** |
+| memory.md | ~55L | ~2.5KB | Session state, delta log | T10 | worker.md §10 |
+| design.md | ~80L | ~3.5KB | Tokens, layout, a11y, orientation | T10 | assets.md §6 |
+| worker.md | ~125L | ~5.5KB | Arch, hydration, security, JS | T10 | tools.md §2 |
+| assets.md | ~85L | ~4KB | Asset registry, opt queue | T10 | design.md §7 |
+| pages.md | ~100L | ~5KB | Page inventory, migration | T10 | worker.md §1 |
+| tools.md | ~145L | ~7KB | Tool specs, hydration | T10 | design.md §8 |
+| Instructions.md | ~155L | ~6.5KB | Protocol, workflow | T10 | memory.md §Δ_LOG |
+| **TOTAL** | **~745L** | **~34KB** | **7 docs** | **T10** | **All synced** |
 
-*Obey protocol. Auto-update every turn. Compress pre/post. 7-doc KB. Single Source of Truth. END_ON_SYNC.*
+*Obey protocol. Auto-update every turn. Compress pre/post. 7-doc KB. Single Source of Truth. Orientation-first responsive. END_ON_SYNC.*
