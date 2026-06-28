@@ -759,7 +759,7 @@
     outline-offset: 2px;
   }
 
-  /* Mobile Nav - Single Unified System */
+  /* Mobile Nav - Single Unified System (JS-enhanced, CSS fallback) */
   .mobile-nav-overlay {
     position: fixed;
     inset: 0;
@@ -769,6 +769,7 @@
     visibility: hidden;
     transition: opacity var(--duration-slow), visibility var(--duration-slow);
     pointer-events: none;
+    /* Graceful fallback: works with or without JS class toggling */
   }
 
   .mobile-nav-overlay.is-open { 
@@ -794,6 +795,13 @@
     box-shadow: var(--shadow-xl);
     visibility: hidden;
     pointer-events: none;
+    /* Inert attribute support for accessibility */
+  }
+  
+  /* Support for [inert] attribute (native browser behavior) */
+  .mobile-nav-panel[inert] {
+    pointer-events: none;
+    user-select: none;
   }
 
   .mobile-nav-panel.is-open { 
