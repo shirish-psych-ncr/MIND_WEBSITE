@@ -1,561 +1,915 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-IN" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#AA44A0" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#5E2A56" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="author" content="Mind Grace Clinic" />
-    <meta name="publisher" content="Mind Grace Clinic" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-    
-    <title>Psychiatrist in Greater Noida | Mind Grace Clinic</title>
-    <meta name="description" content="Consult Dr Anita Sharma at Mind Grace Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care." />
-    
-    <link rel="canonical" href="https://mindgracencr.in/" />
-    <link rel="alternate" hreflang="en-IN" href="https://mindgracencr.in/" />
-    <link rel="alternate" hreflang="x-default" href="https://mindgracencr.in/" />
-    
-    <!-- OpenGraph / Social Sharing -->
-    <meta property="og:title" content="Psychiatrist in Greater Noida | Mind Grace Clinic" />
-    <meta property="og:description" content="Consult Dr Anita Sharma at Mind Grace Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care." />
-    <meta property="og:image" content="res/Dr_Anita_Sharma_Personal_Photo.jpg" />
-    <meta property="og:image:secure_url" content="res/Dr_Anita_Sharma_Personal_Photo.jpg" />
-    <meta property="og:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Clinic" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="675" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:url" content="https://mindgracencr.in/" />
-    <meta property="og:site_name" content="Mind Grace Clinic" />
-    <meta property="og:locale" content="en_IN" />
-    <meta property="og:type" content="website" />
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Psychiatrist in Greater Noida | Mind Grace Clinic" />
-    <meta name="twitter:description" content="Consult Dr Anita Sharma at Mind Grace Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care." />
-    <meta name="twitter:image" content="res/Dr_Anita_Sharma_Personal_Photo.jpg" />
-    <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Clinic" />
-    
-    <!-- Robots & Indexing -->
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    
-    <!-- PWA / Mobile Web App -->
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Mind Grace Clinic" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="apple-touch-icon" href="/res/apple-touch-icon.png" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/res/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/res/favicon-16x16.png" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    
-    <!-- DNS Prefetch & Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
-    
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
-    
-    <!-- Preload Critical Assets -->
-    <link rel="preload" as="image" href="res/Mind_Grace_Clinic_Logo.png" fetchpriority="high" />
-    <link rel="preload" as="image" href="res/Dr_Anita_Sharma_Personal_Photo.jpg" fetchpriority="high" />
-    
-    <!-- Structured Data (Schema.org) - Knowledge Graph -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "ImageObject",
-          "@id": "https://mindgracencr.in/#logo-image",
-          "url": "https://mindgracencr.in/res/Mind_Grace_Clinic_Logo.png",
-          "width": 512,
-          "height": 512,
-          "caption": "Mind Grace Clinic Logo"
-        },
-        {
-          "@type": "ImageObject",
-          "@id": "https://mindgracencr.in/#doctor-image",
-          "url": "https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg",
-          "width": 600,
-          "height": 800,
-          "caption": "Dr. Anita Sharma, Consultant Psychiatrist"
-        },
-        {
-          "@type": "ContactPoint",
-          "@id": "https://mindgracencr.in/#contact-point",
-          "telephone": "+919667863295",
-          "contactType": "appointments",
-          "availableLanguage": ["en", "hi"],
-          "areaServed": { "@type": "City", "name": "Greater Noida" }
-        },
-        {
-          "@type": ["MedicalBusiness", "MedicalClinic"],
-          "@id": "https://mindgracencr.in/#clinic",
-          "name": "Mind Grace Clinic",
-          "url": "https://mindgracencr.in/",
-          "logo": { "@id": "https://mindgracencr.in/#logo-image" },
-          "image": { "@id": "https://mindgracencr.in/#doctor-image" },
-          "telephone": "+919667863295",
-          "email": "contact@mindgraceclinic.com",
-          "priceRange": "₹₹",
-          "paymentAccepted": "Cash, UPI, Card",
-          "currenciesAccepted": "INR",
-          "address": {
-            "@type": "PostalAddress",
-            "@id": "https://mindgracencr.in/#address",
-            "streetAddress": "Alpha 1, Greater Noida",
-            "addressLocality": "Greater Noida",
-            "addressRegion": "Uttar Pradesh",
-            "postalCode": "201310",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 28.4744,
-            "longitude": 77.5040
-          },
-          "hasMap": "https://maps.google.com/?q=Mind+Grace+Clinic+Greater+Noida",
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "09:00",
-              "closes": "19:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Saturday",
-              "opens": "09:00",
-              "closes": "14:00"
-            }
-          ],
-          "areaServed": [
-            { "@type": "City", "name": "Greater Noida" },
-            { "@type": "City", "name": "Greater Noida West" },
-            { "@type": "City", "name": "Noida" },
-            { "@type": "City", "name": "Noida Extension" }
-          ],
-          "contactPoint": { "@id": "https://mindgracencr.in/#contact-point" },
-          "sameAs": [
-            "https://www.facebook.com/mindgraceclinic",
-            "https://www.instagram.com/mindgraceclinic",
-            "https://www.linkedin.com/company/mindgraceclinic"
-          ],
-          "founder": { "@id": "https://mindgracencr.in/#physician" },
-          "medicalSpecialty": "Psychiatric",
-          "availableService": { "@id": "https://mindgracencr.in/#service-catalog" }
-        },
-        {
-          "@type": "OfferCatalog",
-          "@id": "https://mindgracencr.in/#service-catalog",
-          "name": "Medical Services",
-          "itemListElement": [
-            {
-              "@type": "OfferCatalog",
-              "name": "Adult Psychiatry Services",
-              "itemListElement": [
-                { "@type": "MedicalTherapy", "name": "Psychiatric Consultation", "medicalSpecialty": "Psychiatric" },
-                { "@type": "MedicalTherapy", "name": "Medication Management", "medicalSpecialty": "Psychiatric" },
-                { "@type": "MedicalTherapy", "name": "Diagnostic Assessment", "medicalSpecialty": "Psychiatric" },
-                { "@type": "MedicalTherapy", "name": "Follow-up Consultation", "medicalSpecialty": "Psychiatric" }
-              ]
-            },
-            {
-              "@type": "OfferCatalog",
-              "name": "Child Development Services",
-              "itemListElement": [
-                { "@type": "MedicalTherapy", "name": "Child Development Assessment", "medicalSpecialty": "Pediatric" },
-                { "@type": "MedicalTherapy", "name": "Autism Spectrum Assessment", "medicalSpecialty": "Pediatric" },
-                { "@type": "MedicalTherapy", "name": "Parent Guidance", "medicalSpecialty": "Pediatric" }
-              ]
-            }
-          ]
-        },
-        {
-          "@type": "MedicalCondition",
-          "@id": "https://mindgracencr.in/#condition-anxiety",
-          "name": "Anxiety Disorder",
-          "possibleTreatment": { "@type": "MedicalTherapy", "name": "Psychiatric Consultation" }
-        },
-        {
-          "@type": "MedicalCondition",
-          "@id": "https://mindgracencr.in/#condition-depression",
-          "name": "Depressive Disorder",
-          "possibleTreatment": { "@type": "MedicalTherapy", "name": "Psychiatric Consultation" }
-        },
-        {
-          "@type": "MedicalCondition",
-          "@id": "https://mindgracencr.in/#condition-adhd",
-          "name": "Adult ADHD",
-          "possibleTreatment": { "@type": "MedicalTherapy", "name": "Diagnostic Assessment" }
-        },
-        {
-          "@type": "Physician",
-          "@id": "https://mindgracencr.in/#physician",
-          "name": "Dr. Anita Sharma",
-          "honorificPrefix": "Dr.",
-          "jobTitle": "Consultant Psychiatrist",
-          "gender": "Female",
-          "worksFor": { "@id": "https://mindgracencr.in/#clinic" },
-          "knowsAbout": ["Adult Psychiatry", "Child Development", "ADHD", "Autism Spectrum Disorder", "Anxiety Disorder", "Depressive Disorder"],
-          "availableLanguage": ["en", "hi"],
-          "medicalSpecialty": "Psychiatric",
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Medical Degree",
-            "recognizedBy": "Medical Council of India"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://mindgracencr.in/#website",
-          "url": "https://mindgracencr.in/",
-          "name": "Mind Grace Clinic",
-          "publisher": { "@id": "https://mindgracencr.in/#clinic" },
-          "inLanguage": "en-IN",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://mindgracencr.in/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@type": "MedicalWebPage",
-          "@id": "https://mindgracencr.in/#webpage",
-          "url": "https://mindgracencr.in/",
-          "name": "Psychiatrist in Greater Noida | Mind Grace Clinic",
-          "description": "Consult Dr. Anita Sharma at Mind Grace Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and evidence-based psychiatric care.",
-          "isPartOf": { "@id": "https://mindgracencr.in/#website" },
-          "about": [{ "@id": "https://mindgracencr.in/#clinic" }, { "@id": "https://mindgracencr.in/#physician" }],
-          "breadcrumb": { "@id": "https://mindgracencr.in/#breadcrumb" },
-          "mainEntity": { "@id": "https://mindgracencr.in/#clinic" },
-          "lastReviewed": "2026-01-15",
-          "reviewedBy": { "@id": "https://mindgracencr.in/#physician" }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://mindgracencr.in/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://mindgracencr.in/"
-            }
-          ]
-        }
-      ]
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E84560"/>
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#912F47"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="author" content="Mind Grace Clinic"/>
+  <meta name="publisher" content="Mind Grace Clinic"/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  
+  <title>You Deserve Care | Mind Grace Clinic — Psychiatrist in Greater Noida</title>
+  <meta name="description" content="You matter. Consult Dr Anita Sharma at Mind Grace Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care."/>
+  
+  <link rel="canonical" href="https://mindgracencr.in/"/>
+  <link rel="alternate" hreflang="en-IN" href="https://mindgracencr.in/"/>
+  <link rel="alternate" hreflang="x-default" href="https://mindgracencr.in/"/>
+  
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:title" content="You Deserve Care | Mind Grace Clinic"/>
+  <meta property="og:description" content="You matter. Expert psychiatric care in Greater Noida for anxiety, depression, ADHD, child development & more."/>
+  <meta property="og:image" content="res/Dr_Anita_Sharma_Personal_Photo.jpg"/>
+  <meta property="og:image:secure_url" content="res/Dr_Anita_Sharma_Personal_Photo.jpg"/>
+  <meta property="og:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Clinic"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="675"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:url" content="https://mindgracencr.in/"/>
+  <meta property="og:site_name" content="Mind Grace Clinic"/>
+  <meta property="og:locale" content="en_IN"/>
+  <meta property="og:type" content="website"/>
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="You Deserve Care | Mind Grace Clinic"/>
+  <meta name="twitter:description" content="You matter. Expert psychiatric care in Greater Noida."/>
+  <meta name="twitter:image" content="res/Dr_Anita_Sharma_Personal_Photo.jpg"/>
+  <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist"/>
+  
+  <!-- Robots & Indexing -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  
+  <!-- PWA / Mobile Web App -->
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="Mind Grace"/>
+  <link rel="manifest" href="/site.webmanifest"/>
+  
+  <!-- Base64 Favicon (Pink Lotus from Logo) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"/>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css"/>
+  
+  <!-- Preload Critical Assets -->
+  <link rel="preload" as="image" href="res/Mind_Grace_Clinic_Logo_Pink.svg" fetchpriority="high"/>
+  <link rel="preload" as="image" href="res/Dr_Anita_Sharma_Personal_Photo.jpg" fetchpriority="high"/>
+  <link rel="preload" as="image" href="res/mind-grace-entry-n-reception.jpg" fetchpriority="high"/>
+  
+  <style>
+    /* CRITICAL CSS INLINED FOR PERFORMANCE */
+    :root {
+      --warm-pink: #E84560;
+      --soft-plum: #F6F2F5;
+      --deep-rose: #912F47;
+      --cream: #FDFCF8;
+      --text-dark: #3A1C36;
+      --text-muted: #80506A;
+      --shadow-soft: 0 4px 20px rgba(163, 25, 113, 0.08);
+      --shadow-medium: 0 8px 30px rgba(163, 25, 113, 0.12);
+      --radius-card: 16px;
+      --radius-pill: 9999px;
     }
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
     
-    <!-- Emergency Banner -->
-    <div class="alert-banner" role="alert" aria-live="assertive">
-      <div class="container">
-        <p>If you or someone else is in immediate danger or experiencing a medical emergency, <a href="tel:112" rel="nofollow">Call 112</a> or visit the nearest emergency department immediately.</p>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header class="site-header">
-      <div class="container header-row">
-        <a class="brand-wrap" href="/" aria-label="Mind Grace Clinic Home">
-          <img class="logo" src="res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" width="48" height="48" loading="eager" fetchpriority="high" />
-          <div class="brand-text">
-            <p class="brand-name">Mind Grace Clinic</p>
-            <p class="doctor-name">Dr. Anita Sharma, MD</p>
-          </div>
-        </a>
-        
-        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel" aria-haspopup="menu">
-          <span aria-hidden="true">&#9776;</span>
-        </button>
-
-        <nav class="nav-desktop" aria-label="Main Navigation">
-          <a class="nav-link" href="/" aria-current="page">Home</a>
-          <a class="nav-link" href="services.html">Services</a>
-          <a class="nav-link" href="conditions.html">Conditions</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="resources.html">Resources</a>
-          <a class="nav-link" href="location.html">Location</a>
-          <a class="nav-link" href="faq.html">FAQ</a>
-          <a class="btn btn-primary" href="book.html">Book Consultation</a>
-        </nav>
-      </div>
-    </header>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true" inert></div>
-    <aside class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true" aria-labelledby="mobile-menu-heading" inert>
-      <div class="mobile-nav-header">
-        <h2 id="mobile-menu-heading">Menu</h2>
-        <button type="button" class="close-mobile-menu" id="mobile-close" aria-label="Close menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M18 6 6 18M6 6l12 12"/>
-          </svg>
-        </button>
-      </div>
-      <nav class="mobile-nav-list" aria-label="Mobile Navigation">
-        <a href="/">Home</a>
-        <a href="services.html">Services</a>
-        <a href="conditions.html">Conditions</a>
-        <a href="about.html">About</a>
-        <a href="resources.html">Resources</a>
-        <a href="location.html">Location</a>
-        <a href="faq.html">FAQ</a>
-        <a href="book.html">Book Consultation</a>
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      font-size: clamp(14px, 2vw, 18px);
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* VIEWPORT MODE DETECTION — THE RULING */
+    @media (orientation: landscape) {
+      body.view-mode-horizontal .hero-content { flex-direction: row; align-items: center; gap: 3rem; }
+      body.view-mode-horizontal .hero-text { flex: 1; min-width: 0; }
+      body.view-mode-horizontal .hero-visual { flex: 1; max-width: 500px; }
+      body.view-mode-horizontal .main-grid { grid-template-columns: repeat(3, 1fr); }
+      body.view-mode-horizontal footer .footer-content { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (orientation: portrait) {
+      body.view-mode-vertical .hero-content { flex-direction: column; text-align: center; }
+      body.view-mode-vertical .hero-visual { order: -1; max-width: 280px; margin-bottom: 1rem; }
+      body.view-mode-vertical .main-grid { grid-template-columns: 1fr; }
+      body.view-mode-vertical footer .footer-content { grid-template-columns: 1fr; }
+    }
+    
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(253, 252, 248, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(163, 25, 113, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .site-header.scrolled {
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .logo-svg {
+      height: 48px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .logo-link:hover .logo-svg {
+      transform: scale(1.05);
+    }
+    
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--deep-rose);
+      line-height: 1.2;
+    }
+    
+    .logo-tagline {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    
+    /* DESKTOP NAV */
+    .desktop-nav {
+      display: none;
+    }
+    
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    
+    .desktop-nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.875rem;
+      border-radius: var(--radius-pill);
+      transition: all 0.2s ease;
+    }
+    
+    .desktop-nav a:hover {
+      background: var(--soft-plum);
+      color: var(--warm-pink);
+    }
+    
+    .desktop-nav .cta-button {
+      background: var(--warm-pink);
+      color: white;
+      font-weight: 600;
+    }
+    
+    .desktop-nav .cta-button:hover {
+      background: var(--deep-rose);
+      color: white;
+    }
+    
+    /* MOBILE NAV TRIGGER */
+    .mobile-nav-trigger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1002;
+    }
+    
+    .mobile-nav-trigger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-dark);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    
+    .mobile-nav-trigger[aria-expanded="true"] span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-nav-trigger[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .mobile-nav-trigger[aria-expanded="true"] span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    /* MOBILE NAV OVERLAY */
+    .mobile-nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(58, 28, 54, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1001;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .mobile-nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .mobile-nav-panel {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(85vw, 320px);
+      height: 100vh;
+      height: 100dvh;
+      background: var(--cream);
+      z-index: 1002;
+      padding: 6rem 1.5rem 2rem;
+      transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mobile-nav-panel.active {
+      right: 0;
+    }
+    
+    .mobile-nav-panel ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    
+    .mobile-nav-panel a {
+      display: block;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 1rem;
+      border-radius: var(--radius-card);
+      transition: all 0.2s ease;
+    }
+    
+    .mobile-nav-panel a:hover {
+      background: var(--soft-plum);
+      color: var(--warm-pink);
+    }
+    
+    .mobile-nav-panel .cta-button {
+      background: var(--warm-pink);
+      color: white;
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    
+    .mobile-nav-panel .cta-button:hover {
+      background: var(--deep-rose);
+      color: white;
+    }
+    
+    /* HERO SECTION */
+    .hero {
+      padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .hero-text {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--soft-plum), rgba(232, 69, 96, 0.1));
+      color: var(--warm-pink);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.375rem 0.875rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1rem;
+      border: 1px solid rgba(232, 69, 96, 0.2);
+    }
+    
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .hero h1 .highlight {
+      color: var(--warm-pink);
+      position: relative;
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background: var(--warm-pink);
+      color: white;
+      box-shadow: 0 4px 14px rgba(232, 69, 96, 0.3);
+    }
+    
+    .btn-primary:hover {
+      background: var(--deep-rose);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(145, 47, 71, 0.4);
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--warm-pink);
+      border: 2px solid var(--warm-pink);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--soft-plum);
+    }
+    
+    .hero-visual {
+      flex: 0 0 auto;
+      max-width: 400px;
+      width: 100%;
+    }
+    
+    .hero-image-wrapper {
+      position: relative;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-medium);
+      aspect-ratio: 4/5;
+    }
+    
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .hero-image-wrapper:hover .hero-image {
+      transform: scale(1.05);
+    }
+    
+    /* MAIN CARDS GRID */
+    .main-section {
+      padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+      background: linear-gradient(180deg, var(--cream), var(--soft-plum));
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+    }
+    
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+    
+    .section-header p {
+      color: var(--text-muted);
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+    }
+    
+    .main-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .card {
+      background: white;
+      border-radius: var(--radius-card);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(163, 25, 113, 0.08);
+    }
+    
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-medium);
+    }
+    
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--soft-plum), rgba(232, 69, 96, 0.15));
+      border-radius: var(--radius-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    .card-link {
+      color: var(--warm-pink);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      font-size: 0.9rem;
+    }
+    
+    .card-link:hover {
+      gap: 0.5rem;
+    }
+    
+    /* FOOTER */
+    .site-footer {
+      background: var(--text-dark);
+      color: var(--cream);
+      padding: clamp(2rem, 4vw, 3rem) 1.5rem;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .footer-column h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--warm-pink);
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-column a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      transition: all 0.2s ease;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    
+    .footer-column a:hover {
+      opacity: 1;
+      color: var(--warm-pink);
+      transform: translateX(4px);
+    }
+    
+    .footer-bottom {
+      max-width: 900px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(253, 252, 248, 0.15);
+      text-align: center;
+    }
+    
+    .disclaimer {
+      font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+      color: rgba(253, 252, 248, 0.6);
+      line-height: 1.5;
+      max-width: 600px;
+      margin: 0 auto;
+      /* Auto-zoom-out: shrinks instead of wrapping */
+      transform-origin: center;
+    }
+    
+    /* RESPONSIVE BREAKPOINTS */
+    @media (min-width: 768px) {
+      .desktop-nav { display: block; }
+      .mobile-nav-trigger { display: none; }
+    }
+    
+    @media (max-width: 767px) {
+      .hero-buttons { flex-direction: column; }
+      .btn { width: 100%; }
+      .footer-content { gap: 1.5rem; }
+    }
+    
+    /* ACCESSIBILITY */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+    
+    [inert] { pointer-events: none; opacity: 0.5; }
+  </style>
+</head>
+<body class="view-mode-initializing">
+  <!-- SKIP LINK -->
+  <a href="#main-content" class="visually-hidden" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+  
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo-link" aria-label="Mind Grace Clinic Home">
+        <svg class="logo-svg" viewBox="0 0 600 473" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <use href="res/Mind_Grace_Clinic_Logo_Pink.svg#logo"/>
+        </svg>
+        <div>
+          <div class="logo-text">Mind Grace Clinic</div>
+          <div class="logo-tagline">Where You Come First</div>
+        </div>
+      </a>
+      
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="book.html" class="cta-button">Book Now</a></li>
+        </ul>
       </nav>
-      <div class="mobile-nav-actions">
-        <a class="btn btn-outline" href="tel:+919667863295" rel="nofollow">Call Clinic</a>
-        <a class="btn btn-primary" href="book.html">Schedule First Visit</a>
+      
+      <!-- MOBILE NAV TRIGGER -->
+      <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  
+  <!-- MOBILE NAV PANEL -->
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="process.html">What to Expect</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="location.html">Find Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="book.html" class="cta-button">Book Appointment</a></li>
+    </ul>
+  </nav>
+  
+  <!-- MAIN CONTENT -->
+  <main id="main-content" role="main">
+    <!-- HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-badge">✨ You Matter Here</span>
+          <h1 id="hero-title">
+            Your Mental Health<br/>
+            <span class="highlight">Your Journey</span><br/>
+            Your Safe Space
+          </h1>
+          <p class="hero-subtitle">
+            At Mind Grace Clinic, everything revolves around <strong>you</strong>. 
+            Whether you're navigating anxiety, seeking support for your child, 
+            or finding balance again—Dr. Anita Sharma and our compassionate team are here.
+          </p>
+          <div class="hero-buttons">
+            <a href="book.html" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              Book Your Session
+            </a>
+            <a href="process.html" class="btn btn-secondary">
+              See How It Works
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img 
+              src="res/mind-grace-entry-n-reception.jpg" 
+              alt="Warm, welcoming entrance of Mind Grace Clinic"
+              class="hero-image"
+              loading="eager"
+              width="400"
+              height="500"
+            />
+          </div>
+        </div>
       </div>
-    </aside>
-
-    <!-- Main Content -->
-    <main id="main-content">
-      <!-- Hero Section -->
-      <header class="hero" aria-labelledby="hero-heading">
-        <div class="container">
-          <div class="hero-grid">
-            <div class="hero-content">
-              <p class="eyebrow">Psychiatric care for adults &amp; developmental support for children</p>
-              <h1 id="hero-heading">Psychiatrist in Greater Noida for Adult Mental Health and Child Development Support</h1>
-              
-              <ul class="trust-signals">
-                <li><span aria-hidden="true">✓</span> Confidential</li>
-                <li><span aria-hidden="true">✓</span> Evidence-based</li>
-                <li><span aria-hidden="true">✓</span> Adult &amp; Child Psychiatry</li>
-              </ul>
-
-              <p class="lead">
-                If you are dealing with anxiety, low mood, or overthinking, or if you have questions about your child's development, you can begin with a clear, confidential first consultation.
-              </p>
-              <p class="hero-location">Serving Alpha-1, Delta-1, Pari Chowk, Knowledge Park, and surrounding Greater Noida areas.</p>
-
-              <div class="cta-row">
-                <a class="btn btn-primary" href="book.html">Start Consultation</a>
-                <a class="btn btn-outline" href="process.html">What to Expect</a>
-                <a class="btn btn-ghost" href="tel:+919667863295" rel="nofollow">Call Clinic</a>
-              </div>
-
-              <div class="kpi-grid">
-                <div class="cta-row">
-                  <p class="btn btn-ghost">Adults</p>
-                  <p class="btn btn-ghost">Anxiety, panic, mood changes, sleep concerns, adult ADHD, and related stress patterns.</p>
-                </div>
-                <div class="cta-row">
-                  <p class="btn btn-ghost">Children</p>
-                  <p class="btn btn-ghost">Autism, speech delay, school concerns, sensory needs, and parent guidance.</p>
-                </div>
-                <div class="cta-row">
-                  <p class="btn btn-ghost">Visit style</p>
-                  <p class="btn btn-ghost">Calm, structured, and practical, with treatment options explained in plain language.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-image">
-              <picture>
-               
-                <img src="res/Dr_Anita_Sharma_Personal_Photo.jpg" alt="Dr. Anita Sharma, Consultant Psychiatrist at Mind Grace Clinic, Greater Noida" width="600" height="800" loading="eager" fetchpriority="high" decoding="async" itemprop="image" sizes="(max-width: 768px) 100vw, 600px" />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Common Reasons Section -->
-      <section class="section" aria-labelledby="reasons-heading">
-        <div class="container">
-          <div class="panel">
-            <p class="eyebrow">Common reasons for visiting</p>
-            <h2 id="reasons-heading">Common reasons people reach out</h2>
-            <nav class="grid-auto" aria-label="Common conditions">
-              <a class="card" href="conditions.html#anxiety">
-                <h3 class="card-title">Anxiety and panic</h3>
-                <p class="card-text">Overthinking, racing thoughts, physical tension, or avoidance.</p>
-              </a>
-              <a class="card" href="conditions.html#depression">
-                <h3 class="card-title">Low mood and burnout</h3>
-                <p class="card-text">Emotional heaviness, loss of interest, or feeling shut down.</p>
-              </a>
-              <a class="card" href="conditions.html#adult-adhd">
-                <h3 class="card-title">Focus and ADHD concerns</h3>
-                <p class="card-text">Disorganization, procrastination, overwhelm, and task paralysis.</p>
-              </a>
-              <a class="card" href="conditions.html#speech-language-delay">
-                <h3 class="card-title">Speech and learning concerns</h3>
-                <p class="card-text">Delayed talking, school concerns, or difficulty keeping up.</p>
-              </a>
-            </nav>
-            <div class="cta-row">
-              <a class="btn btn-ghost" href="testimonials.html">Read patient stories</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Process & Location Section -->
-      <section class="section section-alt" aria-labelledby="process-heading">
-        <div class="container">
-          <div class="grid-auto">
-            <div class="panel">
-              <p class="eyebrow">How care begins</p>
-              <h2 id="process-heading">A simpler first-visit path</h2>
-              <ol>
-                <li>Share the main concern through the booking page, phone call, or WhatsApp.</li>
-                <li>Attend a first consultation focused on understanding the pattern clearly.</li>
-                <li>Leave with a practical plan for treatment, follow-up, or developmental support.</li>
-              </ol>
-              <div class="cta-row">
-                <a class="btn btn-primary" href="process.html">See the full process</a>
-                <a class="btn btn-ghost" href="approach.html">Our approach</a>
-              </div>
-            </div>
-
-            <div class="panel">
-              <p class="eyebrow">Easy to reach</p>
-              <h2>Greater Noida location support</h2>
-              <ul>
-                <li>Alpha-1 Metro Station: around 8 minutes by road</li>
-                <li>Delta-1 Metro Station: around 8 minutes by road</li>
-                <li>Pari Chowk and Knowledge Park routes covered</li>
-                <li>Schools, university, and corporate routes nearby</li>
-              </ul>
-              <div class="cta-row">
-                <a class="btn btn-primary" href="location.html">View location</a>
-                <a class="btn btn-ghost" href="contact.html">Call or message</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="section" aria-labelledby="services-heading">
-        <div class="container">
-          <div class="grid-auto">
-            <div class="panel">
-              <p class="eyebrow">Mind Grace Clinic</p>
-              <h2 id="services-heading">Adult psychiatry</h2>
-              <ul>
-                <li>Psychiatric consultation and diagnosis</li>
-                <li>Medication planning when appropriate</li>
-                <li>Sleep, mood, anxiety, adult ADHD, and stress support</li>
-              </ul>
-              <div class="cta-row">
-                <a class="btn btn-primary" href="services.html#adult-services">Learn about adult services</a>
-                <a class="btn btn-ghost" href="mind-grace.html">About Mind Grace</a>
-              </div>
-            </div>
-            <div class="panel">
-              <p class="eyebrow">Aasha Early Intervention</p>
-              <h2>Child development support</h2>
-              <ul>
-                <li>Speech therapy and occupational therapy pathways</li>
-                <li>Autism, school concerns, sensory needs, and parent guidance</li>
-                <li>Development-focused support under one roof</li>
-              </ul>
-              <div class="cta-row">
-                <a class="btn btn-primary" href="services.html#child-services">Find child services</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Resources Section -->
-      <section class="section section-alt" aria-labelledby="resources-heading">
-        <div class="container">
-          <div class="panel">
-            <p class="eyebrow">Learn more</p>
-            <h2 id="resources-heading">Helpful reading and tools</h2>
-            <div class="grid-auto">
-              <a class="card" href="blog/adult.html">
-                <h3 class="card-title">Adult mental health articles</h3>
-                <p class="card-text">Explore anxiety, overthinking, sleep, ADHD, burnout, and related concerns.</p>
-              </a>
-              <a class="card" href="blog/children.html">
-                <h3 class="card-title">Child development articles</h3>
-                <p class="card-text">Explore autism, speech, behaviour, school concerns, and parent guidance topics.</p>
-              </a>
-              <a class="card" href="resources.html">
-                <h3 class="card-title">Guided tools</h3>
-                <p class="card-text">Use breathing, grounding, and calming tools alongside clinical support.</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Medical Disclaimer -->
-    <div class="disclaimer">
-      <div class="container">
-        <p>Information on this website is intended for education and appointment planning only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment.</p>
+    </section>
+    
+    <!-- MAIN CARDS SECTION -->
+    <section class="main-section" aria-labelledby="services-title">
+      <div class="section-header">
+        <h2 id="services-title">Care Designed Around You</h2>
+        <p>Personalized, evidence-based support for every stage of your journey</p>
+      </div>
+      
+      <div class="main-grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🧠</div>
+          <h3>Psychiatric Care</h3>
+          <p>Expert diagnosis and treatment for anxiety, depression, bipolar disorder, OCD, and more—with you at the center.</p>
+          <a href="services.html#psychiatry" class="card-link">
+            Learn More
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+        </article>
+        
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">👶</div>
+          <h3>Child Development</h3>
+          <p>Autism assessment, ADHD support, speech therapy, and special education tailored to your child's unique needs.</p>
+          <a href="aasha.html" class="card-link">
+            Explore AASHA
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+        </article>
+        
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">💬</div>
+          <h3>Counseling</h3>
+          <p>Individual, couple, and family therapy in a safe, non-judgmental space where your voice is heard.</p>
+          <a href="services.html#counseling" class="card-link">
+            Meet Our Therapists
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+        </article>
+        
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🌿</div>
+          <h3>Wellness Tools</h3>
+          <p>Free guided breathing, butterfly tapping, fractal hypnosis, and other self-care resources for daily use.</p>
+          <a href="resources.html" class="card-link">
+            Try Free Tools
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+        </article>
+        
+        <!-- Card 5 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🏥</div>
+          <h3>Clinic Experience</h3>
+          <p>A warm, private, and comfortable environment designed to make every visit feel like coming home.</p>
+          <a href="gallery.html" class="card-link">
+            See Our Space
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+        </article>
+        
+        <!-- Card 6 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📍</div>
+          <h3>Visit Us</h3>
+          <p>Conveniently located in Greater Noida with easy parking and accessible facilities for all.</p>
+          <a href="location.html" class="card-link">
+            Get Directions
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Dr. Sharma</a></li>
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="book.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="emergency.html">Emergency Help</a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="site-footer" role="contentinfo">
-      <h2 class="sr-only">Footer Navigation</h2>
-      <div class="container">
-        <div class="grid-footer">
-          <div class="footer-col">
-            <h3>Mind Grace Clinic</h3>
-            <p class="lead">Psychiatric care and child development support in Greater Noida with practical access from metro, school, university, and Knowledge Park routes.</p>
-            <address>
-              <p>Alpha 1, Greater Noida, Uttar Pradesh 201310</p>
-              <p><a href="tel:+919667863295" rel="nofollow">+91 96678 63295</a></p>
-              <p><a href="mailto:contact@mindgraceclinic.com" rel="nofollow">contact@mindgraceclinic.com</a></p>
-            </address>
-            <p><small>Languages: English, Hindi</small></p>
-          </div>
-          <div class="footer-col">
-            <h3>Services</h3>
-            <ul>
-              <li><a href="services.html#adult-services">Adult Psychiatry</a></li>
-              <li><a href="services.html#child-services">Child Development</a></li>
-              <li><a href="conditions.html">Conditions Treated</a></li>
-              <li><a href="process.html">First Visit</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h3>Resources</h3>
-            <ul>
-              <li><a href="blog/adult.html">Adult Articles</a></li>
-              <li><a href="blog/children.html">Child Articles</a></li>
-              <li><a href="resources.html">Guided Tools</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h3>Contact &amp; Legal</h3>
-            <ul>
-              <li><a href="book.html">Book appointment</a></li>
-              <li><a href="location.html">Location & Directions</a></li>
-              <li><a href="privacy.html">Privacy Policy</a></li>
-              <li><a href="terms.html">Terms of Service</a></li>
-              <li><a href="consent.html">Consent</a></li>
-              <li><a href="accessibility.html">Accessibility</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 Mind Grace Clinic. All rights reserved.</p>
-          <p><small>Medical Council Registration: Verified upon request. This website is for informational purposes only and does not provide medical advice.</small></p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="app.js" defer></script>
-  </body>
+    
+    <div class="footer-bottom">
+      <p class="disclaimer">
+        Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice. 
+        Always consult a qualified healthcare provider for diagnosis and treatment. In crisis, call emergency services immediately.
+      </p>
+      <p style="font-size:clamp(0.6rem,1.2vw,0.7rem);color:rgba(253,252,248,0.5);margin-top:0.75rem;">
+        © <span id="year"></span> Mind Grace Clinic, Greater Noida. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  
+  <!-- JAVASCRIPT -->
+  <script>
+    // YEAR UPDATE
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // VIEWPORT MODE DETECTION — THE SINGLE RULING
+    (function detectViewMode() {
+      const body = document.body;
+      function updateMode() {
+        const isLandscape = window.matchMedia('(orientation: landscape)').matches;
+        body.classList.remove('view-mode-horizontal', 'view-mode-vertical');
+        body.classList.add(isLandscape ? 'view-mode-horizontal' : 'view-mode-vertical');
+      }
+      updateMode();
+      window.addEventListener('resize', updateMode, { passive: true });
+    })();
+    
+    // MOBILE NAV WITH GRACEFUL FALLBACKS
+    (function initMobileNav() {
+      const trigger = document.querySelector('.mobile-nav-trigger');
+      const panel = document.getElementById('mobile-nav-panel');
+      const overlay = document.getElementById('mobile-nav-overlay');
+      const navLinks = panel.querySelectorAll('a');
+      let isOpen = false;
+      
+      if (!trigger || !panel || !overlay) return;
+      
+      function openNav() {
+        isOpen = true;
+        trigger.setAttribute('aria-expanded', 'true');
+        panel.classList.add('active');
+        overlay.classList.add('active');
+        panel.removeAttribute('inert');
+        document.body.style.overflow = 'hidden';
+        navLinks[0]?.focus();
+      }
+      
+      function closeNav() {
+        isOpen = false;
+        trigger.setAttribute('aria-expanded', 'false');
+        panel.classList.remove('active');
+        overlay.classList.remove('active');
+        panel.setAttribute('inert', '');
+        document.body.style.overflow = '';
+        trigger.focus();
+      }
+      
+      trigger.addEventListener('click', () => isOpen ? closeNav() : openNav());
+      overlay.addEventListener('click', closeNav);
+      
+      // ESC key closes
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isOpen) closeNav();
+      });
+      
+      // Close on desktop resize
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && isOpen) closeNav();
+      }, { passive: true });
+      
+      // Close on link click
+      navLinks.forEach(link => {
+        link.addEventListener('click', closeNav);
+      });
+      
+      // Touch device optimization
+      panel.addEventListener('touchstart', () => {}, { passive: true });
+    })();
+    
+    // HEADER SCROLL EFFECT
+    (function initHeaderScroll() {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      
+      let ticking = false;
+      function updateScroll() {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        ticking = false;
+      }
+      
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(updateScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+  </script>
+  
+  <!-- SYNC MARKER -->
+  <!-- END_ON_SYNC -->
+</body>
 </html>
