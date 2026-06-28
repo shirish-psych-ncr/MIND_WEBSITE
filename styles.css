@@ -17,6 +17,20 @@
 @import './css-tools/tools-book.css' layer(components);
 
 /* =========================================
+   @layer typography (Type Scale & Vertical Rhythm)
+   ========================================= */
+@layer typography {
+  /* Typography layer rules - inherits from base */
+}
+
+/* =========================================
+   @layer objects (Layout Primitives: Stack, Cluster, Grid)
+   ========================================= */
+@layer objects {
+  /* Layout objects - spacing and alignment primitives */
+}
+
+/* =========================================
    @layer tokens (Design System DNA)
    ========================================= */
 @layer tokens {
