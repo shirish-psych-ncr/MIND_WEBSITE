@@ -2,9 +2,9 @@
 <html lang="en-IN" dir="ltr">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E84560"/>
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#912F47"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"/>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#A61E4D"/>
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#7A1B3F"/>
   <meta name="color-scheme" content="light dark"/>
   <meta name="author" content="Mind Grace Clinic"/>
   <meta name="publisher" content="Mind Grace Clinic"/>
@@ -67,14 +67,15 @@
   <style>
     /* CRITICAL CSS INLINED FOR PERFORMANCE */
     :root {
-      --warm-pink: #E84560;
-      --soft-plum: #F6F2F5;
-      --deep-rose: #912F47;
+      --warm-pink: #D63384;
+      --royal-pink: #A61E4D;
+      --soft-plum: #FFF0F5;
+      --deep-rose: #7A1B3F;
       --cream: #FDFCF8;
-      --text-dark: #3A1C36;
-      --text-muted: #80506A;
-      --shadow-soft: 0 4px 20px rgba(163, 25, 113, 0.08);
-      --shadow-medium: 0 8px 30px rgba(163, 25, 113, 0.12);
+      --text-dark: #2D1B2E;
+      --text-muted: #6B4C5A;
+      --shadow-soft: 0 4px 20px rgba(166, 30, 77, 0.08);
+      --shadow-medium: 0 8px 30px rgba(166, 30, 77, 0.12);
       --radius-card: 16px;
       --radius-pill: 9999px;
     }
@@ -93,6 +94,9 @@
       color: var(--text-dark);
       line-height: 1.6;
       overflow-x: hidden;
+      overflow-y: auto;
+      min-height: 100vh;
+      display: block;
     }
     
     /* VIEWPORT MODE DETECTION — THE RULING */
@@ -270,6 +274,17 @@
       transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       overflow-y: auto;
       box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mobile-nav-content {
+      opacity: 0;
+      transform: translateX(20px);
+      transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+    }
+    
+    .mobile-nav-panel.active .mobile-nav-content {
+      opacity: 1;
+      transform: translateX(0);
     }
     
     .mobile-nav-panel.active {
@@ -522,15 +537,22 @@
     .site-footer {
       background: var(--text-dark);
       color: var(--cream);
-      padding: clamp(2rem, 4vw, 3rem) 1.5rem;
+      padding: clamp(1.5rem, 3vw, 2.5rem) 1.5rem;
+      width: 100%;
+      max-width: 100%;
     }
     
     .footer-content {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      max-width: 900px;
+      gap: clamp(1rem, 2vw, 2rem);
+      max-width: 800px;
       margin: 0 auto;
+      width: 100%;
+    }
+    
+    .footer-column {
+      min-width: 0;
     }
     
     .footer-column h4 {
@@ -650,16 +672,18 @@
   
   <!-- MOBILE NAV PANEL -->
   <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
-    <ul>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Our Services</a></li>
-      <li><a href="process.html">What to Expect</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="location.html">Find Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="book.html" class="cta-button">Book Appointment</a></li>
-    </ul>
+    <div class="mobile-nav-content">
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="process.html">What to Expect</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="location.html">Find Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="book.html" class="cta-button">Book Appointment</a></li>
+      </ul>
+    </div>
   </nav>
   
   <!-- MAIN CONTENT -->
