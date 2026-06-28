@@ -1,5 +1,5 @@
 ===============================================
-# Engineering Knowledge Base
+Engineering Operating System
 ===============================================
 
 ## An AI Cognitive Architecture for Autonomous Software Engineering
