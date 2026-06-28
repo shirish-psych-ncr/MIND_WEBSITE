@@ -32,12 +32,23 @@
 
 /* =========================================
    @layer tokens (Design System DNA)
-   ========================================= */
+========================================= */
 @layer tokens {
 :root {
   color-scheme: light dark;
 
-  /* BRAND PRIMATIVES (Never used directly in components) */
+  /* BRAND PRIMITIVES - STRICT DUETS (As Provided) */
+  /* Duets: Wild Strawberry + Deep Purple | Cotton Rose + Wild Strawberry | Rich Cerulean + Cotton Rose | Sea Green/Mint Leaf + Deep Purple */
+  --color-wild-strawberry: #F34674;
+  --color-deep-purple: #671B50;
+  --color-cotton-rose: #EFBCBA;
+  --color-rich-cerulean: #2574A8;
+  --color-sea-green: #2F8D63;
+  --color-mint-leaf: #43B17F;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* DERIVED TONES FROM DUETS */
   --color-plum-50: #FFF0F5;
   --color-plum-100: #FCE4EC;
   --color-plum-200: #F8BBD9;
@@ -49,16 +60,16 @@
   --color-plum-800: #880E4F;
   --color-plum-900: #7A1B3F;
   --color-plum-950: #4A1428;
-  
+
   --color-rose-50: #FEF2F4;
   --color-rose-100: #FEE2E7;
   --color-rose-200: #FCC8D0;
   --color-rose-300: #F8A2B0;
   --color-rose-400: #F26F85;
-  --color-rose-500: #D63384;
-  --color-rose-600: #A61E4D;
-  --color-rose-700: #7A1B3F;
-  
+  --color-rose-500: #F34674;
+  --color-rose-600: #671B50;
+  --color-rose-700: #4A1438;
+
   --color-teal-50: #F0FDFA;
   --color-teal-100: #CCFBF1;
   --color-teal-200: #99F6E4;
@@ -68,34 +79,31 @@
   --color-teal-600: #0D9488;
   --color-teal-700: #0F766E;
   --color-teal-800: #115E59;
-  
+
   --color-cream-50: #FDFCF8;
   --color-cream-100: #FAF9F3;
-  --color-white: #FFFFFF;
-  --color-black: #000000;
 
   /* SEMANTIC COLOR TOKENS (Used in components) */
   --color-surface-primary: var(--color-cream-50);
   --color-surface-secondary: var(--color-white);
   --color-surface-elevated: var(--color-white);
   --color-surface-inverse: var(--color-plum-900);
-  
-  --color-text-primary: var(--color-plum-900);
+
+  --color-text-primary: var(--color-deep-purple);
   --color-text-secondary: var(--color-plum-700);
   --color-text-muted: var(--color-plum-500);
   --color-text-inverse: var(--color-cream-50);
   --color-text-on-dark: var(--color-cream-50);
-  
+
   --color-border-subtle: var(--color-plum-200);
   --color-border-default: var(--color-plum-300);
   --color-border-strong: var(--color-plum-500);
-  
-  --color-interactive-primary: var(--color-rose-600);
-  --color-interactive-hover: var(--color-rose-700);
+
+  --color-interactive-primary: var(--color-wild-strawberry);
+  --color-interactive-hover: var(--color-deep-purple);
   --color-interactive-active: var(--color-plum-700);
-  --color-interactive-secondary: var(--color-teal-500);
-  --color-interactive-secondary-hover: var(--color-teal-600);
-  
+  --color-interactive-secondary: var(--color-cotton-rose);
+  --color-interactive-secondary-hover: var(--color-wild-strawberry);
   --color-success-bg: var(--color-teal-50);
   --color-success-text: var(--color-teal-800);
   --color-success-border: var(--color-teal-600);
