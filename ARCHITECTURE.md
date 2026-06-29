@@ -560,7 +560,7 @@ Each tool script follows a consistent pattern:
    - **Action**: Clarify purpose, consolidate or rename
 
 9. **Hardcoded URLs in Sitemap/Robots**:
-   - References `dranitasharma.in` but GitHub Pages is `shirish-psych-ncr.github.io/MIND_WEBSITE/`
+   - References `mindgracencr.in` as primary domain
    - **Action**: Update to correct domain
 
 ---
@@ -697,6 +697,6 @@ Changing this order will break the cascade.
 **Last Updated**: 2025  
 **Technology Stack**: HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)  
 **Deployment**: GitHub Pages  
-**Domain**: mindgracencr.in (primary), dranitasharma.in (redirect?)  
+**Domain**: mindgracencr.in (primary)  
 
 For questions or contributions, refer to the repository owner or consult the AGENT_BIBLE documentation for AI-assisted maintenance.
