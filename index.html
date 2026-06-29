@@ -2,7 +2,7 @@
 <html lang="en-IN" dir="ltr">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes, viewport-fit=cover"/>
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50"/>
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4A1438"/>
   <meta name="color-scheme" content="light dark"/>
@@ -283,12 +283,13 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0.9);
-      width: min(90vw, 420px);
+      width: min(90vw, 92vw);
+      max-width: 92vw;
       max-height: 85vh;
       max-height: 85dvh;
       background: var(--white);
       z-index: 1002;
-      padding: 2rem 1.5rem;
+      padding: clamp(1rem, 4vw, 2rem) clamp(1rem, 4vw, 1.5rem);
       border-radius: 24px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
       opacity: 0;
@@ -364,10 +365,11 @@
       text-decoration: none;
       color: var(--text-dark);
       font-weight: 500;
-      font-size: 1rem;
-      padding: 0.875rem 1rem;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      padding: clamp(0.75rem, 2vw, 0.875rem) clamp(0.75rem, 2vw, 1rem);
       border-radius: 12px;
       transition: all 0.2s ease;
+      cursor: pointer;
     }
     
     .mobile-nav-panel a:hover {
@@ -381,6 +383,7 @@
       text-align: center;
       margin-top: 0.5rem;
       font-weight: 600;
+      cursor: pointer;
     }
     
     .mobile-nav-panel .cta-button:hover {
@@ -960,7 +963,7 @@
       const panel = document.getElementById('mobile-nav-panel');
       const overlay = document.getElementById('mobile-nav-overlay');
       const closeBtn = panel?.querySelector('.close-mobile-menu');
-      const navLinks = panel?.querySelectorAll('a') || [];
+      const navLinks = panel?.querySelectorAll('a[href]') || [];
       let isOpen = false;
 
       if (!trigger || !panel || !overlay) {
@@ -975,39 +978,88 @@
         overlay.classList.add('active');
         panel.removeAttribute('inert');
         document.body.style.overflow = 'hidden';
-        setTimeout(() => navLinks[0]?.focus(), 100);
+        setTimeout(() => {
+          const firstLink = navLinks[0];
+          if (firstLink) firstLink.focus();
+        }, 100);
       }
 
       function closeNav() {
+        if (!isOpen) return;
         isOpen = false;
         trigger.setAttribute('aria-expanded', 'false');
         panel.classList.remove('active');
         overlay.classList.remove('active');
         panel.setAttribute('inert', '');
         document.body.style.overflow = '';
-        trigger.focus();
+        setTimeout(() => trigger.focus(), 50);
       }
 
-      trigger.addEventListener('click', () => isOpen ? closeNav() : openNav());
-      overlay.addEventListener('click', closeNav);
-
-      if (closeBtn) {
-        closeBtn.addEventListener('click', closeNav);
-      }
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && isOpen) closeNav();
+      // Open/Close toggle
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        isOpen ? closeNav() : openNav();
       });
 
+      // Close on overlay click (outside panel)
+      overlay.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeNav();
+      });
+
+      // Close button inside panel
+      if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          closeNav();
+        });
+      }
+
+      // Keyboard: Escape to close
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isOpen) {
+          e.preventDefault();
+          closeNav();
+        }
+      });
+
+      // Close on resize to desktop
       window.addEventListener('resize', () => {
         if (window.innerWidth >= 768 && isOpen) closeNav();
       }, { passive: true });
 
+      // Navigation links: close panel and allow navigation
       navLinks.forEach(link => {
-        link.addEventListener('click', closeNav);
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          // Only prevent default for empty/hash-only links
+          if (!href || href === '#' || href.startsWith('#')) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+          // Close the nav panel - navigation will happen naturally after
+          closeNav();
+        });
       });
 
-      panel.addEventListener('touchstart', () => {}, { passive: true });
+      // Prevent touch scrolling issues
+      panel.addEventListener('touchstart', (e) => {
+        if (panel.scrollTop === 0) {
+          e.stopPropagation();
+        }
+      }, { passive: true });
+
+      panel.addEventListener('touchmove', (e) => {
+        const isAtTop = panel.scrollTop === 0;
+        const isAtBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 1;
+        const scrollDirection = e.touches[0].clientY - e.changedTouches[0].clientY;
+        if ((isAtTop && scrollDirection < 0) || (isAtBottom && scrollDirection > 0)) {
+          e.stopPropagation();
+        }
+      }, { passive: true });
     })();
     
     // HEADER SCROLL EFFECT
