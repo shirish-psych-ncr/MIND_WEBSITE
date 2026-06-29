@@ -1,0 +1,225 @@
+/* ============================================
+   COMPONENTS.CSS - Reusable UI Components
+   Mind Grace Clinic - Modern Fluid Design
+   ============================================ */
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.badge-primary {
+  background: linear-gradient(135deg, var(--soft-plum), rgba(243, 70, 116, 0.1));
+  color: var(--accent);
+  border: 1px solid rgba(243, 70, 116, 0.2);
+}
+
+.badge-support {
+  background: var(--blush);
+  color: var(--primary);
+  border: 1px solid rgba(103, 27, 80, 0.15);
+}
+
+/* Icons - SVG based */
+.icon {
+  width: clamp(20px, 3vw, 24px);
+  height: clamp(20px, 3vw, 24px);
+  flex-shrink: 0;
+}
+
+.icon-sm {
+  width: clamp(16px, 2.5vw, 20px);
+  height: clamp(16px, 2.5vw, 20px);
+}
+
+.icon-lg {
+  width: clamp(32px, 5vw, 40px);
+  height: clamp(32px, 5vw, 40px);
+}
+
+.icon-xl {
+  width: clamp(48px, 7vw, 64px);
+  height: clamp(48px, 7vw, 64px);
+}
+
+/* Cards variants */
+.card-compact {
+  padding: var(--space-lg);
+}
+
+.card-elevated {
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+.card-outlined {
+  background: transparent;
+  border: 2px solid rgba(103, 27, 80, 0.15);
+  box-shadow: none;
+}
+
+/* Section backgrounds for visual rhythm */
+.section-white {
+  background: var(--white);
+}
+
+.section-blush {
+  background: var(--blush);
+}
+
+.section-cream {
+  background: var(--cream);
+}
+
+.section-plum {
+  background: var(--soft-plum);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(103, 27, 80, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(103, 27, 80, 0.2), transparent);
+  margin: var(--space-xl) 0;
+}
+
+/* Highlight text */
+.highlight-text {
+  color: var(--accent);
+  position: relative;
+}
+
+.highlight-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.15em;
+  background: rgba(243, 70, 116, 0.2);
+  border-radius: var(--radius-sm);
+}
+
+/* Text gradients */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Staggered animations */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Decorative blob backgrounds */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.blob-primary {
+  background: var(--primary);
+}
+
+.blob-accent {
+  background: var(--accent);
+}
+
+.blob-support {
+  background: var(--support);
+}
+
+/* Container query responsive cards */
+@container (max-width: 450px) {
+  .card {
+    flex-direction: column;
+  }
+  
+  .card-icon {
+    margin-bottom: var(--space-md);
+  }
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, var(--soft-plum) 25%, var(--blush) 50%, var(--soft-plum) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Ripple effect for buttons */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-ripple:active::after {
+  width: 200px;
+  height: 200px;
+}
