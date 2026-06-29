@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Psychiatrist & Psychologist | Mind Grace Clinic & Aasha</title>
+    <meta name="description" content="Meet Dr. Anita Sharma (Psychiatrist, MD) and Dr. Sana Firdous (Clinical Psychologist, M.Phil). Comprehensive mental health and child development care in Greater Noida.">
+    
+    <!-- SEO & Social -->
+    <meta property="og:title" content="Our Team | Mind Grace Clinic & Aasha">
+    <meta property="og:description" content="Comprehensive psychiatric and psychological services under one roof. Meet our experienced clinicians.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mindgracencr.in/doctors.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .team-intro-banner {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        .jump-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .jump-btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        .jump-btn:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        .service-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .comparison-card {
+            background: var(--bg-surface);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s ease;
+        }
+        .comparison-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .comparison-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .doctor-section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .doctor-section:last-child {
+            border-bottom: none;
+        }
+        .doctor-section.alt-bg {
+            background: var(--bg-soft);
+        }
+        .doctor-profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .doctor-image-frame {
+            position: relative;
+            aspect-ratio: 3/4;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            background: var(--bg-soft);
+            box-shadow: var(--shadow-md);
+        }
+        .doctor-image-frame img, 
+        .doctor-image-frame svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .doctor-credentials {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-surface);
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+        .doctor-credentials.alt {
+            border-left-color: var(--secondary);
+        }
+        .credential-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .credential-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .credential-list li:last-child {
+            border-bottom: none;
+        }
+        .credential-list strong {
+            color: var(--primary);
+        }
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .service-tag {
+            background: var(--bg-soft);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            border: 1px solid var(--border-light);
+            transition: all 0.2s ease;
+        }
+        .service-tag:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .quote-box {
+            background: linear-gradient(135deg, var(--bg-soft), white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--secondary);
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-dark);
+            box-shadow: var(--shadow-sm);
+        }
+        .hospital-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        .hospital-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .hospital-list li:last-child {
+            border-bottom: none;
+        }
+        .hospital-list li::before {
+            content: "🏥";
+            position: absolute;
+            left: 0;
+        }
+        .common-services {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--bg-soft), #f0f9ff);
+            border: 2px solid var(--primary);
+            text-align: center;
+        }
+        @media (max-width: 900px) {
+            .doctor-profile-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .doctor-image-frame {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .jump-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .jump-btn {
+                text-align: center;
+            }
+            .service-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
+    <!-- Top Banner -->
+    <div class="top-banner bg-accent-light text-primary text-center py-2 text-sm">
+        This page provides information about our clinical team. For immediate safety support, use emergency services instead.
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a href="./index.html" class="logo-link" aria-label="Mind Grace Clinic Home">
+                <svg class="logo-svg" viewBox="0 0 900 873" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use href="./res/Mind_Grace_Clinic_Logo_Pink.svg"/>
+                </svg>
+                <div>
+                    <div class="logo-text">Mind Grace Clinic</div>
+                    <div class="logo-tagline">Where You Come First</div>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAVIGATION -->
+            <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./process.html">Process</a></li>
+                    <li><a href="./resources.html">Resources</a></li>
+                    <li><a href="./location.html">Location</a></li>
+                    <li><a href="./book.html" class="cta-button">Book Now</a></li>
+                </ul>
+            </nav>
+
+            <!-- MOBILE NAV TRIGGER -->
+            <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE NAV OVERLAY -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+    <!-- MOBILE NAV PANEL -->
+    <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
+        <div class="mobile-nav-header">
+            <h2>Menu</h2>
+            <button class="close-mobile-menu" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-section">
+                <div class="mobile-nav-section-title">Explore</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./services.html">Our Services</a></li>
+                    <li><a href="./process.html">What to Expect</a></li>
+                    <li><a href="./doctors.html" class="active">Our Team</a></li>
+                    <li><a href="./location.html">Find Us</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-nav-section">
+                <div class="mobile-nav-section-title">Resources</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="./conditions.html">Conditions Treated</a></li>
+                    <li><a href="./emergency.html">Emergency Help</a></li>
+                    <li><a href="./fees.html">Fees & Insurance</a></li>
+                    <li><a href="./blog/index.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="mobile-nav-cta">
+                <a href="./book.html" class="cta-button full-width">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Intro Banner -->
+        <section class="team-intro-banner">
+            <div class="container">
+                <h1 style="color: white; margin-bottom: 1rem; font-size: clamp(2rem, 5vw, 3rem);">Comprehensive Care Under One Roof</h1>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                    We offer both <strong>psychiatric medical care</strong> and <strong>psychological therapy services</strong>. 
+                    Whether you need medication management, deep therapy, or child development support, 
+                    our multidisciplinary team is here for you.
+                </p>
+                <div class="jump-buttons">
+                    <a href="#psychiatrist" class="jump-btn">🩺 See Psychiatrist</a>
+                    <a href="#psychologist" class="jump-btn">🧠 See Psychologist</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Comparison -->
+        <section class="section">
+            <div class="container">
+                <div class="content-narrow" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="section-badge">Understanding Our Roles</span>
+                    <h2 style="margin-top: 1rem;">How Dr. Anita (Psychiatrist) and Dr. Sana (Psychologist) Can Help You</h2>
+                    <p class="lead" style="margin-top: 1rem; color: var(--text-muted);">Both professionals work together to provide integrated, holistic care.</p>
+                </div>
+                
+                <div class="service-comparison">
+                    <div class="comparison-card">
+                        <h3><span>🩺</span> Psychiatrist (Dr. Anita)</h3>
+                        <p><strong>Medical Doctor (MD)</strong> specializing in mental health. Can prescribe medication and manage complex biological aspects of mental illness.</p>
+                        <ul style="padding-left: 1.2rem; line-height: 2; margin: 1.5rem 0;">
+                            <li>Diagnoses medical conditions</li>
+                            <li>Prescribes & manages medication</li>
+                            <li>Treats complex biological issues</li>
+                            <li>Handles severe mental illness</li>
+                            <li>Provides medical certificates</li>
+                            <li>Manages hospital admissions</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted); background: var(--bg-soft); padding: 1rem; border-radius: var(--radius-sm);">
+                            <strong>Best for:</strong> Medication needs, severe depression, bipolar disorder, schizophrenia, addiction medical management, complex cases requiring medical intervention.
+                        </p>
+                    </div>
+                    
+                    <div class="comparison-card">
+                        <h3><span>🧠</span> Psychologist (Dr. Sana)</h3>
+                        <p><strong>Clinical Psychologist (M.Phil)</strong> specializing in psychotherapy and psychological testing. Provides talk therapy and behavioral interventions.</p>
+                        <ul style="padding-left: 1.2rem; line-height: 2; margin: 1.5rem 0;">
+                            <li>Provides psychotherapy & counseling</li>
+                            <li>Conducts psychological testing</li>
+                            <li>Teaches coping skills & strategies</li>
+                            <li>Child development & behavior</li>
+                            <li>Trauma processing & talk therapy</li>
+                            <li>Learning disability assessment</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted); background: var(--bg-soft); padding: 1rem; border-radius: var(--radius-sm);">
+                            <strong>Best for:</strong> Talk therapy, anxiety management, child behavioral issues, learning disabilities, relationship counseling, trauma processing, skill-building.
+                        </p>
+                    </div>
+
+                    <div class="comparison-card common-services">
+                        <h3 style="justify-content: center; color: var(--primary);"><span>🤝</span> Common Services (Both Specialists)</h3>
+                        <p style="margin-bottom: 1.5rem;">Many patients benefit from seeing <strong>both</strong> specialists for integrated, comprehensive care.</p>
+                        <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; max-width: 700px; margin: 0 auto;">
+                            <span class="service-tag">Anxiety & Depression</span>
+                            <span class="service-tag">Stress Management</span>
+                            <span class="service-tag">ADHD Support</span>
+                            <span class="service-tag">Sleep Issues</span>
+                            <span class="service-tag">Trauma & PTSD</span>
+                            <span class="service-tag">Family Counseling</span>
+                            <span class="service-tag">OCD Treatment</span>
+                            <span class="service-tag">Grief & Loss</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dr. Anita Sharma Section -->
+        <section id="psychiatrist" class="doctor-section">
+            <div class="container">
+                <div class="doctor-profile-grid">
+                    <div class="doctor-image-frame">
+                        <img src="./assets/images/dr-anita-sharma.jpg" alt="Dr. Anita Sharma - Psychiatrist" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                        <svg style="display:none; width:100%; height:100%; background:linear-gradient(135deg, #f0f4f8, #e2e8f0); color:#64748b;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-label="Placeholder image for Dr. Anita Sharma">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" fill="white" stroke="none"></rect>
+                            <circle cx="12" cy="8" r="4" fill="#cbd5e1" stroke="none"></circle>
+                            <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" fill="#cbd5e1" stroke="none"></path>
+                            <text x="12" y="16" text-anchor="middle" font-size="4" fill="#475569" stroke="none" font-weight="bold">MD</text>
+                        </svg>
+                    </div>
+                    
+                    <div>
+                        <span class="section-badge">Founder & Director</span>
+                        <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin: 0.5rem 0; color: var(--text-dark);">Dr. Anita Sharma</h2>
+                        <p class="lead" style="color: var(--primary); font-weight: 600; font-size: 1.2rem;">MBBS, MD (Psychiatry) | 14+ Years Experience</p>
+                        
+                        <div class="doctor-credentials">
+                            <h4 style="margin-top: 0; color: var(--text-dark);">Registrations & Affiliations</h4>
+                            <ul class="credential-list">
+                                <li><span>Medical Council of India</span> <strong>11-40210</strong></li>
+                                <li><span>Healthcare Professionals Registry</span> <strong>HPR ID: 71-2147-5815-3754</strong></li>
+                                <li><span>Delhi Medical Council</span> <strong>Registered</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="quote-box">
+                            <p style="margin: 0; font-size: 1.1rem; line-height: 1.6;">"For me, transforming people's lives is a calling. I am passionate about what I do. For me, outcomes are important."</p>
+                        </div>
+
+                        <h3 style="color: var(--primary);">Professional Summary</h3>
+                        <p style="line-height: 1.8;">Experienced Psychiatrist uniquely integrating <strong>adult mental health care</strong> and <strong>child developmental support</strong> under one roof. Combines rigorous academic training from premier national institutions (AIIMS, IHBAS) with compassionate, outcome-focused care. Registered with the Medical Council of India and listed on India's Healthcare Professionals Registry.</p>
+
+                        <h3 style="color: var(--primary); margin-top: 2rem;">Education & Training</h3>
+                        <ul class="check-list" style="line-height: 2;">
+                            <li><strong>M.D. (Psychiatry)</strong> - Guru Gobind Singh Medical College and Hospital, Faridkot</li>
+                            <li><strong>M.B.B.S.</strong> - Universal College of Medical Sciences, Nepal</li>
+                            <li><strong>Senior Residency Training</strong> - AIIMS Rishikesh & IHBAS New Delhi</li>
+                        </ul>
+
+                        <h3 style="color: var(--primary); margin-top: 2rem;">Adult Mental Health Services (Mind Grace Clinic)</h3>
+                        <div class="service-tags">
+                            <span class="service-tag">Depression & Emotional Wellness</span>
+                            <span class="service-tag">Anxiety, Stress & Panic</span>
+                            <span class="service-tag">Bipolar Disorder</span>
+                            <span class="service-tag">Schizophrenia Care</span>
+                            <span class="service-tag">Alcohol & Substance Addiction</span>
+                            <span class="service-tag">Smartphone/Internet/Gaming Addiction</span>
+                            <span class="service-tag">Relationship & Marriage Counseling</span>
+                            <span class="service-tag">Sleep Disorder Management</span>
+                            <span class="service-tag">ADHD & PTSD Support</span>
+                        </div>
+
+                        <h3 style="color: var(--primary); margin-top: 2rem;">Hospital Panel Affiliations</h3>
+                        <ul class="hospital-list">
+                            <li>Naveen Hospital, Alpha-2, Greater Noida</li>
+                            <li>Green City Hospital, Delta-1, Greater Noida</li>
+                            <li>Sahdeo Hospital, Ansal Golf Link, Greater Noida</li>
+                        </ul>
+
+                        <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="./book.html" class="btn btn-primary">Book Appointment with Dr. Anita</a>
+                            <a href="tel:+919667863295" class="btn btn-outline">📞 Call +91 96678 63295</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dr. Sana Firdous Section -->
+        <section id="psychologist" class="doctor-section alt-bg">
+            <div class="container">
+                <div class="doctor-profile-grid">
+                    <div class="doctor-image-frame" style="background: linear-gradient(135deg, #1a202c, #2d3748);">
+                        <!-- Dark SVG Placeholder as requested - to be replaced with photo later -->
+                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-label="Placeholder image for Dr. Sana Firdous">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" fill="#2d3748" stroke="none"></rect>
+                            <circle cx="12" cy="8" r="4" fill="#4a5568" stroke="none"></circle>
+                            <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" fill="#4a5568" stroke="none"></path>
+                            <text x="12" y="15" text-anchor="middle" font-size="3" fill="#cbd5e1" font-family="sans-serif" font-weight="bold">M.Phil</text>
+                        </svg>
+                    </div>
+                    
+                    <div>
+                        <span class="section-badge" style="background: var(--secondary);">Consultant Clinical Psychologist</span>
+                        <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin: 0.5rem 0; color: var(--text-dark);">Dr. Sana Firdous</h2>
+                        <p class="lead" style="color: var(--secondary); font-weight: 600; font-size: 1.2rem;">M.Phil Clinical Psychology | RCI No. A82170 | 7+ Years Experience</p>
+                        
+                        <div class="doctor-credentials alt">
+                            <h4 style="margin-top: 0; color: var(--text-dark);">Credentials & Current Role</h4>
+                            <ul class="credential-list">
+                                <li><span>RCI Registration</span> <strong>A82170</strong></li>
+                                <li><span>Experience</span> <strong>7+ Years</strong></li>
+                                <li><span>Current Position</span> <strong>Sharda Hospital, Greater Noida</strong></li>
+                            </ul>
+                        </div>
+
+                        <h3 style="color: var(--secondary);">Professional Background</h3>
+                        <p style="line-height: 1.8;">Clinical Psychologist with over seven years of experience in psychodiagnostic assessments, psychotherapy, and child/adolescent mental health. Specializes in neurodevelopmental disorders, cognitive evaluations, and evidence-based psychological assessment. Currently serves as Consultant Clinical Psychologist and Clinical Child Psychologist at Sharda Hospital, Greater Noida.</p>
+
+                        <h3 style="color: var(--secondary); margin-top: 2rem;">Specializations</h3>
+                        <div class="service-tags">
+                            <span class="service-tag" style="border-color: var(--secondary);">Child Psychology</span>
+                            <span class="service-tag" style="border-color: var(--secondary);">Psychotherapy (CBT, DBT)</span>
+                            <span class="service-tag" style="border-color: var(--secondary);">Psychodiagnostic Testing</span>
+                            <span class="service-tag" style="border-color: var(--secondary);">Neurodevelopmental Disorders</span>
+                            <span class="service-tag" style="border-color: var(--secondary);">Behavioral Disorders</span>
+                            <span class="service-tag" style="border-color: var(--secondary);">Cognitive Evaluation</span>
+                            <span class="service-tag" style="border-color: var(--secondary);">Trauma Therapy</span>
+                            <span class="service-tag" style="border-color: var(--secondary);">Family Counseling</span>
+                        </div>
+
+                        <h3 style="color: var(--secondary); margin-top: 2rem;">Therapeutic Services (Aasha & Mind Grace)</h3>
+                        <ul class="check-list" style="line-height: 2;">
+                            <li><strong>Child Development:</strong> Early intervention, speech delays, autism support, ADHD behavioral management, sensory integration issues.</li>
+                            <li><strong>Psychotherapy:</strong> CBT, DBT, and supportive therapy for anxiety, depression, trauma, and relationship issues.</li>
+                            <li><strong>Psychological Assessment:</strong> IQ testing, personality assessments, specific learning disability evaluations, neuropsychological screening.</li>
+                            <li><strong>Family Support:</strong> Parenting guidance, couple therapy, family conflict resolution, psychoeducation.</li>
+                        </ul>
+
+                        <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="./book.html" class="btn btn-primary" style="background: var(--secondary); border-color: var(--secondary);">Book Session with Dr. Sana</a>
+                            <a href="tel:+919667863295" class="btn btn-outline">📞 Call +91 96678 63295</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="section bg-blush">
+            <div class="container">
+                <div class="content-narrow" style="text-align: center;">
+                    <span class="section-badge">Our Philosophy</span>
+                    <h2 style="margin-top: 1rem;">Whole-Family, Integrated Care</h2>
+                    <p class="lead" style="margin-top: 1rem; font-size: 1.2rem; line-height: 1.8;">
+                        "We are here to help you solve serious problems with compassion and a non-judgmental approach.<br>
+                        At <strong>Mind Grace</strong>, we restore balance for adults carrying life's weight.<br>
+                        At <strong>Aasha</strong>, we nurture potential for children finding their path.<br>
+                        Together, we support whole families – because when a child thrives, parents breathe easier; when parents heal, children feel safe."
+                    </p>
+                    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary);">— Dr. Anita Sharma, Founder</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Not sure who to see?</h2>
+                    <p style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto 2rem;">Our front desk team can help guide you to the right specialist based on your specific needs. Many patients benefit from coordinated care between both professionals.</p>
+                    <div class="cta-group">
+                        <a href="./contact.html" class="btn btn-light">Contact Us for Guidance</a>
+                        <a href="./process.html" class="btn btn-outline-light">Learn How It Works</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Mind Grace & Aasha</h3>
+                    <p>Comprehensive mental health care for adults and children. Psychiatric and psychological services under one roof.</p>
+                    <div class="social-links" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="https://instagram.com/dr_anita.md" target="_blank" rel="noopener" aria-label="Dr. Anita Instagram">@dr_anita.md (Adult Mental Health)</a>
+                        <a href="https://instagram.com/aashachilddevelopment" target="_blank" rel="noopener" aria-label="Aasha Instagram">@aashachilddevelopment (Child Development)</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="./about.html">About</a>
+                    <a href="./services.html">Services</a>
+                    <a href="./doctors.html" class="active">Our Team</a>
+                    <a href="./process.html">Process</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>J-123, Gamma-2<br>Greater Noida, UP 201308</p>
+                    <p><a href="tel:+919667863295" style="color: inherit;">+91 96678 63295</a></p>
+                    <p><a href="mailto:dranitasharma86@gmail.com" style="color: inherit;">dranitasharma86@gmail.com</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Emergency</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">In crisis? Visit our emergency resources page for immediate helpline numbers and local hospitals.</p>
+                    <a href="./emergency.html" class="btn btn-danger" style="display: inline-block;">Emergency Resources</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mind Grace Clinic & Aasha – An Early Intervention Centre. All rights reserved.</p>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Dr. Anita Sharma: MCI Reg. No. 11-40210 | Dr. Sana Firdous: RCI Reg. No. A82170</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

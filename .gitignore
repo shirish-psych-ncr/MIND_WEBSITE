@@ -1,1 +1,5 @@
-Nothing needs to be added to .gitignore since only a source file (location.html) was modified and there are no build artifacts, dependencies, or temporary files in the changes.
+(doctors.html and location.html are HTML source files, which should not be added to .gitignore according to rule 7, and there are no build artifacts, dependencies, or temp files in the changes)
+
+```html
+
+```
