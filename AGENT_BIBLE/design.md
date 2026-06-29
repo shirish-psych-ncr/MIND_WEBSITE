@@ -1,4 +1,4 @@
-# DESIGN_REF [v4.0] — Mind Grace Clinic
+# DESIGN_REF [v5.0] — Mind Grace Clinic
 **Mode:** Orientation-First | **Stack:** CSS-Layers|Tokens | **Sync:** End-turn
 
 ## 1. COLORS (Primitives→Semantic)
@@ -32,8 +32,9 @@
 
 ## 4. LAYOUT (Orientation-First, Grid/Cards)
 - **THE RULING:** `@media (orientation: portrait)` → `.view-mode-vertical`, `@media (orientation: landscape)` → `.view-mode-horizontal`
-- **Portrait (default):** Single column, stacked hero, full-width buttons, mobile nav drawer
+- **Portrait (default):** Single column, stacked hero, full-width buttons, mobile nav popup modal
 - **Landscape:** 2-3 column grids, side-by-side hero, desktop nav, footer 2-col×3-item (no wrap, shrink)
+- **Mobile Nav Popup:** Centered modal (min(90vw, 420px), max-h:85vh), sectioned (Explore/Resources/Tools), scale-in animation (0.9→1), blur overlay
 - **Card:** pad(space-4→6), radius-xl→2xl, shadow-sm→md(hover)
 - **Container:** max-w:1200px, pad-x:space-4→8
 - **JS Fallbacks:** Graceful degradation if JS disabled, progressive enhancement → worker.md §4
@@ -41,7 +42,7 @@
 ## 5. BREAKPOINTS (Orientation-First default)
 | Name | Query | Use | Cross-Ref |
 |---|---|---|---|
-| Portrait | @media (orientation: portrait) | Single column, stacked, mobile nav | design.md §4 |
+| Portrait | @media (orientation: portrait) | Single column, stacked, mobile nav popup | design.md §4 |
 | Landscape | @media (orientation: landscape) | 2-3 column grids, desktop nav | design.md §4 |
 | Fluid Type | clamp(min, vw, max) | ALL headings, disclaimer, footer items | design.md §3 |
 
@@ -50,7 +51,7 @@
 - **Focus:** 2px solid --interactive-pri, offset:2px
 - **Touch:** ≥44×44px for all interactive
 - **Motion:** @media(prefers-reduced-motion){disable animations}
-- **Nav:** Skip links, landmark regions, keyboard operable
+- **Nav:** Skip links, landmark regions, keyboard operable, popup modal with focus trap
 - **JS Fallbacks:** CSS-only nav if JS fails, [inert] attribute support → worker.md §4
 
 ## 7. ASSETS (/res/, see assets.md for full registry)
@@ -74,4 +75,4 @@
 | tools-leaf.css | 7.5KB | Leaf meditation | tools-leaf.js | tools.md §1.6 |
 | tools-book.css | 1.8KB | Resource book layout | tools-book.js | tools.md §1.7 |
 
-*Ref: styles.css v3.0 (10-layer cascade). Cross-ref: assets.md §3, tools.md §1, Instructions.md §5. END_ON_SYNC.*
+*Ref: styles.css v3.0 (10-layer cascade). Cross-ref: assets.md §3, tools.md §1, Instructions.md §5. Mobile nav popup specs added v5.0. END_ON_SYNC.*

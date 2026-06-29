@@ -1,4 +1,4 @@
-# AGENT_BIBLE [v4.0] — Mind Grace Clinic
+# AGENT_BIBLE [v5.0] — Mind Grace Clinic
 **Role:** Sr-FE/Design-Lead | **Mode:** Clinical-Grade | **Update:** Auto(post-turn) | **KB:** 7-docs | **Sync:** End-turn
 
 ## AXIOMS (Priority Order)
@@ -10,7 +10,7 @@
 
 ---
 
-## KB_READ (Pre-Turn, Order Matters) → See memory.md §STATE
+## KB_READ (Pre-Turn, Order Matters) → memory.md §STATE
 | File | Purpose | Pri | Read-Time | Cross-Ref |
 |---|---|---|---|---|
 | memory.md | State, Δ-log, queue, recover | P0 | First | worker.md §10 |
@@ -23,7 +23,7 @@
 
 ---
 
-## UPDATE_CYCLE (Post-Turn, Auto) → See memory.md §Δ_LOG
+## UPDATE_CYCLE (Post-Turn, Auto) → memory.md §Δ_LOG
 ```
 FOR each turn:
   1. READ all 7 KB docs (memory→Instructions order)
@@ -40,7 +40,7 @@ FOR each turn:
 
 ---
 
-## CONSTRAINTS (Hard Rules) → See design.md §6, worker.md §8
+## CONSTRAINTS (Hard Rules) → design.md §6, worker.md §8
 - **CSS:** Vanilla + Cascade Layers ONLY. NO Tailwind, NO inline styles, NO !important
 - **Values:** Tokens only `var(--x)`. NO hex, NO px, NO magic numbers → design.md §1-§2
 - **TS:** Strict mode. NO `any`, type all props, Zod for content → worker.md §7
@@ -52,10 +52,11 @@ FOR each turn:
 
 ---
 
-## RESPONSIVE_RULES (Orientation-First, MobileFirst) → See design.md §4-§5
+## RESPONSIVE_RULES (Orientation-First, MobileFirst) → design.md §4-§5
 - **THE RULING:** Single orientation detection (`@media (orientation: landscape/portrait)`) → body class `.view-mode-horizontal` or `.view-mode-vertical`
-- **Portrait (<768px default):** Single column, full-width buttons, stacked hero, mobile nav drawer
+- **Portrait (<768px default):** Single column, full-width buttons, stacked hero, mobile nav popup modal
 - **Landscape (≥768px):** 2-3 column grids, side-by-side hero, desktop nav
+- **Mobile Nav Popup:** Centered modal (min(90vw, 420px)), sectioned (Explore/Resources/Tools), smooth scale-in animation
 - **Type:** Fluid `clamp(min, vw, max)` for ALL headings → design.md §3
 - **Touch:** min-h:44px, min-w:44px for interactive elements → design.md §6
 - **Grid:** 1col → 2col → 3col (card-grid, kpi-grid) via orientation class
@@ -64,7 +65,7 @@ FOR each turn:
 
 ---
 
-## ASSET_PIPELINE → See assets.md §1-§6
+## ASSET_PIPELINE → assets.md §1-§6
 - **Logo:** `/res/Mind_Grace_Clinic_Logo_Pink.svg` (preload, fetchpriority=high, inline SVG in header)
 - **Doctor:** `/res/Dr_Anita_Sharma_Personal_Photo.jpg` (preload, sizes attribute)
 - **Location:** `/res/Location_street_view_*.jpg` (lazy load)
@@ -79,7 +80,7 @@ FOR each turn:
 
 ---
 
-## SECURITY_PROTOCOL (Clinical-Grade) → See worker.md §5, §8
+## SECURITY_PROTOCOL (Clinical-Grade) → worker.md §5, §8
 - **Forms:** Honeypot field, rate limit (5/IP/10min), server-side sanitize (Zod)
 - **Headers:** CSP (strict), HSTS (preload), X-Frame (DENY), Referrer-Policy
 - **Data:** NO PII in localStorage/sessionStorage, NO client-side medical data
@@ -88,7 +89,7 @@ FOR each turn:
 
 ---
 
-## ERROR_HANDLING (Decision Tree) → See memory.md §QUEUE
+## ERROR_HANDLING (Decision Tree) → memory.md §QUEUE
 - **Unsure:** → Check design.md first, then worker.md, then assets.md
 - **Blocked:** → Add to memory.md [Pending] with reason, propose workaround
 - **Conflict:** A11y > Perf > Design > Features (priority order)
@@ -98,7 +99,7 @@ FOR each turn:
 
 ---
 
-## WORKFLOW (Single Loop, Auto-Update) → See memory.md §Δ_LOG
+## WORKFLOW (Single Loop, Auto-Update) → memory.md §Δ_LOG
 ```
 START_TURN:
   READ memory.md → Get state, queue, recover, delta
@@ -127,7 +128,7 @@ START_TURN:
 
 ---
 
-## COMPRESSION_FORMAT (Token-Efficient) → See memory.md §COMPRESSION
+## COMPRESSION_FORMAT (Token-Efficient) → memory.md §COMPRESSION
 - **Shorthand:** Δ (delta), → (becomes), ✓ (done), × (fail), ~ (approx), ×5 (repeat 5 times)
 - **Tables:** Markdown tables for dense data (file|size|use|status)
 - **Code:** Minimal examples, omit boilerplate, reference by name
@@ -137,16 +138,16 @@ START_TURN:
 
 ---
 
-## KB_STATS (Current State) → See memory.md §STATE
+## KB_STATS (Current State) → memory.md §STATE
 | Doc | Lines | Size | Purpose | Last Updated | Cross-Ref |
 |---|---|---|---|---|---|
-| memory.md | ~55L | ~2.5KB | Session state, delta log | T10 | worker.md §10 |
-| design.md | ~80L | ~3.5KB | Tokens, layout, a11y, orientation | T10 | assets.md §6 |
-| worker.md | ~125L | ~5.5KB | Arch, hydration, security, JS | T10 | tools.md §2 |
-| assets.md | ~85L | ~4KB | Asset registry, opt queue | T10 | design.md §7 |
-| pages.md | ~100L | ~5KB | Page inventory, migration | T10 | worker.md §1 |
-| tools.md | ~145L | ~7KB | Tool specs, hydration | T10 | design.md §8 |
-| Instructions.md | ~155L | ~6.5KB | Protocol, workflow | T10 | memory.md §Δ_LOG |
-| **TOTAL** | **~745L** | **~34KB** | **7 docs** | **T10** | **All synced** |
+| memory.md | ~50L | ~2.5KB | Session state, delta log | T12 | worker.md §10 |
+| design.md | ~80L | ~3.5KB | Tokens, layout, a11y, orientation | T12 | assets.md §6 |
+| worker.md | ~120L | ~5KB | Arch, hydration, security, JS | T12 | tools.md §2 |
+| assets.md | ~85L | ~4KB | Asset registry, opt queue | T12 | design.md §7 |
+| pages.md | ~100L | ~5KB | Page inventory, migration | T12 | worker.md §1 |
+| tools.md | ~145L | ~7KB | Tool specs, hydration | T12 | design.md §8 |
+| Instructions.md | ~160L | ~6.5KB | Protocol, workflow | T12 | memory.md §Δ_LOG |
+| **TOTAL** | **~740L** | **~33.5KB** | **7 docs v5.0** | **T12** | **All synced** |
 
-*Obey protocol. Auto-update every turn. Compress pre/post. 7-doc KB. Single Source of Truth. Orientation-first responsive. END_ON_SYNC.*
+*Obey protocol. Auto-update every turn. Compress pre/post. 7-doc KB v5.0. Single Source of Truth. Orientation-first responsive. Mobile nav popup implemented. END_ON_SYNC.*
