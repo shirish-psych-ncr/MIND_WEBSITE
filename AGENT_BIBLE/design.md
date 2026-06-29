@@ -1,4 +1,4 @@
-# DESIGN_REF [v5.0] — Mind Grace Clinic
+# DESIGN_REF [v6.0] — Mind Grace Clinic
 **Mode:** Orientation-First | **Stack:** CSS-Layers|Tokens | **Sync:** End-turn
 
 ## 1. COLORS (Primitives→Semantic)
@@ -11,6 +11,8 @@
 | --teal-600 | #3a7ca5 | --state-success | Confirm | AA ✓ | design.md §1 |
 | --white | #fff | --surface-elev | Card | - | design.md §1 |
 | --cream-50 | #fef9f3 | --surface-pri | Page | - | design.md §1 |
+| --red-600 | #dc2626 | --emergency-pri | Emergency pages, crisis alerts | AA ✓ | design.md §1 |
+| --warm-sand | #e8dccf | --secondary-bg | Aasha/Child dev sections | - | design.md §1 |
 
 ## 2. SPACE (Base: 4px, Scale: 1-14)
 `--space-N = 0.25rem×N`
@@ -29,6 +31,7 @@
 | Body | 1rem → 1.125rem | 1.6 | design.md §3 |
 | Lead | `clamp(1.125rem, 2vw, 1.25rem)` | 1.5 | design.md §3 |
 | Small | 0.875rem | 1.5 | design.md §3 |
+| Stat Number | `clamp(2.5rem, 5vw, 4rem)` | 1.0 | design.md §3 (Aasha) |
 
 ## 4. LAYOUT (Orientation-First, Grid/Cards)
 - **THE RULING:** `@media (orientation: portrait)` → `.view-mode-vertical`, `@media (orientation: landscape)` → `.view-mode-horizontal`
@@ -37,6 +40,7 @@
 - **Mobile Nav Popup:** Centered modal (min(90vw, 420px), max-h:85vh), sectioned (Explore/Resources/Tools), scale-in animation (0.9→1), blur overlay
 - **Card:** pad(space-4→6), radius-xl→2xl, shadow-sm→md(hover)
 - **Container:** max-w:1200px, pad-x:space-4→8
+- **Dual-Clinician Layout:** Jump buttons at top, distinct visual sections for Psychiatrist vs Psychologist, service comparison grid
 - **JS Fallbacks:** Graceful degradation if JS disabled, progressive enhancement → worker.md §4
 
 ## 5. BREAKPOINTS (Orientation-First default)
@@ -52,13 +56,15 @@
 - **Touch:** ≥44×44px for all interactive
 - **Motion:** @media(prefers-reduced-motion){disable animations}
 - **Nav:** Skip links, landmark regions, keyboard operable, popup modal with focus trap
+- **Emergency Pages:** High contrast mode, large typography for crisis numbers
 - **JS Fallbacks:** CSS-only nav if JS fails, [inert] attribute support → worker.md §4
 
 ## 7. ASSETS (/res/, see assets.md for full registry)
 | Type | File | Size | Preload | Cross-Ref |
 |---|---|---|---|---|
 | Logo | Mind_Grace_Clinic_Logo_Pink.svg | Inline SVG | ✓ LCP | assets.md §1 |
-| Doctor | Dr_Anita_Sharma_Personal_Photo.jpg | 658KB | ✓ LCP | assets.md §1 |
+| Doctor (Anita) | Dr_Anita_Sharma_Personal_Photo.jpg | 658KB | ✓ LCP | assets.md §1 |
+| Doctor (Sana) | Placeholder: dark-user-profile.svg | Inline SVG | ✗ | assets.md §1 (TODO: Add photo) |
 | Location | street_view_*.jpg (×2) | 95KB-1.2MB | ✗ | assets.md §1 |
 | Interiors | mind-grace-*.jpg (×4) | 82KB-1.2MB | ✗ | assets.md §1 |
 | Brochures | *_Brochure.png (×2) | 768KB-1.3MB | ✗ | assets.md §1 |
@@ -75,4 +81,14 @@
 | tools-leaf.css | 7.5KB | Leaf meditation | tools-leaf.js | tools.md §1.6 |
 | tools-book.css | 1.8KB | Resource book layout | tools-book.js | tools.md §1.7 |
 
-*Ref: styles.css v3.0 (10-layer cascade). Cross-ref: assets.md §3, tools.md §1, Instructions.md §5. Mobile nav popup specs added v5.0. END_ON_SYNC.*
+## 9. COMPONENT_PATTERNS (New v6.0)
+| Component | Class | Use Case | Cross-Ref |
+|---|---|---|---|
+| Jump Button | `.jump-button` | Smooth scroll to clinician section | doctors.html |
+| Service Comparison | `.service-comparison-grid` | Side-by-side psychiatrist vs psychologist | doctors.html |
+| Clinician Section | `.clinician-section` | Distinct visual block per provider | doctors.html |
+| Timeline | `.timeline` | Education/career history | doctor.html, doctors.html |
+| Stat Counter | `.stat-counter` | Animated numbers on scroll | aasha.html |
+| Pillar Card | `.pillar-card` | Biopsychosocial model pillars | approach.html |
+
+*Ref: styles.css v3.0 (10-layer cascade). Cross-ref: assets.md §3, tools.md §1, Instructions.md §5. Mobile nav popup specs added v5.0. Dual-clinician patterns added v6.0. END_ON_SYNC.*
