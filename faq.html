@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FAQ | Mind Grace Clinic</title>
+    <title>FAQ | Mind Grace Clinic - Frequently Asked Questions</title>
     <meta name="description" content="Read common questions about confidentiality, medication, cost, booking, and clinic visits at Mind Grace Clinic in Greater Noida." />
     <link rel="stylesheet" href="styles.css" />
     <script type="application/ld+json">
@@ -44,136 +44,203 @@
     <div class="progress"><div class="progress-bar" data-progress></div></div>
     <div class="top-banner">For routine questions and appointment planning only. If the concern is urgent, please use emergency services.</div>
 
+    <!-- HEADER -->
     <header class="site-header">
       <div class="shell header-row">
-        <a class="brand-wrap" href="index.html"
+        <a class="brand-wrap" href="index.html">
           <img class="logo" src="./res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" />
           <div>
             <p class="brand-kicker">FAQ</p>
             <p class="brand-name">Questions before booking</p>
           </div>
         </a>
-        <nav class="nav" aria-label="Primary">
-          <a href="index.html"Home</a>
+        <nav class="nav desktop-only" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
           <a href="./process.html">Process</a>
           <a href="./location.html">Location</a>
           <a href="./book.html">Book</a>
           <a href="./contact.html">Contact</a>
         </nav>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
-    <main id="main-content-5" class="section">
-      <div class="shell stack">
-        <section class="surface panel">
-          <p class="eyebrow">Common concerns</p>
+    <!-- MOBILE NAV -->
+    <nav class="mobile-nav" aria-label="Mobile" hidden>
+      <a href="index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./services.html">Services</a>
+      <a href="./process.html">Process</a>
+      <a href="./location.html">Location</a>
+      <a href="./book.html">Book</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+
+    <main id="content">
+      <!-- HERO SECTION -->
+      <section class="hero hero-small">
+        <div class="shell hero-content">
+          <span class="section-badge">Common concerns</span>
           <h1>Frequently asked questions before a first visit</h1>
           <p class="lead">
             These questions come up often around confidentiality, medication, fees, what to expect, and practical planning.
           </p>
-        </section>
+        </div>
+      </section>
 
-        <section class="surface panel" id="confidentiality">
-          <h2>Confidentiality</h2>
-          <div class="faq-list">
-            <div class="faq-item">
-              <button class="faq-button" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-conf-1">
-                <span>Are sessions confidential?</span>
-                <span>+</span>
-              </button>
-              <div class="faq-panel" id="faq-conf-1" hidden>
-                Yes. Information shared for appointments and consultations is treated as confidential, except in rare situations involving immediate safety.
+      <!-- CONFIDENTIALITY SECTION -->
+      <section class="section">
+        <div class="shell">
+          <div class="surface panel">
+            <h2>Confidentiality</h2>
+            <div class="accordion">
+              <div class="accordion-item">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-conf-1">
+                  <span>Are sessions confidential?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-panel" id="faq-conf-1" hidden>
+                  <p>Yes. Information shared for appointments and consultations is treated as confidential, except in rare situations involving immediate safety.</p>
+                </div>
               </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-button" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-conf-2">
-                <span>Will family members automatically be told what I discuss?</span>
-                <span>+</span>
-              </button>
-              <div class="faq-panel" id="faq-conf-2" hidden>
-                Not automatically. Family involvement is usually discussed with you, unless there is an urgent safety concern.
+              <div class="accordion-item">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-conf-2">
+                  <span>Will family members automatically be told what I discuss?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-panel" id="faq-conf-2" hidden>
+                  <p>Not automatically. Family involvement is usually discussed with you, unless there is an urgent safety concern.</p>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="surface panel" id="medication">
-          <h2>Medication and treatment</h2>
-          <div class="faq-list">
-            <div class="faq-item">
-              <button class="faq-button" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-med-1">
-                <span>Will I definitely be prescribed medication?</span>
-                <span>+</span>
-              </button>
-              <div class="faq-panel" id="faq-med-1" hidden>
-                Not necessarily. Treatment planning depends on the concern, severity, daily impact, and what is likely to help most.
+      <!-- MEDICATION AND TREATMENT SECTION -->
+      <section class="section">
+        <div class="shell">
+          <div class="surface panel">
+            <h2>Medication and treatment</h2>
+            <div class="accordion">
+              <div class="accordion-item">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-med-1">
+                  <span>Will I definitely be prescribed medication?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-panel" id="faq-med-1" hidden>
+                  <p>Not necessarily. Treatment planning depends on the concern, severity, daily impact, and what is likely to help most.</p>
+                </div>
               </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-button" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-med-2">
-                <span>Can treatment include therapy or parent guidance instead?</span>
-                <span>+</span>
-              </button>
-              <div class="faq-panel" id="faq-med-2" hidden>
-                Yes. Depending on the situation, practical strategies, therapy support, parent guidance, or developmental interventions may be more central than medication.
+              <div class="accordion-item">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-med-2">
+                  <span>Can treatment include therapy or parent guidance instead?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-panel" id="faq-med-2" hidden>
+                  <p>Yes. Depending on the situation, practical strategies, therapy support, parent guidance, or developmental interventions may be more central than medication.</p>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="surface panel" id="logistics">
-          <h2>Booking and logistics</h2>
-          <div class="faq-list">
-            <div class="faq-item">
-              <button class="faq-button" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-log-1">
-                <span>How long is the first consultation?</span>
-                <span>+</span>
-              </button>
-              <div class="faq-panel" id="faq-log-1" hidden>
-                First visits are usually planned for around 45 minutes so there is enough time to understand the concern properly.
+      <!-- BOOKING AND LOGISTICS SECTION -->
+      <section class="section">
+        <div class="shell">
+          <div class="surface panel">
+            <h2>Booking and logistics</h2>
+            <div class="accordion">
+              <div class="accordion-item">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-log-1">
+                  <span>How long is the first consultation?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-panel" id="faq-log-1" hidden>
+                  <p>First visits are usually planned for around 45 minutes so there is enough time to understand the concern properly.</p>
+                </div>
               </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-button" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-log-2">
-                <span>What should I bring?</span>
-                <span>+</span>
-              </button>
-              <div class="faq-panel" id="faq-log-2" hidden>
-                Bring yourself. Past reports or prescriptions can help if you have them, but they are not required.
+              <div class="accordion-item">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-log-2">
+                  <span>What should I bring?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-panel" id="faq-log-2" hidden>
+                  <p>Bring yourself. Past reports or prescriptions can help if you have them, but they are not required.</p>
+                </div>
               </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-button" type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-log-3">
-                <span>How do I reach the clinic?</span>
-                <span>+</span>
-              </button>
-              <div class="faq-panel" id="faq-log-3" hidden>
-                The clinic is in Gamma-2, Greater Noida. Alpha-1 Metro, Delta-1 Metro, Pari Chowk, schools, universities, and Knowledge Park routes are covered on the location page.
+              <div class="accordion-item">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-log-3">
+                  <span>How do I reach the clinic?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-panel" id="faq-log-3" hidden>
+                  <p>The clinic is in Gamma-2, Greater Noida. Alpha-1 Metro, Delta-1 Metro, Pari Chowk, schools, universities, and Knowledge Park routes are covered on the location page.</p>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="surface-soft panel">
-          <h2>Still have questions?</h2>
-          <p class="lead">
-            If your question is personal, time-sensitive, or easier to ask directly, you can contact the clinic instead of guessing.
-          </p>
-          <div class="cta-row">
-            <a class="button-primary" href="./book.html">Book now</a>
-            <a class="button-ghost" href="https://wa.me/919667863295">Ask on WhatsApp</a>
-            <a class="button-ghost" href="./contact.html">Call or contact</a>
+      <!-- CTA SECTION -->
+      <section class="section section-cta-center">
+        <div class="shell">
+          <div class="surface-soft panel">
+            <h2>Still have questions?</h2>
+            <p class="lead">
+              If your question is personal, time-sensitive, or easier to ask directly, you can contact the clinic instead of guessing.
+            </p>
+            <div class="cta-group">
+              <a class="button-primary" href="./book.html">Book now</a>
+              <a class="button-ghost" href="https://wa.me/919667863295">Ask on WhatsApp</a>
+              <a class="button-ghost" href="./contact.html">Call or contact</a>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
-    <nav class="mobile-nav" aria-label="Mobile">
-      <a href="index.html"Home</a>
-      <a href="./faq.html">FAQ</a>
-      <a href="./book.html">Book</a>
-      <a href="./contact.html">Contact</a>
-    </nav>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div class="footer-brand">
+          <img class="logo" src="./res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic Logo" />
+          <p>Mental healthcare that listens.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="./about.html">About Dr. Sharma</a>
+          <a href="./services.html">Services</a>
+          <a href="./process.html">Process</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <a href="./location.html">Location</a>
+          <a href="./book.html">Book Appointment</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./faq.html">FAQ</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Gamma-2, Greater Noida</p>
+          <p><a href="tel:+919667863295">+91 96678 63295</a></p>
+          <p><a href="mailto:info@mindgrace.in">info@mindgrace.in</a></p>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <p>&copy; 2025 Mind Grace Clinic. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="app.js"></script>
   </body>
 </html>

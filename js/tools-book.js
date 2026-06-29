@@ -7,22 +7,23 @@
 
   // Initialize booking form when DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
-    const formWrap = document.querySelector('[data-booking-form-wrap]');
-    
-    if (!formWrap) return;
+    const openButton = document.getElementById('openBookingForm');
+    const formSection = document.getElementById('bookingFormSection');
 
-    // Add loading state
-    formWrap.classList.add('loading');
+    if (!openButton || !formSection) return;
 
-    // Simulate form load (or replace with actual fetch logic if needed)
-    setTimeout(function() {
-      formWrap.classList.remove('loading', 'hidden');
+    // Add click handler to open button
+    openButton.addEventListener('click', function() {
+      // Show the form section with smooth scroll
+      formSection.style.display = 'block';
       
       // Scroll to form smoothly
-      formWrap.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'start' 
-      });
-    }, 300);
+      setTimeout(function() {
+        formSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 100);
+    });
   });
 })();
