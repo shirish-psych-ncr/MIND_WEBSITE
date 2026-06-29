@@ -1,1 +1,8 @@
-Nothing needs to be added to .gitignore since only a source file (index.html) was modified and there are no build artifacts, dependencies, or temporary files in the changes.
+```
+# Backup and temporary files
+*.bak
+*.tmp
+
+# HTML backup
+index-old.html
+```
