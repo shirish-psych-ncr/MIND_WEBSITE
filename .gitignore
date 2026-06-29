@@ -1,55 +1,78 @@
-```
-# Legacy and template backup files
-_legacy/
-_templates/
-
-# Scripts directory (assuming these are build/deployment scripts)
-scripts/*.sh
-
-# Log files
-*.log
-
-# Environment files
-.env
-.env.local
-*.env.*
+```gitignore
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+dist/
+build/
+target/
 
 # Dependencies
 node_modules/
 venv/
 .venv/
-__pycache__/
+.env
+.env.local
+.env.*
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.~
 *.pyc
 *.pyo
 *.pyd
+*.class
 
-# Build artifacts
-dist/
-build/
-target/
-*.o
-*.obj
-*.out
-*.exe
-*.dll
-*.so
-*.a
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+Icon?
+VolumeIcon.icns
 
-# Editors
+# Editor/IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 *.tmp
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Coverage
+# Coverage reports
 coverage/
 htmlcov/
 .coverage
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
 # Compressed files
 *.zip
