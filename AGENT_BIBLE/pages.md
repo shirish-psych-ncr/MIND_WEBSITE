@@ -14,10 +14,10 @@
 | faq.html | - | FAQ accordion | BaseLayout | ✓ Refactored v2.0 |
 | testimonials.html | - | Patient reviews | BaseLayout | ✓ Refactored v2.0 |
 | process.html | - | Treatment journey | BaseLayout | ✓ Refactored v2.0 |
-| fees.html | - | Pricing, Insurance | BaseLayout | TODO: Responsive |
+| fees.html | - | Pricing, Insurance | BaseLayout | ✓ Refactored v2.0 |
 | consent.html | - | Consent forms | LegalLayout | TODO: Responsive |
 | privacy.html | - | Privacy policy | LegalLayout | TODO: Responsive |
-| emergency.html | - | Crisis resources | EmergencyLayout | TODO: Responsive |
+| emergency.html | - | Crisis resources | EmergencyLayout | ✓ Refactored v2.0 |
 | thank-you.html | - | Form success | BaseLayout | TODO: Responsive |
 | 404.html | - | Error page | ErrorLayout | TODO: Responsive |
 
