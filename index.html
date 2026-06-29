@@ -89,9 +89,13 @@
     html {
       scroll-behavior: smooth;
       -webkit-text-size-adjust: 100%;
-      font-size: clamp(14px, 2vw, 18px);
+      -moz-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      font-size: clamp(12px, 1.8vw, 18px);
+      width: 100%;
+      min-height: 100vh;
     }
-    
+
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--white);
@@ -100,21 +104,32 @@
       overflow-x: hidden;
       overflow-y: auto;
       min-height: 100vh;
-      display: block;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #main-content {
+      flex: 1 0 auto;
+      width: 100%;
+    }
+    
+    .site-footer {
+      flex-shrink: 0;
     }
     
     /* VIEWPORT MODE DETECTION — THE RULING */
     @media (orientation: landscape) {
       body.view-mode-horizontal .hero-content { flex-direction: row; align-items: center; gap: 3rem; }
       body.view-mode-horizontal .hero-text { flex: 1; min-width: 0; }
-      body.view-mode-horizontal .hero-visual { flex: 1; max-width: 500px; }
+      body.view-mode-horizontal .hero-visual { flex: 1; width: min(90vw, 500px); }
       body.view-mode-horizontal .main-grid { grid-template-columns: repeat(3, 1fr); }
       body.view-mode-horizontal footer .footer-content { grid-template-columns: repeat(2, 1fr); }
     }
     
     @media (orientation: portrait) {
       body.view-mode-vertical .hero-content { flex-direction: column; text-align: center; }
-      body.view-mode-vertical .hero-visual { order: -1; max-width: 280px; margin-bottom: 1rem; }
+      body.view-mode-vertical .hero-visual { order: -1; width: min(70vw, 280px); margin-bottom: 1rem; }
       body.view-mode-vertical .main-grid { grid-template-columns: 1fr; }
       body.view-mode-vertical footer .footer-content { grid-template-columns: 1fr; }
     }
@@ -136,7 +151,7 @@
     }
     
     .header-inner {
-      max-width: 1200px;
+      width: min(90vw, 1200px);
       margin: 0 auto;
       padding: 0.75rem 1.5rem;
       display: flex;
@@ -252,12 +267,12 @@
     .mobile-nav-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(103, 27, 80, 0.6);
-      backdrop-filter: blur(4px);
+      background: rgba(103, 27, 80, 0.8);
+      backdrop-filter: blur(8px);
       z-index: 1001;
       opacity: 0;
       visibility: hidden;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     .mobile-nav-overlay.active {
@@ -265,43 +280,86 @@
       visibility: visible;
     }
     
+    /* MOBILE NAV POPUP MODAL */
     .mobile-nav-panel {
       position: fixed;
-      top: 0;
-      right: -100%;
-      width: min(85vw, 320px);
-      height: 100vh;
-      height: 100dvh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      width: min(90vw, 420px);
+      max-height: 85vh;
+      max-height: 85dvh;
       background: var(--white);
       z-index: 1002;
-      padding: 6rem 1.5rem 2rem;
-      transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      overflow-y: auto;
-      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
-      display: block;
-    }
-    
-    .mobile-nav-content {
+      padding: 2rem 1.5rem;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
       opacity: 0;
-      transform: translateX(20px);
-      transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
       display: block;
-    }
-    
-    .mobile-nav-panel.active .mobile-nav-content {
-      opacity: 1;
-      transform: translateX(0);
     }
     
     .mobile-nav-panel.active {
-      right: 0;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .mobile-nav-content {
+      display: block;
+    }
+    
+    .mobile-nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--soft-plum);
+    }
+    
+    .mobile-nav-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--deep-purple);
+      margin: 0;
+    }
+    
+    .close-mobile-menu {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      color: var(--deep-purple);
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+    
+    .close-mobile-menu:hover {
+      background: var(--soft-plum);
     }
     
     .mobile-nav-panel ul {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.25rem;
+      gap: 0.5rem;
+    }
+    
+    .mobile-nav-section {
+      margin-bottom: 1.5rem;
+    }
+    
+    .mobile-nav-section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding-left: 1rem;
     }
     
     .mobile-nav-panel a {
@@ -309,9 +367,9 @@
       text-decoration: none;
       color: var(--text-dark);
       font-weight: 500;
-      font-size: 1.1rem;
-      padding: 1rem;
-      border-radius: var(--radius-card);
+      font-size: 1rem;
+      padding: 0.875rem 1rem;
+      border-radius: 12px;
       transition: all 0.2s ease;
     }
     
@@ -324,7 +382,7 @@
       background: var(--wild-strawberry);
       color: white;
       text-align: center;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       font-weight: 600;
     }
     
@@ -336,7 +394,7 @@
     /* HERO SECTION */
     .hero {
       padding: clamp(2rem, 5vw, 4rem) 1.5rem;
-      max-width: 1200px;
+      width: min(90vw, 1200px);
       margin: 0 auto;
     }
     
@@ -429,7 +487,6 @@
     
     .hero-visual {
       flex: 0 0 auto;
-      max-width: 400px;
       width: 100%;
     }
     
@@ -460,7 +517,7 @@
     
     .section-header {
       text-align: center;
-      max-width: 700px;
+      width: min(90vw, 700px);
       margin: 0 auto 2.5rem;
     }
     
@@ -481,7 +538,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
-      max-width: 1200px;
+      width: min(90vw, 1200px);
       margin: 0 auto;
     }
     
@@ -545,16 +602,14 @@
       color: var(--white);
       padding: clamp(1.5rem, 3vw, 2.5rem) 1.5rem;
       width: 100%;
-      max-width: 100%;
     }
     
     .footer-content {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: clamp(1rem, 2vw, 2rem);
-      max-width: 800px;
+      width: min(90vw, 800px);
       margin: 0 auto;
-      width: 100%;
     }
     
     .footer-column {
@@ -593,7 +648,7 @@
     }
     
     .footer-bottom {
-      max-width: 900px;
+      width: min(90vw, 900px);
       margin: 2rem auto 0;
       padding-top: 1.5rem;
       border-top: 1px solid rgba(253, 252, 248, 0.15);
@@ -604,7 +659,7 @@
       font-size: clamp(0.65rem, 1.5vw, 0.75rem);
       color: rgba(239, 188, 186, 0.7);
       line-height: 1.5;
-      max-width: 600px;
+      width: min(90vw, 600px);
       margin: 0 auto;
       /* Auto-zoom-out: shrinks instead of wrapping */
       transform-origin: center;
@@ -687,16 +742,47 @@
       </button>
     </div>
     <div class="mobile-nav-content">
-      <ul class="mobile-nav-list">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="process.html">What to Expect</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="location.html">Find Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="book.html" class="cta-button">Book Appointment</a></li>
-      </ul>
+      <!-- Main Navigation -->
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Explore</div>
+        <ul class="mobile-nav-list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="process.html">What to Expect</a></li>
+          <li><a href="location.html">Find Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Resources & Tools -->
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Resources & Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="book.html">Resource Book</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <!-- Therapeutic Tools -->
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Therapeutic Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="guided-breathing.html">Guided Breathing</a></li>
+          <li><a href="butterfly-tapper.html">Butterfly Tapper</a></li>
+          <li><a href="eye-movement.html">Eye Movement</a></li>
+          <li><a href="hypnos-fractal.html">Hypnotic Fractal</a></li>
+          <li><a href="horizon-scan.html">Horizon Scan</a></li>
+          <li><a href="leaf-on-stream.html">Leaf on Stream</a></li>
+        </ul>
+      </div>
+      
+      <!-- CTA -->
+      <div class="mobile-nav-section">
+        <a href="book.html" class="cta-button">Book Appointment</a>
+      </div>
     </div>
   </nav>
   
@@ -888,8 +974,8 @@
       function openNav() {
         isOpen = true;
         trigger.setAttribute('aria-expanded', 'true');
-        panel.classList.add('is-open');
-        overlay.classList.add('is-open');
+        panel.classList.add('active');
+        overlay.classList.add('active');
         panel.removeAttribute('inert');
         document.body.style.overflow = 'hidden';
         setTimeout(() => navLinks[0]?.focus(), 100);
@@ -898,8 +984,8 @@
       function closeNav() {
         isOpen = false;
         trigger.setAttribute('aria-expanded', 'false');
-        panel.classList.remove('is-open');
-        overlay.classList.remove('is-open');
+        panel.classList.remove('active');
+        overlay.classList.remove('active');
         panel.setAttribute('inert', '');
         document.body.style.overflow = '';
         trigger.focus();
