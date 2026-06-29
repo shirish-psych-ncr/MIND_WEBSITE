@@ -9,10 +9,10 @@
 | services.html | - | Service listing, Categories | BaseLayout | ✓ Refactored v2.0 |
 | conditions.html | - | Condition encyclopedia | BaseLayout | TODO: Responsive |
 | doctor.html | - | Doctor profile (Dr. Sharma) | DoctorLayout | TODO: Responsive |
-| location.html | - | Map, Address, Directions | BaseLayout | TODO: Responsive |
+| location.html | - | Map, Address, Directions | BaseLayout | ✓ Refactored v2.0 |
 | contact.html | - | Contact form, Info | BaseLayout | ✓ Refactored v2.0 |
-| faq.html | - | FAQ accordion | BaseLayout | TODO: Responsive |
-| testimonials.html | - | Patient reviews | BaseLayout | TODO: Responsive |
+| faq.html | - | FAQ accordion | BaseLayout | ✓ Refactored v2.0 |
+| testimonials.html | - | Patient reviews | BaseLayout | ✓ Refactored v2.0 |
 | process.html | - | Treatment journey | BaseLayout | ✓ Refactored v2.0 |
 | fees.html | - | Pricing, Insurance | BaseLayout | TODO: Responsive |
 | consent.html | - | Consent forms | LegalLayout | TODO: Responsive |
@@ -30,7 +30,7 @@
 | hypnos-fractal.html | - | Hypnotic fractal | tools-fractal.css | tools-fractal.js | TODO: Hydrate |
 | horizon-scan.html | - | Horizon scanning | tools-horizon.css | tools-horizon.js | TODO: Hydrate |
 | leaf-on-stream.html | - | Leaf meditation | tools-leaf.css | tools-leaf.js | TODO: Hydrate |
-| book.html | - | Resource book | tools-book.css | tools-book.js | TODO: Hydrate |
+| book.html | - | Resource book | tools-book.css | tools-book.js | ✓ Refactored v2.0 |
 
 ## 3. BLOG_PAGES (/blog/*, 13 files)
 ### Index & Category Pages

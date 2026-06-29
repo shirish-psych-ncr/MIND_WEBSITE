@@ -848,3 +848,156 @@
   text-align: center;
   margin-top: var(--space-xl);
 }
+
+/* =============================================
+   IFRAME CONTAINER (for embedded forms)
+   ============================================= */
+
+.iframe-container {
+  width: 100%;
+  max-height: 75vh;
+  min-height: 450px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-md);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bg-white);
+  scrollbar-gutter: stable both-edges;
+  padding-bottom: 4px;
+  box-sizing: border-box;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 3200px;
+  min-height: 3200px;
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.iframe-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.iframe-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.iframe-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 5px;
+}
+
+.iframe-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+@media (max-width: 768px) {
+  .iframe-container {
+    max-height: 70vh;
+    min-height: 400px;
+    border-radius: var(--radius-sm);
+    padding-bottom: 8px;
+  }
+  .iframe-container iframe {
+    height: 3400px;
+    min-height: 3400px;
+  }
+}
+
+/* =============================================
+   STEP NUMBER (for timelines)
+   ============================================= */
+
+.step-number {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  background: var(--accent);
+  color: var(--text-white);
+}
+
+/* =============================================
+   CONTACT ICON (large centered icons)
+   ============================================= */
+
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+/* =============================================
+   CARD FOOTER
+   ============================================= */
+
+.card-footer {
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--border-light);
+}
+
+/* =============================================
+   TESTIMONIALS GRID
+   ============================================= */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  width: var(--content);
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(103, 27, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-rating {
+  color: #fbbf24;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-md);
+}
+
+.testimonial-text {
+  color: var(--text-dark);
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.testimonial-author {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  margin-bottom: var(--space-xs);
+}
+
+.testimonial-source {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+}
