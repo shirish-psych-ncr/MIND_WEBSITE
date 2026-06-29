@@ -5,15 +5,15 @@
 | File | Lines | Purpose | Layout | Status |
 |---|---|---|---|---|
 | index.html | 561 | Homepage, Hero, Services, Trust | BaseLayout | ✓ MobileFirst |
-| about.html | - | Clinic story, Team, Approach | BaseLayout | TODO: Responsive |
-| services.html | - | Service listing, Categories | BaseLayout | TODO: Responsive |
+| about.html | - | Clinic story, Team, Approach | BaseLayout | ✓ Refactored v2.0 |
+| services.html | - | Service listing, Categories | BaseLayout | ✓ Refactored v2.0 |
 | conditions.html | - | Condition encyclopedia | BaseLayout | TODO: Responsive |
 | doctor.html | - | Doctor profile (Dr. Sharma) | DoctorLayout | TODO: Responsive |
 | location.html | - | Map, Address, Directions | BaseLayout | TODO: Responsive |
-| contact.html | - | Contact form, Info | BaseLayout | TODO: Responsive |
+| contact.html | - | Contact form, Info | BaseLayout | ✓ Refactored v2.0 |
 | faq.html | - | FAQ accordion | BaseLayout | TODO: Responsive |
 | testimonials.html | - | Patient reviews | BaseLayout | TODO: Responsive |
-| process.html | - | Treatment journey | BaseLayout | TODO: Responsive |
+| process.html | - | Treatment journey | BaseLayout | ✓ Refactored v2.0 |
 | fees.html | - | Pricing, Insurance | BaseLayout | TODO: Responsive |
 | consent.html | - | Consent forms | LegalLayout | TODO: Responsive |
 | privacy.html | - | Privacy policy | LegalLayout | TODO: Responsive |

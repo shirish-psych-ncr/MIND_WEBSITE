@@ -3,6 +3,215 @@
    Mind Grace Clinic - Modern Fluid Design
    ============================================ */
 
+/* Section Badge */
+.section-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--soft-plum), rgba(243, 70, 116, 0.1));
+  color: var(--accent);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-md);
+  border: 1px solid rgba(243, 70, 116, 0.2);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  width: var(--content);
+  margin: 0 auto;
+}
+
+/* Service Card */
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(103, 27, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-icon {
+  width: clamp(48px, 8vw, 64px);
+  height: clamp(48px, 8vw, 64px);
+  background: linear-gradient(135deg, var(--soft-plum), rgba(243, 70, 116, 0.15));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+}
+
+.service-card h3 {
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--space-sm);
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: auto;
+}
+
+/* Feature Cards Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  width: var(--content);
+  margin: 0 auto;
+}
+
+/* Feature Card */
+.feature-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(103, 27, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  width: clamp(48px, 8vw, 64px);
+  height: clamp(48px, 8vw, 64px);
+  background: linear-gradient(135deg, var(--soft-plum), rgba(243, 70, 116, 0.15));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-lg);
+}
+
+.feature-card h3 {
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--space-sm);
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+}
+
+/* Check List */
+.check-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  font-size: var(--fs-body);
+  color: var(--text-body);
+  line-height: var(--lh-relaxed);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  width: var(--content);
+  margin: 0 auto;
+}
+
+.gallery-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.gallery-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.gallery-item figcaption {
+  padding: var(--space-md);
+  background: var(--white);
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  text-align: center;
+}
+
+/* Content Narrow */
+.content-narrow {
+  max-width: var(--narrow);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Notice Box */
+.notice-box {
+  background: linear-gradient(135deg, var(--soft-plum), rgba(243, 70, 116, 0.1));
+  border: 1px solid rgba(243, 70, 116, 0.2);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: var(--space-xl);
+}
+
+.notice-box p {
+  color: var(--text-body);
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+  margin: 0;
+}
+
+.notice-box a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.notice-box a:hover {
+  text-decoration: underline;
+}
+
 /* Badges */
 .badge {
   display: inline-flex;
@@ -222,4 +431,420 @@
 .btn-ripple:active::after {
   width: 200px;
   height: 200px;
+}
+
+/* =============================================
+   PROCESS PAGE - Timeline Components
+   ============================================= */
+
+/* Process Timeline */
+.process-timeline {
+  display: grid;
+  gap: var(--space-xl);
+  position: relative;
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+  padding: var(--space-lg);
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.process-step:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-number {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.3;
+  line-height: 1;
+  min-width: 80px;
+  text-align: center;
+}
+
+.step-content h3 {
+  font-size: clamp(1.125rem, 3vw, 1.375rem);
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  line-height: 1.7;
+}
+
+/* =============================================
+   CONTACT PAGE - Contact Grid & Cards
+   ============================================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.contact-card {
+  background: var(--bg-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card-emergency {
+  background: linear-gradient(135deg, var(--error) 0%, #dc2626 100%);
+  color: white;
+}
+
+.contact-card-emergency .contact-detail,
+.contact-card-emergency .contact-meta {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-card-emergency .button-outline {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.contact-card-emergency .button-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-radius: 50%;
+  margin-bottom: var(--space-md);
+}
+
+.contact-card h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.contact-detail {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  line-height: 1.6;
+}
+
+.contact-detail a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-detail a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.contact-meta {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.contact-card .button-small {
+  margin-top: auto;
+}
+
+/* =============================================
+   CONTACT FORM STYLES
+   ============================================= */
+
+.contact-form {
+  background: var(--bg-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: var(--error);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin-top: 4px;
+}
+
+.checkbox-group label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.checkbox-group a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.form-note {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* =============================================
+   INFO CARDS (Plan Your Visit)
+   ============================================= */
+
+.info-card {
+  display: block;
+  background: var(--bg-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.info-card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+}
+
+.info-card h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.info-card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.card-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.info-card:hover .card-link {
+  color: var(--primary-dark);
+}
+
+/* =============================================
+   ALERT COMPONENTS
+   ============================================= */
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.alert-warning {
+  background: var(--warning-soft);
+  border-left: 4px solid var(--warning);
+  color: var(--warning-dark);
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--warning);
+}
+
+/* =============================================
+   HERO SMALL VARIANT
+   ============================================= */
+
+.hero-small {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+}
+
+.hero-small .hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* =============================================
+   ACCORDION COMPONENT
+   ============================================= */
+
+.accordion {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.accordion-item {
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: background var(--transition-fast);
+}
+
+.accordion-trigger:hover {
+  background: var(--bg-soft);
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: transform var(--transition-fast);
+  line-height: 1;
+}
+
+.accordion-panel {
+  padding: 0 var(--space-lg) var(--space-lg);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.accordion-panel[hidden] {
+  display: none;
+}
+
+/* =============================================
+   CTA GROUP
+   ============================================= */
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+.button-large {
+  padding: var(--space-md) var(--space-xl);
+  font-size: 1.0625rem;
+}
+
+.section-cta-center {
+  text-align: center;
+  margin-top: var(--space-xl);
 }
