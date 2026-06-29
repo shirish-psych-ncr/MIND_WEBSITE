@@ -65,8 +65,8 @@
 |---|---|---|
 | template-clean.html | - | Blank template for new pages |
 | mind-grace.html | - | Alternate homepage? |
-| aasha.html | - | AASHA child development page |
-| approach.html | - | Treatment approach |
+| aasha.html | - | Aasha community initiative | BaseLayout | ✓ Refactored v2.0 |
+| approach.html | - | Biopsychosocial model explanation | BaseLayout | ✓ Refactored v2.0 |
 | resources.html | - | Resource library |
 | gallery.html | - | Photo gallery |
 
