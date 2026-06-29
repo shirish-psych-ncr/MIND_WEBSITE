@@ -1,8 +1,1 @@
-```
-# Backup and temporary files
-*.bak
-*.tmp
-
-# HTML backup
-index-old.html
-```
+Nothing should be ignored in this case, as the changes only include markdown documentation files (.md) which are source/config files and not build artifacts, dependencies, or temporary files.
