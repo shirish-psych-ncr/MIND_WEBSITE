@@ -1,15 +1,13 @@
 ```
-# Build artifacts
-*.html
+# Logs and temp files
+*.log
+*.tmp
+*.swp
 
 # Environment
 .env
 .env.local
-.env.*
-
-# Logs and temp files
-*.log
-*.tmp
+*.env.*
 
 # Editors
 .vscode/
@@ -18,23 +16,12 @@
 # Dependencies
 node_modules/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.so
-*.egg-info/
-.eggs/
-dist/
-build/
-.coverage
-coverage/
-htmlcov/
-.mypy_cache/
-.pytest_cache/
-.tox/
 .venv/
 venv/
-.env/
+.mypy_cache/
+.pytest_cache/
+dist/
+build/
 target/
 .gradle/
 
@@ -42,7 +29,23 @@ target/
 .DS_Store
 Thumbs.db
 
-# Compression
+# Compiled files
+*.pyc
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Compressed files
 *.zip
 *.gz
 *.tar

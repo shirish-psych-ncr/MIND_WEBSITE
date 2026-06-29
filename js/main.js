@@ -222,3 +222,44 @@
     });
   });
 })();
+
+// ========================================
+// Number Counter Animation for Aasha Page
+// ========================================
+const initCounters = () => {
+  const counters = document.querySelectorAll('.stat-number');
+  const observerOptions = { threshold: 0.5 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = parseInt(counter.getAttribute('data-target')) || 100;
+        const increment = target / 50;
+        
+        let current = 0;
+        const updateCounter = () => {
+          current += increment;
+          if (current < target) {
+            counter.innerText = Math.ceil(current) + '+';
+            setTimeout(updateCounter, 40);
+          } else {
+            counter.innerText = target + '+';
+          }
+        };
+        updateCounter();
+        observer.unobserve(counter);
+      }
+    });
+  }, observerOptions);
+
+  counters.forEach(counter => {
+    counter.setAttribute('data-target', counter.getAttribute('data-target') || '100');
+    observer.observe(counter);
+  });
+};
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', () => {
+  initCounters();
+});
