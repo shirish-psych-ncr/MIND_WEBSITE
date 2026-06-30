@@ -1,39 +1,406 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+layout: '../layouts/BaseLayout.astro'
+title: 'Butterfly Tapper | Mind Grace Clinic'
+description: 'Use the Butterfly Tapper grounding tool from Mind Grace Clinic as a calming bilateral exercise for routine stress support.'
+noFooter: true
+fullScreen: true
 ---
 
-<BaseLayout title="Butterfly Tapper | Mind Grace Clinic" description="Use the Butterfly Tapper grounding tool from Mind Grace Clinic as a calming bilateral exercise for routine stress support.">
-  <link rel="stylesheet" href="/styles/tools-butterfly.css" />
-  
-  <h1>Butterfly Tapper grounding exercise</h1>
-  <div class="tool-link-bar">
-    <a href="/resources">Back to tools</a>
-    <a href="/book">Book</a>
-  </div>
-
-  <!-- Orientation Guard -->
-  <div id="orientation-guard">
+<!-- Orientation Guard -->
+<div id="orientation-guard">
     <div class="phone-icon"></div>
-    <p>ROTATE TO LANDSCAPE</p>
-    <p>Hold with both hands for calming down</p>
-  </div>
+    <p style="letter-spacing: 2px; font-weight: 200; margin-top: 20px;">ROTATE TO LANDSCAPE</p>
+    <p style="font-size: 0.7rem; color: #666; margin-top: 10px;">Hold with both hands for calming down</p>
+</div>
 
-  <!-- Visual Layers -->
-  <div id="supernova"></div>
-  <canvas id="trail-canvas"></canvas>
-  <canvas id="ui-canvas"></canvas>
+<!-- Visual Layers -->
+<div id="supernova"></div>
+<canvas id="trail-canvas"></canvas>
+<canvas id="ui-canvas"></canvas>
 
-  <!-- UI Elements -->
-  <div id="gear-btn" onclick="togglePause(event)">⚙️</div>
-  <div class="status-overlay">
+<!-- UI Elements -->
+<div id="gear-btn" onclick="togglePause(event)">⚙️</div>
+<div class="status-overlay">
     <div class="status-text" id="label">Tap Screen to Begin</div>
-  </div>
+</div>
 
-  <!-- Interaction Cores -->
-  <div class="tapper-container">
+<!-- Interaction Cores -->
+<div class="tapper-container">
     <div id="L" class="core" onpointerdown="handleTap('L')"><div class="core-inner"></div></div>
     <div id="R" class="core" onpointerdown="handleTap('R')"><div class="core-inner"></div></div>
-  </div>
+</div>
 
-  <script is:inline src="/scripts/tools-butterfly.js"></script>
-</BaseLayout>
+<div class="tool-link-bar">
+    <a href="/resources">Back to tools</a>
+    <a href="/book">Book</a>
+</div>
+
+<style is:global>
+:root {
+    --bg: #010204;
+    --cyan: #22d3ee;
+    --purple: #a855f7;
+    --white: #ffffff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; touch-action: none; -webkit-user-select: none; user-select: none; }
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 3s ease;
+}
+
+/* --- CANVAS LAYERS --- */
+canvas { position: absolute; inset: 0; z-index: 1; }
+#trail-canvas { z-index: 1; }
+#ui-canvas { z-index: 2; pointer-events: none; }
+
+/* --- 1. ORIENTATION GUARD --- */
+#orientation-guard {
+    position: fixed; inset: 0; background: var(--bg); z-index: 2000;
+    display: none; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 20px;
+}
+.phone-icon {
+    width: 50px; height: 90px; border: 2px solid var(--cyan); border-radius: 8px;
+    margin-bottom: 20px;
+    animation: rotatePhone 2s infinite ease-in-out;
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+}
+@keyframes rotatePhone {
+    0% { transform: rotate(0deg); opacity: 0.5; }
+    50% { transform: rotate(-90deg); opacity: 1; }
+    100% { transform: rotate(-90deg); opacity: 0.5; }
+}
+
+/* --- 2. HRV BREATHING BACKGROUND --- */
+body::before {
+    content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, transparent 70%);
+    animation: hrvPulse 10s infinite ease-in-out;
+}
+@keyframes hrvPulse {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.3); }
+}
+
+/* --- 3. UI CONTAINERS --- */
+.tapper-container {
+    position: relative; z-index: 10; width: 100%; height: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 10%; pointer-events: none;
+}
+.core {
+    width: 26vh; height: 26vh; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: auto; cursor: pointer;
+    position: relative;
+}
+.core-inner {
+    width: 30%; height: 30%; border-radius: 50%;
+    background: white; opacity: 0.05;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.core.ready .core-inner {
+    opacity: 0.8;
+    box-shadow: 0 0 50px var(--cyan);
+    animation: corePulse 1.5s infinite alternate ease-in-out;
+}
+@keyframes corePulse {
+    from { transform: scale(1); box-shadow: 0 0 30px var(--cyan); }
+    to { transform: scale(1.2); box-shadow: 0 0 60px var(--cyan); }
+}
+
+/* --- 4. OVERLAYS & CONTROLS --- */
+.status-overlay {
+    position: absolute; bottom: 15%; width: 100%; text-align: center;
+    z-index: 20; pointer-events: none;
+}
+.status-text {
+    font-weight: 200; letter-spacing: 4px; text-transform: uppercase;
+    font-size: 0.8rem; color: rgba(255,255,255,0.4);
+}
+#gear-btn {
+    position: absolute; top: 25px; right: 25px; z-index: 1000;
+    width: 45px; height: 45px; border-radius: 50%;
+    background: rgba(255,255,255,0.05); backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.1); color: white;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 1.2rem; pointer-events: auto;
+    transition: background 0.3s;
+}
+#gear-btn.paused { background: var(--cyan); color: #000; }
+#supernova {
+    position: fixed; inset: 0; background: white; z-index: 3000;
+    opacity: 0; pointer-events: none; transition: opacity 0.8s ease-out;
+}
+
+.tool-link-bar {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1100;
+    display: flex;
+    gap: 10px;
+}
+.tool-link-bar a {
+    pointer-events: auto;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+/* --- PORTRAIT LOCK --- */
+@media (orientation: portrait) {
+    #orientation-guard { display: flex; }
+}
+</style>
+
+<script is:inline>
+/**
+ * ZENITH TAPPER v9.0 - ULTRA PATCHED
+ * Architecture: State Machine + Dual Canvas + Bilateral Audio
+ */
+
+// --- STATE MACHINE ---
+const STATE = { IDLE: 0, TRAVEL: 1, ORBIT: 2, READY: 3, EXPLODE: 4, PAUSED: 5 };
+let currentState = STATE.IDLE;
+
+// --- APP VARIABLES ---
+let canvas, ctx, tCanvas, tCtx;
+let w, h, midX, midY;
+let particles = [];
+let side = 'L';
+let count = 0;
+let brightness = 100;
+let isPaused = false;
+let audioCtx, osc, panner, gain;
+
+let comet = {
+    x: 0, y: 0,
+    sx: 0, sy: 0,
+    tx: 0, ty: 0,
+    cx: 0, cy: 0,
+    progress: 0,
+    hue: 190,
+    active: false
+};
+
+function initWorld() {
+    if (audioCtx) return;
+    setupCanvas();
+    setupAudio();
+    currentState = STATE.TRAVEL;
+    document.getElementById('label').innerText = "Follow the Light";
+    startTransition('L');
+    animate();
+}
+
+function setupCanvas() {
+    canvas = document.getElementById('ui-canvas');
+    ctx = canvas.getContext('2d');
+    tCanvas = document.getElementById('trail-canvas');
+    tCtx = tCanvas.getContext('2d');
+    resize();
+    window.addEventListener('resize', resize);
+}
+
+function resize() {
+    w = canvas.width = tCanvas.width = window.innerWidth;
+    h = canvas.height = tCanvas.height = window.innerHeight;
+    midX = w / 2;
+    midY = h / 2;
+}
+
+function setupAudio() {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    audioCtx = new AudioContext();
+    osc = audioCtx.createOscillator();
+    panner = audioCtx.createStereoPanner();
+    gain = audioCtx.createGain();
+    
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(432, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+    
+    osc.connect(panner);
+    panner.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+}
+
+function startTransition(targetSide) {
+    currentState = STATE.TRAVEL;
+    comet.active = true;
+    comet.progress = 0;
+    comet.hue = targetSide === 'L' ? 190 : 280;
+    
+    document.getElementById('L').classList.remove('ready');
+    document.getElementById('R').classList.remove('ready');
+
+    const targetNode = document.getElementById(targetSide).getBoundingClientRect();
+    comet.tx = targetNode.left + targetNode.width / 2;
+    comet.ty = targetNode.top + targetNode.height / 2;
+    
+    const prevSide = targetSide === 'L' ? 'R' : 'L';
+    const prevNode = document.getElementById(prevSide).getBoundingClientRect();
+    comet.sx = prevNode.left + prevNode.width / 2;
+    comet.sy = prevNode.top + prevNode.height / 2;
+    
+    comet.cx = (comet.sx + comet.tx) / 2;
+    comet.cy = (comet.sy + comet.ty) / 2 - (h * 0.15);
+    
+    if (panner) {
+        const panVal = targetSide === 'L' ? -1 : 1;
+        panner.pan.exponentialRampToValueAtTime(panVal, audioCtx.currentTime + 1.5);
+    }
+}
+
+function handleTap(s) {
+    if (currentState !== STATE.READY || s !== side) return;
+    
+    if (navigator.vibrate) {
+        s === 'L' ? navigator.vibrate([40, 30, 40]) : navigator.vibrate([60]);
+    }
+    
+    currentState = STATE.EXPLODE;
+    spawnExplosion(comet.tx, comet.ty, comet.hue);
+    
+    count++;
+    document.getElementById('label').innerText = `Cycle ${count}`;
+    
+    if (count % 5 === 0 && brightness > 30) {
+        brightness -= 5;
+        document.body.style.filter = `brightness(${brightness}%)`;
+    }
+    
+    if (count % 20 === 0) triggerSupernova();
+    
+    side = (s === 'L') ? 'R' : 'L';
+    startTransition(side);
+}
+
+function spawnExplosion(x, y, hue) {
+    for (let i = 0; i < 40; i++) {
+        particles.push({
+            x: x, y: y,
+            vx: (Math.random() - 0.5) * 15,
+            vy: (Math.random() - 0.5) * 15,
+            life: 1.0,
+            hue: hue
+        });
+    }
+}
+
+function triggerSupernova() {
+    const sn = document.getElementById('supernova');
+    sn.style.opacity = '1';
+    setTimeout(() => {
+        sn.style.opacity = '0';
+        particles = [];
+        if (osc) {
+            let newFreq = Math.max(200, 432 - (count * 2));
+            osc.frequency.exponentialRampToValueAtTime(newFreq, audioCtx.currentTime + 2);
+        }
+    }, 800);
+}
+
+function togglePause(e) {
+    e.stopPropagation();
+    isPaused = !isPaused;
+    const btn = document.getElementById('gear-btn');
+    if (isPaused) {
+        btn.classList.add('paused');
+        currentState = STATE.PAUSED;
+        if(audioCtx) audioCtx.suspend();
+    } else {
+        btn.classList.remove('paused');
+        if(audioCtx) audioCtx.resume();
+        if(currentState === STATE.PAUSED) currentState = STATE.READY; 
+    }
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    
+    if (isPaused) return;
+    
+    tCtx.fillStyle = 'rgba(1, 2, 4, 0.1)';
+    tCtx.fillRect(0, 0, w, h);
+    
+    ctx.clearRect(0, 0, w, h);
+    
+    if (currentState === STATE.TRAVEL || currentState === STATE.ORBIT) {
+        comet.progress += 0.006;
+        const wobble = Math.sin(comet.progress * 30) * 10;
+        
+        if (comet.progress < 0.7) {
+            const t = comet.progress / 0.7;
+            comet.x = (1-t)**2 * comet.sx + 2*(1-t)*t * comet.cx + t**2 * comet.tx;
+            comet.y = (1-t)**2 * comet.sy + 2*(1-t)*t * comet.cy + t**2 * comet.ty + wobble;
+            
+            if (Math.random() > 0.5) {
+                tCtx.fillStyle = `hsla(${comet.hue}, 80%, 60%, 0.5)`;
+                tCtx.beginPath();
+                tCtx.arc(comet.x, comet.y, 3, 0, Math.PI*2);
+                tCtx.fill();
+            }
+        } else {
+            const t = (comet.progress - 0.7) / 0.3;
+            const angle = t * Math.PI * 4;
+            const radius = 80 * (1 - t);
+            
+            comet.x = comet.tx + Math.cos(angle) * radius;
+            comet.y = comet.ty + Math.sin(angle) * radius;
+            
+            if (t >= 1) {
+                currentState = STATE.READY;
+                comet.active = false;
+                document.getElementById(side).classList.add('ready');
+                document.getElementById('label').innerText = `Tap ${side === 'L' ? 'Left' : 'Right'}`;
+            }
+        }
+        
+        if (comet.active) {
+            ctx.shadowBlur = 20;
+            ctx.shadowColor = `hsl(${comet.hue}, 100%, 50%)`;
+            ctx.fillStyle = '#fff';
+            ctx.beginPath();
+            ctx.arc(comet.x, comet.y, 5, 0, Math.PI*2);
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        }
+    }
+    
+    for (let i = particles.length - 1; i >= 0; i--) {
+        let p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.life -= 0.015;
+        
+        if (p.life <= 0) {
+            particles.splice(i, 1);
+        } else {
+            ctx.fillStyle = `hsla(${p.hue}, 80%, 60%, ${p.life})`;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.life * 4, 0, Math.PI*2);
+            ctx.fill();
+        }
+    }
+}
+
+document.body.addEventListener('click', initWorld, { once: true });
+</script>

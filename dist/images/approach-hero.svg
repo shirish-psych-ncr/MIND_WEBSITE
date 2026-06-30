@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <rect fill="#f5f5f5" width="800" height="400"/>
+  <circle cx="400" cy="200" r="100" fill="#671B50" opacity="0.2"/>
+  <text x="400" y="220" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" fill="#671B50">Holistic Mental Health Care</text>
+</svg>
