@@ -22,7 +22,9 @@
   --text-body: #4A3B4A;
   --text-muted: #6B4C5A;
   --text-light: #8B6B7A;
-  
+  --font-heading: "Newsreader", serif;
+  --font-body: "Manrope", sans-serif;
+   
   /* Semantic Colors */
   --error: #DC3545;
   --success: #28A745;
