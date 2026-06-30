@@ -30,7 +30,7 @@
     "@playwright/test": "^1.61.1",
     "astro": "^4.16.18",
     "playwright": "^1.61.1",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "zod": "^4.4.3"
   },
   "allowScripts": {
