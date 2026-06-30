@@ -1,1 +1,5 @@
-Nothing needs to be added to the .gitignore file based on the provided file changes, as they consist only of source files (.py, .html, .astro) and no build artifacts, dependencies, or temporary files that should be ignored.
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
