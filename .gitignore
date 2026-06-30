@@ -3,3 +3,8 @@ node_modules/
 
 # Production build outputs
 dist/
+
+.astro/
+
+.env
+env.production
