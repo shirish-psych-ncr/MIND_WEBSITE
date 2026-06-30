@@ -19,7 +19,7 @@ fullScreen: true
 <canvas id="ui-canvas"></canvas>
 
 <!-- UI Elements -->
-<div id="gear-btn" onclick="togglePause(event)">⚙️</div>
+<div id="gear-btn" onclick="togglePause()">⚙️</div>
 <div class="status-overlay">
     <div class="status-text" id="label">Tap Screen to Begin</div>
 </div>
@@ -318,8 +318,8 @@ function triggerSupernova() {
     }, 800);
 }
 
-function togglePause(e) {
-    e.stopPropagation();
+function togglePause(ev) {
+    ev.stopPropagation();
     isPaused = !isPaused;
     const btn = document.getElementById('gear-btn');
     if (isPaused) {
