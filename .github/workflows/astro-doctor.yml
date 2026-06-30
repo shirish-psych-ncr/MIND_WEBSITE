@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Astro Doctor
-        uses: santi020k/astro-doctor@v1.0.1
+        uses: santi020k/astro-doctor@v1.0.2
         with:
           working-directory: "."
           fail-on: warning
