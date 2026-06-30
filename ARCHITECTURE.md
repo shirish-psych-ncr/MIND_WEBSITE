@@ -1,8 +1,11 @@
 # Mind Grace Clinic — Repository Architecture Documentation
 
+**Last Updated:** Phase 4 Documentation Cleanup  
+**Status:** Production-ready static site with Astro migration pending  
+
 ## Executive Summary
 
-This repository contains the complete web presence for **Mind Grace Clinic**, a mental health practice in Greater Noida led by Dr. Anita Sharma. The project has been architected as a **modern, fluid, intrinsically responsive website** using vanilla HTML, CSS, and JavaScript—without frameworks.
+This repository contains the complete web presence for **Mind Grace Clinic**, a mental health practice in Greater Noida led by Dr. Anita Sharma. The project is architected as a **modern, fluid, intrinsically responsive website** using vanilla HTML, CSS, and JavaScript—without frameworks.
 
 ### Core Design Philosophy
 
@@ -15,13 +18,66 @@ This repository contains the complete web presence for **Mind Grace Clinic**, a 
 
 ---
 
-## Repository Structure
+## Repository Structure (Updated)
 
 ```
 /workspace
-├── ARCHITECTURE.md                 # This file
-├── README.md                       # Project overview & deployment URL
-├── index.html                      # Homepage (primary entry point)
+├── README.md                       # Project overview, quick start, navigation
+├── ARCHITECTURE.md                 # This file - technical architecture
+├── astro.config.mjs                # Astro configuration (migration pending)
+├── package.json                    # Dependencies, scripts
+├── site.webmanifest                # PWA manifest
+├── robots.txt                      # Search engine rules
+├── sitemap.xml                     # SEO sitemap
+│
+├── docs/                           # Documentation (8 core files)
+│   ├── ARCHITECTURE.md             # Detailed system architecture
+│   ├── design.md                   # Design tokens, layout rules, accessibility
+│   ├── worker.md                   # Architecture patterns, security, hydration
+│   ├── assets.md                   # Asset registry, optimization guidelines
+│   ├── pages.md                    # Page inventory, migration priorities
+│   ├── tools.md                    # Tool specifications, hydration matrix
+│   ├── memory.md                   # Session state, delta logs, continuity
+│   └── Instructions.md             # Agent workflow, constraints, KB sync
+│
+├── public/                         # Static assets for deployment
+│   ├── res/                        # Images, logos, brochures (single source)
+│   │   ├── *.svg                   # Logos (Pink, Black, White variants)
+│   │   ├── *.jpg                   # Photos (doctor, location, interiors)
+│   │   ├── *.png                   # Brochures, AASHA program images
+│   │   └── *_Base64.txt            # Base64 encoded logo for inline SVG
+│   └── assets/                     # Additional assets
+│       └── images/                 # Optimized images (WebP/AVIF pending)
+│
+├── blog/                           # Blog section
+│   ├── index.html                  # Blog homepage
+│   ├── adult.html                  # Adult mental health category
+│   ├── child.html                  # Child development category
+│   ├── res/                        # Blog-specific images
+│   │   ├── *.png                   # Article cover images
+│   │   └── *.jpg                   # Article images
+│   └── pages/                      # Individual blog articles
+│       ├── adult/                  # Adult mental health articles (5)
+│       └── child/                  # Child development articles (4)
+│
+├── src/                            # Astro source files (migration pending)
+│   ├── layouts/                    # Astro layouts
+│   ├── components/                 # Astro components
+│   ├── pages/                      # Astro pages
+│   └── content/                    # Content collections (MDX)
+│
+├── tests/                          # Playwright E2E tests (pending)
+│   └── e2e/                        # End-to-end test specs
+│
+├── _archive/                       # Archived legacy files
+│   ├── legacy-html/                # Old HTML files (reference only)
+│   └── old-files/                  # Deprecated assets, configs
+│
+├── [40+ HTML Pages]                # Core pages + therapeutic tools
+│   ├── Core: index, about, services, doctors, location, contact, process, fees
+│   ├── Resources: emergency, faq, testimonials, approach, aasha, resources
+│   ├── Legal: consent, privacy, thank-you, 404
+│   └── Tools: breathing, butterfly, eye-movement, fractal, horizon, leaf
 │
 ├── css/                            # Core Stylesheets (Modular Architecture)
 │   ├── base.css                    # Variables, reset, base styles, dark mode
