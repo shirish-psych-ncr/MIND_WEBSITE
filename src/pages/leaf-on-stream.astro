@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="The River of Release | Mind Grace Clinic" description="Use the River of Release exercise from Mind Grace Clinic to externalise worries and let them pass in a calming visual practice.">
+  <link rel="stylesheet" href="/css-tools/tools-leaf.css" />
+  
+  <canvas id="riverCanvas"></canvas>
+
+  <div class="tool-link-bar">
+    <a href="/">← Home</a>
+    <a href="/resources">Resources</a>
+  </div>
+
+  <button id="ui-trigger" aria-label="Toggle interface">+</button>
+
+  <div id="ui" class="interface">
+    <div id="inputModal" class="input-modal">
+      <h2>What would you like to release today?</h2>
+      <textarea id="worryInput" placeholder="Type your worry, thought, or feeling here..." maxlength="200"></textarea>
+      <p class="char-count"><span id="charCount">0</span>/200</p>
+      <button id="releaseBtn" class="release-btn">Release into the River</button>
+    </div>
+
+    <div id="breathText" class="breath-text"></div>
+  </div>
+
+  <script src="/js/tools-leaf.js"></script>
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+<div class="shell">
+    
+    <div class="tool-container">
+      <div class="tool-card">
+        
+        <div id="horizon-setup" class="view">
+          <h1>Horizon scanning</h1>
+          <p>Follow the dot as it moves gently across the screen. Keep your head still; move only your eyes.</p>
+          
+          <div class="settings-box">
+            <div class="label">Duration</div>
+            <select id="duration-selector">
+              <option value="30">30 seconds</option>
+              <option value="60" selected>1 minute</option>
+              <option value="120">2 minutes</option>
+            </select>
+            
+            <button class="start-btn" onclick="startHorizon()">Begin</button>
+          </div>
+        </div>
+        
+        <div id="horizon-active" class="view hidden">
+          <div class="track-container">
+            <div class="track-line">
+              <div id="horizon-dot" class="dot"></div>
+            </div>
+          </div>
+          
+          <div id="horizon-timer" class="timer"></div>
+          <button class="stop-btn" onclick="stopHorizon()">End session</button>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</BaseLayout>

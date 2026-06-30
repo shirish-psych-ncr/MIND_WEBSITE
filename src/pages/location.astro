@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+<!-- Hero Section -->
+        <section class="hero hero-small">
+            <div class="container">
+                <div class="hero-badge">Easy to Reach</div>
+                <h1 class="hero-title">Clinic Location in Greater Noida</h1>
+                <p class="hero-subtitle">Mind Grace Neuropsychiatric Clinic is in Gamma-2, Greater Noida, with practical access from Alpha-1 Metro, Delta-1 Metro, Pari Chowk, Knowledge Park, nearby schools, and university routes.</p>
+                <div class="flex gap-4 flex-wrap mt-6">
+                    <a href="https://maps.app.goo.gl/NorMGtR8Uqu5eM8G9" class="btn btn-primary" target="_blank" rel="noopener">Open Directions</a>
+                    <button class="btn btn-outline" type="button" data-copy-text="J-123, Gamma-2, Greater Noida, Uttar Pradesh 201310">Copy Address</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map & Details Section -->
+        <section class="section bg-blush">
+            <div class="container">
+                <div class="grid grid-3-col gap-8">
+                    <!-- Map -->
+                    <div class="col-span-2">
+                        <div class="card shadow-lg overflow-hidden">
+                            <div class="card-body p-0">
+                                <div id="leaflet-map" class="map-frame" style="height: 450px;" aria-label="Clinic map"></div>
+                                <noscript>
+                                    <iframe class="map-frame w-full" style="height: 450px; border:0;" src="https://www.openstreetmap.org/export/embed.html?bbox=77.505%2C28.486%2C77.521%2C28.496&layer=mapnik&marker=28.4910152%2C77.5132324" title="OpenStreetMap location for Mind Grace Clinic"></iframe>
+                                </noscript>
+                            </div>
+                        </div>
+                        
+                        <!-- Street View Gallery -->
+                        <div class="grid grid-2-col gap-4 mt-6">
+                            <img src="./res/Location_street_view_near.jpg" alt="Street view close to the clinic entrance in Greater Noida" class="rounded-lg shadow-md w-full h-48 object-cover">
+                            <img src="./res/Location_street_view_distance.jpg" alt="Street view from a short distance showing the route toward the clinic" class="rounded-lg shadow-md w-full h-48 object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Visit Details Sidebar -->
+                    <aside class="card bg-primary text-white shadow-lg">
+                        <div class="card-body">
+                            <div class="hero-badge bg-accent mb-4">Visit Details</div>
+                            <h2 class="h3 mb-6">Contact Information</h2>
+                            
+                            <div class="stack gap-4 mb-8">
+                                <div class="bg-white/10 p-4 rounded-lg backdrop-blur">
+                                    <strong class="block text-accent mb-1">Address:</strong>
+                                    <p>J-123, Gamma-2, Greater Noida,<br>Uttar Pradesh 201310</p>
+                                </div>
+                                <div class="bg-white/10 p-4 rounded-lg backdrop-blur">
+                                    <strong class="block text-accent mb-1">Parking:</strong>
+                                    <p>Parking and drop-off are available nearby.</p>
+                                </div>
+                                <div class="bg-white/10 p-4 rounded-lg backdrop-blur">
+                                    <strong class="block text-accent mb-1">Transport:</strong>
+                                    <p>Auto-rickshaw and cab drop-offs are practical from metro and nearby sector routes.</p>
+                                </div>
+                            </div>
+
+                            <div class="stack gap-3">
+                                <a href="./book.html" class="btn btn-accent btn-block">Book a Visit</a>
+                                <a href="tel:+919667863295" class="btn btn-outline-light btn-block">Call Clinic</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metro & Bus Routes -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center mb-8">
+                    <h2 class="h2">Metro and Bus Routes</h2>
+                    <p class="text-lg text-muted">Convenient public transport options to reach the clinic.</p>
+                </div>
+
+                <div class="grid grid-2-col md:grid-4-col gap-6">
+                    <article class="card hover:shadow-lg transition-shadow">
+                        <div class="card-body">
+                            <div class="card-icon text-accent mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 18v-2"/><path d="M17 18v-2"/><path d="M3 10h18"/><path d="M7 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+                            </div>
+                            <h3 class="h4 mb-2">Alpha-1 Metro Station</h3>
+                            <p class="text-muted mb-4">About 4.0 km away • Around 8 minutes by road</p>
+                            <a href="https://maps.app.goo.gl/rmGpcgHYHCv87psA9?g_st=ac" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Open Route</a>
+                        </div>
+                    </article>
+
+                    <article class="card hover:shadow-lg transition-shadow">
+                        <div class="card-body">
+                            <div class="card-icon text-accent mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 18v-2"/><path d="M17 18v-2"/><path d="M3 10h18"/><path d="M7 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+                            </div>
+                            <h3 class="h4 mb-2">Delta-1 Metro Station</h3>
+                            <p class="text-muted mb-4">About 3.9 km away • Around 8 minutes by road</p>
+                            <a href="https://maps.app.goo.gl/dG6aKrtUHYYYV4ny8?g_st=ac" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Open Route</a>
+                        </div>
+                    </article>
+
+                    <article class="card hover:shadow-lg transition-shadow">
+                        <div class="card-body">
+                            <div class="card-icon text-accent mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M16 6v6"/><path d="M2 12h20"/><path d="M2 12v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5"/><path d="M2 12V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg>
+                            </div>
+                            <h3 class="h4 mb-2">Jagat Plaza Bus Stop</h3>
+                            <p class="text-muted mb-4">About 2.4 km away • Around 6 minutes by road</p>
+                            <a href="https://maps.app.goo.gl/cv4ccDUTwX36MRM59?g_st=ac" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Open Route</a>
+                        </div>
+                    </article>
+
+                    <article class="card hover:shadow-lg transition-shadow">
+                        <div class="card-body">
+                            <div class="card-icon text-accent mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M16 6v6"/><path d="M2 12h20"/><path d="M2 12v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5"/><path d="M2 12V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg>
+                            </div>
+                            <h3 class="h4 mb-2">Pari Chowk Bus Terminal</h3>
+                            <p class="text-muted mb-4">About 4.0 km away • Around 8 minutes by road</p>
+                            <a href="https://maps.app.goo.gl/tcS8HQTdQkDr69Xd7?g_st=ac" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Open Route</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Universities & Schools -->
+        <section class="section bg-cream">
+            <div class="container">
+                <div class="text-center mb-8">
+                    <h2 class="h2">Universities, Schools, and Work Routes</h2>
+                    <p class="text-lg text-muted">Easy access from major educational institutions and IT parks.</p>
+                </div>
+
+                <div class="grid grid-2-col md:grid-4-col gap-6">
+                    <article class="card">
+                        <div class="card-body">
+                            <h3 class="h4 mb-2">Sharda University</h3>
+                            <p class="text-muted mb-4">About 5.3 km away • Around 11 minutes by road</p>
+                            <a href="https://maps.app.goo.gl/nTYAHZjRJy2xmYmD6?g_st=ac" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Open Route</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <h3 class="h4 mb-2">IILM University</h3>
+                            <p class="text-muted mb-4">About 7.3 km away • Around 12 minutes by road</p>
+                            <a href="https://maps.app.goo.gl/P1rXiDoK1MCRCrEy5?g_st=ac" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Open Route</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <h3 class="h4 mb-2">DPS Surajpur</h3>
+                            <p class="text-muted mb-4">About 1.8 km away • Around 5 minutes by road</p>
+                            <a href="https://maps.app.goo.gl/71gXUKywucEeGJqU8?g_st=ac" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Open Route</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-body">
+                            <h3 class="h4 mb-2">Wipro Knowledge Park IV</h3>
+                            <p class="text-muted mb-4">About 5.0 km away • Around 10 minutes by road</p>
+                            <a href="https://maps.app.goo.gl/aSWB2STarhgGn8Vj9?g_st=ac" class="btn btn-outline btn-sm" target="_blank" rel="noopener">Open Route</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section bg-primary text-white text-center">
+            <div class="container">
+                <h2 class="h2 mb-4">Ready to Visit?</h2>
+                <p class="text-lg mb-8 opacity-90">Schedule your appointment today and take the first step towards well-being.</p>
+                <div class="flex justify-center gap-4">
+                    <a href="./book.html" class="btn btn-accent btn-lg">Book Appointment</a>
+                    <a href="./contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </section>
+</BaseLayout>

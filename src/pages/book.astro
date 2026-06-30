@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+<!-- HERO -->
+      <section class="hero hero-small">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <span class="section-badge">Get Started</span>
+            <h1>Book a Confidential Consultation</h1>
+            <p class="hero-lead">Share only basic details to request an appointment. Choose your preferred time and continue securely via WhatsApp, email, or phone.</p>
+            <div class="hero-cta">
+              <a href="#booking-section" class="btn btn-primary" onclick="document.getElementById('qualifications').classList.add('hidden'); document.getElementById('booking-form-section').classList.remove('hidden'); return false;">Start Booking</a>
+              <a href="tel:+919667863295" class="btn btn-outline">Call Now</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img src="./res/booking-hero.jpg" alt="Book appointment at Mind Grace Clinic" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- QUALIFICATIONS CHECK -->
+      <section id="qualifications" class="section">
+        <div class="container">
+          <div class="content-narrow">
+            <h2>Is this the right place to start?</h2>
+            <p>This booking form is appropriate if you:</p>
+            <ul class="check-list">
+              <li>Are seeking help for anxiety, depression, sleep issues, ADHD, or child development concerns</li>
+              <li>Want a confidential psychiatric consultation in Greater Noida</li>
+              <li>Prefer minimal paperwork and a simple intake process</li>
+              <li>Are comfortable sharing basic contact details and preferred appointment time</li>
+            </ul>
+            <div class="card info-card" style="margin-top: 2rem; background: var(--surface-alt);">
+              <div class="info-card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <div>
+                <h4>Not sure if this fits?</h4>
+                <p>Read about our <a href="./process.html">appointment process</a> or <a href="./contact.html">contact us</a> with questions before booking.</p>
+              </div>
+            </div>
+            <div style="margin-top: 2rem;">
+              <button id="openBookingForm" class="btn btn-primary btn-large">I confirm — show me the booking form</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKING FORM SECTION (Hidden initially) -->
+      <section id="booking-form-section" class="section hidden" data-booking-form-wrap>
+        <div class="container">
+          <div class="content-narrow">
+            <h2>Request Your Appointment</h2>
+            <p>Fill out the secure form below. After submitting, you'll receive confirmation via your preferred contact method.</p>
+            
+            <div class="iframe-container">
+              <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" title="Appointment Booking Form" loading="lazy">
+                Loading…
+              </iframe>
+            </div>
+
+            <div class="card" style="margin-top: 2rem; background: var(--surface-alt);">
+              <h4>What happens next?</h4>
+              <ol class="check-list" style="list-style: decimal; padding-left: 1.5rem;">
+                <li><strong>Submit the form:</strong> Takes 2–3 minutes to complete.</li>
+                <li><strong>Receive confirmation:</strong> We'll contact you via your preferred method within 24–48 hours.</li>
+                <li><strong>Schedule your visit:</strong> We'll confirm date, time, and whether you prefer in-person or online consultation.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUICK CONTACT OPTIONS -->
+      <section class="section section-alt">
+        <div class="container">
+          <h2 style="text-align: center; margin-bottom: 2rem;">Prefer to connect directly?</h2>
+          <div class="contact-grid">
+            <a href="tel:+919667863295" class="contact-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <h4>Call Us</h4>
+              <p>+91 96678 63295</p>
+              <div class="card-footer">
+                <span>Mon–Sat, 10am–7pm</span>
+              </div>
+            </a>
+            <a href="https://wa.me/919667863295" class="contact-card" target="_blank" rel="noopener">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <h4>WhatsApp</h4>
+              <p>Quick responses</p>
+              <div class="card-footer">
+                <span>Message us anytime</span>
+              </div>
+            </a>
+            <a href="mailto:info@mindgraceclinic.com" class="contact-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <h4>Email</h4>
+              <p>info@mindgraceclinic.com</p>
+              <div class="card-footer">
+                <span>We reply within 24 hours</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section-cta-center">
+        <div class="container">
+          <h2>Ready to take the next step?</h2>
+          <p>Learn more about what to expect during your first visit.</p>
+          <div class="cta-group">
+            <a href="./process.html" class="btn btn-outline-light">Understand the Process</a>
+            <a href="./location.html" class="btn btn-outline-light">Find Our Clinic</a>
+          </div>
+        </div>
+      </section>
+</BaseLayout>

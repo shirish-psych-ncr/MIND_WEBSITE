@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+<div class="shell">
+
+    <div class="tool-container">
+      <div class="tool-card">
+
+        <!-- SETUP -->
+        <div id="eye-setup" class="view">
+          <div>↔️</div>
+          <h1>Lateral grounding</h1>
+          <p>Keep your head still. Follow the moving light with your eyes only.</p>
+
+          <div class="settings-box">
+            <div class="label">Choose speed</div>
+            <select id="speed-selector">
+              <option value="3500">Gentle</option>
+              <option value="2200" selected>Steady</option>
+              <option value="1200">Fast</option>
+            </select>
+
+            <button class="start-btn" onclick="startTracking()">Start session</button>
+          </div>
+        </div>
+
+        <!-- ACTIVE -->
+        <div id="active-view" class="view hidden">
+          <div class="track-container">
+            <div class="track-line">
+              <div id="orb" class="orb"></div>
+            </div>
+          </div>
+
+          <button class="stop-btn" onclick="stopTracking()">End session</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>
