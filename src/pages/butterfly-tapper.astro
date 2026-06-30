@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Butterfly Tapper | Mind Grace Clinic" description="Use the Butterfly Tapper grounding tool from Mind Grace Clinic as a calming bilateral exercise for routine stress support.">
+  <link rel="stylesheet" href="/css-tools/tools-butterfly.css" />
+  
+  <h1>Butterfly Tapper grounding exercise</h1>
+  <div class="tool-link-bar">
+    <a href="/resources">Back to tools</a>
+    <a href="/book">Book</a>
+  </div>
+
+  <!-- Orientation Guard -->
+  <div id="orientation-guard">
+    <div class="phone-icon"></div>
+    <p>ROTATE TO LANDSCAPE</p>
+    <p>Hold with both hands for calming down</p>
+  </div>
+
+  <!-- Visual Layers -->
+  <div id="supernova"></div>
+  <canvas id="trail-canvas"></canvas>
+  <canvas id="ui-canvas"></canvas>
+
+  <!-- UI Elements -->
+  <div id="gear-btn" onclick="togglePause(event)">⚙️</div>
+  <div class="status-overlay">
+    <div class="status-text" id="label">Tap Screen to Begin</div>
+  </div>
+
+  <!-- Interaction Cores -->
+  <div class="tapper-container">
+    <div id="L" class="core" onpointerdown="handleTap('L')"><div class="core-inner"></div></div>
+    <div id="R" class="core" onpointerdown="handleTap('R')"><div class="core-inner"></div></div>
+  </div>
+
+  <script src="/js/tools-butterfly.js"></script>
+</BaseLayout>

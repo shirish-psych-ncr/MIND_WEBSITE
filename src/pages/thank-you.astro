@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+<div class="shell stack">
+        <section class="surface panel">
+          <p class="eyebrow">Next step</p>
+          <h1>Your appointment request summary is ready</h1>
+          <p class="lead">
+            Thank you, <span data-booking-name>there</span>. Please use one of the options below so the clinic can coordinate your visit.
+          </p>
+        </section>
+
+        <section class="surface panel" data-thank-you-details>
+          <div class="two-col">
+            <div>
+              <h2>Request details</h2>
+              <p class="notice">
+                Appointment ID: <strong data-appointment-id>MG-00000000</strong>
+              </p>
+              <p>Route: <strong data-booking-route>Mind Grace</strong></p>
+              <pre data-booking-summary></pre>
+            </div>
+            <div>
+              <h2>Continue now</h2>
+              <div class="stack">
+                <a class="button-primary" data-whatsapp-summary href="https://wa.me/919667863295">Send on WhatsApp</a>
+                <a class="button-ghost" data-email-summary href="mailto:dranitasharma86@gmail.com">Send by email</a>
+                <a class="button-ghost" href="tel:+919667863295">Call the clinic</a>
+              </div>
+              <div class="notice">
+                If you have already sent your request by WhatsApp or email, you do not need to repeat it.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="surface-soft panel hidden" data-thank-you-fallback>
+          <h2>No booking summary was found</h2>
+          <p class="lead">
+            Please return to the booking page and submit the form again, or contact the clinic directly.
+          </p>
+          <div class="cta-row">
+            <a class="button-primary" href="./book.html">Go back to booking</a>
+            <a class="button-ghost" href="https://wa.me/919667863295">WhatsApp clinic</a>
+          </div>
+        </section>
+      </div>
+</BaseLayout>
