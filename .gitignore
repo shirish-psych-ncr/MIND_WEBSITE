@@ -1,11 +1,17 @@
 ```
+# Build artifacts
+dist/
+build/
+*.js
+*.css
+*.map
+
 # Dependencies
 node_modules/
 
-# Build outputs
-dist/
-build/
-.astro/
+# Cache directories
+.cache/
+.output/
 
 # Environment
 .env
@@ -15,22 +21,7 @@ build/
 # Logs
 *.log
 
-# Editor
-.vscode/
-.idea/
-*.swp
-*.swo
-*.tmp
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-venv/
-.venv/
-.env
-.env.local
-.env.*
+# OS generated files
+.DS_Store
+Thumbs.db
 ```
