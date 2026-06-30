@@ -1,0 +1,37 @@
+{
+  "name": "preview",
+  "version": "1.0.0",
+  "description": "[![Live Site](https://img.shields.io/badge/live-site-671B50?style=flat-square)](https://shirish-psych-ncr.github.io/MIND_WEBSITE/)\r [![Technology](https://img.shields.io/badge/HTML5-CSS3-Vanilla%20JS-success?style=flat-square)]()\r [![Architecture](https://img.shields.io/badge/architecture-modular--CSS-blue?style=flat-square)]()\r [![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1-AA-orange?style=flat-square)]()",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shirish-psych-ncr/MIND_WEBSITE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shirish-psych-ncr/MIND_WEBSITE/issues"
+  },
+  "homepage": "https://github.com/shirish-psych-ncr/MIND_WEBSITE#readme",
+  "devDependencies": {
+    "@astrojs/check": "^0.9.2",
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1",
+    "astro": "^7.0.3",
+    "playwright": "^1.61.1",
+    "typescript": "^5.9.3",
+    "zod": "^4.4.3"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "sharp@0.34.5": true
+  }
+}

@@ -1,0 +1,165 @@
+---
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+    <!-- HERO SECTION with Intrinsic Grid -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-badge">✨ You Matter Here</span>
+          <h1 id="hero-title">
+            Your Mental Health<br/>
+            <span class="highlight">Your Journey</span><br/>
+            Your Safe Space
+          </h1>
+          <p class="hero-subtitle">
+            At Mind Grace Clinic, everything revolves around <strong class="text-accent">you</strong>.
+            Whether you're navigating anxiety, seeking support for your child,
+            or finding balance again—Dr. Anita Sharma and our compassionate team are here.
+          </p>
+          <div class="hero-buttons">
+            <a href="/book" class="btn btn-primary">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              Book Your Session
+            </a>
+            <a href="/process" class="btn btn-secondary">
+              See How It Works
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper animate-float-gentle">
+            <img
+              src="/res/mind-grace-entry-n-reception.jpg"
+              alt="Warm, welcoming entrance of Mind Grace Clinic"
+              class="hero-image"
+              loading="eager"
+              width="400"
+              height="500"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CARDS SECTION with Alternating Backgrounds -->
+    <section class="main-section section-plum" aria-labelledby="services-title">
+      <div class="section-header">
+        <h2 id="services-title">Care Designed Around You</h2>
+        <p>Personalized, evidence-based support for every stage of your journey</p>
+      </div>
+
+      <div class="main-grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3>Psychiatric Care</h3>
+          <p>Expert diagnosis and treatment for anxiety, depression, bipolar disorder, OCD, and more—with you at the center.</p>
+          <a href="/services#psychiatry" class="card-link">
+            Learn More
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3>Child Development</h3>
+          <p>Autism assessment, ADHD support, speech therapy, and special education tailored to your child's unique needs.</p>
+          <a href="/aasha" class="card-link">
+            Explore AASHA
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <h3>Counseling</h3>
+          <p>Individual, couple, and family therapy in a safe, non-judgmental space where your voice is heard.</p>
+          <a href="/services#counseling" class="card-link">
+            Meet Our Therapists
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3>Wellness Tools</h3>
+          <p>Free guided breathing, butterfly tapping, fractal hypnosis, and other self-care resources for daily use.</p>
+          <a href="/resources" class="card-link">
+            Try Free Tools
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3>Clinic Experience</h3>
+          <p>A warm, private, and comfortable environment designed to make every visit feel like coming home.</p>
+          <a href="/gallery" class="card-link">
+            See Our Space
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3>Visit Us</h3>
+          <p>Conveniently located in Greater Noida with easy parking and accessible facilities for all.</p>
+          <a href="/location" class="card-link">
+            Get Directions
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+      </div>
+    </section>
+</BaseLayout>
