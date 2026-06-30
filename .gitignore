@@ -1,52 +1,22 @@
-```
-# Dependencies
+(public/assets/blog/*.png
+public/assets/blog/*.jpg
+public/assets/images/*.png
+public/assets/images/*.jpg
+public/assets/logos/*.png
+public/assets/logos/*.svg
+public/assets/screenshots/*.png
+blog/*.html
+blog/pages/**/*.html
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
 node_modules/
-
-# Build artifacts
 dist/
 build/
-*.js
-
-# Cache directories
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Environment variables
+*.tmp
+*.swp
 .env
 .env.local
 .env.*
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.temp
-*.swp
-*~
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# IDE specific
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# Distribution / packaging
-*.tar.gz
-*.zip
-*.egg-info/
-
-# Astro specific
-!.gitignore
-```
