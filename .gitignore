@@ -2,51 +2,53 @@
 # Dependencies
 node_modules/
 
-# Build artifacts
-dist/
-build/
-*.js
-
-# Cache directories
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Environment variables
-.env
-.env.local
-.env.*
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.temp
-*.swp
-*~
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# IDE specific
+# Editor/IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
+*.tmp
 
-# Coverage reports
-coverage/
-htmlcov/
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Build artifacts
+dist/
+build/
+target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
 .coverage
+htmlcov/
 
-# Distribution / packaging
-*.tar.gz
-*.zip
-*.egg-info/
+# Node.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Astro specific
-!.gitignore
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 ```

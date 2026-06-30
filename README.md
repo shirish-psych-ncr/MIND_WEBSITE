@@ -21,10 +21,10 @@ This repository contains the complete web presence for **Mind Grace Clinic**, a 
 ## Quick Links
 
 - **🌐 Live Site:** [https://shirish-psych-ncr.github.io/MIND_WEBSITE/](https://shirish-psych-ncr.github.io/MIND_WEBSITE/)
-- **📐 Architecture Documentation:** [`ARCHITECTURE.md`](./ARCHITECTURE.md)
-- **🎨 CSS Documentation:** [`css/README.md`](./css/README.md)
-- **⚙️ JavaScript Documentation:** [`js/README.md`](./js/README.md)
-- **🤖 AI Agent Guide:** [`AGENT_BIBLE/`](./AGENT_BIBLE/)
+- **📐 Architecture Documentation:** [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md)
+- **🎨 Design System:** [`docs/design.md`](./docs/design.md)
+- **⚙️ Worker Patterns:** [`docs/worker.md`](./docs/worker.md)
+- **🤖 Agent Instructions:** [`docs/Instructions.md`](./docs/Instructions.md)
 
 ---
 
@@ -48,27 +48,35 @@ This repository contains the complete web presence for **Mind Grace Clinic**, a 
 
 ```
 /
-├── ARCHITECTURE.md           # Complete system documentation
-├── css/                      # Core stylesheets (5 modular files)
-│   ├── base.css              # Design tokens, reset, dark mode
-│   ├── layout.css            # Header, hero, footer, structure
-│   ├── components.css        # Reusable UI components
-│   ├── utilities.css         # Helper classes
-│   └── animations.css        # Motion & effects
-├── css-tools/                # Therapeutic tool stylesheets
-├── js/                       # JavaScript modules
-│   ├── main.js               # Core interactions
-│   ├── blog-*.js             # Blog system
-│   └── tools-*.js            # Therapeutic tools logic
-├── res/                      # Images, logos, brochures
+├── docs/                     # Documentation (8 core files)
+│   ├── ARCHITECTURE.md       # System architecture, roadmap
+│   ├── design.md             # Design tokens, layout rules
+│   ├── worker.md             # Architecture patterns, security
+│   ├── assets.md             # Asset registry, optimization
+│   ├── pages.md              # Page inventory, migration
+│   ├── tools.md              # Tool specifications
+│   ├── memory.md             # Session state, delta logs
+│   └── Instructions.md       # Agent workflow, constraints
+├── public/                   # Static assets for deployment
+│   ├── res/                  # Images, logos, brochures
+│   └── assets/               # Additional assets
 ├── blog/                     # Blog section
+│   ├── index.html            # Blog homepage
+│   ├── adult.html            # Adult mental health category
+│   ├── child.html            # Child development category
+│   ├── res/                  # Blog-specific images
+│   └── pages/                # Individual blog articles
+├── src/                      # Astro source files (pending migration)
+├── tests/                    # Playwright E2E tests (pending)
 ├── [40+ HTML Pages]          # Core pages + therapeutic tools
+├── astro.config.mjs          # Astro configuration
+├── package.json              # Dependencies, scripts
 ├── site.webmanifest          # PWA manifest
 ├── robots.txt                # Search engine rules
 └── sitemap.xml               # SEO sitemap
 ```
 
-See [`ARCHITECTURE.md`](./ARCHITECTURE.md) for complete details.
+See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) for complete details.
 
 ---
 
@@ -175,7 +183,7 @@ Live site updates within minutes at:
 
 ### For Human Developers
 
-1. Read [`ARCHITECTURE.md`](./ARCHITECTURE.md) first
+1. Read [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) first
 2. Follow existing patterns and conventions
 3. Use design tokens (CSS variables), never hardcoded values
 4. Test on mobile, tablet, and desktop
@@ -184,13 +192,13 @@ Live site updates within minutes at:
 
 ### For AI Systems
 
-1. Read [`ARCHITECTURE.md`](./ARCHITECTURE.md) and relevant README files
+1. Read [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) and relevant docs files
 2. Check dependency graph before modifying shared files
 3. Maintain or improve accessibility compliance
 4. Use intrinsic design patterns (no breakpoints)
-5. Document all changes in this README or ARCHITECTURE.md
+5. Document all changes in this README or docs/ARCHITECTURE.md
 
-See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Contribution Guidelines_ for details.
+See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) → _Contribution Guidelines_ for details.
 
 ---
 
@@ -259,7 +267,7 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 ## Technical Debt & Roadmap
 
 ### Current Issues
-See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Technical Debt & Issues_ for complete list.
+See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) → _Technical Debt & Issues_ for complete list.
 
 ### Priority Tasks
 1. ⚠️ Remove duplicate homepage files (`index-old.html`, `index-revamp.html`)
@@ -276,7 +284,7 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Technical Debt & Issues_ for com
 - Patient portal (HIPAA-compliant)
 - Video library for psychoeducation
 
-See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed plans.
+See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) → _Future Roadmap_ for detailed plans.
 
 ---
 
@@ -284,11 +292,14 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed pla
 
 | Document | Purpose |
 |----------|---------|
-| [`ARCHITECTURE.md`](./ARCHITECTURE.md) | Complete system architecture, dependency graphs, design system, roadmap |
-| [`css/README.md`](./css/README.md) | CSS module responsibilities, load order, design tokens |
-| [`js/README.md`](./js/README.md) | JavaScript modules, coding conventions, accessibility |
-| [`AGENT_BIBLE/`](./AGENT_BIBLE/) | AI agent operating instructions and context |
-| [`inspo/`](./inspo/) | Design inspiration and anti-patterns |
+| [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | Complete system architecture, dependency graphs, design system, roadmap |
+| [`docs/design.md`](./docs/design.md) | Design tokens, layout rules, accessibility guidelines |
+| [`docs/worker.md`](./docs/worker.md) | Architecture patterns, hydration strategies, security protocols |
+| [`docs/assets.md`](./docs/assets.md) | Asset registry, optimization guidelines |
+| [`docs/pages.md`](./docs/pages.md) | Page inventory, migration priorities |
+| [`docs/tools.md`](./docs/tools.md) | Tool specifications, hydration matrix |
+| [`docs/memory.md`](./docs/memory.md) | Session state, delta logs, continuity checkpoints |
+| [`docs/Instructions.md`](./docs/Instructions.md) | Agent workflow, constraints, KB synchronization |
 
 ---
 
@@ -305,8 +316,8 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed pla
 
 For questions, contributions, or maintenance, refer to:
 1. This README
-2. [`ARCHITECTURE.md`](./ARCHITECTURE.md)
-3. [`AGENT_BIBLE/Instructions.md`](./AGENT_BIBLE/Instructions.md)
+2. [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md)
+3. [`docs/Instructions.md`](./docs/Instructions.md)
 
 ---
 
