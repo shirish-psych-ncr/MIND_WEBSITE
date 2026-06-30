@@ -1,42 +1,180 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+export const prerender = true;
 ---
 
 <BaseLayout>
-<div class="shell">
-    
-    <div class="tool-container">
-      <div class="tool-card">
-        
-        <div id="horizon-setup" class="view">
-          <h1>Horizon scanning</h1>
-          <p>Follow the dot as it moves gently across the screen. Keep your head still; move only your eyes.</p>
-          
-          <div class="settings-box">
-            <div class="label">Duration</div>
-            <select id="duration-selector">
-              <option value="30">30 seconds</option>
-              <option value="60" selected>1 minute</option>
-              <option value="120">2 minutes</option>
-            </select>
-            
-            <button class="start-btn" onclick="startHorizon()">Begin</button>
-          </div>
-        </div>
-        
-        <div id="horizon-active" class="view hidden">
-          <div class="track-container">
-            <div class="track-line">
-              <div id="horizon-dot" class="dot"></div>
-            </div>
-          </div>
-          
-          <div id="horizon-timer" class="timer"></div>
-          <button class="stop-btn" onclick="stopHorizon()">End session</button>
-        </div>
-        
+<a class="skip-link" href="#content">Skip to content</a>
+<div class="progress"><div class="progress-bar" data-progress></div></div>
+<div class="top-banner">Grounding tool for routine stress support. If you feel unsafe or in crisis, please contact emergency services instead of relying on this exercise.</div>
+
+<header class="site-header">
+  <div class="shell header-row">
+    <a class="brand-wrap" href="/">
+      <img class="logo" src="/res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" />
+      <div>
+        <p class="brand-kicker">Resources</p>
+        <p class="brand-name">Horizon scan</p>
       </div>
-    </div>
-    
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/resources">Resources</a>
+      <a href="/faq">FAQ</a>
+      <a href="/book">Book</a>
+      <a href="/contact">Contact</a>
+    </nav>
   </div>
+</header>
+
+<main id="content" class="section">
+  <div class="shell tool-shell">
+    <section class="surface panel">
+      <h1>Horizon scan grounding exercise</h1>
+      <p class="lead" style="margin-top:12px;">
+        Let your eyes follow the moving point while your head stays still. Many people find this helpful when they want a steadier visual focus and a slower breathing rhythm.
+      </p>
+    </section>
+
+    <section class="horizon-shell">
+      <div id="stage">
+        <div id="horizon"></div>
+        <div id="anchor"></div>
+        <div id="target"></div>
+        <div class="tool-ui">
+          <label>SPEED <input type="range" id="speed" min="1" max="100" value="35" /></label>
+          <button class="button-ghost" id="modeBtn" type="button">Looping</button>
+          <button class="button-outline" type="button" id="resetBtn">Reset</button>
+          <a class="button" href="/resources">Back to tools</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<nav class="mobile-nav" aria-label="Mobile">
+  <a href="/">Home</a>
+  <a href="/resources">Tools</a>
+  <a href="/book">Book</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+<style is:inline>
+.horizon-shell {
+  position: relative;
+  min-height: 70vh;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #050507;
+  color: white;
+}
+#stage { position: relative; width: 100%; min-height: 70vh; overflow: hidden; }
+#horizon {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(90deg, #0a0a12 0%, #1a1a2e 50%, #0a0a12 100%);
+  background-size: 33% 100%;
+  z-index: 1;
+  will-change: transform;
+}
+#target {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  background: #00ffcc;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #00ffcc, 0 0 60px rgba(0,255,204,0.3);
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  will-change: left, top;
+}
+#anchor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 50%;
+  z-index: 2;
+}
+.tool-ui {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: min(92%, 860px);
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(20,20,25,0.92);
+  backdrop-filter: blur(10px);
+}
+.tool-ui label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
+.tool-ui input[type=range] { width: 180px; accent-color: #00ffcc; }
+.tool-ui .button,
+.tool-ui .button-ghost,
+.tool-ui .button-outline { min-height: 44px; }
+@media (prefers-reduced-motion: reduce) {
+  #target, #horizon { animation: none !important; transition: none !important; }
+}
+</style>
+
+<script is:inline>
+const target = document.getElementById("target");
+const horizon = document.getElementById("horizon");
+const speedInput = document.getElementById("speed");
+const modeBtn = document.getElementById("modeBtn");
+const resetBtn = document.getElementById("resetBtn");
+
+let pos = 50;
+let direction = 1;
+let isPingPong = false;
+let lastTime = 0;
+
+modeBtn.addEventListener("click", () => {
+  isPingPong = !isPingPong;
+  modeBtn.textContent = isPingPong ? "Ping-pong" : "Looping";
+});
+
+resetBtn.addEventListener("click", () => {
+  pos = 50;
+  direction = 1;
+});
+
+function loop(time) {
+  const dt = (time - lastTime) || 16;
+  lastTime = time;
+  const speedSetting = parseFloat(speedInput.value);
+  const velocity = (speedSetting * 0.005) * direction;
+
+  pos += velocity * (dt / 16);
+
+  if (isPingPong) {
+    if (pos > 95) direction = -1;
+    if (pos < 5) direction = 1;
+  } else {
+    direction = 1;
+    if (pos > 100) pos = 0;
+    if (pos < 0) pos = 100;
+  }
+
+  const driftY = Math.sin(time * 0.002) * 15;
+  target.style.left = `${pos}%`;
+  target.style.top = `calc(50% + ${driftY}px)`;
+  horizon.style.transform = `translateX(${-pos * 0.5}%)`;
+
+  requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);
+</script>
 </BaseLayout>
