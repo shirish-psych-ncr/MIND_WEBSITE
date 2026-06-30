@@ -1,27 +1,33 @@
 ```
-# Build artifacts
-dist/
-build/
-*.js
-*.css
-*.map
-
 # Dependencies
 node_modules/
 
+# Build artifacts
+dist/
+build/
+*.js.map
+
 # Cache directories
 .cache/
-.output/
+.node-cache/
 
-# Environment
+# Environment variables
 .env
 .env.local
 .env.*
 
-# Logs
-*.log
+# Editors
+.vscode/
+.idea/
 
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
 ```
