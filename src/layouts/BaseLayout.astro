@@ -11,7 +11,7 @@ const {
   title = "You Deserve Care | Mind Grace Clinic — Psychiatrist in Greater Noida",
   description = "You matter. Consult Dr Anita Sharma at Mind Grace Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care.",
   ogImage = "/res/Dr_Anita_Sharma_Personal_Photo.jpg",
-  canonical = Astro.url.pathname
+  canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString()
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -19,8 +19,8 @@ const {
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes, viewport-fit=cover"/>
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50"/>
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4A1438"/>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#7C3D2F"/>
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4E284B"/>
   <meta name="color-scheme" content="light dark"/>
   <meta name="author" content="Mind Grace Clinic"/>
   <meta name="publisher" content="Mind Grace Clinic"/>
@@ -42,7 +42,7 @@ const {
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="675"/>
   <meta property="og:image:type" content="image/jpeg"/>
-  <meta property="og:url" content="https://mindgracencr.in/"/>
+  <meta property="og:url" content={canonical}/>
   <meta property="og:site_name" content="Mind Grace Clinic"/>
   <meta property="og:locale" content="en_IN"/>
   <meta property="og:type" content="website"/>
@@ -68,16 +68,16 @@ const {
   <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
   
   <!-- Fonts -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets - Modular CSS Architecture -->
-  <link rel="stylesheet" href="styles/base.css"/>
-  <link rel="stylesheet" href="styles/layout.css"/>
-  <link rel="stylesheet" href="styles/components.css"/>
-  <link rel="stylesheet" href="styles/utilities.css"/>
-  <link rel="stylesheet" href="styles/animations.css"/>
+  <link rel="stylesheet" href="/styles/base.css"/>
+  <link rel="stylesheet" href="/styles/layout.css"/>
+  <link rel="stylesheet" href="/styles/components.css"/>
+  <link rel="stylesheet" href="/styles/utilities.css"/>
+  <link rel="stylesheet" href="/styles/animations.css"/>
   
   <!-- Critical inline CSS for above-the-fold only -->
   <style>
@@ -92,9 +92,9 @@ const {
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <a href="" class="logo-link" aria-label="Mind Grace Clinic Home">
+      <a href="/" class="logo-link" aria-label="Mind Grace Clinic Home">
         <svg class="logo-svg" viewBox="0 0 900 873" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <use href="res/Mind_Grace_Clinic_Logo_Pink.svg"/>
+          <use href="/res/Mind_Grace_Clinic_Logo_Pink.svg#icon"/>
         </svg>
         <div>
           <div class="logo-text">Mind Grace Clinic</div>
@@ -105,12 +105,12 @@ const {
       <!-- DESKTOP NAVIGATION -->
       <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="about">About</a></li>
-          <li><a href="services">Services</a></li>
-          <li><a href="process">Process</a></li>
-          <li><a href="resources">Resources</a></li>
-          <li><a href="location">Location</a></li>
-          <li><a href="book" class="cta-button">Book Now</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/process/">Process</a></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li><a href="/location/">Location</a></li>
+          <li><a href="/book/" class="cta-button">Book Now</a></li>
         </ul>
       </nav>
 
@@ -140,38 +140,38 @@ const {
       <div class="mobile-nav-section">
         <div class="mobile-nav-section-title">Explore</div>
         <ul class="mobile-nav-list">
-          <li><a href="about">About Us</a></li>
-          <li><a href="services">Our Services</a></li>
-          <li><a href="process">What to Expect</a></li>
-          <li><a href="location">Find Us</a></li>
-          <li><a href="contact">Contact</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/services/">Our Services</a></li>
+          <li><a href="/process/">What to Expect</a></li>
+          <li><a href="/location/">Find Us</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
 
       <div class="mobile-nav-section">
         <div class="mobile-nav-section-title">Resources & Tools</div>
         <ul class="mobile-nav-list">
-          <li><a href="gallery">Gallery</a></li>
-          <li><a href="book">Resource Book</a></li>
-          <li><a href="resources">Resources</a></li>
-          <li><a href="faq">FAQ</a></li>
+          <li><a href="/gallery/">Gallery</a></li>
+          <li><a href="/book/">Resource Book</a></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li><a href="/faq/">FAQ</a></li>
         </ul>
       </div>
 
       <div class="mobile-nav-section">
         <div class="mobile-nav-section-title">Therapeutic Tools</div>
         <ul class="mobile-nav-list">
-          <li><a href="guided-breathing">Guided Breathing</a></li>
-          <li><a href="butterfly-tapper">Butterfly Tapper</a></li>
-          <li><a href="eye-movement">Eye Movement</a></li>
-          <li><a href="hypnos-fractal">Hypnotic Fractal</a></li>
-          <li><a href="horizon-scan">Horizon Scan</a></li>
-          <li><a href="leaf-on-stream">Leaf on Stream</a></li>
+          <li><a href="/guided-breathing/">Guided Breathing</a></li>
+          <li><a href="/butterfly-tapper/">Butterfly Tapper</a></li>
+          <li><a href="/eye-movement/">Eye Movement</a></li>
+          <li><a href="/hypnos-fractal/">Hypnotic Fractal</a></li>
+          <li><a href="/horizon-scan/">Horizon Scan</a></li>
+          <li><a href="/leaf-on-stream/">Leaf on Stream</a></li>
         </ul>
       </div>
 
       <div class="mobile-nav-section">
-        <a href="book" class="cta-button">Book Appointment</a>
+        <a href="/book/" class="cta-button">Book Appointment</a>
       </div>
     </div>
   </nav>
@@ -187,36 +187,36 @@ const {
       <div class="footer-column">
         <h4>Clinic</h4>
         <ul>
-          <li><a href="about">About Dr. Sharma</a></li>
-          <li><a href="services">All Services</a></li>
-          <li><a href="process">What to Expect</a></li>
-          <li><a href="gallery">Gallery</a></li>
+          <li><a href="/about/">About Dr. Sharma</a></li>
+          <li><a href="/services/">All Services</a></li>
+          <li><a href="/process/">What to Expect</a></li>
+          <li><a href="/gallery/">Gallery</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
         <h4>Support</h4>
         <ul>
-          <li><a href="faq">FAQ</a></li>
-          <li><a href="contact">Contact Us</a></li>
-          <li><a href="emergency">Emergency Help</a></li>
-          <li><a href="consent">Patient Consent</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="/emergency/">Emergency Help</a></li>
+          <li><a href="/consent/">Patient Consent</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
         <h4>Resources</h4>
         <ul>
-          <li><a href="book">Resource Book</a></li>
-          <li><a href="resources">Self-Help Tools</a></li>
-          <li><a href="conditions">Conditions</a></li>
+          <li><a href="/book/">Resource Book</a></li>
+          <li><a href="/resources/">Self-Help Tools</a></li>
+          <li><a href="/conditions/">Conditions</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
         <h4>Legal</h4>
         <ul>
-          <li><a href="privacy">Privacy Policy</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
@@ -233,6 +233,6 @@ const {
   </footer>
 
   <!-- JAVASCRIPT - Minimal, Interaction Only -->
-  <script is:inline src="scripts/main.js"></script>
+  <script is:inline src="/scripts/main.js"></script>
 </body>
 </html>

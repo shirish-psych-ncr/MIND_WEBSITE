@@ -1,11 +1,11 @@
 {
   "name": "Therapeutic Tools & Resources",
-  "short_name": "TheraTools",
-  "description": "Interactive therapeutic tools, resources, and booking for mental wellness.",
-  "start_url": "/index.html",
+  "short_name": "Mind Grace",
+  "description": "Mind Grace Clinic mental health care, therapeutic tools, and booking.",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8fafc",
-  "theme_color": "#0f766e",
+  "background_color": "#FAF2EA",
+  "theme_color": "#7C3D2F",
   "orientation": "portrait-primary",
   "icons": [
     {
