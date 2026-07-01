@@ -32,7 +32,7 @@
     "@casoon/astro-post-audit": "^0.4.6",
     "astro": "^7.0.4",
     "typescript": "^5.9.3",
-    "zod": "^3.25.76"
+    "zod": "^4.4.3"
   },
   "engines": {
     "node": ">=22.12.0"
