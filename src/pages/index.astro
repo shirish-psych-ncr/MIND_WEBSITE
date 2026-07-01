@@ -1,64 +1,73 @@
 ---
 // src/pages/index.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Dynamic base path for GitHub Pages subfolder support
+const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout>
-    <!-- HERO SECTION with Intrinsic Grid -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <div class="hero-text">
-          <span class="hero-badge">✨ You Matter Here</span>
-          <h1 id="hero-title">
-            Your Mental Health<br/>
-            <span class="highlight">Your Journey</span><br/>
-            Your Safe Space
-          </h1>
-          <p class="hero-subtitle">
-            At Mind Grace Clinic, everything revolves around <strong class="text-accent">you</strong>.
-            Whether you're navigating anxiety, seeking support for your child,
-            or finding balance again—Dr. Anita Sharma and our compassionate team are here.
-          </p>
-          <div class="hero-buttons">
-            <a href="/MIND_WEBSITE/book/" class="btn btn-primary">
-              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
-              Book Your Session
-            </a>
-            <a href="/MIND_WEBSITE/process/" class="btn btn-secondary">
-              See How It Works
-              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 18l6-6-6-6"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-visual">
-          <div class="hero-image-wrapper animate-float-gentle">
-            <img
-              src="/MIND_WEBSITE/res/mind-grace-entry-n-reception.jpg"
-              alt="Warm, welcoming entrance of Mind Grace Clinic"
-              class="hero-image"
-              loading="eager"
-              width="400"
-              height="500"
-            />
-          </div>
+<BaseLayout
+  title="Mind Grace Clinic | Psychiatrist in Greater Noida"
+  description="Expert psychiatric care, counseling, and child development services in Greater Noida. Dr. Anita Sharma provides compassionate mental health support for anxiety, depression, ADHD, autism assessment, and more."
+  ogImage={`${base}res/Mind_Grace_Clinic_Logo_Full.png`}
+>
+  <!-- HERO SECTION -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-content container">
+      <div class="hero-text">
+        <span class="hero-badge">✨ You Matter Here</span>
+        <h1 id="hero-title">
+          Your Mental Health<br/>
+          <span class="highlight">Your Journey</span><br/>
+          Your Safe Space
+        </h1>
+        <p class="hero-subtitle">
+          At Mind Grace Clinic, everything revolves around <strong class="text-accent">you</strong>.
+          Whether you're navigating anxiety, seeking support for your child,
+          or finding balance again—Dr. Anita Sharma and our compassionate team are here.
+        </p>
+        <div class="hero-buttons">
+          <a href={`${base}book/`} class="btn btn-primary">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            Book Your Session
+          </a>
+          <a href={`${base}process/`} class="btn btn-secondary">
+            See How It Works
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
         </div>
       </div>
-    </section>
 
-    <!-- MAIN CARDS SECTION with Alternating Backgrounds -->
-    <section class="main-section section-plum" aria-labelledby="services-title">
+      <div class="hero-visual">
+        <div class="hero-image-wrapper animate-float-gentle">
+          <img
+            src={`${base}res/mind-grace-entry-n-reception.jpg`}
+            alt="Warm, welcoming entrance of Mind Grace Clinic"
+            class="hero-image"
+            loading="eager"
+            fetchpriority="high"
+            width="400"
+            height="500"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN SERVICES GRID -->
+  <section class="main-section section-plum" aria-labelledby="services-title">
+    <div class="container">
       <div class="section-header">
         <h2 id="services-title">Care Designed Around You</h2>
         <p>Personalized, evidence-based support for every stage of your journey</p>
       </div>
 
       <div class="main-grid">
-        <!-- Card 1 -->
+        <!-- Card 1: Psychiatric Care -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">
             <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -67,15 +76,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3>Psychiatric Care</h3>
           <p>Expert diagnosis and treatment for anxiety, depression, bipolar disorder, OCD, and more—with you at the center.</p>
-          <a href="/MIND_WEBSITE/services/#psychiatry" class="card-link">
+          <a href={`${base}services/#psychiatry`} class="card-link">
             Learn More
-            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </a>
         </article>
 
-        <!-- Card 2 -->
+        <!-- Card 2: Child Development (AASHA) -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">
             <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -84,15 +93,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3>Child Development</h3>
           <p>Autism assessment, ADHD support, speech therapy, and special education tailored to your child's unique needs.</p>
-          <a href="/MIND_WEBSITE/aasha/" class="card-link">
+          <a href={`${base}aasha/`} class="card-link">
             Explore AASHA
-            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </a>
         </article>
 
-        <!-- Card 3 -->
+        <!-- Card 3: Counseling -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">
             <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -101,15 +110,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3>Counseling</h3>
           <p>Individual, couple, and family therapy in a safe, non-judgmental space where your voice is heard.</p>
-          <a href="/MIND_WEBSITE/services/#counseling" class="card-link">
+          <a href={`${base}services/#counseling`} class="card-link">
             Meet Our Therapists
-            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </a>
         </article>
 
-        <!-- Card 4 -->
+        <!-- Card 4: Wellness Tools -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">
             <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -118,15 +127,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3>Wellness Tools</h3>
           <p>Free guided breathing, butterfly tapping, fractal hypnosis, and other self-care resources for daily use.</p>
-          <a href="/MIND_WEBSITE/resources/" class="card-link">
+          <a href={`${base}resources/`} class="card-link">
             Try Free Tools
-            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </a>
         </article>
 
-        <!-- Card 5 -->
+        <!-- Card 5: Clinic Experience -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">
             <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -135,15 +144,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3>Clinic Experience</h3>
           <p>A warm, private, and comfortable environment designed to make every visit feel like coming home.</p>
-          <a href="/MIND_WEBSITE/gallery/" class="card-link">
+          <a href={`${base}gallery/`} class="card-link">
             See Our Space
-            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </a>
         </article>
 
-        <!-- Card 6 -->
+        <!-- Card 6: Visit Us -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">
             <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -153,13 +162,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3>Visit Us</h3>
           <p>Conveniently located in Greater Noida with easy parking and accessible facilities for all.</p>
-          <a href="/MIND_WEBSITE/location/" class="card-link">
+          <a href={`${base}location/`} class="card-link">
             Get Directions
-            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </a>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 </BaseLayout>

@@ -1,100 +1,118 @@
 ---
 // src/layouts/BaseLayout.astro
+import ErrorBoundary from '../components/ErrorBoundary.astro';
+import Nav from '../components/Nav.astro'; // Optional: If you extracted Nav into a component
+
 interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
   canonical?: string;
+  noindex?: boolean;
 }
 
 const {
-  title = "You Deserve Care | Mind Grace Clinic — Psychiatrist in Greater Noida",
-  description = "You matter. Consult Dr Anita Sharma at Mind Grace Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care.",
-  ogImage = "/res/Dr_Anita_Sharma_Personal_Photo.jpg",
-  canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString()
+  title = "Mind Grace Clinic | Psychiatrist in Greater Noida",
+  description = "Expert psychiatric care, counseling, and child development services in Greater Noida. Dr. Anita Sharma provides compassionate mental health support for anxiety, depression, ADHD, and more.",
+  ogImage = "/res/Mind_Grace_Clinic_Logo_Full.png", // Ensure this path exists in public/
+  canonical = "",
+  noindex = false
 } = Astro.props;
+
+// Get the base path dynamically (e.g., "/MIND_WEBSITE/" or "/")
+const base = import.meta.env.BASE_URL;
+
+// Construct full URLs for SEO
+const siteUrl = "https://shirish-psych-ncr.github.io";
+const currentPath = Astro.url.pathname;
+const finalCanonical = canonical || `${siteUrl}${base}${currentPath}`;
+const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${base}${ogImage}`;
 ---
+
 <!DOCTYPE html>
-<html lang="en-IN" dir="ltr">
+<html lang="en-IN" dir="ltr" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes, viewport-fit=cover"/>
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#7C3D2F"/>
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4E284B"/>
-  <meta name="color-scheme" content="light dark"/>
-  <meta name="author" content="Mind Grace Clinic"/>
-  <meta name="publisher" content="Mind Grace Clinic"/>
-  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes, viewport-fit=cover" />
   
+  <!-- Theme Color -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4A1438" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- SEO Meta Tags -->
   <title>{title}</title>
-  <meta name="description" content={description}/>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={finalCanonical} />
   
-  <link rel="canonical" href={canonical}/>
-  <link rel="alternate" hreflang="en-IN" href={canonical}/>
-  <link rel="alternate" hreflang="x-default" href={canonical}/>
-  
-  <!-- OpenGraph / Social Sharing -->
-  <meta property="og:title" content={title}/>
-  <meta property="og:description" content={description}/>
-  <meta property="og:image" content={ogImage}/>
-  <meta property="og:image:secure_url" content={ogImage}/>
-  <meta property="og:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Clinic"/>
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="675"/>
-  <meta property="og:image:type" content="image/jpeg"/>
-  <meta property="og:url" content={canonical}/>
-  <meta property="og:site_name" content="Mind Grace Clinic"/>
-  <meta property="og:locale" content="en_IN"/>
-  <meta property="og:type" content="website"/>
-  
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content={title}/>
-  <meta name="twitter:description" content={description}/>
-  <meta name="twitter:image" content={ogImage}/>
-  <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist"/>
-  
-  <!-- Robots & Indexing -->
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
-  
-  <!-- PWA / Mobile Web App -->
-  <meta name="mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-title" content="Mind Grace"/>
-  <link rel="manifest" href="/site.webmanifest"/>
-  
-  <!-- Base64 Favicon (Pink Lotus from Logo) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
-  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
-  
+  <!-- Robots -->
+  <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={finalCanonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={finalOgImage} />
+  <meta property="og:image:secure_url" content={finalOgImage} />
+  <meta property="og:image:alt" content="Mind Grace Clinic Logo" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+  <meta property="og:site_name" content="Mind Grace Clinic" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={finalCanonical} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={finalOgImage} />
+  <meta name="twitter:image:alt" content="Mind Grace Clinic Logo" />
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href={`${base}res/Mind_Grace_Clinic_Logo_Pink.svg`} />
+  <link rel="apple-touch-icon" href={`${base}res/Mind_Grace_Clinic_Logo_Pink.svg`} />
+  <link rel="manifest" href={`${base}site.webmanifest`} />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Mind Grace" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheets - Modular CSS Architecture -->
-  <link rel="stylesheet" href="/styles/base.css"/>
-  <link rel="stylesheet" href="/styles/layout.css"/>
-  <link rel="stylesheet" href="/styles/components.css"/>
-  <link rel="stylesheet" href="/styles/utilities.css"/>
-  <link rel="stylesheet" href="/styles/animations.css"/>
-  
-  <!-- Critical inline CSS for above-the-fold only -->
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href={`${base}styles/base.css`} />
+  <link rel="stylesheet" href={`${base}styles/layout.css`} />
+  <link rel="stylesheet" href={`${base}styles/components.css`} />
+  <link rel="stylesheet" href={`${base}styles/utilities.css`} />
+  <link rel="stylesheet" href={`${base}styles/animations.css`} />
+
+  <!-- Critical Inline CSS -->
   <style>
-    body { font-display: swap; }
-    .hero-content { opacity: 1; }
+    /* Prevent FOUC (Flash of Unstyled Content) */
+    body {
+      font-family: 'Manrope', sans-serif;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .hero-content {
+      opacity: 1;
+    }
   </style>
 </head>
-<body>
-  <!-- SKIP LINK -->
-  <a href="#main-content" class="visually-hidden">Skip to main content</a>
 
-  <!-- HEADER -->
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+
+  <!-- Header -->
   <header class="site-header" role="banner">
-    <div class="header-inner">
-      <a href="/" class="logo-link" aria-label="Mind Grace Clinic Home">
+    <div class="header-inner container">
+      <a href={`${base}`} class="logo-link" aria-label="Mind Grace Clinic Home">
         <svg class="logo-svg" viewBox="0 0 900 873" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <use href="/res/Mind_Grace_Clinic_Logo_Pink.svg#icon"/>
+          <use href={`${base}res/Mind_Grace_Clinic_Logo_Pink.svg#icon`} />
         </svg>
         <div>
           <div class="logo-text">Mind Grace Clinic</div>
@@ -102,19 +120,19 @@ const {
         </div>
       </a>
 
-      <!-- DESKTOP NAVIGATION -->
+      <!-- Desktop Navigation -->
       <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/process/">Process</a></li>
-          <li><a href="/resources/">Resources</a></li>
-          <li><a href="/location/">Location</a></li>
-          <li><a href="/book/" class="cta-button">Book Now</a></li>
+          <li><a href={`${base}about/`}>About</a></li>
+          <li><a href={`${base}services/`}>Services</a></li>
+          <li><a href={`${base}process/`}>Process</a></li>
+          <li><a href={`${base}resources/`}>Resources</a></li>
+          <li><a href={`${base}location/`}>Location</a></li>
+          <li><a href={`${base}book/`} class="cta-button">Book Now</a></li>
         </ul>
       </nav>
 
-      <!-- MOBILE NAV TRIGGER -->
+      <!-- Mobile Nav Trigger -->
       <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
         <span></span>
         <span></span>
@@ -123,16 +141,16 @@ const {
     </div>
   </header>
 
-  <!-- MOBILE NAV OVERLAY -->
+  <!-- Mobile Nav Overlay -->
   <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
 
-  <!-- MOBILE NAV PANEL - Simplified -->
+  <!-- Mobile Nav Panel -->
   <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
     <div class="mobile-nav-header">
       <h2>Menu</h2>
       <button class="close-mobile-menu" aria-label="Close menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 6L6 18M6 6l12 12"/>
+          <path d="M18 6L6 18M6 6l12 12" />
         </svg>
       </button>
     </div>
@@ -140,83 +158,85 @@ const {
       <div class="mobile-nav-section">
         <div class="mobile-nav-section-title">Explore</div>
         <ul class="mobile-nav-list">
-          <li><a href="/about/">About Us</a></li>
-          <li><a href="/services/">Our Services</a></li>
-          <li><a href="/process/">What to Expect</a></li>
-          <li><a href="/location/">Find Us</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href={`${base}about/`}>About Us</a></li>
+          <li><a href={`${base}services/`}>Our Services</a></li>
+          <li><a href={`${base}process/`}>What to Expect</a></li>
+          <li><a href={`${base}location/`}>Find Us</a></li>
+          <li><a href={`${base}contact/`}>Contact</a></li>
         </ul>
       </div>
 
       <div class="mobile-nav-section">
         <div class="mobile-nav-section-title">Resources & Tools</div>
         <ul class="mobile-nav-list">
-          <li><a href="/gallery/">Gallery</a></li>
-          <li><a href="/book/">Resource Book</a></li>
-          <li><a href="/resources/">Resources</a></li>
-          <li><a href="/faq/">FAQ</a></li>
+          <li><a href={`${base}gallery/`}>Gallery</a></li>
+          <li><a href={`${base}book/`}>Resource Book</a></li>
+          <li><a href={`${base}resources/`}>Resources</a></li>
+          <li><a href={`${base}faq/`}>FAQ</a></li>
         </ul>
       </div>
 
       <div class="mobile-nav-section">
         <div class="mobile-nav-section-title">Therapeutic Tools</div>
         <ul class="mobile-nav-list">
-          <li><a href="/guided-breathing/">Guided Breathing</a></li>
-          <li><a href="/butterfly-tapper/">Butterfly Tapper</a></li>
-          <li><a href="/eye-movement/">Eye Movement</a></li>
-          <li><a href="/hypnos-fractal/">Hypnotic Fractal</a></li>
-          <li><a href="/horizon-scan/">Horizon Scan</a></li>
-          <li><a href="/leaf-on-stream/">Leaf on Stream</a></li>
+          <li><a href={`${base}guided-breathing/`}>Guided Breathing</a></li>
+          <li><a href={`${base}butterfly-tapper/`}>Butterfly Tapper</a></li>
+          <li><a href={`${base}eye-movement/`}>Eye Movement</a></li>
+          <li><a href={`${base}hypnos-fractal/`}>Hypnotic Fractal</a></li>
+          <li><a href={`${base}horizon-scan/`}>Horizon Scan</a></li>
+          <li><a href={`${base}leaf-on-stream/`}>Leaf on Stream</a></li>
         </ul>
       </div>
 
       <div class="mobile-nav-section">
-        <a href="/book/" class="cta-button">Book Appointment</a>
+        <a href={`${base}book/`} class="cta-button">Book Appointment</a>
       </div>
     </div>
   </nav>
 
-  <!-- MAIN CONTENT -->
+  <!-- Main Content -->
   <main id="main-content" role="main">
-    <slot />
+    <ErrorBoundary>
+      <slot />
+    </ErrorBoundary>
   </main>
 
-  <!-- FOOTER - Substantial Visual Weight -->
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
-    <div class="footer-content">
+    <div class="footer-content container">
       <div class="footer-column">
         <h4>Clinic</h4>
         <ul>
-          <li><a href="/about/">About Dr. Sharma</a></li>
-          <li><a href="/services/">All Services</a></li>
-          <li><a href="/process/">What to Expect</a></li>
-          <li><a href="/gallery/">Gallery</a></li>
+          <li><a href={`${base}about/`}>About Dr. Sharma</a></li>
+          <li><a href={`${base}services/`}>All Services</a></li>
+          <li><a href={`${base}process/`}>What to Expect</a></li>
+          <li><a href={`${base}gallery/`}>Gallery</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
         <h4>Support</h4>
         <ul>
-          <li><a href="/faq/">FAQ</a></li>
-          <li><a href="/contact/">Contact Us</a></li>
-          <li><a href="/emergency/">Emergency Help</a></li>
-          <li><a href="/consent/">Patient Consent</a></li>
+          <li><a href={`${base}faq/`}>FAQ</a></li>
+          <li><a href={`${base}contact/`}>Contact Us</a></li>
+          <li><a href={`${base}emergency/`}>Emergency Help</a></li>
+          <li><a href={`${base}consent/`}>Patient Consent</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
         <h4>Resources</h4>
         <ul>
-          <li><a href="/book/">Resource Book</a></li>
-          <li><a href="/resources/">Self-Help Tools</a></li>
-          <li><a href="/conditions/">Conditions</a></li>
+          <li><a href={`${base}book/`}>Resource Book</a></li>
+          <li><a href={`${base}resources/`}>Self-Help Tools</a></li>
+          <li><a href={`${base}conditions/`}>Conditions</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
         <h4>Legal</h4>
         <ul>
-          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href={`${base}privacy/`}>Privacy Policy</a></li>
         </ul>
       </div>
     </div>
@@ -232,7 +252,7 @@ const {
     </div>
   </footer>
 
-  <!-- JAVASCRIPT - Minimal, Interaction Only -->
-  <script is:inline src="/scripts/main.js"></script>
+  <!-- Global Scripts -->
+  <script is:inline src={`${base}scripts/main.js`}></script>
 </body>
 </html>
