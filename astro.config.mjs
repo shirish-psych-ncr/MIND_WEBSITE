@@ -1,16 +1,41 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+import postAudit from '@casoon/astro-post-audit';
+import brokenLinksChecker from 'astro-broken-links-checker';
 
-// https://astro.build
 export default defineConfig({
-  // CORRECTED: Point to your specific GitHub Pages subdomain
   site: 'https://shirish-psych-ncr.github.io',
-  
-  // The subfolder repository name matching your GitHub URL path
   base: '/MIND_WEBSITE',
-  
-  // Enforces clean URLs ending with trailing slashes, which GitHub Pages prefers
   trailingSlash: 'always',
-
-  // OPTIMIZATION: Compresses build output automatically for faster loading times
   compressHTML: true,
+
+  integrations: [
+    // 1. Sitemap (Index 0)
+    sitemap(),
+
+    // 2. Broken Link Checker (Index 1 - Now correctly configured)
+    brokenLinksChecker({
+      checkExternalLinks: false,
+      throwError: true,
+      cacheExternalLinks: true,
+    }),
+
+    // 3. Post Audit (Index 2)
+    postAudit({
+      preset: 'standard',
+      failOn: 'errors',
+      maxWarnings: 0,
+      rules: {
+        filters: { exclude: ['404.html'] },
+        html_basics: { meta_description_required: true, lang_attr_required: true },
+        a11y: { require_skip_link: true, check_landmarks: true, img_alt_required: true },
+        opengraph: { require_og_title: true, require_og_image: true, og_image_absolute_url: true },
+        security: { check_target_blank: true }
+      },
+      reports: {
+        json: 'audit-report.json',
+        sarif: 'audit.sarif'
+      }
+    })
+  ]
 });
