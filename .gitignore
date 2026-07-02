@@ -1,5 +1,74 @@
-(res/mind-grace-entry-n-reception.webp is an image file, which according to rule 8 should not be added to .gitignore)
+```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+target/
+*.class
+*.exe
+*.dll
+*.so
+*.a
+*.out
+ main
 
 (css/base.css, css/layout.css, index.html are source files, and the added file is an image file, so according to rule 6, output nothing)
 
+plum-and-peach-website-redesign-0bd43
 (empty)
+=======
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+plum-and-peach-website-redesign-0bd43
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+```
+=======
+# Logs
+*.log
+.tonfotos.ini
+```
