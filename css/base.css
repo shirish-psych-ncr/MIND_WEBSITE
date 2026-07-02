@@ -5,33 +5,38 @@
    ============================================ */
 
 :root {
-  /* Primary Colors - Theme Distribution: 50% Light, 40% Dark, 10% Other */
-  --light-bg: #FFE0F6;         /* 50% - Main light background (Cherry Blossom Pink) */
-  --primary: #671B50;          /* 40% - Deep Purple - Main brand/dark (Plum/Island) */
-  --accent: #E39774;           /* 10% - Earthy Terracotta - Warm accent */
-  --support: #EFBCBA;          /* 10% - Cotton Rose - Soft accents */
-  --olive: #8B8B6B;            /* Earthy/Muddy Olive */
+  /* Primary Colors - Editorial Warm Palette */
+  --light-bg: #FCFAF7;         /* Warm ivory base */
+  --bg-gradient-start: #FCFAF7;
+  --bg-gradient-mid: #F7F0EB;
+  --bg-gradient-end: #FFFDFC;
   
-  /* Neutrals */
+  --primary: #671B50;          /* Deep Purple - accents only */
+  --accent: #E39774;           /* Terracotta - buttons, links */
+  --support: #EFBCBA;          /* Soft accent */
+  --olive: #8B8B6B;            /* Earthy tone */
+  
+  /* Neutrals - Warmer */
   --white: #FFFFFF;
-  --off-white: #FDFCF8;
-  --soft-plum: #FFF0F5;
-  --cream: #FAF5F0;
+  --off-white: #FAF9F7;
+  --soft-plum: #FFF5F8;
+  --cream: #FDFBF9;
   --blush: #F9E8ED;
+  --warm-gray: #F5F3F0;
   
-  /* Text Colors - for light backgrounds (#FFE0F6) */
-  --text-dark: #2D1B2E;        /* Dark/Black */
-  --text-body: #4A3B4A;        /* Dark Plum */
-  --text-muted: #6B4C5A;       /* Muted Plum */
-  --text-light: #8B6B7A;       /* Light Plum */
-  --text-accent: #E39774;      /* Terracotta accent text */
-  --text-olive: #8B8B6B;       /* Earthy olive text */
+  /* Text Colors - Softer contrast */
+  --text-dark: #2D1B2E;
+  --text-body: #4A3B4A;
+  --text-muted: #6B4C5A;
+  --text-light: #8B6B7A;
+  --text-accent: #E39774;
+  --text-olive: #8B8B6B;
   
-  /* Text Colors - for dark/plum islands (#671B50) */
-  --text-on-plum: #FFE0F6;     /* Light pink on plum */
-  --text-on-plum-cream: #FAF5F0; /* Cream on plum */
-  --text-on-plum-lime: #D3F069; /* Lime accent on plum */
-  --text-on-plum-terracotta: #E39774; /* Terracotta on plum */
+  /* Text on dark backgrounds */
+  --text-on-plum: #FFE0F6;
+  --text-on-plum-cream: #FAF5F0;
+  --text-on-plum-lime: #D3F069;
+  --text-on-plum-terracotta: #E39774;
   
   /* Semantic Colors */
   --error: #DC3545;
@@ -46,48 +51,58 @@
   --shadow-xl: 0 20px 64px rgba(103, 27, 80, 0.2);
   --shadow-float: 0 24px 80px rgba(103, 27, 80, 0.15);
   
-  /* Border Radius */
-  --radius-sm: clamp(4px, 0.8vw, 8px);
-  --radius-md: clamp(8px, 1.5vw, 16px);
-  --radius-lg: clamp(12px, 2vw, 24px);
-  --radius-xl: clamp(16px, 2.5vw, 32px);
+  /* Border Radius - Increased for friendlier feel */
+  --radius-sm: clamp(6px, 1vw, 10px);
+  --radius-md: clamp(12px, 2vw, 20px);
+  --radius-lg: clamp(18px, 2.5vw, 28px);
+  --radius-xl: clamp(24px, 3vw, 36px);
+  --radius-xxl: clamp(32px, 4vw, 48px);
   --radius-pill: 9999px;
   
-  /* Typography Scale - Fluid with clamp() */
-  --fs-display: clamp(2.5rem, 6vw, 5rem);
-  --fs-h1: clamp(2rem, 5vw, 4rem);
-  --fs-h2: clamp(1.75rem, 4vw, 3rem);
-  --fs-h3: clamp(1.5rem, 3vw, 2.25rem);
-  --fs-h4: clamp(1.25rem, 2.5vw, 1.75rem);
-  --fs-body: clamp(1rem, 1.75vw, 1.125rem); /* Minimum 16px for accessibility */
-  --fs-small: clamp(0.875rem, 1.4vw, 0.95rem); /* Minimum 14px for accessibility */
-  --fs-tiny: clamp(0.8125rem, 1.2vw, 0.875rem); /* Minimum 13px for accessibility */
+  /* Typography Scale - Editorial with more breathing room */
+  --fs-display: clamp(3rem, 7vw, 6rem);      /* Increased from 5rem max */
+  --fs-h1: clamp(2.5rem, 6vw, 5rem);         /* Increased from 4rem max */
+  --fs-h2: clamp(2rem, 5vw, 4rem);           /* Increased from 3rem max */
+  --fs-h3: clamp(1.75rem, 4vw, 3rem);        /* Increased from 2.25rem max */
+  --fs-h4: clamp(1.5rem, 3vw, 2.5rem);       /* Increased from 1.75rem max */
+  --fs-body: clamp(1.125rem, 2vw, 1.25rem);  /* 18px base, increased from 16px */
+  --fs-small: clamp(1rem, 1.6vw, 1.0625rem); /* 17px min */
+  --fs-tiny: clamp(0.875rem, 1.4vw, 0.9375rem); /* 14px min */
   
-  /* Line Heights */
-  --lh-tight: 1.15;
-  --lh-base: 1.6;
-  --lh-relaxed: 1.8;
+  /* Line Heights - More relaxed */
+  --lh-tight: 1.2;
+  --lh-base: 1.7;
+  --lh-relaxed: 1.9;
   
-  /* Spacing Scale - Fluid */
-  --space-xs: clamp(0.25rem, 0.5vw, 0.5rem);
-  --space-sm: clamp(0.5rem, 1vw, 0.75rem);
-  --space-md: clamp(0.75rem, 1.5vw, 1rem);
-  --space-lg: clamp(1rem, 2vw, 1.5rem);
-  --space-xl: clamp(1.5rem, 3vw, 2.5rem);
-  --space-2xl: clamp(2rem, 4vw, 4rem);
-  --space-3xl: clamp(3rem, 6vw, 6rem);
+  /* Spacing Scale - Increased everywhere */
+  --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 1.5vw, 1rem);
+  --space-md: clamp(1rem, 2vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 3vw, 2.5rem);
+  --space-xl: clamp(2rem, 4vw, 3.5rem);
+  --space-2xl: clamp(3rem, 6vw, 5rem);
+  --space-3xl: clamp(4rem, 8vw, 8rem);
+  --space-4xl: clamp(6rem, 10vw, 10rem);
   
-  /* Sizing - Single source of truth */
+  /* Sizing - Wider containers */
   --content-width: 1400px;
-  --measure: 65ch;
-  --narrow: min(95vw, 800px);
+  --measure: 60ch;  /* Reduced from 65ch for better readability */
+  --narrow: min(95vw, 700px);
   --content: min(95vw, var(--content-width));
   --wide: min(95vw, 1600px);
   
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Shadows - Softer, more elevated */
+  --shadow-xs: 0 2px 8px rgba(103, 27, 80, 0.04);
+  --shadow-sm: 0 4px 16px rgba(103, 27, 80, 0.06);
+  --shadow-md: 0 8px 30px rgba(103, 27, 80, 0.08);
+  --shadow-lg: 0 12px 48px rgba(103, 27, 80, 0.1);
+  --shadow-xl: 0 20px 64px rgba(103, 27, 80, 0.12);
+  --shadow-float: 0 24px 80px rgba(103, 27, 80, 0.1);
+  
+  /* Transitions - Subtler */
+  --transition-fast: 200ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Dark mode support */
@@ -125,6 +140,7 @@ html {
 body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--light-bg);
+  background: radial-gradient(ellipse at center, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%);
   color: var(--text-dark);
   line-height: var(--lh-base);
   overflow-x: hidden;
