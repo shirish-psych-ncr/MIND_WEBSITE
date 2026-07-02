@@ -148,8 +148,7 @@ Dynamic blog with categories:
      # Python
      python -m http.server 8000
      
-     # Node.js
-     npx serve
+     # Alternative: Use any static file server
      ```
 
 3. **Make changes:**
