@@ -1,10 +1,36 @@
+```
+# Build artifacts
+dist/
+build/
+
 # Dependencies
 node_modules/
 
-# Production build outputs
-dist/
+# Logs and reports
+*.log
+audit-report.json
+audit.sarif
 
-.astro/
-
+# Environment
 .env
-env.production
+.env.local
+*.env.*
+
+# Cache and temporary files
+.cache/
+.tmp/
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Package lock files
+package-lock.json
+```
