@@ -1,13 +1,15 @@
 /* ============================================
    BASE.CSS - Foundation & Variables
    Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
+   Theme: 50% Light (#FFE0F6), 40% Dark (#671B50), 10% Other Colors
    ============================================ */
 
 :root {
-  /* Primary Colors */
-  --primary: #671B50;        /* Deep Purple - Main brand */
-  --accent: #F34674;         /* Wild Strawberry - Highlights, CTAs */
-  --support: #EFBCBA;        /* Cotton Rose - Soft backgrounds */
+  /* Primary Colors - Theme Distribution: 50% Light, 40% Dark, 10% Other */
+  --light-bg: #FFE0F6;         /* 50% - Main light background */
+  --primary: #671B50;          /* 40% - Deep Purple - Main brand/dark */
+  --accent: #F34674;           /* 10% - Wild Strawberry - Highlights */
+  --support: #EFBCBA;          /* 10% - Cotton Rose - Soft accents */
   
   /* Neutrals */
   --white: #FFFFFF;

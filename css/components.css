@@ -75,40 +75,54 @@
   margin-bottom: var(--space-lg);
 }
 
-/* --- 5. TIMELINE (Process & Doctor) --- */
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+/* --- 5. ICON SIZES - Fixed for better UX --- */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 40px; top: 0; bottom: 0;
-  width: 2px;
-  background: var(--blush);
+.icon-xs {
+  width: 12px;
+  height: 12px;
 }
 
-.timeline-item {
-  display: flex;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
-  position: relative;
+.icon-sm {
+  width: 16px;
+  height: 16px;
 }
 
-.step-number {
-  flex-shrink: 0;
-  width: 56px; height: 56px;
+.icon-md {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-lg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-xl {
+  width: 32px;
+  height: 32px;
+}
+
+.card-icon .icon-lg {
+  width: 32px;
+  height: 32px;
+}
+
+/* --- 6. ICON BOXES --- */
+.icon-box {
+  width: clamp(40px, 6vw, 48px);
+  height: clamp(40px, 6vw, 48px);
+  background: linear-gradient(135deg, var(--soft-plum), rgba(243, 70, 116, 0.15));
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  font-weight: 700;
-  background: var(--accent);
-  color: white;
-  z-index: 1;
-  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-lg);
 }
 
 /* --- 6. INTERACTIVE & FORM COMPONENTS --- */
@@ -167,16 +181,54 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* --- 9. RESPONSIVE OVERRIDES --- */
+/* --- 9. TIMELINE (Process & Doctor) --- */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 40px; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--blush);
+}
+
+.timeline-item {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  background: var(--accent);
+  color: white;
+  z-index: 1;
+  box-shadow: var(--shadow-sm);
+}
+
+/* --- 10. RESPONSIVE OVERRIDES --- */
 @media (max-width: 768px) {
   .grid-container, .services-grid, .condition-list { grid-template-columns: 1fr; }
   .timeline::before { left: 28px; }
   .iframe-container { max-height: 70vh; }
-  .step-number { width: 48px; height: 48px; }
+  .step-number { width: 40px; height: 40px; }
 }
 
-/* --- 10. UTILITY BACKGROUNDS --- */
+/* --- 11. UTILITY BACKGROUNDS --- */
 .section-white { background: var(--white); }
 .section-blush { background: var(--blush); }
 .section-cream { background: var(--cream); }
 .section-plum { background: var(--soft-plum); }
+.section-light { background: var(--light-bg); }
+.section-primary { background: var(--primary); color: var(--white); }
