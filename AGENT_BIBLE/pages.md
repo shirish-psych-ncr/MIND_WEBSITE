@@ -1,5 +1,5 @@
-# PAGE_REGISTRY [v3.0] - Mind Grace Neuropsychiatric Clinic
-**Mode:** Machine-Readable | **Format:** Dense-Table | **Update:** Auto(post-turn) | **Last Verified:** $(date)
+# PAGE_REGISTRY [v3.1] - Mind Grace Neuropsychiatric Clinic
+**Mode:** Machine-Readable | **Format:** Dense-Table | **Update:** Auto(post-turn) | **Last Verified:** 2024-07-02
 
 ## 1. CORE_PAGES (Root level)
 | File | Lines | Purpose | Layout | Status | Notes |
@@ -13,7 +13,7 @@
 | location.html | 366 | Map, Address, Directions | BaseLayout | ✓ Fixed v2.0 | Header repaired, Leaflet map integrated |
 | contact.html | 496 | Contact form, Info cards | BaseLayout | ✓ Refactored v2.0 | Form validation, emergency notice |
 | faq.html | 253 | FAQ accordion | BaseLayout | ✓ Refactored v2.0 | Categorized accordions |
-| testimonials.html | 257 | Patient reviews | BaseLayout | ✓ Refactored v2.0 | Grid layout, star ratings |
+| testimonials.html | 257 | Patient reviews | BaseLayout | ✓ Refactored v2.0 | Grid layout, star ratings, Google Maps link fixed |
 | process.html | 393 | Treatment journey steps | BaseLayout | ✓ Refactored v2.0 | Timeline, numbered steps |
 | fees.html | 515 | Pricing tables, Insurance | BaseLayout | ✓ Refactored v2.0 | Transparent pricing, payment methods |
 | consent.html | 8 | Consent forms | LegalLayout | ⚠️ Minimal | TODO: Full rewrite needed |
@@ -25,6 +25,9 @@
 | approach.html | 306 | Biopsychosocial model | BaseLayout | ✓ Refactored v2.0 | Pillar cards, methodology |
 | resources.html | 195 | Resource library | BaseLayout | ⚠️ Pending | TODO: Responsive rewrite |
 | gallery.html | 214 | Photo gallery | BaseLayout | ⚠️ Pending | TODO: Masonry layout |
+| terms.html | ~200 | Terms & Conditions | LegalLayout | ✓ Created | Legal page restored |
+| disclaimer.html | ~200 | Medical Disclaimer | LegalLayout | ✓ Created | Disclaimer page restored |
+| mind-grace.html | ~400 | Clinic overview | BaseLayout | ✓ Present | Alternative landing page |
 
 ## 2. TOOL_PAGES (Interactive therapy tools)
 | File | Lines | Tool | CSS | JS | Status |
@@ -41,17 +44,18 @@
 ### Index & Category Pages
 | File | Lines | Purpose | Config | Status |
 |---|---|---|---|---|
-| blog/index.html | 224 | Blog homepage | - | ⚠️ TODO: Responsive |
-| blog/adult.html | 200 | Adult mental health articles | blog-config-adult.js | ⚠️ TODO: Responsive |
+| blog/index.html | 224 | Blog homepage | - | ✓ Fixed navigation |
+| blog/adult.html | 200 | Adult mental health articles | blog-config-adult.js | ✓ Fixed navigation |
 | blog/child.html | 23 | Child development articles | blog-config-child.js | ⚠️ TODO: Responsive |
+| blog/children.html | ~200 | Child development hub | - | ✓ Fixed navigation paths |
 
 ### Adult Articles (/blog/pages/adult/*)
 | File | Lines | Topic | Status |
 |---|---|---|---|
 | overthinking-vs-anxiety.html | 31 | Differential diagnosis | ⚠️ Minimal content |
-| scheduled-worry-time-technique.html | 281 | CBT technique | ⚠️ Needs template |
+| scheduled-worry-time-technique.html | 281 | CBT technique | ✓ Fixed relative paths (../../) |
 | sleep-and-anxiety-cycle.html | 150 | Sleep hygiene | ⚠️ Needs template |
-| stimulus-control-therapy.html | 254 | Insomnia treatment | ⚠️ Needs template |
+| stimulus-control-therapy.html | 254 | Insomnia treatment | ✓ Fixed relative paths (../../) |
 | when-to-see-a-psychiatrist.html | 35 | Help-seeking guide | ⚠️ Minimal content |
 
 ### Child Articles (/blog/pages/child/*)
@@ -100,6 +104,12 @@
 - [ ] Add footer sitemap links
 - [x] Add `doctors.html` link to main navigation (verify on all pages)
 - [x] Update `doctor.html` content merged into `doctors.html`
+- [x] Fixed blog/pages/adult/* relative paths (../../)
+- [x] Fixed blog/children.html navigation paths
+- [x] Created terms.html and disclaimer.html
+- [x] Updated Google Form embed URL in book.html
+- [x] Updated Google Maps review link in testimonials.html
+- [x] Fixed root-relative favicon paths in location.html
 
 ## 8. CONTENT_GUIDELINES (From Organization Profile)
 ### Dual-Clinician Model
@@ -114,4 +124,27 @@
 - **Aasha (Child):** Warm, nurturing, hopeful, strength-focused, play-based.
 - **Emergency:** Direct, high-contrast, immediate action-oriented.
 
-*Ref: All .html files verified via wc -l and grep. Auto-update on page changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §1-§9, worker.md §1-§10, ARCHITECTURE.md §5 (Dual-Clinician Model). END_ON_SYNC.*
+*Ref: All .html files verified via wc -l and grep. Auto-update on page changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §1-§9, worker.md §1-§10, ARCHITECTURE.md §5 (Dual-Clinician Model). 
+
+## 9. ASSET_INVENTORY
+| Asset Type | Location | Status | Notes |
+|---|---|---|---|
+| Clinic Logo (Pink) | res/MindGraceClinicLogo_Pink.svg | ✓ Present | Primary header logo |
+| Clinic Logo (Full) | res/Mind_Grace_Clinic_Logo.png | ✓ Present | Fallback PNG |
+| Hero Images | images/aasha-hero.svg, images/approach-hero.svg | ✓ Present | SVG hero graphics |
+| Doctor Photo | res/Dr_Anita_Sharma_Personal_Photo.jpg | ✓ Present | Dr. Anita Sharma profile |
+| Location Photos | res/Location_street_view_*.jpg | ✓ Present | Street view images |
+| Favicons | Inline base64 SVG | ✓ Present | Embedded in all pages |
+| Brochures | res/*_Brochure.png | ✓ Present | AASHA & Clinic brochures |
+
+## 10. EXTERNAL_INTEGRATIONS
+| Service | URL | Status | Notes |
+|---|---|---|---|
+| Google Forms (Booking) | docs.google.com/forms/d/e/1FAIpQLSfr5yRtw_iWqw6rnigQ-pgw86Q_6ipIScgzS5lqf0DIdpF0ag | ✓ Active | Embedded in book.html |
+| Google Maps (Location) | maps.app.goo.gl/NorMGtR8Uqu5eM8G9 | ✓ Active | Clinic directions |
+| Google Maps (Reviews) | maps.app.goo.gl/NorMGtR8Uqu5eM8G9 | ✓ Active | Testimonials link |
+| Leaflet JS (Maps) | unpkg.com/leaflet@1.9.4 | ✓ CDN | location.html interactive map |
+| Google Fonts | fonts.googleapis.com | ✓ CDN | Inter + Playfair Display |
+| Domain | mindgracencr.in | ⚠️ DNS | External hosting/DNS config needed |
+
+*END_ON_SYNC.*
