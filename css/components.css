@@ -53,9 +53,9 @@
 }
 
 .badge-primary {
-  background: linear-gradient(135deg, var(--soft-plum), rgba(243, 70, 116, 0.1));
-  color: var(--accent);
-  border: 1px solid rgba(243, 70, 116, 0.2);
+  background: linear-gradient(135deg, rgba(103, 27, 80, 0.1), rgba(103, 27, 80, 0.05));
+  color: var(--primary);
+  border: 1px solid rgba(103, 27, 80, 0.2);
 }
 
 .badge-support {
@@ -68,7 +68,7 @@
 .icon-box {
   width: clamp(48px, 8vw, 64px);
   height: clamp(48px, 8vw, 64px);
-  background: linear-gradient(135deg, var(--soft-plum), rgba(243, 70, 116, 0.15));
+  background: linear-gradient(135deg, rgba(103, 27, 80, 0.15), rgba(103, 27, 80, 0.08));
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -204,7 +204,7 @@
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: linear-gradient(135deg, var(--primary), var(--text-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -239,8 +239,8 @@
   justify-content: center;
   border-radius: 50%;
   font-weight: 700;
-  background: var(--accent);
-  color: white;
+  background: var(--primary);
+  color: var(--text-on-plum);
   z-index: 1;
   box-shadow: var(--shadow-sm);
 }
