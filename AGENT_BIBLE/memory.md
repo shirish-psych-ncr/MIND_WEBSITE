@@ -9,7 +9,7 @@
 | T12 | OPTIMIZE: All 7 KB docs v5.0 | Dedup general concepts, unify cross-refs, compress for single-run access | All docs |
 
 ## STATE (Current Snapshot) → See Instructions.md §KB_READ
-- **Stack:** Static-HTML | CSS-Layers | VanillaJS (Astro-pending) → worker.md §1
+- **Stack:** Static-HTML | CSS-Layers | VanillaJS → worker.md §1
 - **Core:** index.html (~1000L, v4.0-popup-nav), styles.css (2089L, v3.0), app.js (685L) → worker.md §10
 - **Pages:** 28 HTML (core×16, tools×7, blog×13, templates×6) → pages.md §1-§4
 - **Tools:** /css-tools/* (7 therapeutic CSS), /js/* (11 scripts) → tools.md §1-§2
@@ -22,8 +22,8 @@
 | Priority | Task | Ref Doc | Status | Cross-Ref |
 |---|---|---|---|---|
 | P0 | Zod schemas (src/content/config.ts) | worker.md §7 | Pending | schemas.md §1 |
-| P0 | Astro scaffold (src/* migration) | worker.md §1 | Pending | pages.md §6 |
-| P1 | Primitives (Button, Card, Nav.astro) | components.md §1 | Pending | design.md §4 |
+| P0 | Static site structure | worker.md §1 | Pending | pages.md §6 |
+| P1 | Primitives (Button, Card, Button, Card, Nav) | components.md §1 | Pending | design.md §4 |
 | P1 | Playwright E2E (a11y.spec.ts, perf.spec.ts) | worker.md §6 | Pending | - |
 | P2 | CI/CD (.github/workflows/ci.yml) | worker.md §9 | Pending | - |
 | P2 | Asset optimization (WebP, SVG sprites) | assets.md §5 | Pending | design.md §7 |

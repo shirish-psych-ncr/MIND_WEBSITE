@@ -81,7 +81,7 @@
 | ErrorLayout | 404.html | ErrorState, BackHome | ⚠️ TODO |
 | ToolLayout | tool pages | ToolFrame, Instructions, Reset | ⚠️ TODO |
 
-## 6. MIGRATION_PRIORITY (Static→Astro future)
+## 6. MIGRATION_PRIORITY (Static site maintenance)
 | Priority | Pages | Reason | Effort |
 |---|---|---|---|
 | P0 | index.html, doctors.html | Homepage + Core conversion hub | Low |
