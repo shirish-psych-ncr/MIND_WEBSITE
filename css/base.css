@@ -60,7 +60,7 @@
   --fs-h3: clamp(1.5rem, 3vw, 2.25rem);
   --fs-h4: clamp(1.25rem, 2.5vw, 1.75rem);
   --fs-body: clamp(0.95rem, 1.75vw, 1.125rem);
-  --fs-small: clamp(0.85rem, 1.4vw, 0.95rem); /* Minimum 12px (0.75rem) for accessibility */
+  --fs-small: clamp(0.875rem, 1.4vw, 0.95rem); /* Minimum 14px (0.875rem) for accessibility */
   --fs-tiny: clamp(0.75rem, 1.2vw, 0.85rem); /* Minimum 12px (0.75rem) for accessibility */
   
   /* Line Heights */
