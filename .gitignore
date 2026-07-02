@@ -1,7 +1,6 @@
 ```
-# Build artifacts
-dist/
-build/
+# Build artifacts dist/ build/
+
 
 # Dependencies
 node_modules/
