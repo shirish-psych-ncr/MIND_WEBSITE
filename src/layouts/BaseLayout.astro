@@ -1,7 +1,6 @@
 ---
 // src/layouts/BaseLayout.astro
 import ErrorBoundary from '../components/ErrorBoundary.astro';
-import Nav from '../components/Nav.astro'; // Optional: If you extracted Nav into a component
 
 interface Props {
   title?: string;
@@ -14,7 +13,7 @@ interface Props {
 const {
   title = "Mind Grace Clinic | Psychiatrist in Greater Noida",
   description = "Expert psychiatric care, counseling, and child development services in Greater Noida. Dr. Anita Sharma provides compassionate mental health support for anxiety, depression, ADHD, and more.",
-  ogImage = "/res/Mind_Grace_Clinic_Logo_Full.png", // Ensure this path exists in public/
+  ogImage = "/res/Mind_Grace_Clinic_Logo_Full.png",
   canonical = "",
   noindex = false
 } = Astro.props;
@@ -30,10 +29,10 @@ const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${base}${
 ---
 
 <!DOCTYPE html>
-<html lang="en-IN" dir="ltr" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Theme Color -->
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50" />
@@ -80,14 +79,129 @@ const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${base}${
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href={`${base}styles/base.css`} />
-  <link rel="stylesheet" href={`${base}styles/layout.css`} />
-  <link rel="stylesheet" href={`${base}styles/components.css`} />
-  <link rel="stylesheet" href={`${base}styles/utilities.css`} />
-  <link rel="stylesheet" href={`${base}styles/animations.css`} />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Tailwind Config -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            outline: "#84727b",
+            "secondary-container": "#fe4f7c",
+            secondary: "#b9134c",
+            tertiary: "#3a1c1c",
+            "secondary-fixed": "#ffd9de",
+            "on-surface": "#21191d",
+            background: "#fff8f8",
+            "surface-container-low": "#fff0f5",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#900037",
+            "surface-variant": "#eddfe4",
+            "on-tertiary-fixed": "#2f1313",
+            "primary-container": "#671b50",
+            "on-secondary-fixed": "#400014",
+            "tertiary-fixed": "#ffdad8",
+            "tertiary-container": "#533130",
+            "on-primary-fixed": "#3b002c",
+            "on-error": "#ffffff",
+            error: "#ba1a1a",
+            "inverse-on-surface": "#fcedf2",
+            "surface-dim": "#e5d6db",
+            "primary-fixed": "#ffd8eb",
+            primary: "#4c0039",
+            "on-tertiary-container": "#c89997",
+            "on-background": "#21191d",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#f3e4ea",
+            "on-surface-variant": "#52434a",
+            "surface-tint": "#934176",
+            "inverse-surface": "#362e32",
+            "on-secondary-container": "#5a0020",
+            "surface-bright": "#fff8f8",
+            "surface-container-highest": "#eddfe4",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#ffb2be",
+            "on-tertiary-fixed-variant": "#613d3c",
+            "on-secondary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#ffaedd",
+            "outline-variant": "#d6c1ca",
+            "on-primary-container": "#e485bf",
+            "on-tertiary": "#ffffff",
+            "primary-fixed-dim": "#ffaedd",
+            "tertiary-fixed-dim": "#edbab8",
+            "on-primary-fixed-variant": "#76295d",
+            surface: "#fff8f8",
+            "surface-container": "#f9eaef"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            base: "8px",
+            sm: "12px",
+            xl: "80px",
+            "margin-mobile": "16px",
+            lg: "48px",
+            "margin-desktop": "120px",
+            xs: "4px",
+            gutter: "24px",
+            md: "24px"
+          },
+          fontFamily: {
+            "label-sm": ["Manrope"],
+            "body-md": ["Manrope"],
+            "headline-md": ["Newsreader"],
+            "display-lg": ["Newsreader"],
+            "headline-lg-mobile": ["Newsreader"],
+            "headline-lg": ["Newsreader"],
+            "body-lg": ["Manrope"],
+            "label-md": ["Manrope"],
+            headline: ["Newsreader"],
+            display: ["Newsreader"],
+            body: ["Manrope"],
+            label: ["Manrope"]
+          },
+          fontSize: {
+            "label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}],
+            "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}],
+            "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}],
+            "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "600"}],
+            "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "600"}],
+            "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}],
+            "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}],
+            "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .soft-glow {
+      box-shadow: 0 10px 30px -10px rgba(76, 0, 57, 0.08);
+    }
+    .texture-bg {
+      background-image: radial-gradient(circle at 2px 2px, rgba(132, 114, 123, 0.05) 1px, transparent 0);
+      background-size: 40px 40px;
+    }
+    .hero-clip {
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    }
+  </style>
 
   <!-- Critical Inline CSS -->
   <style>
@@ -97,100 +211,34 @@ const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${base}${
       opacity: 1;
       transition: opacity 0.3s ease-in-out;
     }
-    .hero-content {
-      opacity: 1;
-    }
   </style>
 </head>
 
-<body>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed texture-bg">
   <!-- Skip Link for Accessibility -->
-  <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+  <a href="#main-content" class="skip-link visually-hidden sr-only">Skip to main content</a>
 
-  <!-- Header -->
-  <header class="site-header" role="banner">
-    <div class="header-inner container">
-      <a href={`${base}`} class="logo-link" aria-label="Mind Grace Clinic Home">
-        <svg class="logo-svg" viewBox="0 0 900 873" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <use href={`${base}res/Mind_Grace_Clinic_Logo_Pink.svg#icon`} />
-        </svg>
-        <div>
-          <div class="logo-text">Mind Grace Clinic</div>
-          <div class="logo-tagline">Where You Come First</div>
-        </div>
+  <!-- Emergency Banner -->
+  <div class="bg-error dark:bg-error-container text-on-error dark:text-on-error-container text-label-md font-label-md w-full top-0 z-[60] flex justify-center items-center py-2 px-margin-mobile md:px-margin-desktop text-center sticky">
+    Crisis Support: If you are in immediate danger, call 112 or visit the nearest ER.
+  </div>
+
+  <!-- Top Navigation -->
+  <nav class="bg-surface/90 dark:bg-surface-container/90 backdrop-blur-md sticky top-[40px] w-full z-50 shadow-sm border-b border-outline-variant dark:border-outline">
+    <div class="flex justify-between items-center py-4 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+      <a href={`${base}`} class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity">
+        Mind Grace
       </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href={`${base}about/`}>About</a></li>
-          <li><a href={`${base}services/`}>Services</a></li>
-          <li><a href={`${base}process/`}>Process</a></li>
-          <li><a href={`${base}resources/`}>Resources</a></li>
-          <li><a href={`${base}location/`}>Location</a></li>
-          <li><a href={`${base}book/`} class="cta-button">Book Now</a></li>
-        </ul>
-      </nav>
-
-      <!-- Mobile Nav Trigger -->
-      <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Nav Overlay -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
-
-  <!-- Mobile Nav Panel -->
-  <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
-    <div class="mobile-nav-header">
-      <h2>Menu</h2>
-      <button class="close-mobile-menu" aria-label="Close menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 6L6 18M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-    <div class="mobile-nav-content">
-      <div class="mobile-nav-section">
-        <div class="mobile-nav-section-title">Explore</div>
-        <ul class="mobile-nav-list">
-          <li><a href={`${base}about/`}>About Us</a></li>
-          <li><a href={`${base}services/`}>Our Services</a></li>
-          <li><a href={`${base}process/`}>What to Expect</a></li>
-          <li><a href={`${base}location/`}>Find Us</a></li>
-          <li><a href={`${base}contact/`}>Contact</a></li>
-        </ul>
+      <div class="hidden md:flex gap-gutter items-center">
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href={`${base}about/`}>About</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href={`${base}services/`}>Services</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href={`${base}doctor/`}>Doctors</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href={`${base}process/`}>Process</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href={`${base}resources/`}>Resources</a>
       </div>
-
-      <div class="mobile-nav-section">
-        <div class="mobile-nav-section-title">Resources & Tools</div>
-        <ul class="mobile-nav-list">
-          <li><a href={`${base}gallery/`}>Gallery</a></li>
-          <li><a href={`${base}book/`}>Resource Book</a></li>
-          <li><a href={`${base}resources/`}>Resources</a></li>
-          <li><a href={`${base}faq/`}>FAQ</a></li>
-        </ul>
-      </div>
-
-      <div class="mobile-nav-section">
-        <div class="mobile-nav-section-title">Therapeutic Tools</div>
-        <ul class="mobile-nav-list">
-          <li><a href={`${base}guided-breathing/`}>Guided Breathing</a></li>
-          <li><a href={`${base}butterfly-tapper/`}>Butterfly Tapper</a></li>
-          <li><a href={`${base}eye-movement/`}>Eye Movement</a></li>
-          <li><a href={`${base}hypnos-fractal/`}>Hypnotic Fractal</a></li>
-          <li><a href={`${base}horizon-scan/`}>Horizon Scan</a></li>
-          <li><a href={`${base}leaf-on-stream/`}>Leaf on Stream</a></li>
-        </ul>
-      </div>
-
-      <div class="mobile-nav-section">
-        <a href={`${base}book/`} class="cta-button">Book Appointment</a>
-      </div>
+      <a href={`${base}book/`} class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md hover:opacity-90 transition-all scale-95 duration-200 inline-block">
+        Book Session
+      </a>
     </div>
   </nav>
 
@@ -202,57 +250,83 @@ const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${base}${
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-content container">
-      <div class="footer-column">
-        <h4>Clinic</h4>
-        <ul>
-          <li><a href={`${base}about/`}>About Dr. Sharma</a></li>
-          <li><a href={`${base}services/`}>All Services</a></li>
-          <li><a href={`${base}process/`}>What to Expect</a></li>
-          <li><a href={`${base}gallery/`}>Gallery</a></li>
+  <footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant py-xl">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+      <div class="col-span-1 md:col-span-1">
+        <div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-md">Mind Grace</div>
+        <p class="text-on-surface-variant font-body-md mb-md">Professional neuropsychiatric care designed with empathy and clinical precision.</p>
+        <div class="flex gap-sm">
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+        </div>
+      </div>
+      <div class="col-span-1">
+        <h4 class="font-label-md text-label-md uppercase tracking-wider text-primary mb-md">Clinic</h4>
+        <ul class="space-y-2">
+          <li><a href={`${base}about/`} class="text-on-surface-variant hover:text-primary transition-colors">About Dr. Sharma</a></li>
+          <li><a href={`${base}services/`} class="text-on-surface-variant hover:text-primary transition-colors">All Services</a></li>
+          <li><a href={`${base}process/`} class="text-on-surface-variant hover:text-primary transition-colors">What to Expect</a></li>
+          <li><a href={`${base}location/`} class="text-on-surface-variant hover:text-primary transition-colors">Find Us</a></li>
         </ul>
       </div>
-
-      <div class="footer-column">
-        <h4>Support</h4>
-        <ul>
-          <li><a href={`${base}faq/`}>FAQ</a></li>
-          <li><a href={`${base}contact/`}>Contact Us</a></li>
-          <li><a href={`${base}emergency/`}>Emergency Help</a></li>
-          <li><a href={`${base}consent/`}>Patient Consent</a></li>
+      <div class="col-span-1">
+        <h4 class="font-label-md text-label-md uppercase tracking-wider text-primary mb-md">Support</h4>
+        <ul class="space-y-2">
+          <li><a href={`${base}faq/`} class="text-on-surface-variant hover:text-primary transition-colors">FAQ</a></li>
+          <li><a href={`${base}emergency/`} class="text-on-surface-variant hover:text-primary transition-colors">Emergency Help</a></li>
+          <li><a href={`${base}consent/`} class="text-on-surface-variant hover:text-primary transition-colors">Patient Consent</a></li>
         </ul>
       </div>
-
-      <div class="footer-column">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href={`${base}book/`}>Resource Book</a></li>
-          <li><a href={`${base}resources/`}>Self-Help Tools</a></li>
-          <li><a href={`${base}conditions/`}>Conditions</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href={`${base}privacy/`}>Privacy Policy</a></li>
+      <div class="col-span-1">
+        <h4 class="font-label-md text-label-md uppercase tracking-wider text-primary mb-md">Legal</h4>
+        <ul class="space-y-2">
+          <li><a href={`${base}privacy/`} class="text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <p class="disclaimer">
-        Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice.
-        Always consult a qualified healthcare provider for diagnosis and treatment. In crisis, call emergency services immediately.
-      </p>
-      <p class="footer-copyright">
-        © {new Date().getFullYear()} Mind Grace Clinic, Greater Noida. All rights reserved.
-      </p>
+    <div class="border-t border-outline-variant/30 mt-xl pt-lg">
+      <div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+        <p class="text-on-surface-variant font-body-md text-center text-sm">
+          Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice.
+          Always consult a qualified healthcare provider for diagnosis and treatment. In crisis, call emergency services immediately.
+        </p>
+        <p class="text-on-surface-variant font-body-md text-center text-sm mt-md">
+          © {new Date().getFullYear()} Mind Grace Clinic, Greater Noida. All rights reserved.
+        </p>
+      </div>
     </div>
   </footer>
 
-  <!-- Global Scripts -->
-  <script is:inline src={`${base}scripts/main.js`}></script>
+  <!-- Mobile Navigation Script -->
+  <script>
+    // Simple mobile nav toggle functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const navTrigger = document.querySelector('.mobile-nav-trigger');
+      const navPanel = document.querySelector('.mobile-nav-panel');
+      const navOverlay = document.querySelector('.mobile-nav-overlay');
+      const closeBtn = document.querySelector('.close-mobile-menu');
+      
+      if (navTrigger && navPanel && navOverlay) {
+        navTrigger.addEventListener('click', () => {
+          navPanel.classList.add('active');
+          navOverlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+        
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => {
+            navPanel.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        }
+        
+        navOverlay.addEventListener('click', () => {
+          navPanel.classList.remove('active');
+          navOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+    });
+  </script>
 </body>
 </html>
