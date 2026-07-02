@@ -1,436 +1,119 @@
+This updated documentation reflects the architectural refinements we have implemented, including the shift to modern script loading, accessibility standards, and the modular system for therapeutic tools.
+
+---
+
 # JavaScript Modules
 
-This directory contains all JavaScript functionality for the Mind Grace Neuropsychiatric Clinic website.
+This directory contains all JavaScript functionality for the **Mind Grace Neuropsychiatric Clinic** website.
 
 ## Architecture Philosophy
 
-- **Vanilla JavaScript:** No frameworks or libraries
-- **IIFE Pattern:** All code wrapped in Immediately Invoked Function Expressions to avoid global scope pollution
-- **Progressive Enhancement:** Site works without JavaScript; JS adds interactions
-- **Minimal Footprint:** Only interaction logic, no layout control
-- **Accessibility First:** Focus management, keyboard navigation, ARIA support
+* **Vanilla JavaScript:** Zero-dependency, lightweight, no frameworks or libraries.
+* **IIFE Pattern:** Encapsulated scopes to prevent global namespace pollution.
+* **Progressive Enhancement:** Core functionality remains usable without JS; JS adds behavioral polish.
+* **Performance-First:** `requestAnimationFrame`, debouncing, and `passive: true` event listeners.
+* **Accessibility (A11y) First:** Focus management, `aria-live` regions, and full keyboard control.
 
 ---
 
-## Core Scripts
+## Core Scripts (`/js/`)
 
-### `main.js` — Site-Wide Interactions
+### `main.js` — Universal Logic
 
-**Purpose:** Handles universal interactions used across all pages.
+Handles site-wide infrastructure.
 
-**Modules (IIFE):**
+* **`initMobileNav()`**: Toggles navigation, manages `inert` states, and traps focus.
+* **`initHeaderScroll()`**: Observes scroll state for sticky header transitions.
+* **`initViewportResize()`**: Syncs CSS variables (`--vw`/`--vh`) for fluid responsiveness, handling browser zoom and mobile address bars.
+* **`initScrollReveal()`**: Uses `IntersectionObserver` to trigger fade-in animations.
 
-#### 1. `initMobileNav()`
-Mobile navigation system with accessibility features:
-- Toggle panel and overlay visibility
-- Focus trap for keyboard users
-- Escape key to close
-- Auto-close on window resize (desktop)
-- Auto-close on link click
-- Proper `inert` attribute management
+### Blog System (`/js/`)
 
-**Dependencies:** None  
-**Used on:** All pages
+* **`blog-config-adult.js` / `blog-config-child.js**`: Data schemas for blog taxonomies.
+* **`blog-discovery.js`**: The engine for dynamic filtering, search, and pagination.
 
 ---
 
-#### 2. `initHeaderScroll()`
-Adds visual feedback when user scrolls:
-- Toggles `.scrolled` class on header
-- Uses `requestAnimationFrame` for performance
-- Debounced scroll handling
+## Therapeutic Tool Scripts (`/js/tools/`)
 
-**Dependencies:** None  
-**Used on:** All pages
+Each tool follows a standardized module pattern, loading its specific logic alongside a dedicated stylesheet in `/css/tools/`.
 
----
-
-#### 3. `initViewportResize()`
-Handles viewport changes including browser zoom:
-- Updates `--vw` and `--vh` CSS custom properties
-- Listens to `resize` events
-- Listens to `visualViewport.resize` (browser zoom support)
-- Enables fluid layouts to respond to zoom
-
-**Dependencies:** None  
-**Used on:** All pages
+| Script | Purpose | Interaction Focus |
+| --- | --- | --- |
+| `tools-breathing.js` | Guided breathing | Timing/Canvas Animation |
+| `tools-butterfly.js` | EMDR tapping | Bilateral Haptics/Click |
+| `tools-eye.js` | EMDR eye movement | CSS Transitions/Timing |
+| `tools-fractal.js` | Hypnotic relaxation | Canvas/Performance |
+| `tools-horizon.js` | Grounding/Scan | Gradient/Time Simulation |
+| `tools-leaf.js` | Mindfulness | Drag & Drop/Physics |
+| `tools-book.js` | Psychoeducation | Page-flip/State Management |
+| `tools-map.js` | Location finding | Geolocation/Embed API |
 
 ---
 
-#### 4. `initScrollReveal()`
-Progressive enhancement for scroll animations:
-- Uses `IntersectionObserver` API
-- Reveals elements with `.reveal` class
-- Graceful degradation if unsupported
-- Unobserves elements after reveal (performance)
+## Loading Pattern
 
-**Dependencies:** None  
-**Used on:** Pages with `.reveal` elements
+Load scripts at the bottom of the `<body>` using the `defer` attribute to ensure non-blocking execution.
 
----
-
-### `blog-config-adult.js` — Adult Mental Health Configuration
-
-**Purpose:** Metadata and configuration for adult mental health blog posts.
-
-**Contains:**
-- Post categories
-- Tags
-- Author information
-- Related post mappings
-
-**Dependencies:** `blog-discovery.js`  
-**Used on:** `/blog/adult.html`, adult blog post pages
-
----
-
-### `blog-config-child.js` — Child Development Configuration
-
-**Purpose:** Metadata and configuration for child development blog posts.
-
-**Contains:**
-- Post categories
-- Tags
-- Author information
-- Related post mappings
-
-**Dependencies:** `blog-discovery.js`  
-**Used on:** `/blog/child.html`, child blog post pages
-
----
-
-### `blog-discovery.js` — Blog System Engine
-
-**Purpose:** Dynamic blog post discovery, listing, and filtering.
-
-**Features:**
-- Scans `/blog/pages/` for posts
-- Renders post listings
-- Category filtering
-- Tag filtering
-- Search functionality
-- Pagination (if needed)
-
-**Dependencies:** `blog-config-adult.js` OR `blog-config-child.js`  
-**Used on:** `/blog/index.html`, `/blog/adult.html`, `/blog/child.html`
-
----
-
-## Therapeutic Tool Scripts
-
-Each therapeutic tool has a dedicated script following a consistent pattern.
-
-### `tools-breathing.js` — Guided Breathing Exercise
-
-**Purpose:** Controls the guided breathing animation and timing.
-
-**Features:**
-- Breathing cycle timing (inhale, hold, exhale)
-- Visual circle expansion/contraction
-- Session duration tracking
-- Start/pause/reset controls
-- Audio cue integration (optional)
-
-**CSS Dependency:** `css-tools/tools-breathing.css`  
-**HTML:** `guided-breathing.html`
-
----
-
-### `tools-butterfly.js` — EMDR Butterfly Tapper
-
-**Purpose:** Implements bilateral stimulation tapping.
-
-**Features:**
-- Left/right tap zones
-- Tap counter
-- Speed control
-- Session timer
-- Haptic feedback (mobile)
-- Visual feedback on tap
-
-**CSS Dependency:** `css-tools/tools-butterfly.css`  
-**HTML:** `butterfly-tapper.html`
-
----
-
-### `tools-eye.js` — Eye Movement Therapy
-
-**Purpose:** Guides eye movement for EMDR therapy.
-
-**Features:**
-- Moving target animation
-- Speed adjustment
-- Direction patterns (horizontal, vertical, diagonal)
-- Distance control
-- Session timer
-
-**CSS Dependency:** `css-tools/tools-eye.css`  
-**HTML:** `eye-movement.html`
-
----
-
-### `tools-fractal.js` — Hypnotic Fractal Visualization
-
-**Purpose:** Generates and animates fractal patterns for relaxation/hypnosis.
-
-**Features:**
-- Canvas-based fractal generation
-- Zoom animation
-- Color cycling
-- Pattern variations
-- Fullscreen mode
-
-**CSS Dependency:** `css-tools/tools-fractal.css`  
-**HTML:** `hypnos-fractal.html`
-
----
-
-### `tools-horizon.js` — Horizon Scanning Relaxation
-
-**Purpose:** Simulates horizon scanning for grounding/relaxation.
-
-**Features:**
-- Gradient sky animation
-- Sun/moon movement
-- Cloud drift
-- Time-of-day simulation
-- Breathing sync option
-
-**CSS Dependency:** `css-tools/tools-horizon.css`  
-**HTML:** `horizon-scan.html`
-
----
-
-### `tools-leaf.js` — Leaf on Stream Mindfulness
-
-**Purpose:** Mindfulness exercise visualizing thoughts as leaves on a stream.
-
-**Features:**
-- Draggable leaf elements
-- Water ripple effects
-- Leaf spawn on click/tap
-- Stream animation
-- Thought labeling (optional)
-
-**CSS Dependency:** `css-tools/tools-leaf.css`  
-**HTML:** `leaf-on-stream.html`
-
----
-
-### `tools-book.js` — Interactive Resource Book
-
-**Purpose:** Digital book interface for psychoeducational resources.
-
-**Features:**
-- Page flip animations
-- Chapter navigation
-- Bookmark system
-- Progress tracking
-- Search within content
-- Table of contents
-
-**CSS Dependency:** `css-tools/tools-book.css`  
-**HTML:** `book.html`
-
----
-
-### `tools-map.js` — Location Map Integration
-
-**Purpose:** Embeds and configures interactive map for clinic location.
-
-**Features:**
-- Google Maps / OpenStreetMap integration
-- Marker placement
-- Directions link
-- Contact info overlay
-- Mobile-optimized view
-
-**CSS Dependency:** None (inline styles or layout.css)  
-**HTML:** `location.html`
-
----
-
-## Script Loading Pattern
-
-### Standard Page
 ```html
-<script src="js/main.js"></script>
-```
+<!-- Load Base Infrastructure -->
+<script src="js/main.js" defer></script>
 
-### Blog Page
-```html
-<script src="js/main.js"></script>
-<script src="js/blog-config-adult.js"></script>
-<script src="js/blog-discovery.js"></script>
-```
+<!-- Load Tool-Specific Logic -->
+<script src="js/tools/tools-breathing.js" defer></script>
 
-### Therapeutic Tool Page
-```html
-<script src="js/main.js"></script>
-<script src="js/tools-breathing.js"></script>
 ```
-
-**Load Order Matters:** Always load `main.js` first, then page-specific scripts.
 
 ---
 
 ## Coding Conventions
 
 ### IIFE Structure
+
+All modules must protect their scope:
+
 ```javascript
 (function initFeatureName() {
-  // Private variables
-  let state = {};
-  
-  // DOM references
-  const element = document.querySelector('.selector');
-  if (!element) return;
-  
-  // Event listeners
-  function handleClick(e) {
-    // Handler logic
-  }
-  
-  // Initialization
+  const el = document.querySelector('.js-hook');
+  if (!el) return;
+
   function init() {
-    element.addEventListener('click', handleClick);
+    // Initialization logic
   }
   
   init();
 })();
+
 ```
 
-### Best Practices
+### Best Practices Checklist
 
-✅ **Do:**
-- Wrap all code in IIFE
-- Check for element existence before operating
-- Use `const` and `let`, never `var`
-- Add cleanup on page unload (if needed)
-- Support keyboard navigation
-- Respect `prefers-reduced-motion`
-- Use semantic event names
-
-❌ **Don't:**
-- Pollute global scope
-- Assume elements exist
-- Use jQuery or other libraries
-- Control layout via JavaScript (use CSS)
-- Block main thread with heavy computation
-- Forget to remove event listeners (if dynamic)
+* **[ ] Progressive Enhancement:** Does the feature work if JS fails?
+* **[ ] Keyboard:** Can it be navigated entirely without a mouse?
+* **[ ] Focus:** Does the focus move appropriately (e.g., closing a mobile menu returns focus to the trigger)?
+* **[ ] Reduced Motion:** Respect `window.matchMedia('(prefers-reduced-motion: reduce)')`.
+* **[ ] Cleanup:** Use `removeEventListener` only if the component lifecycle requires dynamic destruction.
 
 ---
 
-## Accessibility Considerations
+## Performance & Debugging
 
-All scripts must:
+### Performance
 
-1. **Support Keyboard Navigation**
-   - Tab through interactive elements
-   - Enter/Space to activate
-   - Escape to close/dismiss
+* **Debouncing:** Use the `ticking` pattern with `requestAnimationFrame` for high-frequency events like `scroll` and `resize`.
+* **Passive Listeners:** Use `{ passive: true }` for `touchstart` and `wheel` events to improve scroll fluidity.
 
-2. **Manage Focus**
-   - Move focus to opened panels
-   - Return focus on close
-   - Trap focus in modals
+### Debugging
 
-3. **Announce Changes**
-   - Use `aria-live` regions for dynamic content
-   - Update `aria-expanded` for toggles
-   - Set `aria-hidden` appropriately
-
-4. **Respect User Preferences**
-   - Check `prefers-reduced-motion`
-   - Provide pause/stop for animations
-   - Allow extended time limits
+1. **Console:** Filter by `[Module Name]` tags for cleaner logs.
+2. **Selectors:** Use `js-` prefixes in HTML classes to decouple CSS styling from JS logic (e.g., `class="btn btn-primary js-trigger"`).
+3. **Audit:** Run Lighthouse reports specifically for `Core Web Vitals` to ensure script execution isn't delaying `LCP` or causing `CLS`.
 
 ---
 
-## Performance Guidelines
 
-1. **Debounce Scroll/Resize Events**
-   ```javascript
-   let ticking = false;
-   window.addEventListener('scroll', () => {
-     if (!ticking) {
-       requestAnimationFrame(() => {
-         // Handle scroll
-         ticking = false;
-       });
-       ticking = true;
-     }
-   }, { passive: true });
-   ```
-
-2. **Use Passive Event Listeners**
-   ```javascript
-   element.addEventListener('touchstart', handler, { passive: true });
-   ```
-
-3. **Lazy Load Heavy Features**
-   ```javascript
-   if ('IntersectionObserver' in window) {
-     // Use IntersectionObserver
-   } else {
-     // Fallback
-   }
-   ```
-
-4. **Clean Up Listeners**
-   ```javascript
-   window.addEventListener('unload', () => {
-     element.removeEventListener('click', handler);
-   });
-   ```
+*Maintained by the Mind Grace Development Team.*
 
 ---
 
-## Testing Checklist
-
-Before deploying any script:
-
-- [ ] Works without JavaScript (progressive enhancement)
-- [ ] Keyboard accessible (tab, enter, escape)
-- [ ] Screen reader compatible (ARIA attributes)
-- [ ] Mobile touch friendly
-- [ ] Respects reduced motion preference
-- [ ] No console errors
-- [ ] No memory leaks (check DevTools)
-- [ ] Performs well on slow devices
-- [ ] Degrades gracefully in older browsers
-
----
-
-## Debugging Tips
-
-1. **Check Console:** Look for errors in browser DevTools
-2. **Verify Selectors:** Ensure CSS selectors match HTML
-3. **Test Without JS:** Disable JavaScript to verify baseline
-4. **Use Breakpoints:** Set breakpoints in DevTools Sources tab
-5. **Log State:** Add `console.log()` for state debugging
-6. **Check Network:** Verify scripts are loading (no 404s)
-
----
-
-## Related Directories
-
-- `/css/` — Core stylesheets
-- `/css-tools/` — Tool-specific stylesheets
-- `/res/` — Static resources
-- `/blog/` — Blog content and templates
-
----
-
-## Future Enhancements
-
-Potential additions:
-
-1. **Service Worker:** Offline support for tools
-2. **Analytics:** Privacy-respecting usage tracking
-3. **Form Validation:** Client-side validation with accessible errors
-4. **Search:** Site-wide search functionality
-5. **Notifications:** Toast notifications for user feedback
-6. **State Management:** Simple state store for complex tools
-
-Any additions should follow existing patterns and maintain the vanilla JS, no-framework philosophy.
+*Would you like to draft the initial implementation for `main.js` now, or shall we start with one of the therapeutic tools?*
