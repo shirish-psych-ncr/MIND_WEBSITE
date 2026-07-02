@@ -1,5 +1,5 @@
 # MEMORY_STATE [MG-CLINIC]
-**ID:** mg-003 | **T:** +12 | **Φ:** AGENT_BIBLE_v5.0_SYNCED
+**ID:** mg-004 | **T:** +13 | **Φ:** AGENT_BIBLE_v5.1_SYNCED
 
 ## Δ_LOG (Session Evolution)
 | Turn | Event | Impact | Cross-Ref |
@@ -7,14 +7,15 @@
 | T0-T10 | INIT→v4.0 | KB foundation, orientation-rules, JS-fallbacks | Instructions.md §KB_STATS |
 | T11 | FIX: index.html mobile-nav | Popup modal design, sectioned nav (gallery/blog/book/tools) | design.md §4, pages.md §7 |
 | T12 | OPTIMIZE: All 7 KB docs v5.0 | Dedup general concepts, unify cross-refs, compress for single-run access | All docs |
+| T13 | SYNC: Link audit fixes v3.1 | Fixed blog paths, created legal pages, updated external URLs, synced README | pages.md §7-§10, README.md |
 
 ## STATE (Current Snapshot) → See Instructions.md §KB_READ
 - **Stack:** Static-HTML | CSS-Layers | VanillaJS → worker.md §1
 - **Core:** index.html (~1000L, v4.0-popup-nav), styles.css (2089L, v3.0), app.js (685L) → worker.md §10
-- **Pages:** 28 HTML (core×16, tools×7, blog×13, templates×6) → pages.md §1-§4
+- **Pages:** 40+ HTML (core×20, tools×7, blog×13, templates×6) → pages.md §1-§4
 - **Tools:** /css-tools/* (7 therapeutic CSS), /js/* (11 scripts) → tools.md §1-§2
 - **Blog:** /blog/* (index, adult, children, pages/adult×5, pages/child×4) → pages.md §3
-- **Assets:** /res/* (22 images), /blog/res/* (4 images) → assets.md §1-§2
+- **Assets:** /res/* (22+ images), /blog/res/* (4 images), /images/* (hero SVGs) → assets.md §1-§2
 - **Docs:** AGENT_BIBLE(7): memory, design, worker, Instructions, assets, pages, tools → Instructions.md §KB_STATS
 - **Cfg:** WCAG-2.2-AA, CSP-Strict, Orientation-First, FluidType, Semantic-HTML, Graceful-Fallbacks → design.md §6, worker.md §5
 
@@ -43,4 +44,4 @@
 10. ✓ Mobile nav popup → Centered modal, sectioned (Explore/Resources/Tools), smooth animation → design.md §4
 11. Next: T12 (Audit all HTML for orientation-responsiveness, update all pages with orientation-ruling) → worker.md §1, pages.md §7, design.md §5
 
-*Auto-update T+1. Append-delta. Dense shorthand. Compress pre/post. KB: 7-docs v5.0. All cross-linked. Orientation-first. Popup-nav implemented. END_ON_SYNC.*
+*Auto-update T+1. Append-delta. Dense shorthand. Compress pre/post. KB: 7-docs v5.1. All cross-linked. Orientation-first. Popup-nav implemented. Legal pages restored. External URLs verified. Blog paths corrected. README synced. END_ON_SYNC.*
