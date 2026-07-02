@@ -1,8 +1,8 @@
 # Dependencies
 node_modules/
 
-# Production build outputs
-dist/
+# Production build outputs dist/
+
 
 .astro/
 
