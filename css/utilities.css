@@ -29,13 +29,18 @@
 
 /* --- Color Utilities --- */
 .text-primary  { color: var(--primary); }
-.text-accent   { color: var(--accent); }
+.text-accent   { color: var(--text-accent); }
 .text-support  { color: var(--support); }
 .text-dark     { color: var(--text-dark); }
 .text-body     { color: var(--text-body); }
 .text-muted    { color: var(--text-muted); }
 .text-light    { color: var(--text-light); }
 .text-white    { color: var(--white); }
+.text-olive    { color: var(--olive); }
+.text-on-plum  { color: var(--text-on-plum); }
+.text-on-plum-cream { color: var(--text-on-plum-cream); }
+.text-on-plum-lime  { color: var(--text-on-plum-lime); }
+.text-on-plum-terracotta { color: var(--text-on-plum-terracotta); }
 
 .bg-white      { background-color: var(--white); }
 .bg-off-white  { background-color: var(--off-white); }
@@ -44,6 +49,8 @@
 .bg-cream      { background-color: var(--cream); }
 .bg-primary    { background-color: var(--primary); }
 .bg-accent     { background-color: var(--accent); }
+.bg-light      { background-color: var(--light-bg); }
+.bg-olive      { background-color: var(--olive); }
 
 /* --- Spacing --- */
 .m-0    { margin: 0; }

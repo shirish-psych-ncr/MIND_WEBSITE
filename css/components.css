@@ -5,14 +5,15 @@
 
 /* --- 1. CARD SYSTEM (The Foundation) --- */
 .card {
-  background: var(--white);
+  background: var(--primary);
   border-radius: var(--radius-lg);
   padding: clamp(1.5rem, 3vw, 2.5rem);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
-  border: 1px solid rgba(103, 27, 80, 0.08);
+  border: 1px solid rgba(103, 27, 80, 0.3);
   display: flex;
   flex-direction: column;
+  color: var(--text-on-plum);
 }
 
 .card:hover {
@@ -22,7 +23,7 @@
 
 .card-compact { padding: var(--space-lg); }
 .card-elevated { box-shadow: var(--shadow-md); border: none; }
-.card-outlined { background: transparent; border: 2px solid rgba(103, 27, 80, 0.15); box-shadow: none; }
+.card-outlined { background: transparent; border: 2px solid rgba(103, 27, 80, 0.5); box-shadow: none; }
 
 /* --- 2. GRID SYSTEMS --- */
 .grid-container {
@@ -113,16 +114,43 @@
   height: 32px;
 }
 
-/* --- 6. ICON BOXES --- */
-.icon-box {
-  width: clamp(40px, 6vw, 48px);
-  height: clamp(40px, 6vw, 48px);
-  background: linear-gradient(135deg, var(--soft-plum), rgba(243, 70, 116, 0.15));
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Card content styling for plum islands */
+.card h3 {
+  color: var(--text-on-plum);
+  font-family: 'Playfair Display', serif;
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-md);
+}
+
+.card p {
+  color: var(--text-on-plum-cream);
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
   margin-bottom: var(--space-lg);
+}
+
+.card-link {
+  color: var(--text-on-plum-lime);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: all var(--transition-fast);
+  margin-top: auto;
+}
+
+.card-link:hover {
+  color: var(--text-on-plum-terracotta);
+}
+
+/* Icon box inside cards - updated for plum background */
+.card .card-icon {
+  background: linear-gradient(135deg, rgba(227, 151, 116, 0.2), rgba(211, 240, 105, 0.1));
+}
+
+.card .card-icon svg {
+  stroke: var(--text-on-plum-lime);
 }
 
 /* --- 6. INTERACTIVE & FORM COMPONENTS --- */
@@ -229,6 +257,6 @@
 .section-white { background: var(--white); }
 .section-blush { background: var(--blush); }
 .section-cream { background: var(--cream); }
-.section-plum { background: var(--soft-plum); }
+.section-plum { background: var(--primary); color: var(--text-on-plum); }
 .section-light { background: var(--light-bg); }
-.section-primary { background: var(--primary); color: var(--white); }
+.section-primary { background: var(--primary); color: var(--text-on-plum); }
