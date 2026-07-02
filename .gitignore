@@ -4,8 +4,6 @@
 __pycache__/
 *.o
 *.obj
-dist/
-build/
 target/
 *.class
 *.exe
@@ -43,6 +41,7 @@ zig*/
 .DS_Store
 Thumbs.db
 
+<<<<<< plum-and-peach-website-redesign-0bd43
 # Coverage
 coverage/
 htmlcov/
@@ -72,3 +71,10 @@ htmlcov/
 *.tar.xz
 *.tar.zst
 ```
+=======
+# Logs
+*.log
+.tonfotos.ini
+```
+
+
