@@ -7,22 +7,32 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  // Initialize all modules
-  initMobileNav();
-  initHeaderScroll();
+  // Batch DOM reads to prevent layout thrashing
+  const domElements = {
+    mobileNavTrigger: document.querySelector('.mobile-nav-trigger'),
+    mobileNavPanel: document.getElementById('mobile-nav-panel'),
+    mobileNavOverlay: document.getElementById('mobile-nav-overlay'),
+    siteHeader: document.querySelector('.site-header'),
+    reveals: document.querySelectorAll('.reveal'),
+    accordionTriggers: document.querySelectorAll('[data-accordion-trigger]'),
+    forms: document.querySelectorAll('form[novalidate]'),
+    counters: document.querySelectorAll('.stat-number')
+  };
+  
+  // Initialize all modules with batched DOM access
+  initMobileNav(domElements);
+  initHeaderScroll(domElements);
   initViewportResize();
-  initScrollReveal();
-  initAccordion();
-  initFormValidation();
-  initCounters();
+  initScrollReveal(domElements);
+  initAccordion(domElements);
+  initFormValidation(domElements);
+  initCounters(domElements);
 
   // ==========================================
   // 1. Mobile Navigation
   // ==========================================
-  function initMobileNav() {
-    const trigger = document.querySelector('.mobile-nav-trigger');
-    const panel = document.getElementById('mobile-nav-panel');
-    const overlay = document.getElementById('mobile-nav-overlay');
+  function initMobileNav(el) {
+    const { mobileNavTrigger: trigger, mobileNavPanel: panel, mobileNavOverlay: overlay } = el;
     const closeBtn = panel?.querySelector('.close-mobile-menu');
     const navLinks = panel?.querySelectorAll('a[href]') || [];
     
@@ -84,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 2. Header Scroll Effect
   // ==========================================
-  function initHeaderScroll() {
-    const header = document.querySelector('.site-header');
+  function initHeaderScroll(el) {
+    const { siteHeader: header } = el;
     if (!header) return;
     
     let ticking = false;
@@ -132,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 4. Reveal Animations on Scroll
   // ==========================================
-  function initScrollReveal() {
-    const reveals = document.querySelectorAll('.reveal');
+  function initScrollReveal(el) {
+    const { reveals } = el;
     if (!reveals.length || !('IntersectionObserver' in window)) return;
     
     const observer = new IntersectionObserver((entries, obs) => {
@@ -151,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 5. Accordion Functionality
   // ==========================================
-  function initAccordion() {
-    const triggers = document.querySelectorAll('[data-accordion-trigger]');
+  function initAccordion(el) {
+    const { accordionTriggers: triggers } = el;
     
     triggers.forEach(trigger => {
       trigger.addEventListener('click', () => {
@@ -179,8 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 6. Form Validation Enhancements
   // ==========================================
-  function initFormValidation() {
-    const forms = document.querySelectorAll('form[novalidate]');
+  function initFormValidation(el) {
+    const { forms } = el;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
     forms.forEach(form => {
@@ -188,14 +198,25 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         let isValid = true;
         
-        const requiredFields = form.querySelectorAll('[required]');
+        // Batch read required fields
+        const requiredFields = Array.from(form.querySelectorAll('[required]'));
+        const fieldStates = new Map();
         
+        // First pass: collect all field states (batched read)
         requiredFields.forEach(field => {
+          const value = field.value.trim();
+          const isEmail = field.type === 'email';
+          fieldStates.set(field, { value, isEmail, isValid: true });
+        });
+        
+        // Second pass: validate all fields (batched write)
+        requiredFields.forEach(field => {
+          const state = fieldStates.get(field);
           let fieldIsValid = true;
           
-          if (!field.value.trim()) {
+          if (!state.value) {
             fieldIsValid = false;
-          } else if (field.type === 'email' && !emailRegex.test(field.value)) {
+          } else if (state.isEmail && !emailRegex.test(state.value)) {
             fieldIsValid = false;
           }
           
@@ -206,8 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!field.parentNode.querySelector('.error-message')) {
               const errorMsg = document.createElement('span');
               errorMsg.className = 'error-message';
-              errorMsg.textContent = field.type === 'email' && field.value.trim() 
-                ? 'Please enter a valid email' 
+              errorMsg.textContent = state.isEmail && state.value
+                ? 'Please enter a valid email'
                 : 'This field is required';
               errorMsg.style.cssText = 'color: var(--error); font-size: 0.75rem; margin-top: var(--space-xs); display: block;';
               field.parentNode.appendChild(errorMsg);
@@ -236,8 +257,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 7. Number Counter Animation (rAF Optimized)
   // ==========================================
-  function initCounters() {
-    const counters = document.querySelectorAll('.stat-number');
+  function initCounters(el) {
+    const { counters } = el;
     if (!counters.length || !('IntersectionObserver' in window)) return;
   
     const observer = new IntersectionObserver((entries, obs) => {

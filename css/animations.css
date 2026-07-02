@@ -16,11 +16,11 @@
 
 /* Float animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  33% { transform: translateY(-10px) rotate(1deg); }
-  66% { transform: translateY(-5px) rotate(-1deg); }
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  33% { transform: translate3d(0, -10px, 0) rotate(1deg); }
+  66% { transform: translate3d(0, -5px, 0) rotate(-1deg); }
 }
-@keyframes floatGentle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes floatGentle { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -8px, 0); } }
 
 /* Pulse animations */
 @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.9; } }
@@ -48,8 +48,8 @@
 .animate-fade-in-left { animation: fadeInLeft 0.6s ease forwards; will-change: transform, opacity; }
 .animate-fade-in-right { animation: fadeInRight 0.6s ease forwards; will-change: transform, opacity; }
 .animate-scale-in { animation: scaleIn 0.5s ease forwards; will-change: transform, opacity; }
-.animate-float { animation: float 3s ease-in-out infinite; will-change: transform; }
-.animate-float-gentle { animation: floatGentle 2.5s ease-in-out infinite; will-change: transform; }
+.animate-float { animation: float 3s ease-in-out infinite; will-change: transform; transform: translateZ(0); }
+.animate-float-gentle { animation: floatGentle 2.5s ease-in-out infinite; will-change: transform; transform: translateZ(0); }
 .animate-pulse { animation: pulse 2s ease-in-out infinite; will-change: transform; }
 .animate-pulse-soft { animation: pulseSoft 2s ease-in-out infinite; will-change: box-shadow; }
 .animate-shimmer { background: linear-gradient(90deg, var(--soft-plum) 25%, var(--blush) 50%, var(--soft-plum) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
