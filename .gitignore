@@ -1,2 +1,1 @@
-```
-.tonfotos.ini
+Nothing should be ignored in this case, as the changes consist only of CSS and JavaScript source files without any build artifacts, dependencies, or temporary files.
