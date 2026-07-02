@@ -105,7 +105,7 @@
 }
 
 .desktop-nav .cta-button {
-  background: var(--accent);
+  background: var(--primary);
   color: var(--white);
   font-weight: 600;
   white-space: nowrap;
@@ -113,7 +113,7 @@
 }
 
 .desktop-nav .cta-button:hover {
-  background: var(--primary);
+  background: var(--text-dark);
   color: var(--white);
 }
 
@@ -206,7 +206,7 @@
 .mobile-nav-panel ul { list-style: none; display: flex; flex-direction: column; gap: var(--space-xs); }
 .mobile-nav-section-title { font-size: var(--fs-tiny); text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 600; margin-bottom: var(--space-md); padding-left: var(--space-md); }
 .mobile-nav-panel a { display: block; text-decoration: none; color: var(--text-dark); font-weight: 500; padding: var(--space-md) var(--space-lg); border-radius: var(--radius-md); transition: all var(--transition-fast); }
-.mobile-nav-panel a:hover { background: var(--soft-plum); color: var(--accent); }
+.mobile-nav-panel a:hover { background: var(--soft-plum); color: var(--primary); }
 
 /* --- HERO SECTION --- */
 .hero {
@@ -225,7 +225,7 @@
 .hero-badge {
   display: inline-block;
   background: linear-gradient(135deg, rgba(227, 151, 116, 0.15), rgba(103, 27, 80, 0.08));
-  color: var(--primary);
+  color: var(--text-dark);
   font-weight: 600;
   font-size: var(--fs-small);
   padding: var(--space-xs) var(--space-md);
@@ -235,8 +235,8 @@
 }
 
 .hero h1 { font-family: 'Playfair Display', serif; font-size: var(--fs-h1); font-weight: 700; line-height: var(--lh-tight); color: var(--text-dark); margin-bottom: var(--space-md); }
-.hero h1 .highlight { color: var(--accent); position: relative; }
-.hero-subtitle { font-size: var(--fs-body); color: var(--text-body); margin-bottom: var(--space-lg); line-height: var(--lh-relaxed); }
+.hero h1 .highlight { color: var(--text-dark); position: relative; }
+.hero-subtitle { font-size: var(--fs-body); color: var(--text-dark); margin-bottom: var(--space-lg); line-height: var(--lh-relaxed); }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: var(--space-md); }
 
 /* Hero Visual */
@@ -254,7 +254,7 @@
 
 .section-header { text-align: center; width: var(--narrow); margin: 0 auto var(--space-xl); }
 .section-header h2 { font-family: 'Playfair Display', serif; font-size: var(--fs-h2); font-weight: 700; color: var(--text-dark); margin-bottom: var(--space-md); }
-.section-header p { color: var(--text-body); font-size: var(--fs-body); }
+.section-header p { color: var(--text-dark); font-size: var(--fs-body); }
 
 .main-grid {
   display: grid;
@@ -283,6 +283,48 @@
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Mobile sticky header with calendar icon only */
+  .site-header .header-inner {
+    padding: var(--space-sm) var(--space-lg);
+  }
+  
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .logo-link {
+    display: none;
+  }
+  
+  .mobile-nav-trigger {
+    display: flex;
+  }
+  
+  /* Calendar icon button for booking */
+  .mobile-book-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin-left: auto;
+  }
+  
+  .mobile-book-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--text-on-plum);
+  }
+}
+
+/* Desktop: hide mobile book button */
+@media (min-width: 769px) {
+  .mobile-book-btn {
+    display: none;
   }
 }
 
@@ -313,8 +355,8 @@
   min-height: clamp(48px, 8vh, 56px);
 }
 
-.btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 14px rgba(227, 151, 116, 0.3); }
-.btn-primary:hover { background: var(--primary); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(103, 27, 80, 0.4); }
+.btn-primary { background: var(--primary); color: var(--white); box-shadow: 0 4px 14px rgba(103, 27, 80, 0.3); }
+.btn-primary:hover { background: var(--text-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(103, 27, 80, 0.4); }
 .btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
 .btn-secondary:hover { background: rgba(103, 27, 80, 0.08); }
 
