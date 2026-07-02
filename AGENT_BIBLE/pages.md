@@ -1,100 +1,107 @@
-# PAGE_REGISTRY [v3.1] - Mind Grace Neuropsychiatric Clinic
-**Mode:** Machine-Readable | **Format:** Dense-Table | **Update:** Auto(post-turn) | **Last Verified:** 2024-07-02
+# 📄 PAGE REGISTRY — Mind Grace Neuropsychiatric Clinic
+**Version:** 6.0 | **Format:** Machine-Readable | **Last Verified:** 2025-07-02
 
-## 1. CORE_PAGES (Root level)
-| File | Lines | Purpose | Layout | Status | Notes |
-|---|---|---|---|---|---|
-| index.html | 390 | Homepage, Hero, Services, Trust | BaseLayout | ✓ MobileFirst | Template reference for all pages |
-| about.html | 375 | Clinic story, Team, Approach | BaseLayout | ✓ Refactored v2.0 | Features grid, check-list, gallery |
-| services.html | 369 | Service listing, Categories | BaseLayout | ✓ Refactored v2.0 | Adult + Child sections, card grids |
-| conditions.html | 1 | Condition encyclopedia | BaseLayout | ⚠️ Broken/Empty | TODO: Rewrite from scratch |
-| doctors.html | 580 | Dual-clinician profile (Psychiatrist + Psychologist) | ClinicianLayout | ✓ Complete v3.0 | Jump buttons, service comparison, Dr. Anita + Dr. Sana |
-| doctor.html | 296 | Legacy single doctor profile | BaseLayout | ⚠️ Deprecated | Superseded by doctors.html; keep for SEO redirect |
-| location.html | 366 | Map, Address, Directions | BaseLayout | ✓ Fixed v2.0 | Header repaired, Leaflet map integrated |
-| contact.html | 496 | Contact form, Info cards | BaseLayout | ✓ Refactored v2.0 | Form validation, emergency notice |
-| faq.html | 253 | FAQ accordion | BaseLayout | ✓ Refactored v2.0 | Categorized accordions |
-| testimonials.html | 257 | Patient reviews | BaseLayout | ✓ Refactored v2.0 | Grid layout, star ratings, Google Maps link fixed |
-| process.html | 393 | Treatment journey steps | BaseLayout | ✓ Refactored v2.0 | Timeline, numbered steps |
-| fees.html | 515 | Pricing tables, Insurance | BaseLayout | ✓ Refactored v2.0 | Transparent pricing, payment methods |
-| consent.html | 8 | Consent forms | LegalLayout | ⚠️ Minimal | TODO: Full rewrite needed |
-| privacy.html | 8 | Privacy policy | LegalLayout | ⚠️ Minimal | TODO: Full rewrite needed |
-| emergency.html | 439 | Crisis resources | EmergencyLayout | ✓ Refactored v2.0 | High contrast, helplines prominent |
-| thank-you.html | 88 | Form success message | BaseLayout | ⚠️ Basic | TODO: Enhance with next steps |
-| 404.html | 23 | Error page | ErrorLayout | ⚠️ Basic | TODO: Branded error page |
-| aasha.html | 249 | Aasha NGO initiative | BaseLayout | ✓ Refactored v2.0 | Animated counters, programs grid |
-| approach.html | 306 | Biopsychosocial model | BaseLayout | ✓ Refactored v2.0 | Pillar cards, methodology |
-| resources.html | 195 | Resource library | BaseLayout | ⚠️ Pending | TODO: Responsive rewrite |
-| gallery.html | 214 | Photo gallery | BaseLayout | ⚠️ Pending | TODO: Masonry layout |
-| terms.html | ~200 | Terms & Conditions | LegalLayout | ✓ Created | Legal page restored |
-| disclaimer.html | ~200 | Medical Disclaimer | LegalLayout | ✓ Created | Disclaimer page restored |
-| mind-grace.html | ~400 | Clinic overview | BaseLayout | ✓ Present | Alternative landing page |
+## 1. CORE PAGES (Root Level)
 
-## 2. TOOL_PAGES (Interactive therapy tools)
-| File | Lines | Tool | CSS | JS | Status |
-|---|---|---|---|---|---|
-| guided-breathing.html | 128 | Box breathing exercise | tools-breathing.css | tools-breathing.js | ⚠️ TODO: Hydrate |
-| butterfly-tapper.html | 44 | Butterfly tapper EMDR | tools-butterfly.css | tools-butterfly.js | ⚠️ TODO: Hydrate |
-| eye-movement.html | 109 | EMDR eye movement | tools-eye.css | tools-eye.js | ⚠️ TODO: Hydrate |
-| hypnos-fractal.html | 173 | Hypnotic fractal visual | tools-fractal.css | tools-fractal.js | ⚠️ TODO: Hydrate |
-| horizon-scan.html | 107 | Horizon scanning calm | tools-horizon.css | tools-horizon.js | ⚠️ TODO: Hydrate |
-| leaf-on-stream.html | 35 | Leaf meditation flow | tools-leaf.css | tools-leaf.js | ⚠️ TODO: Hydrate |
-| book.html | 340 | Booking form gate | tools-book.css | tools-book.js | ✓ Refactored v2.0 |
+| File | Current URL | Target URL | Lines | Purpose | Layout | Status |
+|------|-------------|------------|-------|---------|--------|--------|
+| index.html | `/` | `/` | 390 | Homepage, Hero, Services, Trust | BaseLayout | ✅ Complete |
+| about.html | `/about.html` | `/about` | 375 | Clinic story, Team, Approach | BaseLayout | ✅ v2.0 |
+| services.html | `/services.html` | `/services` | 369 | Service listing, Categories | BaseLayout | ✅ v2.0 |
+| conditions.html | `/conditions.html` | `/conditions` | 1 | Condition encyclopedia | BaseLayout | ⚠️ Broken |
+| doctors.html | `/doctors.html` | `/doctors` | 580 | Dual-clinician profiles | ClinicianLayout | ✅ v3.0 |
+| doctor.html | `/doctor.html` | → `/doctors` | 296 | Legacy single profile | BaseLayout | ⚠️ Redirect |
+| location.html | `/location.html` | `/location` | 366 | Map, Address, Directions | BaseLayout | ✅ v2.0 |
+| contact.html | `/contact.html` | `/contact` | 496 | Contact form, Info cards | BaseLayout | ✅ v2.0 |
+| faq.html | `/faq.html` | `/faq` | 253 | FAQ accordion | BaseLayout | ✅ v2.0 |
+| testimonials.html | `/testimonials.html` | `/testimonials` | 257 | Patient reviews | BaseLayout | ✅ v2.0 |
+| process.html | `/process.html` | `/process` | 393 | Treatment journey steps | BaseLayout | ✅ v2.0 |
+| fees.html | `/fees.html` | `/fees` | 515 | Pricing tables, Insurance | BaseLayout | ✅ v2.0 |
+| consent.html | `/consent.html` | `/legal/consent` | 8 | Consent forms | LegalLayout | ⚠️ Minimal |
+| privacy.html | `/privacy.html` | `/legal/privacy` | 8 | Privacy policy | LegalLayout | ⚠️ Minimal |
+| emergency.html | `/emergency.html` | `/emergency` | 439 | Crisis resources | EmergencyLayout | ✅ v2.0 |
+| thank-you.html | `/thank-you.html` | `/thank-you` | 88 | Form success message | BaseLayout | ⚠️ Basic |
+| 404.html | N/A | `/*` (catch-all) | 23 | Error page | ErrorLayout | ⚠️ Basic |
+| aasha.html | `/aasha.html` | `/aasha` | 249 | Aasha NGO initiative | BaseLayout | ✅ v2.0 |
+| approach.html | `/approach.html` | `/approach` | 306 | Biopsychosocial model | BaseLayout | ✅ v2.0 |
+| resources.html | `/resources.html` | `/resources` | 195 | Resource library | BaseLayout | ⏳ Pending |
+| gallery.html | `/gallery.html` | `/gallery` | 214 | Photo gallery | BaseLayout | ⏳ Pending |
+| terms.html | `/terms.html` | `/legal/terms` | ~200 | Terms & Conditions | LegalLayout | ✅ Created |
+| disclaimer.html | `/disclaimer.html` | `/legal/disclaimer` | ~200 | Medical Disclaimer | LegalLayout | ✅ Created |
+| mind-grace.html | `/mind-grace.html` | → `/` | ~400 | Alternative landing | BaseLayout | ⚠️ Duplicate |
 
-## 3. BLOG_PAGES (/blog/*)
+## 2. TOOL PAGES (Interactive Therapy)
+
+| File | Current URL | Target URL | Lines | Tool | CSS | JS | Status |
+|------|-------------|------------|-------|------|-----|----|--------|
+| guided-breathing.html | `/guided-breathing.html` | `/tools/breathing` | 128 | Box breathing | tools-breathing.css | tools-breathing.js | ⏳ Hydrate |
+| butterfly-tapper.html | `/butterfly-tapper.html` | `/tools/butterfly-tapper` | 44 | EMDR tapping | tools-butterfly.css | tools-butterfly.js | ⏳ Hydrate |
+| eye-movement.html | `/eye-movement.html` | `/tools/eye-movement` | 109 | EMDR tracking | tools-eye.css | tools-eye.js | ⏳ Hydrate |
+| hypnos-fractal.html | `/hypnos-fractal.html` | `/tools/fractal` | 173 | Hypnotic visual | tools-fractal.css | tools-fractal.js | ⏳ Hydrate |
+| horizon-scan.html | `/horizon-scan.html` | `/tools/horizon-scan` | 107 | Grounding scan | tools-horizon.css | tools-horizon.js | ⏳ Hydrate |
+| leaf-on-stream.html | `/leaf-on-stream.html` | `/tools/leaf-on-stream` | 35 | Mindfulness flow | tools-leaf.css | tools-leaf.js | ⏳ Hydrate |
+| book.html | `/book.html` | `/book` | 340 | Booking gate | tools-book.css | tools-book.js | ✅ v2.0 |
+
+## 3. BLOG PAGES (/blog/*)
+
 ### Index & Category Pages
-| File | Lines | Purpose | Config | Status |
-|---|---|---|---|---|
-| blog/index.html | 224 | Blog homepage | - | ✓ Fixed navigation |
-| blog/adult.html | 200 | Adult mental health articles | blog-config-adult.js | ✓ Fixed navigation |
-| blog/child.html | 23 | Child development articles | blog-config-child.js | ⚠️ TODO: Responsive |
-| blog/children.html | ~200 | Child development hub | - | ✓ Fixed navigation paths |
+| File | Current URL | Target URL | Lines | Purpose | Config | Status |
+|------|-------------|------------|-------|---------|--------|--------|
+| blog/index.html | `/blog/` | `/blog` | 224 | Blog homepage | - | ✅ Fixed nav |
+| blog/adult.html | `/blog/adult.html` | `/blog/adult` | 200 | Adult mental health | blog-config-adult.js | ✅ Fixed nav |
+| blog/child.html | `/blog/child.html` | `/blog/child` | 23 | Child development | blog-config-child.js | ⏳ Responsive |
+| blog/children.html | `/blog/children.html` | → `/blog/child` | ~200 | Child hub (duplicate) | - | ⚠️ Redirect |
 
-### Adult Articles (/blog/pages/adult/*)
-| File | Lines | Topic | Status |
-|---|---|---|---|
-| overthinking-vs-anxiety.html | 31 | Differential diagnosis | ⚠️ Minimal content |
-| scheduled-worry-time-technique.html | 281 | CBT technique | ✓ Fixed relative paths (../../) |
-| sleep-and-anxiety-cycle.html | 150 | Sleep hygiene | ⚠️ Needs template |
-| stimulus-control-therapy.html | 254 | Insomnia treatment | ✓ Fixed relative paths (../../) |
-| when-to-see-a-psychiatrist.html | 35 | Help-seeking guide | ⚠️ Minimal content |
+### Adult Articles
+| File | Current URL | Target URL | Lines | Topic | Status |
+|------|-------------|------------|-------|-------|--------|
+| overthinking-vs-anxiety.html | `/blog/pages/adult/...` | `/blog/adult/overthinking-vs-anxiety` | 31 | Differential diagnosis | ⚠️ Minimal |
+| scheduled-worry-time-technique.html | `/blog/pages/adult/...` | `/blog/adult/scheduled-worry-time` | 281 | CBT technique | ✅ Paths fixed |
+| sleep-and-anxiety-cycle.html | `/blog/pages/adult/...` | `/blog/adult/sleep-anxiety-cycle` | 150 | Sleep hygiene | ⏳ Template |
+| stimulus-control-therapy.html | `/blog/pages/adult/...` | `/blog/adult/stimulus-control` | 254 | Insomnia treatment | ✅ Paths fixed |
+| when-to-see-a-psychiatrist.html | `/blog/pages/adult/...` | `/blog/adult/when-to-see-psychiatrist` | 35 | Help-seeking guide | ⚠️ Minimal |
 
-### Child Articles (/blog/pages/child/*)
-| File | Lines | Topic | Status |
-|---|---|---|---|
-| early-signs-of-autism.html | 31 | Autism screening | ⚠️ Minimal content |
-| school-concerns-and-adhd.html | 35 | ADHD in school | ⚠️ Minimal content |
-| sensory-overload-at-home.html | 31 | Sensory processing | ⚠️ Minimal content |
-| speech-delay-red-flags.html | 35 | Speech development | ⚠️ Minimal content |
+### Child Articles
+| File | Current URL | Target URL | Lines | Topic | Status |
+|------|-------------|------------|-------|-------|--------|
+| early-signs-of-autism.html | `/blog/pages/child/...` | `/blog/child/early-signs-autism` | 31 | Autism screening | ⚠️ Minimal |
+| school-concerns-and-adhd.html | `/blog/pages/child/...` | `/blog/child/adhd-school-concerns` | 35 | ADHD in school | ⚠️ Minimal |
+| sensory-overload-at-home.html | `/blog/pages/child/...` | `/blog/child/sensory-overload` | 31 | Sensory processing | ⚠️ Minimal |
+| speech-delay-red-flags.html | `/blog/pages/child/...` | `/blog/child/speech-delay-flags` | 35 | Speech development | ⚠️ Minimal |
 
-## 4. SPECIAL_PAGES
-| File | Lines | Purpose | Status |
-|---|---|---|---|
-| aasha.html | 249 | Aasha community initiative (NGO) | ✓ Refactored v2.0 |
-| approach.html | 306 | Biopsychosocial model explanation | ✓ Refactored v2.0 |
-| resources.html | 195 | Resource library | ⚠️ TODO: Responsive |
-| gallery.html | 214 | Photo gallery | ⚠️ TODO: Responsive |
+## 4. SPECIAL PAGES
 
-## 5. LAYOUT_INVENTORY
-| Layout | Used By | Components Needed | Status |
-|---|---|---|---|
-| BaseLayout | All standard pages | Header, Footer, Nav, SEO | ✓ Complete |
-| ClinicianLayout | doctors.html | JumpButtons, ServiceComparison, Timeline, CredentialCards | ✓ Complete v3.0 |
-| ArticleLayout | blog/pages/* | TOC, AuthorBio, RelatedArticles | ⚠️ TODO |
-| LegalLayout | consent, privacy | LegalNav, Disclaimer | ⚠️ TODO |
-| EmergencyLayout | emergency.html | CrisisBanner, QuickLinks, HighContrast | ✓ Complete |
-| ErrorLayout | 404.html | ErrorState, BackHome | ⚠️ TODO |
-| ToolLayout | tool pages | ToolFrame, Instructions, Reset | ⚠️ TODO |
+| File | URL | Lines | Purpose | Status |
+|------|-----|-------|---------|--------|
+| aasha.html | `/aasha` | 249 | Aasha community initiative (NGO) | ✅ v2.0 |
+| approach.html | `/approach` | 306 | Biopsychosocial model explanation | ✅ v2.0 |
+| resources.html | `/resources` | 195 | Resource library | ⏳ Pending |
+| gallery.html | `/gallery` | 214 | Photo gallery | ⏳ Pending |
 
-## 6. MIGRATION_PRIORITY (Static site maintenance)
+## 5. LAYOUT INVENTORY
+
+| Layout | Used By | Components | Status |
+|--------|---------|-----------|--------|
+| BaseLayout | All standard pages | Header, Footer, Nav, SEO | ✅ Complete |
+| ClinicianLayout | doctors.html | JumpButtons, ServiceComparison, Timeline | ✅ v3.0 |
+| ArticleLayout | blog/pages/* | TOC, AuthorBio, RelatedArticles | ⏳ TODO |
+| LegalLayout | consent, privacy, terms, disclaimer | LegalNav, Disclaimer | ⏳ TODO |
+| EmergencyLayout | emergency.html | CrisisBanner, QuickLinks, HighContrast | ✅ Complete |
+| ErrorLayout | 404.html | ErrorState, BackHome | ⏳ TODO |
+| ToolLayout | tool pages | ToolFrame, Instructions, Reset | ⏳ TODO |
+
+## 6. MIGRATION PRIORITY
+
 | Priority | Pages | Reason | Effort |
-|---|---|---|---|
+|----------|-------|--------|--------|
 | P0 | index.html, doctors.html | Homepage + Core conversion hub | Low |
 | P1 | services.html, conditions.html | Core clinical content | Medium |
 | P2 | blog/pages/* | SEO, content marketing | High |
 | P3 | tool pages | Interactive features | Medium |
 | P4 | legal, error, templates | Supporting pages | Low |
 
-## 7. INTERNAL_LINKING_AUDIT
+## 7. INTERNAL LINKING AUDIT
+
 - [x] Header navigation consistent across refactored pages
 - [x] Footer 4-column layout on all v2.0 pages
 - [x] Mobile nav toggle working on all v2.0 pages
@@ -102,7 +109,7 @@
 - [ ] Link conditions→services→doctors
 - [ ] Link articles→related conditions
 - [ ] Add footer sitemap links
-- [x] Add `doctors.html` link to main navigation (verify on all pages)
+- [x] Add `doctors.html` link to main navigation
 - [x] Update `doctor.html` content merged into `doctors.html`
 - [x] Fixed blog/pages/adult/* relative paths (../../)
 - [x] Fixed blog/children.html navigation paths
@@ -111,40 +118,117 @@
 - [x] Updated Google Maps review link in testimonials.html
 - [x] Fixed root-relative favicon paths in location.html
 
-## 8. CONTENT_GUIDELINES (From Organization Profile)
+## 8. CONTENT GUIDELINES
+
 ### Dual-Clinician Model
-- **Dr. Anita Sharma (Psychiatrist, MD):** Adult mental health, medication management, complex disorders, holistic care. MCI: 11-40210, HPR: 71-2147-5815-3754.
-- **Dr. Sana Firdous (Clinical Psychologist, M.Phil):** Child development, psychotherapy, assessments, neurodevelopmental disorders. RCI: A82170.
+- **Dr. Anita Sharma (Psychiatrist, MD):** Adult mental health, medication management
+  - MCI: 11-40210, HPR: 71-2147-5815-3754
+- **Dr. Sana Firdous (Clinical Psychologist, M.Phil):** Child development, psychotherapy
+  - RCI: A82170
 - **Shared Location:** J-123, Gamma-2, Greater Noida, UP 201308
 - **Contact:** +91-96678-63295, dranitasharma86@gmail.com
-- **Philosophy:** "Whole Person Care" - Biological, Psychological, Social pillars integrated.
 
 ### Tone Guidelines
-- **Mind Grace (Adult):** Professional, reassuring, authoritative, non-judgmental.
-- **Aasha (Child):** Warm, nurturing, hopeful, strength-focused, play-based.
-- **Emergency:** Direct, high-contrast, immediate action-oriented.
+- **Mind Grace (Adult):** Professional, reassuring, authoritative, non-judgmental
+- **Aasha (Child):** Warm, nurturing, hopeful, strength-focused, play-based
+- **Emergency:** Direct, high-contrast, immediate action-oriented
 
-*Ref: All .html files verified via wc -l and grep. Auto-update on page changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §1-§9, worker.md §1-§10, ARCHITECTURE.md §5 (Dual-Clinician Model). 
+## 9. ASSET INVENTORY
 
-## 9. ASSET_INVENTORY
 | Asset Type | Location | Status | Notes |
-|---|---|---|---|
-| Clinic Logo (Pink) | res/MindGraceClinicLogo_Pink.svg | ✓ Present | Primary header logo |
-| Clinic Logo (Full) | res/Mind_Grace_Clinic_Logo.png | ✓ Present | Fallback PNG |
-| Hero Images | images/aasha-hero.svg, images/approach-hero.svg | ✓ Present | SVG hero graphics |
-| Doctor Photo | res/Dr_Anita_Sharma_Personal_Photo.jpg | ✓ Present | Dr. Anita Sharma profile |
-| Location Photos | res/Location_street_view_*.jpg | ✓ Present | Street view images |
-| Favicons | Inline base64 SVG | ✓ Present | Embedded in all pages |
-| Brochures | res/*_Brochure.png | ✓ Present | AASHA & Clinic brochures |
+|------------|----------|--------|-------|
+| Clinic Logo (Pink) | res/MindGraceClinicLogo_Pink.svg | ✅ Present | Primary header logo |
+| Clinic Logo (Full) | res/Mind_Grace_Clinic_Logo.png | ✅ Present | Fallback PNG |
+| Hero Images | images/aasha-hero.svg, images/approach-hero.svg | ✅ Present | SVG hero graphics |
+| Doctor Photo | res/Dr_Anita_Sharma_Personal_Photo.jpg | ✅ Present | Dr. Anita Sharma profile |
+| Location Photos | res/Location_street_view_*.jpg | ✅ Present | Street view images |
+| Favicons | Inline base64 SVG | ✅ Present | Embedded in all pages |
+| Brochures | res/*_Brochure.png | ✅ Present | AASHA & Clinic brochures |
 
-## 10. EXTERNAL_INTEGRATIONS
+## 10. EXTERNAL INTEGRATIONS
+
 | Service | URL | Status | Notes |
-|---|---|---|---|
-| Google Forms (Booking) | docs.google.com/forms/d/e/1FAIpQLSfr5yRtw_iWqw6rnigQ-pgw86Q_6ipIScgzS5lqf0DIdpF0ag | ✓ Active | Embedded in book.html |
-| Google Maps (Location) | maps.app.goo.gl/NorMGtR8Uqu5eM8G9 | ✓ Active | Clinic directions |
-| Google Maps (Reviews) | maps.app.goo.gl/NorMGtR8Uqu5eM8G9 | ✓ Active | Testimonials link |
-| Leaflet JS (Maps) | unpkg.com/leaflet@1.9.4 | ✓ CDN | location.html interactive map |
-| Google Fonts | fonts.googleapis.com | ✓ CDN | Inter + Playfair Display |
+|---------|-----|--------|-------|
+| Google Forms (Booking) | docs.google.com/forms/d/e/1FAIpQLSfr5yRtw_iWqw6rnigQ-pgw86Q_6ipIScgzS5lqf0DIdpF0ag | ✅ Active | Embedded in book.html |
+| Google Maps (Location) | maps.app.goo.gl/NorMGtR8Uqu5eM8G9 | ✅ Active | Clinic directions |
+| Google Maps (Reviews) | maps.app.goo.gl/NorMGtR8Uqu5eM8G9 | ✅ Active | Testimonials link |
+| Leaflet JS (Maps) | unpkg.com/leaflet@1.9.4 | ✅ CDN | location.html interactive map |
+| Google Fonts | fonts.googleapis.com | ✅ CDN | Inter + Playfair Display |
 | Domain | mindgracencr.in | ⚠️ DNS | External hosting/DNS config needed |
 
-*END_ON_SYNC.*
+## 11. URL RESTRUCTURING PLAN (v6.0)
+
+### Philosophy
+- Clean, semantic URLs without `.html` extensions
+- Hierarchical structure reflecting content relationships
+- Consistent patterns across all sections
+- SEO-friendly slugs with hyphens
+- Redirect old URLs to preserve SEO equity
+
+### URL Patterns
+
+#### Core Pages (Flat Structure)
+```
+/                    → Homepage
+/about               → About clinic
+/services            → Services overview
+/doctors             → Clinician profiles
+/location            → Clinic location
+/contact             → Contact form
+/faq                 → FAQ
+/testimonials        → Patient reviews
+/process             → Treatment process
+/fees                → Pricing & insurance
+/emergency           → Emergency resources
+/aasha               → Aasha NGO initiative
+/approach            → Our approach
+/resources           → Resource library
+/gallery             → Photo gallery
+/book                → Book appointment
+```
+
+#### Legal Pages (Grouped)
+```
+/legal/consent       → Consent forms
+/legal/privacy       → Privacy policy
+/legal/terms         → Terms & conditions
+/legal/disclaimer    → Medical disclaimer
+```
+
+#### Therapeutic Tools (Grouped)
+```
+/tools/breathing          → Guided breathing exercise
+/tools/butterfly-tapper   → Butterfly tapper EMDR
+/tools/eye-movement       → EMDR eye movement
+/tools/fractal            → Hypnotic fractal visual
+/tools/horizon-scan       → Horizon scanning calm
+/tools/leaf-on-stream     → Leaf meditation flow
+```
+
+#### Blog (Hierarchical)
+```
+/blog                     → Blog homepage
+/blog/adult               → Adult mental health category
+/blog/child               → Child development category
+/blog/adult/[slug]        → Individual adult articles
+/blog/child/[slug]        → Individual child articles
+```
+
+#### Redirects Required
+```
+/doctor.html              → 301 → /doctors
+/mind-grace.html          → 301 → /
+/blog/children.html       → 301 → /blog/child
+/*.html                   → 301 → /* (strip .html)
+```
+
+### Implementation Notes
+1. Use Netlify/Vercel redirect rules for .html stripping
+2. Update all internal links to use clean URLs
+3. Add canonical tags pointing to clean URLs
+4. Generate sitemap.xml with clean URLs only
+5. Implement 301 redirects for all old URLs
+
+---
+
+*Ref: All .html files verified via wc -l and grep. Auto-update on page changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §1-§9, worker.md §1-§10, ARCHITECTURE.md §5. END_ON_SYNC.*
