@@ -13,23 +13,14 @@
   <title>You Deserve Care | Mind Grace Neuropsychiatric Clinic — Psychiatrist in Greater Noida</title>
   <meta name="description" content="You matter. Consult Dr Anita Sharma at Mind Grace Neuropsychiatric Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care."/>
   
+  <!-- Primary canonical (absolute URL) -->
   <link rel="canonical" href="https://mindgracencr.in/"/>
   
+  <!-- Alternate language versions -->
+  <link rel="alternate" hreflang="en-IN" href="https://mindgracencr.in/"/>
+  <link rel="alternate" hreflang="x-default" href="https://mindgracencr.in/"/>
+  
   <link rel="preload" href="res/MindGraceClinicLogo_Pink.svg" as="image" type="image/svg+xml"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"/>
-
-  <link rel="stylesheet" href="./css/base.css"/>
-  <link rel="stylesheet" href="./css/layout.css"/>
-  <link rel="stylesheet" href="./css/components.css"/>
-  <link rel="stylesheet" href="./css/utilities.css"/>
-  <link rel="stylesheet" href="./css/animations.css"/>
-
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
-  <link rel="canonical" href="./"/>
-  <link rel="alternate" hreflang="en-IN" href="./"/>
-  <link rel="alternate" hreflang="x-default" href="./"/>
   
   <!-- OpenGraph / Social Sharing -->
   <meta property="og:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>
@@ -65,26 +56,45 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
   <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
   
-  <!-- Fonts -->
+  <!-- Fonts - Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"/>
   
-  <!-- Stylesheets - Modular CSS Architecture -->
-  <link rel="stylesheet" href="./css/base.css"/>
-  <link rel="stylesheet" href="./css/layout.css"/>
-  <link rel="stylesheet" href="./css/components.css"/>
-  <link rel="stylesheet" href="./css/utilities.css"/>
-  <link rel="stylesheet" href="./css/animations.css"/>
-  
-  <!-- Critical inline CSS for above-the-fold only -->
+  <!-- Critical CSS inlined for above-the-fold -->
   <style>
     /* Font fallback during load */
     body { font-display: swap; }
     
     /* Ensure smooth first paint */
     .hero-content { opacity: 1; }
+    
+    /* Critical layout styles */
+    .site-header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .hero-section{min-height:80vh;display:flex;align-items:center}
   </style>
+  
+  <!-- Defer non-critical CSS -->
+  <link rel="preload" href="./css/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" href="./css/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" href="./css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" href="./css/utilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" href="./css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/layout.css"/>
+    <link rel="stylesheet" href="./css/components.css"/>
+    <link rel="stylesheet" href="./css/utilities.css"/>
+    <link rel="stylesheet" href="./css/animations.css"/>
+  </noscript>
+  
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="./res/mind-grace-entry-n-reception.webp" imagesrcset="./res/mind-grace-entry-n-reception.webp 800w, ./res/mind-grace-entry-n-reception.jpg 800w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high"/>
+  
+  <!-- Security Headers (where supported) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://docs.google.com https://www.google.com;"/>
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN"/>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 </head>
 <body>
   <!-- SKIP LINK -->
@@ -94,7 +104,7 @@
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
-        <img src="./res/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img"/>
+        <img src="./res/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
         <div>
           <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
           <div class="logo-tagline">Where You Come First</div>
@@ -218,15 +228,18 @@
 
         <div class="hero-visual">
           <div class="hero-image-wrapper animate-float-gentle">
-            <img
-              src="./res/mind-grace-entry-n-reception.jpg"
-              alt="Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic"
-              class="hero-image"
-              loading="lazy"
-              decoding="async"
-              width="400"
-              height="500"
-            />
+            <picture>
+              <source srcset="./res/mind-grace-entry-n-reception.webp" type="image/webp"/>
+              <img
+                src="./res/mind-grace-entry-n-reception.jpg"
+                alt="Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic"
+                class="hero-image"
+                fetchpriority="high"
+                decoding="async"
+                width="800"
+                height="533"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -249,8 +262,8 @@
           </div>
           <h3>Psychiatric Care</h3>
           <p>Expert diagnosis and treatment for anxiety, depression, bipolar disorder, OCD, and more—with you at the center.</p>
-          <a href="services.html#psychiatry" class="card-link">
-            Learn More
+          <a href="services.html#psychiatry" class="card-link" aria-label="Learn more about our Psychiatry services">
+            Learn more about our Psychiatry services
             <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M9 18l6-6-6-6"/>
             </svg>

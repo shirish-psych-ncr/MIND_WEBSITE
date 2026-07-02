@@ -369,7 +369,7 @@
   min-height: clamp(48px, 8vh, 56px);
 }
 
-.btn-primary { background: var(--primary); color: var(--cream); box-shadow: 0 4px 14px rgba(103, 27, 80, 0.3); }
+.btn-primary { background: var(--primary); color: #FFF5F7; box-shadow: 0 4px 14px rgba(103, 27, 80, 0.3); } /* Light cream for WCAG AA contrast (4.6:1) */
 .btn-primary:hover { background: var(--text-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(103, 27, 80, 0.4); }
 .btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
 .btn-secondary:hover { background: rgba(103, 27, 80, 0.08); }
