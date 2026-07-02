@@ -1,9 +1,9 @@
 # Mind Grace Neuropsychiatric Clinic — Official Website Repository
 
 [![Live Site](https://img.shields.io/badge/live-site-671B50?style=flat-square)](https://shirish-psych-ncr.github.io/MIND_WEBSITE/)
-[![Technology](https://img.shields.io/badge/HTML5-CSS3-Vanilla%20JS-success?style=flat-square)]()
-[![Architecture](https://img.shields.io/badge/architecture-modular--CSS-blue?style=flat-square)]()
-[![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1-AA-orange?style=flat-square)]()
+[![Technology](https://img.shields.io/badge/HTML5-CSS3-Vanilla%20JS-success?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Architecture](https://img.shields.io/badge/architecture-modular--CSS-blue?style=flat-square)](./ARCHITECTURE.md)
+[![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1-AA-orange?style=flat-square)](https://www.w3.org/WAI/WCAG21/quickref/)
 
 ## Overview
 
