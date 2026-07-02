@@ -1,5 +1,5 @@
 # MEMORY_STATE [MG-CLINIC]
-**ID:** mg-004 | **T:** +13 | **Φ:** AGENT_BIBLE_v5.1_SYNCED
+**ID:** mg-005 | **T:** +14 | **Φ:** AGENT_BIBLE_v7.0_SYNCED
 
 ## Δ_LOG (Session Evolution)
 | Turn | Event | Impact | Cross-Ref |
@@ -8,6 +8,9 @@
 | T11 | FIX: index.html mobile-nav | Popup modal design, sectioned nav (gallery/blog/book/tools) | design.md §4, pages.md §7 |
 | T12 | OPTIMIZE: All 7 KB docs v5.0 | Dedup general concepts, unify cross-refs, compress for single-run access | All docs |
 | T13 | SYNC: Link audit fixes v3.1 | Fixed blog paths, created legal pages, updated external URLs, synced README | pages.md §7-§10, README.md |
+| T14 | RESTRUCTURE: URL plan v7.0 | Complete file inventory (80 files), detailed URL mappings, implementation guide | _RESTRUCTURE_PLAN.md, pages.md §11 |
+| T14 | UPDATE: Instructions.md v7.0 | Added restructure plan to registry, repo stats, current priorities | Instructions.md §Registry |
+| T14 | SYNC: All AGENT_BIBLE docs | 11 documents now synced v7.0 with cross-refs | All docs |
 
 ## STATE (Current Snapshot) → See Instructions.md §KB_READ
 - **Stack:** Static-HTML | CSS-Layers | VanillaJS → worker.md §1

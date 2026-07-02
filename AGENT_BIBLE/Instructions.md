@@ -1,153 +1,130 @@
-# AGENT_BIBLE [v5.0] — Mind Grace Neuropsychiatric Clinic
-**Role:** Sr-FE/Design-Lead | **Mode:** Clinical-Grade | **Update:** Auto(post-turn) | **KB:** 7-docs | **Sync:** End-turn
+# 📖 AGENT BIBLE — Mind Grace Neuropsychiatric Clinic
+**Version:** 7.0 | **Last Updated:** Current Session | **Status:** Active
 
-## AXIOMS (Priority Order)
-1. **Trust:** Empathetic UI, therapeutic communication
-2. **A11y:** WCAG 2.2 AA (0 violations mandatory)
-3. **Perf:** LCP<2.5s, INP<200ms, CLS<0.1, JS<50kb
-4. **Maintain:** TS-Strict, Zod, CSS-Layers, no hardcoded values
-5. **Responsive:** Orientation-first (landscape/portrait), JS-driven, graceful fallbacks
+## 🎯 Purpose
+
+This knowledge base serves as the **cognitive architecture** for autonomous AI agents working on the Mind Grace website. It externalizes engineering intent, design philosophy, architectural decisions, and operational continuity so that any AI or human can understand and modify this system without losing coherence.
 
 ---
 
-## KB_READ (Pre-Turn, Order Matters) → memory.md §STATE
-| File | Purpose | Pri | Read-Time | Cross-Ref |
-|---|---|---|---|---|
-| memory.md | State, Δ-log, queue, recover | P0 | First | worker.md §10 |
-| design.md | Tokens, layout, a11y, breakpoints, orientation-rules | P0 | Second | assets.md §6 |
-| worker.md | Arch, hydration, security, QA, JS-patterns | P0 | Third | tools.md §2 |
-| assets.md | Asset registry, optimization | P1 | Fourth | design.md §7 |
-| pages.md | Page inventory, migration | P1 | Fifth | worker.md §1 |
-| tools.md | Tool specs, hydration matrix | P1 | Sixth | design.md §8 |
-| Instructions.md | Constraints, workflow (this doc) | P1 | Seventh | memory.md §Δ_LOG |
+## 📚 Document Registry
+
+| Document | Purpose | Reading Order | Cross-Ref |
+|----------|---------|---------------|-----------|
+| [`Instructions.md`](./Instructions.md) | Operating protocol, constraints, workflow | 1st | All docs |
+| [`memory.md`](./memory.md) | Session state, delta log, pending queue | 2nd | worker.md §10 |
+| [`design.md`](./design.md) | Design tokens, layout rules, accessibility | 3rd | assets.md §6 |
+| [`worker.md`](./worker.md) | Architecture, hydration, security, QA | 4th | tools.md §2 |
+| [`pages.md`](./pages.md) | Page inventory, URL structure, migration | 5th | worker.md §1 |
+| [`tools.md`](./tools.md) | Therapeutic tool specifications | 6th | design.md §8 |
+| [`assets.md`](./assets.md) | Asset registry, optimization pipeline | 7th | design.md §7 |
+| [`ARCHITECTURE.md`](./ARCHITECTURE.md) | System overview, dual-clinician model | Reference | pages.md §8 |
+| [`Bible_Generator.md`](./Bible_Generator.md) | Engineering philosophy, AI cognition | Philosophy | Instructions.md §1 |
+| [`_RESTRUCTURE_PLAN.md`](_RESTRUCTURE_PLAN.md) | URL restructuring implementation guide | P0 Priority | pages.md §11 |
 
 ---
 
-## UPDATE_CYCLE (Post-Turn, Auto) → memory.md §Δ_LOG
-```
-FOR each turn:
-  1. READ all 7 KB docs (memory→Instructions order)
-  2. EXECUTE task (plan→execute→validate per worker.md §6)
-  3. COMPRESS memory.md (Δ-log append, state sync, queue update)
-  4. SYNC design.md (new tokens/components/breakpoints/orientation-rules per §1-§6)
-  5. SYNC worker.md (new scripts/tools/deploy/JS-patterns per §2-§9)
-  6. SYNC assets.md (if asset changes per §1-§5)
-  7. SYNC pages.md (if page changes per §1-§6)
-  8. SYNC tools.md (if tool changes per §1-§5)
-  9. REFRESH Instructions.md (workflow/constraint updates)
-  10. COMPRESS all (remove redundancy, dense shorthand)
-```
+## 🔁 Update Cycle (Auto-Execute Every Turn)
 
----
-
-## CONSTRAINTS (Hard Rules) → design.md §6, worker.md §8
-- **CSS:** Vanilla + Cascade Layers ONLY. NO Tailwind, NO inline styles, NO !important
-- **Values:** Tokens only `var(--x)`. NO hex, NO px, NO magic numbers → design.md §1-§2
-- **TS:** Strict mode. NO `any`, type all props, Zod for content → worker.md §7
-- **HTML:** Semantic. NO div-soup, use `<main>`, `<article>`, `<nav>`, `<section>`
-- **JS:** Hydrate surgically. NO framework bloat, vanilla islands, graceful fallbacks → tools.md §2
-- **Assets:** All from `/res/` or `/blog/res/`. Preload LCP, lazy load rest → assets.md §6
-- **Motion:** Respect `prefers-reduced-motion`. Disable parallax/fades if set → design.md §6
-- **Responsive:** Orientation-first detection, JS-driven nav/forms, CSS for layout → design.md §5
-
----
-
-## RESPONSIVE_RULES (Orientation-First, MobileFirst) → design.md §4-§5
-- **THE RULING:** Single orientation detection (`@media (orientation: landscape/portrait)`) → body class `.view-mode-horizontal` or `.view-mode-vertical`
-- **Portrait (<768px default):** Single column, full-width buttons, stacked hero, mobile nav popup modal
-- **Landscape (≥768px):** 2-3 column grids, side-by-side hero, desktop nav
-- **Mobile Nav Popup:** Centered modal (min(90vw, 420px)), sectioned (Explore/Resources/Tools), smooth scale-in animation
-- **Type:** Fluid `clamp(min, vw, max)` for ALL headings → design.md §3
-- **Touch:** min-h:44px, min-w:44px for interactive elements → design.md §6
-- **Grid:** 1col → 2col → 3col (card-grid, kpi-grid) via orientation class
-- **Images:** srcset for responsive, loading="lazy" for non-LCP → assets.md §5
-- **JS Fallbacks:** Graceful degradation if JS disabled, progressive enhancement → worker.md §4
-
----
-
-## ASSET_PIPELINE → assets.md §1-§6
-- **Logo:** `/res/Mind_Grace_Clinic_Logo_Pink.svg` (preload, fetchpriority=high, inline SVG in header)
-- **Doctor:** `/res/Dr_Anita_Sharma_Personal_Photo.jpg` (preload, sizes attribute)
-- **Location:** `/res/Location_street_view_*.jpg` (lazy load)
-- **Interiors:** `/res/mind-grace-*.jpg` (lazy load, gallery)
-- **AASHA:** `/res/aasha-*.jpg` (lazy load, OT/Speech/SpecEd pages)
-- **Brochures:** `/res/*_Brochure.png` (lazy load, resources)
-- **Blog Assets:** `/blog/res/*.png, *.jpg` (lazy load, article covers)
-- **Icons:** SVG inline or sprite, `aria-hidden="true"` if decorative, base64 for favicon
-- **Tools:** `/css-tools/*.css` (@layer components), `/js/tools-*.js` (defer/hydrate)
-- **Format:** WebP/AVIF preferred (TODO: convert), fallback PNG/JPG → assets.md §5
-- **Optimization:** Compress >2MB files, add width/height to prevent CLS
-
----
-
-## SECURITY_PROTOCOL (Clinical-Grade) → worker.md §5, §8
-- **Forms:** Honeypot field, rate limit (5/IP/10min), server-side sanitize (Zod)
-- **Headers:** CSP (strict), HSTS (preload), X-Frame (DENY), Referrer-Policy
-- **Data:** NO PII in localStorage/sessionStorage, NO client-side medical data
-- **HTTPS:** Enforced, NO mixed content, secure cookies only
-- **Third-Party:** Minimize, sandbox embeds, no tracking without consent
-
----
-
-## ERROR_HANDLING (Decision Tree) → memory.md §QUEUE
-- **Unsure:** → Check design.md first, then worker.md, then assets.md
-- **Blocked:** → Add to memory.md [Pending] with reason, propose workaround
-- **Conflict:** A11y > Perf > Design > Features (priority order)
-- **Missing Asset:** → Check /res/, /blog/res/, if missing add to memory.md [Queue]
-- **Broken Link:** → Add to pages.md audit, fix or redirect → pages.md §7
-- **JS Fails:** → CSS-only fallbacks, graceful degradation → worker.md §4
-
----
-
-## WORKFLOW (Single Loop, Auto-Update) → memory.md §Δ_LOG
 ```
 START_TURN:
-  READ memory.md → Get state, queue, recover, delta
-  READ design.md → Get tokens, layout, a11y, breakpoints, orientation-rules
-  READ worker.md → Get arch, hydration, security, QA, JS-patterns
-  READ assets.md → Get asset paths, optimization status
-  READ pages.md → Get page structure, migration priority
-  READ tools.md → Get tool specs, hydration matrix
+  1. READ memory.md → Get state, queue, recover
+  2. READ design.md → Get tokens, layout, a11y
+  3. READ worker.md → Get arch, hydration, security
+  4. READ assets.md → Get asset paths, optimization
+  5. READ pages.md → Get page structure, URLs
+  6. READ tools.md → Get tool specs, hydration
+  7. READ Instructions.md → Get constraints, workflow
   
-  EXECUTE_TASK:
-    - Plan (reference KB, check constraints per worker.md §6)
-    - Execute (code, edit, create per worker.md §4)
-    - Validate (a11y, perf, design, clinical per worker.md §6)
+EXECUTE_TASK:
+  - Plan (reference KB, check constraints)
+  - Execute (code, edit, create)
+  - Validate (a11y, perf, design, clinical)
   
-  END_TURN:
-    COMPRESS memory.md (append Δ, update state/queue/recover)
-    SYNC design.md (if new tokens/components/orientation-rules per §1-§6)
-    SYNC worker.md (if new scripts/tools/JS-patterns per §2-§9)
-    SYNC assets.md (if asset changes per §1-§5)
-    SYNC pages.md (if page changes per §1-§6)
-    SYNC tools.md (if tool changes per §1-§5)
-    REFRESH Instructions.md (if workflow/constraint changes)
-    
-  REPEAT (infinite loop, context-persistent)
+END_TURN:
+  1. APPEND Δ to memory.md §Δ_LOG
+  2. SYNC design.md (if new tokens/components)
+  3. SYNC worker.md (if new scripts/tools)
+  4. SYNC assets.md (if asset changes)
+  5. SYNC pages.md (if page/URL changes)
+  6. SYNC tools.md (if tool changes)
+  7. REFRESH Instructions.md (if workflow changes)
+  8. COMPRESS all docs (remove redundancy)
 ```
 
 ---
 
-## COMPRESSION_FORMAT (Token-Efficient) → memory.md §COMPRESSION
-- **Shorthand:** Δ (delta), → (becomes), ✓ (done), × (fail), ~ (approx), ×5 (repeat 5 times)
-- **Tables:** Markdown tables for dense data (file|size|use|status)
-- **Code:** Minimal examples, omit boilerplate, reference by name
-- **Tokens:** Reference by name only (`--color-plum-600`), no full definitions
-- **State:** Single line per item, no prose, bullet points only
-- **Paths:** Relative from /workspace (e.g., `/res/logo.png`, `/css-tools/*.css`)
+## ⚡ Core Axioms (Priority Order)
+
+1. **Trust:** Empathetic UI, therapeutic communication, clinical-grade professionalism
+2. **Accessibility:** WCAG 2.2 AA (0 violations mandatory)
+3. **Performance:** LCP<2.5s, INP<200ms, CLS<0.1, JS<50kb
+4. **Maintainability:** TypeScript-strict, Zod validation, CSS-layers, no hardcoded values
+5. **Responsive:** Orientation-first detection (landscape/portrait), JS-driven graceful fallbacks
 
 ---
 
-## KB_STATS (Current State) → memory.md §STATE
-| Doc | Lines | Size | Purpose | Last Updated | Cross-Ref |
-|---|---|---|---|---|---|
-| memory.md | ~50L | ~2.5KB | Session state, delta log | T12 | worker.md §10 |
-| design.md | ~80L | ~3.5KB | Tokens, layout, a11y, orientation | T12 | assets.md §6 |
-| worker.md | ~120L | ~5KB | Arch, hydration, security, JS | T12 | tools.md §2 |
-| assets.md | ~85L | ~4KB | Asset registry, opt queue | T12 | design.md §7 |
-| pages.md | ~100L | ~5KB | Page inventory, migration | T12 | worker.md §1 |
-| tools.md | ~145L | ~7KB | Tool specs, hydration | T12 | design.md §8 |
-| Instructions.md | ~160L | ~6.5KB | Protocol, workflow | T12 | memory.md §Δ_LOG |
-| **TOTAL** | **~740L** | **~33.5KB** | **7 docs v5.0** | **T12** | **All synced** |
+## 🚨 Hard Constraints
 
-*Obey protocol. Auto-update every turn. Compress pre/post. 7-doc KB v5.0. Single Source of Truth. Orientation-first responsive. Mobile nav popup implemented. END_ON_SYNC.*
+- **CSS:** Vanilla + Cascade Layers ONLY. NO Tailwind, NO inline styles, NO `!important`
+- **Values:** Design tokens only `var(--x)`. NO hex codes, NO px, NO magic numbers
+- **TypeScript:** Strict mode. NO `any`, type all props, Zod for content validation
+- **HTML:** Semantic elements. NO div-soup, use `<main>`, `<article>`, `<nav>`, `<section>`
+- **JavaScript:** Surgical hydration. NO framework bloat, vanilla islands, graceful degradation
+- **Assets:** All from `/res/` or `/blog/res/`. Preload LCP images, lazy load rest
+- **Motion:** Respect `prefers-reduced-motion`. Disable parallax/fades if set
+- **Security:** NO PII in localStorage, CSP strict, HSTS preload, rate limiting
+
+---
+
+## 📱 Responsive Philosophy (Orientation-First)
+
+**THE RULING:** Single orientation detection via `@media (orientation: landscape/portrait)`
+
+| Mode | Body Class | Layout | Navigation |
+|------|------------|--------|------------|
+| Portrait | `.view-mode-vertical` | Single column, stacked hero, full-width buttons | Mobile popup modal (centered, sectioned) |
+| Landscape | `.view-mode-horizontal` | 2-3 column grids, side-by-side hero | Desktop nav bar |
+
+- **Typography:** Fluid `clamp(min, vw, max)` for ALL headings
+- **Touch Targets:** min-h:44px, min-w:44px for interactive elements
+- **Grid Progression:** 1col → 2col → 3col via orientation class
+- **JS Fallbacks:** Graceful degradation if JavaScript disabled
+
+---
+
+## 🔗 Quick References
+
+- **Live Site:** [mindgracencr.in](https://mindgracencr.in/)
+- **GitHub:** [shirish-psych-ncr/MIND_WEBSITE](https://github.com/shirish-psych-ncr/MIND_WEBSITE)
+- **Clinic Address:** J-123, Gamma-2, Greater Noida, UP 201308
+- **Contact:** +91-96678-63295, dranitasharma86@gmail.com
+
+---
+
+## 📊 Repository Stats (v7.0)
+
+- **Total Files:** 80 (HTML, MD, JS, JSON)
+- **Core Pages:** 20 root-level HTML files
+- **Tool Pages:** 7 interactive therapy modules
+- **Blog Pages:** 13 (index + categories + articles)
+- **Templates:** 3 template files
+- **Legacy Files:** 3 (_legacy/*)
+- **Documentation:** 11 MD files (AGENT_BIBLE)
+
+---
+
+## 🎯 Current Priorities
+
+| Priority | Task | Ref Doc | Status |
+|----------|------|---------|--------|
+| P0 | URL Restructuring Implementation | _RESTRUCTURE_PLAN.md | Ready |
+| P0 | Zod schemas (src/content/config.ts) | worker.md §7 | Pending |
+| P1 | Fix conditions.html (1 line broken) | ARCHITECTURE.md §8 | Pending |
+| P1 | Expand legal pages (consent, privacy) | pages.md §2 | Pending |
+| P2 | Hydrate 7 therapeutic tools | tools.md §1 | Pending |
+| P2 | Blog article templates | pages.md §3 | Pending |
+
+---
+
+*This is a living document. Auto-update every turn. Compress pre/post. END_ON_SYNC.*
