@@ -74,6 +74,7 @@ parts/
 sdist/
 var/
 wheels/
+.tonfotos.ini
 *.egg-info/
 .installed.cfg
 *.egg-info/
