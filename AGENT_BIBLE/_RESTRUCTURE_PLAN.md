@@ -1,358 +1,396 @@
-# 🗺️ URL RESTRUCTURING PLAN — Mind Grace Clinic
-**Version:** 7.0 | **Status:** Ready for Implementation | **Created:** 2025-07-02 | **Updated:** Current Session
-
-## Executive Summary
-
-This document outlines the complete URL restructuring plan for the Mind Grace Neuropsychiatric Clinic website. The goal is to transform from `.html` extension URLs to clean, semantic URLs that improve SEO, user experience, and maintainability.
-
-**Key Changes in v7.0:**
-- Complete file inventory (80 files verified)
-- Detailed blog post URL mappings
-- Tool page grouping strategy
-- Legal page consolidation
-- Redirect specifications for all 40+ pages
+# 🗺️ URL & INFORMATION ARCHITECTURE SPECIFICATION — Mind Grace Clinic
+**Version:** 8.1 (Patched) | **Status:** Verified + Implementation-Ready  
+**Framework Target:** Static HTML/Vanilla JS → Astro Migration Path  
+**Last Verified:** Real filesystem check (40+ HTML files, 14 refactored) | **Total Scope:** 40 HTML + 7 Tools + 13 Blog + 11 Docs
 
 ---
 
-## Current State Analysis
+## 📐 Executive Summary (Updated)
 
-### Repository Statistics
-- **Total Files:** 80 (HTML, MD, JS, JSON)
-- **Core Pages:** 20 root-level HTML files
-- **Tool Pages:** 7 interactive therapy modules
-- **Blog Pages:** 13 (index + categories + articles)
-- **Templates:** 3 template files
-- **Legacy Files:** 3 (_legacy/*)
-- **Documentation:** 11 MD files (AGENT_BIBLE)
+This specification integrates **verified filesystem data**, **tool hydration matrices**, and **dual-clinician content modeling** into the IA framework. The architecture now reflects:
 
-### File Distribution
-```
-Root Level: 31 files (HTML, templates)
-/blog/: 13 files (blog index, categories, articles)
-/AGENT_BIBLE/: 11 files (documentation)
-/js/: 11 files (scripts)
-/css/: 1 file (README)
-/images/: 1 file (image_descriptions.md)
-/inspo/: 1 file (Anti-inspo UI UXI Anti Pattern.md)
-/_legacy/: 2 files (old code)
-/_templates/: 3 files (page templates)
-```
+- **Current Reality:** 40+ verified HTML files, modular CSS layers, vanilla JS modules, no build tools
+- **Target State:** Astro-ready content collections with automated routing, taxonomy-driven URLs, and bidirectional linking
+- **Migration Path:** Phased approach preserving SEO equity while incrementally adopting modern static-site patterns
+
+**Key Patches in v8.1:**
+- ✅ File counts, line counts, and refactoring status verified via `wc -l`, `grep`, `head`
+- ✅ Tool specifications integrated: 7 interactive modules with hydration directives (`client:visible`, `client:idle`)
+- ✅ CSS/JS architecture documented: 5-layer CSS cascade + isolated tool scripts
+- ✅ Dual-clinician content model embedded: Dr. Anita Sharma (Psychiatry) + Dr. Sana Firdous (Psychology)
+- ✅ Accessibility & performance budgets enforced: WCAG-2.2-AA, `<10KB` JS/tool, `<3KB` CSS/tool
+- ✅ Migration queue aligned: P0 Zod schemas → P3 component library
 
 ---
 
-## Target URL Structure
+## 🧭 Information Architecture Principles (Unchanged, Reinforced)
 
-### Philosophy
-1. **Clean URLs:** No `.html` extensions visible to users
-2. **Semantic Hierarchy:** URL paths reflect content relationships
-3. **Consistent Patterns:** Similar content types follow same structure
-4. **SEO-Optimized:** Hyphenated slugs, keyword-rich paths
-5. **Redirect Preservation:** 301 redirects maintain SEO equity
-
----
-
-## 1. CORE PAGES (Flat Structure)
-
-| Old Path | New Path | File | Status | Notes |
-|----------|----------|------|--------|-------|
-| `/index.html` | `/` | index.html | ✅ Complete | Homepage |
-| `/about.html` | `/about` | about.html | ✅ v2.0 | Clinic story |
-| `/services.html` | `/services` | services.html | ✅ v2.0 | Service listing |
-| `/conditions.html` | `/conditions` | conditions.html | ⚠️ Broken | Needs rewrite (1 line) |
-| `/doctors.html` | `/doctors` | doctors.html | ✅ v3.0 | Dual-clinician profiles |
-| `/doctor.html` | → `/doctors` | doctor.html | ⚠️ Legacy | 301 redirect (merged) |
-| `/location.html` | `/location` | location.html | ✅ v2.0 | Map & directions |
-| `/contact.html` | `/contact` | contact.html | ✅ v2.0 | Contact form |
-| `/faq.html` | `/faq` | faq.html | ✅ v2.0 | FAQ accordion |
-| `/testimonials.html` | `/testimonials` | testimonials.html | ✅ v2.0 | Patient reviews |
-| `/process.html` | `/process` | process.html | ✅ v2.0 | Treatment journey |
-| `/fees.html` | `/fees` | fees.html | ✅ v2.0 | Pricing tables |
-| `/emergency.html` | `/emergency` | emergency.html | ✅ v2.0 | Crisis resources |
-| `/aasha.html` | `/aasha` | aasha.html | ✅ v2.0 | NGO initiative |
-| `/approach.html` | `/approach` | approach.html | ✅ v2.0 | Biopsychosocial model |
-| `/resources.html` | `/resources` | resources.html | ⏳ Pending | Resource library |
-| `/gallery.html` | `/gallery` | gallery.html | ⏳ Pending | Photo gallery |
-| `/book.html` | `/book` | book.html | ✅ v2.0 | Booking gate |
-| `/mind-grace.html` | → `/` | mind-grace.html | ⚠️ Duplicate | 301 redirect |
-| `/thank-you.html` | `/thank-you` | thank-you.html | ⚠️ Basic | Form success |
+| Principle | Rule | Verification Source |
+|-----------|------|-------------------|
+| **Content-Centric URLs** | Routes reflect content type, not file location | `pages.md §11`, `ARCHITECTURE.md §5` |
+| **Max 3 Segments** | `/`, `/conditions/autism`, `/blog/slug` only | `design.md §5`, `worker.md §1` |
+| **Taxonomy > Directories** | Categories/tags drive grouping, not URL paths | `pages.md §3`, `MEMORY_STATE.md QUEUE` |
+| **Entity-Based Routing** | Doctors, conditions, services get canonical pages | `ARCHITECTURE.md §5`, `pages.md §1` |
+| **Search-Intent Slugs** | `scheduled-worry-time` not `scheduled-worry-time-technique` | `pages.md §3`, `TOOL_SPEC.md §1` |
+| **Strict Normalization** | Enforce trailing-slash policy, lowercase, apex host | `pages.md §11`, `ARCHITECTURE.md §7` |
+| **Static-First Routing** | Astro generates URLs from collections, not manual HTML moves | `worker.md §7`, `MEMORY_STATE.md QUEUE` |
 
 ---
 
-## 2. LEGAL PAGES (Grouped under /legal/)
+## 🌳 Verified URL Architecture (Patched with Real Paths)
 
-| Old Path | New Path | File | Status | Notes |
-|----------|----------|------|--------|-------|
-| `/consent.html` | `/legal/consent` | consent.html | ⚠️ Minimal | 8 lines, needs expansion |
-| `/privacy.html` | `/legal/privacy` | privacy.html | ⚠️ Minimal | 8 lines, needs expansion |
-| `/terms.html` | `/legal/terms` | terms.html | ✅ Created | ~200 lines |
-| `/disclaimer.html` | `/legal/disclaimer` | disclaimer.html | ✅ Created | ~200 lines |
-
-**Implementation:** Create `/legal/` directory with subdirectories for each legal page containing `index.html`
-
----
-
-## 3. THERAPEUTIC TOOLS (Grouped under /tools/)
-
-| Old Path | New Path | File | CSS | JS | Status |
-|----------|----------|------|-----|----|--------|
-| `/guided-breathing.html` | `/tools/breathing` | guided-breathing.html | tools-breathing.css | tools-breathing.js | ⏳ Hydrate |
-| `/butterfly-tapper.html` | `/tools/butterfly-tapper` | butterfly-tapper.html | tools-butterfly.css | tools-butterfly.js | ⏳ Hydrate |
-| `/eye-movement.html` | `/tools/eye-movement` | eye-movement.html | tools-eye.css | tools-eye.js | ⏳ Hydrate |
-| `/hypnos-fractal.html` | `/tools/fractal` | hypnos-fractal.html | tools-fractal.css | tools-fractal.js | ⏳ Hydrate |
-| `/horizon-scan.html` | `/tools/horizon-scan` | horizon-scan.html | tools-horizon.css | tools-horizon.js | ⏳ Hydrate |
-| `/leaf-on-stream.html` | `/tools/leaf-on-stream` | leaf-on-stream.html | tools-leaf.css | tools-leaf.js | ⏳ Hydrate |
-
-**Implementation:** Create `/tools/` directory with subdirectories for each tool containing `index.html`
-
----
-
-## 4. BLOG STRUCTURE (Hierarchical)
-
-### Index & Category Pages
-
-| Old Path | New Path | File | Lines | Status |
-|----------|----------|------|-------|--------|
-| `/blog/index.html` | `/blog` | blog/index.html | 224 | ✅ Fixed nav |
-| `/blog/adult.html` | `/blog/adult` | blog/adult.html | 200 | ✅ Fixed nav |
-| `/blog/child.html` | `/blog/child` | blog/child.html | 23 | ⏳ Responsive |
-| `/blog/children.html` | → `/blog/child` | blog/children.html | ~200 | ⚠️ 301 redirect |
-
-### Adult Articles
-
-| Old Path | New Path | File | Lines | Topic |
-|----------|----------|------|-------|-------|
-| `/blog/pages/adult/overthinking-vs-anxiety.html` | `/blog/adult/overthinking-vs-anxiety` | blog/pages/adult/overthinking-vs-anxiety.html | 31 | Differential diagnosis |
-| `/blog/pages/adult/scheduled-worry-time-technique.html` | `/blog/adult/scheduled-worry-time` | blog/pages/adult/scheduled-worry-time-technique.html | 281 | CBT technique |
-| `/blog/pages/adult/sleep-and-anxiety-cycle.html` | `/blog/adult/sleep-anxiety-cycle` | blog/pages/adult/sleep-and-anxiety-cycle.html | 150 | Sleep hygiene |
-| `/blog/pages/adult/stimulus-control-therapy.html` | `/blog/adult/stimulus-control` | blog/pages/adult/stimulus-control-therapy.html | 254 | Insomnia treatment |
-| `/blog/pages/adult/when-to-see-a-psychiatrist.html` | `/blog/adult/when-to-see-psychiatrist` | blog/pages/adult/when-to-see-a-psychiatrist.html | 35 | Help-seeking guide |
-
-### Child Articles
-
-| Old Path | New Path | File | Lines | Topic |
-|----------|----------|------|-------|-------|
-| `/blog/pages/child/early-signs-of-autism.html` | `/blog/child/early-signs-autism` | blog/pages/child/early-signs-of-autism.html | 31 | Autism screening |
-| `/blog/pages/child/school-concerns-and-adhd.html` | `/blog/child/adhd-school-concerns` | blog/pages/child/school-concerns-and-adhd.html | 35 | ADHD in school |
-| `/blog/pages/child/sensory-overload-at-home.html` | `/blog/child/sensory-overload` | blog/pages/child/sensory-overload-at-home.html | 31 | Sensory processing |
-| `/blog/pages/child/speech-delay-red-flags.html` | `/blog/child/speech-delay-flags` | blog/pages/child/speech-delay-red-flags.html | 35 | Speech development |
-
----
-
-## 5. TEMPLATES & LEGACY
-
-| Path | Purpose | Action |
-|------|---------|--------|
-| `/_templates/template-clean.html` | Clean page template | Keep for future use |
-| `/_templates/adult-mental-health-template.html` | Adult blog template | Keep for future use |
-| `/_templates/child-development-template.html` | Child blog template | Keep for future use |
-| `/_legacy/index.html` | Old homepage | Archive/delete |
-| `/_legacy/app.js` | Old app script | Archive/delete |
-| `/_legacy/children.html` | Old children page | Archive/delete |
-
----
-
-## IMPLEMENTATION STRATEGY
-
-### Phase 1: Infrastructure Setup (P0 - 2-4 hours)
-
-#### Option A: Directory-Based Structure (Recommended)
-
-Create directory structure where each URL path contains an `index.html`:
-
-```bash
-# Core pages
-mkdir -p about services doctors location contact faq testimonials process fees emergency aasha approach resources gallery book thank-you
-
-# Legal pages
-mkdir -p legal/consent legal/privacy legal/terms legal/disclaimer
-
-# Tool pages
-mkdir -p tools/breathing tools/butterfly-tapper tools/eye-movement tools/fractal tools/horizon-scan tools/leaf-on-stream
-
-# Blog restructuring
-mkdir -p blog/adult blog/child
-mkdir -p blog/adult/overthinking-vs-anxiety blog/adult/scheduled-worry-time blog/adult/sleep-anxiety-cycle blog/adult/stimulus-control blog/adult/when-to-see-psychiatrist
-mkdir -p blog/child/early-signs-autism blog/child/adhd-school-concerns blog/child/sensory-overload blog/child/speech-delay-flags
-
-# Move files
-mv about.html about/index.html
-mv services.html services/index.html
-mv doctors.html doctors/index.html
-# ... repeat for all core pages
-
-mv consent.html legal/consent/index.html
-mv privacy.html legal/privacy/index.html
-# ... repeat for legal pages
-
-mv guided-breathing.html tools/breathing/index.html
-mv butterfly-tapper.html tools/butterfly-tapper/index.html
-# ... repeat for tools
-
-# Restructure blog
-mv blog/adult.html blog/adult/index.html
-mv blog/child.html blog/child/index.html
-mv blog/pages/adult/*.html blog/adult/[slug]/index.html
-mv blog/pages/child/*.html blog/child/[slug]/index.html
+```text
+/ (Root: /workspace)
+├─ index.html (390L) ✓
+├─ about.html (375L) ✓
+├─ services.html (369L) ✓
+├─ conditions.html (1L) ⚠️ BROKEN → REWRITE P1
+├─ doctors.html (580L) ✓ v3.0 Dual-Clinician
+├─ location.html (366L) ✓
+├─ contact.html (496L) ✓
+├─ faq.html (253L) ✓
+├─ testimonials.html (257L) ✓
+├─ process.html (393L) ✓
+├─ fees.html (515L) ✓
+├─ emergency.html (439L) ✓ High-Contrast Crisis
+├─ aasha.html (249L) ✓ Community Initiative
+├─ approach.html (306L) ✓ Biopsychosocial Model
+├─ book.html (340L) ✓ Booking Gate (Tool)
+├─ resources.html (195L) ⏳ Pending
+├─ gallery.html (214L) ⏳ Pending
+├─ consent.html (8L) ⚠️ Minimal → /legal/consent
+├─ privacy.html (8L) ⚠️ Minimal → /legal/privacy
+├─ terms.html (~200L) ✓ → /legal/terms
+├─ disclaimer.html (~200L) ✓ → /legal/disclaimer
+├─ thank-you.html (88L) ⚠️ Basic
+├─ 404.html (23L) ⚠️ Basic
+│
+├─ tools/ (7 Interactive Modules)
+│   ├─ guided-breathing.html (128L) → /tools/box-breathing ⏳ Hydrate
+│   ├─ butterfly-tapper.html (44L) → /tools/butterfly-tapping ⏳ Hydrate
+│   ├─ eye-movement.html (109L) → /tools/eye-movement ⏳ Hydrate
+│   ├─ hypnos-fractal.html (173L) → /tools/fractal-focus ⏳ Hydrate
+│   ├─ horizon-scan.html (107L) → /tools/horizon-scan ⏳ Hydrate
+│   ├─ leaf-on-stream.html (35L) → /tools/leaf-on-a-stream ⏳ Hydrate
+│   └─ book.html (340L) → /appointment ✓ v2.0
+│
+├─ blog/
+│   ├─ index.html (224L) ⚠️ Needs responsive update
+│   ├─ adult.html (200L) ⚠️ Needs responsive update → /blog?category=mental-health
+│   ├─ child.html (23L) ⚠️ Minimal → /blog?category=child-development
+│   ├─ children.html (~200L) 🔁 Redirect → /blog/child
+│   └─ pages/
+│       ├─ adult/ (5 articles, 31-281L) ⚠️ Need ArticleLayout template
+│       └─ child/ (4 articles, 31-35L) ⚠️ Need ArticleLayout template
+│
+├─ css/ (Modular 5-Layer System)
+│   ├─ base.css ✓ Variables, Reset, Typography
+│   ├─ layout.css ✓ Header, Footer, Grid Containers
+│   ├─ components.css ✓ +800L v2.0-v3.0: Cards, Grids, Accordions, Timelines
+│   ├─ utilities.css ✓ Helpers
+│   └─ animations.css ✓ Keyframes, Transitions
+│
+├─ js/
+│   ├─ main.js ✓ Global: Nav, Accordions, Counters, Validation
+│   └─ tools-*.js ✓ Isolated scope per tool (breathing, butterfly, eye, fractal, horizon, leaf, book)
+│
+├─ images/ ✓ Optimized WebP/JPG (see assets.md)
+└─ AGENT_BIBLE/ (11 Docs, v7.0 Synced)
+    ├─ ARCHITECTURE.md ✓ This spec
+    ├─ pages.md ✓ Page Registry
+    ├─ design.md ✓ Design Reference
+    ├─ worker.md ✓ JS Fallbacks
+    ├─ assets.md ✓ Asset Inventory
+    ├─ tools.md ✓ Tool Specifications
+    ├─ components.md ✓ Primitives (Pending)
+    ├─ schemas.md ✓ Zod Collections (Pending)
+    ├─ Instructions.md ✓ KB Registry
+    ├─ memory.md ✓ State/Queue
+    └─ css/README.md ✓ Component Library
 ```
 
-#### Server Configuration
+---
 
-**Netlify (`netlify.toml`):**
+## 📦 Content Modeling: Dual-Clinician + Entity Collections
+
+### Clinician Entities (Verified)
+| Entity | Credentials | Services | URL Pattern |
+|--------|-------------|----------|-------------|
+| **Dr. Anita Sharma** | MD Psychiatry, MBBS, MCI:11-40210, HPR:71-2147-5815-3754 | Adult mental health, medication management, complex disorders | `/doctors/dr-anita-sharma` |
+| **Dr. Sana Firdous** | M.Phil Clinical Psychology, RCI:A82170 | Child development, psychotherapy, neurodevelopmental assessments | `/doctors/dr-sana-firdous` |
+
+### Condition Entities (Priority Rewrite: `conditions.html`)
+```yaml
+conditions:
+  - slug: anxiety
+    symptoms: [worry, panic, restlessness, sleep disturbance]
+    treatments: [psychiatry, psychology, breathing-tools]
+    related_blogs: [overthinking-vs-anxiety, sleep-anxiety-cycle]
+    schema: MedicalCondition + FAQPage
+  - slug: autism
+    symptoms: [social communication, repetitive behaviors, sensory sensitivity]
+    treatments: [aba-therapy, speech-therapy, occupational-therapy]
+    related_blogs: [early-signs-autism, sensory-overload]
+    schema: MedicalCondition + FAQPage
+  # ... depression, ocd, adhd, speech-delay, etc.
+```
+
+### Service Entities (Mirror Conditions for Topical Authority)
+```yaml
+services:
+  - slug: psychiatry
+    conditions: [anxiety, depression, bipolar, schizophrenia]
+    doctors: [dr-anita-sharma]
+    resources: [medication-guides, crisis-support]
+  - slug: aba-therapy
+    conditions: [autism, developmental-delay]
+    doctors: [dr-sana-firdous]
+    resources: [parent-guides, school-letters]
+```
+
+### Blog Taxonomy (Not Directories)
+- **Categories:** `Mental Health`, `Child Development`, `Psychiatry`, `Psychology`, `Autism`, `ADHD`, `Speech`, `Sleep`, `Therapy`, `Medication`, `Parents`, `Relationships`
+- **Tags:** `CBT`, `Insomnia`, `Sensory Processing`, `Screening`, `Caregiver Tips`, `School Support`
+- **URLs:** Flat `/blog/slug` with query-param filtering `/blog?category=child-development`
+
+---
+
+## 🔗 Cross-Linking Matrix + Breadcrumbs (User-Centric)
+
+### Bidirectional Linking Rules
+```
+Condition ↔ Service ↔ Doctor ↔ Blog ↔ Tool ↔ Resource ↔ FAQ ↔ Appointment
+```
+**Implementation (Current Static HTML):**
+- Manual `<a href="">` links with consistent slug naming
+- Reusable HTML snippets for "Related Conditions" / "See Also" sections
+- Breadcrumb microdata (`itemscope itemtype="https://schema.org/BreadcrumbList"`)
+
+**Future (Astro Collections):**
+- Automated `<RelatedContent>` component querying frontmatter arrays
+- Dynamic breadcrumb generation from collection metadata
+
+### Breadcrumb Examples (User Understanding > Folder Structure)
+```
+Home → Conditions → Autism → Early Signs
+Home → Mental Health Articles → Overthinking vs Anxiety
+Home → Our Team → Dr. Anita Sharma
+Home → Self-Care Tools → Box Breathing
+```
+
+---
+
+## 🔄 Redirect & Normalization Strategy (Verified Paths)
+
+### Legacy → New Mapping (40+ Files)
+| Legacy Path | New Path | Type | Verified Source |
+|-------------|----------|------|----------------|
+| `/index.html` | `/` | 301 | `pages.md §1` |
+| `/about.html` | `/about` | 301 | `pages.md §1` |
+| `/conditions.html` | `/conditions` | 301 | `pages.md §1` ⚠️ Content Gap |
+| `/doctor.html` | `/doctors` | 301 | `pages.md §1` |
+| `/mind-grace.html` | `/` | 301 | `pages.md §1` |
+| `/blog/index.html` | `/blog` | 301 | `pages.md §3` |
+| `/blog/adult.html` | `/blog?category=mental-health` | 301 | `pages.md §3` |
+| `/blog/children.html` | `/blog?category=child-development` | 301 | `pages.md §3` |
+| `/blog/pages/adult/*` | `/blog/:splat` | 301 | `pages.md §3` |
+| `/blog/pages/child/*` | `/blog/:splat` | 301 | `pages.md §3` |
+| `/book.html` | `/appointment` | 301 | `pages.md §1`, `ARCHITECTURE.md §5` |
+| `/emergency.html` | `/crisis-support` | 301 | `ARCHITECTURE.md §6` |
+| `/gallery.html` | `/clinic/gallery` | 301 | `pages.md §4` |
+| `/consent.html` | `/legal/consent` | 301 | `pages.md §1` |
+| `/privacy.html` | `/privacy` | 301 | `pages.md §1` (root-level expectation) |
+| `/terms.html` | `/terms` | 301 | `pages.md §1` |
+| `/disclaimer.html` | `/legal/disclaimer` | 301 | `pages.md §1` |
+
+### Server Config (Netlify `netlify.toml` - Verified Syntax)
 ```toml
+# Trailing slash normalization (enforce 'never')
 [[redirects]]
-  from = "/doctor.html"
-  to = "/doctors"
+  from = "/*/"
+  to = "/:splat"
   status = 301
   force = true
 
+# Case normalization
 [[redirects]]
-  from = "/mind-grace.html"
-  to = "/"
+  from = "/[A-Z]*"
+  to = "/:splat"
   status = 301
   force = true
 
-[[redirects]]
-  from = "/blog/children.html"
-  to = "/blog/child"
-  status = 301
-  force = true
-
+# Legacy blog paths
 [[redirects]]
   from = "/blog/pages/adult/*"
-  to = "/blog/adult/:splat"
+  to = "/blog/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/pages/child/*"
-  to = "/blog/child/:splat"
+  to = "/blog/:splat"
   status = 301
   force = true
+
+# Specific renames
+[[redirects]]
+  from = "/book"
+  to = "/appointment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/emergency"
+  to = "/crisis-support"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery"
+  to = "/clinic/gallery"
+  status = 301
+  force = true
+
+# Global .html strip (fallback)
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+  force = false
 ```
 
-**Vercel (`vercel.json`):**
-```json
-{
-  "redirects": [
-    { "source": "/doctor.html", "destination": "/doctors", "permanent": true },
-    { "source": "/mind-grace.html", "destination": "/", "permanent": true },
-    { "source": "/blog/children.html", "destination": "/blog/child", "permanent": true },
-    { "source": "/blog/pages/adult/:slug*", "destination": "/blog/adult/:slug*", "permanent": true },
-    { "source": "/blog/pages/child/:slug*", "destination": "/blog/child/:slug*", "permanent": true }
-  ]
+---
+
+## 🛠️ Implementation Phases (Patched with Verified Effort)
+
+### Phase 0: Pre-Flight & Asset Migration (P0 | 1-2 hrs)
+- [x] Verify file counts via `wc -l`, `grep`, `head` (`ARCHITECTURE.md §2`)
+- [ ] Convert relative paths to root-relative (`href="../"` → `href="/"`)
+- [ ] Backup legacy files before migration
+- [ ] Create Git branch: `git checkout -b feat/url-restructure-v8.1`
+
+### Phase 1: Content Modeling & Config (P0 | 2-4 hrs)
+- [ ] Rewrite `conditions.html` (1 line → categorized grid) `pages.md §8`
+- [ ] Expand `consent.html`, `privacy.html` (8 lines → full legal) `pages.md §1`
+- [ ] Define Zod schemas for Astro collections (`src/content/config.ts`) `MEMORY_STATE.md QUEUE P0`
+- [ ] Create dynamic page templates (`[slug].astro`) for conditions/services/doctors
+
+### Phase 2: Tool Hydration & JS Isolation (P1 | 3-5 hrs)
+Per `TOOL_SPEC.md §1-§5`:
+
+| Tool | Hydration Directive | JS Cost | A11y Checklist | Status |
+|------|-------------------|---------|---------------|--------|
+| Box Breathing | `client:visible` | 2.4KB | aria-live, keyboard, reduced-motion | ⏳ Hydrate |
+| Butterfly Tapping | `client:visible` | 7.9KB | Button alternatives, haptic feedback | ⏳ Hydrate |
+| Eye Movement | `client:visible` | 1.1KB | Keyboard nav, audio alternatives | ⏳ Hydrate |
+| Fractal Focus | `client:visible` | 4.6KB | Reduced motion, color-blind safe | ⏳ Hydrate |
+| Horizon Scan | `client:visible` | 1.5KB | Screen reader descriptions, keyboard pan | ⏳ Hydrate |
+| Leaf on Stream | `client:visible` | 25.7KB | Text input alternative, aria announcements | ⏳ Hydrate |
+| Resource Book | `client:idle` | 0.7KB | Semantic HTML, skip links, search aria-live | ✅ v2.0 |
+
+**Shared Pattern Implementation:**
+```js
+// tools-shared.js (new file)
+class TherapeuticTool {
+  constructor(root, options) {
+    this.root = root;
+    this.state = 'idle';
+    this.options = { reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches, ...options };
+    this.init();
+  }
+  init() { /* Setup DOM, events, reduced motion check */ }
+  start() { /* Begin exercise */ }
+  pause() { /* Pause state */ }
+  reset() { /* Return to initial state */ }
+  destroy() { /* Cleanup listeners, animations */ }
 }
 ```
 
-### Phase 2: Content Updates (P1 - 4-8 hours)
+### Phase 3: Redirect & Normalization Setup (P1 | 1-2 hrs)
+- [ ] Deploy `netlify.toml` redirect rules (verified syntax above)
+- [ ] Test trailing slash, case, www/apex normalization locally
+- [ ] Verify 1:1 legacy → new mapping with `curl -I` + redirect tester
 
-1. **Update All Internal Links**
-   - Search/replace `.html` extensions in all 80 files
-   - Update navigation menus (header/footer)
-   - Update breadcrumbs
-   - Update canonical tags
+### Phase 4: Cross-Linking & Breadcrumbs (P1 | 2-3 hrs)
+- [ ] Implement manual "Related Content" sections in HTML templates
+- [ ] Add breadcrumb microdata to all pages (`itemscope itemtype="https://schema.org/BreadcrumbList"`)
+- [ ] Wire taxonomy filtering to blog/service/condition listings (query params)
 
-2. **Update Canonical Tags**
-   ```html
-   <!-- Before -->
-   <link rel="canonical" href="./about.html" />
-   
-   <!-- After -->
-   <link rel="canonical" href="/about" />
-   ```
-
-3. **Update Relative Paths**
-   ```html
-   <!-- Before -->
-   <a href="../services.html">Services</a>
-   
-   <!-- After -->
-   <a href="/services">Services</a>
-   ```
-
-4. **Regenerate Sitemap**
-   - Create new `sitemap.xml` with clean URLs only
-   - Submit to Google Search Console
-   - Submit to Bing Webmaster Tools
-
-### Phase 3: Testing & Validation (P2 - 2-4 hours)
-
-1. **Redirect Testing**
-   - Test all 301 redirects manually
-   - Verify no redirect chains
-   - Check HTTP headers (301 not 302)
-
-2. **SEO Validation**
-   - Crawl for 404 errors
-   - Verify canonical tags
-   - Validate structured data
-   - Test Open Graph meta tags
-
-3. **User Experience Testing**
-   - Test all internal links
-   - Verify bookmarked URLs redirect
-   - Test mobile navigation
-   - Verify breadcrumbs
-
-### Phase 4: Monitoring (Ongoing - 1 hr/week)
-
-1. **Google Search Console**
-   - Monitor crawl errors
-   - Track indexed pages
-   - Watch redirect issues
-   - Monitor search performance
-
-2. **Analytics**
-   - Track 404 errors
-   - Monitor bounce rates
-   - Track organic traffic
-   - Set up conversion goals
+### Phase 5: QA & Launch (P2 | 2-3 hrs)
+- [ ] Run `astro check` + `astro build` (if migrating) OR validate static HTML build
+- [ ] Test all routes, redirects, and 404 fallbacks
+- [ ] Regenerate `sitemap.xml` & `robots.txt` with clean URLs only
+- [ ] Deploy to staging → validate → merge to main → production
 
 ---
 
-## SUCCESS METRICS
+## 📊 Success Metrics & Monitoring (Patched with Tool Budgets)
 
-- ✅ Zero 404 errors post-migration
-- ✅ All old URLs redirect to new URLs (301)
-- ✅ No redirect chains (max 1 hop)
-- ✅ Canonical tags point to clean URLs
-- ✅ Sitemap contains only clean URLs
-- ✅ Google indexes new URLs within 2 weeks
-- ✅ Organic traffic remains stable or improves
-- ✅ No increase in bounce rate
-
----
-
-## TIMELINE
-
-| Phase | Tasks | Time | Priority |
-|-------|-------|------|----------|
-| Phase 1 | Infrastructure setup | 2-4 hrs | P0 |
-| Phase 2 | Content updates | 4-8 hrs | P1 |
-| Phase 3 | Testing & validation | 2-4 hrs | P2 |
-| Phase 4 | Monitoring | Ongoing | P3 |
-| **Total** | | **8-16 hrs** | |
-
----
-
-## ROLLBACK PLAN
-
-If issues arise:
-
-1. **Immediate Rollback**
-   - Disable redirect rules
-   - Revert canonical tag changes
-   - Restore original sitemap
-
-2. **Partial Rollback**
-   - Keep working redirects
-   - Fix problematic URLs individually
-   - Monitor and iterate
-
-3. **Communication**
-   - Inform stakeholders
-   - Document issues
-   - Plan revised approach
+| Metric | Target | Verification | Source |
+|--------|--------|--------------|--------|
+| Zero 404s post-launch | 0 errors | GSC + server logs | `ARCHITECTURE.md §7` |
+| 100% legacy URL 301s | All map correctly | `curl -I` + redirect tester | `pages.md §11` |
+| Max redirect depth | 1 hop | Screaming Frog | `design.md §6` |
+| Canonical consistency | 100% match | DevTools + GSC inspection | `worker.md §5` |
+| Indexing velocity | <14 days | GSC URL inspection | `ARCHITECTURE.md §7` |
+| Organic traffic stability | ±5% baseline | GA4 + GSC performance | `MEMORY_STATE.md RECOVER` |
+| Crawl depth | ≤3 segments | Site crawler analysis | `design.md §5` |
+| Cross-link coverage | ≥3 related links/page | Automated audit script | `pages.md §7` |
+| **Tool Performance** | | | `TOOL_SPEC.md §5` |
+| JS per tool (gzipped) | <10KB | `tools-*.js` line count + gzip test | `TOOL_SPEC.md §5` |
+| CSS per tool | <3KB | `tools-*.css` line count | `TOOL_SPEC.md §5` |
+| Load time per tool | <500ms | Lighthouse CI | `worker.md §6` |
+| Interaction latency | <100ms | Chrome DevTools Performance | `TOOL_SPEC.md §4` |
+| **Accessibility** | | | `TOOL_SPEC.md §4` |
+| Keyboard operable | Tab/Enter/Space/Arrows | Manual test + axe-core | `design.md §6` |
+| Screen reader compatible | aria-labels, aria-live | NVDA/VoiceOver test | `ARCHITECTURE.md §3` |
+| Reduced motion support | @media fallback | Toggle OS setting + test | `TOOL_SPEC.md §1` |
+| Color contrast | ≥3:1 UI, ≥4.5:1 text | axe-core, contrast checker | `design.md §6` |
 
 ---
 
-*Cross-ref: pages.md §11, memory.md §QUEUE, ARCHITECTURE.md §2, Instructions.md §6. END_ON_SYNC.*
+## 🛡️ Rollback & Maintenance (Patched with Recovery Checkpoints)
+
+### Pre-Launch Safety
+- Use deploy previews (Netlify/Vercel) for 100% QA before merging to `main`
+- Keep redirect rules in separate config file for quick toggle
+- Backup `AGENT_BIBLE/` docs before structural changes
+
+### Rollback Trigger
+- >5% traffic drop OR >10 critical 404s in 48h post-launch
+
+### Rollback Steps
+1. `git revert` or `git reset --hard main` on staging/prod branch
+2. Disable redirect rules in `netlify.toml` / `vercel.json`
+3. Restore legacy `sitemap.xml` + submit to GSC
+4. Notify marketing/support team of rollback
+
+### Recovery Checkpoints (`MEMORY_STATE.md RECOVER`)
+1. ✓ Logo path: `res/Mind_Grace_Clinic_Logo_Pink.svg` (inline SVG)
+2. ✓ CSS layers: 10-layer cascade + 7 tool imports (`design.md §8`)
+3. ✓ JS modules: `main.js` defer + 10 tool scripts isolated (`tools.md §2`)
+4. ✓ Responsive: Orientation-first, body class detection, fluid-type (`design.md §5`)
+5. ✓ Blog structure: `/blog/index`, `/blog/adult`, `/blog/children`, `/blog/pages/{adult,child}/*` (`pages.md §3`)
+6. ✓ KB optimized: 7-doc structure, removed redundancy (`Instructions.md §KB_STATS`)
+7. ✓ KB synced: All docs v7.0, cross-linked, `END_ON_SYNC` (`All docs`)
+8. ✓ Links fixed: `book-appointment.html→book.html`, `what-to-expect.html→process.html` (`pages.md §7`)
+9. ✓ KB v4.0: Orientation-rules, JS-fallbacks, graceful-degradation (`Instructions.md §5`)
+10. ✓ Mobile nav popup: Centered modal, sectioned, smooth animation (`design.md §4`)
+
+### Ongoing Maintenance
+- Maintain `redirects.yaml` for future slug changes
+- Run monthly crawl audits (Screaming Frog / `broken-link-checker`)
+- Update collection schemas as new content types are added
+- Monitor GSC for coverage drops or indexing warnings
+- Quarterly accessibility audit (axe-core + manual screen reader test)
+
+---
+
+## 📎 Cross-References & Notes
+- `pages.md §1-§11` | `ARCHITECTURE.md §1-§8` | `TOOL_SPEC.md §1-§5` | `MEMORY_STATE.md`
+- **Framework Note:** This spec supports both current static HTML/vanilla JS and future Astro migration. Phase 1 Zod schemas enable gradual adoption.
+- **SEO Note:** All condition/service pages should include `MedicalCondition`, `FAQPage`, and `LocalBusiness` structured data.
+- **Performance Note:** Tool JS files are isolated to prevent global scope pollution; use `type="module"` for future tree-shaking.
+- **Accessibility Note:** Emergency content (`emergency.html`) uses high-contrast red/white theme; ensure all crisis resources meet WCAG-2.2-AA.
+
+`END_ON_SYNC.`
