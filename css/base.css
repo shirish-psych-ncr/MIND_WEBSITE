@@ -6,10 +6,11 @@
 
 :root {
   /* Primary Colors - Theme Distribution: 50% Light, 40% Dark, 10% Other */
-  --light-bg: #FFE0F6;         /* 50% - Main light background */
-  --primary: #671B50;          /* 40% - Deep Purple - Main brand/dark */
-  --accent: #F34674;           /* 10% - Wild Strawberry - Highlights */
+  --light-bg: #FFE0F6;         /* 50% - Main light background (Cherry Blossom Pink) */
+  --primary: #671B50;          /* 40% - Deep Purple - Main brand/dark (Plum/Island) */
+  --accent: #E39774;           /* 10% - Earthy Terracotta - Warm accent */
   --support: #EFBCBA;          /* 10% - Cotton Rose - Soft accents */
+  --olive: #8B8B6B;            /* Earthy/Muddy Olive */
   
   /* Neutrals */
   --white: #FFFFFF;
@@ -18,11 +19,19 @@
   --cream: #FAF5F0;
   --blush: #F9E8ED;
   
-  /* Text Colors */
-  --text-dark: #2D1B2E;
-  --text-body: #4A3B4A;
-  --text-muted: #6B4C5A;
-  --text-light: #8B6B7A;
+  /* Text Colors - for light backgrounds (#FFE0F6) */
+  --text-dark: #2D1B2E;        /* Dark/Black */
+  --text-body: #4A3B4A;        /* Dark Plum */
+  --text-muted: #6B4C5A;       /* Muted Plum */
+  --text-light: #8B6B7A;       /* Light Plum */
+  --text-accent: #E39774;      /* Terracotta accent text */
+  --text-olive: #8B8B6B;       /* Earthy olive text */
+  
+  /* Text Colors - for dark/plum islands (#671B50) */
+  --text-on-plum: #FFE0F6;     /* Light pink on plum */
+  --text-on-plum-cream: #FAF5F0; /* Cream on plum */
+  --text-on-plum-lime: #D3F069; /* Lime accent on plum */
+  --text-on-plum-terracotta: #E39774; /* Terracotta on plum */
   
   /* Semantic Colors */
   --error: #DC3545;
@@ -115,7 +124,7 @@ html {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--white);
+  background: var(--light-bg);
   color: var(--text-dark);
   line-height: var(--lh-base);
   overflow-x: hidden;
