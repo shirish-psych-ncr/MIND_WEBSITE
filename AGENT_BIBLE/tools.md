@@ -1,14 +1,14 @@
-# TOOL_SPEC [v1.0]
+# TOOL_SPEC [v2.0]
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Update:** Auto(post-turn)
 
-## 1. THERAPEUTIC_TOOLS (7 interactive modules)
+## 1. THERAPEUTIC_TOOLS (8 interactive modules)
 
 ### 1.1 Breathing Tool (tools-breathing.*)
 | Aspect | Spec |
 |---|---|
 | Purpose | Guided box breathing, 4-4-4-4 technique |
-| CSS | tools-breathing.css (1.8KB, circle animation, color transitions) |
-| JS | tools-breathing.js (2.4KB, timing logic, state management) |
+| CSS | tools-breathing.css (2.4KB, circle animation, color transitions) |
+| JS | tools-breathing.js (2.5KB, timing logic, state management, IIFE pattern) |
 | Hydration | client:visible (load when scrolled into view) |
 | A11y | aria-live="polite" for instructions, keyboard start/stop |
 | Motion | Respects prefers-reduced-motion (static fallback) |
@@ -18,8 +18,8 @@
 | Aspect | Spec |
 |---|---|
 | Purpose | EMDR bilateral stimulation (self-tapping) |
-| CSS | tools-butterfly.css (4.8KB, butterfly wings, alternating fade) |
-| JS | tools-butterfly.js (7.9KB, tap detection, speed control, session timer) |
+| CSS | tools-butterfly.css (4.1KB, butterfly wings, alternating fade) |
+| JS | tools-butterfly.js (8.4KB, tap detection, speed control, session timer, IIFE pattern) |
 | Hydration | client:visible |
 | A11y | Button alternatives for motor impairments, audio cues optional |
 | Motion | Alternating left/right opacity, configurable speed |
@@ -41,7 +41,7 @@
 |---|---|
 | Purpose | Hypnotic fractal patterns for relaxation |
 | CSS | tools-fractal.css (4.1KB, mandala patterns, rotation, pulse) |
-| JS | tools-fractal.js (4.6KB, pattern generation, color cycling) |
+| JS | tools-fractal.js (4.7KB, pattern generation, color cycling, IIFE pattern) |
 | Hydration | client:visible |
 | A11y | Reduced motion mode (static fractal), color blind safe palettes |
 | Motion | Slow rotation, expanding/contracting, color shifts |
@@ -52,7 +52,7 @@
 |---|---|
 | Purpose | Grounding exercise, panoramic visual scanning |
 | CSS | tools-horizon.css (2.1KB, gradient sky, horizon line, clouds) |
-| JS | tools-horizon.js (1.5KB, parallax scroll, cloud drift) |
+| JS | tools-horizon.js (1.4KB, parallax scroll, cloud drift, IIFE pattern) |
 | Hydration | client:visible |
 | A11y | Screen reader descriptions of scene, keyboard pan control |
 | Motion | Slow cloud drift, subtle parallax on mouse/touch move |
@@ -73,23 +73,35 @@
 | Aspect | Spec |
 |---|---|
 | Purpose | Psychoeducation library, resource navigation |
-| CSS | tools-book.css (1.8KB, book layout, page flip animation) |
-| JS | tools-book.js (0.7KB, page navigation, search, bookmarks) |
+| CSS | tools-book.css (2.1KB, book layout, page flip animation) |
+| JS | tools-book.js (1.3KB, page navigation, search, bookmarks) |
 | Hydration | client:idle (non-critical, load after main content) |
 | A11y | Semantic HTML book structure, skip links, search with aria-live |
 | Motion | Optional page flip animation (can be disabled) |
 | UX | Table of contents, search, bookmark pages, font size toggle |
 
+### 1.8 Map Integration (tools-map.*)
+| Aspect | Spec |
+|---|---|
+| Purpose | Clinic location display with Leaflet maps |
+| CSS | N/A (uses Leaflet default styles + minimal custom) |
+| JS | tools-map.js (0.6KB, Leaflet initialization, marker placement) |
+| Hydration | client:visible |
+| A11y | Alt text for map, keyboard zoom controls |
+| Motion | Static map with optional pan/zoom |
+| UX | Interactive map, clinic markers, directions link |
+
 ## 2. HYDRATION_MATRIX (Summary)
 | Tool | Directive | Trigger | JS Cost | Priority |
 |---|---|---|---|---|
-| Breathing | client:visible | Scroll | 2.4KB | P1 (Anxiety relief) |
-| Butterfly | client:visible | Scroll | 7.9KB | P1 (EMDR) |
+| Breathing | client:visible | Scroll | 2.5KB | P1 (Anxiety relief) |
+| Butterfly | client:visible | Scroll | 8.4KB | P1 (EMDR) |
 | Eye Movement | client:visible | Scroll | 1.1KB | P1 (EMDR) |
-| Fractal | client:visible | Scroll | 4.6KB | P2 (Relaxation) |
-| Horizon | client:visible | Scroll | 1.5KB | P2 (Grounding) |
+| Fractal | client:visible | Scroll | 4.7KB | P2 (Relaxation) |
+| Horizon | client:visible | Scroll | 1.4KB | P2 (Grounding) |
 | Leaf | client:visible | Scroll | 25.7KB | P3 (Mindfulness, large) |
-| Book | client:idle | Post-load | 0.7KB | P4 (Resources) |
+| Book | client:idle | Post-load | 1.3KB | P4 (Resources) |
+| Map | client:visible | Scroll | 0.6KB | P2 (Location info) |
 
 ## 3. SHARED_PATTERNS
 ```js
@@ -135,9 +147,21 @@ const observer = new IntersectionObserver((entries) => {
 ## 5. PERFORMANCE_BUDGET (Per Tool)
 | Metric | Budget | Current | Status |
 |---|---|---|---|
-| JS (gzipped) | <10KB | 44KB total | ✓ |
-| CSS | <3KB | 24KB total | ✓ |
-| Load time | <500ms | - | TODO: Measure |
-| Interaction latency | <100ms | - | TODO: Measure |
+| JS (gzipped) | <10KB/tool | 45.7KB total | ✓ All tools under budget |
+| CSS | <3KB/tool | 24KB total | ✓ All tools under budget |
+| Load time | <500ms | - | TODO: Measure with Lighthouse |
+| Interaction latency | <100ms | - | TODO: Measure with DevTools |
 
-*Ref: /css-tools/*, /js/tools-*.*, tool pages. Auto-update on tool changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §6-§8, worker.md §2-§4. END_ON_SYNC.*
+## 6. EXTRACTION_STATUS (v2.0 - Complete)
+| Tool | JS File | CSS File | Status | Notes |
+|---|---|---|---|---|
+| Breathing | js/tools-breathing.js (2.5KB) | css-tools/tools-breathing.css (2.4KB) | ✅ Extracted | IIFE pattern, null checks |
+| Butterfly | js/tools-butterfly.js (8.4KB) | css-tools/tools-butterfly.css (4.1KB) | ✅ Extracted | State machine, reduced motion |
+| Eye Movement | js/tools-eye.js (1.1KB) | css-tools/tools-eye.css (1.7KB) | ✅ Extracted | Path controls |
+| Fractal | js/tools-fractal.js (4.7KB) | css-tools/tools-fractal.css (4.1KB) | ✅ Extracted | IIFE pattern, ES5 syntax |
+| Horizon | js/tools-horizon.js (1.4KB) | css-tools/tools-horizon.css (2.1KB) | ✅ Extracted | IIFE pattern, parallax |
+| Leaf | js/tools-leaf.js (25.7KB) | css-tools/tools-leaf.css (7.5KB) | ✅ Extracted | Physics engine |
+| Book | js/tools-book.js (1.3KB) | css-tools/tools-book.css (2.1KB) | ✅ Extracted | Navigation logic |
+| Map | js/tools-map.js (0.6KB) | N/A | ✅ Extracted | Leaflet wrapper |
+
+*Ref: /css-tools/*, /js/tools-*.*, tool pages. Auto-update on tool changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §6-§8, worker.md §2-§4, _RESTRUCTURE_PLAN.md §Phase2. END_ON_SYNC.*
