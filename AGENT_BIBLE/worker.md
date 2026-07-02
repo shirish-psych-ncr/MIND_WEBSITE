@@ -17,12 +17,12 @@
 ## 2. TOOLCHAIN
 | Tool | Purpose | Config | Gate |
 |---|---|---|---|
-| Vite | Build | vite.config.js | npm run build |
+| Vite | Build | vite.config.js | Build step |
 | LightningCSS | CSS proc | Chr90+, FF90+, Saf15+ | --no-warn |
 | TypeScript | Type check | --strict, no any | tsc --noEmit |
-| ESLint+Prettier | Lint/format | .eslintrc, .prettierrc | npm run lint |
-| Vitest | Unit tests | vitest.config.ts | npm run test:unit |
-| Playwright | E2E+a11y | playwright.config.ts | npm run test:e2e |
+| ESLint+Prettier | Lint/format | .eslintrc, .prettierrc | Lint check |
+| Vitest | Unit tests | vitest.config.ts | Test suite |
+| E2E+a11y | E2E+a11y | E2E config | E2E tests |
 
 ## 3. HYDRATION_MATRIX (Cross-ref: tools.md §2)
 | Component | Trigger | JS Cost | Purpose |
@@ -70,9 +70,9 @@ class TherapeuticTool {
 | Gate | Command | Threshold | Status |
 |---|---|---|---|
 | Type | `tsc --noEmit` | 0 err, strict | Mandatory |
-| Lint | `npm run lint` | ESLint+Prettier | Mandatory |
-| Build | `npm run build` | Vite, 0 warn | Mandatory |
-| A11y | Playwright+axe | 0 viol, WCAG 2.2 AA | Mandatory |
+| Lint | ESLint+Prettier | ESLint+Prettier | Mandatory |
+| Build | Vite build | Vite, 0 warn | Mandatory |
+| A11y | E2E+a11y | 0 viol, WCAG 2.2 AA | Mandatory |
 | Perf | Lighthouse | LCP<2.5s, INP<200ms, CLS<0.1, JS<50kb | Mandatory |
 | Visual | Chromatic/Percy | Optional | Opt-in |
 
