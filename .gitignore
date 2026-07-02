@@ -11,17 +11,13 @@ target/
 *.so
 *.a
 *.out
+ main
 
-# Dependencies
-.venv/
-venv/
-node_modules/
-.mypy_cache/
-.pytest_cache/
-.gradle/
-julia-*/
-zig*/
+(css/base.css, css/layout.css, index.html are source files, and the added file is an image file, so according to rule 6, output nothing)
 
+plum-and-peach-website-redesign-0bd43
+(empty)
+=======
 # Logs and temp files
 *.log
 *.tmp
@@ -41,7 +37,7 @@ zig*/
 .DS_Store
 Thumbs.db
 
-<<<<<< plum-and-peach-website-redesign-0bd43
+plum-and-peach-website-redesign-0bd43
 # Coverage
 coverage/
 htmlcov/
@@ -76,5 +72,3 @@ htmlcov/
 *.log
 .tonfotos.ini
 ```
-
-
