@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Butterfly Tapper</title>
+<meta name="description" content="Use the Butterfly Tapper grounding tool from Mind Grace Clinic as a calming bilateral exercise for routine stress support." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="css-tools/tools-butterfly.css" />
+</head>
+<body class="butterfly-tool" onclick="initWorld()">
+<h1>Butterfly Tapper grounding exercise</h1>
+<div class="tool-link-bar">
+    <a href="./resources.html">Back to tools</a>
+    <a href="./book.html">Book</a>
+</div>
+
+<!-- Orientation Guard -->
+<div id="orientation-guard">
+    <div class="phone-icon"></div>
+    <p>ROTATE TO LANDSCAPE</p>
+    <p>Hold with both hands for calming down</p>
+</div>
+
+<!-- Visual Layers -->
+<div id="supernova"></div>
+<canvas id="trail-canvas"></canvas>
+<canvas id="ui-canvas"></canvas>
+
+<!-- UI Elements -->
+<div id="gear-btn" onclick="togglePause(event)">⚙️</div>
+<div class="status-overlay">
+    <div class="status-text" id="label">Tap Screen to Begin</div>
+</div>
+
+<!-- Interaction Cores -->
+<div class="tapper-container">
+    <div id="L" class="core" onpointerdown="handleTap('L')"><div class="core-inner"></div></div>
+    <div id="R" class="core" onpointerdown="handleTap('R')"><div class="core-inner"></div></div>
+</div>
+
+<script src="./js/tools-butterfly.js"></script>
+</body>
+</html>

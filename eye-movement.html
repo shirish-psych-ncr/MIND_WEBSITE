@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Lateral Grounding Tool | Mind Grace Clinic</title>
+  
+  <meta name="description" content="A lateral eye movement grounding tool to reduce anxiety, calm panic, and improve emotional regulation." />
+  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css-tools/tools-eye.css" />
+</head>
+
+<body>
+
+<a class="skip-link" href="#content">Skip to Main Content</a>
+
+<div class="progress"><div class="progress-bar" data-progress></div></div>
+
+<div class="top-banner">
+  In case of a medical emergency, call 112 or visit the nearest hospital.
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="shell header-row">
+    <a class="brand-wrap" href="index.html"
+      <img class="logo" src="./res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Clinic logo" />
+      <div>
+        <p class="brand-kicker">Mind Grace Clinic</p>
+        <p class="brand-name">Dr Anita Sharma MD</p>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="./about.html">About</a>
+      <a href="./conditions.html">Conditions</a>
+      <a href="./services.html">Services</a>
+      <a href="./process.html">Process</a>
+      <a href="./resources.html">Resources</a>
+      <a href="./blog/index.html">Blog</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="button-outline" href="tel:+919667863295">Call</a>
+      <a class="button-primary" href="./book.html">Book</a>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main id="eye-content" class="section">
+  <div class="shell">
+
+    <div class="tool-container">
+      <div class="tool-card">
+
+        <!-- SETUP -->
+        <div id="eye-setup" class="view">
+          <div>↔️</div>
+          <h1>Lateral grounding</h1>
+          <p>Keep your head still. Follow the moving light with your eyes only.</p>
+
+          <div class="settings-box">
+            <div class="label">Choose speed</div>
+            <select id="speed-selector">
+              <option value="3500">Gentle</option>
+              <option value="2200" selected>Steady</option>
+              <option value="1200">Fast</option>
+            </select>
+
+            <button class="start-btn" onclick="startTracking()">Start session</button>
+          </div>
+        </div>
+
+        <!-- ACTIVE -->
+        <div id="active-view" class="view hidden">
+          <div class="track-container">
+            <div class="track-line">
+              <div id="orb" class="orb"></div>
+            </div>
+          </div>
+
+          <button class="stop-btn" onclick="stopTracking()">End session</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="shell footer-grid">
+    <div>
+      <h3>Mind Grace Clinic</h3>
+      <p class="lead">Structured mental health care focused on real-life outcomes.</p>
+  <a href="./resources.html" class="button-ghost">Learn more</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="./js/tools-eye.js"></script>
+</body>
+</html>
