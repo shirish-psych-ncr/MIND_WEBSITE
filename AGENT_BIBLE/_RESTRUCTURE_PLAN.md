@@ -1,7 +1,7 @@
 # 🗺️ URL & INFORMATION ARCHITECTURE SPECIFICATION — Mind Grace Clinic
-**Version:** 8.1 (Patched) | **Status:** Verified + Implementation-Ready  
+**Version:** 8.2 (Status Verified) | **Status:** Implementation In Progress  
 **Framework Target:** Static HTML/Vanilla JS → Astro Migration Path  
-**Last Verified:** Real filesystem check (40+ HTML files, 14 refactored) | **Total Scope:** 40 HTML + 7 Tools + 13 Blog + 11 Docs
+**Last Verified:** $(date +%Y-%m-%d) Filesystem audit complete | **Total Scope:** 40 HTML + 8 Tools + 13 Blog + 11 Docs
 
 ---
 
@@ -13,13 +13,15 @@ This specification integrates **verified filesystem data**, **tool hydration mat
 - **Target State:** Astro-ready content collections with automated routing, taxonomy-driven URLs, and bidirectional linking
 - **Migration Path:** Phased approach preserving SEO equity while incrementally adopting modern static-site patterns
 
-**Key Patches in v8.1:**
+**Key Patches in v8.2:**
 - ✅ File counts, line counts, and refactoring status verified via `wc -l`, `grep`, `head`
-- ✅ Tool specifications integrated: 7 interactive modules with hydration directives (`client:visible`, `client:idle`)
+- ✅ Tool specifications integrated: 8 interactive modules with JS isolation (`tools-book.js`, `tools-breathing.js`, `tools-butterfly.js`, `tools-eye.js`, `tools-fractal.js`, `tools-horizon.js`, `tools-leaf.js`, `tools-map.js`)
 - ✅ CSS/JS architecture documented: 5-layer CSS cascade + isolated tool scripts
 - ✅ Dual-clinician content model embedded: Dr. Anita Sharma (Psychiatry) + Dr. Sana Firdous (Psychology)
 - ✅ Accessibility & performance budgets enforced: WCAG-2.2-AA, `<10KB` JS/tool, `<3KB` CSS/tool
-- ✅ Migration queue aligned: P0 Zod schemas → P3 component library
+- ⚠️ Migration queue pending: P0 Zod schemas (not created), P3 component library (not created)
+- ⚠️ Critical gaps: `conditions.html` (1 line), `consent.html` (8 lines), `privacy.html` (8 lines) need expansion
+- ⚠️ Missing: `netlify.toml` redirect rules, `tools/` directory structure
 
 ---
 
@@ -41,38 +43,38 @@ This specification integrates **verified filesystem data**, **tool hydration mat
 
 ```text
 / (Root: /workspace)
-├─ index.html (390L) ✓
-├─ about.html (375L) ✓
-├─ services.html (369L) ✓
-├─ conditions.html (1L) ⚠️ BROKEN → REWRITE P1
-├─ doctors.html (580L) ✓ v3.0 Dual-Clinician
-├─ location.html (366L) ✓
-├─ contact.html (496L) ✓
-├─ faq.html (253L) ✓
-├─ testimonials.html (257L) ✓
-├─ process.html (393L) ✓
-├─ fees.html (515L) ✓
-├─ emergency.html (439L) ✓ High-Contrast Crisis
-├─ aasha.html (249L) ✓ Community Initiative
-├─ approach.html (306L) ✓ Biopsychosocial Model
-├─ book.html (340L) ✓ Booking Gate (Tool)
-├─ resources.html (195L) ⏳ Pending
-├─ gallery.html (214L) ⏳ Pending
-├─ consent.html (8L) ⚠️ Minimal → /legal/consent
-├─ privacy.html (8L) ⚠️ Minimal → /legal/privacy
-├─ terms.html (~200L) ✓ → /legal/terms
-├─ disclaimer.html (~200L) ✓ → /legal/disclaimer
-├─ thank-you.html (88L) ⚠️ Basic
-├─ 404.html (23L) ⚠️ Basic
+├─ index.html (390L) ✅ Complete
+├─ about.html (375L) ✅ Complete
+├─ services.html (369L) ✅ Complete
+├─ conditions.html (1L) ⚠️ BROKEN → REWRITE P1 (CRITICAL)
+├─ doctors.html (580L) ✅ v3.0 Dual-Clinician
+├─ location.html (366L) ✅ Complete
+├─ contact.html (496L) ✅ Complete
+├─ faq.html (253L) ✅ Complete
+├─ testimonials.html (257L) ✅ Complete
+├─ process.html (393L) ✅ Complete
+├─ fees.html (515L) ✅ Complete
+├─ emergency.html (439L) ✅ High-Contrast Crisis
+├─ aasha.html (249L) ✅ Community Initiative
+├─ approach.html (306L) ✅ Biopsychosocial Model
+├─ book.html (340L) ✅ Booking Gate (Tool)
+├─ resources.html (195L) ⏳ Pending enhancement
+├─ gallery.html (214L) ⏳ Pending enhancement
+├─ consent.html (8L) ⚠️ Minimal → Expand to /legal/consent
+├─ privacy.html (8L) ⚠️ Minimal → Expand to /legal/privacy
+├─ terms.html (~200L) ✅ → /legal/terms
+├─ disclaimer.html (~200L) ✅ → /legal/disclaimer
+├─ thank-you.html (92L) ⚠️ Basic but functional
+├─ 404.html (27L) ⚠️ Basic but functional
 │
-├─ tools/ (7 Interactive Modules)
-│   ├─ guided-breathing.html (128L) → /tools/box-breathing ⏳ Hydrate
-│   ├─ butterfly-tapper.html (44L) → /tools/butterfly-tapping ⏳ Hydrate
-│   ├─ eye-movement.html (109L) → /tools/eye-movement ⏳ Hydrate
-│   ├─ hypnos-fractal.html (173L) → /tools/fractal-focus ⏳ Hydrate
-│   ├─ horizon-scan.html (107L) → /tools/horizon-scan ⏳ Hydrate
-│   ├─ leaf-on-stream.html (35L) → /tools/leaf-on-a-stream ⏳ Hydrate
-│   └─ book.html (340L) → /appointment ✓ v2.0
+├─ tools/ (NOT YET CREATED - JS files in root /workspace/js/)
+│   ├─ guided-breathing.html (128L) → /tools/box-breathing ⏳ Needs tools/ dir
+│   ├─ butterfly-tapper.html (44L) → /tools/butterfly-tapping ⏳ Needs tools/ dir
+│   ├─ eye-movement.html (109L) → /tools/eye-movement ⏳ Needs tools/ dir
+│   ├─ hypnos-fractal.html (173L) → /tools/fractal-focus ⏳ Needs tools/ dir
+│   ├─ horizon-scan.html (107L) → /tools/horizon-scan ⏳ Needs tools/ dir
+│   ├─ leaf-on-stream.html (35L) → /tools/leaf-on-a-stream ⏳ Needs tools/ dir
+│   └─ book.html (340L) → /appointment ✅ v2.0
 │
 ├─ blog/
 │   ├─ index.html (224L) ⚠️ Needs responsive update
@@ -83,7 +85,7 @@ This specification integrates **verified filesystem data**, **tool hydration mat
 │       ├─ adult/ (5 articles, 31-281L) ⚠️ Need ArticleLayout template
 │       └─ child/ (4 articles, 31-35L) ⚠️ Need ArticleLayout template
 │
-├─ css/ (Modular 5-Layer System)
+├─ css/ (Modular 5-Layer System) ✅ Complete
 │   ├─ base.css ✓ Variables, Reset, Typography
 │   ├─ layout.css ✓ Header, Footer, Grid Containers
 │   ├─ components.css ✓ +800L v2.0-v3.0: Cards, Grids, Accordions, Timelines
@@ -92,7 +94,7 @@ This specification integrates **verified filesystem data**, **tool hydration mat
 │
 ├─ js/
 │   ├─ main.js ✓ Global: Nav, Accordions, Counters, Validation
-│   └─ tools-*.js ✓ Isolated scope per tool (breathing, butterfly, eye, fractal, horizon, leaf, book)
+│   └─ tools-*.js ✓ 8 isolated tool scripts (book, breathing, butterfly, eye, fractal, horizon, leaf, map)
 │
 ├─ images/ ✓ Optimized WebP/JPG (see assets.md)
 └─ AGENT_BIBLE/ (11 Docs, v7.0 Synced)
@@ -102,8 +104,8 @@ This specification integrates **verified filesystem data**, **tool hydration mat
     ├─ worker.md ✓ JS Fallbacks
     ├─ assets.md ✓ Asset Inventory
     ├─ tools.md ✓ Tool Specifications
-    ├─ components.md ✓ Primitives (Pending)
-    ├─ schemas.md ✓ Zod Collections (Pending)
+    ├─ components.md ⏳ Pending
+    ├─ schemas.md ⏳ Pending
     ├─ Instructions.md ✓ KB Registry
     ├─ memory.md ✓ State/Queue
     └─ css/README.md ✓ Component Library
@@ -267,26 +269,30 @@ Home → Self-Care Tools → Box Breathing
 - [x] Verify file counts via `wc -l`, `grep`, `head` (`ARCHITECTURE.md §2`)
 - [ ] Convert relative paths to root-relative (`href="../"` → `href="/"`)
 - [ ] Backup legacy files before migration
-- [ ] Create Git branch: `git checkout -b feat/url-restructure-v8.1`
+- [ ] Create Git branch: `git checkout -b feat/url-restructure-v8.2`
 
-### Phase 1: Content Modeling & Config (P0 | 2-4 hrs)
-- [ ] Rewrite `conditions.html` (1 line → categorized grid) `pages.md §8`
-- [ ] Expand `consent.html`, `privacy.html` (8 lines → full legal) `pages.md §1`
-- [ ] Define Zod schemas for Astro collections (`src/content/config.ts`) `MEMORY_STATE.md QUEUE P0`
+### Phase 1: Content Modeling & Config (P0 | 2-4 hrs) 🔴 CRITICAL
+- [ ] **URGENT:** Rewrite `conditions.html` (1 line → categorized grid) `pages.md §8`
+- [ ] **URGENT:** Expand `consent.html` (8 lines → full legal page) `pages.md §1`
+- [ ] **URGENT:** Expand `privacy.html` (8 lines → full legal page) `pages.md §1`
+- [ ] Define Zod schemas for Astro collections (`src/content/config.ts`) `MEMORY_STATE.md QUEUE P0` ⏳ NOT STARTED
 - [ ] Create dynamic page templates (`[slug].astro`) for conditions/services/doctors
 
 ### Phase 2: Tool Hydration & JS Isolation (P1 | 3-5 hrs)
 Per `TOOL_SPEC.md §1-§5`:
 
-| Tool | Hydration Directive | JS Cost | A11y Checklist | Status |
-|------|-------------------|---------|---------------|--------|
-| Box Breathing | `client:visible` | 2.4KB | aria-live, keyboard, reduced-motion | ⏳ Hydrate |
-| Butterfly Tapping | `client:visible` | 7.9KB | Button alternatives, haptic feedback | ⏳ Hydrate |
-| Eye Movement | `client:visible` | 1.1KB | Keyboard nav, audio alternatives | ⏳ Hydrate |
-| Fractal Focus | `client:visible` | 4.6KB | Reduced motion, color-blind safe | ⏳ Hydrate |
-| Horizon Scan | `client:visible` | 1.5KB | Screen reader descriptions, keyboard pan | ⏳ Hydrate |
-| Leaf on Stream | `client:visible` | 25.7KB | Text input alternative, aria announcements | ⏳ Hydrate |
-| Resource Book | `client:idle` | 0.7KB | Semantic HTML, skip links, search aria-live | ✅ v2.0 |
+| Tool | File | Line Count | Status |
+|------|------|------------|--------|
+| Box Breathing | `guided-breathing.html` + `tools-breathing.js` | 128L | ⏳ Needs tools/ dir |
+| Butterfly Tapping | `butterfly-tapper.html` + `tools-butterfly.js` | 44L | ⏳ Needs tools/ dir |
+| Eye Movement | `eye-movement.html` + `tools-eye.js` | 109L | ⏳ Needs tools/ dir |
+| Fractal Focus | `hypnos-fractal.html` + `tools-fractal.js` | 173L | ⏳ Needs tools/ dir |
+| Horizon Scan | `horizon-scan.html` + `tools-horizon.js` | 107L | ⏳ Needs tools/ dir |
+| Leaf on Stream | `leaf-on-stream.html` + `tools-leaf.js` | 35L | ⏳ Needs tools/ dir |
+| Resource Book | `book.html` + `tools-book.js` | 340L | ✅ v2.0 Complete |
+| Map | `tools-map.js` | N/A | ⏳ No HTML wrapper yet |
+
+**Action Required:** Create `/workspace/tools/` directory and move tool HTML files there
 
 **Shared Pattern Implementation:**
 ```js
@@ -306,8 +312,8 @@ class TherapeuticTool {
 }
 ```
 
-### Phase 3: Redirect & Normalization Setup (P1 | 1-2 hrs)
-- [ ] Deploy `netlify.toml` redirect rules (verified syntax above)
+### Phase 3: Redirect & Normalization Setup (P1 | 1-2 hrs) 🔴 MISSING
+- [ ] **CREATE** `netlify.toml` with redirect rules (verified syntax below)
 - [ ] Test trailing slash, case, www/apex normalization locally
 - [ ] Verify 1:1 legacy → new mapping with `curl -I` + redirect tester
 
@@ -367,15 +373,17 @@ class TherapeuticTool {
 
 ### Recovery Checkpoints (`MEMORY_STATE.md RECOVER`)
 1. ✓ Logo path: `res/Mind_Grace_Clinic_Logo_Pink.svg` (inline SVG)
-2. ✓ CSS layers: 10-layer cascade + 7 tool imports (`design.md §8`)
-3. ✓ JS modules: `main.js` defer + 10 tool scripts isolated (`tools.md §2`)
+2. ✓ CSS layers: 5-layer cascade + 8 tool imports (`design.md §8`)
+3. ✓ JS modules: `main.js` defer + 8 tool scripts isolated (`tools.md §2`)
 4. ✓ Responsive: Orientation-first, body class detection, fluid-type (`design.md §5`)
-5. ✓ Blog structure: `/blog/index`, `/blog/adult`, `/blog/children`, `/blog/pages/{adult,child}/*` (`pages.md §3`)
-6. ✓ KB optimized: 7-doc structure, removed redundancy (`Instructions.md §KB_STATS`)
-7. ✓ KB synced: All docs v7.0, cross-linked, `END_ON_SYNC` (`All docs`)
+5. ✓ Blog structure: `/blog/index`, `/blog/adult`, `/blog/child`, `/blog/pages/{adult,child}/*` (`pages.md §3`)
+6. ✓ KB optimized: 11-doc structure, cross-linked, `END_ON_SYNC` (`Instructions.md §KB_STATS`)
+7. ⏳ KB synced: All docs v7.0, `components.md` and `schemas.md` pending creation
 8. ✓ Links fixed: `book-appointment.html→book.html`, `what-to-expect.html→process.html` (`pages.md §7`)
 9. ✓ KB v4.0: Orientation-rules, JS-fallbacks, graceful-degradation (`Instructions.md §5`)
 10. ✓ Mobile nav popup: Centered modal, sectioned, smooth animation (`design.md §4`)
+11. ⚠️ **CRITICAL GAPS:** `conditions.html` (1L), `consent.html` (8L), `privacy.html` (8L) need expansion
+12. ⚠️ **MISSING:** `netlify.toml`, `/workspace/tools/` directory, Zod schemas, component library
 
 ### Ongoing Maintenance
 - Maintain `redirects.yaml` for future slug changes
@@ -392,5 +400,10 @@ class TherapeuticTool {
 - **SEO Note:** All condition/service pages should include `MedicalCondition`, `FAQPage`, and `LocalBusiness` structured data.
 - **Performance Note:** Tool JS files are isolated to prevent global scope pollution; use `type="module"` for future tree-shaking.
 - **Accessibility Note:** Emergency content (`emergency.html`) uses high-contrast red/white theme; ensure all crisis resources meet WCAG-2.2-AA.
+- **Status Summary (v8.2):**
+  - ✅ Verified: 40+ HTML files, 5 CSS layers, 8 tool JS modules, blog structure
+  - ⚠️ Critical: `conditions.html` (1L), `consent.html` (8L), `privacy.html` (8L) need immediate expansion
+  - 🔴 Missing: `netlify.toml`, `/tools/` directory, Zod schemas (`schemas.md`), component library (`components.md`)
+  - 📋 Next Actions: Phase 1 (content expansion) → Phase 3 (redirects) → Phase 2 (tools reorg)
 
 `END_ON_SYNC.`
