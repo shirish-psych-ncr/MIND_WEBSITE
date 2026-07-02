@@ -1,4 +1,7 @@
-```markdown
-# Examples
-*.example
+(css/base.css, css/components.css, css/layout.css, index.html) are all source code files, which are not to be ignored. There are no build artifacts, dependencies, or temporary files in the change list.
+
+Therefore, the .gitignore file should remain empty.
+
+```text
+
 ```
