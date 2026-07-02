@@ -1,6 +1,6 @@
 # CSS Stylesheets
 
-This directory contains the core modular CSS architecture for Mind Grace Clinic.
+This directory contains the core modular CSS architecture for Mind Grace Neuropsychiatric Clinic.
 
 ## Architecture
 

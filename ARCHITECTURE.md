@@ -1,8 +1,8 @@
-# Mind Grace Clinic — Repository Architecture Documentation
+# Mind Grace Neuropsychiatric Clinic — Repository Architecture Documentation
 
 ## Executive Summary
 
-This repository contains the complete web presence for **Mind Grace Clinic**, a mental health practice in Greater Noida led by Dr. Anita Sharma. The project has been architected as a **modern, fluid, intrinsically responsive website** using vanilla HTML, CSS, and JavaScript—without frameworks.
+This repository contains the complete web presence for **Mind Grace Neuropsychiatric Clinic**, a mental health practice in Greater Noida led by Dr. Anita Sharma. The project has been architected as a **modern, fluid, intrinsically responsive website** using vanilla HTML, CSS, and JavaScript—without frameworks.
 
 ### Core Design Philosophy
 
@@ -534,7 +534,7 @@ Each tool script follows a consistent pattern:
 
 3. **Outdated PWA Manifest**:
    - `site.webmanifest` uses wrong theme color (`#0f766e` instead of `#671B50`)
-   - Wrong app name ("TheraTools" instead of "Mind Grace Clinic")
+   - Wrong app name ("TheraTools" instead of "Mind Grace Neuropsychiatric Clinic")
    - **Action**: Update manifest to match brand
 
 4. **Incomplete Sitemap**:

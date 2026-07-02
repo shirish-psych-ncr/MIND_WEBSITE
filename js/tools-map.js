@@ -18,6 +18,6 @@
 
     L.marker([28.4910152, 77.5132324])
       .addTo(map)
-      .bindPopup('Mind Grace Clinic, Gamma-2, Greater Noida');
+      .bindPopup('Mind Grace Neuropsychiatric Clinic, Gamma-2, Greater Noida');
   });
 })();

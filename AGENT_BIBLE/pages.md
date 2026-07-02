@@ -1,4 +1,4 @@
-# PAGE_REGISTRY [v3.0] - Mind Grace Clinic
+# PAGE_REGISTRY [v3.0] - Mind Grace Neuropsychiatric Clinic
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Update:** Auto(post-turn) | **Last Verified:** $(date)
 
 ## 1. CORE_PAGES (Root level)

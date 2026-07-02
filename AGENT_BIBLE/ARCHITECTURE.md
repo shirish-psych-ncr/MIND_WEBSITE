@@ -1,4 +1,4 @@
-# 🏗️ Mind Grace Clinic - Technical Architecture (v3.0)
+# 🏗️ Mind Grace Neuropsychiatric Clinic - Technical Architecture (v3.0)
 **Last Verified:** Real file system check | **Total HTML Files:** 40+ | **Refactored:** 14 core pages
 
 ## 1. System Overview

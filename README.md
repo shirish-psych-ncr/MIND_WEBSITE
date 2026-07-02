@@ -1,4 +1,4 @@
-# Mind Grace Clinic — Official Website Repository
+# Mind Grace Neuropsychiatric Clinic — Official Website Repository
 
 [![Live Site](https://img.shields.io/badge/live-site-671B50?style=flat-square)](https://shirish-psych-ncr.github.io/MIND_WEBSITE/)
 [![Technology](https://img.shields.io/badge/HTML5-CSS3-Vanilla%20JS-success?style=flat-square)]()
@@ -7,7 +7,7 @@
 
 ## Overview
 
-This repository contains the complete web presence for **Mind Grace Clinic**, a mental health practice in Greater Noida, India, led by Dr. Anita Sharma. The website is built with modern, framework-free technologies emphasizing:
+This repository contains the complete web presence for **Mind Grace Neuropsychiatric Clinic**, a mental health practice in Greater Noida, India, led by Dr. Anita Sharma. The website is built with modern, framework-free technologies emphasizing:
 
 - ✨ **Intrinsic Responsiveness** — Adapts to any screen without breakpoints
 - 🎨 **Fluid Design System** — Typography and spacing scale smoothly
@@ -295,7 +295,7 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed pla
 ## Contact & Maintenance
 
 **Primary Maintainer:** Repository Owner  
-**Clinic:** Mind Grace Clinic, Greater Noida, India  
+**Clinic:** Mind Grace Neuropsychiatric Clinic, Greater Noida, India  
 **Lead Psychiatrist:** Dr. Anita Sharma  
 
 **Technology Stack:** HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)  
@@ -312,9 +312,9 @@ For questions, contributions, or maintenance, refer to:
 
 ## License
 
-© 2025 Mind Grace Clinic. All rights reserved.
+© 2025 Mind Grace Neuropsychiatric Clinic. All rights reserved.
 
-This repository contains proprietary content belonging to Mind Grace Clinic. Unauthorized reproduction, distribution, or use is prohibited.
+This repository contains proprietary content belonging to Mind Grace Neuropsychiatric Clinic. Unauthorized reproduction, distribution, or use is prohibited.
 
 ---
 

@@ -1,31 +1,36 @@
 /**
- * Blog Configuration - Adult Mental Health
+ * Blog Discovery - Adult Mental Health Dynamic Loader
  */
-window.BLOG_DISCOVERY_CONFIG = {
-  sourceDir: "pages/adult/",
-  posts: [
-    "pages/adult/overthinking-vs-anxiety.html",
-    "pages/adult/scheduled-worry-time-technique.html",
-    "pages/adult/sleep-and-anxiety-cycle.html",
-    "pages/adult/stimulus-control-therapy.html",
-    "pages/adult/when-to-see-a-psychiatrist.html"
-  ],
-  pinned: [
-    "pages/adult/when-to-see-a-psychiatrist.html",
-    "pages/adult/overthinking-vs-anxiety.html",
-    "pages/adult/scheduled-worry-time-technique.html"
-  ],
-  mostSearched: [
-    "pages/adult/overthinking-vs-anxiety.html",
-    "pages/adult/sleep-and-anxiety-cycle.html",
-    "pages/adult/stimulus-control-therapy.html"
-  ],
-  symptoms: ["overthinking", "anxiety", "sleep", "adhd", "burnout", "panic"],
-  clusters: [
-    { label: "Anxiety & Overthinking", tags: ["anxiety", "overthinking", "panic"] },
-    { label: "Mood & Burnout", tags: ["burnout", "mood"] },
-    { label: "Focus & ADHD", tags: ["adhd", "focus"] },
-    { label: "Sleep", tags: ["sleep"] },
-    { label: "Medication Questions", tags: ["medication"] }
-  ]
-};
+(async function() {
+  'use strict';
+
+  const SOURCE_DIR = 'pages/adult/';
+  const MANIFEST_URL = `${SOURCE_DIR}manifest.json`;
+
+  try {
+    const response = await fetch(MANIFEST_URL, {
+      method: 'GET',
+      headers: { 'Cache-Control': 'no-cache' }
+    });
+
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+    const data = await response.json();
+
+    // Map manifest files to full paths
+    window.ADULT_BLOG_CONFIG = Object.freeze({
+      sourceDir: SOURCE_DIR,
+      posts: Object.freeze(data.files.map(file => `${SOURCE_DIR}${file}`)),
+      pinned: Object.freeze(data.pinned || []),
+      mostSearched: Object.freeze(data.mostSearched || []),
+      symptoms: Object.freeze(data.symptoms || []),
+      clusters: Object.freeze(data.clusters || [])
+    });
+
+    window.dispatchEvent(new CustomEvent('adultBlogConfigLoaded'));
+    console.info('AdultBlogConfig: Initialized successfully.');
+
+  } catch (error) {
+    console.error('AdultBlogConfig: Failed to load manifest.', error);
+  }
+})();

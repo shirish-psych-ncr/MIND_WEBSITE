@@ -1,265 +1,276 @@
-/* ============================================
-   MAIN.JS - Minimal Interaction Scripts
-   Mind Grace Clinic - Modern Fluid Design
-   ============================================ */
+/**
+ * ============================================
+ * MAIN.JS - Optimized Interaction Scripts
+ * Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
+ * ============================================
+ */
 
-// Mobile Navigation - Simplified
-(function initMobileNav() {
-  const trigger = document.querySelector('.mobile-nav-trigger');
-  const panel = document.getElementById('mobile-nav-panel');
-  const overlay = document.getElementById('mobile-nav-overlay');
-  const closeBtn = panel?.querySelector('.close-mobile-menu');
-  const navLinks = panel?.querySelectorAll('a[href]') || [];
+document.addEventListener('DOMContentLoaded', () => {
   
-  if (!trigger || !panel || !overlay) return;
-  
-  let isOpen = false;
-  
-  function openNav() {
-    isOpen = true;
-    trigger.setAttribute('aria-expanded', 'true');
-    panel.classList.add('active');
-    overlay.classList.add('active');
-    panel.removeAttribute('inert');
-    document.body.style.overflow = 'hidden';
-    setTimeout(() => navLinks[0]?.focus(), 100);
-  }
-  
-  function closeNav() {
-    if (!isOpen) return;
-    isOpen = false;
-    trigger.setAttribute('aria-expanded', 'false');
-    panel.classList.remove('active');
-    overlay.classList.remove('active');
-    panel.setAttribute('inert', '');
-    document.body.style.overflow = '';
-    setTimeout(() => trigger.focus(), 50);
-  }
-  
-  // Toggle
-  trigger.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    isOpen ? closeNav() : openNav();
-  });
-  
-  // Close on overlay click
-  overlay.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    closeNav();
-  });
-  
-  // Close button
-  closeBtn?.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    closeNav();
-  });
-  
-  // Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && isOpen) {
-      e.preventDefault();
-      closeNav();
-    }
-  });
-  
-  // Close on desktop resize
-  window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768 && isOpen) closeNav();
-  }, { passive: true });
-  
-  // Close on link click (allow navigation)
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      const href = link.getAttribute('href');
-      if (!href || href === '#' || href.startsWith('#')) {
-        event?.preventDefault();
-      }
-      closeNav();
-    });
-  });
-})();
+  // Initialize all modules
+  initMobileNav();
+  initHeaderScroll();
+  initViewportResize();
+  initScrollReveal();
+  initAccordion();
+  initFormValidation();
+  initCounters();
 
-// Header Scroll Effect
-(function initHeaderScroll() {
-  const header = document.querySelector('.site-header');
-  if (!header) return;
-  
-  let ticking = false;
-  function updateScroll() {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-    ticking = false;
-  }
-  
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScroll);
-      ticking = true;
-    }
-  }, { passive: true });
-})();
-
-// Viewport resize handler for fluid layouts
-(function initViewportResize() {
-  function updateViewport() {
-    document.documentElement.style.setProperty('--vw', `${window.innerWidth}px`);
-    document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
-  }
-  
-  updateViewport();
-  window.addEventListener('resize', updateViewport, { passive: true });
-  window.visualViewport?.addEventListener('resize', updateViewport, { passive: true });
-})();
-
-// Reveal animations on scroll (progressive enhancement)
-(function initScrollReveal() {
-  const reveals = document.querySelectorAll('.reveal');
-  if (!reveals.length || !('IntersectionObserver' in window)) return;
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-  
-  reveals.forEach(el => observer.observe(el));
-})();
-
-/* ============================================
-   ACCORDION FUNCTIONALITY
-   For FAQ and Process pages
-   ============================================ */
-(function initAccordion() {
-  const triggers = document.querySelectorAll('[data-accordion-trigger]');
-  
-  triggers.forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      const expanded = trigger.getAttribute('aria-expanded') === 'true';
-      const panelId = trigger.getAttribute('aria-controls');
-      const panel = document.getElementById(panelId);
-      
-      // Close all accordions (optional - for accordion behavior)
-      // Remove this block if you want multiple panels open
-      document.querySelectorAll('[data-accordion-trigger]').forEach(t => {
-        t.setAttribute('aria-expanded', 'false');
-        const p = document.getElementById(t.getAttribute('aria-controls'));
-        if (p) p.hidden = true;
+  // ==========================================
+  // 1. Mobile Navigation
+  // ==========================================
+  function initMobileNav() {
+    const trigger = document.querySelector('.mobile-nav-trigger');
+    const panel = document.getElementById('mobile-nav-panel');
+    const overlay = document.getElementById('mobile-nav-overlay');
+    const closeBtn = panel?.querySelector('.close-mobile-menu');
+    const navLinks = panel?.querySelectorAll('a[href]') || [];
+    
+    if (!trigger || !panel || !overlay) return;
+    
+    let isOpen = false;
+    
+    const openNav = () => {
+      isOpen = true;
+      trigger.setAttribute('aria-expanded', 'true');
+      panel.classList.add('active');
+      overlay.classList.add('active');
+      panel.removeAttribute('inert');
+      document.body.style.overflow = 'hidden';
+      // Focus management
+      requestAnimationFrame(() => {
+        setTimeout(() => navLinks[0]?.focus(), 50);
       });
-      
-      // Toggle current
-      if (!expanded && panel) {
-        trigger.setAttribute('aria-expanded', 'true');
-        panel.hidden = false;
-      }
-    });
-  });
-})();
-
-/* ============================================
-   FORM VALIDATION ENHANCEMENTS
-   For contact and booking forms
-   ============================================ */
-(function initFormValidation() {
-  const forms = document.querySelectorAll('form[novalidate]');
-  
-  forms.forEach(form => {
-    form.addEventListener('submit', function(e) {
+    };
+    
+    const closeNav = () => {
+      if (!isOpen) return;
+      isOpen = false;
+      trigger.setAttribute('aria-expanded', 'false');
+      panel.classList.remove('active');
+      overlay.classList.remove('active');
+      panel.setAttribute('inert', '');
+      document.body.style.overflow = '';
+      trigger.focus();
+    };
+    
+    trigger.addEventListener('click', (e) => {
       e.preventDefault();
-      
-      const requiredFields = this.querySelectorAll('[required]');
-      let isValid = true;
-      
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          isValid = false;
-          field.classList.add('error');
-          
-          // Add error message if not present
-          if (!field.parentNode.querySelector('.error-message')) {
-            const errorMsg = document.createElement('span');
-            errorMsg.className = 'error-message';
-            errorMsg.textContent = 'This field is required';
-            errorMsg.style.color = 'var(--error)';
-            errorMsg.style.fontSize = '0.75rem';
-            errorMsg.style.marginTop = 'var(--space-xs)';
-            errorMsg.style.display = 'block';
-            field.parentNode.appendChild(errorMsg);
-          }
-        } else {
-          field.classList.remove('error');
-          const existingError = field.parentNode.querySelector('.error-message');
-          if (existingError) existingError.remove();
-        }
-        
-        // Email validation
-        if (field.type === 'email' && field.value) {
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailRegex.test(field.value)) {
-            isValid = false;
-            field.classList.add('error');
-          }
-        }
-      });
-      
-      if (isValid) {
-        // Form is valid - in production, this would submit
-        console.log('Form submitted successfully');
-      }
+      isOpen ? closeNav() : openNav();
     });
     
-    // Clear errors on input
-    form.querySelectorAll('input, select, textarea').forEach(field => {
-      field.addEventListener('input', () => {
-        field.classList.remove('error');
-        const existingError = field.parentNode.querySelector('.error-message');
-        if (existingError) existingError.remove();
+    overlay.addEventListener('click', closeNav);
+    closeBtn?.addEventListener('click', closeNav);
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen) closeNav();
+    });
+    
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && isOpen) closeNav();
+    }, { passive: true });
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => { // Fixed: passed 'e' into callback
+        const href = link.getAttribute('href');
+        if (!href || href === '#' || href.startsWith('#')) {
+          e.preventDefault();
+        }
+        closeNav();
       });
     });
-  });
-})();
+  }
 
-// ========================================
-// Number Counter Animation for Aasha Page
-// ========================================
-const initCounters = () => {
-  const counters = document.querySelectorAll('.stat-number');
-  const observerOptions = { threshold: 0.5 };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const target = parseInt(counter.getAttribute('data-target')) || 100;
-        const increment = target / 50;
-        
-        let current = 0;
-        const updateCounter = () => {
-          current += increment;
-          if (current < target) {
-            counter.innerText = Math.ceil(current) + '+';
-            setTimeout(updateCounter, 40);
-          } else {
-            counter.innerText = target + '+';
-          }
-        };
-        updateCounter();
-        observer.unobserve(counter);
+  // ==========================================
+  // 2. Header Scroll Effect
+  // ==========================================
+  function initHeaderScroll() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+    
+    let ticking = false;
+    const updateScroll = () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+      ticking = false;
+    };
+    
+    // Set initial state
+    updateScroll();
+    
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScroll);
+        ticking = true;
       }
+    }, { passive: true });
+  }
+
+  // ==========================================
+  // 3. Viewport Resize (Fluid Layouts)
+  // ==========================================
+  function initViewportResize() {
+    let ticking = false;
+    const updateViewport = () => {
+      document.documentElement.style.setProperty('--vw', `${window.innerWidth}px`);
+      document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+      ticking = false;
+    };
+    
+    updateViewport();
+    
+    const onResize = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateViewport);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('resize', onResize, { passive: true });
+    window.visualViewport?.addEventListener('resize', onResize, { passive: true });
+  }
+
+  // ==========================================
+  // 4. Reveal Animations on Scroll
+  // ==========================================
+  function initScrollReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length || !('IntersectionObserver' in window)) return;
+    
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    reveals.forEach(el => observer.observe(el));
+  }
+
+  // ==========================================
+  // 5. Accordion Functionality
+  // ==========================================
+  function initAccordion() {
+    const triggers = document.querySelectorAll('[data-accordion-trigger]');
+    
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const expanded = trigger.getAttribute('aria-expanded') === 'true';
+        const panelId = trigger.getAttribute('aria-controls');
+        const panel = document.getElementById(panelId);
+        
+        // Close all triggers (Classic Accordion behavior)
+        triggers.forEach(t => {
+          t.setAttribute('aria-expanded', 'false');
+          const p = document.getElementById(t.getAttribute('aria-controls'));
+          if (p) p.hidden = true;
+        });
+        
+        // Open the clicked one if it wasn't already expanded
+        if (!expanded && panel) {
+          trigger.setAttribute('aria-expanded', 'true');
+          panel.hidden = false;
+        }
+      });
     });
-  }, observerOptions);
+  }
 
-  counters.forEach(counter => {
-    counter.setAttribute('data-target', counter.getAttribute('data-target') || '100');
-    observer.observe(counter);
-  });
-};
+  // ==========================================
+  // 6. Form Validation Enhancements
+  // ==========================================
+  function initFormValidation() {
+    const forms = document.querySelectorAll('form[novalidate]');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    forms.forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let isValid = true;
+        
+        const requiredFields = form.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+          let fieldIsValid = true;
+          
+          if (!field.value.trim()) {
+            fieldIsValid = false;
+          } else if (field.type === 'email' && !emailRegex.test(field.value)) {
+            fieldIsValid = false;
+          }
+          
+          if (!fieldIsValid) {
+            isValid = false;
+            field.classList.add('error');
+            
+            if (!field.parentNode.querySelector('.error-message')) {
+              const errorMsg = document.createElement('span');
+              errorMsg.className = 'error-message';
+              errorMsg.textContent = field.type === 'email' && field.value.trim() 
+                ? 'Please enter a valid email' 
+                : 'This field is required';
+              errorMsg.style.cssText = 'color: var(--error); font-size: 0.75rem; margin-top: var(--space-xs); display: block;';
+              field.parentNode.appendChild(errorMsg);
+            }
+          } else {
+            field.classList.remove('error');
+            field.parentNode.querySelector('.error-message')?.remove();
+          }
+        });
+        
+        if (isValid) {
+          console.log('Form submitted successfully');
+          // form.submit(); // Uncomment for production
+        }
+      });
+      
+      form.querySelectorAll('input, select, textarea').forEach(field => {
+        field.addEventListener('input', () => {
+          field.classList.remove('error');
+          field.parentNode.querySelector('.error-message')?.remove();
+        });
+      });
+    });
+  }
 
-// Initialize on load
-document.addEventListener('DOMContentLoaded', () => {
-  initCounters();
+  // ==========================================
+  // 7. Number Counter Animation (rAF Optimized)
+  // ==========================================
+  function initCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    if (!counters.length || !('IntersectionObserver' in window)) return;
+  
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-target'), 10) || 100;
+          const duration = 2000; // 2 seconds total animation time
+          let startTime = null;
+          
+          const step = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            
+            // easeOutQuart for a natural slowing down effect
+            const easeProgress = 1 - Math.pow(1 - progress, 4); 
+            const current = Math.floor(easeProgress * target);
+            
+            counter.innerText = current + '+';
+            
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              counter.innerText = target + '+';
+            }
+          };
+          
+          requestAnimationFrame(step);
+          obs.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    counters.forEach(counter => observer.observe(counter));
+  }
 });

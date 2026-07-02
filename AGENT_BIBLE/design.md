@@ -1,4 +1,4 @@
-# DESIGN_REF [v6.0] — Mind Grace Clinic
+# DESIGN_REF [v6.0] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Orientation-First | **Stack:** CSS-Layers|Tokens | **Sync:** End-turn
 
 ## 1. COLORS (Primitives→Semantic)

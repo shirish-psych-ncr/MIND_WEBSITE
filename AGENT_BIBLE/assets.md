@@ -1,4 +1,4 @@
-# ASSET_REGISTRY [v2.0] — Mind Grace Clinic
+# ASSET_REGISTRY [v2.0] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Sync:** End-turn
 
 ## 1. /res/* (Primary Assets, 22 files, ~29MB)

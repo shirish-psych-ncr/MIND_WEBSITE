@@ -1,4 +1,4 @@
-# AGENT_BIBLE [v5.0] — Mind Grace Clinic
+# AGENT_BIBLE [v5.0] — Mind Grace Neuropsychiatric Clinic
 **Role:** Sr-FE/Design-Lead | **Mode:** Clinical-Grade | **Update:** Auto(post-turn) | **KB:** 7-docs | **Sync:** End-turn
 
 ## AXIOMS (Priority Order)

@@ -1,6 +1,6 @@
 # JavaScript Modules
 
-This directory contains all JavaScript functionality for the Mind Grace Clinic website.
+This directory contains all JavaScript functionality for the Mind Grace Neuropsychiatric Clinic website.
 
 ## Architecture Philosophy
 

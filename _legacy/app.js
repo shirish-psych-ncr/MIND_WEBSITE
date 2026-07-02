@@ -11,7 +11,7 @@ const siteData = {
     hpr: "71-2147-5815-3754"
   },
   clinic: {
-    name: "Mind Grace Clinic",
+    name: "Mind Grace Neuropsychiatric Clinic",
     address: "J-123, Gamma-2, Greater Noida, Uttar Pradesh 201310",
     timings: "Monday to Saturday, 10:00 AM to 4:00 PM and 5:30 PM to 7:30 PM",
     maps: "https://maps.app.goo.gl/NorMGtR8Uqu5eM8G9"

@@ -1,29 +1,35 @@
 /**
  * Book Appointment Page - Form Loading Logic
+ * Optimized for performance and accessibility.
  */
+document.addEventListener('DOMContentLoaded', () => {
+  const openButton = document.getElementById('openBookingForm');
+  const formSection = document.getElementById('bookingFormSection');
 
-(function() {
-  'use strict';
+  if (!openButton || !formSection) return;
 
-  // Initialize booking form when DOM is ready
-  document.addEventListener('DOMContentLoaded', function() {
-    const openButton = document.getElementById('openBookingForm');
-    const formSection = document.getElementById('bookingFormSection');
+  openButton.addEventListener('click', () => {
+    // 1. Update accessibility state
+    openButton.setAttribute('aria-expanded', 'true');
 
-    if (!openButton || !formSection) return;
+    // 2. Reveal the form using native attributes (or use a CSS class)
+    formSection.removeAttribute('hidden'); 
+    // formSection.classList.add('is-visible'); // Alternative: use if you have CSS animations
 
-    // Add click handler to open button
-    openButton.addEventListener('click', function() {
-      // Show the form section with smooth scroll
-      formSection.style.display = 'block';
-      
-      // Scroll to form smoothly
-      setTimeout(function() {
-        formSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }, 100);
+    // 3. Wait for the browser to render the display change, then scroll
+    requestAnimationFrame(() => {
+      formSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+
+      // 4. Accessibility: Shift focus to the first input field
+      const firstInput = formSection.querySelector('input, select, textarea');
+      if (firstInput) {
+        // Prevent the browser from abruptly jumping to the focused element, 
+        // allowing our smooth scroll to play out
+        firstInput.focus({ preventScroll: true }); 
+      }
     });
   });
-})();
+});
