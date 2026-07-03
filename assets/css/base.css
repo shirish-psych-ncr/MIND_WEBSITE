@@ -154,6 +154,11 @@ body {
   flex-shrink: 0;
 }
 
+/* Typography - Headings with text-wrap */
+h1, h2, h3, h4 {
+  text-wrap: pretty;
+}
+
 /* Container with container queries */
 .container {
   container-type: inline-size;
