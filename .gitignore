@@ -4,6 +4,48 @@
 __pycache__/
 *.o
 *.obj
+
+*.out
+
+# Dependencies
+.venv/
+venv/
+node_modules/
+dist/
+build/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# Python specific
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+
+# Backup files
+*~
+*.bak
+*.swp
+=======
 *.class
 *.exe
 *.dll
@@ -67,6 +109,7 @@ Thumbs.db
 *.tar.xz
 *.tar.zst
 =======
+
 
 
 ```
