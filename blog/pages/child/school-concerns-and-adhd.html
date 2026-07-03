@@ -13,6 +13,96 @@
     <link rel="stylesheet" href="../../../css/base.css" />
   </head>
   <body>
+<header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
+        <img src="./res/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
+        <div>
+          <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
+          <div class="logo-tagline">Where You Come First</div>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./process.html">Process</a></li>
+          <li><a href="./resources.html">Resources</a></li>
+          <li><a href="./location.html">Location</a></li>
+          <li><a href="./book.html" class="cta-button">Book Now</a></li>
+        </ul>
+      </nav>
+
+      <!-- MOBILE NAV TRIGGER -->
+      <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Mobile Book Button (Calendar Icon) -->
+      <a href="./book.html" class="mobile-book-btn" aria-label="Book Appointment">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+<!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+  <!-- MOBILE NAV PANEL - Simplified -->
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
+    <div class="mobile-nav-header">
+      <h2>Menu</h2>
+      <button class="close-mobile-menu" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Explore</div>
+        <ul class="mobile-nav-list">
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./services.html">Our Services</a></li>
+          <li><a href="./process.html">What to Expect</a></li>
+          <li><a href="./location.html">Find Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Resources & Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./blog/index.html">Blog</a></li>
+          <li><a href="./book.html">Resource Book</a></li>
+          <li><a href="./resources.html">Resources</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Therapeutic Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="guided-breathing.html">Guided Breathing</a></li>
+          <li><a href="butterfly-tapper.html">Butterfly Tapper</a></li>
+          <li><a href="eye-movement.html">Eye Movement</a></li>
+          <li><a href="hypnos-fractal.html">Hypnotic Fractal</a></li>
+          <li><a href="horizon-scan.html">Horizon Scan</a></li>
+          <li><a href="leaf-on-stream.html">Leaf on Stream</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <a href="./book.html" class="cta-button">Book Appointment</a>
+      </div>
+    </div>
+  </nav>
     <main class="section">
       <article class="shell stack">
         <section class="surface panel">
@@ -31,5 +121,46 @@
       </article>
     </main>
     <script src="../../../js/main.js"></script>
-  </body>
+  
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Patient Care</h4>
+        <ul>
+          <li><a href="./book.html">Book Appointment</a></li>
+          <li><a href="./services.html">Our Services</a></li>
+          <li><a href="./process.html">What to Expect</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="./about.html">Dr. Sharma</a></li>
+          <li><a href="./location.html">Find Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Help & Resources</h4>
+        <ul>
+          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./resources.html">Self-Help Tools</a></li>
+          <li><a href="./emergency.html">Emergency Help</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="disclaimer">
+        Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice.
+        Always consult a qualified healthcare provider for diagnosis and treatment. In crisis, call emergency services immediately.
+      </p>
+      <p class="footer-copyright">
+        © <span id="year"></span> Mind Grace Neuropsychiatric Clinic, Greater Noida. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
 </html>
