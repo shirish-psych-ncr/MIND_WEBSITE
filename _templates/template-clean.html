@@ -148,44 +148,100 @@
     </script>
   </head>
   <body>
+<header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
+        <img src="./res/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
+        <div>
+          <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
+          <div class="logo-tagline">Where You Come First</div>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./process.html">Process</a></li>
+          <li><a href="./resources.html">Resources</a></li>
+          <li><a href="./location.html">Location</a></li>
+          <li><a href="./book.html" class="cta-button">Book Now</a></li>
+        </ul>
+      </nav>
+
+      <!-- MOBILE NAV TRIGGER -->
+      <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Mobile Book Button (Calendar Icon) -->
+      <a href="./book.html" class="mobile-book-btn" aria-label="Book Appointment">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+<!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+  <!-- MOBILE NAV PANEL - Simplified -->
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
+    <div class="mobile-nav-header">
+      <h2>Menu</h2>
+      <button class="close-mobile-menu" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Explore</div>
+        <ul class="mobile-nav-list">
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./services.html">Our Services</a></li>
+          <li><a href="./process.html">What to Expect</a></li>
+          <li><a href="./location.html">Find Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Resources & Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./blog/index.html">Blog</a></li>
+          <li><a href="./book.html">Resource Book</a></li>
+          <li><a href="./resources.html">Resources</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Therapeutic Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="guided-breathing.html">Guided Breathing</a></li>
+          <li><a href="butterfly-tapper.html">Butterfly Tapper</a></li>
+          <li><a href="eye-movement.html">Eye Movement</a></li>
+          <li><a href="hypnos-fractal.html">Hypnotic Fractal</a></li>
+          <li><a href="horizon-scan.html">Horizon Scan</a></li>
+          <li><a href="leaf-on-stream.html">Leaf on Stream</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <a href="./book.html" class="cta-button">Book Appointment</a>
+      </div>
+    </div>
+  </nav>
     <a class="skip-link" href="#content">Skip to Main Content</a>
     <div class="progress"><div class="progress-bar" data-progress></div></div>
     <div class="top-banner" role="alert" aria-live="polite">If you need immediate safety support, call 112 or go to the nearest hospital. This website is for routine information and appointment planning.</div>
 
-    <header class="site-header">
-      <!-- Top Contact Bar -->
-      <div class="top-contact-bar">
-        <div class="container">Greater Noida | +91-96678-63295</div>
-      </div>
-      
-      <div class="container header-row">
-        <a class="brand-wrap" href="index.html">
-          <img class="logo" src="res/Mind_Grace_Clinic_Logo.png" alt="Mind Grace Neuropsychiatric Clinic logo" loading="eager" fetchpriority="high" />
-          <div class="brand-text">
-            <p class="brand-name">Mind Grace Neuropsychiatric Clinic</p>
-            <p class="doctor-name">Dr Anita Sharma MD</p>
-          </div>
-        </a>
-        
-        <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span>&#9776;</span>
-        </button>
-
-        <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="gallery.html">Gallery</a>
-          <a class="nav-link" href="services.html">Services</a>
-          <a class="nav-link" href="process.html">Process</a>
-          <a class="nav-link" href="resources.html">Resources</a>
-          <a class="nav-link" href="faq.html">FAQ</a>
-          <a class="nav-link" href="location.html">Location</a>
-          <a class="nav-link" href="blog/index.html">Blog</a>
-          <a class="btn-primary" href="book.html">Book Appointment</a>
-        </nav>
-      </div>
-    </header>
-    
     <!-- Mobile Slide-out Panel -->
     <div class="mobile-panel" id="clean-mobile-panel" aria-hidden="true">
       <div class="mobile-panel-overlay" data-close-mobile-menu></div>
@@ -196,19 +252,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
           </button>
         </div>
-        <nav class="mobile-nav-list" aria-label="Mobile">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="services.html">Services</a>
-          <a href="process.html">Process</a>
-          <a href="resources.html">Resources</a>
-          <a href="faq.html">FAQ</a>
-          <a href="location.html">Location</a>
-          <a href="blog/index.html">Blog</a>
-          <a href="testimonials.html">Testimonials</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+        
         <div class="mobile-panel-actions">
           <a class="button-outline" href="tel:+919667863295">Call Now</a>
           <a class="button-primary" href="book.html">Book Appointment</a>
@@ -369,47 +413,6 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="shell footer-grid">
-        <div>
-          <h3>Mind Grace Neuropsychiatric Clinic</h3>
-          <p class="lead">Psychiatric care and child development support in Greater Noida with practical access from metro, school, university, and Knowledge Park routes.</p>
-        </div>
-        <div>
-          <h3>Explore</h3>
-          <div class="stack">
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="process.html">Process</a>
-            <a href="approach.html">Approach</a>
-            <a href="faq.html">FAQ</a>
-            <a href="location.html">Location</a>
-            <a href="blog/index.html">Blog</a>
-            <a href="testimonials.html">Testimonials</a>
-          </div>
-        </div>
-        <div>
-          <h3>Contact and safety</h3>
-          <div class="stack">
-            <a href="book.html">Book appointment</a>
-            <a href="tel:+919667863295">+91-96678-63295</a>
-            <a href="mailto:dranitasharma86@gmail.com">dranitasharma86@gmail.com</a>
-            <a href="emergency.html">Emergency support</a>
-          </div>
-        </div>
-        <div>
-          <h3>Information</h3>
-          <div class="stack">
-            <a href="fees.html">Fees & Payments</a>
-            <a href="mind-grace.html">Mind Grace Neuropsychiatric Clinic</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="consent.html">Consent</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-
     <div class="consent" data-consent>
       <strong>Privacy note</strong>
       <p>This site stores basic browsing preferences on your device to support booking and navigation. Non-essential tracking stays off unless you enable it separately in the future.</p>
@@ -443,5 +446,46 @@
     </div>
 
     <script src="app.js"></script>
-  </body>
+  
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Patient Care</h4>
+        <ul>
+          <li><a href="./book.html">Book Appointment</a></li>
+          <li><a href="./services.html">Our Services</a></li>
+          <li><a href="./process.html">What to Expect</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="./about.html">Dr. Sharma</a></li>
+          <li><a href="./location.html">Find Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Help & Resources</h4>
+        <ul>
+          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./resources.html">Self-Help Tools</a></li>
+          <li><a href="./emergency.html">Emergency Help</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="disclaimer">
+        Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice.
+        Always consult a qualified healthcare provider for diagnosis and treatment. In crisis, call emergency services immediately.
+      </p>
+      <p class="footer-copyright">
+        © <span id="year"></span> Mind Grace Neuropsychiatric Clinic, Greater Noida. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
 </html>

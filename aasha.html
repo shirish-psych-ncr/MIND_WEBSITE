@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes, viewport-fit=cover"/>
   <title>Aasha Initiative | Mind Grace Neuropsychiatric Clinic</title>
   <meta name="description" content="Aasha Early Intervention - Bringing hope through child development support, community workshops, and mental health awareness in Greater Noida." />
   
@@ -22,257 +22,105 @@
   <script src="./js/main.js" defer></script>
 </head>
 <body>
-<!-- 
-  HEADER COMPONENT 
-  Source: index.html (lines 104-142)
-  Usage: Paste immediately after <body> and Skip Link
--->
 <header class="site-header" role="banner">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
-      <img src="./res/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
-      <div>
-        <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
-        <div class="logo-tagline">Where You Come First</div>
-      </div>
-    </a>
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
+        <img src="./res/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
+        <div>
+          <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
+          <div class="logo-tagline">Where You Come First</div>
+        </div>
+      </a>
 
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
-      <ul>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./process.html">Process</a></li>
-        <li><a href="./resources.html">Resources</a></li>
-        <li><a href="./location.html">Location</a></li>
-        <li><a href="./book.html" class="cta-button">Book Now</a></li>
-      </ul>
-    </nav>
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./process.html">Process</a></li>
+          <li><a href="./resources.html">Resources</a></li>
+          <li><a href="./location.html">Location</a></li>
+          <li><a href="./book.html" class="cta-button">Book Now</a></li>
+        </ul>
+      </nav>
 
-    <!-- MOBILE NAV TRIGGER -->
-    <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Mobile Book Button (Calendar Icon) -->
-    <a href="./book.html" class="mobile-book-btn" aria-label="Book Appointment">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-      </svg>
-    </a>
-  </div>
-</header>
-<!-- 
-  NAVIGATION COMPONENT (Mobile Overlay & Panel)
-  Source: index.html (lines 144-193)
-  Usage: Paste immediately after Header, before <main>
-  Requires: js/main.js for toggle functionality
--->
+      <!-- MOBILE NAV TRIGGER -->
+      <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Mobile Book Button (Calendar Icon) -->
+      <a href="./book.html" class="mobile-book-btn" aria-label="Book Appointment">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
 <!-- MOBILE NAV OVERLAY -->
-<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
 
-<!-- MOBILE NAV PANEL -->
-<nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
-  <div class="mobile-nav-header">
-    <h2>Menu</h2>
-    <button class="close-mobile-menu" aria-label="Close menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M18 6L6 18M6 6l12 12"/>
-      </svg>
-    </button>
-  </div>
-  <div class="mobile-nav-content">
-    <div class="mobile-nav-section">
-      <div class="mobile-nav-section-title">Explore</div>
-      <ul class="mobile-nav-list">
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="./services.html">Our Services</a></li>
-        <li><a href="./process.html">What to Expect</a></li>
-        <li><a href="./location.html">Find Us</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
+  <!-- MOBILE NAV PANEL - Simplified -->
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
+    <div class="mobile-nav-header">
+      <h2>Menu</h2>
+      <button class="close-mobile-menu" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
     </div>
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Explore</div>
+        <ul class="mobile-nav-list">
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./services.html">Our Services</a></li>
+          <li><a href="./process.html">What to Expect</a></li>
+          <li><a href="./location.html">Find Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
 
-    <div class="mobile-nav-section">
-      <div class="mobile-nav-section-title">Resources & Tools</div>
-      <ul class="mobile-nav-list">
-        <li><a href="./gallery.html">Gallery</a></li>
-        <li><a href="./blog/index.html">Blog</a></li>
-        <li><a href="./book.html">Resource Book</a></li>
-        <li><a href="./resources.html">Resources</a></li>
-        <li><a href="./faq.html">FAQ</a></li>
-      </ul>
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Resources & Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./blog/index.html">Blog</a></li>
+          <li><a href="./book.html">Resource Book</a></li>
+          <li><a href="./resources.html">Resources</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Therapeutic Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="guided-breathing.html">Guided Breathing</a></li>
+          <li><a href="butterfly-tapper.html">Butterfly Tapper</a></li>
+          <li><a href="eye-movement.html">Eye Movement</a></li>
+          <li><a href="hypnos-fractal.html">Hypnotic Fractal</a></li>
+          <li><a href="horizon-scan.html">Horizon Scan</a></li>
+          <li><a href="leaf-on-stream.html">Leaf on Stream</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <a href="./book.html" class="cta-button">Book Appointment</a>
+      </div>
     </div>
+  </nav>
 
-    <div class="mobile-nav-section">
-      <div class="mobile-nav-section-title">Therapeutic Tools</div>
-      <ul class="mobile-nav-list">
-        <li><a href="./guided-breathing.html">Guided Breathing</a></li>
-        <li><a href="./butterfly-tapper.html">Butterfly Tapper</a></li>
-        <li><a href="./eye-movement.html">Eye Movement</a></li>
-        <li><a href="./hypnos-fractal.html">Hypnotic Fractal</a></li>
-        <li><a href="./horizon-scan.html">Horizon Scan</a></li>
-        <li><a href="./leaf-on-stream.html">Leaf on Stream</a></li>
-      </ul>
-    </div>
+<!-- Year Update Script -->
+<script>
+  if (document.getElementById('year')) {
+    document.getElementById('year').textContent = new Date().getFullYear();
+  }
+</script>
 
-    <div class="mobile-nav-section">
-      <a href="./book.html" class="cta-button">Book Appointment</a>
-    </div>
-  </div>
-</nav>
-  <!-- Header -->
-  
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero hero-small bg-warm">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <span class="section-badge">Community Initiative</span>
-          <h1>Aasha: Bringing Hope to Communities</h1>
-          <p class="lead">Early intervention, community empowerment, and mental health awareness for children and families across Greater Noida.</p>
-        </div>
-        <div class="hero-image">
-          <img src="./images/aasha-hero.svg" alt="Children and families in community support" onerror="this.style.display='none'"/>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Story Section -->
-    <section class="section">
-      <div class="container">
-        <div class="story-block text-center">
-          <h2>Our Mission</h2>
-          <p><strong>"Aasha"</strong> means hope in Hindi. Our initiative was born from a simple belief: every child deserves the opportunity to thrive, regardless of their developmental challenges or family circumstances.</p>
-          <p>We work at the intersection of clinical expertise and community outreach, providing early intervention services, parent education, and awareness programs that reach families who might otherwise lack access to mental health support.</p>
-          <p>Through school partnerships, government collaborations, and grassroots workshops, we're building a more informed, supportive community where children with developmental differences are understood, accepted, and empowered.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Impact Stats Section -->
-    <section class="section bg-light">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Our Impact So Far</h2>
-          <p class="section-desc">Making a difference in the lives of children and families</p>
-        </div>
-        
-        <div class="impact-stats">
-          <div class="stat-item">
-            <span class="stat-number" data-target="500">500+</span>
-            <span class="stat-label">Workshops Conducted</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="10000">10000+</span>
-            <span class="stat-label">Lives Touched</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="50">50+</span>
-            <span class="stat-label">School Partnerships</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="2000">2000+</span>
-            <span class="stat-label">Parents Trained</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Our Programs</h2>
-          <p class="section-desc">Comprehensive support for children, parents, and educators</p>
-        </div>
-        
-        <div class="program-grid">
-          <div class="program-card">
-            <h3>School Workshops</h3>
-            <p>Interactive sessions for teachers and students on recognizing early signs of developmental delays, ADHD, autism, and learning disabilities. We provide practical classroom strategies and foster inclusive environments.</p>
-          </div>
-          
-          <div class="program-card">
-            <h3>Parent Guidance Sessions</h3>
-            <p>Empowering parents with knowledge and skills to support their child's development at home. Topics include behavior management, communication techniques, and navigating the healthcare and education systems.</p>
-          </div>
-          
-          <div class="program-card">
-            <h3>Rural Outreach Camps</h3>
-            <p>Free screening camps in underserved areas, providing early identification of developmental concerns and connecting families with appropriate resources and government schemes.</p>
-          </div>
-          
-          <div class="program-card">
-            <h3>Teacher Training Programs</h3>
-            <p>Comprehensive training for educators on inclusive education practices, individualized education plans (IEPs), and supporting diverse learners in mainstream classrooms.</p>
-          </div>
-          
-          <div class="program-card">
-            <h3>Community Awareness Drives</h3>
-            <p>Public campaigns to reduce stigma around mental health and developmental disorders, promoting early intervention and acceptance in the broader community.</p>
-          </div>
-          
-          <div class="program-card">
-            <h3>Support Groups</h3>
-            <p>Facilitated peer support groups for parents of children with similar challenges, providing emotional support, resource sharing, and a sense of community.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Get Involved Section -->
-    <section class="section bg-warm">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Get Involved</h2>
-          <p class="section-desc">Join us in making a difference</p>
-        </div>
-        
-        <div class="get-involved-grid">
-          <div class="involve-card">
-            <h3>Volunteer</h3>
-            <p>Share your time and skills</p>
-          </div>
-          <div class="involve-card">
-            <h3>Partner With Us</h3>
-            <p>Schools & Organizations</p>
-          </div>
-          <div class="involve-card">
-            <h3>Support Our Cause</h3>
-            <p>Donate or Sponsor</p>
-          </div>
-        </div>
-        
-        <div class="text-center" style="margin-top: 2rem;">
-          <a href="./contact.html" class="btn btn-primary btn-large">Contact Us to Learn More</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section-cta">
-      <div class="container text-center">
-        <h2>Need Support for Your Child?</h2>
-        <p class="lead">Early intervention can make a significant difference. Let's work together.</p>
-        <div class="cta-group">
-          <a href="./book.html" class="btn btn-primary btn-large">Book an Assessment</a>
-          <a href="./services.html" class="btn btn-outline btn-large">View Services</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  
-<!-- 
-  FOOTER COMPONENT 
-  Source: index.html (lines ~end-40)
-  Usage: Paste at bottom of <body>, before closing </body> tag
--->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-content">
     <div class="footer-column">
@@ -320,5 +168,6 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   }
 </script>
+
 </body>
 </html>
