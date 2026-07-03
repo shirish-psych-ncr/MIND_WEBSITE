@@ -1,39 +1,44 @@
-<!-- NAVIGATION COMPONENT: Extracted from index.html -->
+<!-- NAVIGATION COMPONENT: Extracted from index.html (Truth Source) -->
 <!-- Usage: Paste immediately after Header, before main content -->
-<!-- Note: Requires nav-toggle.js for mobile functionality -->
+<!-- Includes: Desktop nav (in header), Mobile overlay, Mobile panel -->
+<!-- Required CSS: base.css, layout.css -->
+<!-- Required JS: nav-toggle.js -->
 
-<nav class="site-navigation" aria-label="Main navigation">
-  <div class="container nav-inner">
-    <!-- Desktop Menu -->
-    <ul class="nav-menu" role="menubar">
-      <li role="none"><a href="/" role="menuitem" class="nav-link active">Home</a></li>
-      <li role="none"><a href="/about.html" role="menuitem" class="nav-link">About</a></li>
-      <li role="none"><a href="/services.html" role="menuitem" class="nav-link">Services</a></li>
-      <li role="none"><a href="/doctor.html" role="menuitem" class="nav-link">Doctors</a></li>
-      <li role="none"><a href="/location.html" role="menuitem" class="nav-link">Location</a></li>
-      <li role="none"><a href="/blog.html" role="menuitem" class="nav-link">Blog</a></li>
-      <li role="none"><a href="/contact.html" role="menuitem" class="nav-link">Contact</a></li>
-    </ul>
+<!-- Mobile Nav Overlay (Hidden by default) -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
 
-    <!-- CTA Button -->
-    <div class="nav-cta">
-      <a href="/booking.html" class="btn btn-primary">Book Appointment</a>
-    </div>
-
-    <!-- Mobile Menu Overlay (Hidden by default) -->
-    <div class="mobile-menu-overlay" aria-hidden="true">
-      <ul class="mobile-nav-menu">
-        <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/about.html" class="nav-link">About</a></li>
-        <li><a href="/services.html" class="nav-link">Services</a></li>
-        <li><a href="/doctor.html" class="nav-link">Doctors</a></li>
-        <li><a href="/location.html" class="nav-link">Location</a></li>
-        <li><a href="/blog.html" class="nav-link">Blog</a></li>
-        <li><a href="/contact.html" class="nav-link">Contact</a></li>
-        <li class="mobile-cta-item">
-          <a href="/booking.html" class="btn btn-primary btn-block">Book Appointment</a>
-        </li>
+<!-- Mobile Nav Panel -->
+<nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
+  <div class="mobile-nav-header">
+    <h2>Menu</h2>
+    <button class="close-mobile-menu" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-nav-content">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">Explore</div>
+      <ul class="mobile-nav-list">
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./services.html">Our Services</a></li>
+        <li><a href="./process.html">What to Expect</a></li>
+        <li><a href="./location.html">Find Us</a></li>
+        <li><a href="./contact.html">Contact</a></li>
       </ul>
+    </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">Resources</div>
+      <ul class="mobile-nav-list">
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./resources.html">Self-Help Tools</a></li>
+        <li><a href="./emergency.html">Emergency Help</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-cta">
+      <a href="./book.html" class="btn btn-primary btn-block">Book Appointment</a>
     </div>
   </div>
 </nav>

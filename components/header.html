@@ -1,29 +1,42 @@
-<!-- HEADER COMPONENT: Extracted from index.html -->
-<!-- Usage: Paste at the very top of <body> -->
+<!-- HEADER COMPONENT: Extracted from index.html (Truth Source) -->
+<!-- Usage: Paste at the very top of <body>, after skip link -->
+<!-- Required CSS: base.css, layout.css -->
 
-<header class="site-header">
-  <div class="container header-inner">
+<header class="site-header" role="banner">
+  <div class="header-inner">
     <!-- Logo -->
-    <a href="/" class="logo" aria-label="Sattva Mind Clinic Home">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="20" cy="20" r="18" stroke="#6B4C7A" stroke-width="2" fill="#FDF8F5"/>
-        <path d="M20 12C20 12 24 16 24 20C24 24 20 28 20 28C20 28 16 24 16 20C16 16 20 12 20 12Z" fill="#6B4C7A"/>
-        <circle cx="20" cy="20" r="6" fill="#D4A5A5"/>
-      </svg>
-      <span class="logo-text">Sattva<span class="logo-accent">Mind</span></span>
+    <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
+      <img src="./res/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
+      <div>
+        <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
+        <div class="logo-tagline">Where You Come First</div>
+      </div>
     </a>
 
-    <!-- Top Badge (Desktop) -->
-    <div class="header-badge">
-      <span class="badge-icon" aria-hidden="true">🌿</span>
-      <span>You Matter Here</span>
-    </div>
+    <!-- Desktop Navigation (contained in header) -->
+    <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./process.html">Process</a></li>
+        <li><a href="./resources.html">Resources</a></li>
+        <li><a href="./location.html">Location</a></li>
+        <li><a href="./book.html" class="cta-button">Book Now</a></li>
+      </ul>
+    </nav>
 
     <!-- Mobile Menu Trigger -->
-    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
+    <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
+
+    <!-- Mobile Book Button (Calendar Icon) -->
+    <a href="./book.html" class="mobile-book-btn" aria-label="Book Appointment">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+      </svg>
+    </a>
   </div>
 </header>
