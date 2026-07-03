@@ -215,6 +215,108 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
+<!-- 
+  HEADER COMPONENT 
+  Source: index.html (lines 104-142)
+  Usage: Paste immediately after <body> and Skip Link
+-->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
+      <img src="./res/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
+      <div>
+        <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
+        <div class="logo-tagline">Where You Come First</div>
+      </div>
+    </a>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./process.html">Process</a></li>
+        <li><a href="./resources.html">Resources</a></li>
+        <li><a href="./location.html">Location</a></li>
+        <li><a href="./book.html" class="cta-button">Book Now</a></li>
+      </ul>
+    </nav>
+
+    <!-- MOBILE NAV TRIGGER -->
+    <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile Book Button (Calendar Icon) -->
+    <a href="./book.html" class="mobile-book-btn" aria-label="Book Appointment">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+      </svg>
+    </a>
+  </div>
+</header>
+<!-- 
+  NAVIGATION COMPONENT (Mobile Overlay & Panel)
+  Source: index.html (lines 144-193)
+  Usage: Paste immediately after Header, before <main>
+  Requires: js/main.js for toggle functionality
+-->
+<!-- MOBILE NAV OVERLAY -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+<!-- MOBILE NAV PANEL -->
+<nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
+  <div class="mobile-nav-header">
+    <h2>Menu</h2>
+    <button class="close-mobile-menu" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-nav-content">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">Explore</div>
+      <ul class="mobile-nav-list">
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./services.html">Our Services</a></li>
+        <li><a href="./process.html">What to Expect</a></li>
+        <li><a href="./location.html">Find Us</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">Resources & Tools</div>
+      <ul class="mobile-nav-list">
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./blog/index.html">Blog</a></li>
+        <li><a href="./book.html">Resource Book</a></li>
+        <li><a href="./resources.html">Resources</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">Therapeutic Tools</div>
+      <ul class="mobile-nav-list">
+        <li><a href="./guided-breathing.html">Guided Breathing</a></li>
+        <li><a href="./butterfly-tapper.html">Butterfly Tapper</a></li>
+        <li><a href="./eye-movement.html">Eye Movement</a></li>
+        <li><a href="./hypnos-fractal.html">Hypnotic Fractal</a></li>
+        <li><a href="./horizon-scan.html">Horizon Scan</a></li>
+        <li><a href="./leaf-on-stream.html">Leaf on Stream</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-nav-section">
+      <a href="./book.html" class="cta-button">Book Appointment</a>
+    </div>
+  </div>
+</nav>
+
     
     <!-- Top Banner -->
     <div class="top-banner bg-accent-light text-primary text-center py-2 text-sm">
@@ -222,79 +324,13 @@
     </div>
 
     <!-- HEADER -->
-    <header class="site-header" role="banner">
-        <div class="header-inner">
-            <a href="./index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
-                <svg class="logo-svg" viewBox="0 0 900 873" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <use href="./res/Mind_Grace_Clinic_Logo_Pink.svg"/>
-                </svg>
-                <div>
-                    <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
-                    <div class="logo-tagline">Where You Come First</div>
-                </div>
-            </a>
-
-            <!-- DESKTOP NAVIGATION -->
-            <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
-                <ul>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./services.html">Services</a></li>
-                    <li><a href="./process.html">Process</a></li>
-                    <li><a href="./resources.html">Resources</a></li>
-                    <li><a href="./location.html">Location</a></li>
-                    <li><a href="./book.html" class="cta-button">Book Now</a></li>
-                </ul>
-            </nav>
-
-            <!-- MOBILE NAV TRIGGER -->
-            <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    
 
     <!-- MOBILE NAV OVERLAY -->
-    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    
 
     <!-- MOBILE NAV PANEL -->
-    <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
-        <div class="mobile-nav-header">
-            <h2>Menu</h2>
-            <button class="close-mobile-menu" aria-label="Close menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 6L6 18M6 6l12 12"/>
-                </svg>
-            </button>
-        </div>
-        <div class="mobile-nav-content">
-            <div class="mobile-nav-section">
-                <div class="mobile-nav-section-title">Explore</div>
-                <ul class="mobile-nav-list">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./services.html">Our Services</a></li>
-                    <li><a href="./process.html">What to Expect</a></li>
-                    <li><a href="./doctors.html" class="active">Our Team</a></li>
-                    <li><a href="./location.html">Find Us</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="mobile-nav-section">
-                <div class="mobile-nav-section-title">Resources</div>
-                <ul class="mobile-nav-list">
-                    <li><a href="./conditions.html">Conditions Treated</a></li>
-                    <li><a href="./emergency.html">Emergency Help</a></li>
-                    <li><a href="./fees.html">Fees & Insurance</a></li>
-                    <li><a href="./blog/index.html">Blog</a></li>
-                </ul>
-            </div>
-            <div class="mobile-nav-cta">
-                <a href="./book.html" class="cta-button full-width">Book Appointment</a>
-            </div>
-        </div>
-    </nav>
+    
 
     <main id="main-content">
         <!-- Intro Banner -->
@@ -537,44 +573,60 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Mind Grace & Aasha</h3>
-                    <p>Comprehensive mental health care for adults and children. Psychiatric and psychological services under one roof.</p>
-                    <div class="social-links" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <a href="https://instagram.com/dr_anita.md" target="_blank" rel="noopener" aria-label="Dr. Anita Instagram">@dr_anita.md (Adult Mental Health)</a>
-                        <a href="https://instagram.com/aashachilddevelopment" target="_blank" rel="noopener" aria-label="Aasha Instagram">@aashachilddevelopment (Child Development)</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <a href="./about.html">About</a>
-                    <a href="./services.html">Services</a>
-                    <a href="./doctors.html" class="active">Our Team</a>
-                    <a href="./process.html">Process</a>
-                    <a href="./contact.html">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>J-123, Gamma-2<br>Greater Noida, UP 201308</p>
-                    <p><a href="tel:+919667863295" style="color: inherit;">+91 96678 63295</a></p>
-                    <p><a href="mailto:dranitasharma86@gmail.com" style="color: inherit;">dranitasharma86@gmail.com</a></p>
-                </div>
-                <div class="footer-col">
-                    <h4>Emergency</h4>
-                    <p style="color: var(--text-muted); margin-bottom: 1rem;">In crisis? Visit our emergency resources page for immediate helpline numbers and local hospitals.</p>
-                    <a href="./emergency.html" class="btn btn-danger" style="display: inline-block;">Emergency Resources</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Mind Grace Neuropsychiatric Clinic & Aasha – An Early Intervention Centre. All rights reserved.</p>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Dr. Anita Sharma: MCI Reg. No. 11-40210 | Dr. Sana Firdous: RCI Reg. No. A82170</p>
-            </div>
-        </div>
-    </footer>
+    
 
     <script src="./js/main.js"></script>
+<!-- 
+  FOOTER COMPONENT 
+  Source: index.html (lines ~end-40)
+  Usage: Paste at bottom of <body>, before closing </body> tag
+-->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-column">
+      <h4>Patient Care</h4>
+      <ul>
+        <li><a href="./book.html">Book Appointment</a></li>
+        <li><a href="./services.html">Our Services</a></li>
+        <li><a href="./process.html">What to Expect</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="./about.html">Dr. Sharma</a></li>
+        <li><a href="./location.html">Find Us</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Help & Resources</h4>
+      <ul>
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./resources.html">Self-Help Tools</a></li>
+        <li><a href="./emergency.html">Emergency Help</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="disclaimer">
+      Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice.
+      Always consult a qualified healthcare provider for diagnosis and treatment. In crisis, call emergency services immediately.
+    </p>
+    <p class="footer-copyright">
+      © <span id="year"></span> Mind Grace Neuropsychiatric Clinic, Greater Noida. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- Year Update Script -->
+<script>
+  if (document.getElementById('year')) {
+    document.getElementById('year').textContent = new Date().getFullYear();
+  }
+</script>
 </body>
 </html>
