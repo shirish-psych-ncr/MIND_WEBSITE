@@ -1,1 +1,1 @@
-Nothing should be ignored since the changes only include HTML component files which are source files.
+Nothing should be ignored in this case, as the changes consist only of Python source files (.py) and HTML files, which are source/config files and not build artifacts, dependencies, or temporary files.
