@@ -91,14 +91,6 @@
   --content: min(95vw, var(--content-width));
   --wide: min(95vw, 1600px);
   
-  /* Shadows - Softer, more elevated */
-  --shadow-xs: 0 2px 8px rgba(103, 27, 80, 0.04);
-  --shadow-sm: 0 4px 16px rgba(103, 27, 80, 0.06);
-  --shadow-md: 0 8px 30px rgba(103, 27, 80, 0.08);
-  --shadow-lg: 0 12px 48px rgba(103, 27, 80, 0.1);
-  --shadow-xl: 0 20px 64px rgba(103, 27, 80, 0.12);
-  --shadow-float: 0 24px 80px rgba(103, 27, 80, 0.1);
-  
   /* Transitions - Subtler */
   --transition-fast: 200ms ease;
   --transition-base: 300ms ease;
