@@ -23,10 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav(domElements);
   initHeaderScroll(domElements);
   initViewportResize();
-  initScrollReveal(domElements);
   initAccordion(domElements);
   initFormValidation(domElements);
-  initCounters(domElements);
 
   // ==========================================
   // 1. Mobile Navigation
@@ -137,25 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', onResize, { passive: true });
     window.visualViewport?.addEventListener('resize', onResize, { passive: true });
-  }
-
-  // ==========================================
-  // 4. Reveal Animations on Scroll
-  // ==========================================
-  function initScrollReveal(el) {
-    const { reveals } = el;
-    if (!reveals.length || !('IntersectionObserver' in window)) return;
-    
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    
-    reveals.forEach(el => observer.observe(el));
   }
 
   // ==========================================
