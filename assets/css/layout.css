@@ -534,16 +534,6 @@
   }
 }
 
-.footer-column h4 { font-size: var(--fs-h4); font-weight: 600; margin-bottom: var(--space-lg); color: var(--light-bg); }
-.footer-column ul { list-style: none; }
-.footer-column li { margin-bottom: var(--space-sm); }
-.footer-column a { color: var(--text-on-plum); text-decoration: none; font-size: var(--fs-small); opacity: 0.9; transition: all var(--transition-fast); display: inline-block; }
-.footer-column a:hover { opacity: 1; color: var(--text-on-plum-lime); transform: translateX(4px); }
-
-.footer-bottom { width: var(--content); margin: var(--space-xl) auto 0; padding-top: var(--space-lg); border-top: 1px solid rgba(255, 224, 246, 0.3); text-align: center; }
-.disclaimer { font-size: var(--fs-tiny); color: rgba(255, 224, 246, 0.8); line-height: var(--lh-relaxed); max-width: var(--measure); margin: 0 auto; }
-.footer-copyright { font-size: var(--fs-tiny); color: rgba(255, 224, 246, 0.7); margin-top: var(--space-md); }
-
 /* --- BUTTONS --- */
 .btn {
   display: inline-flex;
