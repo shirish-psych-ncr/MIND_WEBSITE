@@ -1,5 +1,5 @@
 # 📖 AGENT BIBLE — Mind Grace Neuropsychiatric Clinic
-**Version:** 7.0 | **Last Updated:** Current Session | **Status:** Active
+**Version:** 9.0 | **Last Updated:** Current Session | **Status:** Active
 
 ## 🎯 Purpose
 
@@ -18,9 +18,15 @@ This knowledge base serves as the **cognitive architecture** for autonomous AI a
 | [`pages.md`](./pages.md) | Page inventory, URL structure, migration | 5th | worker.md §1 |
 | [`tools.md`](./tools.md) | Therapeutic tool specifications | 6th | design.md §8 |
 | [`assets.md`](./assets.md) | Asset registry, optimization pipeline | 7th | design.md §7 |
+| [`schemas.md`](./schemas.md) | JSON-LD schemas, metadata validation | Reference | worker.md §7 |
+| [`components.md`](./components.md) | UI component library spec | Reference | design.md §4 |
+| [`opengraph.md`](./opengraph.md) | OpenGraph & metadata spec | Reference | pages.md §9 |
 | [`ARCHITECTURE.md`](./ARCHITECTURE.md) | System overview, dual-clinician model | Reference | pages.md §8 |
 | [`Bible_Generator.md`](./Bible_Generator.md) | Engineering philosophy, AI cognition | Philosophy | Instructions.md §1 |
 | [`_RESTRUCTURE_PLAN.md`](_RESTRUCTURE_PLAN.md) | URL restructuring implementation guide | P0 Priority | pages.md §11 |
+| [`_multiphasic_plan.md`](_multiphasic_plan.md) | Implementation roadmap (Phase 3 complete) | Reference | memory.md §Δ_LOG |
+| [`VERIFICATION_REPORT.md`](./VERIFICATION_REPORT.md) | Verification & audit results | Reference | worker.md §6 |
+| [`css/README.md`](./css/README.md) | CSS component library docs | Reference | design.md §8 |
 
 ---
 
@@ -59,7 +65,7 @@ END_TURN:
 1. **Trust:** Empathetic UI, therapeutic communication, clinical-grade professionalism
 2. **Accessibility:** WCAG 2.2 AA (0 violations mandatory)
 3. **Performance:** LCP<2.5s, INP<200ms, CLS<0.1, JS<50kb
-4. **Maintainability:** TypeScript-strict, Zod validation, CSS-layers, no hardcoded values
+4. **Maintainability:** Vanilla JS strict, semantic HTML, CSS-layers, no hardcoded values
 5. **Responsive:** Orientation-first detection (landscape/portrait), JS-driven graceful fallbacks
 
 ---
@@ -68,10 +74,9 @@ END_TURN:
 
 - **CSS:** Vanilla + Cascade Layers ONLY. NO Tailwind, NO inline styles, NO `!important`
 - **Values:** Design tokens only `var(--x)`. NO hex codes, NO px, NO magic numbers
-- **TypeScript:** Strict mode. NO `any`, type all props, Zod for content validation
-- **HTML:** Semantic elements. NO div-soup, use `<main>`, `<article>`, `<nav>`, `<section>`
 - **JavaScript:** Surgical hydration. NO framework bloat, vanilla islands, graceful degradation
-- **Assets:** All from `/res/` or `/blog/res/`. Preload LCP images, lazy load rest
+- **HTML:** Semantic elements. NO div-soup, use `<main>`, `<article>`, `<nav>`, `<section>`
+- **Assets:** All from `/assets/images/` or `/blog/res/`. Preload LCP images, lazy load rest
 - **Motion:** Respect `prefers-reduced-motion`. Disable parallax/fades if set
 - **Security:** NO PII in localStorage, CSP strict, HSTS preload, rate limiting
 
@@ -102,15 +107,19 @@ END_TURN:
 
 ---
 
-## 📊 Repository Stats (v7.0)
+## 📊 Repository Stats (v9.0)
 
-- **Total Files:** 80 (HTML, MD, JS, JSON)
-- **Core Pages:** 20 root-level HTML files
-- **Tool Pages:** 7 interactive therapy modules
-- **Blog Pages:** 13 (index + categories + articles)
-- **Templates:** 3 template files
-- **Legacy Files:** 3 (_legacy/*)
-- **Documentation:** 11 MD files (AGENT_BIBLE)
+- **Total Files:** 95+ (HTML, MD, JS, JSON, CSS)
+- **Core Pages:** 37 root-level HTML files
+- **Tool Pages:** 6 interactive therapy modules (butterfly-tapper, eye-movement, guided-breathing, horizon-scan, hypnos-fractal, leaf-on-stream)
+- **Blog Pages:** 13 (index + adult + children + pages/adult×5 + pages/child×4)
+- **Templates:** 3 template files (template-clean, adult-mental-health, child-development)
+- **Components:** 3 HTML partials (header, footer, navigation)
+- **CSS Modules:** 12 files (5 core + 7 tools)
+- **JS Modules:** 13 files (main + 8 tools + 2 blog-config + blog-discovery + tools-map)
+- **Assets:** 31 images in /assets/images/
+- **Documentation:** 16 MD files (AGENT_BIBLE)
+- **Config:** netlify.toml, package.json
 
 ---
 
@@ -118,12 +127,12 @@ END_TURN:
 
 | Priority | Task | Ref Doc | Status |
 |----------|------|---------|--------|
-| P0 | URL Restructuring Implementation | _RESTRUCTURE_PLAN.md | Ready |
-| P0 | Zod schemas (src/content/config.ts) | worker.md §7 | Pending |
-| P1 | Fix conditions.html (1 line broken) | ARCHITECTURE.md §8 | Pending |
-| P1 | Expand legal pages (consent, privacy) | pages.md §2 | Pending |
-| P2 | Hydrate 7 therapeutic tools | tools.md §1 | Pending |
-| P2 | Blog article templates | pages.md §3 | Pending |
+| P0 | Component library build (Button, Card, Nav) | components.md §1-§4 | Pending |
+| P1 | Playwright E2E tests (a11y, perf) | worker.md §6 | Pending |
+| P2 | CI/CD pipeline (.github/workflows/ci.yml) | worker.md §9 | Pending |
+| P2 | Asset optimization (WebP, SVG sprites) | assets.md §5 | Pending |
+| P3 | Blog article template expansion | pages.md §3 | Pending |
+| P3 | Book page integration | pages.md §2 | In Progress |
 
 ---
 

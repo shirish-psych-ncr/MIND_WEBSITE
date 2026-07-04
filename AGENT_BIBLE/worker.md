@@ -1,5 +1,5 @@
-# WORKER_SPEC [v2.0] — Mind Grace Neuropsychiatric Clinic
-**Role:** FE-Lead/DevOps | **Stack:** HTML5|TS|VanillaJS|LightningCSS | **Sync:** End-turn
+# WORKER_SPEC [v3.0] — Mind Grace Neuropsychiatric Clinic
+**Role:** FE-Lead/DevOps | **Stack:** HTML5|VanillaJS|LightningCSS | **Sync:** End-turn
 
 ## 1. ARCH_TREE (Current→Target)
 ```
@@ -7,22 +7,20 @@
 ├── index.html (561L, v2.1)     
 ├── styles.css (2089L, v3.0)    
 ├── app.js (685L)               
-├── /res/* (22 assets)          
-├── /css-tools/* (7 tools)      
-├── /js/* (11 scripts)          
-└── AGENT_BIBLE/* (7 docs)      
+├── /assets/images/* (31 assets)          
+├── /assets/css-tools/* (7 tools)      
+├── /assets/js/* (13 scripts)          
+└── AGENT_BIBLE/* (16 docs)      
     → See: memory.md §STATE, pages.md §MIGRATION_PRIORITY
 ```
 
 ## 2. TOOLCHAIN
 | Tool | Purpose | Config | Gate |
 |---|---|---|---|
-| Vite | Build | vite.config.js | Build step |
 | LightningCSS | CSS proc | Chr90+, FF90+, Saf15+ | --no-warn |
-| TypeScript | Type check | --strict, no any | tsc --noEmit |
 | ESLint+Prettier | Lint/format | .eslintrc, .prettierrc | Lint check |
 | Vitest | Unit tests | vitest.config.ts | Test suite |
-| E2E+a11y | E2E+a11y | E2E config | E2E tests |
+| Playwright | E2E+a11y | playwright.config.ts | E2E tests |
 
 ## 3. HYDRATION_MATRIX (Cross-ref: tools.md §2)
 | Component | Trigger | JS Cost | Purpose |
@@ -35,10 +33,10 @@
 | Hero | Static | 0kb | Pure HTML/CSS |
 
 ## 4. JS_PATTERN (Vanilla Islands)
-```ts
+```js
 // Common pattern for all therapeutic tools (see tools.md §3)
 class TherapeuticTool {
-  constructor(root: HTMLElement, options?: {}){
+  constructor(root, options){
     this.root = root;
     this.state = 'idle'; // idle|running|paused|complete
     this.options = { reducedMotion: false, ...options };
@@ -69,37 +67,45 @@ class TherapeuticTool {
 ## 6. QA_GATES (CI/CD Pipeline)
 | Gate | Command | Threshold | Status |
 |---|---|---|---|
-| Type | `tsc --noEmit` | 0 err, strict | Mandatory |
-| Lint | ESLint+Prettier | ESLint+Prettier | Mandatory |
-| Build | Vite build | Vite, 0 warn | Mandatory |
-| A11y | E2E+a11y | 0 viol, WCAG 2.2 AA | Mandatory |
+| Lint | ESLint+Prettier | 0 err, 0 warn | Mandatory |
+| Build | Static HTML valid | 0 err | Mandatory |
+| A11y | axe-core CLI | 0 viol, WCAG 2.2 AA | Mandatory |
 | Perf | Lighthouse | LCP<2.5s, INP<200ms, CLS<0.1, JS<50kb | Mandatory |
+| E2E | Playwright | All pass | Opt-in |
 | Visual | Chromatic/Percy | Optional | Opt-in |
 
-## 7. ZOD_SCHEMAS (Content Collections, see schemas.md if restored)
-```ts
-// content/config.ts (pending implementation, memory.md §QUEUE P0)
-doctors: z.object({
-  name: z.string(), slug: z.string(),
-  photo: image().refine(img => img.width > 400),
-  registrationNumber: z.string().regex(/^[A-Z0-9-]+$/),
-  specialties: z.array(z.string()).min(1),
-  availability: z.enum(['accepting', 'waitlist', 'on-leave']),
-  seo: z.object({ title: z.string().max(60), description: z.string().max(155) })
-})
+## 7. METADATA_SCHEMAS (JSON-LD, see schemas.md)
+```json
+// JSON-LD structured data for medical clinic (schemas.md §1)
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Mind Grace Neuropsychiatric Clinic",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "J-123, Gamma-2",
+    "addressLocality": "Greater Noida",
+    "addressRegion": "UP",
+    "postalCode": "201308",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-96678-63295",
+  "medicalSpecialty": ["Psychiatry", "Psychology"],
+  "availableService": ["Therapy", "Counseling", "Assessment"]
+}
 // → Cross-ref: pages.md §LAYOUT_INVENTORY for component props
 ```
 
 ## 8. FORM_SECURITY (Clinical-Grade, HIPAA-Aware)
 - **Honeypot:** `<input name="bot-field" hidden tabindex="-1">`
 - **RateLimit:** 5/IP/10min (edge function)
-- **Sanitize:** Zod server-side validation
+- **Sanitize:** Client-side validation + server-side checks
 - **NoPII:** Never localStorage/sessionStorage
 - **Consent:** Explicit opt-in before submission
 
 ## 9. DEPLOY_FLOW
 ```
-push main → CI(lint, type, test, build, a11y, lighthouse) 
+push main → CI(lint, build, a11y, lighthouse) 
          → Edge(Vercel/Netlify) 
          → PreviewURL 
          → Production(auto)
@@ -108,9 +114,9 @@ push main → CI(lint, type, test, build, a11y, lighthouse)
 ## 10. FILES_SYNCED (Current State)
 | File | Status | Changes | Ref |
 |---|---|---|---|
-| index.html | ✓ | Logo→res/, Doctor→res/ | memory.md §RECOVER |
+| index.html | ✓ | Logo→assets/images/, Doctor→assets/images/ | memory.md §RECOVER |
 | styles.css | ✓ | @import 7 css-tools (@layer components) | design.md §8 |
 | app.js | ✓ | defer load, main.js entry | - |
-| /js/* | ✓ | 11 tools scripts (breathing, butterfly, eye, fractal, horizon, leaf, book, map, blog-configs) | tools.md §1 |
+| /assets/js/* | ✓ | 13 tool scripts (breathing, butterfly, eye, fractal, horizon, leaf, book, map, blog-configs) | tools.md §1 |
 
 *Cross-ref: memory.md §STATE, design.md §CSS-TOOLS, tools.md §HYDRATION_MATRIX, assets.md §PRELOAD. END_ON_SYNC.*
