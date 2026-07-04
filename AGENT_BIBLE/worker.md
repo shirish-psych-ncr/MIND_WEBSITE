@@ -1,5 +1,5 @@
-# WORKER_SPEC [v3.0] — Mind Grace Neuropsychiatric Clinic
-**Role:** FE-Lead/DevOps | **Stack:** HTML5|VanillaJS|LightningCSS | **Sync:** End-turn
+# WORKER_SPEC [v4.0] — Mind Grace Neuropsychiatric Clinic
+**Role:** FE-Lead/DevOps | **Stack:** HTML5|VanillaJS|Manual-Ops | **Sync:** End-turn
 
 ## 1. ARCH_TREE (Current→Target)
 ```
@@ -14,13 +14,14 @@
     → See: memory.md §STATE, pages.md §MIGRATION_PRIORITY
 ```
 
-## 2. TOOLCHAIN
+## 2. TOOLCHAIN (Zero-Dependency)
 | Tool | Purpose | Config | Gate |
 |---|---|---|---|
-| LightningCSS | CSS proc | Chr90+, FF90+, Saf15+ | --no-warn |
-| ESLint+Prettier | Lint/format | .eslintrc, .prettierrc | Lint check |
-| Vitest | Unit tests | vitest.config.ts | Test suite |
-| Playwright | E2E+a11y | playwright.config.ts | E2E tests |
+| Browser DevTools | Testing/Lighthouse | Chrome/Firefox/Safari | Manual audit |
+| W3C Validators | HTML/CSS validation | validator.w3.org | Zero errors |
+| Rich Results Test | Schema validation | Google RRT | Pass all |
+| axe DevTools | A11y testing | Browser extension | 0 violations |
+| Manual Compression | Image optimization | Squoosh.app/TinyPNG | WebP/AVIF |
 
 ## 3. HYDRATION_MATRIX (Cross-ref: tools.md §2)
 | Component | Trigger | JS Cost | Purpose |
@@ -64,15 +65,16 @@ class TherapeuticTool {
   CSP = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none';"
 ```
 
-## 6. QA_GATES (CI/CD Pipeline)
-| Gate | Command | Threshold | Status |
+## 6. QA_GATES (Manual Testing Protocol)
+| Gate | Method | Threshold | Status |
 |---|---|---|---|
-| Lint | ESLint+Prettier | 0 err, 0 warn | Mandatory |
-| Build | Static HTML valid | 0 err | Mandatory |
-| A11y | axe-core CLI | 0 viol, WCAG 2.2 AA | Mandatory |
-| Perf | Lighthouse | LCP<2.5s, INP<200ms, CLS<0.1, JS<50kb | Mandatory |
-| E2E | Playwright | All pass | Opt-in |
-| Visual | Chromatic/Percy | Optional | Opt-in |
+| HTML Valid | W3C Validator | 0 err | Mandatory |
+| CSS Valid | W3C Validator | 0 err | Mandatory |
+| A11y | axe DevTools | 0 viol, WCAG 2.2 AA | Mandatory |
+| Perf | Lighthouse (DevTools) | LCP<2.5s, INP<200ms, CLS<0.1, JS<50kb | Mandatory |
+| E2E | Manual browser testing | All flows work | Mandatory |
+| Visual | Cross-browser check | Chrome/Firefox/Safari | Mandatory |
+| Mobile | Device testing | Portrait/Landscape modes | Mandatory |
 
 ## 7. METADATA_SCHEMAS (JSON-LD, see schemas.md)
 ```json
@@ -118,5 +120,6 @@ push main → CI(lint, build, a11y, lighthouse)
 | styles.css | ✓ | @import 7 css-tools (@layer components) | design.md §8 |
 | app.js | ✓ | defer load, main.js entry | - |
 | /assets/js/* | ✓ | 13 tool scripts (breathing, butterfly, eye, fractal, horizon, leaf, book, map, blog-configs) | tools.md §1 |
+| netlify.toml | ✓ | Redirect rules, security headers | - |
 
-*Cross-ref: memory.md §STATE, design.md §CSS-TOOLS, tools.md §HYDRATION_MATRIX, assets.md §PRELOAD. END_ON_SYNC.*
+*Cross-ref: memory.md §STATE, design.md §CSS-TOOLS, tools.md §HYDRATION_MATRIX, assets.md §PRELOAD. Zero-dependency stack enforced. END_ON_SYNC.*

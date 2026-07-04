@@ -1704,7 +1704,7 @@ Initialization;;configuration;;resource discovery;;dependency resolution;;hydrat
 
 ## Infrastructure Architecture
 
-Development environment;;build systems;;toolchains;;deployment environments;;hosting;;storage;;network;;observability;;automation;;CI/CD;;infrastructure serves architecture rather than dictating it;;implementation technologies remain replaceable beneath stable structural principles.
+Development environment;;build systems (manual);;toolchains (vanilla);;deployment environments;;hosting;;storage;;network;;observability;;automation (minimal);;infrastructure serves architecture rather than dictating it;;implementation technologies remain replaceable beneath stable structural principles;;zero-dependency stack enforced.
 
 ---
 
