@@ -23,7 +23,40 @@
 | axe DevTools | A11y testing | Browser extension | 0 violations |
 | Manual Compression | Image optimization | Squoosh.app/TinyPNG | WebP/AVIF |
 
-## 3. HYDRATION_MATRIX (Cross-ref: tools.md §2)
+## 3. APPROVED_MICRO_LIBS (Zero-Dependency Stack)
+**Mandate:** Only tiny utilities <50KB copied manually to `/assets/js/lib/`. NO npm, NO bundlers.
+
+| Library | Size | Purpose | Status | Path |
+|---|---|---|---|---|
+| AutoAnimate | 23KB | Automatic list/layout animations | ✅ Downloaded | `/assets/js/lib/autoanimate.min.js` |
+| Canvas-Confetti | 25KB | Celebration animations (form success) | ✅ Downloaded | `/assets/js/lib/confetti.min.js` |
+| Ky | 1.2KB | Enhanced fetch API (retries, timeouts) | ✅ Downloaded | `/assets/js/lib/ky.min.js` |
+| ScrollReveal | 45KB | Scroll-triggered animations (a11y-aware) | ✅ Downloaded | `/assets/js/lib/scrollreveal.min.js` |
+| Floating UI Core | 12KB | Tooltip/popover positioning | ✅ Downloaded | `/assets/js/lib/floating-ui.core.min.js` |
+| Splide | 30KB | Accessible carousel (gallery.html) | ✅ Downloaded | `/assets/js/lib/splide.min.js` |
+
+**Rejected (Too Heavy or Wrong Fit):**
+- Motion One (6KB) - Native Web Animations API sufficient
+- Anime.js v4 (7KB) - Overkill for simple therapeutic animations
+- Alpine.js (15KB) - Violates vanilla JS mandate
+- Petite-Vue (6KB) - Unnecessary reactivity layer
+- Preact Signals (2KB) - No framework needed
+- htmx (14KB) - Custom fetch logic already minimal
+- Swup (4KB) - Multi-page transitions not needed
+- Quicklink - Prefetch handled by browser
+- Navigo - No client-side routing required
+- Fuse.js (5KB) - Blog search uses native filtering
+- Nano ID (130B) - Can inline if needed
+
+**Integration Rules:**
+1. Copy minified version to `/assets/js/lib/`
+2. Load with `defer` attribute
+3. Wrap in IIFE to avoid global pollution (if not already modular)
+4. Respect `prefers-reduced-motion`
+5. Graceful degradation if library fails to load
+6. Total lib budget: <150KB (current: ~136KB)
+
+## 4. HYDRATION_MATRIX (Cross-ref: tools.md §2)
 | Component | Trigger | JS Cost | Purpose |
 |---|---|---|---|
 | Nav | Init | ~2kb | Sticky, mobile drawer |
