@@ -1,7 +1,7 @@
-# TOOL_SPEC [v2.0]
+# TOOL_SPEC [v3.0]
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Update:** Auto(post-turn)
 
-## 1. THERAPEUTIC_TOOLS (8 interactive modules)
+## 1. THERAPEUTIC_TOOLS (7 interactive modules - Extracted & Modularized)
 
 ### 1.1 Breathing Tool (tools-breathing.*)
 | Aspect | Spec |
@@ -152,16 +152,19 @@ const observer = new IntersectionObserver((entries) => {
 | Load time | <500ms | - | TODO: Measure with Lighthouse |
 | Interaction latency | <100ms | - | TODO: Measure with DevTools |
 
-## 6. EXTRACTION_STATUS (v2.0 - Complete)
-| Tool | JS File | CSS File | Status | Notes |
-|---|---|---|---|---|
-| Breathing | js/tools-breathing.js (2.5KB) | css-tools/tools-breathing.css (2.4KB) | ✅ Extracted | IIFE pattern, null checks |
-| Butterfly | js/tools-butterfly.js (8.4KB) | css-tools/tools-butterfly.css (4.1KB) | ✅ Extracted | State machine, reduced motion |
-| Eye Movement | js/tools-eye.js (1.1KB) | css-tools/tools-eye.css (1.7KB) | ✅ Extracted | Path controls |
-| Fractal | js/tools-fractal.js (4.7KB) | css-tools/tools-fractal.css (4.1KB) | ✅ Extracted | IIFE pattern, ES5 syntax |
-| Horizon | js/tools-horizon.js (1.4KB) | css-tools/tools-horizon.css (2.1KB) | ✅ Extracted | IIFE pattern, parallax |
-| Leaf | js/tools-leaf.js (25.7KB) | css-tools/tools-leaf.css (7.5KB) | ✅ Extracted | Physics engine |
-| Book | js/tools-book.js (1.3KB) | css-tools/tools-book.css (2.1KB) | ✅ Extracted | Navigation logic |
-| Map | js/tools-map.js (0.6KB) | N/A | ✅ Extracted | Leaflet wrapper |
+## 6. EXTRACTION_STATUS (v3.0 - Complete & Modularized)
+| Tool | JS File | CSS File | HTML Page | Status | Notes |
+|---|---|---|---|---|---|
+| Breathing | /assets/js/tools-breathing.js (2.5KB) | /assets/css-tools/tools-breathing.css (2.4KB) | /tools/guided-breathing.html | ✅ Extracted | IIFE pattern, null checks |
+| Butterfly | /assets/js/tools-butterfly.js (9.0KB) | /assets/css-tools/tools-butterfly.css (4.1KB) | /tools/butterfly-tapper.html | ✅ Extracted | State machine, reduced motion |
+| Eye Movement | /assets/js/tools-eye.js (1.5KB) | /assets/css-tools/tools-eye.css (1.7KB) | /tools/eye-movement.html | ✅ Extracted | Path controls |
+| Fractal | /assets/js/tools-fractal.js (4.7KB) | /assets/css-tools/tools-fractal.css (4.1KB) | /tools/hypnos-fractal.html | ✅ Extracted | IIFE pattern, ES5 syntax |
+| Horizon | /assets/js/tools-horizon.js (1.9KB) | /assets/css-tools/tools-horizon.css (2.1KB) | /tools/horizon-scan.html | ✅ Extracted | IIFE pattern, parallax |
+| Leaf | /assets/js/tools-leaf.js (25.7KB) | /assets/css-tools/tools-leaf.css (7.5KB) | /tools/leaf-on-stream.html | ✅ Extracted | Physics engine |
+| Book | /assets/js/tools-book.js (1.3KB) | /assets/css-tools/tools-book.css (2.1KB) | N/A (component only) | ✅ Extracted | Navigation logic |
+| Map | /assets/js/tools-map.js (0.6KB) | N/A | N/A (component only) | ✅ Extracted | Leaflet wrapper |
 
-*Ref: /css-tools/*, /js/tools-*.*, tool pages. Auto-update on tool changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §6-§8, worker.md §2-§4, _RESTRUCTURE_PLAN.md §Phase2. END_ON_SYNC.*
+**Total Bundle:** JS: 47.2KB (uncompressed), CSS: 24.0KB (uncompressed)
+**Tool Pages Live:** 6 interactive therapy pages in /tools/ directory
+
+*Ref: /assets/css-tools/*, /assets/js/tools-*.*, /tools/*.html. Auto-update on tool changes. Cross-ref: Instructions.md §KB_READ, memory.md §STATE, design.md §6-§8, worker.md §2-§4, _RESTRUCTURE_PLAN.md §Phase2. END_ON_SYNC.*

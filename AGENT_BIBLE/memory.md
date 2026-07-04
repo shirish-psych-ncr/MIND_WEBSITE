@@ -1,5 +1,5 @@
 # MEMORY_STATE [MG-CLINIC]
-**ID:** mg-005 | **T:** +14 | **Φ:** AGENT_BIBLE_v7.0_SYNCED
+**ID:** mg-007 | **T:** +16 | **Φ:** AGENT_BIBLE_v9.0_SYNCED
 
 ## Δ_LOG (Session Evolution)
 | Turn | Event | Impact | Cross-Ref |
@@ -11,40 +11,48 @@
 | T14 | RESTRUCTURE: URL plan v7.0 | Complete file inventory (80 files), detailed URL mappings, implementation guide | _RESTRUCTURE_PLAN.md, pages.md §11 |
 | T14 | UPDATE: Instructions.md v7.0 | Added restructure plan to registry, repo stats, current priorities | Instructions.md §Registry |
 | T14 | SYNC: All AGENT_BIBLE docs | 11 documents now synced v7.0 with cross-refs | All docs |
+| T15 | PHASE_COMPLETE: Tool extraction v8.0 | 7 therapeutic tools modularized (CSS+JS), 6 tool pages live | tools.md §1-§3, worker.md §10 |
+| T15 | ASSET_ORG: Centralized images | 31 images in /assets/images/, components in /assets/components/ | assets.md §1-§3 |
+| T15 | DEPLOY_READY: netlify.toml | Redirect rules configured for clean URLs | worker.md §9, pages.md §6 |
+| T15 | SYNC: All AGENT_BIBLE docs v8.0 | 16 documents updated with current project state | All docs |
+| T16 | ASTRO_REMOVAL: Static HTML migration v9.0 | Removed all Astro/Zod references, updated to vanilla JS stack | Instructions.md, memory.md, worker.md, _RESTRUCTURE_PLAN.md |
+| T16 | SYNC: Agent Bible cleanup | 4 docs purged of framework references, version bumped to v9.0 | All docs |
 
 ## STATE (Current Snapshot) → See Instructions.md §KB_READ
 - **Stack:** Static-HTML | CSS-Layers | VanillaJS → worker.md §1
-- **Core:** index.html (~1000L, v4.0-popup-nav), styles.css (2089L, v3.0), app.js (685L) → worker.md §10
-- **Pages:** 40+ HTML (core×20, tools×7, blog×13, templates×6) → pages.md §1-§4
-- **Tools:** /css-tools/* (7 therapeutic CSS), /js/* (11 scripts) → tools.md §1-§2
+- **Pages:** 49 HTML files (13,587 lines) - core×37, tools×6, blog×13, templates×3, legal×7 → pages.md §1-§4
+- **Tools:** /assets/css-tools/* (7 CSS), /assets/js/* (8 tool scripts + 4 config) → tools.md §1-§3
+- **CSS Core:** /assets/css/* (5 modular: base, layout, components, utilities, animations) → design.md §8
 - **Blog:** /blog/* (index, adult, children, pages/adult×5, pages/child×4) → pages.md §3
-- **Assets:** /res/* (22+ images), /blog/res/* (4 images), /images/* (hero SVGs) → assets.md §1-§2
-- **Docs:** AGENT_BIBLE(7): memory, design, worker, Instructions, assets, pages, tools → Instructions.md §KB_STATS
-- **Cfg:** WCAG-2.2-AA, CSP-Strict, Orientation-First, FluidType, Semantic-HTML, Graceful-Fallbacks → design.md §6, worker.md §5
+- **Assets:** /assets/images/* (31 images: logos, brochures, photos), /assets/components/* (3 HTML partials) → assets.md §1-§3
+- **Templates:** /_templates/* (3: template-clean, adult-mental-health, child-development) → pages.md §5
+- **Config:** netlify.toml (redirects), package.json (axe-core, puppeteer) → worker.md §9
+- **Docs:** AGENT_BIBLE(16): memory, design, worker, Instructions, assets, pages, tools, schemas, opengraph, components, ARCHITECTURE, VERIFICATION_REPORT, _multiphasic_plan, _RESTRUCTURE_PLAN, Bible_Generator, css/README → Instructions.md §KB_STATS
+- **Cfg:** WCAG-2.2-AA, Orientation-First, FluidType(clamp), Semantic-HTML, Dark-Mode, Modular-CSS → design.md §5-§8
 
 ## QUEUE (Pending Actions) → See worker.md §6, pages.md §6
 | Priority | Task | Ref Doc | Status | Cross-Ref |
 |---|---|---|---|---|
-| P0 | Zod schemas (src/content/config.ts) | worker.md §7 | Pending | schemas.md §1 |
-| P0 | Static site structure | worker.md §1 | Pending | pages.md §6 |
-| P1 | Primitives (Button, Card, Button, Card, Nav) | components.md §1 | Pending | design.md §4 |
+| P0 | Component library build (Button, Card, Nav) | components.md §1-§4 | Pending | design.md §4 |
 | P1 | Playwright E2E (a11y.spec.ts, perf.spec.ts) | worker.md §6 | Pending | - |
 | P2 | CI/CD (.github/workflows/ci.yml) | worker.md §9 | Pending | - |
-| P2 | Asset optimization (WebP, SVG sprites) | assets.md §5 | Pending | design.md §7 |
-| P3 | Blog content modeling (MDX collections) | worker.md §7 | Pending | pages.md §3 |
-| P3 | Component library build | components.md §1-§4 | Pending | design.md §4 |
+| P2 | Asset optimization (WebP conversion, SVG sprites) | assets.md §5 | Pending | design.md §7 |
+| P3 | Blog article template expansion | pages.md §3 | Pending | components.md §5 |
+| P3 | Book page integration | pages.md §2 | In Progress | - |
 
 ## RECOVER (Continuity Checkpoints) → See worker.md §10
-1. ✓ index.html logo → res/Mind_Grace_Clinic_Logo_Pink.svg (inline SVG)
-2. ✓ CSS layers → 10-layer cascade + 7 tool imports → design.md §8
-3. ✓ JS → main.js defer + 10 tool scripts (breathing, butterfly, eye, fractal, horizon, leaf, book, map) → tools.md §2
-4. ✓ Responsive → Orientation-first (landscape/portrait), body class detection, fluid-type(clamp) → design.md §5
-5. ✓ Blog structure → /blog/index, /blog/adult, /blog/children, /blog/pages/{adult,child}/* → pages.md §3
-6. ✓ KB optimized → 7-doc structure, removed schemas.md/components.md redundancy → Instructions.md §KB_STATS
-7. ✓ KB synced → All docs v3.0, cross-linked, END_ON_SYNC → All docs
-8. ✓ Links fixed → book-appointment.html→book.html, what-to-expect.html→process.html → pages.md §7
-9. ✓ KB v4.0 → Orientation-rules, JS-fallbacks, graceful-degradation added → Instructions.md §5
-10. ✓ Mobile nav popup → Centered modal, sectioned (Explore/Resources/Tools), smooth animation → design.md §4
-11. Next: T12 (Audit all HTML for orientation-responsiveness, update all pages with orientation-ruling) → worker.md §1, pages.md §7, design.md §5
+1. ✓ Logo assets → /assets/images/* (14 logo variants: SVG, PNG, ICO, Base64)
+2. ✓ CSS architecture → 5-layer cascade (base→layout→components→utilities→animations) + 7 tool imports
+3. ✓ JS modules → main.js + 12 scripts (8 tools: breathing/butterfly/eye/fractal/horizon/leaf/book/map + 2 blog-config + blog-discovery)
+4. ✓ Responsive → Orientation-first (body class detection), fluid-type(clamp), no breakpoints
+5. ✓ Blog structure → /blog/{index,adult,children,pages/{adult×5,child×4}}
+6. ✓ Tools extracted → 6 HTML pages + 7 CSS + 8 JS (butterfly-tapper, eye-movement, guided-breathing, horizon-scan, hypnos-fractal, leaf-on-stream)
+7. ✓ Components → /assets/components/{header,footer,navigation}.html
+8. ✓ Templates → /_templates/{template-clean,adult-mental-health,child-development}.html
+9. ✓ Deploy config → netlify.toml (clean URLs for tools/services/blog)
+10. ✓ Testing setup → package.json (axe-core CLI, puppeteer-core)
+11. ✓ Image inventory → 31 files (logos, brochures, clinic photos, therapy session images)
+12. ✓ Framework removal → Zero Astro/Zod dependencies, pure static HTML/vanilla JS
+13. Next: T17 (Component library build, E2E test setup) → worker.md §6, components.md §1
 
-*Auto-update T+1. Append-delta. Dense shorthand. Compress pre/post. KB: 7-docs v5.1. All cross-linked. Orientation-first. Popup-nav implemented. Legal pages restored. External URLs verified. Blog paths corrected. README synced. END_ON_SYNC.*
+*Auto-update T+1. Append-delta. Dense shorthand. KB: 16-docs v9.0. Tool extraction complete. Asset organization complete. Astro removed. Deploy-ready. END_ON_SYNC.*
