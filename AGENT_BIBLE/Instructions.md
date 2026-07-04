@@ -107,7 +107,7 @@ END_TURN:
 
 ---
 
-## 📊 Repository Stats (v9.0)
+## 📊 Repository Stats (v9.1)
 
 - **Total Files:** 95+ (HTML, MD, JS, JSON, CSS)
 - **Core Pages:** 37 root-level HTML files
@@ -119,20 +119,33 @@ END_TURN:
 - **JS Modules:** 13 files (main + 8 tools + 2 blog-config + blog-discovery + tools-map)
 - **Assets:** 31 images in /assets/images/
 - **Documentation:** 16 MD files (AGENT_BIBLE)
-- **Config:** netlify.toml, package.json
+- **Config:** netlify.toml (NO package.json - zero dependencies)
 
 ---
 
-## 🎯 Current Priorities
+## 🎯 Current Priorities (Zero-Dependency Stack)
 
 | Priority | Task | Ref Doc | Status |
 |----------|------|---------|--------|
-| P0 | Component library build (Button, Card, Nav) | components.md §1-§4 | Pending |
-| P1 | Playwright E2E tests (a11y, perf) | worker.md §6 | Pending |
-| P2 | CI/CD pipeline (.github/workflows/ci.yml) | worker.md §9 | Pending |
-| P2 | Asset optimization (WebP, SVG sprites) | assets.md §5 | Pending |
+| P0 | Component library build (Button, Card, Nav) - Vanilla HTML/CSS only | components.md §1-§4 | Pending |
+| P1 | Manual E2E checklist (A11y, Mobile, Print) - No Playwright/Node | worker.md §6 | Pending |
+| P2 | Asset optimization (WebP conversion, SVG sprites) - Manual process | assets.md §5 | Pending |
 | P3 | Blog article template expansion | pages.md §3 | Pending |
 | P3 | Book page integration | pages.md §2 | In Progress |
+| P4 | SEO audit via Rich Results Test - Manual verification | schemas.md §4 | Pending |
+
+---
+
+## ⚡ Zero-Dependency Mandate (NEW v9.1)
+
+**STRICT RULES:**
+1. **NO Node.js:** Delete `package.json` if it exists. No `npm install` ever.
+2. **NO Build Tools:** No Vite, Webpack, Parcel, Astro, or bundlers.
+3. **NO Testing Frameworks:** No Playwright, Jest, Cypress. Use manual browser testing.
+4. **NO TypeScript:** Pure ES6+ JavaScript only.
+5. **Tiny Libs Only:** Single-file utilities <5KB may be copied to `/assets/js/lib/` manually.
+
+**Philosophy:** "If it needs `npm install`, it's too heavy."
 
 ---
 
