@@ -125,7 +125,7 @@
       </nav>
 
       <!-- MOBILE NAV TRIGGER -->
-      <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+      <button type="button" class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
         <span></span>
         <span></span>
         <span></span>
@@ -147,7 +147,7 @@
   <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
     <div class="mobile-nav-header">
       <h2>Menu</h2>
-      <button class="close-mobile-menu" aria-label="Close menu">
+      <button type="button" class="close-mobile-menu" aria-label="Close menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M18 6L6 18M6 6l12 12"/>
         </svg>
@@ -450,5 +450,78 @@
     // Year update
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <!-- Structured Data: MedicalClinic + Physician -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://mindgracencr.in/#clinic",
+        "name": "Mind Grace Neuropsychiatric Clinic",
+        "url": "https://mindgracencr.in/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg"
+        },
+        "description": "Neuropsychiatric clinic in Greater Noida providing expert care for anxiety, depression, ADHD, autism assessment, and mental health.",
+        "telephone": "+91-XXXXXXXXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Greater Noida",
+          "addressLocality": "Greater Noida",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "201310",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "28.4744",
+          "longitude": "77.5040"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "18:00"
+          }
+        ],
+        "priceRange": "$$",
+        "sameAs": []
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://mindgracencr.in/#doctor",
+        "name": "Dr Anita Sharma",
+        "jobTitle": "Consultant Psychiatrist",
+        "worksFor": {
+          "@id": "https://mindgracencr.in/#clinic"
+        },
+        "url": "https://mindgracencr.in/dr-anita-sharma.html",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://mindgracencr.in/assets/images/Dr_Anita_Sharma_Personal_Photo.jpg",
+          "width": 800,
+          "height": 1000
+        },
+        "description": "Dr Anita Sharma is a Consultant Psychiatrist at Mind Grace Neuropsychiatric Clinic, Greater Noida, specializing in anxiety, depression, ADHD, and child development.",
+        "medicalSpecialty": ["Psychiatry", "Neuropsychiatry", "Child Psychiatry"],
+        "availableLanguage": ["English", "Hindi"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mindgracencr.in/#website",
+        "url": "https://mindgracencr.in/",
+        "name": "Mind Grace Neuropsychiatric Clinic",
+        "publisher": {
+          "@id": "https://mindgracencr.in/#clinic"
+        }
+      }
+    ]
+  }
+  </script>
+
 </body>
 </html>

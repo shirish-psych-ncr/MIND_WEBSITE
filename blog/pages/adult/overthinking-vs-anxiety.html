@@ -40,7 +40,7 @@
       </nav>
 
       <!-- MOBILE NAV TRIGGER -->
-      <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+      <button type="button" class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
         <span></span>
         <span></span>
         <span></span>
@@ -61,7 +61,7 @@
   <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
     <div class="mobile-nav-header">
       <h2>Menu</h2>
-      <button class="close-mobile-menu" aria-label="Close menu">
+      <button type="button" class="close-mobile-menu" aria-label="Close menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M18 6L6 18M6 6l12 12"/>
         </svg>
@@ -162,5 +162,45 @@
       </p>
     </div>
   </footer>
+
+  <!-- Structured Data: Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Overthinking vs Anxiety: Understanding the Difference",
+    "description": "Learn to distinguish between normal overthinking and clinical anxiety disorders.",
+    "datePublished": "2024-01-25",
+    "dateModified": "2024-01-25",
+    "author": {
+      "@type": "Physician",
+      "name": "Dr Anita Sharma",
+      "jobTitle": "Consultant Psychiatrist",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "Mind Grace Neuropsychiatric Clinic",
+        "url": "https://mindgracencr.in/"
+      }
+    },
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "Mind Grace Neuropsychiatric Clinic",
+      "url": "https://mindgracencr.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg"
+      }
+    },
+    "url": "https://mindgracencr.in/blog/pages/adult/overthinking-vs-anxiety.html",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mindgracencr.in/blog/pages/adult/overthinking-vs-anxiety.html"
+    },
+    "articleSection": "Adult Mental Health",
+    "wordCount": "800",
+    "inLanguage": "en-IN"
+  }
+  </script>
+
 </body>
 </html>

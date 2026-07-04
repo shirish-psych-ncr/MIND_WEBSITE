@@ -39,3 +39,17 @@ function stopTracking() {
 
   currentDir = 'right';
 }
+
+// Migrate inline onclick handlers to event listeners (Phase 8)
+document.addEventListener('DOMContentLoaded', () => {
+  const startBtn = document.getElementById('eye-start-btn');
+  const stopBtn = document.getElementById('eye-stop-btn');
+  
+  if (startBtn) {
+    startBtn.addEventListener('click', startTracking);
+  }
+  
+  if (stopBtn) {
+    stopBtn.addEventListener('click', stopTracking);
+  }
+});

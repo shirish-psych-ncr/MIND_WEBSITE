@@ -47,3 +47,15 @@
 
       requestAnimationFrame(loop);
 
+
+      // Migrate inline onclick handlers to event listeners
+      const startBtn = document.getElementById('horizon-start-btn');
+      const stopBtn = document.getElementById('horizon-stop-btn');
+      
+      if (startBtn && typeof startHorizon === 'function') {
+        startBtn.addEventListener('click', startHorizon);
+      }
+      
+      if (stopBtn && typeof stopHorizon === 'function') {
+        stopBtn.addEventListener('click', stopHorizon);
+      }
