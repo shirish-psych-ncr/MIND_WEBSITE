@@ -517,7 +517,7 @@
     height: 44px;
     background: var(--primary);
     border-radius: 50%;
-    margin-left: auto;
+    margin-inline-start: auto;
   }
   
   .mobile-book-btn svg {
