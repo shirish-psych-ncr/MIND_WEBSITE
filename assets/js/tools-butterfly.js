@@ -272,3 +272,24 @@ function animate() {
     }
 }
 
+// Migrate inline onclick handlers to event listeners (Phase 8)
+document.addEventListener('DOMContentLoaded', () => {
+  // Body click handler for initWorld
+  const butterflyBody = document.getElementById('butterfly-body');
+  if (butterflyBody) {
+    butterflyBody.addEventListener('click', initWorld);
+  }
+  
+  // Gear button for togglePause
+  const gearBtn = document.getElementById('gear-btn');
+  if (gearBtn) {
+    gearBtn.addEventListener('click', togglePause);
+    gearBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        togglePause(e);
+      }
+    });
+  }
+});
+

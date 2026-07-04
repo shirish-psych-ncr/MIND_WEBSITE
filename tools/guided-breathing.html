@@ -40,7 +40,7 @@
       </nav>
 
       <!-- MOBILE NAV TRIGGER -->
-      <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+      <button type="button" class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
         <span></span>
         <span></span>
         <span></span>
@@ -61,7 +61,7 @@
   <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
     <div class="mobile-nav-header">
       <h2>Menu</h2>
-      <button class="close-mobile-menu" aria-label="Close menu">
+      <button type="button" class="close-mobile-menu" aria-label="Close menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M18 6L6 18M6 6l12 12"/>
         </svg>
@@ -157,14 +157,14 @@
     <div class="setting">
       <label>Duration</label>
       <div class="chips">
-        <button class="chip active" data-m="1">1m</button>
-        <button class="chip" data-m="2">2m</button>
-        <button class="chip" data-m="5">5m</button>
-        <button class="chip" data-m="10">10m</button>
+        <button type="button" class="chip active" data-m="1">1m</button>
+        <button type="button" class="chip" data-m="2">2m</button>
+        <button type="button" class="chip" data-m="5">5m</button>
+        <button type="button" class="chip" data-m="10">10m</button>
       </div>
     </div>
 
-    <button id="start-btn" class="main-btn">Start</button>
+    <button type="button" id="start-btn" class="main-btn">Start</button>
   </div>
 
   <!-- SESSION -->
@@ -177,7 +177,7 @@
       </div>
     </div>
 
-    <button id="stop-btn" class="text-btn">End session</button>
+    <button type="button" id="stop-btn" class="text-btn">End session</button>
   </div>
 
   <!-- END -->
@@ -188,7 +188,7 @@
       <p>Your body has slowed down. Let it stay that way.</p>
 
       <div class="cta-row">
-        <button id="reset-btn" class="main-btn">Repeat</button>
+        <button type="button" id="reset-btn" class="main-btn">Repeat</button>
         <a href="./resources.html" class="button-ghost">Learn more</a>
       </div>
     </div>

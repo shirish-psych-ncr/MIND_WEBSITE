@@ -36,7 +36,7 @@
       </nav>
 
       <!-- MOBILE NAV TRIGGER -->
-      <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+      <button type="button" class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
         <span></span>
         <span></span>
         <span></span>
@@ -57,7 +57,7 @@
   <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
     <div class="mobile-nav-header">
       <h2>Menu</h2>
-      <button class="close-mobile-menu" aria-label="Close menu">
+      <button type="button" class="close-mobile-menu" aria-label="Close menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M18 6L6 18M6 6l12 12"/>
         </svg>
@@ -115,14 +115,14 @@
         <a href="./resources.html">Resources</a>
     </div>
     
-    <button id="ui-trigger" aria-label="Toggle interface">+</button>
+    <button type="button" id="ui-trigger" aria-label="Toggle interface">+</button>
     
     <div id="ui" class="interface">
         <div id="inputModal" class="input-modal">
             <h2>What would you like to release today?</h2>
             <textarea id="worryInput" placeholder="Type your worry, thought, or feeling here..." maxlength="200"></textarea>
             <p class="char-count"><span id="charCount">0</span>/200</p>
-            <button id="releaseBtn" class="release-btn">Release into the River</button>
+            <button type="button" id="releaseBtn" class="release-btn">Release into the River</button>
         </div>
         
         <div id="breathText" class="breath-text"></div>

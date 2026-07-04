@@ -2,9 +2,22 @@
    BASE.CSS - Foundation & Variables
    Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
    Theme: 50% Light (#FFE0F6), 40% Dark (#671B50), 10% Other Colors
+   PHASE 1 COMPLETE: Cascade layers, design tokens, fluid typography
    ============================================ */
 
-:root {
+/* CSS Cascade Layers for better specificity control */
+@layer reset, base, components, utilities;
+
+@layer reset {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer base {
+  :root {
   /* Primary Colors - Editorial Warm Palette */
   --light-bg: #FCFAF7;         /* Warm ivory base */
   --bg-gradient-start: #FCFAF7;
@@ -112,13 +125,6 @@
   }
 }
 
-/* Reset & Base */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -154,7 +160,7 @@ body {
   flex-shrink: 0;
 }
 
-/* Typography - Headings with text-wrap */
+/* Typography - Headings with text-wrap:pretty */
 h1, h2, h3, h4 {
   text-wrap: pretty;
 }
@@ -216,4 +222,5 @@ svg {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
 }
