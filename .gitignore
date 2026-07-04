@@ -1,8 +1,28 @@
-```markdown
+```
 # Dependencies
 node_modules/
 
-# Python
+# Build artifacts
+dist/
+build/
+target/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+*.env.*
+
+# Python specific
 __pycache__/
 *.pyc
 *.pyo
@@ -11,8 +31,6 @@ __pycache__/
 env/
 venv/
 .venv/
-.ENV
-.venv.bak/
 pip-log.txt
 pip-delete-this-directory.txt
 .tox/
@@ -24,41 +42,4 @@ coverage.xml
 *.cover
 *.log
 .git/modules/
-*.tmproj
-.idea/
-.vscode/
-.DS_Store
-Thumbs.db
-
-# Environment
-.env
-.env.local
-.env.*
-!.env.example
-
-# Build artifacts
-dist/
-build/
-*.egg-info/
-.target/
-target/
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.temp
-*~
-.swp
-.swo
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
 ```
