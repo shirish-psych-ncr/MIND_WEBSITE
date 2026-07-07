@@ -22,9 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize all modules with batched DOM access
   initMobileNav(domElements);
   initHeaderScroll(domElements);
+  initSmoothScroll();
   initViewportResize();
   initAccordion(domElements);
   initFormValidation(domElements);
+  initYearUpdate();
 
   // ==========================================
   // 1. Mobile Navigation
@@ -37,18 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!trigger || !panel || !overlay) return;
     
     let isOpen = false;
+    let previousFocus = null;
     
     const openNav = () => {
       isOpen = true;
+      previousFocus = document.activeElement;
       trigger.setAttribute('aria-expanded', 'true');
       panel.classList.add('active');
       overlay.classList.add('active');
       panel.removeAttribute('inert');
       document.body.style.overflow = 'hidden';
       // Focus management - defer to next paint without blocking
-      if (navLinks[0]) {
-        // Use microtask to avoid setTimeout delay
-        Promise.resolve().then(() => navLinks[0].focus());
+      if (closeBtn) {
+        Promise.resolve().then(() => closeBtn.focus());
       }
     };
     
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.classList.remove('active');
       panel.setAttribute('inert', '');
       document.body.style.overflow = '';
-      trigger.focus();
+      if (previousFocus) previousFocus.focus();
     };
     
     trigger.addEventListener('click', (e) => {
@@ -73,6 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && isOpen) closeNav();
+      
+      // Focus trap
+      if (e.key === 'Tab' && isOpen) {
+        const focusable = panel.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     });
     
     window.addEventListener('resize', () => {
@@ -80,11 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
     
     navLinks.forEach(link => {
-      link.addEventListener('click', (e) => { // Fixed: passed 'e' into callback
-        const href = link.getAttribute('href');
-        if (!href || href === '#' || href.startsWith('#')) {
-          e.preventDefault();
-        }
+      link.addEventListener('click', (e) => {
         closeNav();
       });
     });
@@ -115,7 +129,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 3. Viewport Resize (Fluid Layouts)
+
+  // ==========================================
+  // 3. Smooth Scroll for Anchor Links
+  // ==========================================
+  function initSmoothScroll() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: prefersReducedMotion ? 'auto' : 'smooth',
+          block: 'start'
+        });
+      });
+    });
+  }
+
+  // ==========================================
+  // 4. Viewport Resize (Fluid Layouts)
   // ==========================================
   function initViewportResize() {
     let ticking = false;
@@ -275,3 +314,12 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(counter => observer.observe(counter));
   }
 });
+  // ==========================================
+  // 8. Year Update for Footer
+  // ==========================================
+  function initYearUpdate() {
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  }

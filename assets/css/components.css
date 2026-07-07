@@ -790,6 +790,7 @@ svg[aria-hidden="true"] {
   overflow: hidden;
   border: 1px solid #e1e4e8;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: opacity 0.3s ease;
 }
 
 /* Skeleton Loading Message */
@@ -802,6 +803,24 @@ svg[aria-hidden="true"] {
   color: #6b7280;
   font-family: 'Inter', sans-serif;
   z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Loaded State */
+.form-wrapper.is-loaded::before {
+  opacity: 0;
+}
+
+/* Error State */
+.form-wrapper.is-error {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.form-wrapper.is-error::before {
+  content: "Unable to load form. Please refresh or contact us.";
+  color: #dc2626;
+  font-weight: 500;
 }
 
 .form-wrapper iframe {
@@ -813,6 +832,12 @@ svg[aria-hidden="true"] {
   border: none;
   z-index: 2;
   background: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-wrapper.is-loaded iframe {
+  opacity: 1;
 }
 
 /* --- Sticky Mobile CTA --- */
@@ -828,6 +853,9 @@ svg[aria-hidden="true"] {
   box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
   z-index: 999;
   text-align: center;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .mobile-sticky-cta .btn-primary {
