@@ -49,7 +49,7 @@
   .setting label {
     font-size: 0.7rem;
     text-transform: uppercase;
-    color: #64748b;
+    color: #94a3b8;
     letter-spacing: 2px;
     margin-bottom: 8px;
     display: block;
@@ -58,7 +58,7 @@
   select {
     width: 100%;
     background: #1e293b;
-    border: 1px solid #334155;
+    border: 1px solid #475569;
     color: white;
     padding: 14px;
     border-radius: 14px;
@@ -70,8 +70,8 @@
     flex: 1;
     padding: 10px;
     background: #1e293b;
-    border: 1px solid #334155;
-    color: #94a3b8;
+    border: 1px solid #475569;
+    color: #cbd5e1;
     border-radius: 14px;
     cursor: pointer;
   }
@@ -96,7 +96,7 @@
   .text-btn {
     background: none;
     border: none;
-    color: #64748b;
+    color: #94a3b8;
     text-decoration: underline;
     cursor: pointer;
     margin-top: 20px;

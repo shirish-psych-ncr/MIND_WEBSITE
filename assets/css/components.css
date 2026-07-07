@@ -67,7 +67,7 @@
   border: 1px solid rgba(103, 27, 80, 0.15);
 }
 
-/* --- 4. ICONS & VISUALS --- */
+/* --- 4. ICONS & VISUALS - Accessible with aria support --- */
 .icon-box {
   width: clamp(48px, 8vw, 64px);
   height: clamp(48px, 8vw, 64px);
@@ -77,6 +77,15 @@
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-lg);
+}
+
+/* Ensure SVGs have accessible names when used as icons */
+svg[role="img"] {
+  fill: currentColor;
+}
+
+svg[aria-hidden="true"] {
+  pointer-events: none;
 }
 
 /* --- 5. ICON SIZES - Fixed for better UX --- */
@@ -117,9 +126,9 @@
   height: 32px;
 }
 
-/* Card content styling for white cards */
+/* Card content styling for white cards - Accessible contrast */
 .card h3 {
-  color: #0f172a;
+  color: var(--card-heading, #0f172a);
   font-family: 'Playfair Display', serif;
   font-size: var(--fs-h3);
   font-weight: 700;
@@ -128,10 +137,20 @@
 }
 
 .card p {
-  color: #334155;
+  color: var(--card-text, #334155);
   font-size: var(--fs-body);
   line-height: var(--lh-relaxed);
   margin-bottom: var(--space-lg);
+}
+
+/* Dark mode card text contrast fix */
+@media (prefers-color-scheme: dark) {
+  .card h3 {
+    color: var(--card-heading, #FFFFFF);
+  }
+  .card p {
+    color: var(--card-text, #E0D0E0);
+  }
 }
 
 .card-link {
@@ -143,11 +162,23 @@
   gap: var(--space-xs);
   transition: all var(--transition-fast);
   margin-top: auto;
+  /* Ensure visible focus indicator */
+  border-radius: var(--radius-sm);
 }
 
 .card-link:hover {
   color: #b94d8a;
   gap: var(--space-sm);
+}
+
+/* Dark mode card link contrast */
+@media (prefers-color-scheme: dark) {
+  .card-link {
+    color: #FFB6C1;
+  }
+  .card-link:hover {
+    color: #FFC0CB;
+  }
 }
 
 /* Icon box inside cards - pastel circles */
@@ -193,7 +224,7 @@
   padding-bottom: 4px;
 }
 
-/* --- 7. ACCORDION --- */
+/* --- 7. ACCORDION - Accessible focus states --- */
 .accordion { display: grid; gap: var(--space-md); }
 .accordion-item { background: var(--white); border-radius: var(--radius-md); overflow: hidden; }
 .accordion-trigger {
@@ -204,6 +235,14 @@
   cursor: pointer;
   border: none;
   background: none;
+  text-align: left;
+  border-radius: var(--radius-md);
+}
+
+/* Focus visible for accordion triggers */
+.accordion-trigger:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -2px;
 }
 
 /* --- 8. ANIMATIONS & EFFECTS --- */
