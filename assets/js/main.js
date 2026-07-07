@@ -388,3 +388,138 @@ function initSmoothScroll() {
     });
   });
 }
+
+// ==========================================
+// 11. Orientation Monitor for Mobile
+// ==========================================
+function initOrientationMonitor() {
+  const warning = document.querySelector('.orientation-warning');
+  if (!warning) return;
+
+  const mediaQuery = window.matchMedia('(orientation: landscape) and (max-height: 500px)');
+  
+  const handleOrientationChange = (e) => {
+    if (e.matches) {
+      warning.classList.add('is-active', 'is-mobile-landscape');
+      document.body.style.overflow = 'hidden';
+    } else {
+      warning.classList.remove('is-active', 'is-mobile-landscape');
+      document.body.style.overflow = '';
+    }
+  };
+
+  // Initial check
+  handleOrientationChange(mediaQuery);
+
+  // Listen for changes
+  mediaQuery.addEventListener('change', handleOrientationChange);
+}
+
+// ==========================================
+// 12. Dynamic Open Graph Meta Tags
+// ==========================================
+function initOpenGraphMeta() {
+  const defaultImage = '/assets/images/og-default.jpg';
+  const defaultTitle = 'Mind Grace Neuropsychiatric Clinic';
+  const defaultDescription = 'Compassionate, evidence-based neuropsychiatric care in India. Specialized treatment for anxiety, depression, ADHD, and more.';
+  
+  // Get page-specific content
+  const pageTitle = document.title.split('|')[0].trim() || defaultTitle;
+  const pageDescription = document.querySelector('meta[name="description"]')?.content || defaultDescription;
+  const canonicalUrl = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
+  
+  // Create or update OG tags
+  const ogTags = [
+    { property: 'og:title', content: pageTitle + ' | Mind Grace Neuropsychiatric Clinic' },
+    { property: 'og:description', content: pageDescription },
+    { property: 'og:image', content: defaultImage },
+    { property: 'og:url', content: canonicalUrl },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:locale', content: 'en_IN' },
+    { property: 'og:site_name', content: 'Mind Grace Neuropsychiatric Clinic' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: pageTitle + ' | Mind Grace' },
+    { name: 'twitter:description', content: pageDescription },
+    { name: 'twitter:image', content: defaultImage }
+  ];
+
+  ogTags.forEach(tag => {
+    let existing;
+    if (tag.property) {
+      existing = document.querySelector(`meta[property="${tag.property}"]`);
+    } else if (tag.name) {
+      existing = document.querySelector(`meta[name="${tag.name}"]`);
+    }
+
+    if (!existing) {
+      const meta = document.createElement('meta');
+      if (tag.property) meta.setAttribute('property', tag.property);
+      if (tag.name) meta.setAttribute('name', tag.name);
+      meta.setAttribute('content', tag.content);
+      document.head.appendChild(meta);
+    } else {
+      existing.setAttribute('content', tag.content);
+    }
+  });
+}
+
+// ==========================================
+// 13. Error Boundary for Production Resilience
+// ==========================================
+function initErrorBoundary() {
+  window.addEventListener('error', (event) => {
+    console.error('[Mind Grace Error]', event.message, event.filename, event.lineno);
+    
+    // In production, you could send this to a monitoring service
+    // For now, we just log it and prevent total failure
+    if (window.location.hostname !== 'localhost') {
+      // Silent fail in production - don't show errors to users
+      event.preventDefault();
+    }
+  });
+
+  window.addEventListener('unhandledrejection', (event) => {
+    console.error('[Mind Grace Unhandled Promise]', event.reason);
+    if (window.location.hostname !== 'localhost') {
+      event.preventDefault();
+    }
+  });
+}
+
+// ==========================================
+// 14. Skip Link Enhancement
+// ==========================================
+function initSkipLink() {
+  const skipLink = document.querySelector('.skip-link');
+  const mainContent = document.getElementById('main-content');
+  
+  if (!skipLink || !mainContent) return;
+
+  skipLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    mainContent.setAttribute('tabindex', '-1');
+    mainContent.focus({ preventScroll: true });
+    
+    // Remove tabindex after focus to avoid it being in tab order
+    mainContent.addEventListener('blur', () => {
+      mainContent.removeAttribute('tabindex');
+    }, { once: true });
+  });
+}
+
+// ==========================================
+// BOOTSTRAP - Initialize All Modules
+// ==========================================
+(function bootstrap() {
+  try {
+    initOrientationMonitor();
+    initOpenGraphMeta();
+    initErrorBoundary();
+    initSkipLink();
+    initScrollProgress();
+    
+    console.log('[Mind Grace] All modules initialized successfully');
+  } catch (error) {
+    console.error('[Mind Grace Bootstrap Error]', error);
+  }
+})();
