@@ -70,7 +70,32 @@
 | blog-config-child.js | 1.1KB | Child blog config | client:idle |
 | blog-discovery.js | - | Blog discovery logic | client:idle |
 
-## 6. OPTIMIZATION_QUEUE (Pending, memory.md §QUEUE P2)
+## 6. JS_LIBRARIES (/assets/js/lib/*, 21 libraries, ~1.5MB) → See tools.md §7
+| Library | File | Size | Purpose | Use Case |
+|---|---|---|---|---|
+| AutoAnimate | autoanimate.min.js | 23KB | Zero-config list animations | List reordering, insertions |
+| Canvas-Confetti | confetti.min.js | 25KB | Celebration animations | Success states, achievements |
+| ScrollReveal | scrollreveal.min.js | 45KB | Scroll-triggered animations | On-screen element detection |
+| Splide | splide.min.js | 30KB | Accessible carousel/slider | Image galleries, testimonials |
+| Floating UI | floating-ui.core.min.js | 12KB | Tooltip/popover positioning | Dropdowns, tooltips |
+| Ky | ky.min.js | 1.2KB | Fetch API wrapper | AJAX with retries/timeouts |
+| Motion One | motion.min.js | 515KB | Web Animations API wrapper | Complex animations, timelines |
+| Anime.js | anime.min.js | 116KB | SVG/chaining animations | Advanced animation sequences |
+| Alpine.js | alpine.min.js | 46KB | Declarative HTML interactivity | Reactive state without build step |
+| Petite-Vue | petite-vue.min.js | 17KB | Vue subset for static pages | Progressive enhancement |
+| Preact Signals | preact-signals.min.js | 4.6KB | Reactive state tracking | Standalone reactive state |
+| htmx | htmx.min.js | 1.6KB | AJAX via HTML attributes | Server-driven interactions |
+| Swup | swup.min.js | 25KB | Page transition engine | SPA-like page transitions |
+| Quicklink | quicklink.min.js | 5.3KB | Viewport link prefetching | Instant page loads |
+| Navigo | navigo.min.js | 12KB | Client-side router | Lightweight routing |
+| Iconify | iconify.min.js | 22KB | On-demand icon fetching | Dynamic icon loading |
+| Fuse.js | fuse.min.js | 26KB | Fuzzy search library | Client-side search/indexing |
+| Nano ID | nanoid.min.js | 1.4KB | Unique ID generator | Secure ID generation |
+| Lucide Icons | lucide.min.js | 402KB | Stroke icon set | Customizable icons |
+
+**Note:** Motion One (motion.min.js) is the full development build (515KB). For production, consider using the minified version or Motion One's smaller builds.
+
+## 7. OPTIMIZATION_QUEUE (Pending, memory.md §QUEUE P2)
 - [ ] Convert PNG→WebP (logo, brochures, diagrams) - Est. 60% reduction
 - [ ] Convert JPG→WebP (photos, interiors) - Est. 40% reduction
 - [ ] Generate SVG sprite for icons (if any)
@@ -79,7 +104,7 @@
 - [ ] Add width/height attributes to prevent CLS
 - [ ] Compress large AASHA photos (>1MB) - Priority: aasha-special-ed-abacus.jpg (1.7MB)
 
-## 7. PRELOAD_STRATEGY
+## 8. PRELOAD_STRATEGY
 ```html
 <!-- Critical (LCP) - In <head> -->
 <link rel="preload" as="image" href="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" fetchpriority="high" />
