@@ -1,9 +1,10 @@
-# Structured Data Schemas v1.0
+# Structured Data Schemas v2.0
 ## Mind Grace Neuropsychiatric Clinic - JSON-LD Implementation
 
-**Source of Truth:** `index.html`, `about.html`, `doctor.html`, `location.html`  
+**Source of Truth:** All 50 HTML pages verified  
 **Last Updated:** 2025-07-02  
-**Status:** Production Ready
+**Status:** Production Ready  
+**Asset Sync:** Paths updated to /assets/* (assets.md v6.0)
 
 ---
 

@@ -1,5 +1,6 @@
-# DESIGN_REF [v6.0] — Mind Grace Neuropsychiatric Clinic
+# DESIGN_REF [v7.0] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Orientation-First | **Stack:** CSS-Layers|Tokens | **Sync:** End-turn
+**Last Asset Sync:** 2025-12-07 | **Total Assets:** 187 files (assets.md v6.0)
 
 ## 1. COLORS (Primitives→Semantic)
 | Prim | Hex | Semantic | Use | WCAG | Cross-Ref |
@@ -59,16 +60,19 @@
 - **Emergency Pages:** High contrast mode, large typography for crisis numbers
 - **JS Fallbacks:** CSS-only nav if JS fails, [inert] attribute support → worker.md §4
 
-## 7. ASSETS (/res/, see assets.md for full registry)
-| Type | File | Size | Preload | Cross-Ref |
-|---|---|---|---|---|
-| Logo | Mind_Grace_Clinic_Logo_Pink.svg | Inline SVG | ✓ LCP | assets.md §1 |
-| Doctor (Anita) | Dr_Anita_Sharma_Personal_Photo.jpg | 658KB | ✓ LCP | assets.md §1 |
-| Doctor (Sana) | Placeholder: dark-user-profile.svg | Inline SVG | ✗ | assets.md §1 (TODO: Add photo) |
-| Location | street_view_*.jpg (×2) | 95KB-1.2MB | ✗ | assets.md §1 |
-| Interiors | mind-grace-*.jpg (×4) | 82KB-1.2MB | ✗ | assets.md §1 |
-| Brochures | *_Brochure.png (×2) | 768KB-1.3MB | ✗ | assets.md §1 |
-| AASHA | aasha-*.jpg (×9) | 1.1MB-4.1MB | ✗ | assets.md §1 |
+## 7. ASSETS (/assets/, see assets.md v6.0 for full registry)
+| Type | File | Count | Preload | Cross-Ref |
+|------|------|-------|---------|-----------|
+| Logo | Mind_Grace_Clinic_Logo_Pink.svg + 13 variants | 14 | ✓ LCP | assets.md §4 |
+| Doctor (Anita) | Dr_Anita_Sharma_Personal_Photo.jpg | 1 | ✓ LCP | assets.md §4 |
+| Doctor (Sana) | Placeholder: dark-user-profile.svg | 0 | ✗ | assets.md §4 (TODO: Add photo) |
+| Location | Location_street_view_*.jpg (×2) | 2 | ✗ | assets.md §4 |
+| Interiors | mind-grace-*.jpg/webp (×4) | 4 | ✗ | assets.md §4 |
+| AASHA | aasha-*.jpg (×9) | 9 | ✗ | assets.md §4 |
+| Booking Hero | booking-hero.jpg/webp | 2 | ✗ | assets.md §4 |
+| Brochures | *_Brochure.png (×2) | 2 | ✗ | assets.md §4 |
+| Diagrams | *_Phases.png, *_Steps.png (×3) | 3 | ✗ | assets.md §4 |
+| Favicons | favicon.ico/svg | 2 | ✓ | assets.md §4 |
 
 ## 8. CSS-TOOLS (@layer components, see tools.md)
 | File | Size | Purpose | JS-Pair | Cross-Ref |
