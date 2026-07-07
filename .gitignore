@@ -1,48 +1,34 @@
 ```
-# Logs and temp files
-*.log
-*.tmp
-
-# Environment variables
-.env
-.env.local
-*.env.*
-
-# Dependencies
-node_modules/
-
-# Build artifacts
-dist/
-build/
+# Compiled and build artifacts
+*.pyc
+__pycache__/
 *.o
 *.obj
+*.class
 *.exe
 *.dll
 *.so
 *.a
 *.out
 
-# Python specific
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
+# Dependencies
+node_modules/
 venv/
 .venv/
-.venv*/
-.python-version
+.env
+.env.local
+.env.*
 
 # Logs and temp files
 *.log
 
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
 
-# IDE files
+# Editors
 .vscode/
 .idea/
 *.swp
@@ -81,6 +67,8 @@ yarn-error.log*
 # OS specific
 .DS_Store
 Thumbs.db
+*.DS_Store
+.DS_Store?
 
 # Testing
 coverage/
