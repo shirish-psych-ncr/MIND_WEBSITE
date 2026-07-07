@@ -1,7 +1,19 @@
-```gitignore
-# Compiled and build artifacts
-*.pyc
-__pycache__/
+```
+# Logs and temp files
+*.log
+*.tmp
+
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
 *.o
 *.obj
 *.exe
@@ -10,20 +22,31 @@ __pycache__/
 *.a
 *.out
 
-# Dependencies
-node_modules/
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
 venv/
 .venv/
-.env
-.env.local
-.env.*
+.venv*/
+.python-version
 
 # Logs and temp files
 *.log
 
-# Editors
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# IDE files
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # Environment
 .env
