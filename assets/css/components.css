@@ -360,6 +360,17 @@ svg[aria-hidden="true"] {
 
 .image-card {
   margin: 0;
+  cursor: zoom-in;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-soft, #f3f4f6);
+}
+
+.image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
 }
 
 .image-card img {
@@ -367,6 +378,18 @@ svg[aria-hidden="true"] {
   height: auto;
   border-radius: var(--radius-md);
   display: block;
+  opacity: 0;
+  transform: scale(0.96) translateY(10px);
+  animation: reveal-image linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 40%;
+}
+
+@keyframes reveal-image {
+  to { 
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
+  }
 }
 
 .image-card figcaption {
@@ -374,6 +397,327 @@ svg[aria-hidden="true"] {
   font-size: var(--fs-small);
   color: var(--text-muted);
   text-align: center;
+}
+
+/* Gallery Focus Mode Styles */
+.image-card.is-focused {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 1000;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: var(--bg-main, #ffffff);
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  cursor: zoom-out;
+  border-radius: 16px;
+  margin: 0;
+}
+
+.image-card.is-focused img {
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 8px;
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+.image-card.is-focused figcaption {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--text-main, #111827);
+  font-size: 1rem;
+  opacity: 1;
+  transform: none;
+}
+
+.gallery-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.85);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.gallery-backdrop.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Gallery Lightbox Controls - Dynamically Injected */
+.gallery-close-btn,
+.gallery-prev-btn,
+.gallery-next-btn {
+  position: fixed;
+  z-index: 1002;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.3s ease;
+  color: var(--text-main, #111827);
+}
+
+.gallery-close-btn:hover,
+.gallery-prev-btn:hover,
+.gallery-next-btn:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+.gallery-close-btn:focus,
+.gallery-prev-btn:focus,
+.gallery-next-btn:focus {
+  outline: 2px solid #ec4899;
+  outline-offset: 2px;
+}
+
+.gallery-close-btn {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.gallery-prev-btn {
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.gallery-prev-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-next-btn {
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.gallery-next-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-counter {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1002;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main, #111827);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-caption-overlay {
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1002;
+  background: rgba(17, 24, 39, 0.85);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  max-width: 90vw;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+  .gallery-prev-btn,
+  .gallery-next-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .gallery-prev-btn {
+    left: 0.75rem;
+  }
+  
+  .gallery-next-btn {
+    right: 0.75rem;
+  }
+  
+  .gallery-close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .gallery-counter {
+    bottom: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .gallery-caption-overlay {
+    bottom: 3.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Vestibular Protection (Clinical Guardrail) */
+@media (prefers-reduced-motion: reduce) {
+  .image-card img {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0.01s !important;
+  }
+  
+  .image-card,
+  .gallery-backdrop,
+  .gallery-close-btn,
+  .gallery-prev-btn,
+  .gallery-next-btn {
+    transition: none;
+  }
+  
+  .image-card:hover {
+    transform: none;
+  }
+}
+
+/* Responsive Adjustments for Focus Mode */
+@media (max-width: 600px) {
+  .image-card.is-focused {
+    max-width: 95vw;
+    max-height: 85vh;
+    padding: 1rem;
+  }
+  
+  .image-card.is-focused figcaption {
+    font-size: 0.9rem;
+  }
+}
+
+/* Gallery Tour Navigation Styles */
+.gallery-tour {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.tour-nav {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: var(--surface-soft, #f9fafb);
+  border-radius: 16px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.tour-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tour-nav::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+.tour-dot {
+  text-decoration: none;
+  color: var(--text-muted, #6b7280);
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  border-left: 3px solid transparent;
+  font-weight: 500;
+}
+
+.tour-dot.active, .tour-dot:hover {
+  color: var(--text-main, #111827);
+  background: var(--surface-main, #ffffff);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-left-color: #ec4899;
+}
+
+.tour-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.tour-zone {
+  scroll-margin-top: 100px;
+}
+
+/* Gallery Tour Responsive */
+@media (max-width: 1024px) {
+  .gallery-tour {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .tour-nav {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1rem;
+    gap: 0.5rem;
+    border-radius: 12px;
+    max-height: none;
+    scrollbar-width: none;
+  }
+  
+  .tour-nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tour-dot {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .tour-dot.active, .tour-dot:hover {
+    border-left-color: transparent;
+    border-bottom-color: #ec4899;
+  }
 }
 
 /* --- 14. TYPOGRAPHY UTILITIES --- */
