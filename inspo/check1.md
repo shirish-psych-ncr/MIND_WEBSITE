@@ -1,0 +1,1418 @@
+Nu Html Checker
+This tool is an ongoing experiment in better HTML checking, and its behavior remains subject to change
+
+Showing results for contents of text-input area (checked with vnu 26.7.2)
+Checker Input
+Show
+source
+outline
+image report
+errors & warnings only
+
+Check by
+text input
+check as CSS
+<!DOCTYPE html><html lang=''><!DOCTYPE html>
+<html lang="en-IN" dir="ltr">
+<head>
+  <base href="/MIND_WEBSITE/"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50"/>
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4A1438"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="author" content="Mind Grace Neuropsychiatric Clinic"/>
+  <meta name="publisher" content="Mind Grace Neuropsychiatric Clinic"/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  
+  <title>You Deserve Care | Mind Grace Neuropsychiatric Clinic — Psychiatrist in Greater Noida</title>
+  <meta name="description" content="You matter. Consult Dr Anita Sharma at Mind Grace Neuropsychiatric Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care."/>
+  
+  <!-- Primary canonical (absolute URL) -->
+  <link rel="canonical" href="https://mindgracencr.in/"/>
+  
+  <!-- Alternate language versions -->
+  <link rel="alternate" hreflang="en-IN" href="https://mindgracencr.in/"/>
+  <link rel="alternate" hreflang="x-default" href="https://mindgracencr.in/"/>
+  
+  <link rel="preload" href="/MIND_WEBSITE/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" as="image" type="image/svg+xml"/>
+  
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>
+  <meta property="og:description" content="Mental Health care in Greater Noida for anxiety, depression, ADHD, child development & more."/>
+  <meta property="og:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>
+  <meta property="og:image:secure_url" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>
+  <meta property="og:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Neuropsychiatric Clinic"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="675"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:url" content="https://mindgracencr.in/"/>
+  <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic"/>
+  <meta property="og:locale" content="en_IN"/>
+  <meta property="og:type" content="website"/>
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>
+  <meta name="twitter:description" content="You matter. Expert psychiatric care in Greater Noida."/>
+  <meta name="twitter:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>
+  <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist"/>
+  
+  <!-- Robots & Indexing -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  
+  <!-- PWA / Mobile Web App -->
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="Mind Grace"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  
+  <!-- Base64 Favicon (Pink Lotus from Logo) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
+  
+  <!-- Fonts - Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"/>
+  
+  <!-- Critical CSS inlined for above-the-fold -->
+  <style>
+    /* Font fallback during load */
+    body { font-display: swap; }
+    
+    /* Ensure smooth first paint */
+    .hero-content { opacity: 1; }
+    
+    /* Critical layout styles */
+    .site-header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .hero-section{min-height:80vh;display:flex;align-items:center}
+  </style>
+  
+  <!-- Defer non-critical CSS -->
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/utilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/layout.css"/>
+    <link rel="stylesheet" href="assets/css/components.css"/>
+    <link rel="stylesheet" href="assets/css/utilities.css"/>
+    <link rel="stylesheet" href="assets/css/animations.css"/>
+  </noscript>
+  
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp" imagesrcset="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp 800w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high"/>
+  
+  <!-- Security Headers (where supported) -->
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://docs.google.com https://www.google.com;"/>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+</head>
+<body>
+  <!-- SKIP LINK -->
+  <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
+        <img src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
+        <div>
+          <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
+          <div class="logo-tagline">Where You Come First</div>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="book.html" class="cta-button">Book Now</a></li>
+        </ul>
+      </nav>
+
+      <!-- MOBILE NAV TRIGGER -->
+      <button type="button" class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Mobile Book Button (Calendar Icon) -->
+      <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+  <!-- MOBILE NAV PANEL - Simplified -->
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>
+    <div class="mobile-nav-header">
+      <h2>Menu</h2>
+      <button type="button" class="close-mobile-menu" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Explore</div>
+        <ul class="mobile-nav-list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="process.html">What to Expect</a></li>
+          <li><a href="location.html">Find Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Resources & Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="book.html">Resource Book</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-section-title">Therapeutic Tools</div>
+        <ul class="mobile-nav-list">
+          <li><a href="tools/guided-breathing.html">Guided Breathing</a></li>
+          <li><a href="tools/butterfly-tapper.html">Butterfly Tapper</a></li>
+          <li><a href="tools/eye-movement.html">Eye Movement</a></li>
+          <li><a href="tools/hypnos-fractal.html">Hypnotic Fractal</a></li>
+          <li><a href="tools/horizon-scan.html">Horizon Scan</a></li>
+          <li><a href="tools/leaf-on-stream.html">Leaf on Stream</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-section">
+        <a href="book.html" class="cta-button">Book Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" role="main">
+    <!-- HERO SECTION with Intrinsic Grid -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            You Matter Here
+          </span>
+          <h1 id="hero-title">
+            Your Mental Health<br/>
+            <span class="highlight">Your Journey</span><br/>
+            Your Safe Space
+          </h1>
+          <p class="hero-subtitle">
+            At Mind Grace Neuropsychiatric Clinic, everything revolves around <strong class="text-primary">you</strong>.
+            Whether you're navigating anxiety, seeking support for your child,
+            or finding balance again—Dr. Anita Sharma and our compassionate team are here.
+          </p>
+          <div class="hero-buttons">
+            <a href="book.html" class="btn btn-primary">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              Book Your Session
+            </a>
+            <a href="process.html" class="btn btn-secondary">
+              See How It Works
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="hero-trust">
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+              </svg>
+              Confidential
+            </div>
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+              Evidence-based
+            </div>
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+              </svg>
+              Personalized Care
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper animate-float-gentle">
+            <picture>
+              <source srcset="assets/images/mind-grace-entry-n-reception.webp" type="image/webp"/>
+              <img
+                src="assets/images/mind-grace-entry-n-reception.webp"
+                alt="Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic"
+                class="hero-image"
+                fetchpriority="high"
+                decoding="async"
+                width="800"
+                height="533"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CARDS SECTION with Alternating Backgrounds -->
+    <section class="main-section section-light" aria-labelledby="services-title">
+      <div class="section-header">
+        <h2 id="services-title">Care Designed Around You</h2>
+        <p>Personalized, evidence-based support for every stage of your journey</p>
+      </div>
+
+      <div class="main-grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3>Psychiatric Care</h3>
+          <p>Expert diagnosis and treatment for anxiety, depression, bipolar disorder, OCD, and more—with you at the center.</p>
+          <a href="services.html#psychiatry" class="card-link" aria-label="Learn more about our Psychiatry services">
+            Learn more about our psychiatric care and treatment options
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3>Child Development</h3>
+          <p>Autism assessment, ADHD support, speech therapy, and special education tailored to your child's unique needs.</p>
+          <a href="aasha.html" class="card-link" aria-label="Explore AASHA child development services">
+            Explore AASHA
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <h3>Counseling</h3>
+          <p>Individual, couple, and family therapy in a safe, non-judgmental space where your voice is heard.</p>
+          <a href="services.html#counseling" class="card-link" aria-label="Meet Our Therapists for counseling services">
+            Meet Our Therapists
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3>Wellness Tools</h3>
+          <p>Free guided breathing, butterfly tapping, fractal hypnosis, and other self-care resources for daily use.</p>
+          <a href="resources.html" class="card-link" aria-label="Try Free Tools and wellness resources">
+            Try Free Tools
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3>Clinic Experience</h3>
+          <p>A warm, private, and comfortable environment designed to make every visit feel like coming home.</p>
+          <a href="gallery.html" class="card-link" aria-label="See Our Space and clinic gallery">
+            See Our Space
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3>Visit Us</h3>
+          <p>Conveniently located in Greater Noida with easy parking and accessible facilities for all.</p>
+          <a href="location.html" class="card-link" aria-label="Get Directions to our clinic">
+            Get Directions
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </a>
+        </article>
+      </div>
+    </section>
+    
+    <!-- EMOTIONAL CTA SECTION -->
+    <section class="emotional-cta" aria-labelledby="emotional-cta-title">
+      <h2 id="emotional-cta-title">You don't have to go through it alone</h2>
+      <p>We're here to listen, support, and walk beside you on your journey to wellness.</p>
+      <a href="book.html" class="btn btn-primary">Talk to Someone</a>
+    </section>
+  </main>
+
+  <!-- FOOTER - Substantial Visual Weight -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Patient Care</h3>
+        <ul>
+          <li><a href="book.html">Book Appointment</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="process.html">What to Expect</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="about.html">Dr. Sharma</a></li>
+          <li><a href="location.html">Find Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Help & Resources</h3>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="resources.html">Self-Help Tools</a></li>
+          <li><a href="emergency.html">Emergency Help</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="disclaimer">
+        Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice.
+        Always consult a qualified healthcare provider for diagnosis and treatment. In crisis, call emergency services immediately.
+      </p>
+      <p class="footer-copyright">
+        © <span id="year"></span> Mind Grace Neuropsychiatric Clinic, Greater Noida. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT - Library Stack -->
+  <!-- Animation & Motion -->
+  <script src="assets/js/lib/motion.min.js" defer></script>
+  <script src="assets/js/lib/anime.min.js" defer></script>
+  <!-- Removed due to module issues -->
+  <script src="assets/js/lib/scrollreveal.min.js" defer></script>
+  <!-- Removed due to module issues -->
+
+  <!-- Interactivity & Components -->
+  <script src="assets/js/lib/splide.min.js" defer></script>
+  <script src="assets/js/lib/floating-ui.core.min.js" defer></script>
+
+  <!-- State Management & Reactivity -->
+  <script src="assets/js/lib/alpine.min.js" defer></script>
+  <script src="assets/js/lib/petite-vue.min.js" defer></script>
+  <script src="assets/js/lib/preact-signals.min.js" defer></script>
+
+  <!-- Data Fetching & Dynamic Content -->
+  <script src="assets/js/lib/htmx.min.js" defer></script>
+  <!-- Removed due to module issues -->
+
+  <!-- Routing & Performance -->
+  <script src="assets/js/lib/swup.min.js" defer></script>
+  <script src="assets/js/lib/quicklink.min.js" defer></script>
+  <script src="assets/js/lib/navigo.min.js" defer></script>
+
+  <!-- Icons & Utilities -->
+  <script src="assets/js/lib/iconify.min.js" defer></script>
+  <script src="assets/js/lib/lucide.min.js" defer></script>
+  <!-- Removed due to module issues -->
+  <script src="assets/js/lib/fuse.min.js" defer></script>
+  <!-- END LIBRARY STACK -->
+
+  <!-- Main Application Script -->
+  <script src="assets/js/main.js" defer></script>
+  <noscript>
+    <style>
+      .mobile-nav-trigger, .mobile-book-btn { display: none; }
+      .desktop-nav { display: block !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+  <script>
+    // Year update
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured Data: MedicalClinic + Physician -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://mindgracencr.in/#clinic",
+        "name": "Mind Grace Neuropsychiatric Clinic",
+        "url": "https://mindgracencr.in/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg"
+        },
+        "description": "Neuropsychiatric clinic in Greater Noida providing expert care for anxiety, depression, ADHD, autism assessment, and mental health.",
+        "telephone": "+91-XXXXXXXXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Greater Noida",
+          "addressLocality": "Greater Noida",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "201310",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "28.4744",
+          "longitude": "77.5040"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "18:00"
+          }
+        ],
+        "priceRange": "$$",
+        "sameAs": []
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://mindgracencr.in/#doctor",
+        "name": "Dr Anita Sharma",
+        "jobTitle": "Consultant Psychiatrist",
+        "worksFor": {
+          "@id": "https://mindgracencr.in/#clinic"
+        },
+        "url": "https://mindgracencr.in/dr-anita-sharma.html",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://mindgracencr.in/assets/images/Dr_Anita_Sharma_Personal_Photo.jpg",
+          "width": 800,
+          "height": 1000
+        },
+        "description": "Dr Anita Sharma is a Consultant Psychiatrist at Mind Grace Neuropsychiatric Clinic, Greater Noida, specializing in anxiety, depression, ADHD, and child development.",
+        "medicalSpecialty": ["Psychiatry", "Neuropsychiatry", "Child Psychiatry"],
+        "availableLanguage": ["English", "Hindi"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mindgracencr.in/#website",
+        "url": "https://mindgracencr.in/",
+        "name": "Mind Grace Neuropsychiatric Clinic",
+        "publisher": {
+          "@id": "https://mindgracencr.in/#clinic"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- MIND GRACE LIBRARY STACK -->
+  <!-- END LIBRARY STACK -->
+
+</body>
+</html>
+</style>
+
+Use the Message Filtering button below to hide/show particular messages, and to see total counts of errors and warnings.
+Message Filtering
+Warning: This document appears to be written in English but the html start tag has an empty lang attribute. Consider using lang="en" (or variant) instead.
+
+From line 0, column 16; to line 0, column 29
+
+<!DOCTYPE html><html lang=''><title
+
+For further guidance, consult Declaring the overall language of a page and Choosing language tags.
+
+If the HTML checker has misidentified the language of this document, please file an issue report.
+
+Error: Parse Error. Style sheets should not include HTML syntax.
+
+From line 1, column 1; to line 1, column 15
+
+<!DOCTYPE html>↩<html
+
+Error: Parse Error.
+
+From line 68, column 33; to line 71, column 4
+
+  body { font-display: swap; }↩    ↩    /* Ensure smooth first paint */↩    .hero-
+
+Error: Bad value Strict-Transport-Security for attribute http-equiv on element meta.
+
+From line 96, column 3; to line 96, column 103
+
+aders (where supported) -->↩  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"/>↩  <me
+
+Error: Bad value X-Content-Type-Options for attribute http-equiv on element meta.
+
+From line 98, column 3; to line 98, column 63
+
+ https://www.google.com;"/>↩  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>↩</hea
+
+Warning: The banner role is unnecessary for element header.
+
+From line 105, column 3; to line 105, column 44
+
+tent</a>↩↩  <!-- HEADER -->↩  <header class="site-header" role="banner">↩    <
+
+Warning: The navigation role is unnecessary for element nav.
+
+From line 116, column 7; to line 116, column 78
+
+ DESKTOP NAVIGATION -->↩      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">↩     
+
+Warning: The navigation role is unnecessary for element nav.
+
+From line 147, column 3; to line 147, column 109
+
+ NAV PANEL - Simplified -->↩  <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>↩    <
+
+Warning: The main role is unnecessary for element main.
+
+From line 198, column 3; to line 198, column 38
+
+v>↩↩  <!-- MAIN CONTENT -->↩  <main id="main-content" role="main">↩    <
+
+Warning: The contentinfo role is unnecessary for element footer.
+
+From line 399, column 3; to line 399, column 49
+
+bstantial Visual Weight -->↩  <footer class="site-footer" role="contentinfo">↩    <
+
+Error: Element style not allowed as child of element noscript in this context. (Suppressing further errors from this subtree.)
+
+From line 476, column 5; to line 476, column 11
+
+er></script>↩  <noscript>↩    <style>↩     
+
+Contexts in which element style may be used:
+Where metadata content is expected.
+In a noscript element that is a child of a head element.
+Content model for element noscript:
+When scripting is disabled, in a head element: in any order, zero or more link elements, zero or more style elements, and zero or more meta elements.
+When scripting is disabled, not in a head element: transparent, but there must be no noscript element descendants.
+Otherwise: text that conforms to the requirements given in the prose.
+Error: Stray end tag style.
+
+From line 564, column 1; to line 564, column 8
+
+RY STACK -->↩↩</body>↩</html>↩</style>
+
+Error: Stray end tag style.
+
+From line 564, column 1; to line 564, column 8
+
+RY STACK -->↩↩</body>↩</html>↩</style>
+
+Warning: Resource violates Content Security Policy (meta tag): external stylesheet assets/css/base.css blocked by style-src directive.
+
+From line 85, column 5; to line 85, column 55
+
+ylesheet'"/>↩  <noscript>↩    <link rel="stylesheet" href="assets/css/base.css"/>↩    <
+
+Warning: Resource violates Content Security Policy (meta tag): external stylesheet assets/css/layout.css blocked by style-src directive.
+
+From line 86, column 5; to line 86, column 57
+
+f="assets/css/base.css"/>↩    <link rel="stylesheet" href="assets/css/layout.css"/>↩    <
+
+Warning: Resource violates Content Security Policy (meta tag): external stylesheet assets/css/components.css blocked by style-src directive.
+
+From line 87, column 5; to line 87, column 61
+
+"assets/css/layout.css"/>↩    <link rel="stylesheet" href="assets/css/components.css"/>↩    <
+
+Warning: Resource violates Content Security Policy (meta tag): external stylesheet assets/css/utilities.css blocked by style-src directive.
+
+From line 88, column 5; to line 88, column 60
+
+ets/css/components.css"/>↩    <link rel="stylesheet" href="assets/css/utilities.css"/>↩    <
+
+Warning: Resource violates Content Security Policy (meta tag): external stylesheet assets/css/animations.css blocked by style-src directive.
+
+From line 89, column 5; to line 89, column 61
+
+sets/css/utilities.css"/>↩    <link rel="stylesheet" href="assets/css/animations.css"/>↩  </n
+
+Warning: Resource violates Content Security Policy (meta tag): image assets/images/Mind_Grace_Clinic_Logo_Pink.svg blocked by img-src directive.
+
+From line 108, column 9; to line 108, column 153
+
+hiatric Clinic Home">↩        <img src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>↩     
+
+Warning: Resource violates Content Security Policy (meta tag): image assets/images/mind-grace-entry-n-reception.webp blocked by img-src directive.
+
+From line 262, column 15; to line 270, column 16
+
+="image/webp"/>↩              <img↩                src="assets/images/mind-grace-entry-n-reception.webp"↩                alt="Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic"↩                class="hero-image"↩                fetchpriority="high"↩                decoding="async"↩                width="800"↩                height="533"↩              />↩     
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/motion.min.js blocked by script-src directive.
+
+From line 442, column 3; to line 442, column 50
+
+<!-- Animation & Motion -->↩  <script src="assets/js/lib/motion.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/anime.min.js blocked by script-src directive.
+
+From line 443, column 3; to line 443, column 49
+
+ion.min.js" defer></script>↩  <script src="assets/js/lib/anime.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/scrollreveal.min.js blocked by script-src directive.
+
+From line 445, column 3; to line 445, column 56
+
+ed due to module issues -->↩  <script src="assets/js/lib/scrollreveal.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/splide.min.js blocked by script-src directive.
+
+From line 449, column 3; to line 449, column 50
+
+eractivity & Components -->↩  <script src="assets/js/lib/splide.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/floating-ui.core.min.js blocked by script-src directive.
+
+From line 450, column 3; to line 450, column 60
+
+ide.min.js" defer></script>↩  <script src="assets/js/lib/floating-ui.core.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/alpine.min.js blocked by script-src directive.
+
+From line 453, column 3; to line 453, column 50
+
+Management & Reactivity -->↩  <script src="assets/js/lib/alpine.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/petite-vue.min.js blocked by script-src directive.
+
+From line 454, column 3; to line 454, column 54
+
+ine.min.js" defer></script>↩  <script src="assets/js/lib/petite-vue.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/preact-signals.min.js blocked by script-src directive.
+
+From line 455, column 3; to line 455, column 58
+
+vue.min.js" defer></script>↩  <script src="assets/js/lib/preact-signals.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/htmx.min.js blocked by script-src directive.
+
+From line 458, column 3; to line 458, column 48
+
+ching & Dynamic Content -->↩  <script src="assets/js/lib/htmx.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/swup.min.js blocked by script-src directive.
+
+From line 462, column 3; to line 462, column 48
+
+- Routing & Performance -->↩  <script src="assets/js/lib/swup.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/quicklink.min.js blocked by script-src directive.
+
+From line 463, column 3; to line 463, column 53
+
+wup.min.js" defer></script>↩  <script src="assets/js/lib/quicklink.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/navigo.min.js blocked by script-src directive.
+
+From line 464, column 3; to line 464, column 50
+
+ink.min.js" defer></script>↩  <script src="assets/js/lib/navigo.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/iconify.min.js blocked by script-src directive.
+
+From line 467, column 3; to line 467, column 51
+
+ <!-- Icons & Utilities -->↩  <script src="assets/js/lib/iconify.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/lucide.min.js blocked by script-src directive.
+
+From line 468, column 3; to line 468, column 50
+
+ify.min.js" defer></script>↩  <script src="assets/js/lib/lucide.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/fuse.min.js blocked by script-src directive.
+
+From line 470, column 3; to line 470, column 48
+
+ed due to module issues -->↩  <script src="assets/js/lib/fuse.min.js" defer></scri
+
+Warning: Resource violates Content Security Policy (meta tag): external script assets/js/main.js blocked by script-src directive.
+
+From line 474, column 3; to line 474, column 40
+
+Main Application Script -->↩  <script src="assets/js/main.js" defer></scri
+
+Document checking completed.
+
+Image report
+The img elements of the page are shown below categorized by their type of textual alternative. Please review that the images in each group match that group’s definition.
+
+Images with textual alternative
+The following images have textual alternatives. Please review that the textual alternatives make sense considering the purpose of the image in the context of the page and that phrases like “Image of …” are avoided.
+
+Note that iconic images that are redundant with text next to them or purely decorative should have alt="" instead.
+
+Image	Textual alternative	Location
+Not resolvable	Mind Grace Neuropsychiatric Clinic Logo	From line 109, column 9; to line 109, column 153
+Not resolvable	Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic	From line 263, column 15; to line 271, column 16
+Source
+<!DOCTYPE html><html lang=''><!DOCTYPE html>↩
+<html lang="en-IN" dir="ltr">↩
+<head>↩
+  <base href="/MIND_WEBSITE/"/>↩
+  <meta charset="utf-8"/>↩
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>↩
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50"/>↩
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4A1438"/>↩
+  <meta name="color-scheme" content="light dark"/>↩
+  <meta name="author" content="Mind Grace Neuropsychiatric Clinic"/>↩
+  <meta name="publisher" content="Mind Grace Neuropsychiatric Clinic"/>↩
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>↩
+  ↩
+  <title>You Deserve Care | Mind Grace Neuropsychiatric Clinic — Psychiatrist in Greater Noida</title>↩
+  <meta name="description" content="You matter. Consult Dr Anita Sharma at Mind Grace Neuropsychiatric Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care."/>↩
+  ↩
+  <!-- Primary canonical (absolute URL) -->↩
+  <link rel="canonical" href="https://mindgracencr.in/"/>↩
+  ↩
+  <!-- Alternate language versions -->↩
+  <link rel="alternate" hreflang="en-IN" href="https://mindgracencr.in/"/>↩
+  <link rel="alternate" hreflang="x-default" href="https://mindgracencr.in/"/>↩
+  ↩
+  <link rel="preload" href="/MIND_WEBSITE/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" as="image" type="image/svg+xml"/>↩
+  ↩
+  <!-- OpenGraph / Social Sharing -->↩
+  <meta property="og:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>↩
+  <meta property="og:description" content="Mental Health care in Greater Noida for anxiety, depression, ADHD, child development & more."/>↩
+  <meta property="og:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>↩
+  <meta property="og:image:secure_url" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>↩
+  <meta property="og:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Neuropsychiatric Clinic"/>↩
+  <meta property="og:image:width" content="1200"/>↩
+  <meta property="og:image:height" content="675"/>↩
+  <meta property="og:image:type" content="image/jpeg"/>↩
+  <meta property="og:url" content="https://mindgracencr.in/"/>↩
+  <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic"/>↩
+  <meta property="og:locale" content="en_IN"/>↩
+  <meta property="og:type" content="website"/>↩
+  ↩
+  <!-- Twitter Cards -->↩
+  <meta name="twitter:card" content="summary_large_image"/>↩
+  <meta name="twitter:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>↩
+  <meta name="twitter:description" content="You matter. Expert psychiatric care in Greater Noida."/>↩
+  <meta name="twitter:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>↩
+  <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist"/>↩
+  ↩
+  <!-- Robots & Indexing -->↩
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>↩
+  ↩
+  <!-- PWA / Mobile Web App -->↩
+  <meta name="mobile-web-app-capable" content="yes"/>↩
+  <meta name="apple-mobile-web-app-capable" content="yes"/>↩
+  <meta name="apple-mobile-web-app-title" content="Mind Grace"/>↩
+  <link rel="manifest" href="site.webmanifest"/>↩
+  ↩
+  <!-- Base64 Favicon (Pink Lotus from Logo) -->↩
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>↩
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>↩
+  ↩
+  <!-- Fonts - Preconnect for performance -->↩
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>↩
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>↩
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"/>↩
+  ↩
+  <!-- Critical CSS inlined for above-the-fold -->↩
+  <style>↩
+    /* Font fallback during load */↩
+    body { font-display: swap; }↩
+    ↩
+    /* Ensure smooth first paint */↩
+    .hero-content { opacity: 1; }↩
+    ↩
+    /* Critical layout styles */↩
+    .site-header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}↩
+    .hero-section{min-height:80vh;display:flex;align-items:center}↩
+  </style>↩
+  ↩
+  <!-- Defer non-critical CSS -->↩
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>↩
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>↩
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>↩
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/utilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>↩
+  <link rel="preload" href="/MIND_WEBSITE/assets/css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>↩
+  <noscript>↩
+    <link rel="stylesheet" href="assets/css/base.css"/>↩
+    <link rel="stylesheet" href="assets/css/layout.css"/>↩
+    <link rel="stylesheet" href="assets/css/components.css"/>↩
+    <link rel="stylesheet" href="assets/css/utilities.css"/>↩
+    <link rel="stylesheet" href="assets/css/animations.css"/>↩
+  </noscript>↩
+  ↩
+  <!-- Preload LCP image -->↩
+  <link rel="preload" as="image" href="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp" imagesrcset="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp 800w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high"/>↩
+  ↩
+  <!-- Security Headers (where supported) -->↩
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"/>↩
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://docs.google.com https://www.google.com;"/>↩
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>↩
+</head>↩
+<body>↩
+  <!-- SKIP LINK -->↩
+  <a href="#main-content" class="visually-hidden">Skip to main content</a>↩
+↩
+  <!-- HEADER -->↩
+  <header class="site-header" role="banner">↩
+    <div class="header-inner">↩
+      <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">↩
+        <img src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>↩
+        <div>↩
+          <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>↩
+          <div class="logo-tagline">Where You Come First</div>↩
+        </div>↩
+      </a>↩
+↩
+      <!-- DESKTOP NAVIGATION -->↩
+      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">↩
+        <ul>↩
+          <li><a href="about.html">About</a></li>↩
+          <li><a href="services.html">Services</a></li>↩
+          <li><a href="process.html">Process</a></li>↩
+          <li><a href="resources.html">Resources</a></li>↩
+          <li><a href="location.html">Location</a></li>↩
+          <li><a href="book.html" class="cta-button">Book Now</a></li>↩
+        </ul>↩
+      </nav>↩
+↩
+      <!-- MOBILE NAV TRIGGER -->↩
+      <button type="button" class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">↩
+        <span></span>↩
+        <span></span>↩
+        <span></span>↩
+      </button>↩
+      ↩
+      <!-- Mobile Book Button (Calendar Icon) -->↩
+      <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">↩
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>↩
+        </svg>↩
+      </a>↩
+    </div>↩
+  </header>↩
+↩
+  <!-- MOBILE NAV OVERLAY -->↩
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>↩
+↩
+  <!-- MOBILE NAV PANEL - Simplified -->↩
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>↩
+    <div class="mobile-nav-header">↩
+      <h2>Menu</h2>↩
+      <button type="button" class="close-mobile-menu" aria-label="Close menu">↩
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+          <path d="M18 6L6 18M6 6l12 12"/>↩
+        </svg>↩
+      </button>↩
+    </div>↩
+    <div class="mobile-nav-content">↩
+      <div class="mobile-nav-section">↩
+        <div class="mobile-nav-section-title">Explore</div>↩
+        <ul class="mobile-nav-list">↩
+          <li><a href="about.html">About Us</a></li>↩
+          <li><a href="services.html">Our Services</a></li>↩
+          <li><a href="process.html">What to Expect</a></li>↩
+          <li><a href="location.html">Find Us</a></li>↩
+          <li><a href="contact.html">Contact</a></li>↩
+        </ul>↩
+      </div>↩
+↩
+      <div class="mobile-nav-section">↩
+        <div class="mobile-nav-section-title">Resources & Tools</div>↩
+        <ul class="mobile-nav-list">↩
+          <li><a href="gallery.html">Gallery</a></li>↩
+          <li><a href="blog/index.html">Blog</a></li>↩
+          <li><a href="book.html">Resource Book</a></li>↩
+          <li><a href="resources.html">Resources</a></li>↩
+          <li><a href="faq.html">FAQ</a></li>↩
+        </ul>↩
+      </div>↩
+↩
+      <div class="mobile-nav-section">↩
+        <div class="mobile-nav-section-title">Therapeutic Tools</div>↩
+        <ul class="mobile-nav-list">↩
+          <li><a href="tools/guided-breathing.html">Guided Breathing</a></li>↩
+          <li><a href="tools/butterfly-tapper.html">Butterfly Tapper</a></li>↩
+          <li><a href="tools/eye-movement.html">Eye Movement</a></li>↩
+          <li><a href="tools/hypnos-fractal.html">Hypnotic Fractal</a></li>↩
+          <li><a href="tools/horizon-scan.html">Horizon Scan</a></li>↩
+          <li><a href="tools/leaf-on-stream.html">Leaf on Stream</a></li>↩
+        </ul>↩
+      </div>↩
+↩
+      <div class="mobile-nav-section">↩
+        <a href="book.html" class="cta-button">Book Appointment</a>↩
+      </div>↩
+    </div>↩
+  </nav>↩
+↩
+  <!-- MAIN CONTENT -->↩
+  <main id="main-content" role="main">↩
+    <!-- HERO SECTION with Intrinsic Grid -->↩
+    <section class="hero" aria-labelledby="hero-title">↩
+      <div class="hero-content">↩
+        <div class="hero-text">↩
+          <span class="hero-badge">↩
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">↩
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>↩
+            </svg>↩
+            You Matter Here↩
+          </span>↩
+          <h1 id="hero-title">↩
+            Your Mental Health<br/>↩
+            <span class="highlight">Your Journey</span><br/>↩
+            Your Safe Space↩
+          </h1>↩
+          <p class="hero-subtitle">↩
+            At Mind Grace Neuropsychiatric Clinic, everything revolves around <strong class="text-primary">you</strong>.↩
+            Whether you're navigating anxiety, seeking support for your child,↩
+            or finding balance again—Dr. Anita Sharma and our compassionate team are here.↩
+          </p>↩
+          <div class="hero-buttons">↩
+            <a href="book.html" class="btn btn-primary">↩
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>↩
+              </svg>↩
+              Book Your Session↩
+            </a>↩
+            <a href="process.html" class="btn btn-secondary">↩
+              See How It Works↩
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+                <path d="M9 18l6-6-6-6"/>↩
+              </svg>↩
+            </a>↩
+          </div>↩
+          ↩
+          <div class="hero-trust">↩
+            <div class="hero-trust-item">↩
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>↩
+                <path d="M7 11V7a5 5 0 0110 0v4"/>↩
+              </svg>↩
+              Confidential↩
+            </div>↩
+            <div class="hero-trust-item">↩
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>↩
+              </svg>↩
+              Evidence-based↩
+            </div>↩
+            <div class="hero-trust-item">↩
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+                <circle cx="12" cy="12" r="10"/>↩
+                <path d="M12 16v-4M12 8h.01"/>↩
+              </svg>↩
+              Personalized Care↩
+            </div>↩
+          </div>↩
+        </div>↩
+↩
+        <div class="hero-visual">↩
+          <div class="hero-image-wrapper animate-float-gentle">↩
+            <picture>↩
+              <source srcset="assets/images/mind-grace-entry-n-reception.webp" type="image/webp"/>↩
+              <img↩
+                src="assets/images/mind-grace-entry-n-reception.webp"↩
+                alt="Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic"↩
+                class="hero-image"↩
+                fetchpriority="high"↩
+                decoding="async"↩
+                width="800"↩
+                height="533"↩
+              />↩
+            </picture>↩
+          </div>↩
+        </div>↩
+      </div>↩
+    </section>↩
+↩
+    <!-- MAIN CARDS SECTION with Alternating Backgrounds -->↩
+    <section class="main-section section-light" aria-labelledby="services-title">↩
+      <div class="section-header">↩
+        <h2 id="services-title">Care Designed Around You</h2>↩
+        <p>Personalized, evidence-based support for every stage of your journey</p>↩
+      </div>↩
+↩
+      <div class="main-grid">↩
+        <!-- Card 1 -->↩
+        <article class="card">↩
+          <div class="card-icon" aria-hidden="true">↩
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">↩
+              <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>↩
+            </svg>↩
+          </div>↩
+          <h3>Psychiatric Care</h3>↩
+          <p>Expert diagnosis and treatment for anxiety, depression, bipolar disorder, OCD, and more—with you at the center.</p>↩
+          <a href="services.html#psychiatry" class="card-link" aria-label="Learn more about our Psychiatry services">↩
+            Learn more about our psychiatric care and treatment options↩
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+              <path d="M9 18l6-6-6-6"/>↩
+            </svg>↩
+          </a>↩
+        </article>↩
+↩
+        <!-- Card 2 -->↩
+        <article class="card">↩
+          <div class="card-icon" aria-hidden="true">↩
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">↩
+              <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>↩
+            </svg>↩
+          </div>↩
+          <h3>Child Development</h3>↩
+          <p>Autism assessment, ADHD support, speech therapy, and special education tailored to your child's unique needs.</p>↩
+          <a href="aasha.html" class="card-link" aria-label="Explore AASHA child development services">↩
+            Explore AASHA↩
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+              <path d="M9 18l6-6-6-6"/>↩
+            </svg>↩
+          </a>↩
+        </article>↩
+↩
+        <!-- Card 3 -->↩
+        <article class="card">↩
+          <div class="card-icon" aria-hidden="true">↩
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">↩
+              <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>↩
+            </svg>↩
+          </div>↩
+          <h3>Counseling</h3>↩
+          <p>Individual, couple, and family therapy in a safe, non-judgmental space where your voice is heard.</p>↩
+          <a href="services.html#counseling" class="card-link" aria-label="Meet Our Therapists for counseling services">↩
+            Meet Our Therapists↩
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+              <path d="M9 18l6-6-6-6"/>↩
+            </svg>↩
+          </a>↩
+        </article>↩
+↩
+        <!-- Card 4 -->↩
+        <article class="card">↩
+          <div class="card-icon" aria-hidden="true">↩
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">↩
+              <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>↩
+            </svg>↩
+          </div>↩
+          <h3>Wellness Tools</h3>↩
+          <p>Free guided breathing, butterfly tapping, fractal hypnosis, and other self-care resources for daily use.</p>↩
+          <a href="resources.html" class="card-link" aria-label="Try Free Tools and wellness resources">↩
+            Try Free Tools↩
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+              <path d="M9 18l6-6-6-6"/>↩
+            </svg>↩
+          </a>↩
+        </article>↩
+↩
+        <!-- Card 5 -->↩
+        <article class="card">↩
+          <div class="card-icon" aria-hidden="true">↩
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">↩
+              <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>↩
+            </svg>↩
+          </div>↩
+          <h3>Clinic Experience</h3>↩
+          <p>A warm, private, and comfortable environment designed to make every visit feel like coming home.</p>↩
+          <a href="gallery.html" class="card-link" aria-label="See Our Space and clinic gallery">↩
+            See Our Space↩
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+              <path d="M9 18l6-6-6-6"/>↩
+            </svg>↩
+          </a>↩
+        </article>↩
+↩
+        <!-- Card 6 -->↩
+        <article class="card">↩
+          <div class="card-icon" aria-hidden="true">↩
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">↩
+              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>↩
+              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>↩
+            </svg>↩
+          </div>↩
+          <h3>Visit Us</h3>↩
+          <p>Conveniently located in Greater Noida with easy parking and accessible facilities for all.</p>↩
+          <a href="location.html" class="card-link" aria-label="Get Directions to our clinic">↩
+            Get Directions↩
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">↩
+              <path d="M9 18l6-6-6-6"/>↩
+            </svg>↩
+          </a>↩
+        </article>↩
+      </div>↩
+    </section>↩
+    ↩
+    <!-- EMOTIONAL CTA SECTION -->↩
+    <section class="emotional-cta" aria-labelledby="emotional-cta-title">↩
+      <h2 id="emotional-cta-title">You don't have to go through it alone</h2>↩
+      <p>We're here to listen, support, and walk beside you on your journey to wellness.</p>↩
+      <a href="book.html" class="btn btn-primary">Talk to Someone</a>↩
+    </section>↩
+  </main>↩
+↩
+  <!-- FOOTER - Substantial Visual Weight -->↩
+  <footer class="site-footer" role="contentinfo">↩
+    <div class="footer-content">↩
+      <div class="footer-column">↩
+        <h3>Patient Care</h3>↩
+        <ul>↩
+          <li><a href="book.html">Book Appointment</a></li>↩
+          <li><a href="services.html">Our Services</a></li>↩
+          <li><a href="process.html">What to Expect</a></li>↩
+        </ul>↩
+      </div>↩
+↩
+      <div class="footer-column">↩
+        <h3>About Us</h3>↩
+        <ul>↩
+          <li><a href="about.html">Dr. Sharma</a></li>↩
+          <li><a href="location.html">Find Us</a></li>↩
+          <li><a href="contact.html">Contact</a></li>↩
+        </ul>↩
+      </div>↩
+↩
+      <div class="footer-column">↩
+        <h3>Help & Resources</h3>↩
+        <ul>↩
+          <li><a href="faq.html">FAQ</a></li>↩
+          <li><a href="resources.html">Self-Help Tools</a></li>↩
+          <li><a href="emergency.html">Emergency Help</a></li>↩
+        </ul>↩
+      </div>↩
+    </div>↩
+↩
+    <div class="footer-bottom">↩
+      <p class="disclaimer">↩
+        Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice.↩
+        Always consult a qualified healthcare provider for diagnosis and treatment. In crisis, call emergency services immediately.↩
+      </p>↩
+      <p class="footer-copyright">↩
+        © <span id="year"></span> Mind Grace Neuropsychiatric Clinic, Greater Noida. All rights reserved.↩
+      </p>↩
+    </div>↩
+  </footer>↩
+↩
+  <!-- JAVASCRIPT - Library Stack -->↩
+  <!-- Animation & Motion -->↩
+  <script src="assets/js/lib/motion.min.js" defer></script>↩
+  <script src="assets/js/lib/anime.min.js" defer></script>↩
+  <!-- Removed due to module issues -->↩
+  <script src="assets/js/lib/scrollreveal.min.js" defer></script>↩
+  <!-- Removed due to module issues -->↩
+↩
+  <!-- Interactivity & Components -->↩
+  <script src="assets/js/lib/splide.min.js" defer></script>↩
+  <script src="assets/js/lib/floating-ui.core.min.js" defer></script>↩
+↩
+  <!-- State Management & Reactivity -->↩
+  <script src="assets/js/lib/alpine.min.js" defer></script>↩
+  <script src="assets/js/lib/petite-vue.min.js" defer></script>↩
+  <script src="assets/js/lib/preact-signals.min.js" defer></script>↩
+↩
+  <!-- Data Fetching & Dynamic Content -->↩
+  <script src="assets/js/lib/htmx.min.js" defer></script>↩
+  <!-- Removed due to module issues -->↩
+↩
+  <!-- Routing & Performance -->↩
+  <script src="assets/js/lib/swup.min.js" defer></script>↩
+  <script src="assets/js/lib/quicklink.min.js" defer></script>↩
+  <script src="assets/js/lib/navigo.min.js" defer></script>↩
+↩
+  <!-- Icons & Utilities -->↩
+  <script src="assets/js/lib/iconify.min.js" defer></script>↩
+  <script src="assets/js/lib/lucide.min.js" defer></script>↩
+  <!-- Removed due to module issues -->↩
+  <script src="assets/js/lib/fuse.min.js" defer></script>↩
+  <!-- END LIBRARY STACK -->↩
+↩
+  <!-- Main Application Script -->↩
+  <script src="assets/js/main.js" defer></script>↩
+  <noscript>↩
+    <style>↩
+      .mobile-nav-trigger, .mobile-book-btn { display: none; }↩
+      .desktop-nav { display: block !important; }↩
+      .reveal { opacity: 1 !important; transform: none !important; }↩
+    </style>↩
+  </noscript>↩
+  <script>↩
+    // Year update↩
+    document.getElementById('year').textContent = new Date().getFullYear();↩
+  </script>↩
+↩
+  <!-- Structured Data: MedicalClinic + Physician -->↩
+  <script type="application/ld+json">↩
+  {↩
+    "@context": "https://schema.org",↩
+    "@graph": [↩
+      {↩
+        "@type": "MedicalClinic",↩
+        "@id": "https://mindgracencr.in/#clinic",↩
+        "name": "Mind Grace Neuropsychiatric Clinic",↩
+        "url": "https://mindgracencr.in/",↩
+        "logo": {↩
+          "@type": "ImageObject",↩
+          "url": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg"↩
+        },↩
+        "description": "Neuropsychiatric clinic in Greater Noida providing expert care for anxiety, depression, ADHD, autism assessment, and mental health.",↩
+        "telephone": "+91-XXXXXXXXXX",↩
+        "address": {↩
+          "@type": "PostalAddress",↩
+          "streetAddress": "Greater Noida",↩
+          "addressLocality": "Greater Noida",↩
+          "addressRegion": "Uttar Pradesh",↩
+          "postalCode": "201310",↩
+          "addressCountry": "IN"↩
+        },↩
+        "geo": {↩
+          "@type": "GeoCoordinates",↩
+          "latitude": "28.4744",↩
+          "longitude": "77.5040"↩
+        },↩
+        "openingHoursSpecification": [↩
+          {↩
+            "@type": "OpeningHoursSpecification",↩
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],↩
+            "opens": "10:00",↩
+            "closes": "18:00"↩
+          }↩
+        ],↩
+        "priceRange": "$$",↩
+        "sameAs": []↩
+      },↩
+      {↩
+        "@type": "Physician",↩
+        "@id": "https://mindgracencr.in/#doctor",↩
+        "name": "Dr Anita Sharma",↩
+        "jobTitle": "Consultant Psychiatrist",↩
+        "worksFor": {↩
+          "@id": "https://mindgracencr.in/#clinic"↩
+        },↩
+        "url": "https://mindgracencr.in/dr-anita-sharma.html",↩
+        "image": {↩
+          "@type": "ImageObject",↩
+          "url": "https://mindgracencr.in/assets/images/Dr_Anita_Sharma_Personal_Photo.jpg",↩
+          "width": 800,↩
+          "height": 1000↩
+        },↩
+        "description": "Dr Anita Sharma is a Consultant Psychiatrist at Mind Grace Neuropsychiatric Clinic, Greater Noida, specializing in anxiety, depression, ADHD, and child development.",↩
+        "medicalSpecialty": ["Psychiatry", "Neuropsychiatry", "Child Psychiatry"],↩
+        "availableLanguage": ["English", "Hindi"]↩
+      },↩
+      {↩
+        "@type": "WebSite",↩
+        "@id": "https://mindgracencr.in/#website",↩
+        "url": "https://mindgracencr.in/",↩
+        "name": "Mind Grace Neuropsychiatric Clinic",↩
+        "publisher": {↩
+          "@id": "https://mindgracencr.in/#clinic"↩
+        }↩
+      }↩
+    ]↩
+  }↩
+  </script>↩
+↩
+  <!-- MIND GRACE LIBRARY STACK -->↩
+  <!-- END LIBRARY STACK -->↩
+↩
+</body>↩
+</html>↩
+</style>
+Outline
+<h1> [missing]
+
+<h2> Menu
+
+<h1> Your Mental Health Your Journey Your Safe Space
+
+<h2> Care Designed Around You
+
+<h3> Psychiatric Care
+
+<h3> Child Development
+
+<h3> Counseling
+
+<h3> Wellness Tools
+
+<h3> Clinic Experience
+
+<h3> Visit Us
+
+<h2> You don't have to go through it alone
+
+<h3> Patient Care
+
+<h3> About Us
+
+<h3> Help & Resources
+
+Total execution time 26 milliseconds.
+
+About this checker • Report an issue
