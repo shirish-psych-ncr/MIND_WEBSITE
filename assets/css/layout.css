@@ -237,7 +237,7 @@
   align-items: center;
   gap: var(--space-xs);
   background: var(--warm-gray);
-  color: #0f172a;
+  color: var(--hero-badge-text, #0f172a);
   font-weight: 600;
   font-size: var(--fs-small);
   padding: var(--space-xs) var(--space-md);
@@ -404,13 +404,13 @@
   font-family: 'Playfair Display', serif;
   font-size: var(--fs-h2);
   font-weight: 700;
-  color: #0f172a;
+  color: var(--cta-heading, #0f172a);
   margin-bottom: var(--space-md);
 }
 
 .emotional-cta p {
   font-size: var(--fs-body);
-  color: #334155;
+  color: var(--cta-text, #334155);
   line-height: var(--lh-relaxed);
   max-width: var(--measure);
   margin: 0 auto var(--space-xl);

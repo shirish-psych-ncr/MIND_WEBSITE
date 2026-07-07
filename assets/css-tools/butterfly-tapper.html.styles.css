@@ -98,10 +98,16 @@
     --soft-plum: #2D1828;
     --cream: #2A1F1A;
     --blush: #352028;
+    --warm-gray: #2A2530;
     --text-dark: #F5E6F0;
     --text-body: #E0D0DE;
-    --text-muted: #B8A0B0;
+    --text-muted: #C8B8C8;
     --text-light: #987888;
+    --card-heading: #F5E6F0;
+    --card-text: #D0C0D0;
+    --hero-badge-text: #F5E6F0;
+    --cta-heading: #F5E6F0;
+    --cta-text: #D0C0D0;
   }
 }
 

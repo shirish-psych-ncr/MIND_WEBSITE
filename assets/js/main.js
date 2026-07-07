@@ -45,10 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.classList.add('active');
       panel.removeAttribute('inert');
       document.body.style.overflow = 'hidden';
-      // Focus management
-      requestAnimationFrame(() => {
-        setTimeout(() => navLinks[0]?.focus(), 50);
-      });
+      // Focus management - defer to next paint without blocking
+      if (navLinks[0]) {
+        // Use microtask to avoid setTimeout delay
+        Promise.resolve().then(() => navLinks[0].focus());
+      }
     };
     
     const closeNav = () => {
