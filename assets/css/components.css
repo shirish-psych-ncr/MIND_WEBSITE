@@ -758,26 +758,255 @@ svg[aria-hidden="true"] {
   color: var(--text-muted);
 }
 
-/* --- Emergency & Safety Banner --- */
+/* ============================================
+   EMERGENCY & SAFETY BANNER WITH MARQUEE
+   Mind Grace Neuropsychiatric Clinic - Clinical Safety First
+   ============================================ */
+
+/* Base Emergency Banner */
 .emergency-banner {
-  background: #fee2e2;
+  background: linear-gradient(90deg, #fee2e2 0%, #fecaca 50%, #fee2e2 100%);
   color: #991b1b;
-  padding: 0.75rem;
+  padding: 0;
   text-align: center;
   font-size: 0.875rem;
   border-bottom: 1px solid #fecaca;
-  font-weight: 500;
+  font-weight: 600;
+  overflow: hidden;
+  position: relative;
 }
 
+/* Marquee Container */
+.emergency-banner__marquee {
+  display: flex;
+  overflow: hidden;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+}
+
+/* Marquee Inner - The Scrolling Track */
+.emergency-banner__inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee-scroll 15s linear infinite;
+  animation-play-state: paused;
+  padding: 0.75rem 0;
+}
+
+/* Pause on hover for readability */
+.emergency-banner:hover .emergency-banner__inner {
+  animation-play-state: running;
+}
+
+/* Individual Message Spans */
+.emergency-banner__message {
+  padding: 0 2rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Pulsing Emergency Indicator */
+.emergency-indicator {
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  background: #dc2626;
+  border-radius: 50%;
+  animation: pulse-emergency 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-emergency {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0);
+  }
+}
+
+/* Marquee Animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+
+/* Link Styling */
 .emergency-banner a {
   color: #b91c1c;
   text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+  font-weight: 700;
 }
 
 .emergency-banner a:hover,
 .emergency-banner a:focus {
   color: #7f1d1d;
   text-decoration: none;
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip Link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  z-index: 10000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(45, 27, 46, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile Nav Panel */
+.mobile-nav-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(85vw, 320px);
+  height: 100dvh;
+  background: var(--white);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl);
+}
+
+.mobile-nav-panel.is-open {
+  transform: translateX(0);
+}
+
+.mobile-nav-panel nav {
+  padding: var(--space-lg);
+  flex: 1;
+}
+
+.mobile-nav-panel nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.mobile-nav-panel nav a {
+  display: block;
+  padding: var(--space-md);
+  color: var(--text-body);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-nav-panel nav a:hover,
+.mobile-nav-panel nav a:focus {
+  background: var(--soft-plum);
+  color: var(--primary);
+}
+
+.close-mobile-menu {
+  align-self: flex-end;
+  margin: var(--space-md);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.close-mobile-menu:hover,
+.close-mobile-menu:focus {
+  color: var(--primary);
+  background: var(--soft-plum);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .emergency-banner__inner {
+    animation: none;
+    transform: translateX(0);
+  }
+  
+  .emergency-banner__marquee {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .emergency-indicator {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .emergency-banner {
+    font-size: 0.8125rem;
+  }
+  
+  .emergency-banner__message {
+    padding: 0 1rem;
+  }
 }
 
 /* --- Responsive Iframe Wrapper --- */
