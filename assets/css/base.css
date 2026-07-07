@@ -304,4 +304,108 @@ select:focus-visible,
   white-space: nowrap;
   border: 0;
 }
+
+/* Skip Link for Keyboard Users */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--white);
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 10000;
+  border-radius: var(--radius-sm);
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: var(--space-sm);
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Orientation Warning Banner */
+.orientation-warning {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.orientation-warning.is-active {
+  display: flex;
+}
+
+.orientation-warning-content {
+  max-width: 400px;
+  color: var(--white);
+}
+
+.orientation-warning-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .orientation-warning.is-mobile-landscape {
+    display: flex;
+  }
+}
+
+/* Print Styles - Clinical Documentation Ready */
+@media print {
+  .site-header,
+  .site-footer,
+  .emergency-banner,
+  .mobile-nav-trigger,
+  .mobile-sticky-cta,
+  .scroll-progress,
+  .skip-link,
+  .orientation-warning,
+  nav,
+  button,
+  a[href^="#"],
+  [role="button"] {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  .card, .image-card {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+  }
 }
