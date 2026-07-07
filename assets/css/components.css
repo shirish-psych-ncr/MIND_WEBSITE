@@ -368,6 +368,28 @@ svg[aria-hidden="true"] {
   background: var(--surface-soft, #f3f4f6);
 }
 
+/* Image Loading States */
+.image-card.is-loading {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.image-card.is-loaded img {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.image-card.is-error {
+  background: #fef2f2;
+  border: 1px dashed #fca5a5;
+}
+
 .image-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.08);
@@ -582,7 +604,8 @@ svg[aria-hidden="true"] {
 
 /* Vestibular Protection (Clinical Guardrail) */
 @media (prefers-reduced-motion: reduce) {
-  .image-card img {
+  .image-card img,
+  .image-card.is-loading {
     animation: none;
     opacity: 1;
     transform: none;
