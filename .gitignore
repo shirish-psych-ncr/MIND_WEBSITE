@@ -34,10 +34,8 @@ venv/
 .venv*/
 .python-version
 
-# Compiled CSS/JS
-*.min.css
-*.min.js
-*.bundle.js
+# Logs and temp files
+*.log
 
 # Coverage reports
 coverage/
@@ -50,19 +48,47 @@ htmlcov/
 *.swp
 *.swo
 
-# OS files
+# Environment
+.env
+.env.local
+*.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+.venv.bak/
+.env.bak/
+
+# Node.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled and binary files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# OS specific
 .DS_Store
 Thumbs.db
 
 # Testing
-.pytest_cache/
-.mypy_cache/
-.nyc_output/
-coverage.xml
-*.gcda
-*.gcno
+coverage/
+htmlcov/
+.coverage
+*.coverage
 
-# Compression archives
+# Compression
 *.zip
 *.gz
 *.tar
@@ -85,4 +111,11 @@ coverage.xml
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+
+# Cache directories
+.mypy_cache/
+.pytest_cache/
+.gradle/
+.julia/
+zig-cache/
 ```
