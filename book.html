@@ -25,15 +25,8 @@
   <link rel="stylesheet" href="assets/css/utilities.css"/>
   <link rel="stylesheet" href="assets/css/animations.css"/>
   <link rel="stylesheet" href="assets/css-tools/tools-book.css"/>
-  
-  <style>
-    :root { --primary: #e84393; --surface-alt: #fff5f7; }
-    
-    /* Smooth scroll */
-    html { scroll-behavior: smooth; }
-  </style>
 
-    <script type="application/ld+json">
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
@@ -328,25 +321,14 @@
 
     <!-- Sticky Mobile CTA -->
     <div class="mobile-sticky-cta">
-      <a href="#booking-form-section" class="btn-primary">Book Appointment</a>
+      <a href="#booking-form-section" class="btn-primary" id="mobileStickyCtaBtn">Book Appointment</a>
     </div>
-  </main>
 
   <!-- FOOTER -->
 
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/tools-book.js" defer></script>
   <script src="assets/js/booking.js" defer></script>
-
-  <!-- Year update -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const yearEl = document.getElementById('year');
-      if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-      }
-    });
-  </script>
 
 <footer class="site-footer">
   <div class="footer-content">
