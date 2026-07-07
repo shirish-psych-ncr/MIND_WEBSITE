@@ -11,14 +11,14 @@ target/
 *.log
 *.tmp
 
+# Editors
+.vscode/
+.idea/
+
 # Environment
 .env
 .env.local
 *.env.*
-
-# Editors
-.vscode/
-.idea/
 
 # Python
 __pycache__/
@@ -26,10 +26,10 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
-env/
 venv/
 .venv/
-.ENV
+.venv.bak/
+.env.bak/
 
 # Node.js
 npm-debug.log*
@@ -39,13 +39,13 @@ yarn-error.log*
 # Compiled and binary files
 *.o
 *.obj
+*.exe
+*.dll
 *.so
 *.a
-*.dll
-*.exe
 *.out
 
-# OS generated files
+# OS specific
 .DS_Store
 Thumbs.db
 
@@ -53,13 +53,7 @@ Thumbs.db
 coverage/
 htmlcov/
 .coverage
-
-# Cache
-.cache/
-.mypy_cache/
-.pytest_cache/
-.nyc_output/
-istanbul.out
+*.coverage
 
 # Compression
 *.zip
@@ -80,4 +74,15 @@ istanbul.out
 *.Z
 *.lz
 *.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+
+# Cache directories
+.mypy_cache/
+.pytest_cache/
+.gradle/
+.julia/
+zig-cache/
 ```
