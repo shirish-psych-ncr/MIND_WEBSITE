@@ -119,16 +119,16 @@
 
 /* Card content styling for white cards */
 .card h3 {
-  color: #1e3a5f;
+  color: #0f172a;
   font-family: 'Playfair Display', serif;
   font-size: var(--fs-h3);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: var(--space-md);
   line-height: var(--lh-tight);
 }
 
 .card p {
-  color: #4a5568;
+  color: #334155;
   font-size: var(--fs-body);
   line-height: var(--lh-relaxed);
   margin-bottom: var(--space-lg);
@@ -137,7 +137,7 @@
 .card-link {
   color: #671B50;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
