@@ -1,10 +1,11 @@
-# Components Specification v2.0
+# Components Specification v4.0
 ## Mind Grace Neuropsychiatric Clinic - UI Component Library
 
-**Source of Truth:** `index.html`, `about.html`, `doctor.html`, `location.html`  
-**Component File:** `/workspace/components/nav-footer.html`  
+**Source of Truth:** All 52 HTML pages verified  
+**Component Files:** `/assets/components/*` (header, footer, nav-panel, library-stack)  
 **Last Updated:** 2025-07-02  
-**Status:** Production Ready (Calm Editorial Design)
+**Status:** Production Ready (Calm Editorial Design)  
+**Total Components:** 4 core + 6 interactive tools
 
 ---
 

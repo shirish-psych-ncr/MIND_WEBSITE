@@ -1,5 +1,6 @@
-# TOOL_SPEC [v3.0]
+# TOOL_SPEC [v5.0]
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Update:** Auto(post-turn)
+**Last Sync:** 2025-12-07 | **Total Tools:** 8 (6 interactive + 2 utility)
 
 ## 1. THERAPEUTIC_TOOLS (7 interactive modules - Extracted & Modularized)
 
