@@ -1,98 +1,39 @@
 <!DOCTYPE html>
-<HTML LANG="en-IN" DIR="ltr">
-  <HEAD>
-  <BASE href="/MIND_WEBSITE/"/>
-    <META charset="utf-8" />
-    <META name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <LINK rel="canonical" href="https://mindgracencr.in/book.html"/>
-
-    <TITLE>Book Appointment | Mind Grace Neuropsychiatric Clinic</TITLE>
-    <META name="description" content="Request a psychiatric or child development appointment in Greater Noida. Share only basic details, choose a preferred time, and continue by WhatsApp, email, or phone." />
-    <META name="keywords" content="book appointment, psychiatrist consultation, psychologist booking, mental health clinic NCR, therapy session, Mind Grace Clinic" />
+<html lang="en-IN" dir="ltr">
+<head>
+  <base href="/MIND_WEBSITE/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="canonical" href="https://mindgracencr.in/book.html">
+  
+  <title>Start Your Journey | Mind Grace Neuropsychiatric Clinic</title>
+  <meta name="description" content="Confidential, empathetic care for your mental health. Request a psychiatric or child development appointment in Greater Noida." />
+  <meta name="keywords" content="book appointment, psychiatrist consultation, psychologist booking, mental health clinic NCR, therapy session, Mind Grace Clinic" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mindgracencr.in/book.html">
+  <meta property="og:title" content="Start Your Journey | Mind Grace Neuropsychiatric Clinic">
+  <meta property="og:description" content="Confidential, empathetic care for your mental health. Taking the first step is the most important one.">
+  <meta property="og:image" content="https://mindgracencr.in/assets/images/booking-hero.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"/>
+  <link rel="stylesheet" href="assets/css/base.css"/>
+  <link rel="stylesheet" href="assets/css/layout.css"/>
+  <link rel="stylesheet" href="assets/css/components.css"/>
+  <link rel="stylesheet" href="assets/css/utilities.css"/>
+  <link rel="stylesheet" href="assets/css/animations.css"/>
+  <link rel="stylesheet" href="assets/css-tools/tools-book.css"/>
+  
+  <style>
+    :root { --primary: #e84393; --surface-alt: #fff5f7; }
     
-    <!-- Open Graph / Social Media -->
-    <META property="og:type" content="website">
-    <META property="og:url" content="https://mindgracencr.in/book.html">
-    <META property="og:title" content="Book Appointment | Mind Grace Neuropsychiatric Clinic">
-    <META property="og:description" content="Request a psychiatric or child development appointment in Greater Noida.">
-    <META property="og:image" content="https://mindgracencr.in/assets/images/booking-hero.jpg">
-    <META property="twitter:card" content="summary_large_image">
-    <LINK rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"/>
-    <LINK rel="stylesheet" href="assets/css/base.css"/>
-    <LINK rel="stylesheet" href="assets/css/layout.css"/>
-    <LINK rel="stylesheet" href="assets/css/components.css"/>
-    <LINK rel="stylesheet" href="assets/css/utilities.css"/>
-    <LINK rel="stylesheet" href="assets/css/animations.css"/>
-    <LINK rel="stylesheet" href="assets/css-tools/tools-book.css"/>
-    
-    <style>
-      .hidden { display: none !important; }
-      html { scroll-behavior: smooth; }
-      [data-booking-form-wrap].loading::after {
-        content: "Loading form…";
-        display: block;
-        text-align: center;
-        padding: 2rem;
-        color: #666;
-      }
-      .iframe-container {
-        width: 100%;
-        max-height: 75vh;
-        min-height: 450px;
-        border: 1px solid rgba(0,0,0,0.1);
-        border-radius: 12px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        background: #fff;
-        scrollbar-gutter: stable both-edges;
-        padding-bottom: 4px;
-        box-sizing: border-box;
-      }
-      .iframe-container iframe {
-        width: 100%;
-        height: 3200px;
-        min-height: 3200px;
-        display: block;
-        border: none;
-        margin: 0;
-        padding: 0;
-      }
-      .iframe-container::-webkit-scrollbar {
-        width: 10px;
-      }
-      .iframe-container::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 5px;
-      }
-      .iframe-container::-webkit-scrollbar-thumb {
-        background: #c1c1c1;
-        border-radius: 5px;
-      }
-      .iframe-container::-webkit-scrollbar-thumb:hover {
-        background: #a1a1a1;
-      }
-      @media (max-width: 768px) {
-        .iframe-container {
-          max-height: 70vh;
-          min-height: 400px;
-          border-radius: 8px;
-          padding-bottom: 8px;
-        }
-        .iframe-container iframe {
-          height: 3400px;
-          min-height: 3400px;
-        }
-      }
-      [data-booking-form-wrap]:not(.hidden) {
-        animation: fadeIn 0.3s ease-out;
-      }
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(8px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-    </style>
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+  </style>
 
-    <SCRIPT type="application/ld+json">
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
@@ -117,10 +58,16 @@
           }
         ]
       }
-    </SCRIPT>
-  </HEAD>
-  <BODY>
-<header class="site-header" >
+    </script>
+  </head>
+  <body>
+
+<!-- Emergency Banner -->
+<div class="emergency-banner">
+  In a crisis? <a href="emergency.html">Get immediate help here</a>.
+</div>
+
+<header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
         <img src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
@@ -229,7 +176,7 @@
             <h1>Book a Confidential Consultation</h1>
             <p class="hero-lead">Share only basic details to request an appointment. Choose your preferred time and continue securely via WhatsApp, email, or phone.</p>
             <div class="hero-cta">
-              <a href="#booking-section" class="btn btn-primary" onclick="document.getElementById('qualifications').classList.add('hidden'); document.getElementById('booking-form-section').classList.remove('hidden'); return false;">Start Booking</a>
+              <button type="button" id="heroStartBooking" class="btn btn-primary">Start Booking</button>
               <a href="tel:+919667863295" class="btn btn-outline">Call Now</a>
             </div>
           </div>
@@ -278,11 +225,14 @@
             <h2>Request Your Appointment</h2>
             <p>Fill out the secure form below. After submitting, you'll receive confirmation via your preferred contact method.</p>
             
-            <div class="iframe-container">
+            <div class="form-wrapper">
               <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfr5yRtw_iWqw6rnigQ-pgw86Q_6ipIScgzS5lqf0DIdpF0ag/viewform?embedded=true" title="Appointment Booking Form" loading="lazy" referrerpolicy="no-referrer">
-                Loading…
+                Loading secure form…
               </iframe>
             </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); text-align: center;">
+              🔒 Your information is encrypted and treated with strict medical confidentiality.
+            </p>
 
             <div class="card" style="margin-top: 2rem; background: var(--surface-alt);">
               <h3>What happens next?</h3>
@@ -376,20 +326,29 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- Sticky Mobile CTA -->
+    <div class="mobile-sticky-cta">
+      <a href="#booking-form-section" class="btn-primary">Book Appointment</a>
+    </div>
+  </main>
 
-    <SCRIPT src="assets/js/main.js" defer></SCRIPT>
-    <SCRIPT src="assets/js/tools-book.js" defer></SCRIPT>
+  <!-- FOOTER -->
 
-<!-- Year Update Script -->
-<SCRIPT defer>
-  if (document.getElementById('year')) {
-    document.getElementById('year').textContent = new Date().getFullYear();
-  }
-</SCRIPT>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/tools-book.js" defer></script>
+  <script src="assets/js/booking.js" defer></script>
 
+  <!-- Year update -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
 
-<footer class="site-footer" >
+<footer class="site-footer">
   <div class="footer-content">
     <div class="footer-column">
       <h3>Patient Care</h3>
@@ -430,10 +389,8 @@
   </div>
 </footer>
 
-<!-- Remove duplicate year script - already added above -->
-
-  <!-- MIND GRACE LIBRARY STACK --></SCRIPT>
+  <!-- MIND GRACE LIBRARY STACK -->
   <!-- END LIBRARY STACK -->
 
-</BODY>
-</HTML>
+</body>
+</html>
