@@ -757,3 +757,111 @@ svg[aria-hidden="true"] {
   line-height: var(--lh-relaxed);
   color: var(--text-muted);
 }
+
+/* --- Emergency & Safety Banner --- */
+.emergency-banner {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #fecaca;
+  font-weight: 500;
+}
+
+.emergency-banner a {
+  color: #b91c1c;
+  text-decoration: underline;
+}
+
+.emergency-banner a:hover,
+.emergency-banner a:focus {
+  color: #7f1d1d;
+  text-decoration: none;
+}
+
+/* --- Responsive Iframe Wrapper --- */
+.form-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 150%; /* Maintains aspect ratio */
+  background: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e1e4e8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Skeleton Loading Message */
+.form-wrapper::before {
+  content: "Loading secure form...";
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #6b7280;
+  font-family: 'Inter', sans-serif;
+  z-index: 1;
+}
+
+.form-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 2;
+  background: white;
+}
+
+/* --- Sticky Mobile CTA --- */
+.mobile-sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
+  z-index: 999;
+  text-align: center;
+}
+
+.mobile-sticky-cta .btn-primary {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-cta { 
+    display: block; 
+  }
+  
+  .form-wrapper { 
+    padding-bottom: 200%; /* Taller for mobile */
+  }
+}
+
+/* --- Utility Helpers --- */
+.hidden { 
+  display: none !important; 
+}
+
+.text-center { 
+  text-align: center; 
+}
+
+.confidentiality-note {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
