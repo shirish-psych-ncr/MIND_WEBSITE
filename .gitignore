@@ -1,52 +1,55 @@
-```
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
-*.class
-*.exe
-*.dll
-*.so
-*.a
-*.out
+# Examples 1:
+# Input:
+# ### Added files:
+# [src/main.py, README.md, config.json]
+#
+# ### Deleted files:
+# [old/unused.py]
+# ### Modified files:
+# [utils.py]
+# ###current .gitignore Content
+# (empty)
+# Expected Output:
+# (empty — output nothing)
 
-# Dependencies
-.venv/
-venv/
-node_modules/
-.mypy_cache/
-.pytest_cache/
-target/
-.gradle/
+# Example 2 (Project with artifacts):
+# Input:
+# ### Added files:
+# [pycache/main.cpython-310.pyc, dist/app.js, .env.local, .vscode/settings.json
+#
+# ### Deleted files:
+#     []
+#
+# ### Modified files:
+# []
+# ### current .gitignore Content
+# *.log
+# Expected Output:
+#     #Compiled and build artifacts
+#     *.pyc
+#     pycache/
+#     *.o
+#     *.obj
+#     dist/
+#     build/
+#     #Dependencies
+#     .venv/
+#     venv/
+#     node_modules/
+#     #Logs and temp files
+#     *.log
+#     *.tmp
+#     *.swp
+#     #Environment
+#     .env
+#     .env.local
+#     .env.
+#     #Editors
+#     .vscode/
+#     .idea/
+#     #Original rules preserved
+#     *.log
 
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-*.swo
+# Since the provided input only contains HTML files (which are source/config files) and no build artifacts, dependencies, or temp files, the .gitignore should remain empty.
 
-# Environment variables
-.env
-.env.local
-*.env.*
-
-# Editors and IDEs
-.vscode/
-.idea/
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# Distribution / build artifacts
-dist/
-build/
-*.tar.gz
-*.zip
-```
+# Final reminder: Output ONLY the .gitignore content. If nothing should be ignored, output NOTHING.
