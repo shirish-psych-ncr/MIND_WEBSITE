@@ -1,13 +1,20 @@
-```markdown
-# Dependencies
-node_modules/
-__pycache__/
-*.egg-info/
-.venv/
-venv/
+```
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment files
 .env
 .env.local
 *.env.*
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.egg-info/
 
 # Build artifacts
 dist/
@@ -23,13 +30,7 @@ target/
 *.a
 *.out
 
-# Logs and temporary files
-*.log
-*.tmp
-*.swp
-*.swo
-
-# Editor/IDE files
+# Editors
 .vscode/
 .idea/
 *.swp
@@ -39,19 +40,10 @@ target/
 .DS_Store
 Thumbs.db
 
-# Coverage reports
+# Coverage
 coverage/
 htmlcov/
 .coverage
-
-# MyPy cache
-.mypy_cache/
-
-# Pytest cache
-.pytest_cache/
-
-# Gradle
-.gradle/
 
 # Compressed files
 *.zip

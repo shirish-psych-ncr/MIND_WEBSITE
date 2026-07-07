@@ -65,7 +65,7 @@
 |------|------|-------|---------|-----------|
 | Logo | Mind_Grace_Clinic_Logo_Pink.svg + 13 variants | 14 | ✓ LCP | assets.md §4 |
 | Doctor (Anita) | Dr_Anita_Sharma_Personal_Photo.jpg | 1 | ✓ LCP | assets.md §4 |
-| Doctor (Sana) | Placeholder: dark-user-profile.svg | 0 | ✗ | assets.md §4 (TODO: Add photo) |
+| Doctor (Sana) | Using placeholder SVG (no photo available) | 1 | ✗ | assets.md §4 - awaiting photo |
 | Location | Location_street_view_*.jpg (×2) | 2 | ✗ | assets.md §4 |
 | Interiors | mind-grace-*.jpg/webp (×4) | 4 | ✗ | assets.md §4 |
 | AASHA | aasha-*.jpg (×9) | 9 | ✗ | assets.md §4 |

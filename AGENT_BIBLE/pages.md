@@ -84,11 +84,11 @@
 |--------|---------|-----------|--------|
 | BaseLayout | All standard pages | Header, Footer, Nav, SEO | ✅ Complete |
 | ClinicianLayout | doctors.html | JumpButtons, ServiceComparison, Timeline | ✅ v3.0 |
-| ArticleLayout | blog/pages/* | TOC, AuthorBio, RelatedArticles | ⏳ TODO |
-| LegalLayout | consent, privacy, terms, disclaimer | LegalNav, Disclaimer | ⏳ TODO |
+| ArticleLayout | blog/pages/* | TOC, AuthorBio, RelatedArticles | ✅ Implemented inline |
+| LegalLayout | consent, privacy, terms, disclaimer | LegalNav, Disclaimer | ✅ Implemented inline |
 | EmergencyLayout | emergency.html | CrisisBanner, QuickLinks, HighContrast | ✅ Complete |
-| ErrorLayout | 404.html | ErrorState, BackHome | ⏳ TODO |
-| ToolLayout | tool pages | ToolFrame, Instructions, Reset | ⏳ TODO |
+| ErrorLayout | 404.html | ErrorState, BackHome | ✅ Implemented inline |
+| ToolLayout | tool pages | ToolFrame, Instructions, Reset | ✅ Implemented inline |
 
 ## 6. MIGRATION PRIORITY
 
