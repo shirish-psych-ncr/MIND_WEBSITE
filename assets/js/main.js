@@ -323,3 +323,68 @@ document.addEventListener('DOMContentLoaded', () => {
       yearEl.textContent = new Date().getFullYear();
     }
   }
+
+// ==========================================
+// 9. Scroll Progress Bar
+// ==========================================
+function initScrollProgress() {
+  const progressBar = document.querySelector('.scroll-progress');
+  if (!progressBar) return;
+
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  const updateProgress = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = Math.min(scrollPercent, 100) + '%';
+    lastScrollY = scrollTop;
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateProgress);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Initial call
+  updateProgress();
+}
+
+// ==========================================
+// 10. Enhanced Smooth Scroll with Offset
+// ==========================================
+function initSmoothScroll() {
+  const header = document.querySelector('.site-header');
+  const headerHeight = header ? header.offsetHeight : 0;
+  
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+      
+      e.preventDefault();
+      
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Update URL hash without jumping
+      history.pushState(null, null, targetId);
+      
+      // Set focus for accessibility
+      targetElement.setAttribute('tabindex', '-1');
+      targetElement.focus({ preventScroll: true });
+    });
+  });
+}

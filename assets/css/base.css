@@ -56,6 +56,13 @@
   --success: #28A745;
   --warning: #FFC107;
   
+  /* Emergency Colors - High Contrast */
+  --emergency-bg: #fee2e2;
+  --emergency-text: #991b1b;
+  --emergency-border: #fecaca;
+  --emergency-link: #b91c1c;
+  --emergency-pulse: #ef4444;
+  
   /* Shadows */
   --shadow-xs: 0 2px 8px rgba(103, 27, 80, 0.06);
   --shadow-sm: 0 4px 16px rgba(103, 27, 80, 0.08);
@@ -145,6 +152,32 @@
   .site-header, .site-footer {
     border-top: 2px solid CanvasText;
     border-bottom: 2px solid CanvasText;
+  }
+  
+  /* Emergency banner high contrast */
+  .emergency-banner {
+    background: Canvas !important;
+    color: CanvasText !important;
+    border: 2px solid CanvasText !important;
+  }
+}
+
+/* Orientation handling - Force content readability */
+@media (orientation: landscape) and (max-height: 500px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .site-header nav ul {
+    flex-wrap: wrap;
+  }
+  
+  .hero {
+    padding: var(--space-md);
+  }
+  
+  .hero h1 {
+    font-size: var(--fs-h3);
   }
 }
 

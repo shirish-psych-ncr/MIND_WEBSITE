@@ -89,9 +89,38 @@
   <LINK rel="preload" as="image" href="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp" imagesrcset="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp 800w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high"/>
 </HEAD>
 <BODY>
-  <!-- EMERGENCY BANNER -->
-  <div class="emergency-banner">
-    In a crisis? <a href="emergency.html">Get immediate help here</a>.
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+  
+  <!-- EMERGENCY BANNER WITH MARQUEE -->
+  <div class="emergency-banner" role="alert" aria-label="Emergency crisis support information">
+    <div class="emergency-banner__marquee">
+      <div class="emergency-banner__inner" aria-hidden="true">
+        <span class="emergency-banner__message">
+          <span class="emergency-indicator" aria-hidden="true"></span>
+          In a crisis? Get immediate help now.
+        </span>
+        <span class="emergency-banner__message">
+          <span class="emergency-indicator" aria-hidden="true"></span>
+          <a href="emergency.html">Click here for emergency resources</a>
+        </span>
+        <span class="emergency-banner__message">
+          <span class="emergency-indicator" aria-hidden="true"></span>
+          Call emergency services if in immediate danger.
+        </span>
+        <span class="emergency-banner__message">
+          <span class="emergency-indicator" aria-hidden="true"></span>
+          <a href="emergency.html">Get immediate help here</a>
+        </span>
+      </div>
+    </div>
+    <!-- Screen reader only static content -->
+    <div class="visually-hidden">
+      In a crisis? Get immediate help. Call emergency services if in immediate danger. Visit our emergency page for resources.
+    </div>
   </div>
 
   <!-- SKIP LINK -->
