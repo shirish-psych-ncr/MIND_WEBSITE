@@ -27,12 +27,13 @@
 
 **Note:** 14 logo variants available (SVG, PNG, ICO, Base64, Black/White/Pink). Full inventory in /assets/images/.
 
-## 2. /assets/components/* (HTML Partials, 3 files)
+## 2. /assets/components/* (HTML Partials, 4 files)
 | File | Size | Purpose | Usage |
 |---|---|---|---|
 | header.html | 1.6KB | Site header with logo & nav | Injected via JS or server-side |
 | footer.html | 1.6KB | Site footer with links & contact | Injected via JS or server-side |
-| navigation.html | 2.2KB | Mobile popup navigation | Used in index.html, all pages |
+| nav-panel.html | 2.0KB | Mobile popup navigation | Injected via JS or server-side |
+| library-stack.html | 1.5KB | Complete JS library stack (20 libs) | Included on all 46 HTML pages |
 
 ## 3. CSS_CORE (/assets/css/*, 5 modular files, ~40KB) → See design.md §8
 | File | Size | Purpose | Layer |
@@ -70,30 +71,31 @@
 | blog-config-child.js | 1.1KB | Child blog config | client:idle |
 | blog-discovery.js | - | Blog discovery logic | client:idle |
 
-## 6. JS_LIBRARIES (/assets/js/lib/*, 21 libraries, ~1.5MB) → See tools.md §7
+## 6. JS_LIBRARIES (/assets/js/lib/*, 20 libraries, ~1.0MB) → See tools.md §7
 | Library | File | Size | Purpose | Use Case |
 |---|---|---|---|---|
+| Motion One | motion.min.js | 24KB | Native Web Animations API | Complex animations, timelines |
+| Anime.js | anime.min.js | 17KB | SVG/chaining animations | Advanced animation sequences |
 | AutoAnimate | autoanimate.min.js | 23KB | Zero-config list animations | List reordering, insertions |
-| Canvas-Confetti | confetti.min.js | 25KB | Celebration animations | Success states, achievements |
 | ScrollReveal | scrollreveal.min.js | 45KB | Scroll-triggered animations | On-screen element detection |
+| Canvas-Confetti | confetti.min.js | 25KB | Celebration animations | Success states, achievements |
 | Splide | splide.min.js | 30KB | Accessible carousel/slider | Image galleries, testimonials |
 | Floating UI | floating-ui.core.min.js | 12KB | Tooltip/popover positioning | Dropdowns, tooltips |
-| Ky | ky.min.js | 1.2KB | Fetch API wrapper | AJAX with retries/timeouts |
-| Motion One | motion.min.js | 515KB | Web Animations API wrapper | Complex animations, timelines |
-| Anime.js | anime.min.js | 116KB | SVG/chaining animations | Advanced animation sequences |
-| Alpine.js | alpine.min.js | 46KB | Declarative HTML interactivity | Reactive state without build step |
+| Alpine.js | alpine.min.js | 45KB | Declarative HTML interactivity | Reactive state without build step |
 | Petite-Vue | petite-vue.min.js | 17KB | Vue subset for static pages | Progressive enhancement |
-| Preact Signals | preact-signals.min.js | 4.6KB | Reactive state tracking | Standalone reactive state |
-| htmx | htmx.min.js | 1.6KB | AJAX via HTML attributes | Server-driven interactions |
-| Swup | swup.min.js | 25KB | Page transition engine | SPA-like page transitions |
-| Quicklink | quicklink.min.js | 5.3KB | Viewport link prefetching | Instant page loads |
+| Preact Signals | preact-signals.min.js | 3.2KB | Reactive state tracking | Standalone reactive state |
+| htmx | htmx.min.js | 51KB | AJAX via HTML attributes | Server-driven interactions |
+| Ky | ky.min.js | 1.2KB | Fetch API wrapper | AJAX with retries/timeouts |
+| Swup | swup.min.js | 22KB | Page transition engine | SPA-like page transitions |
+| Quicklink | quicklink.min.js | 3.7KB | Viewport link prefetching | Instant page loads |
 | Navigo | navigo.min.js | 12KB | Client-side router | Lightweight routing |
-| Iconify | iconify.min.js | 22KB | On-demand icon fetching | Dynamic icon loading |
-| Fuse.js | fuse.min.js | 26KB | Fuzzy search library | Client-side search/indexing |
-| Nano ID | nanoid.min.js | 1.4KB | Unique ID generator | Secure ID generation |
-| Lucide Icons | lucide.min.js | 402KB | Stroke icon set | Customizable icons |
+| Iconify | iconify.min.js | 26KB | On-demand icon fetching | Dynamic icon loading |
+| Lucide Icons | lucide.min.js | 358KB | Stroke icon set | Customizable icons |
+| Nano ID | nanoid.min.js | 1KB | Unique ID generator | Secure ID generation |
+| Fuse.js | fuse.min.js | 24KB | Fuzzy search library | Client-side search/indexing |
+| Motion-One (alt) | motion-one.min.js | 25KB | Web Animations API | Alternative animation lib |
 
-**Note:** Motion One (motion.min.js) is the full development build (515KB). For production, consider using the minified version or Motion One's smaller builds.
+**Note:** All libraries loaded with `defer` attribute. Module-based libs (petite-vue, swup, nanoid) use `type="module"`. Libraries injected into all 46 HTML pages via library-stack.html component. Stack includes: Motion One, Anime.js, AutoAnimate, ScrollReveal, Confetti, Splide, Floating UI, Alpine.js, Petite-Vue, Preact Signals, htmx, Ky, Swup, Quicklink, Navigo, Iconify, Lucide, Nano ID, Fuse.js.
 
 ## 7. OPTIMIZATION_QUEUE (Pending, memory.md §QUEUE P2)
 - [ ] Convert PNG→WebP (logo, brochures, diagrams) - Est. 60% reduction
