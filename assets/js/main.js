@@ -390,21 +390,28 @@ function initSmoothScroll() {
 }
 
 // ==========================================
-// 11. Orientation Monitor for Mobile
+// 11. Orientation Adaptive Handler (No Warning, CSS-Only)
 // ==========================================
-function initOrientationMonitor() {
-  const warning = document.querySelector('.orientation-warning');
-  if (!warning) return;
+function initOrientationAdapter() {
+  const adapter = document.getElementById('orientation-adapter');
+  if (!adapter) return;
 
   const mediaQuery = window.matchMedia('(orientation: landscape) and (max-height: 500px)');
-  
+
   const handleOrientationChange = (e) => {
+    // Dispatch custom event for CSS to listen to via JS hooks if needed
+    const event = new CustomEvent('orientationchange', { 
+      detail: { isLandscape: e.matches } 
+    });
+    window.dispatchEvent(event);
+    
+    // Add/remove class on body for CSS selectors
     if (e.matches) {
-      warning.classList.add('is-active', 'is-mobile-landscape');
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('is-landscape-mobile');
+      document.body.classList.remove('is-portrait-mobile');
     } else {
-      warning.classList.remove('is-active', 'is-mobile-landscape');
-      document.body.style.overflow = '';
+      document.body.classList.add('is-portrait-mobile');
+      document.body.classList.remove('is-landscape-mobile');
     }
   };
 

@@ -87,13 +87,15 @@
   
   <!-- Preload LCP image -->
   <LINK rel="preload" as="image" href="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp" imagesrcset="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp 800w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high"/>
+  <!-- Orientation Adaptive Handler -->
+  <div id="orientation-adapter" aria-hidden="true" style="display:none;"></div>
+
+  <!-- Network Status Toast -->
+  <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
 </HEAD>
 <BODY>
   <!-- Skip Link for Accessibility -->
   <!-- Orientation Warning for Mobile Landscape -->
-  <div class="orientation-warning" role="alert" aria-live="assertive">
-    <div class="orientation-warning-content">
-      <div class="orientation-warning-icon">📱</div>
       <h2>Please Rotate Your Device</h2>
       <p>For the best experience, please use portrait orientation on mobile devices.</p>
     </div>
