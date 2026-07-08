@@ -55,7 +55,11 @@
 
   <!-- Network Status Toast -->
   <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="dns-prefetch" href="//mindgracencr.in"/>
+  <link rel="dns-prefetch" href="//wa.me"/>
+</head>
   <body>
 
   <!-- EMERGENCY BANNER WITH MARQUEE -->
@@ -89,7 +93,7 @@
 <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
-        <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
+        <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/ fetchpriority="high">
         <div>
           <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
           <div class="logo-tagline">Where You Come First</div>
@@ -209,7 +213,7 @@
             </div>
           </div>
           <div class="hero-media">
-            <img src="assets/images/booking-hero.jpg" alt="Book appointment at Mind Grace Neuropsychiatric Clinic" width="1200" height="1600" loading="lazy" />
+            <img src="assets/images/booking-hero.jpg" alt="Book appointment at Mind Grace Neuropsychiatric Clinic" width="1200" height="1600" loading="lazy" / decoding="async">
           </div>
         </div>
       </section>
@@ -361,9 +365,9 @@
 
   <!-- FOOTER -->
 
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/tools-book.js" defer></script>
-  <script src="assets/js/booking.js" defer></script>
+  <script src="assets/js/main.js" defer type="module"></script>
+  <script src="assets/js/tools-book.js" defer type="module"></script>
+  <script src="assets/js/booking.js" defer type="module"></script>
 
 <footer class="site-footer">
   <div class="footer-content">

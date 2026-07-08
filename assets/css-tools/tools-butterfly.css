@@ -25,25 +25,7 @@ canvas { position: absolute; inset: 0; z-index: 1; }
 #trail-canvas { z-index: 1; }
 #ui-canvas { z-index: 2; pointer-events: none; }
 
-/* --- 1. ORIENTATION GUARD --- */
-#orientation-guard {
-    position: fixed; inset: 0; background: var(--bg); z-index: 2000;
-    display: none; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center; padding: 20px;
-}
-.phone-icon {
-    width: 50px; height: 90px; border: 2px solid var(--cyan); border-radius: 8px;
-    margin-bottom: 20px;
-    animation: rotatePhone 2s infinite ease-in-out;
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
-}
-@keyframes rotatePhone {
-    0% { transform: rotate(0deg); opacity: 0.5; }
-    50% { transform: rotate(-90deg); opacity: 1; }
-    100% { transform: rotate(-90deg); opacity: 0.5; }
-}
-
-/* --- 2. HRV BREATHING BACKGROUND --- */
+/* --- 1. HRV BREATHING BACKGROUND --- */
 body::before {
     content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
     background: radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, transparent 70%);
@@ -104,11 +86,6 @@ body::before {
 #supernova {
     position: fixed; inset: 0; background: white; z-index: 3000;
     opacity: 0; pointer-events: none; transition: opacity 0.8s ease-out;
-}
-
-/* --- PORTRAIT LOCK --- */
-@media (orientation: portrait) {
-    #orientation-guard { display: flex; }
 }
 
 .tool-link-bar {

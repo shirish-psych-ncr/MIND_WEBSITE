@@ -414,15 +414,6 @@ select:focus-visible,
   outline-offset: 2px;
 }
 
-/* Orientation Warning Banner */
-
-.orientation-warning.is-active {
-  display: flex;
-}
-
-
-
-
 /* Network Status Toast - With safe area support */
 .network-status {
   position: fixed;
