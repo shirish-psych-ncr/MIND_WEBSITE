@@ -1,6 +1,7 @@
 /* ============================================
    COMPONENTS.CSS - Reusable UI Components
    Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
+   Phase 3: Advanced Adaptability & Cutting-Edge CSS
    ============================================ */
 
 /* --- 1. CARD SYSTEM (The Foundation) - Editorial Style --- */
@@ -16,6 +17,20 @@
   color: var(--text-body);
   content-visibility: auto;
   contain-intrinsic-size: 0 300px;
+  /* Prevent layout shift on hover */
+  will-change: transform;
+  /* Ensure proper touch target spacing */
+  margin-block-start: var(--space-md);
+}
+
+/* Scoped card interactions using @scope (Chrome 117+) */
+@scope (.card-grid) {
+  :scope > .card:nth-child(odd) {
+    margin-inline-end: var(--space-lg);
+  }
+  :scope > .card:nth-child(even) {
+    margin-inline-start: var(--space-lg);
+  }
 }
 
 .card:hover {
@@ -28,12 +43,14 @@
 .card-elevated { box-shadow: var(--shadow-md); border: none; }
 .card-outlined { background: transparent; border: 2px solid rgba(103, 27, 80, 0.2); box-shadow: none; }
 
-/* --- 2. GRID SYSTEMS --- */
+/* --- 2. GRID SYSTEMS - Container Query Responsive --- */
 .grid-container {
   display: grid;
   gap: clamp(1.5rem, 3vw, 2.5rem);
   width: var(--content);
   margin: 0 auto;
+  container-type: inline-size;
+  container-name: main-grid;
 }
 
 .services-grid, .features-grid, .gallery-grid, .testimonials-grid, .condition-list {
@@ -42,9 +59,28 @@
   gap: clamp(1.5rem, 3vw, 2.5rem);
   width: var(--content);
   margin: 0 auto;
+  container-type: inline-size;
+  container-name: component-grid;
 }
 
-/* --- 3. BADGES & LABELS --- */
+/* Container Query Adaptations */
+@container main-grid (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@container component-grid (max-width: 650px) {
+  .services-grid, 
+  .features-grid, 
+  .gallery-grid, 
+  .testimonials-grid, 
+  .condition-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- 3. BADGES & LABELS - Touch-Accessible --- */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -53,6 +89,32 @@
   border-radius: var(--radius-pill);
   font-size: var(--fs-small);
   font-weight: 600;
+  /* Ensure minimum touch target */
+  min-height: max(44px, 1em * var(--lh-base));
+}
+
+/* Interactive badges with proper hover/pointer support */
+@media (hover: hover) and (pointer: fine) {
+  .badge[role="button"], 
+  .badge[tabindex="0"] {
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  
+  .badge[role="button"]:hover,
+  .badge[tabindex="0"]:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+/* Coarse pointer: larger tap targets */
+@media (pointer: coarse) {
+  .badge[role="button"],
+  .badge[tabindex="0"] {
+    padding-inline: var(--space-lg);
+    min-height: 48px;
+  }
 }
 
 .badge-primary {
@@ -200,12 +262,16 @@ svg[aria-hidden="true"] {
   stroke-width: 1.5;
 }
 
-/* --- 6. INTERACTIVE & FORM COMPONENTS --- */
+/* --- 6. INTERACTIVE & FORM COMPONENTS - Enhanced Accessibility --- */
 .contact-form, .notice-box {
   background: var(--white);
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
+  /* Improve focus visibility within forms */
+  &:has(:focus-visible) {
+    box-shadow: var(--shadow-md), 0 0 0 3px rgba(103, 27, 80, 0.2);
+  }
 }
 
 .form-group input, .form-group textarea {
@@ -213,6 +279,35 @@ svg[aria-hidden="true"] {
   padding: var(--space-sm) var(--space-md);
   border: 1px solid var(--support);
   border-radius: var(--radius-md);
+  /* Ensure minimum touch target height */
+  min-height: 48px;
+  /* Logical properties for RTL support */
+  padding-inline: var(--space-md);
+  padding-block: var(--space-sm);
+}
+
+/* Focus visible styling for form inputs */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--primary);
+}
+
+/* Reduced data mode: simplify form appearance */
+@media (prefers-reduced-data: reduce) {
+  .contact-form, 
+  .notice-box {
+    background: var(--white);
+    box-shadow: none;
+    border: 2px solid var(--warm-gray);
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    background: var(--white);
+    border: 2px solid var(--text-muted);
+  }
 }
 
 .iframe-container {
@@ -224,9 +319,18 @@ svg[aria-hidden="true"] {
   padding-bottom: 4px;
 }
 
-/* --- 7. ACCORDION - Accessible focus states --- */
-.accordion { display: grid; gap: var(--space-md); }
-.accordion-item { background: var(--white); border-radius: var(--radius-md); overflow: hidden; }
+/* --- 7. ACCORDION - Accessible focus states & Anchor Positioning --- */
+.accordion { 
+  display: grid; 
+  gap: var(--space-md); 
+}
+
+.accordion-item { 
+  background: var(--white); 
+  border-radius: var(--radius-md); 
+  overflow: hidden; 
+}
+
 .accordion-trigger {
   width: 100%;
   display: flex;
@@ -237,6 +341,10 @@ svg[aria-hidden="true"] {
   background: none;
   text-align: left;
   border-radius: var(--radius-md);
+  /* Ensure minimum touch target */
+  min-height: 48px;
+  /* Anchor positioning for tooltips (Chrome 125+) */
+  anchor-name: --accordion-trigger;
 }
 
 /* Focus visible for accordion triggers */
@@ -245,8 +353,43 @@ svg[aria-hidden="true"] {
   outline-offset: -2px;
 }
 
-/* --- 8. ANIMATIONS & EFFECTS --- */
-.float { animation: float 3s ease-in-out infinite; }
+/* Anchor-positioned tooltip for accordion (progressive enhancement) */
+@supports (anchor-name: --test) {
+  .accordion-trigger::before {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: anchor(top);
+    left: anchor(center);
+    translate: -50% calc(-100% - var(--space-sm));
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--text-dark);
+    color: var(--white);
+    font-size: var(--fs-tiny);
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-fast);
+  }
+  
+  .accordion-trigger:hover::before,
+  .accordion-trigger:focus-visible::before {
+    opacity: 1;
+  }
+}
+
+/* Coarse pointer: disable hover tooltips */
+@media (pointer: coarse) {
+  .accordion-trigger::before {
+    display: none;
+  }
+}
+
+/* --- 8. ANIMATIONS & EFFECTS - Vestibular-Safe --- */
+.float { 
+  animation: float 3s ease-in-out infinite; 
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -258,13 +401,33 @@ svg[aria-hidden="true"] {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Reduced transparency: remove glassmorphism */
+@media (prefers-reduced-transparency: reduce) {
+  .glass {
+    background: var(--white);
+    backdrop-filter: none;
+    border: 1px solid var(--warm-gray);
+  }
+}
+
 .text-gradient {
   background: linear-gradient(135deg, var(--primary), var(--text-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* Fallback for browsers without background-clip */
+  color: var(--primary);
 }
 
-/* --- 9. TIMELINE (Process & Doctor) --- */
+/* High contrast mode: ensure gradient text remains readable */
+@media (prefers-contrast: more) {
+  .text-gradient {
+    background: none;
+    -webkit-text-fill-color: var(--primary);
+    color: var(--primary);
+  }
+}
+
+/* --- 9. TIMELINE (Process & Doctor) - Logical Properties --- */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -274,7 +437,9 @@ svg[aria-hidden="true"] {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 40px; top: 0; bottom: 0;
+  inset-inline-start: 40px; 
+  inset-block-start: 0; 
+  inset-block-end: 0;
   width: 2px;
   background: var(--blush);
 }
@@ -284,11 +449,14 @@ svg[aria-hidden="true"] {
   gap: var(--space-lg);
   margin-bottom: var(--space-xl);
   position: relative;
+  /* Logical properties for RTL */
+  flex-direction: row;
 }
 
 .step-number {
   flex-shrink: 0;
-  width: 48px; height: 48px;
+  width: 48px; 
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,14 +466,60 @@ svg[aria-hidden="true"] {
   color: var(--text-on-plum);
   z-index: 1;
   box-shadow: var(--shadow-sm);
+  /* Ensure touch target */
+  min-height: 48px;
+  min-width: 48px;
 }
 
-/* --- 10. RESPONSIVE OVERRIDES --- */
+/* RTL support: flip timeline direction */
+[dir="rtl"] .timeline::before {
+  inset-inline-start: auto;
+  inset-inline-end: 40px;
+}
+
+/* Container query for responsive timeline */
+@container (max-width: 600px) {
+  .timeline-item {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .timeline::before {
+    inset-inline-start: 24px;
+  }
+}
+
+/* --- 10. RESPONSIVE OVERRIDES - Logical Properties --- */
 @media (max-width: 768px) {
-  .grid-container, .services-grid, .condition-list { grid-template-columns: 1fr; }
-  .timeline::before { left: 28px; }
-  .iframe-container { max-height: 70vh; }
-  .step-number { width: 40px; height: 40px; }
+  .grid-container, .services-grid, .condition-list { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .timeline::before { 
+    inset-inline-start: 28px; 
+  }
+  
+  .iframe-container { 
+    max-height: 70vh; 
+  }
+  
+  .step-number { 
+    width: 40px; 
+    height: 40px; 
+  }
+}
+
+/* PWA display modes */
+@media all and (display-mode: standalone) {
+  .mobile-sticky-cta {
+    padding-block-end: env(safe-area-inset-bottom);
+  }
+}
+
+@media all and (display-mode: fullscreen) {
+  body {
+    padding-block-start: env(safe-area-inset-top);
+  }
 }
 
 /* --- 11. UTILITY BACKGROUNDS --- */

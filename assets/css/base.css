@@ -3,6 +3,7 @@
    Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
    Theme: 50% Light (#FFE0F6), 40% Dark (#671B50), 10% Other Colors
    PHASE 1 COMPLETE: Cascade layers, design tokens, fluid typography
+   PHASE 2: Enhanced adaptability, accessibility, modern CSS features
    ============================================ */
 
 /* CSS Cascade Layers for better specificity control */
@@ -18,6 +19,9 @@
 
 @layer base {
   :root {
+  /* Color Scheme Declaration - Auto light/dark support */
+  color-scheme: light dark;
+  
   /* Primary Colors - Editorial Warm Palette */
   --light-bg: #FCFAF7;         /* Warm ivory base */
   --bg-gradient-start: #FCFAF7;
@@ -115,6 +119,19 @@
   --transition-fast: 200ms ease;
   --transition-base: 300ms ease;
   --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Safe Area Insets - Notch/iPhone handling */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  
+  /* Dynamic Viewport Units fallback */
+  --dvh: 1dvh;
+  --dvw: 1dvw;
+  
+  /* Touch target minimum */
+  --touch-target: 48px;
 }
 
 /* Dark mode support with improved contrast */
@@ -162,6 +179,88 @@
   }
 }
 
+/* Reduced Transparency Support */
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --shadow-xs: 0 2px 8px rgba(103, 27, 80, 0.15);
+    --shadow-sm: 0 4px 16px rgba(103, 27, 80, 0.2);
+    --shadow-md: 0 8px 30px rgba(103, 27, 80, 0.25);
+    --shadow-lg: 0 12px 48px rgba(103, 27, 80, 0.3);
+    --shadow-xl: 0 20px 64px rgba(103, 27, 80, 0.35);
+    --shadow-float: 0 24px 80px rgba(103, 27, 80, 0.3);
+  }
+  
+  .site-header {
+    background: var(--light-bg);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  
+  .glass {
+    background: var(--white);
+    backdrop-filter: none;
+    border: 1px solid var(--support);
+  }
+}
+
+/* Increased Contrast Support */
+@media (prefers-contrast: more) {
+  :root {
+    --text-dark: #000000;
+    --text-body: #1a1a1a;
+    --text-muted: #333333;
+    --primary: #4a0f3a;
+    --accent: #c47a5a;
+  }
+  
+  .card {
+    border: 2px solid var(--primary);
+  }
+  
+  .btn {
+    border-width: 3px;
+  }
+}
+
+/* Reduced Data Mode */
+@media (prefers-reduced-data: reduce) {
+  body {
+    background: var(--light-bg);
+    background-image: none;
+  }
+  
+  .hero-image-wrapper::before {
+    display: none;
+  }
+}
+
+/* Monochrome/E-ink Display Support */
+@media (monochrome) {
+  :root {
+    --primary: #000000;
+    --accent: #333333;
+    --support: #666666;
+  }
+  
+  .card, .surface, .panel {
+    border: 2px solid currentColor;
+    box-shadow: none;
+  }
+  
+  .text-gradient {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
+}
+
+/* Wide Color Gamut Support (P3) */
+@media (color-gamut: p3) {
+  :root {
+    --primary: oklch(45% 0.12 340);
+    --accent: oklch(65% 0.15 35);
+  }
+}
+
 /* Orientation handling - Force content readability */
 
 html {
@@ -172,6 +271,8 @@ html {
   font-size: clamp(14px, 1.5vw, 18px);
   width: 100%;
   min-height: 100dvh;
+  /* Prevent horizontal scroll from overflow */
+  overflow-x: hidden;
 }
 
 body {
@@ -187,6 +288,9 @@ body {
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Safe area padding for notched devices */
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
 }
 
 /* Layout helpers */
@@ -319,15 +423,15 @@ select:focus-visible,
 
 
 
-/* Network Status Toast */
+/* Network Status Toast - With safe area support */
 .network-status {
   position: fixed;
-  bottom: -100px;
+  bottom: calc(-100px + var(--safe-bottom));
   left: 50%;
   transform: translateX(-50%);
   background: var(--text-dark);
   color: var(--white);
-  padding: 0.75rem 1.5rem;
+  padding: calc(0.75rem + var(--safe-bottom)) calc(1.5rem + var(--safe-left)) calc(0.75rem + var(--safe-bottom)) calc(1.5rem + var(--safe-right));
   border-radius: 50px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 9999;
@@ -335,56 +439,20 @@ select:focus-visible,
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  transition: bottom 0.3s ease;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
   opacity: 0;
+  /* Ensure minimum touch target */
+  min-height: var(--touch-target);
 }
 
 .network-status.is-online {
-  bottom: 20px;
+  bottom: calc(20px + var(--safe-bottom));
   opacity: 1;
   background: #059669;
 }
 
 .network-status.is-offline {
-  bottom: 20px;
-  opacity: 1;
-  background: #dc2626;
-}
-
-@media print {
-  .network-status {
-    display: none !important;
-  }
-}
-
-/* Network Status Toast */
-.network-status {
-  position: fixed;
-  bottom: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--text-dark);
-  color: var(--white);
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  transition: bottom 0.3s ease;
-  opacity: 0;
-}
-
-.network-status.is-online {
-  bottom: 20px;
-  opacity: 1;
-  background: #059669;
-}
-
-.network-status.is-offline {
-  bottom: 20px;
+  bottom: calc(20px + var(--safe-bottom));
   opacity: 1;
   background: #dc2626;
 }
@@ -516,4 +584,140 @@ select:focus-visible,
   .image-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* =========================================
+   POINTER & HOVER ADAPTABILITY
+   Prevents sticky hover on touch devices
+   ========================================= */
+
+/* Touch devices - enlarge hit targets */
+@media (pointer: coarse) {
+  .btn, .card-link, a, button {
+    min-height: var(--touch-target);
+    min-width: var(--touch-target);
+    padding: var(--space-md);
+  }
+  
+  /* Disable hover effects on touch-only devices */
+  .card:hover {
+    transform: none;
+  }
+  
+  .hero-image-wrapper:hover .hero-image {
+    transform: none;
+  }
+}
+
+/* Mouse/precise pointer devices */
+@media (pointer: fine) {
+  .btn, .card-link, a {
+    min-height: auto;
+    min-width: auto;
+  }
+}
+
+/* Hover capability detection */
+@media (hover: hover) {
+  .btn:hover,
+  .card-link:hover,
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+/* No hover capability (touch screens) */
+@media (hover: none) {
+  /* Remove hover-dependent styles */
+  .desktop-nav a:not(.cta-button):hover {
+    background: transparent;
+    border-color: transparent;
+  }
+}
+
+/* =========================================
+   PWA DISPLAY MODE SUPPORT
+   ========================================= */
+
+/* Standalone mode (installed PWA) */
+@media (display-mode: standalone) {
+  .site-header {
+    padding-top: var(--safe-top);
+  }
+  
+  /* Hide web-only elements */
+  .skip-link {
+    display: none;
+  }
+}
+
+/* Fullscreen mode */
+@media (display-mode: fullscreen) {
+  body {
+    padding-top: var(--safe-top);
+  }
+}
+
+/* Minimal UI mode */
+@media (display-mode: minimal-ui) {
+  .site-header {
+    padding-top: calc(var(--safe-top) + 20px);
+  }
+}
+
+/* =========================================
+   FOLDABLE & DUAL-SCREEN SUPPORT
+   ========================================= */
+
+/* Dual-screen/horizontal viewport segments */
+@media (horizontal-viewport-segments: 2) {
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .gallery-tour {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Spanning content across both screens */
+@media (spanning: fold-horizontal) {
+  .container {
+    padding-inline: calc(var(--space-lg) + env(viewport-segment-left 0 1, 0px));
+  }
+}
+
+/* =========================================
+   SCROLLBAR & LAYOUT STABILITY
+   ========================================= */
+
+/* Reserve space for scrollbars to prevent layout shift */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--warm-gray);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dark);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--warm-gray);
 }

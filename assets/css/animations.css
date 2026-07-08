@@ -1,7 +1,10 @@
 /* ============================================
    ANIMATIONS.CSS - Motion & Effects
    Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
+   PHASE 4 MODERNIZED: Scroll-driven animations, view-timeline, enhanced motion
    ============================================ */
+
+/* --- Core Keyframe Animations --- */
 
 /* Fade animations */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -39,7 +42,24 @@
 @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes rotateReverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
 
-/* Utility classes */
+/* Spin for loading states */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Wiggle */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+/* --- Animation Utility Classes --- */
+
 .animate-fade-in { animation: fadeIn 0.5s ease forwards; will-change: opacity; }
 .animate-fade-in-up { animation: fadeInUp 0.6s ease forwards; will-change: transform, opacity; }
 .animate-fade-in-down { animation: fadeInDown 0.6s ease forwards; will-change: transform, opacity; }
@@ -55,12 +75,17 @@
 .animate-slide-in-down { animation: slideInDown 0.6s ease forwards; will-change: transform, opacity; }
 .animate-slide-in-left { animation: slideInLeft 0.6s ease forwards; will-change: transform, opacity; }
 .animate-slide-in-right { animation: slideInRight 0.6s ease forwards; will-change: transform, opacity; }
+.animate-spin { animation: spin 1s linear infinite; }
+.animate-bounce { animation: bounce 1s ease-in-out infinite; }
+.animate-wiggle { animation: wiggle 0.5s ease-in-out; }
 
 /* Staggered animation delays */
 .stagger-1 { animation-delay: 0.1s; }
 .stagger-2 { animation-delay: 0.2s; }
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
 
 /* Animation durations */
 .duration-fast { animation-duration: 200ms; }
@@ -69,7 +94,14 @@
 .duration-slower { animation-duration: 800ms; }
 .duration-slowest { animation-duration: 1000ms; }
 
-/* Reveal on scroll */
+/* Animation timing functions */
+.timing-linear { animation-timing-function: linear; }
+.timing-ease { animation-timing-function: ease; }
+.timing-ease-in { animation-timing-function: ease-in; }
+.timing-ease-out { animation-timing-function: ease-out; }
+.timing-ease-in-out { animation-timing-function: ease-in-out; }
+
+/* Reveal on scroll (JS-enhanced fallback) */
 .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
 .reveal.active { opacity: 1; transform: translateY(0); }
 .reveal-from-left { opacity: 0; transform: translateX(-30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -84,12 +116,28 @@
 .hover-zoom-img img { transition: transform var(--transition-slow); }
 .hover-zoom-img:hover img { transform: scale(1.08); }
 
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/* GPU acceleration hints */
+.gpu-accelerated {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Pause animations on hover */
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
+/* Infinite animations */
+.animate-infinite {
+  animation-iteration-count: infinite;
+}
+
+/* Alternate direction */
+.animate-alternate {
+  animation-direction: alternate;
+}
+
+/* Reverse playback */
+.animate-reverse {
+  animation-direction: reverse;
 }
