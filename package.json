@@ -27,6 +27,10 @@
     "petite-vue": "^0.4.1",
     "preact": "^10.29.5",
     "quicklink": "^3.0.1",
-    "swup": "^4.9.2"
+    "swup": "^4.9.2",
+    "ui-ux-pro-max-cli": "^2.10.2"
+  },
+  "allowScripts": {
+    "chromedriver@150.0.1": true
   }
 }

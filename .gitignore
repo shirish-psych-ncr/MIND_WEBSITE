@@ -14,6 +14,7 @@ venv/
 node_modules/
 .julia/
 .zig-cache/
+.ts
 
 # Logs and temp files
 *.log
@@ -42,15 +43,12 @@ htmlcov/
 .coverage
 
 # Python specific
-*.pyc
-__pycache__/
-*.pyo
-*.pyd
-.Python
-*.so
-.coverage
-.pytest_cache/
 .mypy_cache/
+.pytest_cache/
+
+# Java/Gradle
+.gradle/
+*.class
 
 # Build outputs
 dist/

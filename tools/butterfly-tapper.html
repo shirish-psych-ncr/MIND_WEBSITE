@@ -23,6 +23,13 @@
   <a href="#main-content" class="skip-link">Skip to content</a>
   
   <!-- Orientation Warning -->
+  <div class="orientation-warning" role="alert" aria-live="assertive"><div class="orientation-warning-content"><div class="orientation-warning-icon">📱</div><h2>Please Rotate Your Device</h2><p>For the best experience, please use portrait orientation.</p></div></div>
+  
+  <!-- Network Status Toast -->
+  <div id="network-status" class="network-status" role="status" aria-live="polite" hidden>
+    <span class="network-status__icon" aria-hidden="true"></span>
+    <span class="network-status__text">You are offline. Some features may be unavailable.</span>
+  </div>
   
   <!-- EMERGENCY BANNER WITH MARQUEE -->
   <div class="emergency-banner" role="alert" aria-label="Emergency crisis support information">

@@ -551,7 +551,7 @@ function initSkipLink() {
 // ==========================================
 (function bootstrap() {
   try {
-    initOrientationAdapter();
+    initOrientationMonitor();
     initNetworkStatus();
     initOpenGraphMeta();
     initErrorBoundary();
