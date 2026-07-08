@@ -1,7 +1,28 @@
 /* ============================================
    UTILITIES.CSS - Helper Classes
    Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
+   PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
    ============================================ */
+
+/* --- CSS Custom Properties for Fluid Systems --- */
+:root {
+  /* Fluid spacing scale using clamp() */
+  --space-fluid-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+  --space-fluid-sm: clamp(0.5rem, 1vw, 1rem);
+  --space-fluid-md: clamp(1rem, 2vw, 1.5rem);
+  --space-fluid-lg: clamp(1.5rem, 3vw, 2.5rem);
+  --space-fluid-xl: clamp(2rem, 4vw, 4rem);
+  --space-fluid-2xl: clamp(3rem, 6vw, 6rem);
+  
+  /* Fluid typography scale */
+  --fluid-type-xs: clamp(0.75rem, 0.65rem + 0.5vw, 0.875rem);
+  --fluid-type-sm: clamp(0.875rem, 0.7rem + 0.8vw, 1rem);
+  --fluid-type-base: clamp(1rem, 0.85rem + 1vw, 1.125rem);
+  --fluid-type-lg: clamp(1.125rem, 1rem + 1.2vw, 1.5rem);
+  --fluid-type-xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --fluid-type-2xl: clamp(2rem, 1.5rem + 2vw, 3rem);
+  --fluid-type-3xl: clamp(3rem, 2rem + 3vw, 4.5rem);
+}
 
 /* --- Typography & Text --- */
 .text-center { text-align: center; }
@@ -22,6 +43,15 @@
 .fs-body    { font-size: var(--fs-body); }
 .fs-small   { font-size: var(--fs-small); }
 .fs-tiny    { font-size: var(--fs-tiny); }
+
+/* Fluid typography utilities */
+.fluid-text-xs  { font-size: var(--fluid-type-xs); }
+.fluid-text-sm  { font-size: var(--fluid-type-sm); }
+.fluid-text-base { font-size: var(--fluid-type-base); }
+.fluid-text-lg  { font-size: var(--fluid-type-lg); }
+.fluid-text-xl  { font-size: var(--fluid-type-xl); }
+.fluid-text-2xl { font-size: var(--fluid-type-2xl); }
+.fluid-text-3xl { font-size: var(--fluid-type-3xl); }
 
 .lh-tight   { line-height: var(--lh-tight); }
 .lh-base    { line-height: var(--lh-base); }
@@ -61,6 +91,14 @@
 .m-xl   { margin: var(--space-xl); }
 .m-2xl  { margin: var(--space-2xl); }
 
+/* Fluid spacing utilities */
+.m-fluid-xs  { margin: var(--space-fluid-xs); }
+.m-fluid-sm  { margin: var(--space-fluid-sm); }
+.m-fluid-md  { margin: var(--space-fluid-md); }
+.m-fluid-lg  { margin: var(--space-fluid-lg); }
+.m-fluid-xl  { margin: var(--space-fluid-xl); }
+.m-fluid-2xl { margin: var(--space-fluid-2xl); }
+
 .mt-0   { margin-top: 0; }
 .mt-xs  { margin-top: var(--space-xs); }
 .mt-sm  { margin-top: var(--space-sm); }
@@ -69,6 +107,14 @@
 .mt-xl  { margin-top: var(--space-xl); }
 .mt-2xl { margin-top: var(--space-2xl); }
 .mt-3xl { margin-top: var(--space-3xl); }
+
+/* Fluid margin-top */
+.mt-fluid-xs  { margin-top: var(--space-fluid-xs); }
+.mt-fluid-sm  { margin-top: var(--space-fluid-sm); }
+.mt-fluid-md  { margin-top: var(--space-fluid-md); }
+.mt-fluid-lg  { margin-top: var(--space-fluid-lg); }
+.mt-fluid-xl  { margin-top: var(--space-fluid-xl); }
+.mt-fluid-2xl { margin-top: var(--space-fluid-2xl); }
 
 .mb-0   { margin-bottom: 0; }
 .mb-xs  { margin-bottom: var(--space-xs); }
@@ -79,7 +125,20 @@
 .mb-2xl { margin-bottom: var(--space-2xl); }
 .mb-3xl { margin-bottom: var(--space-3xl); }
 
+/* Fluid margin-bottom */
+.mb-fluid-xs  { margin-bottom: var(--space-fluid-xs); }
+.mb-fluid-sm  { margin-bottom: var(--space-fluid-sm); }
+.mb-fluid-md  { margin-bottom: var(--space-fluid-md); }
+.mb-fluid-lg  { margin-bottom: var(--space-fluid-lg); }
+.mb-fluid-xl  { margin-bottom: var(--space-fluid-xl); }
+.mb-fluid-2xl { margin-bottom: var(--space-fluid-2xl); }
+
 .mx-auto { margin-inline: auto; }
+
+/* Logical property margins */
+.ms-auto { margin-inline-start: auto; }
+.me-auto { margin-inline-end: auto; }
+.my-auto { margin-block: auto; }
 
 .p-0    { padding: 0; }
 .p-xs   { padding: var(--space-xs); }
@@ -89,6 +148,14 @@
 .p-xl   { padding: var(--space-xl); }
 .p-2xl  { padding: var(--space-2xl); }
 
+/* Fluid padding utilities */
+.p-fluid-xs  { padding: var(--space-fluid-xs); }
+.p-fluid-sm  { padding: var(--space-fluid-sm); }
+.p-fluid-md  { padding: var(--space-fluid-md); }
+.p-fluid-lg  { padding: var(--space-fluid-lg); }
+.p-fluid-xl  { padding: var(--space-fluid-xl); }
+.p-fluid-2xl { padding: var(--space-fluid-2xl); }
+
 .py-xs  { padding-block: var(--space-xs); }
 .py-sm  { padding-block: var(--space-sm); }
 .py-md  { padding-block: var(--space-md); }
@@ -97,6 +164,14 @@
 .py-2xl { padding-block: var(--space-2xl); }
 .py-3xl { padding-block: var(--space-3xl); }
 
+/* Fluid padding-block */
+.py-fluid-xs  { padding-block: var(--space-fluid-xs); }
+.py-fluid-sm  { padding-block: var(--space-fluid-sm); }
+.py-fluid-md  { padding-block: var(--space-fluid-md); }
+.py-fluid-lg  { padding-block: var(--space-fluid-lg); }
+.py-fluid-xl  { padding-block: var(--space-fluid-xl); }
+.py-fluid-2xl { padding-block: var(--space-fluid-2xl); }
+
 .px-xs  { padding-inline: var(--space-xs); }
 .px-sm  { padding-inline: var(--space-sm); }
 .px-md  { padding-inline: var(--space-md); }
@@ -104,12 +179,28 @@
 .px-xl  { padding-inline: var(--space-xl); }
 .px-2xl { padding-inline: var(--space-2xl); }
 
+/* Fluid padding-inline */
+.px-fluid-xs  { padding-inline: var(--space-fluid-xs); }
+.px-fluid-sm  { padding-inline: var(--space-fluid-sm); }
+.px-fluid-md  { padding-inline: var(--space-fluid-md); }
+.px-fluid-lg  { padding-inline: var(--space-fluid-lg); }
+.px-fluid-xl  { padding-inline: var(--space-fluid-xl); }
+.px-fluid-2xl { padding-inline: var(--space-fluid-2xl); }
+
 .gap-xs  { gap: var(--space-xs); }
 .gap-sm  { gap: var(--space-sm); }
 .gap-md  { gap: var(--space-md); }
 .gap-lg  { gap: var(--space-lg); }
 .gap-xl  { gap: var(--space-xl); }
 .gap-2xl { gap: var(--space-2xl); }
+
+/* Fluid gap utilities */
+.gap-fluid-xs  { gap: var(--space-fluid-xs); }
+.gap-fluid-sm  { gap: var(--space-fluid-sm); }
+.gap-fluid-md  { gap: var(--space-fluid-md); }
+.gap-fluid-lg  { gap: var(--space-fluid-lg); }
+.gap-fluid-xl  { gap: var(--space-fluid-xl); }
+.gap-fluid-2xl { gap: var(--space-fluid-2xl); }
 
 /* --- Layout & Display --- */
 .d-none          { display: none; }
@@ -211,4 +302,233 @@
 
 .clearfix::after {
   content: ''; display: table; clear: both;
+}
+
+/* ============================================
+   SCROLL-DRIVEN ANIMATIONS (Phase 4)
+   Modern CSS with view-timeline and scroll-timeline
+   ============================================ */
+
+/* Reading progress bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--soft-plum);
+  z-index: 1000;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  width: 0%;
+  /* Fallback for browsers without scroll-timeline support */
+  animation: readingProgress linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes readingProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* Fade-in on scroll using view-timeline */
+.fade-in-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInScroll ease-out both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+
+@keyframes fadeInScroll {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-up on scroll */
+.slide-up-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUpScroll ease-out both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+@keyframes slideUpScroll {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale-in on scroll */
+.scale-in-scroll {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleInScroll ease-out both;
+  animation-timeline: view();
+  animation-range: entry 15% cover 35%;
+}
+
+@keyframes scaleInScroll {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Parallax scroll effect */
+.parallax-scroll {
+  transform: translateZ(0);
+  animation: parallaxScroll linear both;
+  animation-timeline: scroll();
+}
+
+@keyframes parallaxScroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100px); }
+}
+
+/* Sticky header shadow on scroll */
+.sticky-header-shadow {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: none;
+  transition: box-shadow var(--transition-base);
+}
+
+.sticky-header-shadow.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+/* Container query utilities */
+@container (min-width: 600px) {
+  .cq-hide-sm { display: none !important; }
+  .cq-show-md { display: block !important; }
+}
+
+@container (max-width: 599px) {
+  .cq-show-sm { display: block !important; }
+  .cq-hide-md { display: none !important; }
+}
+
+/* Container query spacing */
+@container (min-width: 400px) {
+  .cq-gap-responsive { gap: var(--space-md); }
+}
+
+@container (min-width: 700px) {
+  .cq-gap-responsive { gap: var(--space-lg); }
+}
+
+/* Scroll-snap utilities */
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-snap-y {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-start { scroll-snap-align: start; }
+.snap-center { scroll-snap-align: center; }
+.snap-end { scroll-snap-align: end; }
+
+/* Smooth scroll behavior */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar styling */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--soft-plum);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--soft-plum);
+  border-radius: var(--radius-pill);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: var(--radius-pill);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Focus visible for keyboard navigation */
+.focus-visible-ring:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* High contrast mode enhancements */
+@media (prefers-contrast: more) {
+  .hc-border {
+    border: 2px solid currentColor;
+  }
+  
+  .hc-text-bold {
+    font-weight: 700;
+  }
+}
+
+/* Reduced data mode */
+@media (prefers-reduced-data: reduce) {
+  .no-bg-image {
+    background-image: none !important;
+  }
+  
+  .no-animation {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Print utilities */
+@media print {
+  .print-hidden {
+    display: none !important;
+  }
+  
+  .print-break-before {
+    break-before: page;
+  }
+  
+  .print-break-after {
+    break-after: page;
+  }
+  
+  .print-no-break {
+    break-inside: avoid;
+  }
 }
