@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/utilities.css"/>
     <link rel="stylesheet" href="assets/css/animations.css"/>
     
-    <SCRIPT type="application/ld+json">
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -46,11 +46,15 @@
           }
         ]
       }
-    </SCRIPT>
+    </script>
 
   <!-- Network Status Toast -->
   <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="dns-prefetch" href="//mindgracencr.in"/>
+  <link rel="dns-prefetch" href="//wa.me"/>
+</head>
   <body>
     </div>
     <!-- Screen reader only static content -->
@@ -63,7 +67,7 @@
 <header class="site-header" >
     <div class="header-inner">
       <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
-        <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>
+        <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/ fetchpriority="high">
         <div>
           <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
           <div class="logo-tagline">Where You Come First</div>
@@ -275,14 +279,14 @@
 
     <!-- FOOTER -->
 
-    <SCRIPT src="assets/js/main.js"></SCRIPT>
+    <script src="assets/js/main.js" defer></script>
 
 <!-- Year Update Script -->
-<SCRIPT>
+\<script\>
   if (document.getElementById('year')) {
     document.getElementById('year').textContent = new Date().getFullYear();
   }
-</SCRIPT>
+</script>
 
 
 <footer class="site-footer" >
@@ -327,13 +331,13 @@
 </footer>
 
 <!-- Year Update Script -->
-<SCRIPT>
+\<script\>
   if (document.getElementById('year')) {
     document.getElementById('year').textContent = new Date().getFullYear();
   }
-</SCRIPT>
+</script>
 
-  <!-- MIND GRACE LIBRARY STACK --></SCRIPT>
+  <!-- MIND GRACE LIBRARY STACK --></script>
   <!-- END LIBRARY STACK -->
 
 </body>
