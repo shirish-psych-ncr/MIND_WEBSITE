@@ -360,6 +360,44 @@ select:focus-visible,
   }
 }
 
+/* Network Status Toast */
+.network-status {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text-dark);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  transition: bottom 0.3s ease;
+  opacity: 0;
+}
+
+.network-status.is-online {
+  bottom: 20px;
+  opacity: 1;
+  background: #059669;
+}
+
+.network-status.is-offline {
+  bottom: 20px;
+  opacity: 1;
+  background: #dc2626;
+}
+
+@media print {
+  .network-status {
+    display: none !important;
+  }
+}
+
 /* Print Styles - Clinical Documentation Ready */
 @media print {
   .site-header,

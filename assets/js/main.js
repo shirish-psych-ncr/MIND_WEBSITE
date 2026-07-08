@@ -464,7 +464,39 @@ function initOpenGraphMeta() {
 }
 
 // ==========================================
-// 13. Error Boundary for Production Resilience
+// 13. Network Status Monitoring
+// ==========================================
+function initNetworkStatus() {
+  const toast = document.createElement('div');
+  toast.id = 'network-status';
+  toast.className = 'network-status';
+  toast.setAttribute('role', 'alert');
+  toast.setAttribute('aria-live', 'polite');
+  toast.innerHTML = `
+    <span class="network-status-icon">📡</span>
+    <span class="network-status-message">You're offline. Some features may be unavailable.</span>
+  `;
+  document.body.appendChild(toast);
+
+  const updateStatus = () => {
+    if (navigator.onLine) {
+      toast.classList.remove('is-offline');
+      toast.classList.add('is-online');
+    } else {
+      toast.classList.remove('is-online');
+      toast.classList.add('is-offline');
+    }
+  };
+
+  window.addEventListener('online', updateStatus);
+  window.addEventListener('offline', updateStatus);
+  
+  // Initial check
+  updateStatus();
+}
+
+// ==========================================
+// 14. Error Boundary for Production Resilience
 // ==========================================
 function initErrorBoundary() {
   window.addEventListener('error', (event) => {
@@ -513,6 +545,7 @@ function initSkipLink() {
 (function bootstrap() {
   try {
     initOrientationMonitor();
+    initNetworkStatus();
     initOpenGraphMeta();
     initErrorBoundary();
     initSkipLink();
