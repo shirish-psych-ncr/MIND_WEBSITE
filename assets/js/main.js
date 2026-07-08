@@ -390,21 +390,28 @@ function initSmoothScroll() {
 }
 
 // ==========================================
-// 11. Orientation Monitor for Mobile
+// 11. Orientation Adaptive Handler (No Warning, CSS-Only)
 // ==========================================
-function initOrientationMonitor() {
-  const warning = document.querySelector('.orientation-warning');
-  if (!warning) return;
+function initOrientationAdapter() {
+  const adapter = document.getElementById('orientation-adapter');
+  if (!adapter) return;
 
   const mediaQuery = window.matchMedia('(orientation: landscape) and (max-height: 500px)');
-  
+
   const handleOrientationChange = (e) => {
+    // Dispatch custom event for CSS to listen to via JS hooks if needed
+    const event = new CustomEvent('orientationchange', { 
+      detail: { isLandscape: e.matches } 
+    });
+    window.dispatchEvent(event);
+    
+    // Add/remove class on body for CSS selectors
     if (e.matches) {
-      warning.classList.add('is-active', 'is-mobile-landscape');
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('is-landscape-mobile');
+      document.body.classList.remove('is-portrait-mobile');
     } else {
-      warning.classList.remove('is-active', 'is-mobile-landscape');
-      document.body.style.overflow = '';
+      document.body.classList.add('is-portrait-mobile');
+      document.body.classList.remove('is-landscape-mobile');
     }
   };
 
@@ -464,7 +471,39 @@ function initOpenGraphMeta() {
 }
 
 // ==========================================
-// 13. Error Boundary for Production Resilience
+// 13. Network Status Monitoring
+// ==========================================
+function initNetworkStatus() {
+  const toast = document.createElement('div');
+  toast.id = 'network-status';
+  toast.className = 'network-status';
+  toast.setAttribute('role', 'alert');
+  toast.setAttribute('aria-live', 'polite');
+  toast.innerHTML = `
+    <span class="network-status-icon">📡</span>
+    <span class="network-status-message">You're offline. Some features may be unavailable.</span>
+  `;
+  document.body.appendChild(toast);
+
+  const updateStatus = () => {
+    if (navigator.onLine) {
+      toast.classList.remove('is-offline');
+      toast.classList.add('is-online');
+    } else {
+      toast.classList.remove('is-online');
+      toast.classList.add('is-offline');
+    }
+  };
+
+  window.addEventListener('online', updateStatus);
+  window.addEventListener('offline', updateStatus);
+  
+  // Initial check
+  updateStatus();
+}
+
+// ==========================================
+// 14. Error Boundary for Production Resilience
 // ==========================================
 function initErrorBoundary() {
   window.addEventListener('error', (event) => {
@@ -512,7 +551,8 @@ function initSkipLink() {
 // ==========================================
 (function bootstrap() {
   try {
-    initOrientationMonitor();
+    initOrientationAdapter();
+    initNetworkStatus();
     initOpenGraphMeta();
     initErrorBoundary();
     initSkipLink();

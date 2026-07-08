@@ -18,6 +18,11 @@
   <style>
     /* Gallery page specific overrides if needed */
   </style>
+  <!-- Orientation Adaptive Handler -->
+  <div id="orientation-adapter" aria-hidden="true" style="display:none;"></div>
+
+  <!-- Network Status Toast -->
+  <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
 </head>
 
 <body>
@@ -144,9 +149,20 @@
 </nav>
 
 <a class="skip-link" href="#page-content">Skip to content</a>
+
+<!-- ORIENTATION WARNING -->
+</div>
+
+<!-- NETWORK STATUS TOAST -->
+<div id="network-status" class="network-status" role="status" aria-live="polite" hidden>
+  <span class="network-status__message"></span>
+</div>
   
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress" aria-hidden="true"></div>
+      <h2>Please Rotate Your Device</h2>
+      <p>For the best experience, please use portrait orientation.</p>
+    </div>
+  </div>
+
 
 <div class="progress"><div class="progress-bar" data-progress></div></div>
 
@@ -351,5 +367,6 @@
   </div>
 </footer>
 
+<!-- NETWORK STATUS TOAST --><div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status__message"></span></div>
 </body>
 </html>

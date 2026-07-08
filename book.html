@@ -52,6 +52,11 @@
         ]
       }
     </script>
+  <!-- Orientation Adaptive Handler -->
+  <div id="orientation-adapter" aria-hidden="true" style="display:none;"></div>
+
+  <!-- Network Status Toast -->
+  <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
   </head>
   <body>
 
@@ -180,11 +185,21 @@
 
     <a class="skip-link" href="#main-content">Skip to content</a>
   
+  <!-- Orientation Warning -->
+      <h2>Please Rotate Your Device</h2>
+      <p>For the best experience, please use portrait orientation.</p>
+    </div>
+  </div>
+
+  <!-- Network Status Toast -->
+  <div id="network-status" class="network-status" role="status" aria-live="polite" hidden>
+    <span class="network-status__icon" aria-hidden="true"></span>
+    <span class="network-status__text">You are offline. Some features may be unavailable.</span>
+  </div>
+
   <!-- Scroll Progress Bar -->
   <div class="scroll-progress" aria-hidden="true"></div>
     <div class="progress"><div class="progress-bar" data-progress></div></div>
-
-    <!-- HEADER -->
 
     <main id="main-content">
       <!-- HERO -->
@@ -400,5 +415,6 @@
   <!-- MIND GRACE LIBRARY STACK -->
   <!-- END LIBRARY STACK -->
 
+<!-- NETWORK STATUS TOAST --><div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status__message"></span></div>
 </body>
 </html>

@@ -12,10 +12,18 @@
 <LINK rel="stylesheet" href="assets/css/utilities.css" />
 <LINK rel="stylesheet" href="assets/css/animations.css" />
 <LINK rel="stylesheet" href="assets/css-tools/tools-butterfly.css" />
+  <!-- Orientation Adaptive Handler -->
+  <div id="orientation-adapter" aria-hidden="true" style="display:none;"></div>
+
+  <!-- Network Status Toast -->
+  <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
 </HEAD>
 <body class="butterfly-tool" id="butterfly-body">
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  
   <!-- Orientation Warning -->
-  <div class="orientation-warning" role="alert" aria-live="assertive"><div class="orientation-warning-content"><div class="orientation-warning-icon">📱</div><h2>Please Rotate Your Device</h2><p>For the best experience, please use portrait orientation.</p></div></div>
+  
   <!-- EMERGENCY BANNER WITH MARQUEE -->
   <div class="emergency-banner" role="alert" aria-label="Emergency crisis support information">
     <div class="emergency-banner__marquee">
@@ -164,10 +172,15 @@
 </div>
 
 <!-- Interaction Cores -->
-<div class="tapper-container">
+<main id="main-content">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"><div class="progress"><div class="progress-bar" data-progress></div></div></div>
+  
+  <div class="tapper-container">
     <div id="L" class="core" onpointerdown="handleTap('L')"><div class="core-inner"></div></div>
     <div id="R" class="core" onpointerdown="handleTap('R')"><div class="core-inner"></div></div>
-</div>
+  </div>
+</main>
 
 <SCRIPT src="assets/js/tools-butterfly.js"></SCRIPT>
 
