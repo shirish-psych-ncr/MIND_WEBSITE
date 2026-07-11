@@ -25,7 +25,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: "22"
+  NODE_VERSION: "24"
   PYTHON_VERSION: "3.12"
   CI: true
   FORCE_COLOR: "3"
@@ -173,7 +173,14 @@ jobs:
           regex = re.compile("|".join(patterns), re.IGNORECASE)
           extensions = {".html", ".css", ".js", ".json", ".xml", ".svg"}
           failed = False
+          
+          # Directories and files to skip (templates, node_modules)
+          skip_dirs = {'node_modules', '_templates'}
+          
           for path in pathlib.Path(".").rglob("*"):
+              # Skip node_modules and template directories
+              if any(skip_dir in path.parts for skip_dir in skip_dirs):
+                  continue
               if not path.is_file() or path.suffix.lower() not in extensions: continue
               try: text = path.read_text(encoding="utf-8", errors="ignore")
               except Exception: continue
@@ -286,6 +293,11 @@ jobs:
           from pathlib import Path
           import sys
           failed = False
+          
+          # Files that are components/templates, not full pages
+          component_files = {'nav-panel.html', 'header.html', 'footer.html', 'library-stack.html'}
+          component_dirs = {'assets/components', '_templates', 'node_modules'}
+          
           class Inspector(HTMLParser):
               def __init__(self):
                   super().__init__()
@@ -299,6 +311,9 @@ jobs:
                   if tag == "meta" and attrs.get("name") == "viewport": self.viewport = True
                   if tag == "h1": self.h1 += 1
           for html in Path(".").rglob("*.html"):
+              # Skip component files and node_modules
+              if html.name in component_files or any(d in str(html) for d in component_dirs):
+                  continue
               parser = Inspector()
               try: parser.feed(html.read_text(encoding="utf-8", errors="ignore"))
               except Exception as e:
@@ -413,12 +428,24 @@ jobs:
           from pathlib import Path
           import re
           patterns = [r'src=["\']([^"\']+)["\']', r'href=["\']([^"\']+)["\']']
+          
+          # External URL patterns to skip (these are valid external resources)
+          external_patterns = ['wa.me', 'maps.app.goo.gl', 'mindgracencr.in']
+          
           for html in Path(".").rglob("*.html"):
+              # Skip node_modules
+              if 'node_modules' in str(html):
+                  continue
               root = html.parent
               text = html.read_text(encoding="utf-8", errors="ignore")
               for pattern in patterns:
                   for ref in re.findall(pattern, text):
-                      if ref.startswith(("http://", "https://", "mailto:", "tel:", "#", "data:")): continue
+                      # Skip standard external URLs and special protocols
+                      if ref.startswith(("http://", "https://", "mailto:", "tel:", "#", "data:")):
+                          # Check if it's an external domain we should allow
+                          if any(ext in ref for ext in external_patterns):
+                              continue
+                          continue
                       clean = ref.split("?")[0].split("#")[0]
                       target = (root / clean).resolve()
                       if not target.exists(): print(f"::warning file={html}::Missing asset -> {ref}")
@@ -431,6 +458,9 @@ jobs:
           from pathlib import Path
           large = []
           for image in Path(".").rglob("*"):
+              # Skip node_modules
+              if 'node_modules' in str(image):
+                  continue
               if image.suffix.lower() not in {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}: continue
               size = image.stat().st_size
               if size > 1024 * 1024: large.append((image, size))
