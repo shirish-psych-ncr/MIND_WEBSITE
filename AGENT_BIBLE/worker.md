@@ -4,13 +4,15 @@
 ## 1. ARCH_TREE (Current→Target)
 ```
 /workspace (Static)          
-├── index.html (561L, v2.1)     
-├── styles.css (2089L, v3.0)    
-├── app.js (685L)               
-├── /assets/images/* (31 assets)          
-├── /assets/css-tools/* (7 tools)      
-├── /assets/js/* (13 scripts)          
-└── AGENT_BIBLE/* (16 docs)      
+├── index.html (390L, v2.1)     
+├── /assets/css/* (5 core CSS)    
+├── /assets/css-tools/* (7 tool CSS)      
+├── /assets/js/* (20 app scripts)          
+├── /assets/images/* (39 images)          
+├── /*.html (25 root pages)
+├── /tools/*.html (6 tool pages)
+├── /blog/*.html (12 blog pages)
+└── AGENT_BIBLE/* (14 docs)      
     → See: memory.md §STATE, pages.md §MIGRATION_PRIORITY
 ```
 

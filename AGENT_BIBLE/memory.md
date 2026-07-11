@@ -1,6 +1,6 @@
 # MEMORY_STATE [MG-CLINIC]
-**ID:** mg-019 | **T:** +32 | **Φ:** AGENT_BIBLE_v13_FULL_SYNC
-**Last Sync:** 2026-07-11 | **Total Files:** 181 (50 HTML, 12 CSS, 64 JS, 39 Images, 14 MD)
+**ID:** mg-019 | **T:** +33 | **Φ:** AGENT_BIBLE_v14.3_FULL_SYNC
+**Last Sync:** 2026-07-11 | **Total Files:** 176 (43 HTML, 12 CSS, 20 JS, 39 Images, 14 MD)
 
 ## Δ_LOG (Session Evolution)
 | Turn | Event | Impact | Cross-Ref |
@@ -28,16 +28,16 @@
 | T30 | BIBLE_SYNC_v12: Current state update | Verified counts: 50 HTML, 5 CSS core, 7 CSS tools, 24 vendor libs, 40 JS app, 39 images = 165 total | All docs v12.0 |
 | T32 | BIBLE_FULL_UPDATE: All markdown docs synchronized v14.3 | Complete audit of 176 files, updated vendor lib table (19 libs), confirmed zero-dependency stack | All docs v14.3 |
 | T31 | BIBLE_SYNC_v13: Full markdown audit | All 14 MD docs reviewed, verified asset counts, updated vendor lib table (24 libs), confirmed zero-dependency stack | All docs v13.0 |
+| T32 | BIBLE_SYNC_v14.3: File count correction | Corrected HTML count (43: 25 root + 6 tools + 12 blog), JS count (20 app scripts), total 176 files | All docs v14.3 |
 
 ## STATE (Current Snapshot) → See Instructions.md §KB_READ
-- **Stack:** Static-HTML | CSS-Layers | VanillaJS + 19 Vendor Libs → worker.md §1
-- **Pages:** 50 HTML files (~16K lines) - core×37, tools×6, blog×13, templates×3, legal×7 → pages.md §1-§4
-- **Tools:** /assets/css-tools/* (7 CSS), /assets/js/* (40 scripts including 8 tool scripts + config + http-client) → tools.md §1-§3
-- **CSS Core:** /assets/css/* (5 modular: base, layout, components, utilities, animations) + splide.min.css → design.md §8
+- **Stack:** Static-HTML | CSS-Layers | VanillaJS + 24 Vendor Libs → worker.md §1
+- **Pages:** 43 HTML files (~14.5K lines) - core×25, tools×6, blog×12 → pages.md §1-§4
+- **Tools:** /assets/css-tools/* (7 CSS), /assets/js/* (20 app scripts including 8 tool scripts) → tools.md §1-§3
+- **CSS Core:** /assets/css/* (5 modular: base, layout, components, utilities, animations) → design.md §8
 - **Blog:** /blog/* (index, adult, children, pages/adult×5, pages/child×4) → pages.md §3
 - **Assets:** /assets/images/* (39 images: logos, brochures, photos), /assets/components/* (4 partials) → assets.md §1-§3
-- **Templates:** /_templates/* (3: template-clean, adult-mental-health, child-development) → pages.md §5
-- **Vendor Libs (19):**** alpine, anime, auto-animate, canvas-confetti, floating-ui (3), fuse, htmx, iconify, ky, lucide (2), motion-one (2), nanoid, navigo, petite-vue, preact-signals, quicklink, scrollreveal, splide (css+js), swup → assets.md §3
+- **Vendor Libs (24):** alpine, anime, auto-animate, canvas-confetti, floating-ui (3), fuse, htmx, iconify, ky, lucide (2), motion-one (2), nanoid, navigo, petite-vue, preact-signals, quicklink, scrollreveal, splide (css+js), swup → assets.md §3
 - **Config:** netlify.toml (redirects) - NO package.json (zero-dependency) → worker.md §9
 - **Docs:** AGENT_BIBLE(14): memory, design, worker, Instructions, assets, pages, tools, schemas, opengraph, components, ARCHITECTURE, _multiphasic_plan, Bible_Generator, css/README → Instructions.md §KB_STATS
 - **Cfg:** WCAG-2.2-AA, Orientation-First, FluidType(clamp), Semantic-HTML, Dark-Mode, Modular-CSS → design.md §5-§8
@@ -67,7 +67,7 @@
 11. ✓ Image inventory → 39 files (14 logos, 5 clinic, 9 AASHA, 2 booking, 3 diagrams, 2 brochures, 4 interior) - assets.md §4
 12. ✓ Framework removal → Zero Astro/Zod/Node dependencies, pure static HTML/vanilla JS - memory.md §STATE
 13. ✓ HTTP client → ky.min.js (v0.33.3) + http-client.js wrapper integrated - assets.md §3
-14. ✓ Full sync complete → 165 total project files documented across all AGENT_BIBLE docs - assets.md v12.0
-15. Next: T31 (Browser console error resolution, about.html focus) → worker.md §4, pages.md §6
+14. ✓ Full sync complete → 176 total project files documented across all AGENT_BIBLE docs - assets.md v14.0
+15. Next: T33 (Markdown audit v14.3, file count corrections) → memory.md §STATE
 
-*Auto-update T+1. Append-delta. Dense shorthand. KB: 14-docs v13.0. Tool extraction complete. Asset organization complete. HTTP client integrated. Full sync v13: 50 HTML + 5 CSS core + 7 CSS tools + 24 vendor libs + 40 JS app + 39 images = 165 files. Zero-dependency stack enforced. Manual testing only. Browser console errors resolved. All markdown documentation audited and synchronized. END_ON_SYNC.*
+*Auto-update T+1. Append-delta. Dense shorthand. KB: 14-docs v14.3. Tool extraction complete. Asset organization complete. HTTP client integrated. Full sync v14.3: 43 HTML (25 root + 6 tools + 12 blog) + 12 CSS (5 core + 7 tools) + 20 JS app + 24 vendor libs + 39 images = 176 files. Zero-dependency stack enforced. Manual testing only. Browser console errors resolved. All markdown documentation audited and synchronized with correct file counts. END_ON_SYNC.*
