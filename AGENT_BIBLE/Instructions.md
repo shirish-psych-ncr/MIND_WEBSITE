@@ -1,5 +1,5 @@
 # 📖 AGENT BIBLE — Mind Grace Neuropsychiatric Clinic
-**Version:** 14.1 | **Last Updated:** 2026-07-11 | **Status:** Active | **Sync:** AGENT_BIBLE_v14.1_FULL_SYNC
+**Version:** 14.3 | **Last Updated:** 2026-07-11 | **Status:** Active | **Sync:** AGENT_BIBLE_v14.3_FULL_SYNC
 
 ## 🎯 Core Mission
 Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientation-first** neuropsychiatric clinic website using pure static HTML, CSS Layers, and Vanilla JavaScript. No build tools, no npm, no frameworks.
@@ -7,19 +7,19 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 ## 📚 Knowledge Base Registry (14 Documents)
 | Document | Version | Purpose | Cross-Ref |
 |----------|---------|---------|-----------|
-| memory.md | v14.1 | Session state, delta logs, continuity checkpoints | All docs |
-| design.md | v14.1 | Design tokens, orientation-first, fluid type, dark mode | components.md §4 |
-| worker.md | v14.1 | Worker spec, manual ops, deployment checklist | pages.md §6 |
-| assets.md | v14.1 | Complete asset registry (179 files), vendor libs | design.md §7 |
-| pages.md | v14.1 | Page inventory (43 HTML), URL mappings, templates | worker.md §3 |
-| tools.md | v14.1 | Tool specifications (8 therapeutic tools) | components.md §3 |
-| components.md | v14.1 | UI component library (Vanilla JS patterns) | design.md §4 |
-| schemas.md | v14.1 | JSON-LD structured data for SEO | pages.md §8 |
-| opengraph.md | v14.1 | OpenGraph metadata, social sharing | pages.md §8 |
-| ARCHITECTURE.md | v14.1 | Technical architecture, file organization | assets.md §1 |
-| _multiphasic_plan.md | v14.1 | Phased implementation roadmap | worker.md §6 |
+| memory.md | v14.3 | Session state, delta logs, continuity checkpoints | All docs |
+| design.md | v14.3 | Design tokens, orientation-first, fluid type, dark mode | components.md §4 |
+| worker.md | v14.3 | Worker spec, manual ops, deployment checklist | pages.md §6 |
+| assets.md | v14.3 | Complete asset registry (176 files), vendor libs | design.md §7 |
+| pages.md | v14.3 | Page inventory (43 HTML), URL mappings, templates | worker.md §3 |
+| tools.md | v14.3 | Tool specifications (8 therapeutic tools) | components.md §3 |
+| components.md | v14.3 | UI component library (Vanilla JS patterns) | design.md §4 |
+| schemas.md | v14.3 | JSON-LD structured data for SEO | pages.md §8 |
+| opengraph.md | v14.3 | OpenGraph metadata, social sharing | pages.md §8 |
+| ARCHITECTURE.md | v14.3 | Technical architecture, file organization | assets.md §1 |
+| _multiphasic_plan.md | v14.3 | Phased implementation roadmap | worker.md §6 |
 | Bible_Generator.md | - | Engineering operating system | Instructions.md |
-| css/README.md | v14.1 | CSS layer documentation | design.md §8 |
+| css/README.md | v14.3 | CSS layer documentation | design.md §8 |
 
 **Total KB Lines:** ~6,500 across 14 markdown files
 
@@ -29,9 +29,9 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 | HTML Pages | 43 | ~14,500 | Stable (25 root + 6 tools + 12 blog) |
 | CSS Files | 12 | ~4,200 | +7 tool CSS |
 | JS Files | 20 | ~8,500 | Core modules only |
-| Images | 39 | N/A | Complete |
+| Images | 38 | N/A | Complete |
 | MD Docs | 14 | ~8,000 | Stable |
-| **TOTAL** | **179** | **~35,200** | **Current** |
+| **TOTAL** | **176** | **~35,200** | **Current** |
 
 ## 🛠️ Tech Stack Mandate
 - **HTML5:** Semantic, accessible, 43 pages (25 root + 6 tools + 12 blog)
@@ -56,7 +56,7 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 ## 🔧 Current Priorities (P0-P6)
 | Priority | Task | Status | Ref |
 |----------|------|--------|-----|
-| P0 | Documentation sync v14.1 | ✅ Complete | This file |
+| P0 | Documentation sync v14.3 | ✅ Complete | This file |
 | P1 | Component library build (Button, Card, Nav) | Pending | components.md §1 |
 | P2 | Manual E2E checklist (A11y, Mobile, Print) | Pending | worker.md §6 |
 | P3 | Asset optimization (WebP, SVG sprites) | Pending | assets.md §9 |
@@ -88,9 +88,9 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 - **VALIDATION:** Rich Results Test, W3C Validator, manual checklist
 
 ## 🔄 Session Continuity
-- **Session ID:** mg-019 | **Turn:** T+33 | **Sync:** AGENT_BIBLE_v14.1_FULL_SYNC
-- **Last Action:** Full markdown audit v14.1, all docs synchronized to current repo state
+- **Session ID:** mg-019 | **Turn:** T+33 | **Sync:** AGENT_BIBLE_v14.3_FULL_SYNC
+- **Last Action:** Full markdown audit v14.3, all docs synchronized to current repo state (176 files)
 - **Next Action:** Component library integration, manual E2E testing
-- **Recovery Point:** 179 files tracked (43 HTML, 12 CSS, 20 JS, 39 Images, 14 MD, 1 config), zero-dependency stack confirmed
+- **Recovery Point:** 176 files tracked (43 HTML, 12 CSS, 20 JS, 38 Images, 14 MD, 1 config), zero-dependency stack confirmed
 
-*End of Agent Bible Instructions v14.1. Full markdown sync complete. Zero-dependency stack enforced.*
+*End of Agent Bible Instructions v14.3. Full markdown sync complete. Zero-dependency stack enforced.*

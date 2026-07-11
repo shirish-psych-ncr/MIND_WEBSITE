@@ -19,14 +19,14 @@
 | T16 | ASTRO_REMOVAL: Static HTML migration v9.0 | Removed all Astro/Zod references, updated to vanilla JS stack | Instructions.md, memory.md, worker.md, _RESTRUCTURE_PLAN.md |
 | T16 | SYNC: Agent Bible cleanup | 4 docs purged of framework references, version bumped to v9.0 | All docs |
 | T17 | ZERO_DEP_MANDATE: No Node/npm v9.1 | Purged Playwright/CI/CD from priorities, manual testing only, deleted package.json refs | Instructions.md §Zero-Dep, _multiphasic_plan.md v4.0 |
-| T18 | FULL_ASSET_SYNC: v10.0 | Complete inventory: 52 HTML, 16 CSS, 56 JS, 38 images = 187 total files | assets.md v6.0, pages.md v9.0 |
+| T18 | FULL_ASSET_SYNC: v10.0 | Complete inventory: 52 HTML, 16 CSS, 56 JS, 39 images = 187 total files | assets.md v6.0, pages.md v9.0 |
 | T19 | HTTP_CLIENT: Ky integration v10.1 | Added ky.min.js (0.33.3) for modern fetch API, http-client.js wrapper created | assets.md §3, worker.md §2 |
 | T20 | SCRIPT_INTEGRATION: All HTML pages updated | ky.min.js + http-client.js added to 10+ HTML pages before animations-auto.js | pages.md §6, worker.md §3 |
 | T21 | ESLINT_FIXES: main.js errors resolved | Removed unused vars, fixed undefined functions, cleaned duplicate smooth scroll | worker.md §4, assets.md §3 |
 | T22 | BIBLE_UPDATE: Full sync v11.0 | 50 HTML, 6 CSS (5 core + 1 vendor), 63 JS (40 app + 23 vendor), 37 images = 170 total files | All docs |
 | T23-T29 | CONSOLE_DEBUG: about.html focus | Browser console error audit, script loading order fixes, Ky integration verification | worker.md §4, assets.md §3 |
 | T30 | BIBLE_SYNC_v12: Current state update | Verified counts: 50 HTML, 5 CSS core, 7 CSS tools, 24 vendor libs, 40 JS app, 39 images = 165 total | All docs v12.0 |
-| T32 | BIBLE_FULL_UPDATE: All markdown docs synchronized v14.0 | Complete audit of 181 files, updated vendor lib table (19 libs), confirmed zero-dependency stack | All docs v14.0 |
+| T32 | BIBLE_FULL_UPDATE: All markdown docs synchronized v14.3 | Complete audit of 176 files, updated vendor lib table (19 libs), confirmed zero-dependency stack | All docs v14.3 |
 | T31 | BIBLE_SYNC_v13: Full markdown audit | All 14 MD docs reviewed, verified asset counts, updated vendor lib table (24 libs), confirmed zero-dependency stack | All docs v13.0 |
 
 ## STATE (Current Snapshot) → See Instructions.md §KB_READ

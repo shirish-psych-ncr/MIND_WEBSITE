@@ -1,4 +1,4 @@
-# TOOL_SPEC [v14.0]
+# TOOL_SPEC [v14.3]
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Update:** Auto(post-turn)
 **Last Sync:** 2026-07-11 | **Total Tools:** 8 (6 interactive + 2 utility)
 **Status:** Full markdown audit complete, v13.0 sync

@@ -1,4 +1,4 @@
-# DESIGN_REF [v14.0] — Mind Grace Neuropsychiatric Clinic
+# DESIGN_REF [v14.3] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Orientation-First | **Stack:** CSS-Layers|Tokens | **Sync:** End-turn
 **Last Asset Sync:** 2025-12-07 | **Total Assets:** 165 files (assets.md v12.0)
 
