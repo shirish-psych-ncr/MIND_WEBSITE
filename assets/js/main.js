@@ -153,46 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 10. Enhanced Smooth Scroll with Offset (for pages with sticky headers)
-  // Called from bootstrap on pages with [data-enhanced-scroll]
-  // ==========================================
-  function _initSmoothScroll() {
-    const header = document.querySelector('.site-header');
-    const headerHeight = header ? header.offsetHeight : 0;
-    
-    // Only apply enhanced scroll on pages with specific data attribute
-    const enhancedScrollPages = document.querySelector('[data-enhanced-scroll]');
-    if (!enhancedScrollPages) return;
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (!targetElement) return;
-        
-        e.preventDefault();
-        
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
-        
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-        
-        // Update URL hash without jumping
-        history.pushState(null, null, targetId);
-        
-        // Set focus for accessibility
-        targetElement.setAttribute('tabindex', '-1');
-        targetElement.focus({ preventScroll: true });
-      });
-    });
-  }
-
-  // ==========================================
   // 4. Viewport Resize (Fluid Layouts)
   // ==========================================
   function initViewportResize() {
@@ -352,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     counters.forEach(counter => observer.observe(counter));
   }
-});
+
   // ==========================================
   // 8. Year Update for Footer
   // ==========================================
@@ -362,6 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
       yearEl.textContent = new Date().getFullYear();
     }
   }
+});
 
 // ==========================================
 // 9. Scroll Progress Bar
@@ -559,7 +520,6 @@ function initSkipLink() {
     initErrorBoundary();
     initSkipLink();
     _initScrollProgress();
-    _initSmoothScroll(); // Enhanced smooth scroll for pages with [data-enhanced-scroll]
     
     console.log('[Mind Grace] All modules initialized successfully');
   } catch (error) {
