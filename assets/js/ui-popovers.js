@@ -15,21 +15,14 @@
    * Initialize tooltips for elements with .has-tooltip class or title attribute
    */
   function initTooltips() {
-    // Check if Floating UI is loaded
-    if (typeof FloatingUI === 'undefined') {
-      // Only log once to avoid spam
-      if (!window._floatingUILogged) {
-        console.warn('Floating UI library not loaded yet, waiting...');
-        window._floatingUILogged = true;
-      }
-      setTimeout(initTooltips, 200);
+    const FloatingUILib = typeof FloatingUI !== 'undefined' ? FloatingUI : (typeof FloatingUIDOM !== 'undefined' ? FloatingUIDOM : null);
+
+    if (!FloatingUILib) {
+      setTimeout(initTooltips, 100);
       return;
     }
-    
-    // Reset flag once loaded
-    window._floatingUILogged = false;
 
-    const { computePosition, flip, shift, offset, autoUpdate } = FloatingUI;
+    const { computePosition, flip, shift, offset, autoUpdate } = FloatingUILib;
 
     // Find all elements with title attribute or .has-tooltip class
     const tooltipTriggers = document.querySelectorAll('[title], .has-tooltip');
@@ -99,111 +92,124 @@
       trigger.addEventListener('focus', showTooltip);
       trigger.addEventListener('blur', hideTooltip);
 
-      // Cleanup on scroll
-      let cleanup;
-      trigger.addEventListener('mouseenter', () => {
-        cleanup = autoUpdate(trigger, tooltip, () => {
-          computePosition(trigger, tooltip, {
-            placement: 'top',
-            middleware: [offset(6), flip(), shift({ padding: 8 })]
-          }).then(({ x, y }) => {
-            Object.assign(tooltip.style, { left: `${x}px`, top: `${y}px` });
-          });
-        });
-      }, { once: true });
-
-      trigger.addEventListener('mouseleave', () => {
-        if (cleanup) cleanup();
-      }, { once: true });
-
+      // Mark as initialized
       trigger._tooltipInitialized = true;
-    });
 
-    console.log('✓ Floating UI tooltips initialized:', document.querySelectorAll('.ui-tooltip').length, 'tooltips');
+      // Handle cleanup on page transition
+      trigger.addEventListener('cleanup', () => {
+        tooltip.remove();
+        trigger._tooltipInitialized = false;
+      });
+    });
   }
 
   /**
-   * Initialize dropdown positioning for mobile menu
+   * Initialize dropdowns for elements with .has-dropdown class
    */
   function initDropdowns() {
-    if (typeof FloatingUI === 'undefined') {
-      if (!window._floatingUILogged) {
-        console.warn('Floating UI library not loaded yet, waiting...');
-        window._floatingUILogged = true;
-      }
-      setTimeout(initDropdowns, 200);
+    const FloatingUILib = typeof FloatingUI !== 'undefined' ? FloatingUI : (typeof FloatingUIDOM !== 'undefined' ? FloatingUIDOM : null);
+
+    if (!FloatingUILib) {
+      setTimeout(initDropdowns, 100);
       return;
     }
 
-    const { computePosition, flip, shift, offset } = FloatingUI;
+    const { computePosition, flip, shift, offset } = FloatingUILib;
 
-    // Mobile menu dropdowns
-    const dropdownTriggers = document.querySelectorAll('.has-dropdown, [data-dropdown]');
+    const dropdowns = document.querySelectorAll('.has-dropdown');
 
-    dropdownTriggers.forEach(trigger => {
-      if (trigger._dropdownInitialized) return;
+    dropdowns.forEach(dropdown => {
+      if (dropdown._dropdownInitialized) return;
 
-      const dropdown = document.querySelector(trigger.getAttribute('data-dropdown') || '.dropdown-menu');
-      if (!dropdown) return;
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (!menu) return;
 
-      trigger.addEventListener('click', () => {
-        computePosition(trigger, dropdown, {
-          placement: 'bottom-start',
-          middleware: [offset(4), flip(), shift({ padding: 8 })]
-        }).then(({ x, y }) => {
-          Object.assign(dropdown.style, {
-            left: `${x}px`,
-            top: `${y}px`
-          });
-        });
-
-        dropdown.classList.toggle('hidden');
+      // Style the menu
+      Object.assign(menu.style, {
+        position: 'fixed',
+        zIndex: '9999',
+        minWidth: '200px',
+        backgroundColor: '#fff',
+        borderRadius: '8px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+        display: 'none'
       });
 
-      trigger._dropdownInitialized = true;
-    });
+      let isOpen = false;
 
-    console.log('✓ Floating UI dropdowns initialized');
+      const toggleDropdown = () => {
+        isOpen = !isOpen;
+        menu.style.display = isOpen ? 'block' : 'none';
+
+        if (isOpen) {
+          computePosition(dropdown, menu, {
+            placement: 'bottom-start',
+            middleware: [
+              offset(4),
+              flip(),
+              shift({ padding: 8 })
+            ]
+          }).then(({ x, y }) => {
+            Object.assign(menu.style, {
+              left: `${x}px`,
+              top: `${y}px`
+            });
+          });
+        }
+      };
+
+      dropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleDropdown();
+      });
+
+      document.addEventListener('click', (e) => {
+        if (isOpen && !dropdown.contains(e.target)) {
+          toggleDropdown();
+        }
+      });
+
+      dropdown._dropdownInitialized = true;
+    });
   }
 
   /**
-   * Initialize medical term popovers in blog posts
+   * Initialize medical term popovers
    */
   function initMedicalPopovers() {
-    if (typeof FloatingUI === 'undefined') {
-      if (!window._floatingUILogged) {
-        console.warn('Floating UI library not loaded yet, waiting...');
-        window._floatingUILogged = true;
-      }
-      setTimeout(initMedicalPopovers, 200);
+    const FloatingUILib = typeof FloatingUI !== 'undefined' ? FloatingUI : (typeof FloatingUIDOM !== 'undefined' ? FloatingUIDOM : null);
+
+    if (!FloatingUILib) {
+      setTimeout(initMedicalPopovers, 100);
       return;
     }
 
-    const { computePosition, flip, shift, offset } = FloatingUI;
+    const { computePosition, flip, shift, offset } = FloatingUILib;
 
-    // Find medical terms with definitions
-    const medicalTerms = document.querySelectorAll('[data-medical-term]');
+    const medicalTerms = document.querySelectorAll('.medical-term');
 
     medicalTerms.forEach(term => {
       if (term._popoverInitialized) return;
 
-      const definition = term.getAttribute('data-medical-term');
+      const definition = term.getAttribute('data-definition');
+      if (!definition) return;
+
       const popover = document.createElement('div');
-      popover.className = 'ui-popover ui-popover--medical';
-      popover.innerHTML = `
-        <div class="ui-popover__header">Medical Term</div>
-        <div class="ui-popover__content">${definition}</div>
-      `;
+      popover.className = 'medical-popover';
+      popover.setAttribute('role', 'tooltip');
+      popover.innerHTML = `<span class="medical-popover__content">${definition}</span>`;
 
       Object.assign(popover.style, {
         position: 'fixed',
-        zIndex: '9999',
+        zIndex: '9998',
         padding: '12px 16px',
-        backgroundColor: '#fff',
-        border: '1px solid #e5e7eb',
+        backgroundColor: '#f0f9ff',
+        color: '#0c4a6e',
+        border: '1px solid #bae6fd',
         borderRadius: '8px',
         fontSize: '14px',
-        boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+        lineHeight: '1.5',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
         pointerEvents: 'none',
         opacity: '0',
         transition: 'opacity 0.2s ease',
@@ -212,16 +218,20 @@
 
       document.body.appendChild(popover);
 
-      term.style.cursor = 'help';
-      term.style.borderBottom = '1px dotted #6b7280';
-
       const showPopover = () => {
         popover.style.opacity = '1';
         computePosition(term, popover, {
           placement: 'top',
-          middleware: [offset(8), flip(), shift({ padding: 8 })]
+          middleware: [
+            offset(8),
+            flip(),
+            shift({ padding: 8 })
+          ]
         }).then(({ x, y }) => {
-          Object.assign(popover.style, { left: `${x}px`, top: `${y}px` });
+          Object.assign(popover.style, {
+            left: `${x}px`,
+            top: `${y}px`
+          });
         });
       };
 
@@ -235,36 +245,31 @@
       term.addEventListener('blur', hidePopover);
 
       term._popoverInitialized = true;
-    });
 
-    console.log('✓ Medical term popovers initialized');
+      term.addEventListener('cleanup', () => {
+        popover.remove();
+        term._popoverInitialized = false;
+      });
+    });
   }
 
-  /**
-   * Refresh all UI components after page transitions
-   */
-  function refreshUI() {
+  // Initialize on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initTooltips();
+      initDropdowns();
+      initMedicalPopovers();
+    });
+  } else {
     initTooltips();
     initDropdowns();
     initMedicalPopovers();
   }
 
-  // Initialize on DOM ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', refreshUI);
-  } else {
-    refreshUI();
-  }
-
-  // Listen for custom events
-  document.addEventListener('ui:refresh', refreshUI);
-
-  // Export for external use
-  window.UIPopovers = {
-    init: refreshUI,
-    initTooltips,
-    initDropdowns,
-    initMedicalPopovers
+  // Expose for re-initialization after page transitions
+  window._reinitPopovers = () => {
+    initTooltips();
+    initDropdowns();
+    initMedicalPopovers();
   };
-
 })();
