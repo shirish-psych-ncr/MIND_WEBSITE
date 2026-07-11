@@ -1,4 +1,4 @@
-# WORKER_SPEC [v4.0] — Mind Grace Neuropsychiatric Clinic
+# WORKER_SPEC [v14.0] — Mind Grace Neuropsychiatric Clinic
 **Role:** FE-Lead/DevOps | **Stack:** HTML5|VanillaJS|Manual-Ops | **Sync:** End-turn
 
 ## 1. ARCH_TREE (Current→Target)

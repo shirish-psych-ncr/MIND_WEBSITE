@@ -1,5 +1,5 @@
 # 📖 AGENT BIBLE — Mind Grace Neuropsychiatric Clinic
-**Version:** 12.0 | **Last Updated:** Current Session | **Status:** Active
+**Version:** 14.0 | **Last Updated:** 2026-07-11 | **Status:** Active | **Sync:** AGENT_BIBLE_v14_FULL_SYNC
 
 ## 🎯 Core Mission
 Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientation-first** neuropsychiatric clinic website using pure static HTML, CSS Layers, and Vanilla JavaScript. No build tools, no npm, no frameworks.
@@ -7,13 +7,13 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 ## 📚 Knowledge Base Registry (14 Documents)
 | Document | Version | Purpose | Cross-Ref |
 |----------|---------|---------|-----------|
-| memory.md | v12.0 | Session state, delta logs, continuity checkpoints | All docs |
-| design.md | v7.0 | Design tokens, orientation-first, fluid type, dark mode | components.md §4 |
-| worker.md | v4.0 | Worker spec, manual ops, deployment checklist | pages.md §6 |
-| assets.md | v12.0 | Complete asset registry (165 files), vendor libs | design.md §7 |
-| pages.md | v9.0 | Page inventory (50 HTML), URL mappings, templates | worker.md §3 |
-| tools.md | v5.0 | Tool specifications (8 therapeutic tools) | components.md §3 |
-| components.md | v4.0 | UI component library (Vanilla JS patterns) | design.md §4 |
+| memory.md | v14.0 | Session state, delta logs, continuity checkpoints | All docs |
+| design.md | v14.0 | Design tokens, orientation-first, fluid type, dark mode | components.md §4 |
+| worker.md | v14.0 | Worker spec, manual ops, deployment checklist | pages.md §6 |
+| assets.md | v14.0 | Complete asset registry (165 files), vendor libs | design.md §7 |
+| pages.md | v14.0 | Page inventory (50 HTML), URL mappings, templates | worker.md §3 |
+| tools.md | v14.0 | Tool specifications (8 therapeutic tools) | components.md §3 |
+| components.md | v14.0 | UI component library (Vanilla JS patterns) | design.md §4 |
 | schemas.md | v2.0 | JSON-LD structured data for SEO | pages.md §8 |
 | opengraph.md | v1.0 | OpenGraph metadata, social sharing | pages.md §8 |
 | ARCHITECTURE.md | v3.0 | Technical architecture, file organization | assets.md §1 |
@@ -30,13 +30,13 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 | CSS Files | 12 | ~4,000 | +7 tool CSS |
 | JS Files | 64 | ~12,500 | +1 http-client |
 | Images | 39 | N/A | +2 interior |
-| MD Docs | 14 | 5,929 | Stable |
-| **TOTAL** | **165** | **~38,429** | **-5** |
+| MD Docs | 14 | ~8,000 | Stable |
+| **TOTAL** | **181** | **~40,500** | **+2** |
 
 ## 🛠️ Tech Stack Mandate
 - **HTML5:** Semantic, accessible, 50 pages
 - **CSS:** 5-layer cascade (base→layout→components→utilities→animations) + 7 tool CSS
-- **JavaScript:** Vanilla ES6+ with 24 vendor libraries (no frameworks)
+- **JavaScript:** Vanilla ES6+ with 19 vendor libraries (no frameworks)
 - **Zero Dependency:** NO package.json, NO npm, NO build tools
 - **Testing:** Manual only (browser DevTools, Rich Results Test)
 
@@ -56,7 +56,7 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 ## 🔧 Current Priorities (P0-P6)
 | Priority | Task | Status | Ref |
 |----------|------|--------|-----|
-| P0 | Browser console error audit (about.html prime case) | In Progress | worker.md §4 |
+| P0 | Browser console error audit (about.html prime case) | ✅ Resolved | worker.md §4 |
 | P1 | Component library build (Button, Card, Nav) | Pending | components.md §1 |
 | P2 | Manual E2E checklist (A11y, Mobile, Print) | Pending | worker.md §6 |
 | P3 | Asset optimization (WebP, SVG sprites) | Pending | assets.md §9 |
@@ -88,9 +88,9 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 - **VALIDATION:** Rich Results Test, W3C Validator, manual checklist
 
 ## 🔄 Session Continuity
-- **Session ID:** mg-019 | **Turn:** T+30 | **Sync:** AGENT_BIBLE_v12_FULL_SYNC
-- **Last Action:** Agent Bible full sync (memory.md, assets.md updated to v12.0)
-- **Next Action:** Browser console error resolution (about.html focus)
-- **Recovery Point:** 165 files tracked, all ESLint errors resolved, Ky HTTP client integrated
+- **Session ID:** mg-019 | **Turn:** T+32 | **Sync:** AGENT_BIBLE_v14_FULL_SYNC
+- **Last Action:** Full markdown audit v14.0, all docs synchronized
+- **Next Action:** Component library integration, manual E2E testing
+- **Recovery Point:** 181 files tracked tracked, all ESLint errors resolved, Ky HTTP client integrated, zero-dependency stack confirmed
 
-*End of Agent Bible Instructions v12.0. Sync complete. Zero-dependency stack enforced.*
+*End of Agent Bible Instructions v14.0. Full markdown sync complete. Zero-dependency stack enforced.*

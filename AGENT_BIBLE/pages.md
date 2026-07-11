@@ -1,7 +1,8 @@
 # 📄 PAGE REGISTRY — Mind Grace Neuropsychiatric Clinic
-**Version:** 9.0 | **Format:** Machine-Readable | **Last Verified:** 2025-12-07
+**Version:** 14.0 | **Format:** Machine-Readable | **Last Verified:** 2026-07-11
 **Framework:** Static HTML/Vanilla JS (No Build Tools)
-**Total Pages:** 52 HTML files
+**Total Pages:** 50 HTML files
+**Status:** Full markdown audit complete, v13.0 sync
 
 ## 1. CORE PAGES (Root Level) - 26 Files
 
