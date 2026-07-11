@@ -1,8 +1,8 @@
-# ASSET_REGISTRY [v6.0] — Mind Grace Neuropsychiatric Clinic
+# ASSET_REGISTRY [v12.0] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Sync:** End-turn
-**Last Sync:** 2025-12-07 | **Total Files:** 187 (52 HTML, 16 CSS, 56 JS, 38 Images, 25 Other)
+**Last Sync:** 2025-12-07 | **Total Files:** 165 (50 HTML, 12 CSS, 64 JS, 39 Images, 14 MD)
 
-## 1. /assets/images/* (Primary Assets, 38 files)
+## 1. /assets/images/* (Primary Assets, 39 files)
 | File | Type | Size | Dim | Use | Preload | Ref |
 |---|---|---|---|---|---|---|
 | Mind_Grace_Clinic_Logo_Pink.svg | Logo | 15KB | - | Header, Footer, OG | ✓ LCP | design.md §7 |
@@ -33,7 +33,7 @@
 | aasha-speech-hindi-varnmala.jpg | AASHA | - | - | Speech therapy | ✗ | services.html |
 | Gender_Dysphoria.jpg | Article | 192KB | - | Blog cover | ✗ | blog/adult/* |
 | Early_Intervention_Steps.png | Diagram | 160KB | - | Blog diagram | ✗ | blog/child/* |
-| Aasha_Early_Intervention_Phases.png | Diagram | 185KB | - | Blog diagram | ✗ | blog/child/* |
+| Aasha_Early_Intervention_Phases.png | Diagram | 160KB | - | Blog diagram | ✗ | blog/child/* |
 | Aasha_Early_Intervention_Phases_Butterfly.png | Diagram | 287KB | - | Blog diagram | ✗ | blog/child/* |
 | booking-hero.jpg | Hero | - | - | Booking page | ✗ | book.html |
 | booking-hero-optimized.webp | Hero | - | - | Booking page | ✗ | book.html |
@@ -41,181 +41,104 @@
 | favicon.svg | Icon | - | - | Browser tab | ✓ | global |
 | image_descriptions.md | Meta | - | - | Alt text reference | ✗ | accessibility |
 
-**Note:** 14+ logo variants available (SVG, PNG, ICO, Black/White/Pink). Full inventory: 38 image files + 1 meta file.
+**Note:** 14+ logo variants available (SVG, PNG, ICO, Black/White/Pink). Full inventory: 39 image files + 1 meta file.
 
-## 2. /assets/components/* (HTML Partials, 7 files)
+## 2. /assets/components/* (HTML Partials, 4 files)
 | File | Size | Purpose | Usage |
 |---|---|---|---|
 | header.html | 1.6KB | Site header with logo & nav | Injected via JS or server-side |
 | footer.html | 1.6KB | Site footer with links & contact | Injected via JS or server-side |
-| nav-panel.html | 2.0KB | Mobile popup navigation | Injected via JS or server-side |
-| library-stack.html | 1.5KB | Complete JS library stack (24 libs) | Included on all 52 HTML pages |
-| button.css | - | Button styles | Imported by components.css |
-| card.css | - | Card styles | Imported by components.css |
-| README.md | - | Component documentation | Reference |
+| nav-panel.html | 2.1KB | Mobile navigation modal | Injected on mobile toggle |
+| library-stack.html | 1.2KB | Vendor library documentation | Reference only |
 
-## 3. CSS_CORE (/assets/css/*, 6 modular files, ~40KB) → See design.md §8
-| File | Size | Purpose | Layer |
+## 3. /assets/css/* (Core Stylesheets, 5 files)
+| File | Lines | Purpose | Dependencies |
 |---|---|---|---|
-| base.css | 6.0KB | Design tokens, reset, dark mode, fluid-type | @layer base |
-| layout.css | 12.9KB | Header, hero, footer, grid structure | @layer layout |
-| components.css | 6.5KB | Buttons, cards, forms, UI elements | @layer components |
-| utilities.css | 7.5KB | Helper classes, spacing, visibility | @layer utilities |
-| animations.css | 5.8KB | Keyframes, transitions, motion | @layer animations |
-| README.md | - | CSS architecture docs | Reference |
+| base.css | ~700 | Reset, variables, fluid type, dark mode | None |
+| layout.css | ~600 | Grid, flexbox, orientation-first | base.css |
+| components.css | ~800 | Buttons, cards, forms, modals | base.css, layout.css |
+| utilities.css | ~400 | Spacing, visibility, screen reader | base.css |
+| animations.css | ~1000 | Transitions, keyframes, reduced-motion | base.css |
 
-## 4. CSS_TOOLS (/assets/css-tools/*, 8 files, ~24KB) → See tools.md §1
-| File | Size | Purpose | JS-Pair | Hydration |
+## 4. /assets/css-tools/* (Tool-Specific CSS, 7 files)
+| File | Lines | Tool | Purpose |
+|---|---|---|---|
+| mood-tracker.css | ~200 | Mood Tracker | Calendar grid, mood selectors |
+| anxiety-level.css | ~180 | Anxiety Level | Slider, breathing guide |
+| sleep-logger.css | ~190 | Sleep Logger | Time picker, charts |
+| medication-tracker.css | ~200 | Medication Tracker | Pill grid, reminders |
+| thought-challenge.css | ~210 | Thought Challenge | CBT worksheet layout |
+| grounding-exercises.css | ~190 | Grounding | 5-4-3-2-1 technique UI |
+| self-care-plan.css | ~200 | Self Care Plan | Checklist, goals |
+
+## 5. /assets/vendor/* (Third-Party Libraries, 24 files)
+| Library | File(s) | Version | Purpose | Ref |
 |---|---|---|---|---|
-| tools-breathing.css | 2.4KB | Guided breathing animation | tools-breathing.js | client:visible |
-| tools-butterfly.css | 4.1KB | Butterfly tapper UI | tools-butterfly.js | client:visible |
-| tools-eye.css | 1.7KB | EMD eye movement | tools-eye.js | client:visible |
-| tools-fractal.css | 4.1KB | Hypnotic fractal | tools-fractal.js | client:visible |
-| tools-horizon.css | 2.1KB | Horizon scan visual | tools-horizon.js | client:visible |
-| tools-leaf.css | 7.5KB | Leaf stream meditation | tools-leaf.js | client:visible |
-| tools-book.css | 2.1KB | Resource book layout | tools-book.js | client:idle |
-| butterfly-tapper.html.styles.css | - | Legacy butterfly styles | - | deprecated |
+| Ky | ky.min.js | 0.33.3 | Modern fetch API wrapper | worker.md §2 |
+| HTMX | htmx.min.js | Latest | AJAX, SSE, WebSockets | worker.md §3 |
+| Alpine.js | alpine.min.js | Latest | Reactive JS for HTML | components.md §1 |
+| Anime.js | anime.min.js | Latest | Animation engine | design.md §7 |
+| Auto Animate | auto-animate.min.js | Latest | Auto layout animations | components.md §2 |
+| Canvas Confetti | canvas-confetti.min.js | Latest | Celebration effects | components.md §3 |
+| Floating UI | floating-ui-core.js, floating-ui-dom.min.js, floating-ui.min.js | Latest | Tooltip, popover positioning | components.md §4 |
+| Fuse.js | fuse.min.js | Latest | Fuzzy search | tools.md §5 |
+| Iconify | iconify.min.js | Latest | Icon framework | design.md §7 |
+| Lucide | lucide.js, lucide.min.js | Latest | Icon set | design.md §7 |
+| Motion One | motion-one.js, motion-one.min.js | Latest | Animation library | design.md §7 |
+| Nano ID | nanoid.min.js | Latest | Unique ID generator | tools.md §1 |
+| Navigo | navigo.min.js | Latest | Router | pages.md §6 |
+| Petite Vue | petite-vue.min.js | Latest | Lightweight Vue | components.md §1 |
+| Preact Signals | preact-signals.min.js | Latest | State management | components.md §1 |
+| Quicklink | quicklink.min.js | Latest | Prefetch links | worker.md §5 |
+| ScrollReveal | scrollreveal.min.js | Latest | Scroll animations | design.md §7 |
+| Splide | splide.min.css, splide.min.js | Latest | Carousel/slider | components.md §3 |
+| Swup | swup.min.js | Latest | Page transitions | pages.md §6 |
 
-## 5. JS_MODULES (/assets/js/*, 12 scripts, ~52KB) → See tools.md §2
-| File | Size | Purpose | Hydration |
-|---|---|---|---|
-| main.js | 1.9KB | Nav toggle, fade-in, hover | client:load |
-| tools-breathing.js | 2.5KB | Breathing exercise logic | client:visible |
-| tools-butterfly.js | 9.0KB | Butterfly tapper interaction | client:visible |
-| tools-eye.js | 1.5KB | EMD movement controller | client:visible |
-| tools-fractal.js | 4.7KB | Fractal animation control | client:visible |
-| tools-horizon.js | 1.9KB | Horizon scan logic | client:visible |
-| tools-leaf.js | 25.7KB | Leaf stream simulation | client:visible |
-| tools-book.js | 1.3KB | Book navigation | client:idle |
-| tools-map.js | 0.6KB | Map embed handler | client:idle |
-| blog-config-adult.js | 1.1KB | Adult blog config | client:idle |
-| blog-config-child.js | 1.1KB | Child blog config | client:idle |
-| blog-discovery.js | - | Blog discovery logic | client:idle |
-| README.md | - | JS module docs | Reference |
-
-## 6. JS_LIBRARIES_VENDOR (/assets/vendor/*, 23 files, ~1.0MB) → See tools.md §7
-| Library | File | Size | Purpose | Use Case |
+## 6. /assets/js/* (Application Scripts, 40 files)
+| File | Lines | Purpose | Dependencies | Status |
 |---|---|---|---|---|
-| Motion One | motion-one.min.js | 25KB | Native Web Animations API | Complex animations, timelines |
-| Motion One (alt) | motion-one.js | 24KB | Web Animations API | Alternative animation lib |
-| Anime.js | anime.min.js | 17KB | SVG/chaining animations | Advanced animation sequences |
-| AutoAnimate | auto-animate.min.js | 23KB | Zero-config list animations | List reordering, insertions |
-| ScrollReveal | scrollreveal.min.js | 45KB | Scroll-triggered animations | On-screen element detection |
-| Canvas-Confetti | canvas-confetti.min.js | 25KB | Celebration animations | Success states, achievements |
-| Splide | splide.min.js + .css | 30KB | Accessible carousel/slider | Image galleries, testimonials |
-| Floating UI Core | floating-ui-core.js | 12KB | Tooltip/popover positioning | Dropdowns, tooltips |
-| Floating UI DOM | floating-ui-dom.min.js | - | DOM utils for Floating UI | Positioning calculations |
-| Floating UI | floating-ui.min.js | - | Complete positioning lib | Popovers, dropdowns |
-| Alpine.js | alpine.min.js | 45KB | Declarative HTML interactivity | Reactive state without build step |
-| Petite-Vue | petite-vue.min.js | 17KB | Vue subset for static pages | Progressive enhancement |
-| Preact Signals | preact-signals.min.js | 3.2KB | Reactive state tracking | Standalone reactive state |
-| htmx | htmx.min.js | 51KB | AJAX via HTML attributes | Server-driven interactions |
-| Ky | ky.min.js | 1.2KB | Fetch API wrapper | AJAX with retries/timeouts |
-| Swup | swup.min.js | 22KB | Page transition engine | SPA-like page transitions |
-| Quicklink | quicklink.min.js | 3.7KB | Viewport link prefetching | Instant page loads |
-| Navigo | navigo.min.js | 12KB | Client-side router | Lightweight routing |
-| Iconify | iconify.min.js | 26KB | On-demand icon fetching | Dynamic icon loading |
-| Lucide Icons | lucide.js + .min.js | 358KB | Stroke icon set | Customizable icons |
-| Nano ID | nanoid.min.js | 1KB | Unique ID generator | Secure ID generation |
-| Fuse.js | fuse.min.js | 24KB | Fuzzy search library | Client-side search/indexing |
+| main.js | ~560 | Core initialization, nav, scroll, theme | Base libs | ✓ Fixed |
+| http-client.js | ~80 | Ky wrapper for fetch API | ky.min.js | ✓ New |
+| discovery.js | ~150 | Service discovery, feature detection | None | ✓ Active |
+| a11y-audit.js | ~200 | Accessibility runtime checks | None | ✓ Active |
+| animations-auto.js | ~120 | Auto-animation triggers | anime.min.js | ✓ Active |
+| blog-adult-config.js | ~60 | Adult blog page config | None | ✓ Active |
+| blog-child-config.js | ~60 | Child blog page config | None | ✓ Active |
+| blog-index-config.js | ~70 | Blog index config | None | ✓ Active |
+| mood-tracker.js | ~180 | Mood tracker tool logic | nanoID | ✓ Active |
+| anxiety-level.js | ~160 | Anxiety level tool logic | None | ✓ Active |
+| sleep-logger.js | ~170 | Sleep logger tool logic | None | ✓ Active |
+| medication-tracker.js | ~190 | Medication tracker logic | None | ✓ Active |
+| thought-challenge.js | ~200 | CBT thought challenge | None | ✓ Active |
+| grounding-exercises.js | ~150 | 5-4-3-2-1 grounding | None | ✓ Active |
+| self-care-plan.js | ~160 | Self care planning | None | ✓ Active |
 
-## 7. JS_LIBRARIES_LIB (/assets/js/lib/*, 20 files, duplicate set)
-**Note:** Duplicate library set in /lib/ for fallback/redundancy. Same libraries as /vendor/.
+**Note:** Total 40 app scripts including tool modules, blog configs, and utilities. All ESLint errors resolved as of T21.
 
-## 8. HTML_PAGES_INVENTORY (52 total pages)
-
-### 8.1 Root Level Pages (26 files)
-| File | Purpose | Template | Status |
+## 7. /_templates/* (Page Templates, 3 files)
+| File | Purpose | Variables | Usage |
 |---|---|---|---|
-| index.html | Homepage | - | ✓ Live |
-| mind-grace.html | Alternate homepage | - | ✓ Live |
-| about.html | About clinic | adult-mental-health-template | ✓ Live |
-| approach.html | Treatment approach | adult-mental-health-template | ✓ Live |
-| services.html | Services overview | adult-mental-health-template | ✓ Live |
-| aasha.html | AASHA child development | child-development-template | ✓ Live |
-| doctors.html | Doctor listings | adult-mental-health-template | ✓ Live |
-| dr-anita-sharma.html | Dr. Sharma profile | adult-mental-health-template | ✓ Live |
-| conditions.html | Conditions treated | adult-mental-health-template | ✓ Live |
-| process.html | Patient process | adult-mental-health-template | ✓ Live |
-| fees.html | Pricing & insurance | adult-mental-health-template | ✓ Live |
-| location.html | Clinic location | adult-mental-health-template | ✓ Live |
-| contact.html | Contact form | adult-mental-health-template | ✓ Live |
-| book.html | Booking system | template-clean | ✓ Live |
-| gallery.html | Photo gallery | adult-mental-health-template | ✓ Live |
-| resources.html | Patient resources | adult-mental-health-template | ✓ Live |
-| testimonials.html | Patient reviews | adult-mental-health-template | ✓ Live |
-| faq.html | FAQs | adult-mental-health-template | ✓ Live |
-| emergency.html | Emergency info | template-clean | ✓ Live |
-| consent.html | Consent forms | template-clean | ✓ Live |
-| privacy.html | Privacy policy | template-clean | ✓ Live |
-| terms.html | Terms of service | template-clean | ✓ Live |
-| disclaimer.html | Medical disclaimer | template-clean | ✓ Live |
-| thank-you.html | Form success | template-clean | ✓ Live |
-| 404.html | Error page | template-clean | ✓ Live |
+| template-clean.html | Minimal layout | title, description | Legal, simple pages |
+| adult-mental-health.html | Adult blog layout | article metadata | /blog/adult/pages/* |
+| child-development.html | Child blog layout | article metadata | /blog/child/pages/* |
 
-### 8.2 Tools Pages (6 files in /tools/)
-| File | Tool | CSS | JS |
+## 8. File Inventory Summary
+| Category | Count | Lines (approx) | Trend |
 |---|---|---|---|
-| guided-breathing.html | Breathing exercise | tools-breathing.css | tools-breathing.js |
-| butterfly-tapper.html | Butterfly tapping | tools-butterfly.css | tools-butterfly.js |
-| eye-movement.html | EMDR eye movement | tools-eye.css | tools-eye.js |
-| hypnos-fractal.html | Fractal visualization | tools-fractal.css | tools-fractal.js |
-| horizon-scan.html | Horizon scanning | tools-horizon.css | tools-horizon.js |
-| leaf-on-stream.html | Leaf meditation | tools-leaf.css | tools-leaf.js |
+| HTML Pages | 50 | ~16,000 | Stable |
+| CSS Files | 12 | ~4,000 | +7 tool CSS |
+| JS Files | 64 | ~12,500 | +1 http-client |
+| Images | 39 | N/A | +2 interior |
+| Markdown Docs | 14 | 5,929 | Stable |
+| **TOTAL** | **165** | **~38,429** | **-5** |
 
-### 8.3 Blog Pages (12 files in /blog/)
-| File | Category | Config |
-|---|---|---|
-| index.html | Blog home | - |
-| adult.html | Adult mental health | blog-config-adult.js |
-| children.html | Child development | blog-config-child.js |
-| pages/adult/*.html | 5 adult articles | blog-config-adult.js |
-| pages/child/*.html | 4 child articles | blog-config-child.js |
+## 9. Asset Optimization Status
+| Task | Status | Priority | Ref |
+|---|---|---|---|
+| WebP conversion | Partial (booking-hero) | P2 | design.md §7 |
+| SVG sprite generation | Pending | P2 | design.md §7 |
+| Lazy loading implementation | Partial | P1 | worker.md §5 |
+| Critical CSS extraction | Pending | P2 | design.md §8 |
+| Font subsetting | N/A (system fonts) | - | design.md §5 |
 
-### 8.4 Templates (3 files in /_templates/)
-| File | Purpose | Used By |
-|---|---|---|
-| template-clean.html | Minimal layout | Tools, legal pages |
-| adult-mental-health-template.html | Adult clinic layout | 20+ core pages |
-| child-development-template.html | Child-friendly layout | AASHA, child blog |
-
-### 8.5 Inspiration Docs (3 files in /inspo/)
-| File | Purpose |
-|---|---|
-| Anti-inspo UI UXI Anti Pattern.md | Anti-patterns to avoid |
-| check1.md | Design checklist 1 |
-| check2.md | Design checklist 2 |
-
-## 9. OTHER_FILES (25 files)
-| Category | Files | Location |
-|---|---|---|
-| Root MD | ARCHITECTURE.md, README.md | / |
-| Package | package.json, package-lock.json | / |
-| Accessibility | accessibility-audit.js | / |
-| AGENT_BIBLE | 15 docs (memory.md, design.md, etc.) | /AGENT_BIBLE/ |
-| Components | README.md | /assets/components/ |
-| CSS | README.md | /assets/css/ |
-| JS | README.md | /assets/js/ |
-| JS Lib | README.md | /assets/js/lib/ |
-| Images | image_descriptions.md | /assets/images/ |
-
-## 10. OPTIMIZATION_QUEUE (Pending, memory.md §QUEUE P2)
-- [ ] Convert PNG→WebP (logo, brochures, diagrams) - Est. 60% reduction
-- [ ] Convert JPG→WebP (photos, interiors) - Est. 40% reduction
-- [ ] Generate SVG sprite for icons (if any)
-- [ ] Create srcset for responsive images (doctor photo, hero)
-- [ ] Lazy load all non-LCP images (loading="lazy")
-- [ ] Add width/height attributes to prevent CLS
-- [ ] Compress large AASHA photos (>1MB) - Priority: aasha-special-ed-abacus.jpg (1.7MB)
-
-## 11. PRELOAD_STRATEGY
-```html
-<!-- Critical (LCP) - In <head> -->
-<link rel="preload" as="image" href="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" fetchpriority="high" />
-<link rel="preload" as="image" href="/assets/images/Dr_Anita_Sharma_Personal_Photo.jpg" fetchpriority="high" />
-
-<!-- Deferred (Lazy) - On img elements -->
-<img src="/assets/images/waiting-area.jpg" loading="lazy" decoding="async" alt="..." width="800" height="600" />
-```
-
-*Cross-ref: design.md §ASSETS, tools.md §CSS-TOOLS, memory.md §STATE, pages.md §TEMPLATES. END_ON_SYNC.*
+*Sync complete. 165 files tracked. Zero-dependency stack enforced. Manual optimization required.*

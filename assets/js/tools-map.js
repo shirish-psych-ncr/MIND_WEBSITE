@@ -1,12 +1,22 @@
 /**
  * Location Page - Leaflet Map Initialization
+ * Note: Requires Leaflet CSS and JS to be loaded before this script
  */
 
 (function() {
   'use strict';
 
   document.addEventListener('DOMContentLoaded', function() {
-    if (!window.L) return;
+    // Check if Leaflet is available
+    if (typeof L === 'undefined') {
+      console.warn('Leaflet library not loaded. Map will not be displayed.');
+      return;
+    }
+
+    const mapElement = document.getElementById('leaflet-map');
+    if (!mapElement) {
+      return; // Not on location page
+    }
 
     const map = L.map('leaflet-map', { scrollWheelZoom: false })
       .setView([28.4910152, 77.5132324], 14);
