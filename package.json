@@ -1,45 +1,45 @@
 {
-  "devDependencies": {
-    "@axe-core/cli": "^4.12.1",
-    "@eslint/js": "^10.0.1",
-    "axe-core": "^4.12.1",
-    "eslint": "^10.7.0",
-    "globals": "^17.7.0",
-    "htmllint": "^0.8.0",
-    "prettier": "^3.9.5",
-    "puppeteer-core": "^24.43.1",
-    "stylelint": "^17.14.0",
-    "stylelint-config-standard": "^40.0.0"
-  },
-  "name": "workspace",
-  "version": "1.0.0",
-  "description": "[![Live Site](https://img.shields.io/badge/live-site-671B50?style=flat-square)](https://mindgracencr.in/) [![Technology](https://img.shields.io/badge/HTML5-CSS3-Vanilla%20JS-success?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![Architecture](https://img.shields.io/badge/architecture-modular--CSS-blue?style=flat-square)](./AGENT_BIBLE/ARCHITECTURE.md) [![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1-AA-orange?style=flat-square)](https://www.w3.org/WAI/WCAG21/quickref/)",
-  "main": "accessibility-audit.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@preact/signals": "^2.9.3",
-    "alpinejs": "^3.15.12",
-    "animejs": "^4.5.0",
-    "biome": "^0.2.2",
-    "fuse.js": "^7.4.2",
-    "htmx": "^0.0.2",
-    "iconify-icon": "^3.0.2",
-    "motion": "^12.42.2",
-    "nanoid": "^5.1.16",
-    "navigo": "^8.11.1",
-    "petite-vue": "^0.4.1",
-    "preact": "^10.29.5",
-    "quicklink": "^3.0.1",
-    "swup": "^4.9.2",
-    "ui-ux-pro-max-cli": "^2.10.2"
-  },
-  "allowScripts": {
-    "chromedriver@150.0.1": true,
-    "core-js@2.6.12": true
-  }
+	"devDependencies": {
+		"@axe-core/cli": "^4.12.1",
+		"@eslint/js": "^10.0.1",
+		"@playwright/test": "^1.61.1",
+		"@types/node": "^26.1.1",
+		"axe-core": "^4.12.1",
+		"eslint": "^10.7.0",
+		"globals": "^17.7.0",
+		"htmllint": "^0.8.0",
+		"prettier": "^3.9.5",
+		"puppeteer-core": "^24.43.1",
+		"stylelint": "^17.14.0",
+		"stylelint-config-standard": "^40.0.0"
+	},
+	"name": "workspace",
+	"version": "1.0.0",
+	"description": "[![Live Site](https://img.shields.io/badge/live-site-671B50?style=flat-square)](https://mindgracencr.in/) [![Technology](https://img.shields.io/badge/HTML5-CSS3-Vanilla%20JS-success?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![Architecture](https://img.shields.io/badge/architecture-modular--CSS-blue?style=flat-square)](./AGENT_BIBLE/ARCHITECTURE.md) [![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1-AA-orange?style=flat-square)](https://www.w3.org/WAI/WCAG21/quickref/)",
+	"main": "accessibility-audit.js",
+	"scripts": {},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@preact/signals": "^2.9.3",
+		"alpinejs": "^3.15.12",
+		"animejs": "^4.5.0",
+		"biome": "^0.2.2",
+		"fuse.js": "^7.4.2",
+		"htmx": "^0.0.2",
+		"iconify-icon": "^3.0.2",
+		"motion": "^12.42.2",
+		"nanoid": "^5.1.16",
+		"navigo": "^8.11.1",
+		"petite-vue": "^0.4.1",
+		"preact": "^10.29.5",
+		"quicklink": "^3.0.1",
+		"swup": "^4.9.2",
+		"ui-ux-pro-max-cli": "^2.10.2"
+	},
+	"allowScripts": {
+		"chromedriver@150.0.1": true,
+		"core-js@2.6.12": true
+	}
 }

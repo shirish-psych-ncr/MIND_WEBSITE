@@ -1,15 +1,15 @@
 {
-  "files": [
-    "early-signs-of-autism.html",
-    "school-concerns-and-adhd.html",
-    "sensory-overload-at-home.html",
-    "speech-delay-red-flags.html"
-  ],
-  "pinned": ["speech-delay-red-flags.html", "early-signs-of-autism.html"],
-  "mostSearched": ["speech-delay-red-flags.html"],
-  "symptoms": ["speech-delay", "autism", "school", "adhd", "sensory"],
-  "clusters": [
-    { "label": "Autism & Early Signs", "tags": ["autism", "red-flags"] },
-    { "label": "Speech & Communication", "tags": ["speech-delay"] }
-  ]
+	"files": [
+		"early-signs-of-autism.html",
+		"school-concerns-and-adhd.html",
+		"sensory-overload-at-home.html",
+		"speech-delay-red-flags.html"
+	],
+	"pinned": ["speech-delay-red-flags.html", "early-signs-of-autism.html"],
+	"mostSearched": ["speech-delay-red-flags.html"],
+	"symptoms": ["speech-delay", "autism", "school", "adhd", "sensory"],
+	"clusters": [
+		{ "label": "Autism & Early Signs", "tags": ["autism", "red-flags"] },
+		{ "label": "Speech & Communication", "tags": ["speech-delay"] }
+	]
 }

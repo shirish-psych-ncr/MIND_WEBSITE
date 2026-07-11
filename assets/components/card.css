@@ -6,587 +6,587 @@
 
 /* --- 1. BASE CARD --- */
 .card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: clamp(2rem, 4vw, 3rem);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
-  border: 1px solid rgba(103, 27, 80, 0.08);
-  display: flex;
-  flex-direction: column;
-  color: var(--text-body);
-  content-visibility: auto;
-  contain-intrinsic-size: 0 300px;
+	background: var(--white);
+	border-radius: var(--radius-lg);
+	padding: clamp(2rem, 4vw, 3rem);
+	box-shadow: var(--shadow-sm);
+	transition: all var(--transition-base);
+	border: 1px solid rgba(103, 27, 80, 0.08);
+	display: flex;
+	flex-direction: column;
+	color: var(--text-body);
+	content-visibility: auto;
+	contain-intrinsic-size: 0 300px;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(103, 27, 80, 0.15);
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-md);
+	border-color: rgba(103, 27, 80, 0.15);
 }
 
 .card:focus-within {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
 }
 
 /* Card variants */
 .card-compact {
-  padding: clamp(1.5rem, 3vw, 2rem);
+	padding: clamp(1.5rem, 3vw, 2rem);
 }
 
 .card-elevated {
-  box-shadow: var(--shadow-md);
-  border: none;
+	box-shadow: var(--shadow-md);
+	border: none;
 }
 
 .card-outlined {
-  background: transparent;
-  border: 2px solid rgba(103, 27, 80, 0.2);
-  box-shadow: none;
+	background: transparent;
+	border: 2px solid rgba(103, 27, 80, 0.2);
+	box-shadow: none;
 }
 
 /* --- 2. SERVICE CARD (Icon + Content) --- */
 .service-card {
-  text-align: center;
-  align-items: center;
+	text-align: center;
+	align-items: center;
 }
 
 .service-card .card-icon {
-  width: clamp(64px, 10vw, 80px);
-  height: clamp(64px, 10vw, 80px);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--space-lg);
-  flex-shrink: 0;
+	width: clamp(64px, 10vw, 80px);
+	height: clamp(64px, 10vw, 80px);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: var(--space-lg);
+	flex-shrink: 0;
 }
 
 .service-card .card-icon .icon {
-  width: clamp(32px, 5vw, 40px);
-  height: clamp(32px, 5vw, 40px);
-  color: var(--primary);
+	width: clamp(32px, 5vw, 40px);
+	height: clamp(32px, 5vw, 40px);
+	color: var(--primary);
 }
 
 .service-card h3 {
-  font-size: var(--fs-h3);
-  font-weight: 600;
-  margin-bottom: var(--space-md);
-  color: var(--text-dark);
+	font-size: var(--fs-h3);
+	font-weight: 600;
+	margin-bottom: var(--space-md);
+	color: var(--text-dark);
 }
 
 .service-card p {
-  font-size: var(--fs-body);
-  line-height: var(--lh-relaxed);
-  margin-bottom: var(--space-lg);
-  color: var(--text-body);
+	font-size: var(--fs-body);
+	line-height: var(--lh-relaxed);
+	margin-bottom: var(--space-lg);
+	color: var(--text-body);
 }
 
 .service-card .card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  color: var(--primary);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-xs);
+	color: var(--primary);
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
 .service-card .card-link:hover {
-  gap: var(--space-sm);
+	gap: var(--space-sm);
 }
 
 .service-card .card-link .icon {
-  width: 18px;
-  height: 18px;
+	width: 18px;
+	height: 18px;
 }
 
 /* Pastel icon backgrounds */
 .service-card .pastel-lavender {
-  background: #e8e4f0;
+	background: #e8e4f0;
 }
 
 .service-card .pastel-sage {
-  background: #e4efe8;
+	background: #e4efe8;
 }
 
 .service-card .pastel-beige {
-  background: #f0ebe4;
+	background: #f0ebe4;
 }
 
 .service-card .pastel-dusty-rose {
-  background: #f0e4e8;
+	background: #f0e4e8;
 }
 
 .service-card .pastel-powder-blue {
-  background: #e4ecf0;
+	background: #e4ecf0;
 }
 
 /* --- 3. TESTIMONIAL CARD --- */
 .testimonial-card {
-  background: var(--cream);
-  border-left: 4px solid var(--primary);
-  text-align: left;
+	background: var(--cream);
+	border-left: 4px solid var(--primary);
+	text-align: left;
 }
 
 .testimonial-card .testimonial-rating {
-  display: flex;
-  gap: 4px;
-  margin-bottom: var(--space-md);
-  color: #ffb800;
+	display: flex;
+	gap: 4px;
+	margin-bottom: var(--space-md);
+	color: #ffb800;
 }
 
 .testimonial-card .testimonial-rating .icon {
-  width: 20px;
-  height: 20px;
+	width: 20px;
+	height: 20px;
 }
 
 .testimonial-card blockquote {
-  font-size: var(--fs-body);
-  line-height: var(--lh-relaxed);
-  font-style: italic;
-  margin-bottom: var(--space-lg);
-  color: var(--text-body);
+	font-size: var(--fs-body);
+	line-height: var(--lh-relaxed);
+	font-style: italic;
+	margin-bottom: var(--space-lg);
+	color: var(--text-body);
 }
 
 .testimonial-card .testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
+	display: flex;
+	align-items: center;
+	gap: var(--space-md);
 }
 
 .testimonial-card .author-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	object-fit: cover;
 }
 
 .testimonial-card .author-info strong {
-  display: block;
-  font-size: var(--fs-small);
-  color: var(--text-dark);
-  margin-bottom: 2px;
+	display: block;
+	font-size: var(--fs-small);
+	color: var(--text-dark);
+	margin-bottom: 2px;
 }
 
 .testimonial-card .author-info span {
-  font-size: var(--fs-tiny);
-  color: var(--text-muted);
+	font-size: var(--fs-tiny);
+	color: var(--text-muted);
 }
 
 /* --- 4. FEATURE CARD --- */
 .feature-card {
-  text-align: center;
-  padding: clamp(2rem, 3.5vw, 2.5rem);
+	text-align: center;
+	padding: clamp(2rem, 3.5vw, 2.5rem);
 }
 
 .feature-card .feature-icon {
-  width: clamp(56px, 9vw, 72px);
-  height: clamp(56px, 9vw, 72px);
-  margin: 0 auto var(--space-lg);
-  background: linear-gradient(
-    135deg,
-    rgba(103, 27, 80, 0.1),
-    rgba(103, 27, 80, 0.05)
-  );
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: clamp(56px, 9vw, 72px);
+	height: clamp(56px, 9vw, 72px);
+	margin: 0 auto var(--space-lg);
+	background: linear-gradient(
+		135deg,
+		rgba(103, 27, 80, 0.1),
+		rgba(103, 27, 80, 0.05)
+	);
+	border-radius: var(--radius-md);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .feature-card .feature-icon .icon {
-  width: clamp(28px, 4.5vw, 36px);
-  height: clamp(28px, 4.5vw, 36px);
-  color: var(--primary);
+	width: clamp(28px, 4.5vw, 36px);
+	height: clamp(28px, 4.5vw, 36px);
+	color: var(--primary);
 }
 
 .feature-card h3 {
-  font-size: var(--fs-h4);
-  font-weight: 600;
-  margin-bottom: var(--space-md);
-  color: var(--text-dark);
+	font-size: var(--fs-h4);
+	font-weight: 600;
+	margin-bottom: var(--space-md);
+	color: var(--text-dark);
 }
 
 .feature-card p {
-  font-size: var(--fs-body);
-  line-height: var(--lh-relaxed);
-  color: var(--text-body);
+	font-size: var(--fs-body);
+	line-height: var(--lh-relaxed);
+	color: var(--text-body);
 }
 
 /* --- 5. PILLAR CARD (Biopsychosocial Model) --- */
 .pillar-card {
-  position: relative;
-  overflow: hidden;
-  min-height: 280px;
+	position: relative;
+	overflow: hidden;
+	min-height: 280px;
 }
 
 .pillar-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--primary);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: var(--primary);
 }
 
 .pillar-card .pillar-number {
-  font-size: clamp(3rem, 5vw, 4rem);
-  font-weight: 700;
-  color: rgba(103, 27, 80, 0.1);
-  line-height: 1;
-  margin-bottom: var(--space-md);
+	font-size: clamp(3rem, 5vw, 4rem);
+	font-weight: 700;
+	color: rgba(103, 27, 80, 0.1);
+	line-height: 1;
+	margin-bottom: var(--space-md);
 }
 
 .pillar-card h3 {
-  font-size: var(--fs-h3);
-  font-weight: 600;
-  margin-bottom: var(--space-md);
-  color: var(--text-dark);
+	font-size: var(--fs-h3);
+	font-weight: 600;
+	margin-bottom: var(--space-md);
+	color: var(--text-dark);
 }
 
 .pillar-card p {
-  font-size: var(--fs-body);
-  line-height: var(--lh-relaxed);
-  color: var(--text-body);
+	font-size: var(--fs-body);
+	line-height: var(--lh-relaxed);
+	color: var(--text-body);
 }
 
 /* --- 6. CONTACT CARD --- */
 .contact-card {
-  text-align: center;
-  padding: clamp(2.5rem, 5vw, 3.5rem);
+	text-align: center;
+	padding: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 .contact-card .contact-icon {
-  width: clamp(72px, 12vw, 96px);
-  height: clamp(72px, 12vw, 96px);
-  margin: 0 auto var(--space-xl);
-  background: linear-gradient(
-    135deg,
-    rgba(103, 27, 80, 0.15),
-    rgba(103, 27, 80, 0.08)
-  );
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: clamp(72px, 12vw, 96px);
+	height: clamp(72px, 12vw, 96px);
+	margin: 0 auto var(--space-xl);
+	background: linear-gradient(
+		135deg,
+		rgba(103, 27, 80, 0.15),
+		rgba(103, 27, 80, 0.08)
+	);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .contact-card .contact-icon .icon {
-  width: clamp(36px, 6vw, 48px);
-  height: clamp(36px, 6vw, 48px);
-  color: var(--primary);
+	width: clamp(36px, 6vw, 48px);
+	height: clamp(36px, 6vw, 48px);
+	color: var(--primary);
 }
 
 .contact-card h3 {
-  font-size: var(--fs-h3);
-  font-weight: 600;
-  margin-bottom: var(--space-md);
-  color: var(--text-dark);
+	font-size: var(--fs-h3);
+	font-weight: 600;
+	margin-bottom: var(--space-md);
+	color: var(--text-dark);
 }
 
 .contact-card p {
-  font-size: var(--fs-body);
-  line-height: var(--lh-relaxed);
-  color: var(--text-body);
-  margin-bottom: var(--space-lg);
+	font-size: var(--fs-body);
+	line-height: var(--lh-relaxed);
+	color: var(--text-body);
+	margin-bottom: var(--space-lg);
 }
 
 .contact-card a {
-  color: var(--primary);
-  font-weight: 600;
-  text-decoration: none;
+	color: var(--primary);
+	font-weight: 600;
+	text-decoration: none;
 }
 
 .contact-card a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* --- 7. PROGRAM CARD (AASHA Initiative) --- */
 .program-card {
-  background: linear-gradient(135deg, #fdf2f4, #fef9f3);
-  border: 1px solid rgba(103, 27, 80, 0.1);
+	background: linear-gradient(135deg, #fdf2f4, #fef9f3);
+	border: 1px solid rgba(103, 27, 80, 0.1);
 }
 
 .program-card .program-badge {
-  display: inline-block;
-  padding: var(--space-xs) var(--space-md);
-  background: var(--primary);
-  color: var(--white);
-  border-radius: var(--radius-pill);
-  font-size: var(--fs-tiny);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: var(--space-md);
+	display: inline-block;
+	padding: var(--space-xs) var(--space-md);
+	background: var(--primary);
+	color: var(--white);
+	border-radius: var(--radius-pill);
+	font-size: var(--fs-tiny);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: var(--space-md);
 }
 
 .program-card h3 {
-  font-size: var(--fs-h3);
-  font-weight: 600;
-  margin-bottom: var(--space-md);
-  color: var(--text-dark);
+	font-size: var(--fs-h3);
+	font-weight: 600;
+	margin-bottom: var(--space-md);
+	color: var(--text-dark);
 }
 
 .program-card p {
-  font-size: var(--fs-body);
-  line-height: var(--lh-relaxed);
-  color: var(--text-body);
-  margin-bottom: var(--space-lg);
+	font-size: var(--fs-body);
+	line-height: var(--lh-relaxed);
+	color: var(--text-body);
+	margin-bottom: var(--space-lg);
 }
 
 .program-card .program-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
-  padding-top: var(--space-lg);
-  border-top: 1px solid rgba(103, 27, 80, 0.1);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--space-md);
+	margin-top: var(--space-lg);
+	padding-top: var(--space-lg);
+	border-top: 1px solid rgba(103, 27, 80, 0.1);
 }
 
 .program-card .stat-item {
-  text-align: center;
+	text-align: center;
 }
 
 .program-card .stat-number {
-  display: block;
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  font-weight: 700;
-  color: var(--primary);
-  line-height: 1.2;
+	display: block;
+	font-size: clamp(1.75rem, 3vw, 2.25rem);
+	font-weight: 700;
+	color: var(--primary);
+	line-height: 1.2;
 }
 
 .program-card .stat-label {
-  font-size: var(--fs-tiny);
-  color: var(--text-muted);
-  margin-top: 4px;
+	font-size: var(--fs-tiny);
+	color: var(--text-muted);
+	margin-top: 4px;
 }
 
 /* --- 8. CONDITION CARD --- */
 .condition-card {
-  text-align: left;
+	text-align: left;
 }
 
 .condition-card .condition-icon {
-  width: clamp(48px, 8vw, 64px);
-  height: clamp(48px, 8vw, 64px);
-  background: linear-gradient(
-    135deg,
-    rgba(103, 27, 80, 0.15),
-    rgba(103, 27, 80, 0.08)
-  );
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--space-lg);
+	width: clamp(48px, 8vw, 64px);
+	height: clamp(48px, 8vw, 64px);
+	background: linear-gradient(
+		135deg,
+		rgba(103, 27, 80, 0.15),
+		rgba(103, 27, 80, 0.08)
+	);
+	border-radius: var(--radius-md);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: var(--space-lg);
 }
 
 .condition-card .condition-icon .icon {
-  width: clamp(24px, 4vw, 32px);
-  height: clamp(24px, 4vw, 32px);
-  color: var(--primary);
+	width: clamp(24px, 4vw, 32px);
+	height: clamp(24px, 4vw, 32px);
+	color: var(--primary);
 }
 
 .condition-card h3 {
-  font-size: var(--fs-h4);
-  font-weight: 600;
-  margin-bottom: var(--space-md);
-  color: var(--text-dark);
+	font-size: var(--fs-h4);
+	font-weight: 600;
+	margin-bottom: var(--space-md);
+	color: var(--text-dark);
 }
 
 .condition-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-lg) 0;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 var(--space-lg) 0;
 }
 
 .condition-card li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-sm);
-  font-size: var(--fs-body);
-  color: var(--text-body);
-  margin-bottom: var(--space-sm);
+	display: flex;
+	align-items: flex-start;
+	gap: var(--space-sm);
+	font-size: var(--fs-body);
+	color: var(--text-body);
+	margin-bottom: var(--space-sm);
 }
 
 .condition-card li::before {
-  content: "✓";
-  color: var(--primary);
-  font-weight: 700;
-  flex-shrink: 0;
+	content: "✓";
+	color: var(--primary);
+	font-weight: 700;
+	flex-shrink: 0;
 }
 
 /* --- 9. PRICING CARD --- */
 .pricing-card {
-  text-align: center;
-  position: relative;
+	text-align: center;
+	position: relative;
 }
 
 .pricing-card.popular {
-  border: 2px solid var(--primary);
-  box-shadow: var(--shadow-md);
+	border: 2px solid var(--primary);
+	box-shadow: var(--shadow-md);
 }
 
 .pricing-card .popular-badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--primary);
-  color: var(--white);
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--radius-pill);
-  font-size: var(--fs-tiny);
-  font-weight: 600;
-  text-transform: uppercase;
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--primary);
+	color: var(--white);
+	padding: var(--space-xs) var(--space-md);
+	border-radius: var(--radius-pill);
+	font-size: var(--fs-tiny);
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 .pricing-card h3 {
-  font-size: var(--fs-h3);
-  font-weight: 600;
-  margin-bottom: var(--space-sm);
-  color: var(--text-dark);
+	font-size: var(--fs-h3);
+	font-weight: 600;
+	margin-bottom: var(--space-sm);
+	color: var(--text-dark);
 }
 
 .pricing-card .price {
-  font-size: clamp(2.5rem, 4vw, 3rem);
-  font-weight: 700;
-  color: var(--primary);
-  margin: var(--space-lg) 0;
+	font-size: clamp(2.5rem, 4vw, 3rem);
+	font-weight: 700;
+	color: var(--primary);
+	margin: var(--space-lg) 0;
 }
 
 .pricing-card .price span {
-  font-size: var(--fs-body);
-  font-weight: 400;
-  color: var(--text-muted);
+	font-size: var(--fs-body);
+	font-weight: 400;
+	color: var(--text-muted);
 }
 
 .pricing-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-xl) 0;
-  text-align: left;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 var(--space-xl) 0;
+	text-align: left;
 }
 
 .pricing-card li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-sm);
-  font-size: var(--fs-body);
-  color: var(--text-body);
-  margin-bottom: var(--space-sm);
+	display: flex;
+	align-items: flex-start;
+	gap: var(--space-sm);
+	font-size: var(--fs-body);
+	color: var(--text-body);
+	margin-bottom: var(--space-sm);
 }
 
 .pricing-card li::before {
-  content: "✓";
-  color: var(--success);
-  font-weight: 700;
-  flex-shrink: 0;
+	content: "✓";
+	color: var(--success);
+	font-weight: 700;
+	flex-shrink: 0;
 }
 
 /* --- 10. GALLERY CARD --- */
 .gallery-card {
-  padding: 0;
-  overflow: hidden;
-  aspect-ratio: 4/3;
+	padding: 0;
+	overflow: hidden;
+	aspect-ratio: 4 / 3;
 }
 
 .gallery-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease;
 }
 
 .gallery-card:hover img {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .gallery-card .gallery-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--space-lg);
-  background: linear-gradient(to top, rgba(103, 27, 80, 0.8), transparent);
-  color: var(--white);
-  font-size: var(--fs-small);
-  font-weight: 600;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: var(--space-lg);
+	background: linear-gradient(to top, rgba(103, 27, 80, 0.8), transparent);
+	color: var(--white);
+	font-size: var(--fs-small);
+	font-weight: 600;
 }
 
 /* --- 11. RESPONSIVE ADJUSTMENTS --- */
 
 /* Tablet and up */
 @media (orientation: landscape) {
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+	.card-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
 /* Mobile */
 @media (orientation: portrait) {
-  .card {
-    padding: clamp(1.5rem, 3vw, 2rem);
-  }
+	.card {
+		padding: clamp(1.5rem, 3vw, 2rem);
+	}
 
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
+	.card-grid {
+		grid-template-columns: 1fr;
+	}
 
-  .program-card .program-stats {
-    grid-template-columns: 1fr 1fr;
-  }
+	.program-card .program-stats {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 /* --- 12. ACCESSIBILITY --- */
 
 /* High contrast mode */
 @media (prefers-contrast: high) {
-  .card {
-    border-width: 2px;
-  }
+	.card {
+		border-width: 2px;
+	}
 
-  .card:hover {
-    border-color: var(--text-dark);
-  }
+	.card:hover {
+		border-color: var(--text-dark);
+	}
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .card,
-  .card img {
-    transition: none;
-  }
+	.card,
+	.card img {
+		transition: none;
+	}
 
-  .card:hover {
-    transform: none;
-  }
+	.card:hover {
+		transform: none;
+	}
 }
 
 /* Focus visible */
 .card:focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 3px;
+	outline: 3px solid var(--primary);
+	outline-offset: 3px;
 }
 
 /* Touch targets */
 @media (pointer: coarse) {
-  .card-link,
-  .card a {
-    min-height: 44px;
-    min-width: 44px;
-    display: inline-flex;
-    align-items: center;
-  }
+	.card-link,
+	.card a {
+		min-height: 44px;
+		min-width: 44px;
+		display: inline-flex;
+		align-items: center;
+	}
 }
 
 .skip-link {
-  color: #eb32b5;
+	color: #eb32b5;
 }
 .skip-link:focus {
-  color: #eb32b5;
-  background: #fff;
+	color: #eb32b5;
+	background: #fff;
 }

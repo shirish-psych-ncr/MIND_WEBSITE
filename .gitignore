@@ -72,3 +72,10 @@ pip-delete-this-directory.txt
 *.tar.xz
 *.tar.zst
 ```
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
