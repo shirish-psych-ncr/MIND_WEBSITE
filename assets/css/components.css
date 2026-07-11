@@ -39,9 +39,18 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
   border-color: rgba(103, 27, 80, 0.15);
 }
 
-.card-compact { padding: var(--space-lg); }
-.card-elevated { box-shadow: var(--shadow-md); border: none; }
-.card-outlined { background: transparent; border: 2px solid rgba(103, 27, 80, 0.2); box-shadow: none; }
+.card-compact {
+  padding: var(--space-lg);
+}
+.card-elevated {
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+.card-outlined {
+  background: transparent;
+  border: 2px solid rgba(103, 27, 80, 0.2);
+  box-shadow: none;
+}
 
 /* --- 2. GRID SYSTEMS - Container Query Responsive --- */
 .grid-container {
@@ -53,7 +62,11 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
   container-name: main-grid;
 }
 
-.services-grid, .features-grid, .gallery-grid, .testimonials-grid, .condition-list {
+.services-grid,
+.features-grid,
+.gallery-grid,
+.testimonials-grid,
+.condition-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(1.5rem, 3vw, 2.5rem);
@@ -98,7 +111,9 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
   .badge[role="button"],
   .badge[tabindex="0"] {
     cursor: pointer;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    transition:
+      transform var(--transition-fast),
+      box-shadow var(--transition-fast);
   }
   .badge[role="button"]:hover,
   .badge[tabindex="0"]:hover {
@@ -117,7 +132,11 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 }
 
 .badge-primary {
-  background: linear-gradient(135deg, rgba(103, 27, 80, 0.1), rgba(103, 27, 80, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(103, 27, 80, 0.1),
+    rgba(103, 27, 80, 0.05)
+  );
   color: var(--primary);
   border: 1px solid rgba(103, 27, 80, 0.2);
 }
@@ -132,7 +151,11 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 .icon-box {
   width: clamp(48px, 8vw, 64px);
   height: clamp(48px, 8vw, 64px);
-  background: linear-gradient(135deg, rgba(103, 27, 80, 0.15), rgba(103, 27, 80, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(103, 27, 80, 0.15),
+    rgba(103, 27, 80, 0.08)
+  );
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -157,11 +180,26 @@ svg[aria-hidden="true"] {
   vertical-align: middle;
 }
 
-.icon-xs { width: 12px; height: 12px; }
-.icon-sm { width: 16px; height: 16px; }
-.icon-md { width: 20px; height: 20px; }
-.icon-lg { width: 24px; height: 24px; }
-.icon-xl { width: 32px; height: 32px; }
+.icon-xs {
+  width: 12px;
+  height: 12px;
+}
+.icon-sm {
+  width: 16px;
+  height: 16px;
+}
+.icon-md {
+  width: 20px;
+  height: 20px;
+}
+.icon-lg {
+  width: 24px;
+  height: 24px;
+}
+.icon-xl {
+  width: 32px;
+  height: 32px;
+}
 
 .card-icon .icon-lg {
   width: 32px;
@@ -171,7 +209,7 @@ svg[aria-hidden="true"] {
 /* Card content styling for white cards - Accessible contrast */
 .card h3 {
   color: var(--card-heading, #0f172a);
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: var(--fs-h3);
   font-weight: 700;
   margin-bottom: var(--space-md);
@@ -187,12 +225,16 @@ svg[aria-hidden="true"] {
 
 /* Dark mode card text contrast fix */
 @media (prefers-color-scheme: dark) {
-  .card h3 { color: var(--card-heading, #FFFFFF); }
-  .card p { color: var(--card-text, #E0D0E0); }
+  .card h3 {
+    color: var(--card-heading, #ffffff);
+  }
+  .card p {
+    color: var(--card-text, #e0d0e0);
+  }
 }
 
 .card-link {
-  color: #671B50;
+  color: #671b50;
   text-decoration: none;
   font-weight: 700;
   display: inline-flex;
@@ -211,15 +253,23 @@ svg[aria-hidden="true"] {
 
 /* Dark mode card link contrast */
 @media (prefers-color-scheme: dark) {
-  .card-link { color: #FFB6C1; }
-  .card-link:hover { color: #FFC0CB; }
+  .card-link {
+    color: #ffb6c1;
+  }
+  .card-link:hover {
+    color: #ffc0cb;
+  }
 }
 
 /* Icon box inside cards - pastel circles */
 .card .card-icon {
   width: clamp(56px, 10vw, 72px);
   height: clamp(56px, 10vw, 72px);
-  background: linear-gradient(135deg, rgba(227, 151, 116, 0.15), rgba(103, 27, 80, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(227, 151, 116, 0.15),
+    rgba(103, 27, 80, 0.08)
+  );
   border-radius: var(--radius-pill);
   display: flex;
   align-items: center;
@@ -235,7 +285,8 @@ svg[aria-hidden="true"] {
 }
 
 /* --- 6. INTERACTIVE & FORM COMPONENTS - Enhanced Accessibility --- */
-.contact-form, .notice-box {
+.contact-form,
+.notice-box {
   background: var(--white);
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
@@ -243,12 +294,15 @@ svg[aria-hidden="true"] {
 }
 
 /* Improve focus visibility within forms (Fixed SCSS nesting to standard CSS) */
-.contact-form:has(:focus-visible), 
+.contact-form:has(:focus-visible),
 .notice-box:has(:focus-visible) {
-  box-shadow: var(--shadow-md), 0 0 0 3px rgba(103, 27, 80, 0.2);
+  box-shadow:
+    var(--shadow-md),
+    0 0 0 3px rgba(103, 27, 80, 0.2);
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: var(--space-sm) var(--space-md);
   border: none; /* Remove borders for cleaner look */
@@ -365,8 +419,13 @@ svg[aria-hidden="true"] {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .glass {
@@ -409,7 +468,7 @@ svg[aria-hidden="true"] {
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   inset-inline-start: 40px;
   inset-block-start: 0;
@@ -464,7 +523,9 @@ svg[aria-hidden="true"] {
 
 /* --- 10. RESPONSIVE OVERRIDES - Logical Properties --- */
 @media (max-width: 768px) {
-  .grid-container, .services-grid, .condition-list {
+  .grid-container,
+  .services-grid,
+  .condition-list {
     grid-template-columns: 1fr;
   }
   .timeline::before {
@@ -493,12 +554,26 @@ svg[aria-hidden="true"] {
 }
 
 /* --- 11. UTILITY BACKGROUNDS --- */
-.section-white { background: var(--white); }
-.section-blush { background: var(--blush); }
-.section-cream { background: var(--cream); }
-.section-plum { background: var(--primary); color: var(--text-on-plum); }
-.section-light { background: var(--light-bg); }
-.section-primary { background: var(--primary); color: var(--text-on-plum); }
+.section-white {
+  background: var(--white);
+}
+.section-blush {
+  background: var(--blush);
+}
+.section-cream {
+  background: var(--cream);
+}
+.section-plum {
+  background: var(--primary);
+  color: var(--text-on-plum);
+}
+.section-light {
+  background: var(--light-bg);
+}
+.section-primary {
+  background: var(--primary);
+  color: var(--text-on-plum);
+}
 
 /* --- 12. PAGE LAYOUT UTILITIES (Shell, Stack, Surface, Panel) --- */
 .shell {
@@ -545,8 +620,9 @@ svg[aria-hidden="true"] {
 .image-card {
   margin: 0;
   cursor: zoom-in;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.3s ease;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s ease;
   border-radius: 12px;
   overflow: hidden;
   background: var(--surface-soft, #f3f4f6);
@@ -560,8 +636,12 @@ svg[aria-hidden="true"] {
 }
 
 @keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .image-card.is-loaded img {
@@ -576,7 +656,7 @@ svg[aria-hidden="true"] {
 
 .image-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 .image-card img {
@@ -676,7 +756,10 @@ svg[aria-hidden="true"] {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, background 0.2s ease, opacity 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    opacity 0.3s ease;
   color: var(--text-main, #111827);
 }
 
@@ -758,8 +841,12 @@ svg[aria-hidden="true"] {
     width: 40px;
     height: 40px;
   }
-  .gallery-prev-btn { left: 0.75rem; }
-  .gallery-next-btn { right: 0.75rem; }
+  .gallery-prev-btn {
+    left: 0.75rem;
+  }
+  .gallery-next-btn {
+    right: 0.75rem;
+  }
   .gallery-close-btn {
     top: 0.75rem;
     right: 0.75rem;
@@ -859,11 +946,12 @@ svg[aria-hidden="true"] {
   font-weight: 500;
 }
 
-.tour-dot.active, .tour-dot:hover {
+.tour-dot.active,
+.tour-dot:hover {
   color: var(--text-main, #111827);
   background: var(--surface-main, #ffffff);
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   border-left-color: #ec4899;
 }
 
@@ -904,7 +992,8 @@ svg[aria-hidden="true"] {
     border-left: none;
     border-bottom: 3px solid transparent;
   }
-  .tour-dot.active, .tour-dot:hover {
+  .tour-dot.active,
+  .tour-dot:hover {
     border-left-color: transparent;
     border-bottom-color: #ec4899;
   }
@@ -989,7 +1078,8 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 }
 
 @keyframes pulse-emergency {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
@@ -1120,7 +1210,9 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
   color: var(--text-body);
   text-decoration: none;
   border-radius: var(--radius-md);
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .mobile-nav-panel nav a:hover,
@@ -1182,7 +1274,7 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e1e4e8;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: opacity 0.3s ease;
 }
 
@@ -1194,7 +1286,7 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
   width: 100%;
   text-align: center;
   color: #6b7280;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   z-index: 1;
   transition: opacity 0.3s ease;
 }
@@ -1243,12 +1335,14 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
   padding: 1rem;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
   z-index: 999;
   text-align: center;
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .mobile-sticky-cta .btn-primary {
@@ -1293,7 +1387,7 @@ For when pages are shared on WhatsApp, Facebook, etc.
 
 /* Open Graph fallback card styling (visible in some embeds) */
 .og-card {
-  background: linear-gradient(135deg, #FFF5F8 0%, #FCFAF7 100%);
+  background: linear-gradient(135deg, #fff5f8 0%, #fcfaf7 100%);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   border: 1px solid rgba(103, 27, 80, 0.1);

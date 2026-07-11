@@ -225,7 +225,7 @@
   .btn-group {
     flex-direction: column;
   }
-  
+
   .btn-group .btn {
     width: 100%;
   }
@@ -240,7 +240,7 @@
 }
 
 .btn-loading::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -255,7 +255,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Success state */
@@ -286,7 +288,7 @@
   .btn {
     border-width: 3px;
   }
-  
+
   .btn-primary,
   .btn-secondary,
   .cta-button {
@@ -299,11 +301,11 @@
   .btn {
     transition: none;
   }
-  
+
   .btn:hover:not(:disabled) {
     transform: none;
   }
-  
+
   .btn-loading::after {
     animation-duration: 0.01ms;
   }

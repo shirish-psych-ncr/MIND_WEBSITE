@@ -10,7 +10,9 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 @layer reset, base, components, utilities;
 
 @layer reset {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -23,41 +25,41 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
     color-scheme: light dark;
 
     /* Primary Colors - Editorial Warm Palette */
-    --light-bg: #FCFAF7;         /* Warm ivory base */
-    --bg-gradient-start: #FCFAF7;
-    --bg-gradient-mid: #F7F0EB;
-    --bg-gradient-end: #FFFDFC;
-    --primary: #671B50;          /* Deep Purple - accents only */
-    --accent: #E39774;           /* Terracotta - buttons, links */
-    --support: #EFBCBA;          /* Soft accent */
-    --olive: #8B8B6B;            /* Earthy tone */
+    --light-bg: #fcfaf7; /* Warm ivory base */
+    --bg-gradient-start: #fcfaf7;
+    --bg-gradient-mid: #f7f0eb;
+    --bg-gradient-end: #fffdfc;
+    --primary: #671b50; /* Deep Purple - accents only */
+    --accent: #e39774; /* Terracotta - buttons, links */
+    --support: #efbcba; /* Soft accent */
+    --olive: #8b8b6b; /* Earthy tone */
 
     /* Neutrals - Warmer */
-    --white: #FFFFFF;
-    --off-white: #FAF9F7;
-    --soft-plum: #FFF5F8;
-    --cream: #FDFBF9;
-    --blush: #F9E8ED;
-    --warm-gray: #F5F3F0;
+    --white: #ffffff;
+    --off-white: #faf9f7;
+    --soft-plum: #fff5f8;
+    --cream: #fdfbf9;
+    --blush: #f9e8ed;
+    --warm-gray: #f5f3f0;
 
     /* Text Colors - Softer contrast */
-    --text-dark: #2D1B2E;
-    --text-body: #4A3B4A;
-    --text-muted: #6B4C5A;
-    --text-light: #8B6B7A;
-    --text-accent: #E39774;
-    --text-olive: #8B8B6B;
+    --text-dark: #2d1b2e;
+    --text-body: #4a3b4a;
+    --text-muted: #6b4c5a;
+    --text-light: #8b6b7a;
+    --text-accent: #e39774;
+    --text-olive: #8b8b6b;
 
     /* Text on dark backgrounds */
-    --text-on-plum: #FFE0F6;
-    --text-on-plum-cream: #FAF5F0;
-    --text-on-plum-lime: #D3F069;
-    --text-on-plum-terracotta: #E39774;
+    --text-on-plum: #ffe0f6;
+    --text-on-plum-cream: #faf5f0;
+    --text-on-plum-lime: #d3f069;
+    --text-on-plum-terracotta: #e39774;
 
     /* Semantic Colors */
-    --error: #DC3545;
-    --success: #28A745;
-    --warning: #FFC107;
+    --error: #dc3545;
+    --success: #28a745;
+    --warning: #ffc107;
 
     /* Emergency Colors - High Contrast */
     --emergency-bg: #fee2e2;
@@ -83,12 +85,16 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
     --radius-pill: 9999px;
 
     /* Typography Scale - Editorial with more breathing room */
-    --fs-display: clamp(3rem, 7vw, 6rem);      /* Increased from 5rem max */
-    --fs-h1: clamp(2.5rem, 6vw, 5rem);         /* Increased from 4rem max */
-    --fs-h2: clamp(2rem, 5vw, 4rem);           /* Increased from 3rem max */
-    --fs-h3: clamp(1.75rem, 4vw, 3rem);        /* Increased from 2.25rem max */
-    --fs-h4: clamp(1.5rem, 3vw, 2.5rem);       /* Increased from 1.75rem max */
-    --fs-body: clamp(1.125rem, 2vw, 1.25rem);  /* 18px base, increased from 16px */
+    --fs-display: clamp(3rem, 7vw, 6rem); /* Increased from 5rem max */
+    --fs-h1: clamp(2.5rem, 6vw, 5rem); /* Increased from 4rem max */
+    --fs-h2: clamp(2rem, 5vw, 4rem); /* Increased from 3rem max */
+    --fs-h3: clamp(1.75rem, 4vw, 3rem); /* Increased from 2.25rem max */
+    --fs-h4: clamp(1.5rem, 3vw, 2.5rem); /* Increased from 1.75rem max */
+    --fs-body: clamp(
+      1.125rem,
+      2vw,
+      1.25rem
+    ); /* 18px base, increased from 16px */
     --fs-small: clamp(1rem, 1.6vw, 1.0625rem); /* 17px min */
     --fs-tiny: clamp(0.875rem, 1.4vw, 0.9375rem); /* 14px min */
 
@@ -109,7 +115,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 
     /* Sizing - Wider containers */
     --content-width: 1400px;
-    --measure: 60ch;  /* Reduced from 65ch for better readability */
+    --measure: 60ch; /* Reduced from 65ch for better readability */
     --narrow: min(95vw, 700px);
     --content: min(95vw, var(--content-width));
     --wide: min(95vw, 1600px);
@@ -136,31 +142,37 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
   /* Dark mode support with improved contrast */
   @media (prefers-color-scheme: dark) {
     :root {
-      --white: #1A0F1A;
+      --white: #1a0f1a;
       --off-white: #251525;
-      --soft-plum: #2D1828;
-      --cream: #2A1F1A;
+      --soft-plum: #2d1828;
+      --cream: #2a1f1a;
       --blush: #352028;
-      --warm-gray: #2A2530;
+      --warm-gray: #2a2530;
       --light-bg: #251525; /* Invert light bg to match dark theme */
-      --text-dark: #FDF6F0; /* Soft cream instead of stark white */
-      --text-body: #E8D8E8;
-      --text-muted: #E0D0C8;
-      --text-light: #D0C0D0;
-      --card-heading: #FDF6F0;
-      --card-text: #E0D0E0;
-      --hero-badge-text: #FDF6F0;
-      --cta-heading: #FDF6F0;
-      --cta-text: #E0D0E0;
+      --text-dark: #fdf6f0; /* Soft cream instead of stark white */
+      --text-body: #e8d8e8;
+      --text-muted: #e0d0c8;
+      --text-light: #d0c0d0;
+      --card-heading: #fdf6f0;
+      --card-text: #e0d0e0;
+      --hero-badge-text: #fdf6f0;
+      --cta-heading: #fdf6f0;
+      --cta-text: #e0d0e0;
       --border-color: rgba(224, 208, 200, 0.15);
-      --primary-accent: #FFB7C5; /* Softer pink for dark mode */
+      --primary-accent: #ffb7c5; /* Softer pink for dark mode */
     }
     body {
       background-color: var(--off-white);
       color: var(--text-dark);
     }
     /* Ensure cards, inputs, and sections adapt */
-    .card, .tool-card, input, textarea, select, .hero-section, header {
+    .card,
+    .tool-card,
+    input,
+    textarea,
+    select,
+    .hero-section,
+    header {
       background-color: var(--off-white) !important;
       border-color: var(--border-color) !important;
       color: var(--text-dark) !important;
@@ -169,14 +181,21 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 
   /* High Contrast Mode Support */
   @media (forced-colors: active) {
-    .btn, .card-link, a, button, input, textarea, select {
+    .btn,
+    .card-link,
+    a,
+    button,
+    input,
+    textarea,
+    select {
       border: 2px solid CanvasText !important;
     }
     :focus-visible {
       outline: 3px solid Highlight !important;
       outline-offset: 2px;
     }
-    .site-header, .site-footer {
+    .site-header,
+    .site-footer {
       border-top: 2px solid CanvasText;
       border-bottom: 2px solid CanvasText;
     }
@@ -245,7 +264,9 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
       --accent: #333333;
       --support: #666666;
     }
-    .card, .surface, .panel {
+    .card,
+    .surface,
+    .panel {
       border: 2px solid currentColor;
       box-shadow: none;
     }
@@ -277,9 +298,19 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
   }
 
   body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
     background: var(--light-bg);
-    background: radial-gradient(ellipse at center, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%);
+    background: radial-gradient(
+      ellipse at center,
+      var(--bg-gradient-start) 0%,
+      var(--bg-gradient-mid) 50%,
+      var(--bg-gradient-end) 100%
+    );
     color: var(--text-dark);
     line-height: var(--lh-base);
     overflow-x: hidden;
@@ -305,12 +336,18 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
   }
 
   /* Typography - Headings with text-wrap:pretty */
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     text-wrap: pretty;
   }
 
   /* Fix for deprecated h1 sizing in sections/articles/navs/aside */
-  article > h1, section > h1, nav > h1, aside > h1 {
+  article > h1,
+  section > h1,
+  nav > h1,
+  aside > h1 {
     font-size: var(--fs-h1);
   }
 
@@ -358,20 +395,24 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
   /* High contrast focus for dark mode */
   @media (prefers-color-scheme: dark) {
     :focus-visible {
-      outline: 3px solid #FFB6C1;
+      outline: 3px solid #ffb6c1;
       outline-offset: 2px;
     }
   }
 
   /* Reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
-    html { scroll-behavior: auto; }
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   /* Inert state */
@@ -423,7 +464,8 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
     transform: translateX(-50%);
     background: var(--text-dark);
     color: var(--white);
-    padding: calc(0.75rem + var(--safe-bottom)) calc(1.5rem + var(--safe-left)) calc(0.75rem + var(--safe-bottom)) calc(1.5rem + var(--safe-right));
+    padding: calc(0.75rem + var(--safe-bottom)) calc(1.5rem + var(--safe-left))
+      calc(0.75rem + var(--safe-bottom)) calc(1.5rem + var(--safe-right));
     border-radius: 50px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 9999;
@@ -431,7 +473,9 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
     align-items: center;
     gap: 0.5rem;
     font-size: 0.875rem;
-    transition: bottom 0.3s ease, opacity 0.3s ease;
+    transition:
+      bottom 0.3s ease,
+      opacity 0.3s ease;
     opacity: 0;
     /* Ensure minimum touch target */
     min-height: var(--touch-target);
@@ -489,10 +533,13 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
       max-width: 100% !important;
       page-break-inside: avoid;
     }
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       page-break-after: avoid;
     }
-    .card, .image-card {
+    .card,
+    .image-card {
       break-inside: avoid;
       border: 1px solid #ccc;
     }
@@ -570,7 +617,10 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 
   /* Touch devices - enlarge hit targets */
   @media (pointer: coarse) {
-    .btn, .card-link, a, button {
+    .btn,
+    .card-link,
+    a,
+    button {
       min-height: var(--touch-target);
       min-width: var(--touch-target);
       padding: var(--space-md);
@@ -586,7 +636,9 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 
   /* Mouse/precise pointer devices */
   @media (pointer: fine) {
-    .btn, .card-link, a {
+    .btn,
+    .card-link,
+    a {
       min-height: auto;
       min-width: auto;
     }
@@ -656,7 +708,9 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
   /* Spanning content across both screens */
   @media (spanning: fold-horizontal) {
     .container {
-      padding-inline: calc(var(--space-lg) + env(viewport-segment-left 0 1, 0px));
+      padding-inline: calc(
+        var(--space-lg) + env(viewport-segment-left 0 1, 0px)
+      );
     }
   }
 

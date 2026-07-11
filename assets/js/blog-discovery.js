@@ -11,7 +11,8 @@ async function getMeta(url) {
 
   const text = await res.text();
   const doc = new DOMParser().parseFromString(text, "text/html");
-  const getContent = (name) => doc.querySelector(`meta[name="${name}"]`)?.content?.trim() || "";
+  const getContent = (name) =>
+    doc.querySelector(`meta[name="${name}"]`)?.content?.trim() || "";
 
   return {
     href: normalizedUrl,
@@ -22,15 +23,20 @@ async function getMeta(url) {
     tags: getContent("blog-tags")
       .split(",")
       .map((tag) => tag.trim().toLowerCase())
-      .filter(Boolean)
+      .filter(Boolean),
   };
 }
 
 async function discoverPostsFromDirectory(sourceDir) {
-  const directoryUrl = new URL(sourceDir.endsWith("/") ? sourceDir : `${sourceDir}/`, window.location.href);
+  const directoryUrl = new URL(
+    sourceDir.endsWith("/") ? sourceDir : `${sourceDir}/`,
+    window.location.href,
+  );
   const res = await fetch(directoryUrl.href);
   if (!res.ok) {
-    throw new Error(`Failed to open directory listing for ${directoryUrl.href}`);
+    throw new Error(
+      `Failed to open directory listing for ${directoryUrl.href}`,
+    );
   }
 
   const text = await res.text();
@@ -83,7 +89,16 @@ function renderCards(target, posts, emptyCopy) {
   target.innerHTML = posts
     .map((post) => {
       const tagMarkup = post.tags
-        .filter((tag) => !["adult", "child", "children", "beginner", "most-searched"].includes(tag))
+        .filter(
+          (tag) =>
+            ![
+              "adult",
+              "child",
+              "children",
+              "beginner",
+              "most-searched",
+            ].includes(tag),
+        )
         .slice(0, 4)
         .map((tag) => `<span class="tag">${formatLabel(tag)}</span>`)
         .join("");
@@ -137,21 +152,31 @@ async function initBlogDiscovery() {
   }
 
   const posts = await Promise.all(postUrls.map((url) => getMeta(url)));
-  const pinnedSet = new Set((config.pinned || []).map((url) => normalizeUrl(url)));
-  const mostSearchedSet = new Set((config.mostSearched || []).map((url) => normalizeUrl(url)));
+  const pinnedSet = new Set(
+    (config.pinned || []).map((url) => normalizeUrl(url)),
+  );
+  const mostSearchedSet = new Set(
+    (config.mostSearched || []).map((url) => normalizeUrl(url)),
+  );
   const beginnerPosts = posts.filter((post) => post.tags.includes("beginner"));
   const pinnedPosts = posts.filter((post) => pinnedSet.has(post.href));
 
   function getFeedPosts() {
     if (activeMode === "tag" && activeTag) {
       const matching = posts.filter((post) => post.tags.includes(activeTag));
-      const pinnedMatching = matching.filter((post) => pinnedSet.has(post.href));
-      const rest = shuffle(matching.filter((post) => !pinnedSet.has(post.href)));
+      const pinnedMatching = matching.filter((post) =>
+        pinnedSet.has(post.href),
+      );
+      const rest = shuffle(
+        matching.filter((post) => !pinnedSet.has(post.href)),
+      );
       return [...pinnedMatching, ...rest];
     }
 
     if (activeMode === "read2") {
-      return posts.filter((post) => post.readtime.toLowerCase().includes("2 min"));
+      return posts.filter((post) =>
+        post.readtime.toLowerCase().includes("2 min"),
+      );
     }
 
     if (activeMode === "most") {
@@ -184,7 +209,8 @@ async function initBlogDiscovery() {
       stateLabel.textContent = "Showing beginner-friendly articles";
       return;
     }
-    stateLabel.textContent = "Showing a hybrid feed with pinned articles first and the rest shuffled on each load";
+    stateLabel.textContent =
+      "Showing a hybrid feed with pinned articles first and the rest shuffled on each load";
   }
 
   function setTag(tag) {
@@ -202,56 +228,95 @@ async function initBlogDiscovery() {
   function bindChipGroup(target, items, onClick) {
     if (!target) return;
     target.innerHTML = items
-      .map((item) => `<button class="filter-chip" type="button" data-value="${item.value}">${item.label}</button>`)
+      .map(
+        (item) =>
+          `<button class="filter-chip" type="button" data-value="${item.value}">${item.label}</button>`,
+      )
       .join("");
 
     target.querySelectorAll("[data-value]").forEach((button) => {
-      button.addEventListener("click", () => onClick(button.getAttribute("data-value")));
+      button.addEventListener("click", () =>
+        onClick(button.getAttribute("data-value")),
+      );
     });
   }
 
   function syncActiveButtons() {
-    document.querySelectorAll("[data-symptom-grid] .filter-chip").forEach((button) => {
-      button.classList.toggle("active", activeMode === "tag" && button.getAttribute("data-value") === activeTag);
-    });
+    document
+      .querySelectorAll("[data-symptom-grid] .filter-chip")
+      .forEach((button) => {
+        button.classList.toggle(
+          "active",
+          activeMode === "tag" &&
+            button.getAttribute("data-value") === activeTag,
+        );
+      });
 
-    document.querySelectorAll("[data-cluster-grid] .filter-chip").forEach((button) => {
-      const tags = button.getAttribute("data-tags")?.split(",") || [];
-      button.classList.toggle("active", activeMode === "tag" && tags.includes(activeTag));
-    });
+    document
+      .querySelectorAll("[data-cluster-grid] .filter-chip")
+      .forEach((button) => {
+        const tags = button.getAttribute("data-tags")?.split(",") || [];
+        button.classList.toggle(
+          "active",
+          activeMode === "tag" && tags.includes(activeTag),
+        );
+      });
 
-    document.querySelectorAll("[data-discovery-controls] .filter-chip").forEach((button) => {
-      button.classList.toggle("active", button.getAttribute("data-mode") === activeMode);
-    });
+    document
+      .querySelectorAll("[data-discovery-controls] .filter-chip")
+      .forEach((button) => {
+        button.classList.toggle(
+          "active",
+          button.getAttribute("data-mode") === activeMode,
+        );
+      });
   }
 
   function render() {
     updateStateLabel();
-    renderCards(feedGrid, getFeedPosts(), "No matching articles yet for this filter.");
-    renderCards(pinnedGrid, pinnedPosts, "Add pinned posts to keep this section curated.");
-    renderCards(beginnerGrid, takeRandom(beginnerPosts.length ? beginnerPosts : posts, 3), "Add beginner-tagged posts to power this section.");
-    renderCards(loopGrid, takeRandom(posts, 3), "Add more posts to create the discovery loop.");
+    renderCards(
+      feedGrid,
+      getFeedPosts(),
+      "No matching articles yet for this filter.",
+    );
+    renderCards(
+      pinnedGrid,
+      pinnedPosts,
+      "Add pinned posts to keep this section curated.",
+    );
+    renderCards(
+      beginnerGrid,
+      takeRandom(beginnerPosts.length ? beginnerPosts : posts, 3),
+      "Add beginner-tagged posts to power this section.",
+    );
+    renderCards(
+      loopGrid,
+      takeRandom(posts, 3),
+      "Add more posts to create the discovery loop.",
+    );
     syncActiveButtons();
   }
 
   bindChipGroup(
     symptomGrid,
     config.symptoms.map((tag) => ({ value: tag, label: formatLabel(tag) })),
-    setTag
+    setTag,
   );
 
   if (clusterGrid) {
     clusterGrid.innerHTML = config.clusters
       .map(
         (cluster) =>
-          `<button class="filter-chip" type="button" data-tags="${cluster.tags.join(",")}">${cluster.label}</button>`
+          `<button class="filter-chip" type="button" data-tags="${cluster.tags.join(",")}">${cluster.label}</button>`,
       )
       .join("");
 
     clusterGrid.querySelectorAll("[data-tags]").forEach((button) => {
       const tags = button.getAttribute("data-tags").split(",");
       button.addEventListener("click", () => {
-        const firstAvailableTag = tags.find((tag) => posts.some((post) => post.tags.includes(tag)));
+        const firstAvailableTag = tags.find((tag) =>
+          posts.some((post) => post.tags.includes(tag)),
+        );
         if (firstAvailableTag) setTag(firstAvailableTag);
       });
     });
@@ -266,7 +331,9 @@ async function initBlogDiscovery() {
     `;
 
     controlBar.querySelectorAll("[data-mode]").forEach((button) => {
-      button.addEventListener("click", () => setMode(button.getAttribute("data-mode")));
+      button.addEventListener("click", () =>
+        setMode(button.getAttribute("data-mode")),
+      );
     });
   }
 
@@ -287,7 +354,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const stateLabel = document.querySelector("[data-active-state]");
     const feedGrid = document.querySelector("[data-feed-grid]");
     if (stateLabel) {
-      stateLabel.textContent = "The article feed could not load right now. Please try again, or use the main blog hub.";
+      stateLabel.textContent =
+        "The article feed could not load right now. Please try again, or use the main blog hub.";
     }
     if (feedGrid) {
       feedGrid.innerHTML = `<div class="empty-state">${error.message}</div>`;

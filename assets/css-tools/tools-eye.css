@@ -26,8 +26,8 @@
   width: 100%;
 }
 
-.hidden { 
-  display: none !important; 
+.hidden {
+  display: none !important;
 }
 
 .tool-card h1 {
@@ -51,7 +51,7 @@
 .track-line {
   width: 100%;
   height: 2px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   position: relative;
 }
 

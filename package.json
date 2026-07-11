@@ -5,7 +5,11 @@
     "axe-core": "^4.12.1",
     "eslint": "^10.7.0",
     "globals": "^17.7.0",
-    "puppeteer-core": "^24.43.1"
+    "htmllint": "^0.8.0",
+    "prettier": "^3.9.5",
+    "puppeteer-core": "^24.43.1",
+    "stylelint": "^17.14.0",
+    "stylelint-config-standard": "^40.0.0"
   },
   "name": "workspace",
   "version": "1.0.0",
@@ -21,6 +25,7 @@
     "@preact/signals": "^2.9.3",
     "alpinejs": "^3.15.12",
     "animejs": "^4.5.0",
+    "biome": "^0.2.2",
     "fuse.js": "^7.4.2",
     "htmx": "^0.0.2",
     "iconify-icon": "^3.0.2",
@@ -34,6 +39,7 @@
     "ui-ux-pro-max-cli": "^2.10.2"
   },
   "allowScripts": {
-    "chromedriver@150.0.1": true
+    "chromedriver@150.0.1": true,
+    "core-js@2.6.12": true
   }
 }

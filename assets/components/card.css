@@ -104,23 +104,23 @@
 
 /* Pastel icon backgrounds */
 .service-card .pastel-lavender {
-  background: #E8E4F0;
+  background: #e8e4f0;
 }
 
 .service-card .pastel-sage {
-  background: #E4EFE8;
+  background: #e4efe8;
 }
 
 .service-card .pastel-beige {
-  background: #F0EBE4;
+  background: #f0ebe4;
 }
 
 .service-card .pastel-dusty-rose {
-  background: #F0E4E8;
+  background: #f0e4e8;
 }
 
 .service-card .pastel-powder-blue {
-  background: #E4ECF0;
+  background: #e4ecf0;
 }
 
 /* --- 3. TESTIMONIAL CARD --- */
@@ -134,7 +134,7 @@
   display: flex;
   gap: 4px;
   margin-bottom: var(--space-md);
-  color: #FFB800;
+  color: #ffb800;
 }
 
 .testimonial-card .testimonial-rating .icon {
@@ -185,7 +185,11 @@
   width: clamp(56px, 9vw, 72px);
   height: clamp(56px, 9vw, 72px);
   margin: 0 auto var(--space-lg);
-  background: linear-gradient(135deg, rgba(103, 27, 80, 0.1), rgba(103, 27, 80, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(103, 27, 80, 0.1),
+    rgba(103, 27, 80, 0.05)
+  );
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -219,7 +223,7 @@
 }
 
 .pillar-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -259,7 +263,11 @@
   width: clamp(72px, 12vw, 96px);
   height: clamp(72px, 12vw, 96px);
   margin: 0 auto var(--space-xl);
-  background: linear-gradient(135deg, rgba(103, 27, 80, 0.15), rgba(103, 27, 80, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(103, 27, 80, 0.15),
+    rgba(103, 27, 80, 0.08)
+  );
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -364,7 +372,11 @@
 .condition-card .condition-icon {
   width: clamp(48px, 8vw, 64px);
   height: clamp(48px, 8vw, 64px);
-  background: linear-gradient(135deg, rgba(103, 27, 80, 0.15), rgba(103, 27, 80, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(103, 27, 80, 0.15),
+    rgba(103, 27, 80, 0.08)
+  );
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -401,7 +413,7 @@
 }
 
 .condition-card li::before {
-  content: '✓';
+  content: "✓";
   color: var(--primary);
   font-weight: 700;
   flex-shrink: 0;
@@ -469,7 +481,7 @@
 }
 
 .pricing-card li::before {
-  content: '✓';
+  content: "✓";
   color: var(--success);
   font-weight: 700;
   flex-shrink: 0;
@@ -519,11 +531,11 @@
   .card {
     padding: clamp(1.5rem, 3vw, 2rem);
   }
-  
+
   .card-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .program-card .program-stats {
     grid-template-columns: 1fr 1fr;
   }
@@ -536,7 +548,7 @@
   .card {
     border-width: 2px;
   }
-  
+
   .card:hover {
     border-color: var(--text-dark);
   }
@@ -548,7 +560,7 @@
   .card img {
     transition: none;
   }
-  
+
   .card:hover {
     transform: none;
   }
