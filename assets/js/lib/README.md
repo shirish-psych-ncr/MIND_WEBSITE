@@ -241,30 +241,76 @@ const results = fuse.search('anxiety');
 
 ## Usage Guidelines
 
-1. **Load with defer:** Always use `<script src="..." defer></script>`
-2. **Module-based libs:** Use `type="module"` for petite-vue, swup, nanoid
-3. **Respect reduced motion:** Check `prefers-reduced-motion` before animating
-4. **Graceful degradation:** Wrap in try-catch, provide fallbacks
-5. **No global pollution:** Use ES6 imports or IIFE pattern
-6. **Library stack:** All 20 libs loaded via `/assets/components/library-stack.html`
+**⚠️ Critical Update (July 2026):** Module scripts must NOT use `defer` attribute. Using `defer` with `type="module"` causes race conditions and loading errors like "Ky library not loaded" and "detectOverflow undefined".
+
+1. **Module-based libs:** Use `type="module"` WITHOUT defer
+   ```html
+   <!-- Correct: Module scripts load async by default -->
+   <script src="vendor/ky.min.js"></script>
+   <script src="http-client.js" type="module"></script>
+   <script src="main.js" type="module"></script>
+   
+   <!-- WRONG: Don't do this -->
+   <script src="main.js" type="module" defer></script> ❌
+   ```
+
+2. **UMD libs:** No defer needed when loaded at body end (Lucide, Floating UI, Splide)
+   ```html
+   <script src="../vendor/lucide.min.js"></script>
+   <script src="../vendor/floating-ui.min.js"></script>
+   <script src="lib/splide.min.js"></script>
+   ```
+
+3. **Load order matters:** 
+   - `ky.min.js` → `http-client.js` → `main.js`
+   - `floating-ui.min.js` must be complete UMD build (22KB with Core+DOM), not corrupted partial build
+   - Floating UI must load before `ui-popovers.js`
+   - All scripts now loaded in `<head>` with proper ordering, not at body end
+
+4. **Respect reduced motion:** Check `prefers-reduced-motion` before animating
+
+5. **Graceful degradation:** Wrap in try-catch, provide fallbacks
+
+6. **Library stack:** Scripts now loaded directly in each HTML file, no more library-stack.html component
 
 ## Performance Notes
 
 - **Total size:** ~800KB (all libraries combined)
-- **Loading strategy:** All libs use `defer` to prevent render blocking
-- **Module libs:** petite-vue, swup, nanoid use `type="module"`
-- **Deployment scope:** Installed across all 46 HTML pages
+- **Loading strategy:** Module scripts load async by default (NO defer), UMD libs in head with correct order
+- **Module libs:** http-client.js, main.js use `type="module"` without defer attribute
+- **Critical fix (July 2026):** Removed defer from all module scripts to prevent race conditions
+- **Deployment scope:** Installed across all 25 HTML pages
 - **Critical path:** No libraries block initial paint
+- **Floating UI:** Must use complete UMD build (22KB) with Core+DOM, replaced corrupted file that caused "detectOverflow undefined" error
+- **Ky library:** Now loads before http-client.js to prevent "Ky library not loaded, falling back to fetch" warnings
+- **Console errors resolved:** No more "Cannot read properties of undefined" or infinite "waiting..." loops
 
 ## Library Stack Component
 
-Location: `/assets/components/library-stack.html`
+**⚠️ Deprecated (July 2026):** The library-stack.html component is no longer used. Scripts are now loaded directly in each HTML file's `<head>` section with correct dependency order.
 
-All 20 libraries are injected into every HTML page via single include:
+Location: `/assets/components/library-stack.html` (legacy - do not use)
+
+All scripts are now loaded directly in each HTML file's `<head>` section with correct dependency order:
 ```html
-<script src="/assets/components/library-stack.html" defer></script>
+<!-- HTTP Client Stack (must load in this order) -->
+<script src="vendor/ky.min.js"></script>
+<script src="js/http-client.js" type="module"></script>
+
+<!-- UI Libraries (UMD builds, no defer needed) -->
+<script src="vendor/lucide.min.js"></script>
+<script src="js/icon-init.js"></script>
+<script src="vendor/floating-ui.min.js"></script>
+<script src="js/ui-popovers.js"></script>
+
+<!-- Core Application -->
+<script src="js/main.js" type="module"></script>
+<script src="js/animations-auto.js"></script>
 ```
 
-This ensures consistent library availability across the entire site while maintaining a single source of truth for library versions and load order.
+This ensures proper loading order and eliminates race conditions that caused:
+- "Ky library not loaded, falling back to fetch" errors
+- "Cannot read properties of undefined (reading 'detectOverflow')" crashes
+- Infinite "Floating UI library not loaded yet, waiting..." console spam
 
 *Last Updated: Current Session*
