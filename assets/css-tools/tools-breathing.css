@@ -17,7 +17,7 @@
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	font-family: "Outfit", sans-serif;
+	font-family: Outfit, sans-serif;
 }
 
 .view {
@@ -149,6 +149,7 @@ select {
 .skip-link {
 	color: #eb32b5;
 }
+
 .skip-link:focus {
 	color: #eb32b5;
 	background: #fff;

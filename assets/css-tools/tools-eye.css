@@ -19,7 +19,7 @@
 	border-radius: 40px;
 	padding: 40px 30px;
 	text-align: center;
-	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 50%);
 }
 
 .view {
@@ -51,7 +51,7 @@
 .track-line {
 	width: 100%;
 	height: 2px;
-	background: rgba(255, 255, 255, 0.08);
+	background: rgb(255 255 255 / 8%);
 	position: relative;
 }
 
@@ -113,6 +113,7 @@ select {
 .skip-link {
 	color: #eb32b5;
 }
+
 .skip-link:focus {
 	color: #eb32b5;
 	background: #fff;

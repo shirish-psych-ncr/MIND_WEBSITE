@@ -1,10 +1,13 @@
 # 🏗️ Mind Grace Neuropsychiatric Clinic - Technical Architecture (v5.0)
+
 **Last Verified:** 2026-07-11 | **Total HTML Files:** 43 (25 main + 6 tools + 12 blog) | **Refactored:** Pure static stack
 
 ## 1. System Overview
+
 A static, high-performance website built with semantic HTML5, modular CSS, and vanilla JavaScript. Zero-dependency architecture with no build tools required; designed for direct deployment via FTP or simple static hosting.
 
 ### Core Principles
+
 - **Mobile-First:** All layouts start at mobile breakpoints and scale up using `min()` and `clamp()`.
 - **Modular CSS:** Separation of concerns into `base.css`, `layout.css`, `components.css`, `utilities.css`, and `animations.css`.
 - **Accessibility (A11y):** Semantic landmarks, ARIA attributes for dynamic components (accordions, mobile nav), and high-contrast modes for emergency content.
@@ -82,6 +85,7 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 ## 3. Design System (CSS) - Verified Components
 
 ### Variables (`assets/css/base.css`)
+
 - **Colors:** `--primary` (Deep Plum #671B50), `--accent` (Terracotta #E39774), `--support` (Soft Pink #EFBCBA), `--olive` (Earthy Olive #8B8B6B).
 - **Typography:** `Playfair Display` (Headings, weight 600), `Inter` (UI/Body, 18-20px base).
 - **Spacing:** Fluid scale using `clamp()` (--space-xs through --space-5xl).
@@ -89,6 +93,7 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 - **Shadows:** Ultra-subtle shadows with plum tint (--shadow-xs through --shadow-float).
 
 ### Component Patterns (`assets/css/components.css`, `assets/components/*.css`)
+
 - **Cards:** `.card` with pastel icon backgrounds, 24px border-radius, subtle hover lift (4px).
 - **Buttons:** `.btn-primary`, `.btn-secondary`, `.btn-outline` with increased padding (22px × 42px).
 - **Grids:** Auto-fit `minmax` logic with clamp-based gaps.
@@ -106,6 +111,7 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 ## 4. JavaScript Architecture (`assets/js/main.js`) - Verified Functions
 
 ### Global Modules (Active)
+
 1.  **Mobile Navigation:** Toggles `.is-active` on header, body scroll lock, aria-expanded updates.
 2.  **Accordion Handler:** Delegated event listener for FAQ/Process steps with aria-controls.
 3.  **Counter Animation:** `IntersectionObserver` triggers number counting for `.stat-number`.
@@ -115,11 +121,13 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 7.  **Reveal on Scroll:** IntersectionObserver-based animation triggers.
 
 ### Tool-Specific Scripts (8 tools)
+
 - Located in `assets/js/tools-*.js`.
 - Isolated scope to prevent conflict with global `main.js`.
 - Examples: Canvas animation for "Leaf on Stream", Web Audio API for "Binaural Beats", breathing animation timers, EMDR eye movement logic, fractal hypnosis rendering, horizon scanning interaction, butterfly tapping haptics.
 
 ### Vendor Libraries (23 libs in `/assets/vendor/` and `/assets/js/lib/`)
+
 - **HTTP Client:** Ky (fetch wrapper)
 - **UI Frameworks:** Alpine.js, Petite Vue, Preact Signals
 - **Animation:** Anime.js, Motion One, ScrollReveal, AutoAnimate
@@ -132,12 +140,15 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 ## 5. Content Strategy - Dual-Clinician Model (VERIFIED)
 
 ### Organization Profile
+
 **Mind Grace Neuropsychiatric Clinic & Aasha – An Early Intervention Centre**
+
 - **Address:** J-123, Gamma-2, Greater Noida, Uttar Pradesh – 201308
 - **Contact:** +91-96678-63295, dranitasharma86@gmail.com
 - **Website:** www.dranitasharma.com / mindgracencr.in
 
 ### Clinician 1: Dr. Anita Sharma (Psychiatrist)
+
 - **Credentials:** MD (Psychiatry), MBBS, MCI Reg: 11-40210, HPR ID: 71-2147-5815-3754
 - **Experience:** 14+ years
 - **Training:** AIIMS Rishikesh, IHBAS Delhi, Maudsley Hospital London
@@ -147,6 +158,7 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 - **Publications:** Indian Journal of Psychiatry (2019), Asian Journal of Psychiatry (2019)
 
 ### Clinician 2: Dr. Sana Firdous (Clinical Psychologist)
+
 - **Credentials:** M.Phil Clinical Psychology, RCI Reg: A82170
 - **Experience:** 7+ years
 - **Affiliation:** Consultant at Sharda Hospital, Greater Noida
@@ -154,9 +166,11 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 - **Approach:** Play-based, strength-focused, evidence-based, nurturing
 
 ### Shared Philosophy
+
 > "We are here to help you solve serious problems with compassion and a non-judgmental approach. At Mind Grace, we restore balance for adults carrying life's weight. At Aasha, we nurture potential for children finding their path. Together, we support whole families."
 
 ### Tone Guidelines
+
 - **Mind Grace (Adult):** Professional, reassuring, authoritative, non-judgmental
 - **Aasha (Child):** Warm, nurturing, hopeful, strength-focused, play-based
 - **Emergency:** Direct, high-contrast, immediate action-oriented
@@ -164,6 +178,7 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 ---
 
 ## 6. Emergency Protocol (Verified)
+
 - `emergency.html` uses high-contrast red/white theme.
 - Immediate helpline numbers (112, Kiran, Vandrevala, Childline) are largest elements.
 - Disclaimer: "Not an emergency service" is prominent.
@@ -172,6 +187,7 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 ---
 
 ## 7. Deployment Checklist (Updated)
+
 - [x] Verify all internal links are relative (`./about.html`).
 - [x] Ensure `robots.txt` allows crawling of public pages.
 - [ ] Compress images to WebP format (see assets.md for inventory).
@@ -186,13 +202,14 @@ A static, high-performance website built with semantic HTML5, modular CSS, and v
 ---
 
 ## 8. Known Issues & Next Steps
-| Issue | File(s) | Priority | Action Required |
-|---|---|---|---|
-| ✅ Fixed | conditions.html | - | Full condition cards with 8 categories implemented |
-| Minimal content | consent.html, privacy.html | MEDIUM | Full legal rewrite with proper disclaimers |
-| Tools not hydrated | 6 tool pages | MEDIUM | Add JS initialization and canvas/audio logic |
-| Blog articles minimal | 9 article files | LOW | Expand with ArticleLayout template |
-| Missing Dr. Sana photo | doctors.html | LOW | Replace SVG placeholder with actual photo |
-| Basic error page | 404.html | LOW | Create branded error experience |
 
-*Ref: Verified via file system commands on 2026-07-11. Cross-ref: pages.md §8 (Content Guidelines), design.md §7 (Assets), worker.md §4 (JS Fallbacks). END_ON_SYNC.*
+| Issue                  | File(s)                    | Priority | Action Required                                    |
+| ---------------------- | -------------------------- | -------- | -------------------------------------------------- |
+| ✅ Fixed               | conditions.html            | -        | Full condition cards with 8 categories implemented |
+| Minimal content        | consent.html, privacy.html | MEDIUM   | Full legal rewrite with proper disclaimers         |
+| Tools not hydrated     | 6 tool pages               | MEDIUM   | Add JS initialization and canvas/audio logic       |
+| Blog articles minimal  | 9 article files            | LOW      | Expand with ArticleLayout template                 |
+| Missing Dr. Sana photo | doctors.html               | LOW      | Replace SVG placeholder with actual photo          |
+| Basic error page       | 404.html                   | LOW      | Create branded error experience                    |
+
+_Ref: Verified via file system commands on 2026-07-11. Cross-ref: pages.md §8 (Content Guidelines), design.md §7 (Assets), worker.md §4 (JS Fallbacks). END_ON_SYNC._

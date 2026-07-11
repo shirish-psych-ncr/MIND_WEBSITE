@@ -7,7 +7,7 @@
 	--water-deep: #1a3a52;
 	--water-mid: #2a5a7a;
 	--water-light: #3a7a9a;
-	--water-foam: rgba(255, 255, 255, 0.12);
+	--water-foam: rgb(255 255 255 / 12%);
 	--grass-surface: #3d6b4f;
 	--grass-shadow: #2a4a35;
 	--earth-base: #4a3728;
@@ -15,8 +15,8 @@
 	--leaf-gold: #c9a961;
 	--leaf-shadow: #8b7345;
 	--accent: #6bb6d9;
-	--ui-bg: rgba(18, 32, 42, 0.92);
-	--ui-border: rgba(107, 182, 217, 0.3);
+	--ui-bg: rgb(18 32 42 / 92%);
+	--ui-border: rgb(107 182 217 / 30%);
 }
 
 * {
@@ -44,14 +44,15 @@ body {
 	display: flex;
 	gap: 10px;
 }
+
 .tool-link-bar a {
 	pointer-events: auto;
 	padding: 10px 14px;
 	border-radius: 999px;
-	background: rgba(18, 32, 42, 0.92);
+	background: rgb(18 32 42 / 92%);
 	color: white;
 	text-decoration: none;
-	border: 1px solid rgba(107, 182, 217, 0.3);
+	border: 1px solid rgb(107 182 217 / 30%);
 	backdrop-filter: blur(12px);
 }
 
@@ -84,17 +85,19 @@ canvas {
 	font-size: 1.4rem;
 	transition: all 0.3s ease;
 	pointer-events: auto;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 4px 20px rgb(0 0 0 / 30%);
 }
+
 #ui-trigger:hover {
-	background: rgba(107, 182, 217, 0.2);
+	background: rgb(107 182 217 / 20%);
 	transform: scale(1.05);
 }
+
 #ui-trigger.active {
 	background: var(--accent);
 	color: #010204;
 	transform: rotate(45deg);
-	box-shadow: 0 0 25px rgba(107, 182, 217, 0.5);
+	box-shadow: 0 0 25px rgb(107 182 217 / 50%);
 }
 
 /* Main Interface Container */
@@ -110,6 +113,7 @@ canvas {
 	pointer-events: none;
 	transition: opacity 0.4s ease;
 }
+
 .interface.hidden {
 	opacity: 0;
 	pointer-events: none;
@@ -126,7 +130,7 @@ canvas {
 	width: 100%;
 	max-width: 420px;
 	align-self: center;
-	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 30px 80px rgb(0 0 0 / 70%);
 	text-align: center;
 	margin-bottom: 20px;
 	transform: translateY(0);
@@ -135,6 +139,7 @@ canvas {
 		transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
 		opacity 0.4s ease;
 }
+
 .input-modal.hidden {
 	transform: translateY(40px);
 	opacity: 0;
@@ -150,8 +155,8 @@ canvas {
 }
 
 input {
-	background: rgba(255, 255, 255, 0.08);
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgb(255 255 255 / 8%);
+	border: 1px solid rgb(255 255 255 / 20%);
 	padding: 16px 18px;
 	border-radius: 18px;
 	color: white;
@@ -165,12 +170,14 @@ input {
 		border-color 0.2s,
 		background 0.2s;
 }
+
 input:focus {
 	border-color: var(--accent);
-	background: rgba(255, 255, 255, 0.12);
+	background: rgb(255 255 255 / 12%);
 }
+
 input::placeholder {
-	color: rgba(255, 255, 255, 0.4);
+	color: rgb(255 255 255 / 40%);
 }
 
 .btn-release {
@@ -190,15 +197,16 @@ input::placeholder {
 		box-shadow 0.2s;
 	margin-bottom: 12px;
 }
+
 .btn-release:active {
 	transform: scale(0.98);
-	box-shadow: 0 5px 25px rgba(107, 182, 217, 0.4);
+	box-shadow: 0 5px 25px rgb(107 182 217 / 40%);
 }
 
 .btn-minimize {
 	background: transparent;
-	border: 1px solid rgba(255, 255, 255, 0.15);
-	color: rgba(255, 255, 255, 0.5);
+	border: 1px solid rgb(255 255 255 / 15%);
+	color: rgb(255 255 255 / 50%);
 	padding: 10px;
 	border-radius: 14px;
 	width: 100%;
@@ -209,10 +217,11 @@ input::placeholder {
 	transition: all 0.2s;
 	font-weight: 400;
 }
+
 .btn-minimize:hover {
-	background: rgba(255, 255, 255, 0.08);
-	color: rgba(255, 255, 255, 0.8);
-	border-color: rgba(255, 255, 255, 0.3);
+	background: rgb(255 255 255 / 8%);
+	color: rgb(255 255 255 / 80%);
+	border-color: rgb(255 255 255 / 30%);
 }
 
 /* Ambient Hints */
@@ -221,7 +230,7 @@ input::placeholder {
 	top: 90px;
 	width: 100%;
 	text-align: center;
-	color: rgba(255, 255, 255, 0.22);
+	color: rgb(255 255 255 / 22%);
 	font-size: 0.65rem;
 	letter-spacing: 4px;
 	text-transform: uppercase;
@@ -235,7 +244,7 @@ input::placeholder {
 	bottom: 35px;
 	width: 100%;
 	text-align: center;
-	color: rgba(255, 255, 255, 0.15);
+	color: rgb(255 255 255 / 15%);
 	font-size: 0.6rem;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -244,29 +253,34 @@ input::placeholder {
 	font-weight: 300;
 	animation: pulseHint 4s infinite ease-in-out;
 }
+
 @keyframes pulseHint {
 	0%,
 	100% {
 		opacity: 0.15;
 	}
+
 	50% {
 		opacity: 0.3;
 	}
 }
 
-@media (max-height: 700px) {
+@media (height <= 700px) {
 	.input-modal {
 		padding: 20px;
 		border-radius: 28px;
 		margin-bottom: 15px;
 	}
+
 	input {
 		padding: 14px;
 		font-size: 0.95rem;
 	}
+
 	.btn-release {
 		padding: 14px;
 	}
+
 	.breath-hint {
 		top: 70px;
 	}
@@ -275,6 +289,7 @@ input::placeholder {
 .skip-link {
 	color: #eb32b5;
 }
+
 .skip-link:focus {
 	color: #eb32b5;
 	background: #fff;

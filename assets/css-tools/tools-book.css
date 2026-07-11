@@ -33,10 +33,9 @@
 	max-height: 75vh;
 	min-height: 500px;
 	background: var(--white);
-	border: 1px solid rgba(103, 27, 80, 0.15);
+	border: 1px solid rgb(103 27 80 / 15%);
 	border-radius: var(--radius-lg);
-	overflow-y: auto;
-	overflow-x: hidden;
+	overflow: hidden auto;
 	box-shadow: var(--shadow-sm);
 	scrollbar-gutter: stable;
 	position: relative;
@@ -54,13 +53,16 @@
 .iframe-container::-webkit-scrollbar {
 	width: 8px;
 }
+
 .iframe-container::-webkit-scrollbar-track {
 	background: var(--off-white);
 }
+
 .iframe-container::-webkit-scrollbar-thumb {
 	background: var(--blush);
 	border-radius: var(--radius-pill);
 }
+
 .iframe-container::-webkit-scrollbar-thumb:hover {
 	background: var(--soft-plum);
 }
@@ -71,6 +73,7 @@
 		opacity: 0;
 		transform: translateY(10px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -78,7 +81,7 @@
 }
 
 /* --- MOBILE OPTIMIZATION --- */
-@media (max-width: 768px) {
+@media (width <= 768px) {
 	.iframe-container {
 		max-height: 70dvh;
 		min-height: 400px;
@@ -94,9 +97,11 @@
 html {
 	scroll-behavior: smooth;
 }
+
 .skip-link {
 	color: #eb32b5;
 }
+
 .skip-link:focus {
 	color: #eb32b5;
 	background: #fff;

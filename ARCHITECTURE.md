@@ -17,7 +17,7 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 
 ## Repository Structure
 
-```
+````
 /workspace
 ├── ARCHITECTURE.md                 # This file
 ├── README.md                       # Project overview & deployment URL
@@ -229,21 +229,21 @@ Defined in `css/base.css`:
   --primary: #671B50;        /* Deep Purple - Main brand */
   --accent: #F34674;         /* Wild Strawberry - Highlights, CTAs */
   --support: #EFBCBA;        /* Cotton Rose - Soft backgrounds */
-  
+
   /* Neutrals */
   --white: #FFFFFF;
   --off-white: #FDFCF8;
   --soft-plum: #FFF0F5;
   --cream: #FAF5F0;
   --blush: #F9E8ED;
-  
+
   /* Text Colors */
   --text-dark: #2D1B2E;
   --text-body: #4A3B4A;
   --text-muted: #6B4C5A;
   --text-light: #8B6B7A;
 }
-```
+````
 
 ### Typography Scale
 
@@ -261,6 +261,7 @@ Fluid typography using `clamp()`:
 ```
 
 **Font Families:**
+
 - Headings: `'Playfair Display', serif`
 - Body: `'Inter', system-ui, sans-serif`
 
@@ -318,6 +319,7 @@ Single source of truth for widths:
 ### Module Responsibilities
 
 #### `base.css`
+
 - CSS custom properties (design tokens)
 - CSS reset
 - Base element styles
@@ -327,6 +329,7 @@ Single source of truth for widths:
 - Container setup
 
 #### `layout.css`
+
 - Site header (desktop + mobile navigation)
 - Hero section (intrinsic grid)
 - Main content grids
@@ -335,6 +338,7 @@ Single source of truth for widths:
 - Card layouts
 
 #### `components.css`
+
 - Reusable UI components:
   - Badges
   - Icons (SVG sizing)
@@ -348,6 +352,7 @@ Single source of truth for widths:
 - Container queries for component responsiveness
 
 #### `utilities.css`
+
 - Helper classes:
   - Text alignment
   - Font weights & sizes
@@ -372,6 +377,7 @@ Single source of truth for widths:
   - Screen reader only (`.sr-only`)
 
 #### `animations.css`
+
 - Keyframe definitions:
   - Fade variations
   - Scale variations
@@ -438,6 +444,7 @@ Organized as IIFE modules:
 ### Tool Scripts
 
 Each tool script follows a consistent pattern:
+
 - Initialization function
 - State management
 - Event listeners
@@ -518,7 +525,7 @@ Each tool script follows a consistent pattern:
 ✅ Reduced motion media query support  
 ✅ Mobile navigation focus trap  
 ✅ Keyboard navigation (Escape to close)  
-✅ Color contrast (mostly compliant)  
+✅ Color contrast (mostly compliant)
 
 ### Areas for Improvement
 
@@ -527,7 +534,7 @@ Each tool script follows a consistent pattern:
 ⚠️ **Heading Hierarchy**: Needs audit  
 ⚠️ **Link Purposes**: Some links lack descriptive text  
 ⚠️ **Dynamic Content**: ARIA live regions for tool interactions  
-⚠️ **Color Contrast**: Verify all text meets WCAG AA (4.5:1)  
+⚠️ **Color Contrast**: Verify all text meets WCAG AA (4.5:1)
 
 ---
 
@@ -677,6 +684,7 @@ index.html
 ### CSS Import Order (Critical)
 
 Every page must load CSS in this exact order:
+
 1. `base.css` (variables, reset)
 2. `layout.css` (structure)
 3. `components.css` (UI elements)
@@ -691,6 +699,7 @@ Changing this order will break the cascade.
 ## Future Roadmap
 
 ### Phase 1: Cleanup (Immediate)
+
 - [ ] Remove duplicate homepage files
 - [ ] Create missing `terms.html` and `disclaimer.html`
 - [ ] Update `site.webmanifest` with correct branding
@@ -699,6 +708,7 @@ Changing this order will break the cascade.
 - [ ] Fix domain references in SEO files
 
 ### Phase 2: Optimization (Short-term)
+
 - [ ] Optimize all images (WebP/AVIF conversion)
 - [ ] Implement responsive images with `srcset`
 - [ ] Add lazy loading to below-fold images
@@ -707,6 +717,7 @@ Changing this order will break the cascade.
 - [ ] Configure cache headers
 
 ### Phase 3: Enhancement (Medium-term)
+
 - [ ] Add JSON-LD structured data to all pages
 - [ ] Complete meta descriptions for all pages
 - [ ] Audit and fix heading hierarchy
@@ -715,6 +726,7 @@ Changing this order will break the cascade.
 - [ ] Implement service worker for offline support
 
 ### Phase 4: Expansion (Long-term)
+
 - [ ] Build admin CMS for blog (static site generator?)
 - [ ] Add multilingual support (Hindi + English)
 - [ ] Implement online booking integration
@@ -749,14 +761,14 @@ Changing this order will break the cascade.
 
 ## Glossary
 
-| Term | Definition |
-|------|------------|
-| **Intrinsic Design** | Layout approach where components adapt to their content and container, not viewport breakpoints |
-| **Fluid Typography** | Font sizes that scale smoothly using `clamp()` rather than discrete steps |
-| **Container Queries** | CSS feature allowing components to respond to their container's size, not just viewport |
-| **Design Tokens** | Named entities storing visual design attributes (colors, spacing, etc.) as single source of truth |
-| **Progressive Enhancement** | Building core functionality first, then layering advanced features for capable browsers |
-| **IIFE** | Immediately Invoked Function Expression—JavaScript pattern to avoid global scope pollution |
+| Term                        | Definition                                                                                        |
+| --------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Intrinsic Design**        | Layout approach where components adapt to their content and container, not viewport breakpoints   |
+| **Fluid Typography**        | Font sizes that scale smoothly using `clamp()` rather than discrete steps                         |
+| **Container Queries**       | CSS feature allowing components to respond to their container's size, not just viewport           |
+| **Design Tokens**           | Named entities storing visual design attributes (colors, spacing, etc.) as single source of truth |
+| **Progressive Enhancement** | Building core functionality first, then layering advanced features for capable browsers           |
+| **IIFE**                    | Immediately Invoked Function Expression—JavaScript pattern to avoid global scope pollution        |
 
 ---
 
@@ -766,6 +778,6 @@ Changing this order will break the cascade.
 **Last Updated**: 2025  
 **Technology Stack**: HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)  
 **Deployment**: GitHub Pages  
-**Domain**: mindgracencr.in (primary)  
+**Domain**: mindgracencr.in (primary)
 
 For questions or contributions, refer to the repository owner or consult the AGENT_BIBLE documentation for AI-assisted maintenance.

@@ -29,6 +29,7 @@ Every page must load these files in **exact order**:
 **Purpose:** Defines the visual foundation and design system.
 
 **Contains:**
+
 - CSS custom properties (design tokens)
   - Color palette (primary, accent, support, neutrals, text)
   - Typography scale (fluid `clamp()` functions)
@@ -55,6 +56,7 @@ Every page must load these files in **exact order**:
 **Purpose:** Defines the macro layout of the site.
 
 **Contains:**
+
 - Site header
   - Logo styles (fluid sizing)
   - Desktop navigation
@@ -85,6 +87,7 @@ Every page must load these files in **exact order**:
 **Purpose:** Provides reusable UI building blocks.
 
 **Contains:**
+
 - Badges (`.badge`, `.badge-primary`, `.badge-support`)
 - Icons (`.icon`, `.icon-sm`, `.icon-lg`, `.icon-xl`)
 - Card variants
@@ -114,6 +117,7 @@ Every page must load these files in **exact order**:
 **Purpose:** Provides atomic utility classes for rapid styling.
 
 **Contains:**
+
 - Text alignment (`.text-center`, `.text-left`, `.text-right`)
 - Font weights (`.fw-light` through `.fw-bold`)
 - Font sizes (`.fs-display` through `.fs-tiny`)
@@ -147,6 +151,7 @@ Every page must load these files in **exact order**:
 **Purpose:** Defines all animations and motion utilities.
 
 **Contains:**
+
 - Keyframe definitions
   - Fade variations (`fadeIn`, `fadeInUp`, `fadeInDown`, `fadeInLeft`, `fadeInRight`)
   - Scale variations (`scaleIn`, `scaleOut`)
@@ -180,15 +185,17 @@ Every page must load these files in **exact order**:
 All CSS modules use design tokens from `base.css`. Never hardcode values like:
 
 ❌ **Don't do this:**
+
 ```css
 .card {
   padding: 20px;
   border-radius: 8px;
-  color: #671B50;
+  color: #671b50;
 }
 ```
 
 ✅ **Do this:**
+
 ```css
 .card {
   padding: var(--space-lg);

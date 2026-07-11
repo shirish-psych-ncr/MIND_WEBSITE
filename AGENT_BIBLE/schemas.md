@@ -1,4 +1,5 @@
 # Structured Data Schemas v3.0
+
 ## Mind Grace Neuropsychiatric Clinic - JSON-LD Implementation
 
 **Source of Truth:** All 43 HTML pages verified  
@@ -29,6 +30,7 @@
 ### Why Structured Data?
 
 Structured data (JSON-LD) helps search engines understand your content better, leading to:
+
 - **Rich Snippets** in search results
 - **Knowledge Panels** for local businesses
 - **Enhanced visibility** in Google Maps
@@ -94,7 +96,14 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
   "medicalSpecialty": ["Psychiatry", "Psychology", "Child Development"],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
     "opens": "09:00",
     "closes": "20:00"
   },
@@ -107,6 +116,7 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
 ```
 
 **Key Properties:**
+
 - `@type`: MedicalOrganization
 - `medicalSpecialty`: Array of specialties
 - `openingHoursSpecification`: Days and times
@@ -196,6 +206,7 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
 ```
 
 **Key Properties:**
+
 - `education`: Array of credentials
 - `worksFor`: Link to organization
 - `knowsAbout`: Areas of expertise
@@ -244,7 +255,14 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
   "availableLanguage": ["English", "Hindi", "Punjabi"],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
     "opens": "09:00",
     "closes": "20:00"
   },
@@ -262,6 +280,7 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
 ```
 
 **Key Properties:**
+
 - `areaServed`: List of localities
 - `nearbyLandmarks`: Navigation aids
 - `paymentAccepted`: Payment methods
@@ -322,6 +341,7 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
 ```
 
 **Key Properties:**
+
 - `medicalSpecialty`: Array of specialties
 - `availableService`: List of services offered
 
@@ -366,6 +386,7 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
 ```
 
 **ISO 8601 Duration Format:**
+
 - `PT45M` = 45 minutes
 - `PT1H` = 1 hour
 - `PT1H30M` = 1 hour 30 minutes
@@ -406,6 +427,7 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
 ```
 
 **Implementation Pattern:**
+
 ```html
 <script type="application/ld+json">
   {
@@ -458,6 +480,7 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
 ```
 
 **Best Practices:**
+
 - Include at least 3-5 FAQs
 - Use clear, concise answers
 - Match visible FAQ content on page
@@ -507,39 +530,47 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
 
 ### 10.1 Where to Add Schemas
 
-| Page Type | Primary Schema | Additional Schemas |
-|-----------|---------------|-------------------|
-| Homepage | Organization | LocalBusiness, MedicalBusiness |
-| About | Physician | Organization |
-| Doctor Profile | Physician | BreadcrumbList |
-| Location | LocalBusiness | Organization |
-| Services | MedicalBusiness | MedicalService |
-| Conditions | MedicalCondition | BreadcrumbList |
-| FAQ | FAQPage | BreadcrumbList |
-| Blog Post | BlogPosting | BreadcrumbList |
+| Page Type      | Primary Schema   | Additional Schemas             |
+| -------------- | ---------------- | ------------------------------ |
+| Homepage       | Organization     | LocalBusiness, MedicalBusiness |
+| About          | Physician        | Organization                   |
+| Doctor Profile | Physician        | BreadcrumbList                 |
+| Location       | LocalBusiness    | Organization                   |
+| Services       | MedicalBusiness  | MedicalService                 |
+| Conditions     | MedicalCondition | BreadcrumbList                 |
+| FAQ            | FAQPage          | BreadcrumbList                 |
+| Blog Post      | BlogPosting      | BreadcrumbList                 |
 
 ### 10.2 Multiple Schemas on One Page
 
 You can include multiple schemas by either:
+
 1. **Separate script tags:**
+
 ```html
-<script type="application/ld+json">{...}</script>
-<script type="application/ld+json">{...}</script>
+<script type="application/ld+json">
+  {...}
+</script>
+<script type="application/ld+json">
+  {...}
+</script>
 ```
 
 2. **Array format:**
+
 ```html
 <script type="application/ld+json">
-[
-  {...},
-  {...}
-]
+  [
+    {...},
+    {...}
+  ]
 </script>
 ```
 
 ### 10.3 Required Fields Checklist
 
 **Minimum required for LocalBusiness:**
+
 - ✅ `@context`
 - ✅ `@type`
 - ✅ `name`
@@ -548,6 +579,7 @@ You can include multiple schemas by either:
 - ✅ `geo` (latitude/longitude)
 
 **Minimum required for Physician:**
+
 - ✅ `@context`
 - ✅ `@type`
 - ✅ `name`
@@ -557,11 +589,13 @@ You can include multiple schemas by either:
 ### 10.4 Testing & Validation
 
 **Tools:**
+
 1. [Google Rich Results Test](https://search.google.com/test/rich-results)
 2. [Schema Markup Validator](https://validator.schema.org/)
 3. [Google Search Console](https://search.google.com/search-console)
 
 **Testing Process:**
+
 1. Add schema to page
 2. Run URL through Rich Results Test
 3. Fix any errors/warnings
@@ -570,6 +604,7 @@ You can include multiple schemas by either:
 ### 10.5 Common Errors to Avoid
 
 ❌ **Missing @context:**
+
 ```json
 // Wrong
 {
@@ -586,6 +621,7 @@ You can include multiple schemas by either:
 ```
 
 ❌ **Invalid URLs:**
+
 ```json
 // Wrong - relative URL
 "url": "/location.html"
@@ -608,16 +644,16 @@ Ensure schema data matches visible content on page
 
 ## Quick Reference: Schema Types
 
-| Schema Type | Use Case | Priority |
-|-------------|----------|----------|
+| Schema Type         | Use Case        | Priority    |
+| ------------------- | --------------- | ----------- |
 | MedicalOrganization | Clinic identity | 🔴 Critical |
-| LocalBusiness | Local SEO | 🔴 Critical |
-| Physician | Doctor profiles | 🔴 Critical |
-| MedicalService | Service pages | 🟡 High |
-| BreadcrumbList | Navigation | 🟡 High |
-| FAQPage | FAQ page | 🟢 Medium |
-| BlogPosting | Blog articles | 🟢 Medium |
-| MedicalCondition | Condition pages | 🟢 Medium |
+| LocalBusiness       | Local SEO       | 🔴 Critical |
+| Physician           | Doctor profiles | 🔴 Critical |
+| MedicalService      | Service pages   | 🟡 High     |
+| BreadcrumbList      | Navigation      | 🟡 High     |
+| FAQPage             | FAQ page        | 🟢 Medium   |
+| BlogPosting         | Blog articles   | 🟢 Medium   |
+| MedicalCondition    | Condition pages | 🟢 Medium   |
 
 ---
 

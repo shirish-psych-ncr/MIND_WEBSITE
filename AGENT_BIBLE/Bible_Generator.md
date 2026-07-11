@@ -4,7 +4,7 @@ Engineering Operating System
 
 ## An AI Cognitive Architecture for Autonomous Software Engineering
 
-> *"Code implements behaviour. Knowledge implements understanding. Architecture preserves reasoning. Memory preserves continuity. Automation preserves truth."*
+> _"Code implements behaviour. Knowledge implements understanding. Architecture preserves reasoning. Memory preserves continuity. Automation preserves truth."_
 
 ---
 
@@ -138,14 +138,14 @@ Models every repository asset as an engineering resource rather than a file. Doc
 
 Throughout this knowledge base, several foundational principles remain invariant:
 
-* Every concept has exactly one canonical source of truth.
-* Stable knowledge is written; volatile knowledge is generated.
-* Architecture governs implementation rather than emerging from it.
-* Documentation explains intent rather than implementation.
-* Automation maintains reality rather than humans maintaining inventories.
-* AI reconstructs understanding before generating code.
-* Repository evolution preserves reasoning instead of merely preserving files.
-* Engineering quality is measured by long-term comprehensibility rather than short-term implementation speed.
+- Every concept has exactly one canonical source of truth.
+- Stable knowledge is written; volatile knowledge is generated.
+- Architecture governs implementation rather than emerging from it.
+- Documentation explains intent rather than implementation.
+- Automation maintains reality rather than humans maintaining inventories.
+- AI reconstructs understanding before generating code.
+- Repository evolution preserves reasoning instead of merely preserving files.
+- Engineering quality is measured by long-term comprehensibility rather than short-term implementation speed.
 
 ---
 
@@ -176,7 +176,6 @@ For onboarding contributors:
 # Intended Outcome
 
 When fully maintained, this repository should function as an **AI-native engineering operating system** in which every implementation decision can be traced back to architectural intent, every architectural decision can be traced back to engineering philosophy, every behavioural system is discoverable through documentation, every resource possesses explicit ownership, every dependency remains understandable, every change preserves repository coherence, and every future contributor—human or autonomous—can begin with comprehension instead of reconstruction.
-
 
 ===============================================
 
@@ -303,6 +302,7 @@ Successful AI assistance is measured by reduced ambiguity;;reduced onboarding ti
 The ideal repository behaves like an executable knowledge system;;source code implements behaviour;;documentation implements understanding;;automation synchronizes reality;;AI maintains coherence;;Git preserves evolution;;future contributors inherit reasoning instead of merely inheriting files;;every engineering decision becomes discoverable;;every architectural assumption becomes explicit;;every implementation becomes traceable back to design intent;;every future AI session starts with comprehension instead of reconstruction.
 
 ---
+
 ===============================================
 
 # skills.md — AI Capability Graph, Operational Intelligence & Cognitive Skill Registry
@@ -311,7 +311,7 @@ The ideal repository behaves like an executable knowledge system;;source code im
 
 ## Foundational Purpose
 
-`skills.md` is not a list of abilities;;it is the repository's operational intelligence layer;;it defines **how an AI reasons, plans, decomposes, synthesizes, validates, recovers, critiques, and evolves work**;;it externalizes cognition rather than implementation;;its audience is autonomous coding agents rather than developers;;it should enable any sufficiently capable AI to infer *how to think* before deciding *what to build*.
+`skills.md` is not a list of abilities;;it is the repository's operational intelligence layer;;it defines **how an AI reasons, plans, decomposes, synthesizes, validates, recovers, critiques, and evolves work**;;it externalizes cognition rather than implementation;;its audience is autonomous coding agents rather than developers;;it should enable any sufficiently capable AI to infer _how to think_ before deciding _what to build_.
 
 ---
 
@@ -494,6 +494,7 @@ Skills rarely execute independently;;context reconstruction activates architectu
 A mature AI operating under `skills.md` should require progressively less conversational context;;reconstruct project intent directly from repository knowledge;;make architecturally consistent decisions without repeated prompting;;predict downstream consequences before implementation;;reduce documentation entropy with every change;;increase repository coherence over time;;behave less like an autocomplete engine and more like a continuously learning systems architect whose primary output is sustainable engineering knowledge rather than merely functional code.
 
 ---
+
 ===============================================
 
 # assets.md — Digital Asset Intelligence, Lifecycle Architecture & Repository Resource Registry
@@ -679,6 +680,7 @@ Assets should integrate naturally with pages.md through consumption relationship
 A mature `assets.md` enables any AI or developer to understand every digital resource without opening the filesystem;;predict where an asset is used before searching;;identify optimization opportunities before profiling;;recognize ownership before editing;;understand lifecycle before replacement;;distinguish canonical resources from derivatives;;reconstruct repository visual architecture from documentation alone;;maintain long-term consistency across branding, performance, accessibility, deployment, documentation, and engineering workflows while minimizing duplication and maximizing discoverability.
 
 ---
+
 ===============================================
 
 # design.md — Design Intelligence, Visual Language Architecture & Human Experience System
@@ -864,6 +866,7 @@ Generate design token inventories;;generate component usage reports;;generate ty
 A mature `design.md` enables an AI to reconstruct the complete visual language before reading CSS;;predict component behaviour before opening implementation files;;infer appropriate layouts for entirely new features;;extend interfaces without introducing stylistic drift;;maintain accessibility and clinical trust automatically;;reason about perception, cognition, interaction, hierarchy, and identity as one unified system;;ensure that every future interface feels as though it was designed by the same enduring design philosophy rather than by different contributors across different years.
 
 ---
+
 ===============================================
 
 # memory.md — Repository Cognitive Memory, Evolution Engine & Operational Continuity Layer
@@ -1216,7 +1219,6 @@ Generate complete page inventories;;generate navigation graphs;;generate journey
 
 A mature `pages.md` enables any AI or developer to reconstruct the complete information architecture before opening a browser;;predict the existence, purpose, relationships, ownership, and navigation of pages before inspecting implementation;;identify structural weaknesses without reading source code;;extend products without introducing navigational fragmentation;;maintain conceptual coherence across hundreds of pages;;ensure every new destination strengthens the overall knowledge network rather than increasing architectural entropy;;transform the repository into a navigable experience ecosystem whose structure remains understandable regardless of implementation technology.
 
-
 ===============================================
 
 # tools.md — Interactive Systems Intelligence, Behaviour Architecture & Capability Registry
@@ -1389,7 +1391,6 @@ Generate behavioural inventories;;generate dependency graphs;;generate interacti
 
 A mature `tools.md` allows any AI or engineer to reconstruct the complete behavioural architecture of every interactive capability before opening source code;;predict state transitions, interaction patterns, accessibility requirements, performance implications, and user outcomes without inspecting implementation;;identify reusable behavioural systems;;reduce interaction inconsistency;;support long-term evolution through composable behaviour;;ensure every new tool strengthens the repository's behavioural language rather than introducing isolated interaction paradigms;;transform the repository from a collection of scripts into a coherent ecosystem of intentional, explainable, reusable behavioural systems.
 
-
 ===============================================
 
 # worker.md — Engineering Execution Engine, Implementation Architecture & Operational Runtime Intelligence
@@ -1398,7 +1399,7 @@ A mature `tools.md` allows any AI or engineer to reconstruct the complete behavi
 
 ## Foundational Purpose
 
-`worker.md` is not a build guide;;it is the repository's execution intelligence layer;;it defines how architecture becomes implementation, how intent becomes code, how standards become enforceable systems, and how autonomous engineering work proceeds from planning through deployment;;it functions as the operational blueprint for AI coding agents, ensuring every implementation follows deterministic engineering behaviour instead of improvisation;;its responsibility is not explaining *what* the repository is, but *how work is performed inside it*.
+`worker.md` is not a build guide;;it is the repository's execution intelligence layer;;it defines how architecture becomes implementation, how intent becomes code, how standards become enforceable systems, and how autonomous engineering work proceeds from planning through deployment;;it functions as the operational blueprint for AI coding agents, ensuring every implementation follows deterministic engineering behaviour instead of improvisation;;its responsibility is not explaining _what_ the repository is, but _how work is performed inside it_.
 
 ---
 
@@ -1567,7 +1568,6 @@ Automatically discover affected files;;automatically determine dependency impact
 ## Success Criteria
 
 A mature `worker.md` enables any autonomous coding agent to reconstruct the repository's engineering workflow before writing code;;predict execution order, dependency propagation, validation requirements, documentation updates, build implications, and deployment consequences automatically;;implement features with minimal architectural drift;;maintain deterministic engineering behaviour across contributors and technologies;;reduce operational entropy with every execution cycle;;transform implementation from isolated coding tasks into a disciplined, continuously improving engineering system whose behaviour remains consistent regardless of the individual performing the work.
-
 
 ===============================================
 
@@ -1753,5 +1753,3 @@ Generate architecture graphs;;generate dependency matrices;;generate domain maps
 ## Success Criteria
 
 A mature `architecture.md` enables any AI or engineer to reconstruct the entire conceptual structure of the repository before reading implementation;;identify domain boundaries, dependency directions, subsystem responsibilities, communication paths, evolution strategy, governance constraints, and scalability model automatically;;predict where any new capability belongs before creating it;;prevent architectural drift across years of development;;maintain structural coherence independent of programming language, framework, or deployment platform;;transform the repository from a collection of technologies into a stable, self-describing engineering organism whose structure remains intelligible regardless of how many times its implementation evolves.
-
-

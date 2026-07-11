@@ -24,19 +24,19 @@ check as CSS
   <meta name="author" content="Mind Grace Neuropsychiatric Clinic"/>
   <meta name="publisher" content="Mind Grace Neuropsychiatric Clinic"/>
   <meta name="referrer" content="strict-origin-when-cross-origin"/>
-  
+
   <title>You Deserve Care | Mind Grace Neuropsychiatric Clinic — Psychiatrist in Greater Noida</title>
   <meta name="description" content="You matter. Consult Dr Anita Sharma at Mind Grace Neuropsychiatric Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care."/>
-  
+
   <!-- Primary canonical (absolute URL) -->
   <link rel="canonical" href="https://mindgracencr.in/"/>
-  
+
   <!-- Alternate language versions -->
   <link rel="alternate" hreflang="en-IN" href="https://mindgracencr.in/"/>
   <link rel="alternate" hreflang="x-default" href="https://mindgracencr.in/"/>
-  
+
   <link rel="preload" href="/MIND_WEBSITE/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" as="image" type="image/svg+xml"/>
-  
+
   <!-- OpenGraph / Social Sharing -->
   <meta property="og:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>
   <meta property="og:description" content="Mental Health care in Greater Noida for anxiety, depression, ADHD, child development & more."/>
@@ -50,32 +50,32 @@ check as CSS
   <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic"/>
   <meta property="og:locale" content="en_IN"/>
   <meta property="og:type" content="website"/>
-  
+
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>
   <meta name="twitter:description" content="You matter. Expert psychiatric care in Greater Noida."/>
   <meta name="twitter:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>
   <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist"/>
-  
+
   <!-- Robots & Indexing -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
-  
+
   <!-- PWA / Mobile Web App -->
   <meta name="mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-title" content="Mind Grace"/>
   <link rel="manifest" href="site.webmanifest"/>
-  
+
   <!-- Base64 Favicon (Pink Lotus from Logo) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
   <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
-  
+
   <!-- Fonts - Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"/>
-  
+
   <!-- Critical CSS inlined for above-the-fold -->
   <style>
     /* Font fallback during load */
@@ -88,7 +88,7 @@ check as CSS
     .site-header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
     .hero-section{min-height:80vh;display:flex;align-items:center}
   </style>
-  
+
   <!-- Defer non-critical CSS -->
   <link rel="preload" href="/MIND_WEBSITE/assets/css/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
   <link rel="preload" href="/MIND_WEBSITE/assets/css/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
@@ -102,10 +102,10 @@ check as CSS
     <link rel="stylesheet" href="assets/css/utilities.css"/>
     <link rel="stylesheet" href="assets/css/animations.css"/>
   </noscript>
-  
+
   <!-- Preload LCP image -->
   <link rel="preload" as="image" href="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp" imagesrcset="/MIND_WEBSITE/assets/images/mind-grace-entry-n-reception.webp 800w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high"/>
-  
+
   <!-- Security Headers (where supported) -->
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://docs.google.com https://www.google.com;"/>
@@ -144,7 +144,7 @@ check as CSS
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Mobile Book Button (Calendar Icon) -->
       <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -152,6 +152,7 @@ check as CSS
         </svg>
       </a>
     </div>
+
   </header>
 
   <!-- MOBILE NAV OVERLAY -->
@@ -206,6 +207,7 @@ check as CSS
         <a href="book.html" class="cta-button">Book Appointment</a>
       </div>
     </div>
+
   </nav>
 
   <!-- MAIN CONTENT -->
@@ -244,7 +246,7 @@ check as CSS
               </svg>
             </a>
           </div>
-          
+
           <div class="hero-trust">
             <div class="hero-trust-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -400,13 +402,14 @@ check as CSS
         </article>
       </div>
     </section>
-    
+
     <!-- EMOTIONAL CTA SECTION -->
     <section class="emotional-cta" aria-labelledby="emotional-cta-title">
       <h2 id="emotional-cta-title">You don't have to go through it alone</h2>
       <p>We're here to listen, support, and walk beside you on your journey to wellness.</p>
       <a href="book.html" class="btn btn-primary">Talk to Someone</a>
     </section>
+
   </main>
 
   <!-- FOOTER - Substantial Visual Weight -->
@@ -449,6 +452,7 @@ check as CSS
         © <span id="year"></span> Mind Grace Neuropsychiatric Clinic, Greater Noida. All rights reserved.
       </p>
     </div>
+
   </footer>
 
   <!-- JAVASCRIPT - Library Stack -->
@@ -599,55 +603,55 @@ Error: Parse Error.
 
 From line 68, column 33; to line 71, column 4
 
-  body { font-display: swap; }↩    ↩    /* Ensure smooth first paint */↩    .hero-
+body { font-display: swap; }↩ ↩ /* Ensure smooth first paint */↩ .hero-
 
 Error: Bad value Strict-Transport-Security for attribute http-equiv on element meta.
 
 From line 96, column 3; to line 96, column 103
 
-aders (where supported) -->↩  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"/>↩  <me
+aders (where supported) -->↩ <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"/>↩ <me
 
 Error: Bad value X-Content-Type-Options for attribute http-equiv on element meta.
 
 From line 98, column 3; to line 98, column 63
 
- https://www.google.com;"/>↩  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>↩</hea
+https://www.google.com;"/>↩ <meta http-equiv="X-Content-Type-Options" content="nosniff"/>↩</hea
 
 Warning: The banner role is unnecessary for element header.
 
 From line 105, column 3; to line 105, column 44
 
-tent</a>↩↩  <!-- HEADER -->↩  <header class="site-header" role="banner">↩    <
+tent</a>↩↩ <!-- HEADER -->↩ <header class="site-header" role="banner">↩ <
 
 Warning: The navigation role is unnecessary for element nav.
 
 From line 116, column 7; to line 116, column 78
 
- DESKTOP NAVIGATION -->↩      <nav class="desktop-nav" role="navigation" aria-label="Main navigation">↩     
+DESKTOP NAVIGATION -->↩ <nav class="desktop-nav" role="navigation" aria-label="Main navigation">↩
 
 Warning: The navigation role is unnecessary for element nav.
 
 From line 147, column 3; to line 147, column 109
 
- NAV PANEL - Simplified -->↩  <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>↩    <
+NAV PANEL - Simplified -->↩ <nav class="mobile-nav-panel" id="mobile-nav-panel" role="navigation" aria-label="Mobile navigation" inert>↩ <
 
 Warning: The main role is unnecessary for element main.
 
 From line 198, column 3; to line 198, column 38
 
-v>↩↩  <!-- MAIN CONTENT -->↩  <main id="main-content" role="main">↩    <
+v>↩↩ <!-- MAIN CONTENT -->↩ <main id="main-content" role="main">↩ <
 
 Warning: The contentinfo role is unnecessary for element footer.
 
 From line 399, column 3; to line 399, column 49
 
-bstantial Visual Weight -->↩  <footer class="site-footer" role="contentinfo">↩    <
+bstantial Visual Weight -->↩ <footer class="site-footer" role="contentinfo">↩ <
 
 Error: Element style not allowed as child of element noscript in this context. (Suppressing further errors from this subtree.)
 
 From line 476, column 5; to line 476, column 11
 
-er></script>↩  <noscript>↩    <style>↩     
+er></script>↩ <noscript>↩ <style>↩
 
 Contexts in which element style may be used:
 Where metadata content is expected.
@@ -672,43 +676,43 @@ Warning: Resource violates Content Security Policy (meta tag): external styleshe
 
 From line 85, column 5; to line 85, column 55
 
-ylesheet'"/>↩  <noscript>↩    <link rel="stylesheet" href="assets/css/base.css"/>↩    <
+ylesheet'"/>↩ <noscript>↩ <link rel="stylesheet" href="assets/css/base.css"/>↩ <
 
 Warning: Resource violates Content Security Policy (meta tag): external stylesheet assets/css/layout.css blocked by style-src directive.
 
 From line 86, column 5; to line 86, column 57
 
-f="assets/css/base.css"/>↩    <link rel="stylesheet" href="assets/css/layout.css"/>↩    <
+f="assets/css/base.css"/>↩ <link rel="stylesheet" href="assets/css/layout.css"/>↩ <
 
 Warning: Resource violates Content Security Policy (meta tag): external stylesheet assets/css/components.css blocked by style-src directive.
 
 From line 87, column 5; to line 87, column 61
 
-"assets/css/layout.css"/>↩    <link rel="stylesheet" href="assets/css/components.css"/>↩    <
+"assets/css/layout.css"/>↩ <link rel="stylesheet" href="assets/css/components.css"/>↩ <
 
 Warning: Resource violates Content Security Policy (meta tag): external stylesheet assets/css/utilities.css blocked by style-src directive.
 
 From line 88, column 5; to line 88, column 60
 
-ets/css/components.css"/>↩    <link rel="stylesheet" href="assets/css/utilities.css"/>↩    <
+ets/css/components.css"/>↩ <link rel="stylesheet" href="assets/css/utilities.css"/>↩ <
 
 Warning: Resource violates Content Security Policy (meta tag): external stylesheet assets/css/animations.css blocked by style-src directive.
 
 From line 89, column 5; to line 89, column 61
 
-sets/css/utilities.css"/>↩    <link rel="stylesheet" href="assets/css/animations.css"/>↩  </n
+sets/css/utilities.css"/>↩ <link rel="stylesheet" href="assets/css/animations.css"/>↩ </n
 
 Warning: Resource violates Content Security Policy (meta tag): image assets/images/Mind_Grace_Clinic_Logo_Pink.svg blocked by img-src directive.
 
 From line 108, column 9; to line 108, column 153
 
-hiatric Clinic Home">↩        <img src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>↩     
+hiatric Clinic Home">↩ <img src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/>↩
 
 Warning: Resource violates Content Security Policy (meta tag): image assets/images/mind-grace-entry-n-reception.webp blocked by img-src directive.
 
 From line 262, column 15; to line 270, column 16
 
-="image/webp"/>↩              <img↩                src="assets/images/mind-grace-entry-n-reception.webp"↩                alt="Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic"↩                class="hero-image"↩                fetchpriority="high"↩                decoding="async"↩                width="800"↩                height="533"↩              />↩     
+="image/webp"/>↩ <img↩ src="assets/images/mind-grace-entry-n-reception.webp"↩ alt="Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic"↩ class="hero-image"↩ fetchpriority="high"↩ decoding="async"↩ width="800"↩ height="533"↩ />↩
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/motion.min.js blocked by script-src directive.
 
@@ -720,67 +724,67 @@ Warning: Resource violates Content Security Policy (meta tag): external script a
 
 From line 443, column 3; to line 443, column 49
 
-ion.min.js" defer></script>↩  <script src="assets/js/lib/anime.min.js" defer></scri
+ion.min.js" defer></script>↩ <script src="assets/js/lib/anime.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/scrollreveal.min.js blocked by script-src directive.
 
 From line 445, column 3; to line 445, column 56
 
-ed due to module issues -->↩  <script src="assets/js/lib/scrollreveal.min.js" defer></scri
+ed due to module issues -->↩ <script src="assets/js/lib/scrollreveal.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/splide.min.js blocked by script-src directive.
 
 From line 449, column 3; to line 449, column 50
 
-eractivity & Components -->↩  <script src="assets/js/lib/splide.min.js" defer></scri
+eractivity & Components -->↩ <script src="assets/js/lib/splide.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/floating-ui.core.min.js blocked by script-src directive.
 
 From line 450, column 3; to line 450, column 60
 
-ide.min.js" defer></script>↩  <script src="assets/js/lib/floating-ui.core.min.js" defer></scri
+ide.min.js" defer></script>↩ <script src="assets/js/lib/floating-ui.core.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/alpine.min.js blocked by script-src directive.
 
 From line 453, column 3; to line 453, column 50
 
-Management & Reactivity -->↩  <script src="assets/js/lib/alpine.min.js" defer></scri
+Management & Reactivity -->↩ <script src="assets/js/lib/alpine.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/petite-vue.min.js blocked by script-src directive.
 
 From line 454, column 3; to line 454, column 54
 
-ine.min.js" defer></script>↩  <script src="assets/js/lib/petite-vue.min.js" defer></scri
+ine.min.js" defer></script>↩ <script src="assets/js/lib/petite-vue.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/preact-signals.min.js blocked by script-src directive.
 
 From line 455, column 3; to line 455, column 58
 
-vue.min.js" defer></script>↩  <script src="assets/js/lib/preact-signals.min.js" defer></scri
+vue.min.js" defer></script>↩ <script src="assets/js/lib/preact-signals.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/htmx.min.js blocked by script-src directive.
 
 From line 458, column 3; to line 458, column 48
 
-ching & Dynamic Content -->↩  <script src="assets/js/lib/htmx.min.js" defer></scri
+ching & Dynamic Content -->↩ <script src="assets/js/lib/htmx.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/swup.min.js blocked by script-src directive.
 
 From line 462, column 3; to line 462, column 48
 
-- Routing & Performance -->↩  <script src="assets/js/lib/swup.min.js" defer></scri
+- Routing & Performance -->↩ <script src="assets/js/lib/swup.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/quicklink.min.js blocked by script-src directive.
 
 From line 463, column 3; to line 463, column 53
 
-wup.min.js" defer></script>↩  <script src="assets/js/lib/quicklink.min.js" defer></scri
+wup.min.js" defer></script>↩ <script src="assets/js/lib/quicklink.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/navigo.min.js blocked by script-src directive.
 
 From line 464, column 3; to line 464, column 50
 
-ink.min.js" defer></script>↩  <script src="assets/js/lib/navigo.min.js" defer></scri
+ink.min.js" defer></script>↩ <script src="assets/js/lib/navigo.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/iconify.min.js blocked by script-src directive.
 
@@ -792,19 +796,19 @@ Warning: Resource violates Content Security Policy (meta tag): external script a
 
 From line 468, column 3; to line 468, column 50
 
-ify.min.js" defer></script>↩  <script src="assets/js/lib/lucide.min.js" defer></scri
+ify.min.js" defer></script>↩ <script src="assets/js/lib/lucide.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/lib/fuse.min.js blocked by script-src directive.
 
 From line 470, column 3; to line 470, column 48
 
-ed due to module issues -->↩  <script src="assets/js/lib/fuse.min.js" defer></scri
+ed due to module issues -->↩ <script src="assets/js/lib/fuse.min.js" defer></scri
 
 Warning: Resource violates Content Security Policy (meta tag): external script assets/js/main.js blocked by script-src directive.
 
 From line 474, column 3; to line 474, column 40
 
-Main Application Script -->↩  <script src="assets/js/main.js" defer></scri
+Main Application Script -->↩ <script src="assets/js/main.js" defer></scri
 
 Document checking completed.
 
@@ -816,9 +820,9 @@ The following images have textual alternatives. Please review that the textual a
 
 Note that iconic images that are redundant with text next to them or purely decorative should have alt="" instead.
 
-Image	Textual alternative	Location
-Not resolvable	Mind Grace Neuropsychiatric Clinic Logo	From line 109, column 9; to line 109, column 153
-Not resolvable	Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic	From line 263, column 15; to line 271, column 16
+Image Textual alternative Location
+Not resolvable Mind Grace Neuropsychiatric Clinic Logo From line 109, column 9; to line 109, column 153
+Not resolvable Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic From line 263, column 15; to line 271, column 16
 Source
 <!DOCTYPE html><html lang=''><!DOCTYPE html>↩
 <html lang="en-IN" dir="ltr">↩

@@ -28,9 +28,11 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .text-center {
 	text-align: center;
 }
+
 .text-left {
 	text-align: left;
 }
+
 .text-right {
 	text-align: right;
 }
@@ -38,15 +40,19 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .fw-light {
 	font-weight: 300;
 }
+
 .fw-normal {
 	font-weight: 400;
 }
+
 .fw-medium {
 	font-weight: 500;
 }
+
 .fw-semibold {
 	font-weight: 600;
 }
+
 .fw-bold {
 	font-weight: 700;
 }
@@ -54,24 +60,31 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .fs-display {
 	font-size: var(--fs-display);
 }
+
 .fs-h1 {
 	font-size: var(--fs-h1);
 }
+
 .fs-h2 {
 	font-size: var(--fs-h2);
 }
+
 .fs-h3 {
 	font-size: var(--fs-h3);
 }
+
 .fs-h4 {
 	font-size: var(--fs-h4);
 }
+
 .fs-body {
 	font-size: var(--fs-body);
 }
+
 .fs-small {
 	font-size: var(--fs-small);
 }
+
 .fs-tiny {
 	font-size: var(--fs-tiny);
 }
@@ -80,21 +93,27 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .fluid-text-xs {
 	font-size: var(--fluid-type-xs);
 }
+
 .fluid-text-sm {
 	font-size: var(--fluid-type-sm);
 }
+
 .fluid-text-base {
 	font-size: var(--fluid-type-base);
 }
+
 .fluid-text-lg {
 	font-size: var(--fluid-type-lg);
 }
+
 .fluid-text-xl {
 	font-size: var(--fluid-type-xl);
 }
+
 .fluid-text-2xl {
 	font-size: var(--fluid-type-2xl);
 }
+
 .fluid-text-3xl {
 	font-size: var(--fluid-type-3xl);
 }
@@ -102,9 +121,11 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .lh-tight {
 	line-height: var(--lh-tight);
 }
+
 .lh-base {
 	line-height: var(--lh-base);
 }
+
 .lh-relaxed {
 	line-height: var(--lh-relaxed);
 }
@@ -113,27 +134,35 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .text-primary {
 	color: var(--primary);
 }
+
 .text-accent {
 	color: var(--text-accent);
 }
+
 .text-support {
 	color: var(--support);
 }
+
 .text-dark {
 	color: var(--text-dark);
 }
+
 .text-body {
 	color: var(--text-body);
 }
+
 .text-muted {
 	color: var(--text-muted);
 }
+
 .text-light {
 	color: var(--text-light);
 }
+
 .text-white {
 	color: var(--white);
 }
+
 .text-olive {
 	color: var(--olive);
 }
@@ -141,12 +170,15 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .text-on-plum {
 	color: var(--text-on-plum);
 }
+
 .text-on-plum-cream {
 	color: var(--text-on-plum-cream);
 }
+
 .text-on-plum-lime {
 	color: var(--text-on-plum-lime);
 }
+
 .text-on-plum-terracotta {
 	color: var(--text-on-plum-terracotta);
 }
@@ -154,27 +186,35 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .bg-white {
 	background-color: var(--white);
 }
+
 .bg-off-white {
 	background-color: var(--off-white);
 }
+
 .bg-soft-plum {
 	background-color: var(--soft-plum);
 }
+
 .bg-blush {
 	background-color: var(--blush);
 }
+
 .bg-cream {
 	background-color: var(--cream);
 }
+
 .bg-primary {
 	background-color: var(--primary);
 }
+
 .bg-accent {
 	background-color: var(--accent);
 }
+
 .bg-light {
 	background-color: var(--light-bg);
 }
+
 .bg-olive {
 	background-color: var(--olive);
 }
@@ -183,21 +223,27 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .m-0 {
 	margin: 0;
 }
+
 .m-xs {
 	margin: var(--space-xs);
 }
+
 .m-sm {
 	margin: var(--space-sm);
 }
+
 .m-md {
 	margin: var(--space-md);
 }
+
 .m-lg {
 	margin: var(--space-lg);
 }
+
 .m-xl {
 	margin: var(--space-xl);
 }
+
 .m-2xl {
 	margin: var(--space-2xl);
 }
@@ -206,18 +252,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .m-fluid-xs {
 	margin: var(--space-fluid-xs);
 }
+
 .m-fluid-sm {
 	margin: var(--space-fluid-sm);
 }
+
 .m-fluid-md {
 	margin: var(--space-fluid-md);
 }
+
 .m-fluid-lg {
 	margin: var(--space-fluid-lg);
 }
+
 .m-fluid-xl {
 	margin: var(--space-fluid-xl);
 }
+
 .m-fluid-2xl {
 	margin: var(--space-fluid-2xl);
 }
@@ -225,24 +276,31 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .mt-0 {
 	margin-top: 0;
 }
+
 .mt-xs {
 	margin-top: var(--space-xs);
 }
+
 .mt-sm {
 	margin-top: var(--space-sm);
 }
+
 .mt-md {
 	margin-top: var(--space-md);
 }
+
 .mt-lg {
 	margin-top: var(--space-lg);
 }
+
 .mt-xl {
 	margin-top: var(--space-xl);
 }
+
 .mt-2xl {
 	margin-top: var(--space-2xl);
 }
+
 .mt-3xl {
 	margin-top: var(--space-3xl);
 }
@@ -251,18 +309,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .mt-fluid-xs {
 	margin-top: var(--space-fluid-xs);
 }
+
 .mt-fluid-sm {
 	margin-top: var(--space-fluid-sm);
 }
+
 .mt-fluid-md {
 	margin-top: var(--space-fluid-md);
 }
+
 .mt-fluid-lg {
 	margin-top: var(--space-fluid-lg);
 }
+
 .mt-fluid-xl {
 	margin-top: var(--space-fluid-xl);
 }
+
 .mt-fluid-2xl {
 	margin-top: var(--space-fluid-2xl);
 }
@@ -270,24 +333,31 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .mb-0 {
 	margin-bottom: 0;
 }
+
 .mb-xs {
 	margin-bottom: var(--space-xs);
 }
+
 .mb-sm {
 	margin-bottom: var(--space-sm);
 }
+
 .mb-md {
 	margin-bottom: var(--space-md);
 }
+
 .mb-lg {
 	margin-bottom: var(--space-lg);
 }
+
 .mb-xl {
 	margin-bottom: var(--space-xl);
 }
+
 .mb-2xl {
 	margin-bottom: var(--space-2xl);
 }
+
 .mb-3xl {
 	margin-bottom: var(--space-3xl);
 }
@@ -296,18 +366,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .mb-fluid-xs {
 	margin-bottom: var(--space-fluid-xs);
 }
+
 .mb-fluid-sm {
 	margin-bottom: var(--space-fluid-sm);
 }
+
 .mb-fluid-md {
 	margin-bottom: var(--space-fluid-md);
 }
+
 .mb-fluid-lg {
 	margin-bottom: var(--space-fluid-lg);
 }
+
 .mb-fluid-xl {
 	margin-bottom: var(--space-fluid-xl);
 }
+
 .mb-fluid-2xl {
 	margin-bottom: var(--space-fluid-2xl);
 }
@@ -320,9 +395,11 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .ms-auto {
 	margin-inline-start: auto;
 }
+
 .me-auto {
 	margin-inline-end: auto;
 }
+
 .my-auto {
 	margin-block: auto;
 }
@@ -330,21 +407,27 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .p-0 {
 	padding: 0;
 }
+
 .p-xs {
 	padding: var(--space-xs);
 }
+
 .p-sm {
 	padding: var(--space-sm);
 }
+
 .p-md {
 	padding: var(--space-md);
 }
+
 .p-lg {
 	padding: var(--space-lg);
 }
+
 .p-xl {
 	padding: var(--space-xl);
 }
+
 .p-2xl {
 	padding: var(--space-2xl);
 }
@@ -353,18 +436,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .p-fluid-xs {
 	padding: var(--space-fluid-xs);
 }
+
 .p-fluid-sm {
 	padding: var(--space-fluid-sm);
 }
+
 .p-fluid-md {
 	padding: var(--space-fluid-md);
 }
+
 .p-fluid-lg {
 	padding: var(--space-fluid-lg);
 }
+
 .p-fluid-xl {
 	padding: var(--space-fluid-xl);
 }
+
 .p-fluid-2xl {
 	padding: var(--space-fluid-2xl);
 }
@@ -372,21 +460,27 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .py-xs {
 	padding-block: var(--space-xs);
 }
+
 .py-sm {
 	padding-block: var(--space-sm);
 }
+
 .py-md {
 	padding-block: var(--space-md);
 }
+
 .py-lg {
 	padding-block: var(--space-lg);
 }
+
 .py-xl {
 	padding-block: var(--space-xl);
 }
+
 .py-2xl {
 	padding-block: var(--space-2xl);
 }
+
 .py-3xl {
 	padding-block: var(--space-3xl);
 }
@@ -395,18 +489,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .py-fluid-xs {
 	padding-block: var(--space-fluid-xs);
 }
+
 .py-fluid-sm {
 	padding-block: var(--space-fluid-sm);
 }
+
 .py-fluid-md {
 	padding-block: var(--space-fluid-md);
 }
+
 .py-fluid-lg {
 	padding-block: var(--space-fluid-lg);
 }
+
 .py-fluid-xl {
 	padding-block: var(--space-fluid-xl);
 }
+
 .py-fluid-2xl {
 	padding-block: var(--space-fluid-2xl);
 }
@@ -414,18 +513,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .px-xs {
 	padding-inline: var(--space-xs);
 }
+
 .px-sm {
 	padding-inline: var(--space-sm);
 }
+
 .px-md {
 	padding-inline: var(--space-md);
 }
+
 .px-lg {
 	padding-inline: var(--space-lg);
 }
+
 .px-xl {
 	padding-inline: var(--space-xl);
 }
+
 .px-2xl {
 	padding-inline: var(--space-2xl);
 }
@@ -434,18 +538,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .px-fluid-xs {
 	padding-inline: var(--space-fluid-xs);
 }
+
 .px-fluid-sm {
 	padding-inline: var(--space-fluid-sm);
 }
+
 .px-fluid-md {
 	padding-inline: var(--space-fluid-md);
 }
+
 .px-fluid-lg {
 	padding-inline: var(--space-fluid-lg);
 }
+
 .px-fluid-xl {
 	padding-inline: var(--space-fluid-xl);
 }
+
 .px-fluid-2xl {
 	padding-inline: var(--space-fluid-2xl);
 }
@@ -453,18 +562,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .gap-xs {
 	gap: var(--space-xs);
 }
+
 .gap-sm {
 	gap: var(--space-sm);
 }
+
 .gap-md {
 	gap: var(--space-md);
 }
+
 .gap-lg {
 	gap: var(--space-lg);
 }
+
 .gap-xl {
 	gap: var(--space-xl);
 }
+
 .gap-2xl {
 	gap: var(--space-2xl);
 }
@@ -473,18 +587,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .gap-fluid-xs {
 	gap: var(--space-fluid-xs);
 }
+
 .gap-fluid-sm {
 	gap: var(--space-fluid-sm);
 }
+
 .gap-fluid-md {
 	gap: var(--space-fluid-md);
 }
+
 .gap-fluid-lg {
 	gap: var(--space-fluid-lg);
 }
+
 .gap-fluid-xl {
 	gap: var(--space-fluid-xl);
 }
+
 .gap-fluid-2xl {
 	gap: var(--space-fluid-2xl);
 }
@@ -493,18 +612,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .d-none {
 	display: none;
 }
+
 .d-block {
 	display: block;
 }
+
 .d-flex {
 	display: flex;
 }
+
 .d-grid {
 	display: grid;
 }
+
 .d-inline {
 	display: inline;
 }
+
 .d-inline-block {
 	display: inline-block;
 }
@@ -512,9 +636,11 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .flex-row {
 	flex-direction: row;
 }
+
 .flex-col {
 	flex-direction: column;
 }
+
 .flex-wrap {
 	flex-wrap: wrap;
 }
@@ -522,12 +648,15 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .justify-start {
 	justify-content: flex-start;
 }
+
 .justify-center {
 	justify-content: center;
 }
+
 .justify-end {
 	justify-content: flex-end;
 }
+
 .justify-between {
 	justify-content: space-between;
 }
@@ -535,9 +664,11 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .align-start {
 	align-items: flex-start;
 }
+
 .align-center {
 	align-items: center;
 }
+
 .align-end {
 	align-items: flex-end;
 }
@@ -545,6 +676,7 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .flex-1 {
 	flex: 1;
 }
+
 .flex-shrink-0 {
 	flex-shrink: 0;
 }
@@ -552,15 +684,19 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .w-full {
 	width: 100%;
 }
+
 .w-auto {
 	width: auto;
 }
+
 .w-narrow {
 	width: var(--narrow);
 }
+
 .w-content {
 	width: var(--content);
 }
+
 .w-wide {
 	width: var(--wide);
 }
@@ -568,9 +704,11 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .max-w-narrow {
 	max-width: var(--narrow);
 }
+
 .max-w-content {
 	max-width: var(--content);
 }
+
 .max-w-wide {
 	max-width: var(--wide);
 }
@@ -579,12 +717,15 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .relative {
 	position: relative;
 }
+
 .absolute {
 	position: absolute;
 }
+
 .fixed {
 	position: fixed;
 }
+
 .sticky {
 	position: sticky;
 }
@@ -592,15 +733,19 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .z-0 {
 	z-index: 0;
 }
+
 .z-10 {
 	z-index: 10;
 }
+
 .z-50 {
 	z-index: 50;
 }
+
 .z-100 {
 	z-index: 100;
 }
+
 .z-1000 {
 	z-index: 1000;
 }
@@ -608,6 +753,7 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .visible {
 	visibility: visible;
 }
+
 .invisible {
 	visibility: hidden;
 }
@@ -616,18 +762,23 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .radius-sm {
 	border-radius: var(--radius-sm);
 }
+
 .radius-md {
 	border-radius: var(--radius-md);
 }
+
 .radius-lg {
 	border-radius: var(--radius-lg);
 }
+
 .radius-xl {
 	border-radius: var(--radius-xl);
 }
+
 .radius-pill {
 	border-radius: var(--radius-pill);
 }
+
 .radius-none {
 	border-radius: 0;
 }
@@ -635,21 +786,27 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .shadow-xs {
 	box-shadow: var(--shadow-xs);
 }
+
 .shadow-sm {
 	box-shadow: var(--shadow-sm);
 }
+
 .shadow-md {
 	box-shadow: var(--shadow-md);
 }
+
 .shadow-lg {
 	box-shadow: var(--shadow-lg);
 }
+
 .shadow-xl {
 	box-shadow: var(--shadow-xl);
 }
+
 .shadow-float {
 	box-shadow: var(--shadow-float);
 }
+
 .shadow-none {
 	box-shadow: none;
 }
@@ -657,9 +814,11 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .transition-fast {
 	transition: all var(--transition-fast);
 }
+
 .transition-base {
 	transition: all var(--transition-base);
 }
+
 .transition-slow {
 	transition: all var(--transition-slow);
 }
@@ -667,6 +826,7 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .cursor-pointer {
 	cursor: pointer;
 }
+
 .cursor-default {
 	cursor: default;
 }
@@ -674,6 +834,7 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .select-none {
 	user-select: none;
 }
+
 .select-text {
 	user-select: text;
 }
@@ -681,9 +842,11 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .overflow-hidden {
 	overflow: hidden;
 }
+
 .overflow-auto {
 	overflow: auto;
 }
+
 .overflow-scroll {
 	overflow: scroll;
 }
@@ -691,15 +854,19 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .opacity-0 {
 	opacity: 0;
 }
+
 .opacity-25 {
 	opacity: 0.25;
 }
+
 .opacity-50 {
 	opacity: 0.5;
 }
+
 .opacity-75 {
 	opacity: 0.75;
 }
+
 .opacity-100 {
 	opacity: 1;
 }
@@ -707,12 +874,15 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .aspect-square {
 	aspect-ratio: 1 / 1;
 }
+
 .aspect-video {
 	aspect-ratio: 16 / 9;
 }
+
 .aspect-portrait {
 	aspect-ratio: 3 / 4;
 }
+
 .aspect-hero {
 	aspect-ratio: 4 / 5;
 }
@@ -720,12 +890,15 @@ PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
 .object-cover {
 	object-fit: cover;
 }
+
 .object-contain {
 	object-fit: contain;
 }
+
 .object-fill {
 	object-fit: fill;
 }
+
 .object-none {
 	object-fit: none;
 }
@@ -769,6 +942,7 @@ Modern CSS with view-timeline and scroll-timeline
 	height: 100%;
 	background: linear-gradient(90deg, var(--primary), var(--accent));
 	width: 0%;
+
 	/* Fallback for browsers without scroll-timeline support */
 	animation: readingProgress linear;
 	animation-timeline: scroll(root);
@@ -778,6 +952,7 @@ Modern CSS with view-timeline and scroll-timeline
 	from {
 		width: 0%;
 	}
+
 	to {
 		width: 100%;
 	}
@@ -842,6 +1017,7 @@ Modern CSS with view-timeline and scroll-timeline
 	from {
 		transform: translateY(0);
 	}
+
 	to {
 		transform: translateY(-100px);
 	}
@@ -865,6 +1041,7 @@ Modern CSS with view-timeline and scroll-timeline
 	.cq-hide-sm {
 		display: none;
 	}
+
 	.cq-show-md {
 		display: block;
 	}
@@ -874,6 +1051,7 @@ Modern CSS with view-timeline and scroll-timeline
 	.cq-show-sm {
 		display: block;
 	}
+
 	.cq-hide-md {
 		display: none;
 	}
@@ -908,9 +1086,11 @@ Modern CSS with view-timeline and scroll-timeline
 .snap-start {
 	scroll-snap-align: start;
 }
+
 .snap-center {
 	scroll-snap-align: center;
 }
+
 .snap-end {
 	scroll-snap-align: end;
 }
@@ -965,8 +1145,9 @@ Modern CSS with view-timeline and scroll-timeline
 /* High contrast mode enhancements */
 @media (prefers-contrast: more) {
 	.hc-border {
-		border: 2px solid currentColor;
+		border: 2px solid currentcolor;
 	}
+
 	.hc-text-bold {
 		font-weight: 700;
 	}
@@ -977,6 +1158,7 @@ Modern CSS with view-timeline and scroll-timeline
 	.no-bg-image {
 		background-image: none;
 	}
+
 	.no-animation {
 		animation: none;
 		transition: none;
@@ -988,19 +1170,24 @@ Modern CSS with view-timeline and scroll-timeline
 	.print-hidden {
 		display: none;
 	}
+
 	.print-break-before {
 		break-before: page;
 	}
+
 	.print-break-after {
 		break-after: page;
 	}
+
 	.print-no-break {
 		break-inside: avoid;
 	}
 }
+
 .skip-link {
 	color: #eb32b5;
 }
+
 .skip-link:focus {
 	color: #eb32b5;
 	background: #fff;

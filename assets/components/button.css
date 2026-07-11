@@ -69,13 +69,13 @@
 }
 
 .btn-secondary:hover:not(:disabled) {
-	background: rgba(103, 27, 80, 0.05);
+	background: rgb(103 27 80 / 5%);
 	transform: translateY(-2px);
 	box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:active:not(:disabled) {
-	background: rgba(103, 27, 80, 0.1);
+	background: rgb(103 27 80 / 10%);
 	transform: translateY(0);
 }
 
@@ -83,13 +83,13 @@
 .btn-outline {
 	background: transparent;
 	color: var(--text-body);
-	border-color: rgba(103, 27, 80, 0.3);
+	border-color: rgb(103 27 80 / 30%);
 }
 
 .btn-outline:hover:not(:disabled) {
 	border-color: var(--primary);
 	color: var(--primary);
-	background: rgba(103, 27, 80, 0.03);
+	background: rgb(103 27 80 / 3%);
 }
 
 /* --- 5. GHOST BUTTON (Subtle) --- */
@@ -100,7 +100,7 @@
 }
 
 .btn-ghost:hover:not(:disabled) {
-	background: rgba(103, 27, 80, 0.08);
+	background: rgb(103 27 80 / 8%);
 }
 
 /* --- 6. CTA BUTTON (Navigation) --- */
@@ -248,7 +248,7 @@
 	left: 50%;
 	margin-top: -8px;
 	margin-left: -8px;
-	border: 2px solid currentColor;
+	border: 2px solid currentcolor;
 	border-top-color: transparent;
 	border-radius: 50%;
 	animation: spin 0.8s linear infinite;
@@ -329,6 +329,7 @@
 .skip-link {
 	color: #eb32b5;
 }
+
 .skip-link:focus {
 	color: #eb32b5;
 	background: #fff;

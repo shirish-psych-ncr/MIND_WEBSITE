@@ -17,8 +17,10 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 	color: var(--text-body);
 	content-visibility: auto;
 	contain-intrinsic-size: 0 300px;
+
 	/* Prevent layout shift on hover */
 	will-change: transform;
+
 	/* Ensure proper touch target spacing */
 	margin-block-start: var(--space-md);
 }
@@ -28,6 +30,7 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 	:scope > .card:nth-child(odd) {
 		margin-inline-end: var(--space-lg);
 	}
+
 	:scope > .card:nth-child(even) {
 		margin-inline-start: var(--space-lg);
 	}
@@ -36,19 +39,21 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 .card:hover {
 	transform: translateY(-4px);
 	box-shadow: var(--shadow-md);
-	border-color: rgba(103, 27, 80, 0.15);
+	border-color: rgb(103 27 80 / 15%);
 }
 
 .card-compact {
 	padding: var(--space-lg);
 }
+
 .card-elevated {
 	box-shadow: var(--shadow-md);
 	border: none;
 }
+
 .card-outlined {
 	background: transparent;
-	border: 2px solid rgba(103, 27, 80, 0.2);
+	border: 2px solid rgb(103 27 80 / 20%);
 	box-shadow: none;
 }
 
@@ -102,6 +107,7 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 	border-radius: var(--radius-pill);
 	font-size: var(--fs-small);
 	font-weight: 600;
+
 	/* Ensure minimum touch target */
 	min-height: max(44px, 1em * var(--lh-base));
 }
@@ -115,6 +121,7 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 			transform var(--transition-fast),
 			box-shadow var(--transition-fast);
 	}
+
 	.badge[role="button"]:hover,
 	.badge[tabindex="0"]:hover {
 		transform: translateY(-2px);
@@ -134,17 +141,17 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 .badge-primary {
 	background: linear-gradient(
 		135deg,
-		rgba(103, 27, 80, 0.1),
-		rgba(103, 27, 80, 0.05)
+		rgb(103 27 80 / 10%),
+		rgb(103 27 80 / 5%)
 	);
 	color: var(--primary);
-	border: 1px solid rgba(103, 27, 80, 0.2);
+	border: 1px solid rgb(103 27 80 / 20%);
 }
 
 .badge-support {
 	background: var(--blush);
 	color: var(--primary);
-	border: 1px solid rgba(103, 27, 80, 0.15);
+	border: 1px solid rgb(103 27 80 / 15%);
 }
 
 /* --- 4. ICONS & VISUALS - Accessible with aria support --- */
@@ -153,8 +160,8 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 	height: clamp(48px, 8vw, 64px);
 	background: linear-gradient(
 		135deg,
-		rgba(103, 27, 80, 0.15),
-		rgba(103, 27, 80, 0.08)
+		rgb(103 27 80 / 15%),
+		rgb(103 27 80 / 8%)
 	);
 	border-radius: var(--radius-md);
 	display: flex;
@@ -165,7 +172,7 @@ Phase 3: Advanced Adaptability & Cutting-Edge CSS
 
 /* Ensure SVGs have accessible names when used as icons */
 svg[role="img"] {
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 svg[aria-hidden="true"] {
@@ -184,18 +191,22 @@ svg[aria-hidden="true"] {
 	width: 12px;
 	height: 12px;
 }
+
 .icon-sm {
 	width: 16px;
 	height: 16px;
 }
+
 .icon-md {
 	width: 20px;
 	height: 20px;
 }
+
 .icon-lg {
 	width: 24px;
 	height: 24px;
 }
+
 .icon-xl {
 	width: 32px;
 	height: 32px;
@@ -226,8 +237,9 @@ svg[aria-hidden="true"] {
 /* Dark mode card text contrast fix */
 @media (prefers-color-scheme: dark) {
 	.card h3 {
-		color: var(--card-heading, #ffffff);
+		color: var(--card-heading, #fff);
 	}
+
 	.card p {
 		color: var(--card-text, #e0d0e0);
 	}
@@ -242,6 +254,7 @@ svg[aria-hidden="true"] {
 	gap: var(--space-xs);
 	transition: all var(--transition-fast);
 	margin-top: auto;
+
 	/* Ensure visible focus indicator */
 	border-radius: var(--radius-sm);
 }
@@ -256,6 +269,7 @@ svg[aria-hidden="true"] {
 	.card-link {
 		color: #ffb6c1;
 	}
+
 	.card-link:hover {
 		color: #ffc0cb;
 	}
@@ -267,8 +281,8 @@ svg[aria-hidden="true"] {
 	height: clamp(56px, 10vw, 72px);
 	background: linear-gradient(
 		135deg,
-		rgba(227, 151, 116, 0.15),
-		rgba(103, 27, 80, 0.08)
+		rgb(227 151 116 / 15%),
+		rgb(103 27 80 / 8%)
 	);
 	border-radius: var(--radius-pill);
 	display: flex;
@@ -298,7 +312,7 @@ svg[aria-hidden="true"] {
 .notice-box:has(:focus-visible) {
 	box-shadow:
 		var(--shadow-md),
-		0 0 0 3px rgba(103, 27, 80, 0.2);
+		0 0 0 3px rgb(103 27 80 / 20%);
 }
 
 .form-group input,
@@ -309,8 +323,10 @@ svg[aria-hidden="true"] {
 	border-bottom: 2px solid var(--support); /* Only bottom border for input clarity */
 	border-radius: 0; /* Remove radius for underline style */
 	background: transparent;
+
 	/* Ensure minimum touch target height */
 	min-height: 48px;
+
 	/* Logical properties for RTL support */
 	padding-inline: var(--space-md);
 	padding-block: var(--space-sm);
@@ -321,7 +337,7 @@ svg[aria-hidden="true"] {
 .form-group textarea:focus-visible {
 	outline: none;
 	border-bottom-color: var(--primary);
-	background: rgba(103, 27, 80, 0.02);
+	background: rgb(103 27 80 / 2%);
 }
 
 /* Reduced data mode: simplify form appearance */
@@ -332,6 +348,7 @@ svg[aria-hidden="true"] {
 		box-shadow: none;
 		border: 2px solid var(--warm-gray);
 	}
+
 	.form-group input,
 	.form-group textarea {
 		background: var(--white);
@@ -370,8 +387,10 @@ svg[aria-hidden="true"] {
 	background: none;
 	text-align: left;
 	border-radius: var(--radius-md);
+
 	/* Ensure minimum touch target */
 	min-height: 48px;
+
 	/* Anchor positioning for tooltips (Chrome 125+) */
 	anchor-name: --accordion-trigger;
 }
@@ -400,6 +419,7 @@ svg[aria-hidden="true"] {
 		pointer-events: none;
 		transition: opacity var(--transition-fast);
 	}
+
 	.accordion-trigger:hover::before,
 	.accordion-trigger:focus-visible::before {
 		opacity: 1;
@@ -423,15 +443,16 @@ svg[aria-hidden="true"] {
 	100% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(-10px);
 	}
 }
 
 .glass {
-	background: rgba(255, 255, 255, 0.7);
+	background: rgb(255 255 255 / 70%);
 	backdrop-filter: blur(12px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	border: 1px solid rgb(255 255 255 / 30%);
 }
 
 /* Reduced transparency: remove glassmorphism */
@@ -447,6 +468,7 @@ svg[aria-hidden="true"] {
 	background: linear-gradient(135deg, var(--primary), var(--text-dark));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
 	/* Fallback for browsers without background-clip */
 	color: var(--primary);
 }
@@ -471,8 +493,7 @@ svg[aria-hidden="true"] {
 	content: "";
 	position: absolute;
 	inset-inline-start: 40px;
-	inset-block-start: 0;
-	inset-block-end: 0;
+	inset-block: 0;
 	width: 2px;
 	background: var(--blush);
 }
@@ -482,6 +503,7 @@ svg[aria-hidden="true"] {
 	gap: var(--space-lg);
 	margin-bottom: var(--space-xl);
 	position: relative;
+
 	/* Logical properties for RTL */
 	flex-direction: row;
 }
@@ -499,6 +521,7 @@ svg[aria-hidden="true"] {
 	color: var(--text-on-plum);
 	z-index: 1;
 	box-shadow: var(--shadow-sm);
+
 	/* Ensure touch target */
 	min-height: 48px;
 	min-width: 48px;
@@ -506,8 +529,7 @@ svg[aria-hidden="true"] {
 
 /* RTL support: flip timeline direction */
 [dir="rtl"] .timeline::before {
-	inset-inline-start: auto;
-	inset-inline-end: 40px;
+	inset-inline: auto 40px;
 }
 
 /* Container query for responsive timeline */
@@ -516,24 +538,28 @@ svg[aria-hidden="true"] {
 		flex-direction: column;
 		gap: var(--space-md);
 	}
+
 	.timeline::before {
 		inset-inline-start: 24px;
 	}
 }
 
 /* --- 10. RESPONSIVE OVERRIDES - Logical Properties --- */
-@media (max-width: 768px) {
+@media (width <= 768px) {
 	.grid-container,
 	.services-grid,
 	.condition-list {
 		grid-template-columns: 1fr;
 	}
+
 	.timeline::before {
 		inset-inline-start: 28px;
 	}
+
 	.iframe-container {
 		max-height: 70vh;
 	}
+
 	.step-number {
 		width: 40px;
 		height: 40px;
@@ -557,19 +583,24 @@ svg[aria-hidden="true"] {
 .section-white {
 	background: var(--white);
 }
+
 .section-blush {
 	background: var(--blush);
 }
+
 .section-cream {
 	background: var(--cream);
 }
+
 .section-plum {
 	background: var(--primary);
 	color: var(--text-on-plum);
 }
+
 .section-light {
 	background: var(--light-bg);
 }
+
 .section-primary {
 	background: var(--primary);
 	color: var(--text-on-plum);
@@ -639,6 +670,7 @@ svg[aria-hidden="true"] {
 	0% {
 		background-position: 200% 0;
 	}
+
 	100% {
 		background-position: -200% 0;
 	}
@@ -656,7 +688,7 @@ svg[aria-hidden="true"] {
 
 .image-card:hover {
 	transform: translateY(-4px);
-	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 12px 24px rgb(0 0 0 / 8%);
 }
 
 .image-card img {
@@ -694,9 +726,9 @@ svg[aria-hidden="true"] {
 	z-index: 1000;
 	max-width: 90vw;
 	max-height: 90vh;
-	background: var(--bg-main, #ffffff);
+	background: var(--bg-main, #fff);
 	padding: 1.5rem;
-	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
 	cursor: zoom-out;
 	border-radius: 16px;
 	margin: 0;
@@ -726,7 +758,7 @@ svg[aria-hidden="true"] {
 .gallery-backdrop {
 	position: fixed;
 	inset: 0;
-	background: rgba(17, 24, 39, 0.85);
+	background: rgb(17 24 39 / 85%);
 	z-index: 999;
 	opacity: 0;
 	pointer-events: none;
@@ -746,7 +778,7 @@ svg[aria-hidden="true"] {
 .gallery-next-btn {
 	position: fixed;
 	z-index: 1002;
-	background: rgba(255, 255, 255, 0.95);
+	background: rgb(255 255 255 / 95%);
 	border: none;
 	border-radius: 50%;
 	width: 48px;
@@ -755,7 +787,7 @@ svg[aria-hidden="true"] {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
 	transition:
 		transform 0.2s ease,
 		background 0.2s ease,
@@ -808,13 +840,13 @@ svg[aria-hidden="true"] {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 1002;
-	background: rgba(255, 255, 255, 0.95);
+	background: rgb(255 255 255 / 95%);
 	padding: 0.5rem 1rem;
 	border-radius: 20px;
 	font-size: 0.875rem;
 	font-weight: 600;
 	color: var(--text-main, #111827);
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 
 .gallery-caption-overlay {
@@ -823,7 +855,7 @@ svg[aria-hidden="true"] {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 1002;
-	background: rgba(17, 24, 39, 0.85);
+	background: rgb(17 24 39 / 85%);
 	color: #fff;
 	padding: 0.75rem 1.5rem;
 	border-radius: 8px;
@@ -835,28 +867,33 @@ svg[aria-hidden="true"] {
 	-webkit-backdrop-filter: blur(4px);
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
 	.gallery-prev-btn,
 	.gallery-next-btn {
 		width: 40px;
 		height: 40px;
 	}
+
 	.gallery-prev-btn {
 		left: 0.75rem;
 	}
+
 	.gallery-next-btn {
 		right: 0.75rem;
 	}
+
 	.gallery-close-btn {
 		top: 0.75rem;
 		right: 0.75rem;
 		width: 40px;
 		height: 40px;
 	}
+
 	.gallery-counter {
 		bottom: 1rem;
 		font-size: 0.8rem;
 	}
+
 	.gallery-caption-overlay {
 		bottom: 3.5rem;
 		padding: 0.5rem 1rem;
@@ -872,11 +909,13 @@ svg[aria-hidden="true"] {
 		opacity: 1;
 		transform: none;
 	}
+
 	::view-transition-group(*),
 	::view-transition-old(*),
 	::view-transition-new(*) {
 		animation-duration: 0.01s;
 	}
+
 	.image-card,
 	.gallery-backdrop,
 	.gallery-close-btn,
@@ -884,18 +923,20 @@ svg[aria-hidden="true"] {
 	.gallery-next-btn {
 		transition: none;
 	}
+
 	.image-card:hover {
 		transform: none;
 	}
 }
 
 /* Responsive Adjustments for Focus Mode */
-@media (max-width: 600px) {
+@media (width <= 600px) {
 	.image-card.is-focused {
 		max-width: 95vw;
 		max-height: 85vh;
 		padding: 1rem;
 	}
+
 	.image-card.is-focused figcaption {
 		font-size: 0.9rem;
 	}
@@ -949,9 +990,9 @@ svg[aria-hidden="true"] {
 .tour-dot.active,
 .tour-dot:hover {
 	color: var(--text-main, #111827);
-	background: var(--surface-main, #ffffff);
+	background: var(--surface-main, #fff);
 	font-weight: 600;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	box-shadow: 0 2px 8px rgb(0 0 0 / 4%);
 	border-left-color: #ec4899;
 }
 
@@ -966,25 +1007,27 @@ svg[aria-hidden="true"] {
 }
 
 /* Gallery Tour Responsive */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
 	.gallery-tour {
 		grid-template-columns: 1fr;
 		gap: 2rem;
 	}
+
 	.tour-nav {
 		position: static;
 		flex-direction: row;
-		overflow-x: auto;
-		overflow-y: hidden;
+		overflow: auto hidden;
 		padding: 1rem;
 		gap: 0.5rem;
 		border-radius: 12px;
 		max-height: none;
 		scrollbar-width: none;
 	}
+
 	.tour-nav::-webkit-scrollbar {
 		display: none;
 	}
+
 	.tour-dot {
 		white-space: nowrap;
 		font-size: 0.85rem;
@@ -992,6 +1035,7 @@ svg[aria-hidden="true"] {
 		border-left: none;
 		border-bottom: 3px solid transparent;
 	}
+
 	.tour-dot.active,
 	.tour-dot:hover {
 		border-left-color: transparent;
@@ -1036,6 +1080,7 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 .emergency-banner__marquee {
 	display: flex;
 	overflow: hidden;
+
 	--offset: 20vw;
 	--move-initial: calc(-25% + var(--offset));
 	--move-final: calc(-50% + var(--offset));
@@ -1082,12 +1127,13 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 	100% {
 		opacity: 1;
 		transform: scale(1);
-		box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+		box-shadow: 0 0 0 0 rgb(220 38 38 / 70%);
 	}
+
 	50% {
 		opacity: 0.8;
 		transform: scale(1.1);
-		box-shadow: 0 0 0 6px rgba(220, 38, 38, 0);
+		box-shadow: 0 0 0 6px rgb(220 38 38 / 0%);
 	}
 }
 
@@ -1096,6 +1142,7 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 	0% {
 		transform: translate3d(var(--move-initial), 0, 0);
 	}
+
 	100% {
 		transform: translate3d(var(--move-final), 0, 0);
 	}
@@ -1157,7 +1204,7 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 .mobile-nav-overlay {
 	position: fixed;
 	inset: 0;
-	background: rgba(45, 27, 46, 0.6);
+	background: rgb(45 27 46 / 60%);
 	backdrop-filter: blur(4px);
 	z-index: 998;
 	opacity: 0;
@@ -1245,10 +1292,12 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 		animation: none;
 		transform: translateX(0);
 	}
+
 	.emergency-banner__marquee {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 	}
+
 	.emergency-indicator {
 		animation: none;
 		opacity: 1;
@@ -1256,10 +1305,11 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 }
 
 /* Mobile Adjustments */
-@media (max-width: 768px) {
+@media (width <= 768px) {
 	.emergency-banner {
 		font-size: 0.8125rem;
 	}
+
 	.emergency-banner__message {
 		padding: 0 1rem;
 	}
@@ -1274,7 +1324,7 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 	border-radius: 12px;
 	overflow: hidden;
 	border: 1px solid #e1e4e8;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 4px 12px rgb(0 0 0 / 5%);
 	transition: opacity 0.3s ease;
 }
 
@@ -1286,7 +1336,7 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 	width: 100%;
 	text-align: center;
 	color: #6b7280;
-	font-family: "Inter", sans-serif;
+	font-family: Inter, sans-serif;
 	z-index: 1;
 	transition: opacity 0.3s ease;
 }
@@ -1333,9 +1383,9 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 	left: 0;
 	width: 100%;
 	padding: 1rem;
-	background: rgba(255, 255, 255, 0.95);
+	background: rgb(255 255 255 / 95%);
 	backdrop-filter: blur(8px);
-	box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 -4px 12px rgb(0 0 0 / 8%);
 	z-index: 999;
 	text-align: center;
 	opacity: 1;
@@ -1352,10 +1402,11 @@ Mind Grace Neuropsychiatric Clinic - Clinical Safety First
 	margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
 	.mobile-sticky-cta {
 		display: block;
 	}
+
 	.form-wrapper {
 		padding-bottom: 200%; /* Taller for mobile */
 	}
@@ -1390,7 +1441,7 @@ For when pages are shared on WhatsApp, Facebook, etc.
 	background: linear-gradient(135deg, #fff5f8 0%, #fcfaf7 100%);
 	border-radius: var(--radius-lg);
 	padding: var(--space-xl);
-	border: 1px solid rgba(103, 27, 80, 0.1);
+	border: 1px solid rgb(103 27 80 / 10%);
 	box-shadow: var(--shadow-md);
 	max-width: 600px;
 	margin: var(--space-lg) auto;
@@ -1423,7 +1474,7 @@ For when pages are shared on WhatsApp, Facebook, etc.
 	align-items: center;
 	gap: var(--space-sm);
 	padding-top: var(--space-md);
-	border-top: 1px solid rgba(103, 27, 80, 0.1);
+	border-top: 1px solid rgb(103 27 80 / 10%);
 }
 
 .og-card-logo {
@@ -1503,20 +1554,20 @@ For when pages are shared on WhatsApp, Facebook, etc.
 	align-items: center;
 	gap: var(--space-sm);
 	padding: var(--space-sm) var(--space-md);
-	background: rgba(103, 27, 80, 0.05);
+	background: rgb(103 27 80 / 5%);
 	border-radius: var(--radius-full);
 	color: var(--text-body);
 	text-decoration: none;
 	font-size: var(--text-sm);
 	font-weight: 500;
 	transition: all var(--transition-base);
-	border: 1px solid rgba(103, 27, 80, 0.1);
+	border: 1px solid rgb(103 27 80 / 10%);
 }
 
 .location-link:hover {
-	background: rgba(103, 27, 80, 0.1);
+	background: rgb(103 27 80 / 10%);
 	transform: translateX(4px);
-	border-color: rgba(103, 27, 80, 0.2);
+	border-color: rgb(103 27 80 / 20%);
 }
 
 .location-link .arrow {
@@ -1534,12 +1585,13 @@ For when pages are shared on WhatsApp, Facebook, etc.
 
 @media (prefers-color-scheme: dark) {
 	.location-link {
-		background: rgba(255, 183, 197, 0.1);
-		border-color: rgba(255, 183, 197, 0.2);
+		background: rgb(255 183 197 / 10%);
+		border-color: rgb(255 183 197 / 20%);
 		color: var(--text-dark);
 	}
+
 	.location-link:hover {
-		background: rgba(255, 183, 197, 0.15);
-		border-color: rgba(255, 183, 197, 0.3);
+		background: rgb(255 183 197 / 15%);
+		border-color: rgb(255 183 197 / 30%);
 	}
 }

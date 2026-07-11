@@ -35,7 +35,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 		--olive: #8b8b6b; /* Earthy tone */
 
 		/* Neutrals - Warmer */
-		--white: #ffffff;
+		--white: #fff;
 		--off-white: #faf9f7;
 		--soft-plum: #fff5f8;
 		--cream: #fdfbf9;
@@ -69,12 +69,12 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 		--emergency-pulse: #ef4444;
 
 		/* Shadows */
-		--shadow-xs: 0 2px 8px rgba(103, 27, 80, 0.06);
-		--shadow-sm: 0 4px 16px rgba(103, 27, 80, 0.08);
-		--shadow-md: 0 8px 30px rgba(103, 27, 80, 0.12);
-		--shadow-lg: 0 12px 48px rgba(103, 27, 80, 0.16);
-		--shadow-xl: 0 20px 64px rgba(103, 27, 80, 0.2);
-		--shadow-float: 0 24px 80px rgba(103, 27, 80, 0.15);
+		--shadow-xs: 0 2px 8px rgb(103 27 80 / 6%);
+		--shadow-sm: 0 4px 16px rgb(103 27 80 / 8%);
+		--shadow-md: 0 8px 30px rgb(103 27 80 / 12%);
+		--shadow-lg: 0 12px 48px rgb(103 27 80 / 16%);
+		--shadow-xl: 0 20px 64px rgb(103 27 80 / 20%);
+		--shadow-float: 0 24px 80px rgb(103 27 80 / 15%);
 
 		/* Border Radius - Increased for friendlier feel */
 		--radius-sm: clamp(6px, 1vw, 10px);
@@ -95,6 +95,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 			2vw,
 			1.25rem
 		); /* 18px base, increased from 16px */
+
 		--fs-small: clamp(1rem, 1.6vw, 1.0625rem); /* 17px min */
 		--fs-tiny: clamp(0.875rem, 1.4vw, 0.9375rem); /* 14px min */
 
@@ -158,13 +159,15 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 			--hero-badge-text: #fdf6f0;
 			--cta-heading: #fdf6f0;
 			--cta-text: #e0d0e0;
-			--border-color: rgba(224, 208, 200, 0.15);
+			--border-color: rgb(224 208 200 / 15%);
 			--primary-accent: #ffb7c5; /* Softer pink for dark mode */
 		}
+
 		body {
 			background-color: var(--off-white);
 			color: var(--text-dark);
 		}
+
 		/* Ensure cards, inputs, and sections adapt */
 		.card,
 		.tool-card,
@@ -190,15 +193,18 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 		select {
 			border: 2px solid CanvasText;
 		}
+
 		:focus-visible {
 			outline: 3px solid Highlight;
 			outline-offset: 2px;
 		}
+
 		.site-header,
 		.site-footer {
 			border-top: 2px solid CanvasText;
 			border-bottom: 2px solid CanvasText;
 		}
+
 		/* Emergency banner high contrast */
 		.emergency-banner {
 			background: Canvas;
@@ -210,18 +216,20 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 	/* Reduced Transparency Support */
 	@media (prefers-reduced-transparency: reduce) {
 		:root {
-			--shadow-xs: 0 2px 8px rgba(103, 27, 80, 0.15);
-			--shadow-sm: 0 4px 16px rgba(103, 27, 80, 0.2);
-			--shadow-md: 0 8px 30px rgba(103, 27, 80, 0.25);
-			--shadow-lg: 0 12px 48px rgba(103, 27, 80, 0.3);
-			--shadow-xl: 0 20px 64px rgba(103, 27, 80, 0.35);
-			--shadow-float: 0 24px 80px rgba(103, 27, 80, 0.3);
+			--shadow-xs: 0 2px 8px rgb(103 27 80 / 15%);
+			--shadow-sm: 0 4px 16px rgb(103 27 80 / 20%);
+			--shadow-md: 0 8px 30px rgb(103 27 80 / 25%);
+			--shadow-lg: 0 12px 48px rgb(103 27 80 / 30%);
+			--shadow-xl: 0 20px 64px rgb(103 27 80 / 35%);
+			--shadow-float: 0 24px 80px rgb(103 27 80 / 30%);
 		}
+
 		.site-header {
 			background: var(--light-bg);
 			backdrop-filter: none;
 			-webkit-backdrop-filter: none;
 		}
+
 		.glass {
 			background: var(--white);
 			backdrop-filter: none;
@@ -232,15 +240,17 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 	/* Increased Contrast Support */
 	@media (prefers-contrast: more) {
 		:root {
-			--text-dark: #000000;
+			--text-dark: #000;
 			--text-body: #1a1a1a;
-			--text-muted: #333333;
+			--text-muted: #333;
 			--primary: #4a0f3a;
 			--accent: #c47a5a;
 		}
+
 		.card {
 			border: 2px solid var(--primary);
 		}
+
 		.btn {
 			border-width: 3px;
 		}
@@ -252,6 +262,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 			background: var(--light-bg);
 			background-image: none;
 		}
+
 		.hero-image-wrapper::before {
 			display: none;
 		}
@@ -260,27 +271,29 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 	/* Monochrome/E-ink Display Support */
 	@media (monochrome) {
 		:root {
-			--primary: #000000;
-			--accent: #333333;
-			--support: #666666;
+			--primary: #000;
+			--accent: #333;
+			--support: #666;
 		}
+
 		.card,
 		.surface,
 		.panel {
-			border: 2px solid currentColor;
+			border: 2px solid currentcolor;
 			box-shadow: none;
 		}
+
 		.text-gradient {
 			background: none;
-			-webkit-text-fill-color: currentColor;
+			-webkit-text-fill-color: currentcolor;
 		}
 	}
 
 	/* Wide Color Gamut Support (P3) */
 	@media (color-gamut: p3) {
 		:root {
-			--primary: oklch(45% 0.12 340);
-			--accent: oklch(65% 0.15 35);
+			--primary: oklch(45% 0.12 340deg);
+			--accent: oklch(65% 0.15 35deg);
 		}
 	}
 
@@ -293,13 +306,14 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 		font-size: clamp(14px, 1.5vw, 18px);
 		width: 100%;
 		min-height: 100dvh;
+
 		/* Prevent horizontal scroll from overflow */
 		overflow-x: hidden;
 	}
 
 	body {
 		font-family:
-			"Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+			Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 		background: var(--light-bg);
 		background: radial-gradient(
 			ellipse at center,
@@ -316,6 +330,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 		flex-direction: column;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+
 		/* Safe area padding for notched devices */
 		padding-top: var(--safe-top);
 		padding-bottom: var(--safe-bottom);
@@ -406,6 +421,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 			transition-duration: 0.01ms;
 			scroll-behavior: auto;
 		}
+
 		html {
 			scroll-behavior: auto;
 		}
@@ -463,7 +479,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 		padding: calc(0.75rem + var(--safe-bottom)) calc(1.5rem + var(--safe-left))
 			calc(0.75rem + var(--safe-bottom)) calc(1.5rem + var(--safe-right));
 		border-radius: 50px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 		z-index: 9999;
 		display: flex;
 		align-items: center;
@@ -473,6 +489,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 			bottom 0.3s ease,
 			opacity 0.3s ease;
 		opacity: 0;
+
 		/* Ensure minimum touch target */
 		min-height: var(--touch-target);
 	}
@@ -510,30 +527,36 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 		[role="button"] {
 			display: none;
 		}
+
 		body {
 			background: white;
 			color: black;
 			font-size: 12pt;
 			line-height: 1.5;
 		}
+
 		.container {
 			width: 100%;
 			max-width: none;
 			padding: 0;
 		}
+
 		a[href]::after {
 			content: " (" attr(href) ")";
 			font-size: 0.8em;
 		}
+
 		img {
 			max-width: 100%;
-			page-break-inside: avoid;
+			break-inside: avoid;
 		}
+
 		h1,
 		h2,
 		h3 {
-			page-break-after: avoid;
+			break-after: avoid;
 		}
+
 		.card,
 		.image-card {
 			break-inside: avoid;
@@ -547,6 +570,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
   ========================================= */
 
 	/* Mobile Landscape Adaptation */
+
 	/* Portrait mode (default for mobile) */
 	@media (orientation: portrait) {
 		body.is-portrait-mobile .nav-links {
@@ -560,47 +584,55 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
   ========================================= */
 
 	/* Mobile Landscape Optimization */
-	@media (orientation: landscape) and (max-height: 600px) {
+	@media (orientation: landscape) and (height <= 600px) {
 		:root {
 			--font-size-base: 14px;
 			--spacing-section: 2rem;
 		}
+
 		.site-header {
 			padding: 0.5rem 1rem;
 		}
+
 		.nav-links {
 			gap: 0.75rem;
 		}
+
 		.hero h1 {
 			font-size: 1.75rem;
 			line-height: 1.2;
 		}
+
 		.image-grid {
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		}
+
 		.form-wrapper {
 			padding-bottom: 100%;
 		}
+
 		.mobile-sticky-cta {
 			padding: 0.5rem;
 		}
 	}
 
 	/* Tablet Portrait */
-	@media (min-width: 768px) and (orientation: portrait) {
+	@media (width >= 768px) and (orientation: portrait) {
 		:root {
 			--font-size-base: 16px;
 		}
+
 		.image-grid {
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
 	/* Desktop Landscape */
-	@media (min-width: 1024px) and (orientation: landscape) {
+	@media (width >= 1024px) and (orientation: landscape) {
 		.gallery-tour {
 			grid-template-columns: 280px 1fr;
 		}
+
 		.image-grid {
 			grid-template-columns: repeat(3, 1fr);
 		}
@@ -621,10 +653,12 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 			min-width: var(--touch-target);
 			padding: var(--space-md);
 		}
+
 		/* Disable hover effects on touch-only devices */
 		.card:hover {
 			transform: none;
 		}
+
 		.hero-image-wrapper:hover .hero-image {
 			transform: none;
 		}
@@ -667,6 +701,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 		.site-header {
 			padding-top: var(--safe-top);
 		}
+
 		/* Hide web-only elements */
 		.skip-link {
 			display: none;
@@ -696,6 +731,7 @@ PHASE 2: Enhanced adaptability, accessibility, modern CSS features
 		.main-grid {
 			grid-template-columns: 1fr 1fr;
 		}
+
 		.gallery-tour {
 			grid-template-columns: 1fr 2fr;
 		}

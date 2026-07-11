@@ -1,36 +1,39 @@
 # MEMORY_STATE [MG-CLINIC]
+
 **ID:** mg-019 | **T:** +33 | **Φ:** AGENT_BIBLE_v14.3_FULL_SYNC
 **Last Sync:** 2026-07-11 | **Total Files:** 176 (43 HTML, 12 CSS, 20 JS, 39 Images, 14 MD)
 
 ## Δ_LOG (Session Evolution)
-| Turn | Event | Impact | Cross-Ref |
-|------|-------|--------|-----------|
-| T0-T10 | INIT→v4.0 | KB foundation, orientation-rules, JS-fallbacks | Instructions.md §KB_STATS |
-| T11 | FIX: index.html mobile-nav | Popup modal design, sectioned nav (gallery/blog/book/tools) | design.md §4, pages.md §7 |
-| T12 | OPTIMIZE: All 7 KB docs v5.0 | Dedup general concepts, unify cross-refs, compress for single-run access | All docs |
-| T13 | SYNC: Link audit fixes v3.1 | Fixed blog paths, created legal pages, updated external URLs, synced README | pages.md §7-§10, README.md |
-| T14 | RESTRUCTURE: URL plan v7.0 | Complete file inventory (80 files), detailed URL mappings, implementation guide | _RESTRUCTURE_PLAN.md, pages.md §11 |
-| T14 | UPDATE: Instructions.md v7.0 | Added restructure plan to registry, repo stats, current priorities | Instructions.md §Registry |
-| T14 | SYNC: All AGENT_BIBLE docs | 11 documents now synced v7.0 with cross-refs | All docs |
-| T15 | PHASE_COMPLETE: Tool extraction v8.0 | 7 therapeutic tools modularized (CSS+JS), 6 tool pages live | tools.md §1-§3, worker.md §10 |
-| T15 | ASSET_ORG: Centralized images | 31 images in /assets/images/, components in /assets/components/ | assets.md §1-§3 |
-| T15 | DEPLOY_READY: netlify.toml | Redirect rules configured for clean URLs | worker.md §9, pages.md §6 |
-| T15 | SYNC: All AGENT_BIBLE docs v8.0 | 16 documents updated with current project state | All docs |
-| T16 | ASTRO_REMOVAL: Static HTML migration v9.0 | Removed all Astro/Zod references, updated to vanilla JS stack | Instructions.md, memory.md, worker.md, _RESTRUCTURE_PLAN.md |
-| T16 | SYNC: Agent Bible cleanup | 4 docs purged of framework references, version bumped to v9.0 | All docs |
-| T17 | ZERO_DEP_MANDATE: No Node/npm v9.1 | Purged Playwright/CI/CD from priorities, manual testing only, deleted package.json refs | Instructions.md §Zero-Dep, _multiphasic_plan.md v4.0 |
-| T18 | FULL_ASSET_SYNC: v10.0 | Complete inventory: 52 HTML, 16 CSS, 56 JS, 39 images = 187 total files | assets.md v6.0, pages.md v9.0 |
-| T19 | HTTP_CLIENT: Ky integration v10.1 | Added ky.min.js (0.33.3) for modern fetch API, http-client.js wrapper created | assets.md §3, worker.md §2 |
-| T20 | SCRIPT_INTEGRATION: All HTML pages updated | ky.min.js + http-client.js added to 10+ HTML pages before animations-auto.js | pages.md §6, worker.md §3 |
-| T21 | ESLINT_FIXES: main.js errors resolved | Removed unused vars, fixed undefined functions, cleaned duplicate smooth scroll | worker.md §4, assets.md §3 |
-| T22 | BIBLE_UPDATE: Full sync v11.0 | 50 HTML, 6 CSS (5 core + 1 vendor), 63 JS (40 app + 23 vendor), 37 images = 170 total files | All docs |
-| T23-T29 | CONSOLE_DEBUG: about.html focus | Browser console error audit, script loading order fixes, Ky integration verification | worker.md §4, assets.md §3 |
-| T30 | BIBLE_SYNC_v12: Current state update | Verified counts: 50 HTML, 5 CSS core, 7 CSS tools, 24 vendor libs, 40 JS app, 39 images = 165 total | All docs v12.0 |
-| T32 | BIBLE_FULL_UPDATE: All markdown docs synchronized v14.3 | Complete audit of 176 files, updated vendor lib table (19 libs), confirmed zero-dependency stack | All docs v14.3 |
-| T31 | BIBLE_SYNC_v13: Full markdown audit | All 14 MD docs reviewed, verified asset counts, updated vendor lib table (24 libs), confirmed zero-dependency stack | All docs v13.0 |
-| T32 | BIBLE_SYNC_v14.3: File count correction | Corrected HTML count (43: 25 root + 6 tools + 12 blog), JS count (20 app scripts), total 176 files | All docs v14.3 |
+
+| Turn    | Event                                                   | Impact                                                                                                              | Cross-Ref                                                   |
+| ------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| T0-T10  | INIT→v4.0                                               | KB foundation, orientation-rules, JS-fallbacks                                                                      | Instructions.md §KB_STATS                                   |
+| T11     | FIX: index.html mobile-nav                              | Popup modal design, sectioned nav (gallery/blog/book/tools)                                                         | design.md §4, pages.md §7                                   |
+| T12     | OPTIMIZE: All 7 KB docs v5.0                            | Dedup general concepts, unify cross-refs, compress for single-run access                                            | All docs                                                    |
+| T13     | SYNC: Link audit fixes v3.1                             | Fixed blog paths, created legal pages, updated external URLs, synced README                                         | pages.md §7-§10, README.md                                  |
+| T14     | RESTRUCTURE: URL plan v7.0                              | Complete file inventory (80 files), detailed URL mappings, implementation guide                                     | _RESTRUCTURE_PLAN.md, pages.md §11                          |
+| T14     | UPDATE: Instructions.md v7.0                            | Added restructure plan to registry, repo stats, current priorities                                                  | Instructions.md §Registry                                   |
+| T14     | SYNC: All AGENT_BIBLE docs                              | 11 documents now synced v7.0 with cross-refs                                                                        | All docs                                                    |
+| T15     | PHASE_COMPLETE: Tool extraction v8.0                    | 7 therapeutic tools modularized (CSS+JS), 6 tool pages live                                                         | tools.md §1-§3, worker.md §10                               |
+| T15     | ASSET_ORG: Centralized images                           | 31 images in /assets/images/, components in /assets/components/                                                     | assets.md §1-§3                                             |
+| T15     | DEPLOY_READY: netlify.toml                              | Redirect rules configured for clean URLs                                                                            | worker.md §9, pages.md §6                                   |
+| T15     | SYNC: All AGENT_BIBLE docs v8.0                         | 16 documents updated with current project state                                                                     | All docs                                                    |
+| T16     | ASTRO_REMOVAL: Static HTML migration v9.0               | Removed all Astro/Zod references, updated to vanilla JS stack                                                       | Instructions.md, memory.md, worker.md, _RESTRUCTURE_PLAN.md |
+| T16     | SYNC: Agent Bible cleanup                               | 4 docs purged of framework references, version bumped to v9.0                                                       | All docs                                                    |
+| T17     | ZERO_DEP_MANDATE: No Node/npm v9.1                      | Purged Playwright/CI/CD from priorities, manual testing only, deleted package.json refs                             | Instructions.md §Zero-Dep, _multiphasic_plan.md v4.0        |
+| T18     | FULL_ASSET_SYNC: v10.0                                  | Complete inventory: 52 HTML, 16 CSS, 56 JS, 39 images = 187 total files                                             | assets.md v6.0, pages.md v9.0                               |
+| T19     | HTTP_CLIENT: Ky integration v10.1                       | Added ky.min.js (0.33.3) for modern fetch API, http-client.js wrapper created                                       | assets.md §3, worker.md §2                                  |
+| T20     | SCRIPT_INTEGRATION: All HTML pages updated              | ky.min.js + http-client.js added to 10+ HTML pages before animations-auto.js                                        | pages.md §6, worker.md §3                                   |
+| T21     | ESLINT_FIXES: main.js errors resolved                   | Removed unused vars, fixed undefined functions, cleaned duplicate smooth scroll                                     | worker.md §4, assets.md §3                                  |
+| T22     | BIBLE_UPDATE: Full sync v11.0                           | 50 HTML, 6 CSS (5 core + 1 vendor), 63 JS (40 app + 23 vendor), 37 images = 170 total files                         | All docs                                                    |
+| T23-T29 | CONSOLE_DEBUG: about.html focus                         | Browser console error audit, script loading order fixes, Ky integration verification                                | worker.md §4, assets.md §3                                  |
+| T30     | BIBLE_SYNC_v12: Current state update                    | Verified counts: 50 HTML, 5 CSS core, 7 CSS tools, 24 vendor libs, 40 JS app, 39 images = 165 total                 | All docs v12.0                                              |
+| T32     | BIBLE_FULL_UPDATE: All markdown docs synchronized v14.3 | Complete audit of 176 files, updated vendor lib table (19 libs), confirmed zero-dependency stack                    | All docs v14.3                                              |
+| T31     | BIBLE_SYNC_v13: Full markdown audit                     | All 14 MD docs reviewed, verified asset counts, updated vendor lib table (24 libs), confirmed zero-dependency stack | All docs v13.0                                              |
+| T32     | BIBLE_SYNC_v14.3: File count correction                 | Corrected HTML count (43: 25 root + 6 tools + 12 blog), JS count (20 app scripts), total 176 files                  | All docs v14.3                                              |
 
 ## STATE (Current Snapshot) → See Instructions.md §KB_READ
+
 - **Stack:** Static-HTML | CSS-Layers | VanillaJS + 24 Vendor Libs → worker.md §1
 - **Pages:** 43 HTML files (~14.5K lines) - core×25, tools×6, blog×12 → pages.md §1-§4
 - **Tools:** /assets/css-tools/* (7 CSS), /assets/js/* (20 app scripts including 8 tool scripts) → tools.md §1-§3
@@ -43,17 +46,19 @@
 - **Cfg:** WCAG-2.2-AA, Orientation-First, FluidType(clamp), Semantic-HTML, Dark-Mode, Modular-CSS → design.md §5-§8
 
 ## QUEUE (Pending Actions) → See worker.md §6, pages.md §6
-| Priority | Task | Ref Doc | Status | Cross-Ref |
-|---|---|---|---|---|
-| P0 | Browser console error audit (about.html prime case) | worker.md §4 | In Progress | assets.md §3 |
-| P1 | Component library build (Button, Card, Nav) - Vanilla only | components.md §1-§4 | Pending | design.md §4 |
-| P2 | Manual E2E checklist (A11y, Mobile, Print) - Browser DevTools | worker.md §6 | Pending | - |
-| P3 | Asset optimization (WebP conversion, SVG sprites) - Manual | assets.md §5 | Pending | design.md §7 |
-| P4 | Blog article template expansion | pages.md §3 | Pending | components.md §5 |
-| P5 | Book page integration | pages.md §2 | In Progress | - |
-| P6 | SEO audit via Rich Results Test - Manual | schemas.md §4 | Pending | - |
+
+| Priority | Task                                                          | Ref Doc             | Status      | Cross-Ref        |
+| -------- | ------------------------------------------------------------- | ------------------- | ----------- | ---------------- |
+| P0       | Browser console error audit (about.html prime case)           | worker.md §4        | In Progress | assets.md §3     |
+| P1       | Component library build (Button, Card, Nav) - Vanilla only    | components.md §1-§4 | Pending     | design.md §4     |
+| P2       | Manual E2E checklist (A11y, Mobile, Print) - Browser DevTools | worker.md §6        | Pending     | -                |
+| P3       | Asset optimization (WebP conversion, SVG sprites) - Manual    | assets.md §5        | Pending     | design.md §7     |
+| P4       | Blog article template expansion                               | pages.md §3         | Pending     | components.md §5 |
+| P5       | Book page integration                                         | pages.md §2         | In Progress | -                |
+| P6       | SEO audit via Rich Results Test - Manual                      | schemas.md §4       | Pending     | -                |
 
 ## RECOVER (Continuity Checkpoints) → See worker.md §10, assets.md v6.0
+
 1. ✓ Logo assets → /assets/images/* (14 logo variants: SVG, PNG, ICO) - assets.md §4
 2. ✓ CSS architecture → 5-layer cascade (base→layout→components→utilities→animations) + splide imports - assets.md §2
 3. ✓ JS modules → main.js + 39 scripts (8 tools + 3 blog configs + discovery + a11y + http-client + 24 vendor) - assets.md §3
@@ -70,4 +75,4 @@
 14. ✓ Full sync complete → 176 total project files documented across all AGENT_BIBLE docs - assets.md v14.0
 15. Next: T33 (Markdown audit v14.3, file count corrections) → memory.md §STATE
 
-*Auto-update T+1. Append-delta. Dense shorthand. KB: 14-docs v14.3. Tool extraction complete. Asset organization complete. HTTP client integrated. Full sync v14.3: 43 HTML (25 root + 6 tools + 12 blog) + 12 CSS (5 core + 7 tools) + 20 JS app + 24 vendor libs + 39 images = 176 files. Zero-dependency stack enforced. Manual testing only. Browser console errors resolved. All markdown documentation audited and synchronized with correct file counts. END_ON_SYNC.*
+_Auto-update T+1. Append-delta. Dense shorthand. KB: 14-docs v14.3. Tool extraction complete. Asset organization complete. HTTP client integrated. Full sync v14.3: 43 HTML (25 root + 6 tools + 12 blog) + 12 CSS (5 core + 7 tools) + 20 JS app + 24 vendor libs + 39 images = 176 files. Zero-dependency stack enforced. Manual testing only. Browser console errors resolved. All markdown documentation audited and synchronized with correct file counts. END_ON_SYNC._

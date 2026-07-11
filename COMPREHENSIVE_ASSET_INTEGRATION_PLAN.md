@@ -1,5 +1,7 @@
 # COMPREHENSIVE ASSET INTEGRATION PLAN
+
 ## Mind Grace Neuropsychiatric Clinic - Full Stack Modernization
+
 ### STATUS: COMPLETED ✅ (v14.3)
 
 ---
@@ -7,6 +9,7 @@
 ## 1. CURRENT PROJECT STATE (VERIFIED)
 
 ### File Inventory (Actual - Updated v14.3)
+
 - **HTML Files:** 43 total (Production)
   - Root: 25 files (index.html, about.html, book.html, location.html, etc.)
   - Blog: 12 files (blog/index.html + 11 articles)
@@ -26,33 +29,35 @@
 ### Current Asset Usage Analysis
 
 #### Libraries Loaded in index.html (NOT connected to DOM):
+
 ```html
-✓ floating-ui.core.min.js - NO DOM elements using it
-✓ lucide.min.js - NO data-lucide attributes found
-✓ splide.min.js - NO .splide carousel elements
-✓ autoanimate.min.js - NO elements using it
-✓ petite-vue.min.js - NO v-scope directives
-✓ swup.min.js - NOT initialized
-✓ ky.min.js - Loaded in 3 files but not used
+✓ floating-ui.core.min.js - NO DOM elements using it ✓ lucide.min.js - NO
+data-lucide attributes found ✓ splide.min.js - NO .splide carousel elements ✓
+autoanimate.min.js - NO elements using it ✓ petite-vue.min.js - NO v-scope
+directives ✓ swup.min.js - NOT initialized ✓ ky.min.js - Loaded in 3 files but
+not used
 ```
 
 #### Path Issues Found:
+
 - **Base href present:** All 52 HTML files have `<base href="/MIND_WEBSITE/">`
-- **Relative paths still exist:** 
+- **Relative paths still exist:**
   - 8 files use `href="../"` (templates + 2 tool pages)
   - 3 template files use `src="../"`
 - **Issue:** Base href is `/MIND_WEBSITE/` but project might be deployed at root `/`
 
 #### Icon Status:
+
 - **Current:** Raw SVGs embedded directly in HTML
   - gallery.html: 2 inline SVGs
-  - doctors.html: 4 inline SVGs  
+  - doctors.html: 4 inline SVGs
   - testimonials.html: 5 inline SVGs
   - index.html: 20 inline SVGs
 - **Missing:** ZERO `data-lucide` attributes anywhere in project
 - **Library available:** lucide.min.js (468 icons) loaded but idle
 
 #### Carousel Status:
+
 - **Current:** Static image grids
   - gallery.html: 16 images in grid (no carousel)
   - doctors.html: Profile cards (no carousel)
@@ -65,14 +70,17 @@
 ## 2. MODERNIZATION REQUIREMENTS
 
 ### A. Floating UI Enhancement
+
 **Goal:** Make tooltips, popovers, and dropdowns robust
 
 **Current State:**
+
 - Library loaded: ✅ `floating-ui.core.min.js`
 - DOM usage: ❌ None
 - Missing: Initialization code, trigger elements
 
 **Implementation Plan:**
+
 1. Create `ui-popovers.js` module
 2. Add `.has-tooltip` class to buttons with `title` attributes
 3. Implement dropdown positioning for mobile menu
@@ -80,14 +88,17 @@
 5. Hook into Swup page transitions for re-initialization
 
 ### B. Lucide Icons Integration
+
 **Goal:** Replace inline SVGs with lightweight icon tags
 
 **Current State:**
+
 - Library loaded: ✅ `lucide.min.js` (468 icons, ISC license)
 - Usage: ❌ Zero `data-lucide` attributes
 - Inline SVGs: 31+ across key pages
 
 **Implementation Plan:**
+
 1. Map common icon names (search, menu, arrow, close, etc.)
 2. Replace inline SVGs with `<i data-lucide="icon-name"></i>`
 3. Create `icon-init.js` that runs `lucide.createIcons()`
@@ -95,6 +106,7 @@
 5. Mass update all 52 HTML files via regex
 
 **Icon Mapping Required:**
+
 ```
 svg path "M3.5 13h6" → arrow-left
 svg path "M15 18l-6-6 6-6" → arrow-right
@@ -104,9 +116,11 @@ etc.
 ```
 
 ### C. Splide Carousel Implementation
+
 **Goal:** Convert static image groups to swipeable carousels
 
 **Current State:**
+
 - Library loaded: ✅ `splide.min.js` v4.1.4 + `splide.min.css`
 - Usage: ❌ No `.splide` markup
 - Targets identified:
@@ -116,12 +130,14 @@ etc.
   - blog-*.html: Related posts → horizontal carousel
 
 **Implementation Plan:**
+
 1. **Pilot:** Start with `gallery.html`
    - Wrap existing grid in `.splide` structure
    - Add `.splide__track`, `.splide__list`, `.splide__slide`
    - Initialize with responsive options
-   
+
 2. **Reference Implementation:**
+
 ```html
 <div class="splide" aria-label="Gallery Images">
   <div class="splide__track">
@@ -136,29 +152,33 @@ etc.
 ```
 
 3. **JavaScript:**
+
 ```javascript
-new Splide('.gallery-splide', {
+new Splide(".gallery-splide", {
   perPage: 3,
   breakpoints: {
     768: { perPage: 1 },
-    1024: { perPage: 2 }
+    1024: { perPage: 2 },
   },
   autoplay: false,
-  drag: true
+  drag: true,
 }).mount();
 ```
 
 4. **Rollout:** Apply pattern to doctors, testimonials, blog pages
 
 ### D. AutoAnimate Integration
+
 **Goal:** Add smooth animations to dynamic content changes
 
 **Current State:**
+
 - Library loaded: ✅ `autoanimate.min.js`
 - Usage: ❌ None
 - Perfect for: List filtering, form submissions, accordion expansions
 
 **Implementation Plan:**
+
 1. Create `animations-auto.js` module
 2. Apply to:
    - Gallery filter button clicks (fade between categories)
@@ -168,14 +188,17 @@ new Splide('.gallery-splide', {
 3. Respect `prefers-reduced-motion`
 
 ### E. Petite Vue Setup
+
 **Goal:** Add lightweight reactivity for interactive tools
 
 **Current State:**
+
 - Library loaded: ✅ `petite-vue.min.js`
 - Usage: ❌ No `v-scope` directives
 - Perfect for: Tool state management without heavy frameworks
 
 **Implementation Plan:**
+
 1. Target interactive tools:
    - `guided-breathing.html`: Breathing phase state
    - `mood-spectrum.html`: Mood selection tracking
@@ -183,6 +206,7 @@ new Splide('.gallery-splide', {
    - Theme toggle (if exists)
 
 2. Example implementation:
+
 ```html
 <div v-scope="breathApp()">
   <span>{{ phase }}</span>
@@ -191,32 +215,37 @@ new Splide('.gallery-splide', {
 ```
 
 ### F. Swup Integration
+
 **Goal:** SPA-like page transitions without breaking functionality
 
 **Current State:**
+
 - Library loaded: ✅ `swup.min.js`
 - Usage: ❌ Not initialized
 - Risk: Could break existing scripts if not properly hooked
 
 **Implementation Plan:**
+
 1. **Prerequisites:**
    - Ensure all internal links use absolute paths (fix Phase A)
    - Verify all pages have proper `<main>` landmarks
-   
+
 2. **Initialize with plugins:**
+
 ```javascript
 const swup = new Swup({
-  containers: ['#main-content', '.site-header'],
+  containers: ["#main-content", ".site-header"],
   plugins: [
     new SwupScriptsPlugin(), // Re-run scripts on page load
-    new SwupHeadPlugin()     // Update meta titles/descriptions
-  ]
+    new SwupHeadPlugin(), // Update meta titles/descriptions
+  ],
 });
 ```
 
 3. **Critical: Create re-initialization hook:**
+
 ```javascript
-document.addEventListener('swup:page-view', () => {
+document.addEventListener("swup:page-view", () => {
   lucide.createIcons();
   initSplideCarousels();
   initFloatingUI();
@@ -231,20 +260,24 @@ document.addEventListener('swup:page-view', () => {
    - Admin/backend paths
 
 ### G. Ky HTTP Client
+
 **Goal:** Replace native fetch with robust HTTP client
 
 **Current State:**
+
 - Library loaded: ✅ `ky.min.js` in 3 files (book.html, gallery.html, index.html)
 - Usage: ❌ Not actually used in code
 - Native fetch: Used in blog-discovery.js, form-validation.js
 
 **Implementation Plan:**
+
 1. Create `http-client.js` wrapper:
+
 ```javascript
 const api = ky.create({
-  prefixUrl: '/api/',
+  prefixUrl: "/api/",
   timeout: 8000,
-  retry: { limit: 2 }
+  retry: { limit: 2 },
 });
 ```
 
@@ -264,7 +297,9 @@ const api = ky.create({
 ## 3. EXECUTION STRATEGY
 
 ### Phase 1: Foundation (CRITICAL - Do First)
+
 **Tasks:**
+
 1. Fix base href inconsistency (`/MIND_WEBSITE/` vs `/`)
 2. Convert all relative paths to absolute
 3. Remove duplicate/escaped script tags
@@ -276,7 +311,9 @@ const api = ky.create({
 **Time:** 2-3 hours
 
 ### Phase 2: Icon Replacement (HIGH PRIORITY)
+
 **Tasks:**
+
 1. Map all inline SVGs to Lucide icon names
 2. Replace with `<i data-lucide="name"></i>`
 3. Create `icon-init.js`
@@ -288,7 +325,9 @@ const api = ky.create({
 **Time:** 3-4 hours
 
 ### Phase 3: Carousel Implementation (MEDIUM PRIORITY)
+
 **Tasks:**
+
 1. Pilot on gallery.html
 2. Create reference carousel code
 3. Apply to doctors.html
@@ -301,7 +340,9 @@ const api = ky.create({
 **Time:** 4-5 hours
 
 ### Phase 4: Animation & Reactivity (MEDIUM PRIORITY)
+
 **Tasks:**
+
 1. Set up auto-animate for lists/forms
 2. Implement petite-vue in tools
 3. Add scroll-driven animations
@@ -313,7 +354,9 @@ const api = ky.create({
 **Time:** 3-4 hours
 
 ### Phase 5: Swup Integration (HIGH RISK - Do Last)
+
 **Tasks:**
+
 1. Initialize Swup with plugins
 2. Create re-initialization hooks
 3. Test all page transitions
@@ -326,7 +369,9 @@ const api = ky.create({
 **Time:** 4-6 hours
 
 ### Phase 6: HTTP Client Upgrade (LOW PRIORITY)
+
 **Tasks:**
+
 1. Create ky wrapper
 2. Replace fetch in blog-discovery.js
 3. Replace fetch in form-validation.js
@@ -342,24 +387,28 @@ const api = ky.create({
 ## 4. SUCCESS METRICS
 
 ### Performance
+
 - [ ] Lighthouse score >95 (currently ~85-90)
 - [ ] Reduced DOM size (fewer inline SVGs)
 - [ ] Faster initial paint (lazy carousel initialization)
 - [ ] Smaller HTML payloads (icon tags vs SVGs)
 
 ### Accessibility
+
 - [ ] All icons have proper aria-labels
 - [ ] Carousels are keyboard navigable
 - [ ] Focus management works with Swup
 - [ ] Screen readers announce page transitions
 
 ### User Experience
+
 - [ ] Smooth page transitions (Swup)
 - [ ] Touch-friendly carousels on mobile
 - [ ] Tooltips appear correctly positioned
 - [ ] Animations respect user preferences
 
 ### Code Quality
+
 - [ ] Zero console errors
 - [ ] All libraries properly initialized
 - [ ] Clean separation of concerns
@@ -376,6 +425,7 @@ If Swup or other major changes cause issues:
 3. **Full rollback:** Restore from git backup
 
 **Git branches to create:**
+
 - `feature/icons-lucide`
 - `feature/carousels-splide`
 - `feature/swup-transitions`
@@ -386,6 +436,7 @@ If Swup or other major changes cause issues:
 ## 6. NEXT STEPS
 
 **Recommended Order:**
+
 1. ✅ Create backup branch
 2. ⏳ Phase 1: Fix paths (critical foundation)
 3. ⏳ Phase 2: Replace icons (quick win)

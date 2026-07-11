@@ -11,7 +11,7 @@
 	padding: clamp(2rem, 4vw, 3rem);
 	box-shadow: var(--shadow-sm);
 	transition: all var(--transition-base);
-	border: 1px solid rgba(103, 27, 80, 0.08);
+	border: 1px solid rgb(103 27 80 / 8%);
 	display: flex;
 	flex-direction: column;
 	color: var(--text-body);
@@ -22,7 +22,7 @@
 .card:hover {
 	transform: translateY(-4px);
 	box-shadow: var(--shadow-md);
-	border-color: rgba(103, 27, 80, 0.15);
+	border-color: rgb(103 27 80 / 15%);
 }
 
 .card:focus-within {
@@ -42,7 +42,7 @@
 
 .card-outlined {
 	background: transparent;
-	border: 2px solid rgba(103, 27, 80, 0.2);
+	border: 2px solid rgb(103 27 80 / 20%);
 	box-shadow: none;
 }
 
@@ -187,8 +187,8 @@
 	margin: 0 auto var(--space-lg);
 	background: linear-gradient(
 		135deg,
-		rgba(103, 27, 80, 0.1),
-		rgba(103, 27, 80, 0.05)
+		rgb(103 27 80 / 10%),
+		rgb(103 27 80 / 5%)
 	);
 	border-radius: var(--radius-md);
 	display: flex;
@@ -235,7 +235,7 @@
 .pillar-card .pillar-number {
 	font-size: clamp(3rem, 5vw, 4rem);
 	font-weight: 700;
-	color: rgba(103, 27, 80, 0.1);
+	color: rgb(103 27 80 / 10%);
 	line-height: 1;
 	margin-bottom: var(--space-md);
 }
@@ -265,8 +265,8 @@
 	margin: 0 auto var(--space-xl);
 	background: linear-gradient(
 		135deg,
-		rgba(103, 27, 80, 0.15),
-		rgba(103, 27, 80, 0.08)
+		rgb(103 27 80 / 15%),
+		rgb(103 27 80 / 8%)
 	);
 	border-radius: 50%;
 	display: flex;
@@ -307,7 +307,7 @@
 /* --- 7. PROGRAM CARD (AASHA Initiative) --- */
 .program-card {
 	background: linear-gradient(135deg, #fdf2f4, #fef9f3);
-	border: 1px solid rgba(103, 27, 80, 0.1);
+	border: 1px solid rgb(103 27 80 / 10%);
 }
 
 .program-card .program-badge {
@@ -343,7 +343,7 @@
 	gap: var(--space-md);
 	margin-top: var(--space-lg);
 	padding-top: var(--space-lg);
-	border-top: 1px solid rgba(103, 27, 80, 0.1);
+	border-top: 1px solid rgb(103 27 80 / 10%);
 }
 
 .program-card .stat-item {
@@ -374,8 +374,8 @@
 	height: clamp(48px, 8vw, 64px);
 	background: linear-gradient(
 		135deg,
-		rgba(103, 27, 80, 0.15),
-		rgba(103, 27, 80, 0.08)
+		rgb(103 27 80 / 15%),
+		rgb(103 27 80 / 8%)
 	);
 	border-radius: var(--radius-md);
 	display: flex;
@@ -511,7 +511,7 @@
 	left: 0;
 	right: 0;
 	padding: var(--space-lg);
-	background: linear-gradient(to top, rgba(103, 27, 80, 0.8), transparent);
+	background: linear-gradient(to top, rgb(103 27 80 / 80%), transparent);
 	color: var(--white);
 	font-size: var(--fs-small);
 	font-weight: 600;
@@ -586,6 +586,7 @@
 .skip-link {
 	color: #eb32b5;
 }
+
 .skip-link:focus {
 	color: #eb32b5;
 	background: #fff;

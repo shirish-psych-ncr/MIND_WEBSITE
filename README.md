@@ -30,15 +30,15 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 
 ## Technology Stack
 
-| Layer | Technology |
-|-------|------------|
-| **Markup** | HTML5 (Semantic) |
-| **Styling** | CSS3 (Modern, Modular) |
-| **Interactivity** | Vanilla JavaScript (ES6+) |
-| **Fonts** | Inter + Playfair Display (Google Fonts) |
-| **Icons** | Inline SVG |
-| **Deployment** | GitHub Pages |
-| **Domain** | mindgracencr.in |
+| Layer             | Technology                              |
+| ----------------- | --------------------------------------- |
+| **Markup**        | HTML5 (Semantic)                        |
+| **Styling**       | CSS3 (Modern, Modular)                  |
+| **Interactivity** | Vanilla JavaScript (ES6+)               |
+| **Fonts**         | Inter + Playfair Display (Google Fonts) |
+| **Icons**         | Inline SVG                              |
+| **Deployment**    | GitHub Pages                            |
+| **Domain**        | mindgracencr.in                         |
 
 **No frameworks. No build tools. No dependencies.** Pure web standards.
 
@@ -167,6 +167,7 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) for complete details.
 ## Key Features
 
 ### 🏠 Core Pages
+
 - Homepage with intrinsic grid layout
 - Services overview (Psychiatry, Counseling, Child Development)
 - Doctor profile (Dr. Anita Sharma)
@@ -177,7 +178,9 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) for complete details.
 - Legal pages (Privacy, Consent, Terms)
 
 ### 🧘 Therapeutic Tools
+
 Interactive self-help resources:
+
 - **Guided Breathing** — paced breathing exercise
 - **Butterfly Tapper** — EMDR bilateral stimulation
 - **Eye Movement** — EMDR eye tracking
@@ -187,7 +190,9 @@ Interactive self-help resources:
 - **Resource Book** — psychoeducational content
 
 ### 📝 Blog System
+
 Dynamic blog with categories:
+
 - Adult Mental Health
 - Child Development
 - Auto-discovery of posts
@@ -198,18 +203,20 @@ Dynamic blog with categories:
 ## Design System
 
 ### Colors
+
 ```css
---primary:  #671B50   /* Deep Purple */
---accent:   #F34674   /* Wild Strawberry */
---support:  #EFBCBA   /* Cotton Rose */
+--primary: #671b50 /* Deep Purple */ --accent: #f34674 /* Wild Strawberry */
+  --support: #efbcba /* Cotton Rose */;
 ```
 
 ### Typography
+
 - **Headings:** Playfair Display (serif)
 - **Body:** Inter (sans-serif)
 - **Scale:** Fluid `clamp()` functions from `0.7rem` to `5rem`
 
 ### Responsive Philosophy
+
 - ✅ Grid `auto-fit` with `minmax()`
 - ✅ Fluid `clamp()` for typography & spacing
 - ✅ Container queries for component responsiveness
@@ -221,6 +228,7 @@ Dynamic blog with categories:
 ## Getting Started
 
 ### Prerequisites
+
 - Any text editor (VS Code recommended)
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - Basic HTML/CSS/JavaScript knowledge
@@ -228,6 +236,7 @@ Dynamic blog with categories:
 ### Local Development
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/shirish-psych-ncr/MIND_WEBSITE.git
    cd MIND_WEBSITE
@@ -239,7 +248,7 @@ Dynamic blog with categories:
      ```bash
      # Python
      python -m http.server 8000
-     
+
      # Alternative: Use any static file server
      ```
 
@@ -296,9 +305,10 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 ✅ Skip links  
 ✅ Reduced motion support  
 ✅ Color contrast compliance  
-✅ Screen reader compatible  
+✅ Screen reader compatible
 
 **Testing tools used:**
+
 - WAVE (Web Accessibility Evaluation Tool)
 - axe DevTools
 - Lighthouse Accessibility Audit
@@ -310,14 +320,15 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 
 **Lighthouse Scores (Target: 90+)**
 
-| Metric | Score | Status |
-|--------|-------|--------|
-| Performance | 95+ | ✅ Optimized |
-| Accessibility | 98+ | ✅ WCAG 2.1 AA |
-| Best Practices | 95+ | ✅ No Errors |
-| SEO | 95+ | ✅ Complete |
+| Metric         | Score | Status         |
+| -------------- | ----- | -------------- |
+| Performance    | 95+   | ✅ Optimized   |
+| Accessibility  | 98+   | ✅ WCAG 2.1 AA |
+| Best Practices | 95+   | ✅ No Errors   |
+| SEO            | 95+   | ✅ Complete    |
 
 **Recent Fixes (July 2026):**
+
 - ✅ Fixed `floating-ui.min.js` - Replaced corrupted library with complete UMD build (22KB) containing both Core and DOM libraries
 - ✅ Resolved `detectOverflow` undefined error across all 25 HTML files
 - ✅ Standardized script loading order (ky → http-client → main)
@@ -330,6 +341,7 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 - ✅ Corrected hreflang and canonical link formats for search engine optimization
 
 **Optimization strategies:**
+
 - No framework overhead
 - Modular CSS (load only what's needed)
 - Minimal JavaScript with proper module loading
@@ -342,17 +354,18 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 
 ## Browser Support
 
-| Browser | Version | Support |
-|---------|---------|---------|
-| Chrome | Last 2 | ✅ Full |
-| Firefox | Last 2 | ✅ Full |
-| Safari | Last 2 | ✅ Full |
-| Edge | Last 2 | ✅ Full |
-| Samsung Internet | Last 2 | ✅ Full |
+| Browser          | Version | Support |
+| ---------------- | ------- | ------- |
+| Chrome           | Last 2  | ✅ Full |
+| Firefox          | Last 2  | ✅ Full |
+| Safari           | Last 2  | ✅ Full |
+| Edge             | Last 2  | ✅ Full |
+| Samsung Internet | Last 2  | ✅ Full |
 
 **Graceful degradation:** Older browsers receive functional (if less polished) experience.
 
 **Features requiring modern browsers:**
+
 - Container Queries (fallback: standard layout)
 - `clamp()` function (fallback: fixed size)
 - `dvh`/`dvw` units (fallback: `vh`/`vw`)
@@ -363,9 +376,11 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 ## Technical Debt & Roadmap
 
 ### Current Issues
+
 See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Technical Debt & Issues_ for complete list.
 
 ### Priority Tasks
+
 1. ⚠️ Remove duplicate homepage files (`index-old.html`, `index-revamp.html`)
 2. ⚠️ Create missing `terms.html` and `disclaimer.html`
 3. ⚠️ Update `site.webmanifest` with correct branding
@@ -373,6 +388,7 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Technical Debt & Issues_ for com
 5. ⚠️ Optimize images (WebP/AVIF conversion)
 
 ### Future Enhancements
+
 - JSON-LD structured data for SEO
 - Service Worker for offline support
 - Multilingual support (Hindi + English)
@@ -386,13 +402,13 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed pla
 
 ## Documentation
 
-| Document | Purpose |
-|----------|---------|
+| Document                               | Purpose                                                                 |
+| -------------------------------------- | ----------------------------------------------------------------------- |
 | [`ARCHITECTURE.md`](./ARCHITECTURE.md) | Complete system architecture, dependency graphs, design system, roadmap |
-| [`css/README.md`](./css/README.md) | CSS module responsibilities, load order, design tokens |
-| [`js/README.md`](./js/README.md) | JavaScript modules, coding conventions, accessibility |
-| [`AGENT_BIBLE/`](./AGENT_BIBLE/) | AI agent operating instructions and context |
-| [`inspo/`](./inspo/) | Design inspiration and anti-patterns |
+| [`css/README.md`](./css/README.md)     | CSS module responsibilities, load order, design tokens                  |
+| [`js/README.md`](./js/README.md)       | JavaScript modules, coding conventions, accessibility                   |
+| [`AGENT_BIBLE/`](./AGENT_BIBLE/)       | AI agent operating instructions and context                             |
+| [`inspo/`](./inspo/)                   | Design inspiration and anti-patterns                                    |
 
 ---
 
@@ -400,14 +416,15 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed pla
 
 **Primary Maintainer:** Repository Owner  
 **Clinic:** Mind Grace Neuropsychiatric Clinic, Greater Noida, India  
-**Lead Psychiatrist:** Dr. Anita Sharma  
+**Lead Psychiatrist:** Dr. Anita Sharma
 
 **Technology Stack:** HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)  
 **Deployment:** GitHub Pages  
 **Primary Domain:** mindgracencr.in  
-**GitHub Pages:** shirish-psych-ncr.github.io/MIND_WEBSITE  
+**GitHub Pages:** shirish-psych-ncr.github.io/MIND_WEBSITE
 
 For questions, contributions, or maintenance, refer to:
+
 1. This README
 2. [`ARCHITECTURE.md`](./ARCHITECTURE.md)
 3. [`AGENT_BIBLE/Instructions.md`](./AGENT_BIBLE/Instructions.md)

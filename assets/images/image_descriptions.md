@@ -284,7 +284,6 @@ Psychiatrist Greater Noida, psychologist Greater Noida, mental health clinic log
 
 ---
 
-
 # Mind_Grace_Clinic_Logo.svg
 
 ## Title
@@ -438,7 +437,6 @@ White favicon optimized for dark browser interfaces and operating system themes.
 White favicon, dark mode favicon, psychiatry website icon, psychology clinic branding, healthcare browser icon.
 
 ---
-
 
 A collection showing the organised media library containing therapy photographs, educational activity images, clinic brochures, branding assets, location photography, and official logos for Mind Grace Neuropsychiatric Clinic and AASHA Early Intervention & Child Development Centre. The organised asset collection supports website development, search engine optimisation, structured metadata, accessibility compliance, digital marketing, patient education, and healthcare content management.
 

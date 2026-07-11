@@ -20,6 +20,7 @@ The Mind Grace Component Library provides reusable, accessible, and responsive U
 **File:** `nav-footer.html` (13.4 KB)
 
 **Includes:**
+
 - ✅ Site Header (sticky, responsive)
 - ✅ Desktop Navigation
 - ✅ Mobile Navigation Panel (with overlay, focus trap, `[inert]` attribute)
@@ -30,6 +31,7 @@ The Mind Grace Component Library provides reusable, accessible, and responsive U
 - ✅ Header Scroll Effect
 
 **Key Features:**
+
 - WCAG 2.2 AA compliant
 - Keyboard navigable (Escape to close, focus trap)
 - ARIA labels and roles
@@ -37,6 +39,7 @@ The Mind Grace Component Library provides reusable, accessible, and responsive U
 - Smooth animations with reduced-motion support
 
 **Usage:**
+
 ```html
 <!-- Include in <body> -->
 <header class="site-header" role="banner">...</header>
@@ -55,34 +58,39 @@ The Mind Grace Component Library provides reusable, accessible, and responsive U
 **File:** `button.css` (6.1 KB)
 
 **Variants:**
-| Class | Use Case | Description |
-|-------|----------|-------------|
-| `.btn-primary` | Main CTAs | Deep plum background, white text |
-| `.btn-secondary` | Secondary actions | Outlined style |
-| `.btn-outline` | Minimal actions | Border only |
-| `.btn-ghost` | Subtle actions | Transparent, hover bg |
-| `.cta-button` | Navigation CTAs | Compact, for header nav |
+
+| Class            | Use Case          | Description                      |
+| ---------------- | ----------------- | -------------------------------- |
+| `.btn-primary`   | Main CTAs         | Deep plum background, white text |
+| `.btn-secondary` | Secondary actions | Outlined style                   |
+| `.btn-outline`   | Minimal actions   | Border only                      |
+| `.btn-ghost`     | Subtle actions    | Transparent, hover bg            |
+| `.cta-button`    | Navigation CTAs   | Compact, for header nav          |
 
 **Size Variants:**
-| Class | Use Case |
-|-------|----------|
-| `.btn-large` | Hero sections |
-| `.btn-compact` | Secondary actions |
-| `.btn-full` | Full-width (mobile) |
-| `.btn-icon` | Icon-only buttons |
+
+| Class          | Use Case            |
+| -------------- | ------------------- |
+| `.btn-large`   | Hero sections       |
+| `.btn-compact` | Secondary actions   |
+| `.btn-full`    | Full-width (mobile) |
+| `.btn-icon`    | Icon-only buttons   |
 
 **Special States:**
+
 - `.btn-loading` - Spinner animation
 - `.btn-success` - Success confirmation
 - `.btn-emergency` - Crisis pages (red)
 
 **Accessibility:**
+
 - Minimum 44×44px touch targets
 - Focus-visible outlines (3px offset)
 - High contrast mode support
 - Reduced motion support
 
 **Usage:**
+
 ```html
 <a href="./book.html" class="btn btn-primary">
   <svg class="icon icon-sm">...</svg>
@@ -104,20 +112,22 @@ The Mind Grace Component Library provides reusable, accessible, and responsive U
 **File:** `card.css` (11.1 KB)
 
 **Card Types:**
-| Class | Use Case | Features |
-|-------|----------|----------|
-| `.card` | Base card | Flexible container |
-| `.service-card` | Services page | Icon + title + description |
-| `.testimonial-card` | Reviews | Star rating, quote, author |
-| `.feature-card` | About/Approach | Centered icon |
-| `.pillar-card` | Biopsychosocial model | Numbered pillars |
-| `.contact-card` | Contact page | Large icon, contact info |
-| `.program-card` | AASHA initiative | Stats grid, badge |
-| `.condition-card` | Conditions list | Checklist style |
-| `.pricing-card` | Fees page | Price, features list |
-| `.gallery-card` | Gallery | Image with caption overlay |
+
+| Class               | Use Case              | Features                   |
+| ------------------- | --------------------- | -------------------------- |
+| `.card`             | Base card             | Flexible container         |
+| `.service-card`     | Services page         | Icon + title + description |
+| `.testimonial-card` | Reviews               | Star rating, quote, author |
+| `.feature-card`     | About/Approach        | Centered icon              |
+| `.pillar-card`      | Biopsychosocial model | Numbered pillars           |
+| `.contact-card`     | Contact page          | Large icon, contact info   |
+| `.program-card`     | AASHA initiative      | Stats grid, badge          |
+| `.condition-card`   | Conditions list       | Checklist style            |
+| `.pricing-card`     | Fees page             | Price, features list       |
+| `.gallery-card`     | Gallery               | Image with caption overlay |
 
 **Design Features:**
+
 - Calm editorial aesthetic (warm ivory backgrounds)
 - Subtle shadows (--shadow-sm → --shadow-md on hover)
 - Increased border-radius (24px default)
@@ -127,6 +137,7 @@ The Mind Grace Component Library provides reusable, accessible, and responsive U
 - Content-visibility optimization
 
 **Pastel Icon Backgrounds:**
+
 ```css
 .pastel-lavender: #E8E4F0
 .pastel-sage: #E4EFE8
@@ -136,6 +147,7 @@ The Mind Grace Component Library provides reusable, accessible, and responsive U
 ```
 
 **Usage:**
+
 ```html
 <article class="card service-card">
   <div class="card-icon pastel-lavender">
@@ -164,16 +176,18 @@ The Mind Grace Component Library provides reusable, accessible, and responsive U
 All components use CSS custom properties from `base.css`:
 
 ### Colors
+
 ```css
---primary: #671B50;          /* Deep Plum */
---accent: #E39774;           /* Terracotta */
---text-dark: #2D1B2E;
---text-body: #4A3B4A;
---white: #FFFFFF;
---cream: #FDFBF9;
+--primary: #671b50; /* Deep Plum */
+--accent: #e39774; /* Terracotta */
+--text-dark: #2d1b2e;
+--text-body: #4a3b4a;
+--white: #ffffff;
+--cream: #fdfbf9;
 ```
 
 ### Typography
+
 ```css
 --fs-display: clamp(3rem, 7vw, 6rem);
 --fs-h1: clamp(2.5rem, 6vw, 5rem);
@@ -184,6 +198,7 @@ All components use CSS custom properties from `base.css`:
 ```
 
 ### Spacing
+
 ```css
 --space-xs: clamp(0.5rem, 1vw, 0.75rem);
 --space-sm: clamp(0.75rem, 1.5vw, 1rem);
@@ -193,6 +208,7 @@ All components use CSS custom properties from `base.css`:
 ```
 
 ### Border Radius
+
 ```css
 --radius-sm: clamp(6px, 1vw, 10px);
 --radius-md: clamp(12px, 2vw, 20px);
@@ -201,6 +217,7 @@ All components use CSS custom properties from `base.css`:
 ```
 
 ### Shadows
+
 ```css
 --shadow-sm: 0 4px 16px rgba(103, 27, 80, 0.08);
 --shadow-md: 0 8px 30px rgba(103, 27, 80, 0.12);
@@ -220,7 +237,7 @@ All components meet **WCAG 2.2 AA** standards:
 ✅ **Keyboard Navigation:** Full operability  
 ✅ **ARIA Support:** Proper roles, labels, states  
 ✅ **Reduced Motion:** Respects `prefers-reduced-motion`  
-✅ **High Contrast Mode:** Enhanced borders and outlines  
+✅ **High Contrast Mode:** Enhanced borders and outlines
 
 ---
 
@@ -229,6 +246,7 @@ All components meet **WCAG 2.2 AA** standards:
 ### Orientation-First Approach
 
 **Portrait (Mobile):**
+
 - Single column layouts
 - Stacked hero sections
 - Full-width buttons
@@ -236,6 +254,7 @@ All components meet **WCAG 2.2 AA** standards:
 - Reduced padding
 
 **Landscape (Desktop):**
+
 - 2-3 column grids
 - Side-by-side hero
 - Horizontal navigation
@@ -243,6 +262,7 @@ All components meet **WCAG 2.2 AA** standards:
 - Enhanced spacing
 
 ### Fluid Typography & Spacing
+
 All measurements use `clamp(min, vw, max)` for smooth scaling across all viewport sizes.
 
 ---
@@ -292,4 +312,4 @@ After component library completion:
 
 ---
 
-*Ref: AGENT_BIBLE/components.md, design.md §1-§9, Instructions.md §5*
+_Ref: AGENT_BIBLE/components.md, design.md §1-§9, Instructions.md §5_
