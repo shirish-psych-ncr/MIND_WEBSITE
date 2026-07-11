@@ -1,9 +1,9 @@
-# ASSET_REGISTRY [v14.1] — Mind Grace Neuropsychiatric Clinic
+# ASSET_REGISTRY [v14.3] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Sync:** End-turn
-**Last Sync:** 2026-07-11 | **Total Files:** 179 (43 HTML, 12 CSS, 20 JS, 39 Images, 14 MD)
+**Last Sync:** 2026-07-11 | **Total Files:** 176 (43 HTML, 12 CSS, 20 JS, 38 Images, 14 MD)
 **Status:** Full markdown audit complete, zero-dependency stack verified
 
-## 1. /assets/images/* (Primary Assets, 39 files)
+## 1. /assets/images/* (Primary Assets, 38 files)
 | File | Type | Size | Dim | Use | Preload | Ref |
 |---|---|---|---|---|---|---|
 | Mind_Grace_Clinic_Logo_Pink.svg | Logo | 15KB | - | Header, Footer, OG | ✓ LCP | design.md §7 |
@@ -42,7 +42,7 @@
 | favicon.svg | Icon | - | - | Browser tab | ✓ | global |
 | image_descriptions.md | Meta | - | - | Alt text reference | ✗ | accessibility |
 
-**Note:** 14+ logo variants available (SVG, PNG, ICO, Black/White/Pink). Full inventory: 39 image files + 1 meta file.
+**Note:** 14+ logo variants available (SVG, PNG, ICO, Black/White/Pink). Full inventory: 38 image files + 1 meta file.
 
 ## 2. /assets/components/* (HTML Partials, 4 files)
 | File | Size | Purpose | Usage |
@@ -134,9 +134,9 @@
 | HTML Pages | 43 | ~14,500 | Stable (25 root + 6 tools + 12 blog) |
 | CSS Files | 12 | ~4,200 | +7 tool CSS |
 | JS Files | 20 | ~8,500 | Core modules only |
-| Images | 39 | N/A | Complete |
+| Images | 38 | N/A | Complete |
 | Markdown Docs | 14 | ~8,000 | Stable |
-| **TOTAL** | **179** | **~35,200** | **Current** |
+| **TOTAL** | **176** | **~35,200** | **Current** |
 
 ## 9. Asset Optimization Status
 | Task | Status | Priority | Ref |
@@ -147,4 +147,4 @@
 | Critical CSS extraction | Pending | P2 | design.md §8 |
 | Font subsetting | N/A (system fonts) | - | design.md §5 |
 
-*Sync complete. 179 files tracked. Zero-dependency stack enforced. Manual optimization required.*
+*Sync complete. 176 files tracked. Zero-dependency stack enforced. Manual optimization required.*
