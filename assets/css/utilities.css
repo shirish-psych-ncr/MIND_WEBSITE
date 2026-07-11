@@ -1,8 +1,8 @@
 /* ============================================
-   UTILITIES.CSS - Helper Classes
-   Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
-   PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
-   ============================================ */
+UTILITIES.CSS - Helper Classes
+Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
+PHASE 4 MODERNIZED: Fluid spacing, scroll-driven animations, container queries
+============================================ */
 
 /* --- CSS Custom Properties for Fluid Systems --- */
 :root {
@@ -13,7 +13,7 @@
   --space-fluid-lg: clamp(1.5rem, 3vw, 2.5rem);
   --space-fluid-xl: clamp(2rem, 4vw, 4rem);
   --space-fluid-2xl: clamp(3rem, 6vw, 6rem);
-  
+
   /* Fluid typography scale */
   --fluid-type-xs: clamp(0.75rem, 0.65rem + 0.5vw, 0.875rem);
   --fluid-type-sm: clamp(0.875rem, 0.7rem + 0.8vw, 1rem);
@@ -67,6 +67,7 @@
 .text-light    { color: var(--text-light); }
 .text-white    { color: var(--white); }
 .text-olive    { color: var(--olive); }
+
 .text-on-plum  { color: var(--text-on-plum); }
 .text-on-plum-cream { color: var(--text-on-plum-cream); }
 .text-on-plum-lime  { color: var(--text-on-plum-lime); }
@@ -213,13 +214,16 @@
 .flex-row        { flex-direction: row; }
 .flex-col        { flex-direction: column; }
 .flex-wrap       { flex-wrap: wrap; }
+
 .justify-start   { justify-content: flex-start; }
 .justify-center  { justify-content: center; }
 .justify-end     { justify-content: flex-end; }
 .justify-between { justify-content: space-between; }
+
 .align-start     { align-items: flex-start; }
 .align-center    { align-items: center; }
 .align-end       { align-items: flex-end; }
+
 .flex-1          { flex: 1; }
 .flex-shrink-0   { flex-shrink: 0; }
 
@@ -305,9 +309,9 @@
 }
 
 /* ============================================
-   SCROLL-DRIVEN ANIMATIONS (Phase 4)
-   Modern CSS with view-timeline and scroll-timeline
-   ============================================ */
+SCROLL-DRIVEN ANIMATIONS (Phase 4)
+Modern CSS with view-timeline and scroll-timeline
+============================================ */
 
 /* Reading progress bar */
 .reading-progress {
@@ -496,7 +500,6 @@
   .hc-border {
     border: 2px solid currentColor;
   }
-  
   .hc-text-bold {
     font-weight: 700;
   }
@@ -507,7 +510,6 @@
   .no-bg-image {
     background-image: none !important;
   }
-  
   .no-animation {
     animation: none !important;
     transition: none !important;
@@ -519,15 +521,12 @@
   .print-hidden {
     display: none !important;
   }
-  
   .print-break-before {
     break-before: page;
   }
-  
   .print-break-after {
     break-after: page;
   }
-  
   .print-no-break {
     break-inside: avoid;
   }

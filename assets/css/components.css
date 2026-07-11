@@ -1,8 +1,8 @@
 /* ============================================
-   COMPONENTS.CSS - Reusable UI Components
-   Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
-   Phase 3: Advanced Adaptability & Cutting-Edge CSS
-   ============================================ */
+COMPONENTS.CSS - Reusable UI Components
+Mind Grace Neuropsychiatric Clinic - Modern Fluid Design
+Phase 3: Advanced Adaptability & Cutting-Edge CSS
+============================================ */
 
 /* --- 1. CARD SYSTEM (The Foundation) - Editorial Style --- */
 .card {
@@ -71,10 +71,10 @@
 }
 
 @container component-grid (max-width: 650px) {
-  .services-grid, 
-  .features-grid, 
-  .gallery-grid, 
-  .testimonials-grid, 
+  .services-grid,
+  .features-grid,
+  .gallery-grid,
+  .testimonials-grid,
   .condition-list {
     grid-template-columns: 1fr;
   }
@@ -95,12 +95,11 @@
 
 /* Interactive badges with proper hover/pointer support */
 @media (hover: hover) and (pointer: fine) {
-  .badge[role="button"], 
+  .badge[role="button"],
   .badge[tabindex="0"] {
     cursor: pointer;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   }
-  
   .badge[role="button"]:hover,
   .badge[tabindex="0"]:hover {
     transform: translateY(-2px);
@@ -158,30 +157,11 @@ svg[aria-hidden="true"] {
   vertical-align: middle;
 }
 
-.icon-xs {
-  width: 12px;
-  height: 12px;
-}
-
-.icon-sm {
-  width: 16px;
-  height: 16px;
-}
-
-.icon-md {
-  width: 20px;
-  height: 20px;
-}
-
-.icon-lg {
-  width: 24px;
-  height: 24px;
-}
-
-.icon-xl {
-  width: 32px;
-  height: 32px;
-}
+.icon-xs { width: 12px; height: 12px; }
+.icon-sm { width: 16px; height: 16px; }
+.icon-md { width: 20px; height: 20px; }
+.icon-lg { width: 24px; height: 24px; }
+.icon-xl { width: 32px; height: 32px; }
 
 .card-icon .icon-lg {
   width: 32px;
@@ -207,12 +187,8 @@ svg[aria-hidden="true"] {
 
 /* Dark mode card text contrast fix */
 @media (prefers-color-scheme: dark) {
-  .card h3 {
-    color: var(--card-heading, #FFFFFF);
-  }
-  .card p {
-    color: var(--card-text, #E0D0E0);
-  }
+  .card h3 { color: var(--card-heading, #FFFFFF); }
+  .card p { color: var(--card-text, #E0D0E0); }
 }
 
 .card-link {
@@ -235,12 +211,8 @@ svg[aria-hidden="true"] {
 
 /* Dark mode card link contrast */
 @media (prefers-color-scheme: dark) {
-  .card-link {
-    color: #FFB6C1;
-  }
-  .card-link:hover {
-    color: #FFC0CB;
-  }
+  .card-link { color: #FFB6C1; }
+  .card-link:hover { color: #FFC0CB; }
 }
 
 /* Icon box inside cards - pastel circles */
@@ -268,10 +240,12 @@ svg[aria-hidden="true"] {
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  /* Improve focus visibility within forms */
-  &:has(:focus-visible) {
-    box-shadow: var(--shadow-md), 0 0 0 3px rgba(103, 27, 80, 0.2);
-  }
+}
+
+/* Improve focus visibility within forms (Fixed SCSS nesting to standard CSS) */
+.contact-form:has(:focus-visible), 
+.notice-box:has(:focus-visible) {
+  box-shadow: var(--shadow-md), 0 0 0 3px rgba(103, 27, 80, 0.2);
 }
 
 .form-group input, .form-group textarea {
@@ -298,14 +272,13 @@ svg[aria-hidden="true"] {
 
 /* Reduced data mode: simplify form appearance */
 @media (prefers-reduced-data: reduce) {
-  .contact-form, 
+  .contact-form,
   .notice-box {
     background: var(--white);
     box-shadow: none;
     border: 2px solid var(--warm-gray);
   }
-  
-  .form-group input, 
+  .form-group input,
   .form-group textarea {
     background: var(--white);
     border: 2px solid var(--text-muted);
@@ -322,15 +295,15 @@ svg[aria-hidden="true"] {
 }
 
 /* --- 7. ACCORDION - Accessible focus states & Anchor Positioning --- */
-.accordion { 
-  display: grid; 
-  gap: var(--space-md); 
+.accordion {
+  display: grid;
+  gap: var(--space-md);
 }
 
-.accordion-item { 
-  background: var(--white); 
-  border-radius: var(--radius-md); 
-  overflow: hidden; 
+.accordion-item {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
 .accordion-trigger {
@@ -373,7 +346,6 @@ svg[aria-hidden="true"] {
     pointer-events: none;
     transition: opacity var(--transition-fast);
   }
-  
   .accordion-trigger:hover::before,
   .accordion-trigger:focus-visible::before {
     opacity: 1;
@@ -388,8 +360,8 @@ svg[aria-hidden="true"] {
 }
 
 /* --- 8. ANIMATIONS & EFFECTS - Vestibular-Safe --- */
-.float { 
-  animation: float 3s ease-in-out infinite; 
+.float {
+  animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -439,8 +411,8 @@ svg[aria-hidden="true"] {
 .timeline::before {
   content: '';
   position: absolute;
-  inset-inline-start: 40px; 
-  inset-block-start: 0; 
+  inset-inline-start: 40px;
+  inset-block-start: 0;
   inset-block-end: 0;
   width: 2px;
   background: var(--blush);
@@ -457,7 +429,7 @@ svg[aria-hidden="true"] {
 
 .step-number {
   flex-shrink: 0;
-  width: 48px; 
+  width: 48px;
   height: 48px;
   display: flex;
   align-items: center;
@@ -485,7 +457,6 @@ svg[aria-hidden="true"] {
     flex-direction: column;
     gap: var(--space-md);
   }
-  
   .timeline::before {
     inset-inline-start: 24px;
   }
@@ -493,21 +464,18 @@ svg[aria-hidden="true"] {
 
 /* --- 10. RESPONSIVE OVERRIDES - Logical Properties --- */
 @media (max-width: 768px) {
-  .grid-container, .services-grid, .condition-list { 
-    grid-template-columns: 1fr; 
+  .grid-container, .services-grid, .condition-list {
+    grid-template-columns: 1fr;
   }
-  
-  .timeline::before { 
-    inset-inline-start: 28px; 
+  .timeline::before {
+    inset-inline-start: 28px;
   }
-  
-  .iframe-container { 
-    max-height: 70vh; 
+  .iframe-container {
+    max-height: 70vh;
   }
-  
-  .step-number { 
-    width: 40px; 
-    height: 40px; 
+  .step-number {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -577,7 +545,7 @@ svg[aria-hidden="true"] {
 .image-card {
   margin: 0;
   cursor: zoom-in;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.3s ease;
   border-radius: 12px;
   overflow: hidden;
@@ -624,9 +592,9 @@ svg[aria-hidden="true"] {
 }
 
 @keyframes reveal-image {
-  to { 
-    opacity: 1; 
-    transform: scale(1) translateY(0); 
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
 
@@ -790,27 +758,18 @@ svg[aria-hidden="true"] {
     width: 40px;
     height: 40px;
   }
-  
-  .gallery-prev-btn {
-    left: 0.75rem;
-  }
-  
-  .gallery-next-btn {
-    right: 0.75rem;
-  }
-  
+  .gallery-prev-btn { left: 0.75rem; }
+  .gallery-next-btn { right: 0.75rem; }
   .gallery-close-btn {
     top: 0.75rem;
     right: 0.75rem;
     width: 40px;
     height: 40px;
   }
-  
   .gallery-counter {
     bottom: 1rem;
     font-size: 0.8rem;
   }
-  
   .gallery-caption-overlay {
     bottom: 3.5rem;
     padding: 0.5rem 1rem;
@@ -826,13 +785,11 @@ svg[aria-hidden="true"] {
     opacity: 1;
     transform: none;
   }
-  
   ::view-transition-group(*),
   ::view-transition-old(*),
   ::view-transition-new(*) {
     animation-duration: 0.01s !important;
   }
-  
   .image-card,
   .gallery-backdrop,
   .gallery-close-btn,
@@ -840,7 +797,6 @@ svg[aria-hidden="true"] {
   .gallery-next-btn {
     transition: none;
   }
-  
   .image-card:hover {
     transform: none;
   }
@@ -853,7 +809,6 @@ svg[aria-hidden="true"] {
     max-height: 85vh;
     padding: 1rem;
   }
-  
   .image-card.is-focused figcaption {
     font-size: 0.9rem;
   }
@@ -928,7 +883,6 @@ svg[aria-hidden="true"] {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
   .tour-nav {
     position: static;
     flex-direction: row;
@@ -940,11 +894,9 @@ svg[aria-hidden="true"] {
     max-height: none;
     scrollbar-width: none;
   }
-  
   .tour-nav::-webkit-scrollbar {
     display: none;
   }
-  
   .tour-dot {
     white-space: nowrap;
     font-size: 0.85rem;
@@ -952,7 +904,6 @@ svg[aria-hidden="true"] {
     border-left: none;
     border-bottom: 3px solid transparent;
   }
-
   .tour-dot.active, .tour-dot:hover {
     border-left-color: transparent;
     border-bottom-color: #ec4899;
@@ -975,9 +926,9 @@ svg[aria-hidden="true"] {
 }
 
 /* ============================================
-   EMERGENCY & SAFETY BANNER WITH MARQUEE
-   Mind Grace Neuropsychiatric Clinic - Clinical Safety First
-   ============================================ */
+EMERGENCY & SAFETY BANNER WITH MARQUEE
+Mind Grace Neuropsychiatric Clinic - Clinical Safety First
+============================================ */
 
 /* Base Emergency Banner */
 .emergency-banner {
@@ -1202,12 +1153,10 @@ svg[aria-hidden="true"] {
     animation: none;
     transform: translateX(0);
   }
-  
   .emergency-banner__marquee {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  
   .emergency-indicator {
     animation: none;
     opacity: 1;
@@ -1219,7 +1168,6 @@ svg[aria-hidden="true"] {
   .emergency-banner {
     font-size: 0.8125rem;
   }
-  
   .emergency-banner__message {
     padding: 0 1rem;
   }
@@ -1311,22 +1259,21 @@ svg[aria-hidden="true"] {
 }
 
 @media (max-width: 768px) {
-  .mobile-sticky-cta { 
-    display: block; 
+  .mobile-sticky-cta {
+    display: block;
   }
-  
-  .form-wrapper { 
+  .form-wrapper {
     padding-bottom: 200%; /* Taller for mobile */
   }
 }
 
 /* --- Utility Helpers --- */
-.hidden { 
-  display: none !important; 
+.hidden {
+  display: none !important;
 }
 
-.text-center { 
-  text-align: center; 
+.text-center {
+  text-align: center;
 }
 
 .confidentiality-note {
@@ -1338,10 +1285,11 @@ svg[aria-hidden="true"] {
   justify-content: center;
   gap: 8px;
 }
+
 /* ============================================
-   SOCIAL SHARING & OPEN GRAPH CARD STYLES
-   For when pages are shared on WhatsApp, Facebook, etc.
-   ============================================ */
+SOCIAL SHARING & OPEN GRAPH CARD STYLES
+For when pages are shared on WhatsApp, Facebook, etc.
+============================================ */
 
 /* Open Graph fallback card styling (visible in some embeds) */
 .og-card {
@@ -1496,7 +1444,6 @@ svg[aria-hidden="true"] {
     border-color: rgba(255, 183, 197, 0.2);
     color: var(--text-dark);
   }
-  
   .location-link:hover {
     background: rgba(255, 183, 197, 0.15);
     border-color: rgba(255, 183, 197, 0.3);
