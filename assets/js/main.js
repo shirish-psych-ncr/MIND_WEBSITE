@@ -437,6 +437,12 @@ function initOpenGraphMeta() {
 // 13. Network Status Monitoring
 // ==========================================
 function initNetworkStatus() {
+  // Check if body is available before appending
+  if (!document.body) {
+    console.warn('[Mind Grace] Body not ready for network status toast');
+    return;
+  }
+  
   const toast = document.createElement('div');
   toast.id = 'network-status';
   toast.className = 'network-status';
