@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion(domElements);
   initFormValidation(domElements);
   initYearUpdate();
+  _initCounters(domElements); // Counter animations for stat numbers
 
   // ==========================================
   // 1. Mobile Navigation
@@ -129,9 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-
-  // ==========================================
-  // 3. Smooth Scroll for Anchor Links
+  // 3. Smooth Scroll for Anchor Links (Basic)
   // ==========================================
   function initSmoothScroll() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -149,6 +148,46 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: prefersReducedMotion ? 'auto' : 'smooth',
           block: 'start'
         });
+      });
+    });
+  }
+
+  // ==========================================
+  // 10. Enhanced Smooth Scroll with Offset (for pages with sticky headers)
+  // Called from bootstrap on pages with [data-enhanced-scroll]
+  // ==========================================
+  function _initSmoothScroll() {
+    const header = document.querySelector('.site-header');
+    const headerHeight = header ? header.offsetHeight : 0;
+    
+    // Only apply enhanced scroll on pages with specific data attribute
+    const enhancedScrollPages = document.querySelector('[data-enhanced-scroll]');
+    if (!enhancedScrollPages) return;
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (!targetElement) return;
+        
+        e.preventDefault();
+        
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Update URL hash without jumping
+        history.pushState(null, null, targetId);
+        
+        // Set focus for accessibility
+        targetElement.setAttribute('tabindex', '-1');
+        targetElement.focus({ preventScroll: true });
       });
     });
   }
@@ -353,41 +392,6 @@ function _initScrollProgress() {
 }
 
 // ==========================================
-// 10. Enhanced Smooth Scroll with Offset
-// ==========================================
-function _initSmoothScroll() {
-  const header = document.querySelector('.site-header');
-  const headerHeight = header ? header.offsetHeight : 0;
-  
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (!targetElement) return;
-      
-      e.preventDefault();
-      
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      
-      // Update URL hash without jumping
-      history.pushState(null, null, targetId);
-      
-      // Set focus for accessibility
-      targetElement.setAttribute('tabindex', '-1');
-      targetElement.focus({ preventScroll: true });
-    });
-  });
-}
-
-// ==========================================
 // 11. Orientation Adaptive Handler (No Warning, CSS-Only)
 // ==========================================
 function _initOrientationAdapter() {
@@ -555,6 +559,7 @@ function initSkipLink() {
     initErrorBoundary();
     initSkipLink();
     _initScrollProgress();
+    _initSmoothScroll(); // Enhanced smooth scroll for pages with [data-enhanced-scroll]
     
     console.log('[Mind Grace] All modules initialized successfully');
   } catch (error) {
