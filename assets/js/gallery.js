@@ -183,7 +183,9 @@
       });
 
       // Backdrop click to close
-      this.backdrop.addEventListener('click', () => this.close());
+      if (this.backdrop) {
+        this.backdrop.addEventListener('click', () => this.close());
+      }
 
       // Control buttons
       if (this.closeBtn) {
@@ -201,8 +203,10 @@
       document.addEventListener('keydown', this._onKeydown);
 
       // Touch / swipe support
-      this.backdrop.addEventListener('touchstart', this._onTouchStart.bind(this), { passive: true });
-      this.backdrop.addEventListener('touchend', this._onTouchEnd.bind(this), { passive: true });
+      if (this.backdrop) {
+        this.backdrop.addEventListener('touchstart', this._onTouchStart.bind(this), { passive: true });
+        this.backdrop.addEventListener('touchend', this._onTouchEnd.bind(this), { passive: true });
+      }
 
       // Click on focused card to close
       this.cards.forEach(card => {
