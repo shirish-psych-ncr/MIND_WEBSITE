@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   _initCounters(domElements); // Counter animations for stat numbers
 
   // ==========================================
-  // 1. Mobile Navigation
+  // 1. Mobile Navigation (with Desktop Compact Mode Support)
   // ==========================================
   function initMobileNav(el) {
     const { mobileNavTrigger: trigger, mobileNavPanel: panel, mobileNavOverlay: overlay } = el;
@@ -41,6 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let isOpen = false;
     let previousFocus = null;
+    
+    // Check for compact nav preference on desktop
+    const prefersCompact = localStorage.getItem('compact-nav-preference') === 'true';
+    if (prefersCompact && window.innerWidth >= 768) {
+      document.body.classList.add('compact-nav');
+      trigger.classList.add('force-show');
+      const desktopNav = document.querySelector('.desktop-nav');
+      if (desktopNav) desktopNav.classList.add('force-hide');
+    }
     
     const openNav = () => {
       isOpen = true;
@@ -103,6 +112,25 @@ document.addEventListener('DOMContentLoaded', () => {
         closeNav();
       });
     });
+    
+    // Add toggle for compact nav mode on desktop (double-click logo)
+    const logo = document.querySelector('.logo-link');
+    if (logo && window.innerWidth >= 768) {
+      logo.addEventListener('dblclick', (e) => {
+        e.preventDefault();
+        const isCompact = document.body.classList.toggle('compact-nav');
+        localStorage.setItem('compact-nav-preference', isCompact);
+        
+        const desktopNav = document.querySelector('.desktop-nav');
+        if (isCompact) {
+          trigger.classList.add('force-show');
+          if (desktopNav) desktopNav.classList.add('force-hide');
+        } else {
+          trigger.classList.remove('force-show');
+          if (desktopNav) desktopNav.classList.remove('force-hide');
+        }
+      });
+    }
   }
 
   // ==========================================

@@ -92,12 +92,27 @@
   display: none;
 }
 
+/* Allow desktop users to optionally use burger menu via class on body */
+body.compact-nav .desktop-nav {
+  display: none;
+}
+body.compact-nav .mobile-nav-trigger {
+  display: flex;
+}
+
 @media (min-width: 768px) {
-  .desktop-nav {
+  .desktop-nav:not(.force-hide) {
     display: block;
   }
-  .mobile-nav-trigger {
+  .mobile-nav-trigger:not(.force-show) {
     display: none;
+  }
+  /* Override for compact nav preference */
+  body.compact-nav .desktop-nav.force-hide {
+    display: none;
+  }
+  body.compact-nav .mobile-nav-trigger.force-show {
+    display: flex;
   }
 }
 
