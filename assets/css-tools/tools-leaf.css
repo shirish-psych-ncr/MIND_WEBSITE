@@ -241,3 +241,23 @@
             .btn-release { padding: 14px; }
             .breath-hint { top: 70px; }
         }
+
+.skip-link {
+  color: #eb32b5;
+}
+.skip-link:focus {
+  color: #eb32b5;
+  background: #fff;
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

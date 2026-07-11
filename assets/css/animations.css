@@ -230,3 +230,10 @@ Crucial for a neuropsychiatric clinic to prevent vestibular triggers
     transition: none !important;
   }
 }
+.skip-link {
+  color: #eb32b5;
+}
+.skip-link:focus {
+  color: #eb32b5;
+  background: #fff;
+}

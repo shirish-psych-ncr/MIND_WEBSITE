@@ -186,9 +186,15 @@
       this.backdrop.addEventListener('click', () => this.close());
 
       // Control buttons
-      this.closeBtn.addEventListener('click', () => this.close());
-      this.prevBtn.addEventListener('click', (e) => { e.stopPropagation(); this.prev(); });
-      this.nextBtn.addEventListener('click', (e) => { e.stopPropagation(); this.next(); });
+      if (this.closeBtn) {
+        this.closeBtn.addEventListener('click', () => this.close());
+      }
+      if (this.prevBtn) {
+        this.prevBtn.addEventListener('click', (e) => { e.stopPropagation(); this.prev(); });
+      }
+      if (this.nextBtn) {
+        this.nextBtn.addEventListener('click', (e) => { e.stopPropagation(); this.next(); });
+      }
 
       // Global keyboard
       this._onKeydown = this._handleKeydown.bind(this);

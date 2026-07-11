@@ -323,3 +323,11 @@
     padding: clamp(12px, 2vw, 16px) clamp(24px, 3vw, 36px);
   }
 }
+
+.skip-link {
+  color: #eb32b5;
+}
+.skip-link:focus {
+  color: #eb32b5;
+  background: #fff;
+}
