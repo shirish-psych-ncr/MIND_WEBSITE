@@ -1,9 +1,10 @@
-# OpenGraph & Metadata Specification v1.0
+# OpenGraph & Metadata Specification v2.0
 ## Mind Grace Neuropsychiatric Clinic - Social Sharing & SEO Meta Tags
 
-**Source of Truth:** `index.html`, `about.html`, `doctor.html`, `location.html`  
-**Last Updated:** 2025-07-02  
-**Status:** Production Ready
+**Source of Truth:** `index.html`, `about.html`, `doctors.html`, `location.html`  
+**Last Updated:** 2026-07-11  
+**Status:** Production Ready  
+**Pages Covered:** 43 HTML files (25 main + 6 tools + 12 blog)
 
 ---
 

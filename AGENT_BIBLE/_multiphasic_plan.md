@@ -1,11 +1,12 @@
-# MIND GRACE WEBSITE — MULTIPHASIC IMPLEMENTATION PLAN v4.0 (Zero-Dependency)
+# MIND GRACE WEBSITE — MULTIPHASIC IMPLEMENTATION PLAN v5.0 (Zero-Dependency)
 
-**Generated:** 2025-01-XX  
+**Generated:** 2026-07-11  
 **Repository State:** Post-Framework Removal (Phase 4 Complete)  
-**Current Phase:** Phase 4 (Zero-Dependency Stack) - ✅ Complete  
-**Next Phase:** Phase 5 (Component Library & Manual Optimization)  
-**Analysis Scope:** 49 HTML files, 13 CSS files, 12 JS files  
+**Current Phase:** Phase 5 (Component Library & Manual Optimization) - In Progress  
+**Next Phase:** Phase 6 (Browser Console Audit & E2E Testing)  
+**Analysis Scope:** 43 HTML files (25 main + 6 tools + 12 blog), 14 CSS files, 63 JS files  
 **Stack:** Pure HTML5/CSS3/ES6+ (No Node, No npm, No Build Tools)  
+**Total Files:** 181 (43 HTML, 14 CSS, 63 JS, 33 Images, 14 MD, 14 vendor CSS/JS)  
 
 ---
 
@@ -13,7 +14,7 @@
 
 This document presents a comprehensive multiphasic engineering roadmap based on automated analysis of the Mind Grace website codebase. **Phase 4 (Zero-Dependency Stack) is now complete** - all framework dependencies removed, transitioning to pure static HTML/CSS/JS with manual optimization workflows.
 
-### Analysis Results Summary (Verified)
+### Analysis Results Summary (Verified 2026-07-11)
 
 | Category | Finding | Count | Status |
 | :--- | :--- | :--- | :--- |
@@ -21,7 +22,7 @@ This document presents a comprehensive multiphasic engineering roadmap based on 
 | **CSS Selectors** | Total across files | 386 | Audited |
 | **Fluid Values** | clamp()/min()/max() usage | 47 | ✅ Modern CSS |
 | **Fixed Pixels** | Hardcoded px values in tokens | 20 | ⚠️ Intentional (fallbacks) |
-| **HTML Files** | Total pages | 49 | Analyzed |
+| **HTML Files** | Total pages | 43 | Analyzed (25 main + 6 tools + 12 blog) |
 | **JS Functions** | Total functions | 60+ | Audited |
 | **Event Listeners** | addEventListener calls | 35 | Verified |
 | **ARIA Attributes** | aria-label usage | 294 | ✅ Accessible |
@@ -35,6 +36,7 @@ This document presents a comprehensive multiphasic engineering roadmap based on 
 | **fetchpriority** | Hero image optimization | 2 instances | ✅ Implemented |
 | **Framework Dependencies** | npm packages | 0 | ✅ Zero-dependency |
 | **Build Tools** | Bundlers/Transpilers | 0 | ✅ Pure static |
+| **Vendor Libraries** | libs in /assets/vendor/ and /assets/js/lib/ | 43 | ✅ Loaded (Ky, HTMX, Alpine, Anime, Splide, Floating UI, etc.) |
 
 ---
 
@@ -42,40 +44,44 @@ This document presents a comprehensive multiphasic engineering roadmap based on 
 
 ### 1. CSS Dependency Graph
 
-**Files Analyzed:** 13 CSS files
+**Files Analyzed:** 14 CSS files (5 core + 7 tool-specific + 2 component libs)
 
 ```
 CSS Architecture Map:
-├── base.css (12 selectors)
-│   └── 66 CSS custom properties defined
+├── assets/css/base.css (66 CSS custom properties defined)
 │   └── Dark mode support (@media prefers-color-scheme)
 │   └── Reset & base styles
 │   └── text-wrap: pretty on h1-h4 ✅
-├── layout.css (76 selectors)
+│   └── Fluid typography with clamp()
+├── assets/css/layout.css
 │   └── Header, Hero, Footer, Navigation
 │   └── Responsive breakpoints: 768px, 769px
 │   └── Logical properties (margin-inline) ✅
-├── components.css (45 selectors)
+├── assets/css/components.css
 │   └── Cards, Grids, Badges, Forms, Accordion
 │   └── Icon sizing system (xs, sm, md, lg, xl)
 │   └── content-visibility: auto on cards ✅
-├── utilities.css (166 selectors)
+├── assets/css/utilities.css
 │   └── Typography, Spacing, Display, Position
 │   └── Color, Shadow, Radius utilities
-└── animations.css (54 selectors)
-    └── 15 @keyframes definitions
-    └── Animation utility classes
-    └── Reveal on scroll system
-
-Tool-Specific CSS (8 files):
-├── tools-book.css
-├── tools-breathing.css
-├── tools-butterfly.css
-├── tools-eye.css
-├── tools-fractal.css
-├── tools-horizon.css
-├── tools-leaf.css
-└── butterfly-tapper.html.styles.css
+├── assets/css/animations.css
+│   └── 15 @keyframes definitions
+│   └── Animation utility classes
+│   └── Reveal on scroll system
+├── assets/components/button.css
+│   └── Button variants (primary, secondary, outline)
+│   └── Icon button patterns
+├── assets/components/card.css
+│   └── Card layouts with pastel backgrounds
+│   └── Hover states and transitions
+└── assets/css-tools/ (7 tool-specific CSS files)
+    ├── tools-book.css
+    ├── tools-breathing.css
+    ├── tools-butterfly.css
+    ├── tools-eye.css
+    ├── tools-fractal.css
+    ├── tools-horizon.css
+    └── tools-leaf.css
 ```
 
 **Variable Consumption (Top 10):**
@@ -94,15 +100,14 @@ var(--transition-base) - 29 usages
 
 ### 2. HTML→CSS→JS Cross-Reference
 
-**HTML Files:** 49 total
+**HTML Files:** 43 total (25 main + 6 tools + 12 blog)
 
 ```
 Page Types:
-├── Main Pages (11): index, about, services, conditions, doctors, etc.
-├── Blog Section (8): index, adult, children, + 5 article pages
-├── Tools Section (6): horizon-scan, guided-breathing, leaf-on-stream, etc.
-├── Templates (3): adult-mental-health, child-development, template-clean
-└── Components (3): header, footer, navigation (included)
+├── Main Pages (25): index, about, services, conditions, doctors, location, contact, process, fees, emergency, faq, book, resources, gallery, consent, privacy, thank-you, 404, etc.
+├── Tools Section (6): horizon-scan, guided-breathing, leaf-on-stream, butterfly-tapper, eye-movement, hypnos-fractal
+├── Blog Section (12): index, adult, child, + 9 article pages in /pages/
+└── Component Templates: header, footer patterns included in all pages
 
 CSS Loading Pattern:
 ├── Critical CSS inlined (<style> block)
@@ -110,23 +115,24 @@ CSS Loading Pattern:
 └── Noscript fallback for non-JS environments
 
 JavaScript Dependencies:
-├── main.js (6 functions) - Navigation, scroll, forms, counters
-├── blog-discovery.js (16 functions) - Blog filtering
-├── blog-config-adult.js / blog-config-child.js - Blog data
-└── Tool-specific JS (7 files) - Interactive tools
+├── assets/js/main.js (7 functions) - Navigation, scroll, forms, counters, reveal
+├── assets/js/tools-*.js (8 tool scripts) - Interactive tools logic
+├── assets/js/lib/ (20 libs) - Alpine, Anime, Ky, HTMX, etc.
+└── assets/vendor/ (23 vendor libs) - Splide, Floating UI, Motion One, etc.
 ```
 
 **Cross-Reference Matrix:**
 
 | Component | CSS File(s) | JS File(s) | Pages Using |
 | :--- | :--- | :--- | :--- |
-| `.site-header` | layout.css | main.js | All 49 pages |
-| `.mobile-nav-trigger` | layout.css | main.js | All 49 pages |
-| `.card` | components.css | - | 35+ pages |
-| `.btn` | layout.css | - | 40+ pages |
-| `.accordion` | components.css | main.js | faq.html, resources.html |
+| `.site-header` | layout.css | main.js | All 43 pages |
+| `.mobile-nav-trigger` | layout.css | main.js | All 43 pages |
+| `.card` | components.css, card.css | - | 35+ pages |
+| `.btn` | components.css, button.css | - | 40+ pages |
+| `.accordion` | components.css | main.js | faq.html, process.html |
 | `.hero` | layout.css | - | 20+ pages |
 | `.reveal` | animations.css | main.js | 15+ pages |
+| Tool UI | tools-*.css | tools-*.js | 6 tool pages |
 
 ### 3. Unused Selector Detection
 
