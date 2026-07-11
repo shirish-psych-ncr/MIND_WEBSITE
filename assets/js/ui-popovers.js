@@ -15,7 +15,7 @@
    * Initialize tooltips for elements with .has-tooltip class or title attribute
    */
   function initTooltips() {
-    const FloatingUILib = typeof FloatingUI !== 'undefined' ? FloatingUI : (typeof FloatingUIDOM !== 'undefined' ? FloatingUIDOM : null);
+    const FloatingUILib = (typeof FloatingUIDOM !== 'undefined' && FloatingUIDOM.computePosition) ? FloatingUIDOM : (typeof FloatingUI !== 'undefined' && FloatingUI.computePosition ? FloatingUI : null);
 
     if (!FloatingUILib) {
       setTimeout(initTooltips, 100);
@@ -107,7 +107,7 @@
    * Initialize dropdowns for elements with .has-dropdown class
    */
   function initDropdowns() {
-    const FloatingUILib = typeof FloatingUI !== 'undefined' ? FloatingUI : (typeof FloatingUIDOM !== 'undefined' ? FloatingUIDOM : null);
+    const FloatingUILib = (typeof FloatingUIDOM !== 'undefined' && FloatingUIDOM.computePosition) ? FloatingUIDOM : (typeof FloatingUI !== 'undefined' && FloatingUI.computePosition ? FloatingUI : null);
 
     if (!FloatingUILib) {
       setTimeout(initDropdowns, 100);
@@ -177,7 +177,7 @@
    * Initialize medical term popovers
    */
   function initMedicalPopovers() {
-    const FloatingUILib = typeof FloatingUI !== 'undefined' ? FloatingUI : (typeof FloatingUIDOM !== 'undefined' ? FloatingUIDOM : null);
+    const FloatingUILib = (typeof FloatingUIDOM !== 'undefined' && FloatingUIDOM.computePosition) ? FloatingUIDOM : (typeof FloatingUI !== 'undefined' && FloatingUI.computePosition ? FloatingUI : null);
 
     if (!FloatingUILib) {
       setTimeout(initMedicalPopovers, 100);
