@@ -443,6 +443,12 @@ function initNetworkStatus() {
     return;
   }
   
+  const existingToast = document.getElementById('network-status');
+  if (existingToast) {
+    // Toast already exists in HTML, just use it
+    return;
+  }
+  
   const toast = document.createElement('div');
   toast.id = 'network-status';
   toast.className = 'network-status';

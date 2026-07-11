@@ -83,14 +83,12 @@
   <script src="assets/js/icon-init.js"></script>
   <script src="assets/js/lib/splide.min.js"></script>
   <script src="assets/js/carousel-init.js"></script>
-  <script src="assets/js/lib/floating-ui.core.min.js"></script>
-  <script src="assets/js/main.js" type="module"></script>
+  <script src="assets/vendor/floating-ui.min.js"></script>
   <script src="assets/js/ui-popovers.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
   <script src="assets/js/animations-auto.js"></script>
   <!-- END LIBRARY STACK -->
 
-  <!-- Network Status Toast -->
-  <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -447,18 +445,10 @@
   </div>
 </footer>
 
-  <!-- MIND GRACE LIBRARY STACK -->
-  <script src="assets/vendor/ky.min.js" type="module"></script>
-  <script src="assets/js/http-client.js" type="module"></script>
-  <script src="assets/vendor/lucide.min.js"></script>
-  <script src="assets/js/icon-init.js"></script>
-  <script src="assets/js/lib/splide.min.js"></script>
-  <script src="assets/js/carousel-init.js"></script>
-  <script src="assets/js/lib/floating-ui.core.min.js"></script>
-  <script src="assets/js/ui-popovers.js"></script>
-  <script src="assets/js/main.js" type="module"></script>
-  <script src="assets/js/animations-auto.js"></script>
-  <!-- END LIBRARY STACK -->
+<script>
+  // Update year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
