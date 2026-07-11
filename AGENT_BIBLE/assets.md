@@ -1,6 +1,6 @@
 # ASSET_REGISTRY [v14.3] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Sync:** End-turn
-**Last Sync:** 2026-07-11 | **Total Files:** 176 (43 HTML, 12 CSS, 20 JS, 38 Images, 14 MD)
+**Last Sync:** 2026-07-11 | **Total Files:** 176 (43 HTML, 12 CSS, 20 JS, 39 Images, 14 MD)
 **Status:** Full markdown audit complete, zero-dependency stack verified
 
 ## 1. /assets/images/* (Primary Assets, 38 files)

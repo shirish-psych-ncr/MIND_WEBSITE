@@ -1,6 +1,6 @@
 # DESIGN_REF [v14.3] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Orientation-First | **Stack:** CSS-Layers|Tokens | **Sync:** End-turn
-**Last Asset Sync:** 2025-12-07 | **Total Assets:** 165 files (assets.md v12.0)
+**Last Asset Sync:** 2026-07-11 | **Total Assets:** 176 files (assets.md v14.0)
 
 ## 1. Design Tokens
 | Token | Value | Usage | Ref |
