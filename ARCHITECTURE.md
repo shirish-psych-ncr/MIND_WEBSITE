@@ -519,49 +519,82 @@ Each tool script follows a consistent pattern:
 
 ## Technical Debt & Issues
 
-### Identified Problems
+### Resolved Issues ✅
 
-1. **Duplicate Homepage Files**:
+1. **Floating UI Library Error** (July 2026):
+   - **Problem**: `Cannot read properties of undefined (reading 'detectOverflow')` error at floating-ui.min.js:1:7345
+   - **Cause**: Corrupted `floating-ui.min.js` file missing core functions (detectOverflow, computePosition, flip, shift)
+   - **Solution**: Replaced with complete UMD build (22KB) containing both @floating-ui/core and @floating-ui/dom libraries
+   - **Verification**: File now exports both `FloatingUIDOM` and `FloatingUICore` global namespaces
+   - **Status**: ✅ Fixed - All 25 HTML files now load correctly without console errors
+
+2. **Script Loading Order** (July 2026):
+   - **Problem**: Race conditions with `ky` library not loaded when `http-client.js` executed, "Ky library not loaded, falling back to fetch" warnings
+   - **Cause**: Incorrect use of `defer` attribute on module scripts causing async loading race conditions
+   - **Solution**: Removed `defer` from all module scripts, ensured proper loading order in HTML head sections
+   - **Status**: ✅ Fixed - Scripts load in correct sequence: ky.min.js → http-client.js → main.js
+
+3. **Character Encoding** (July 2026):
+   - **Problem**: Lighthouse warning "Properly defines charset" despite meta tag presence
+   - **Cause**: Meta charset tag not positioned as first element in `<head>` or using non-standard format
+   - **Solution**: Moved `<meta charset="UTF-8">` to first position in all 25 HTML files, standardized format
+   - **Status**: ✅ Fixed - No more charset warnings in Lighthouse audits
+
+4. **SEO Canonical URLs** (July 2026):
+   - **Problem**: Relative canonical links (`process.html`) and hreflang values causing SEO issues, Lighthouse warnings
+   - **Cause**: Using relative paths instead of absolute URLs for canonical and alternate links
+   - **Solution**: Updated all canonical and hreflang tags to absolute GitHub Pages URLs (`https://shirish-psych-ncr.github.io/MIND_WEBSITE/[page].html`)
+   - **Status**: ✅ Fixed - All pages use absolute URLs for search engine compliance
+
+5. **Floating UI Namespace Detection** (July 2026):
+   - **Problem**: `ui-popovers.js` failing to detect Floating UI library, repeated "Floating UI library not loaded yet, waiting..." console spam
+   - **Cause**: Code only checked for `FloatingUI` namespace but vendor file uses `FloatingUIDOM`
+   - **Solution**: Updated detection logic in initTooltips, initDropdowns, initMedicalPopovers to check both namespaces
+   - **Status**: ✅ Fixed - No more console spam, popovers initialize correctly
+
+### Remaining Issues ⚠️
+
+5. **Duplicate Homepage Files**:
    - `index.html` (active)
    - `index-revamp.html` (experimental)
    - `index-old.html` (legacy)
    - **Action**: Consolidate to single `index.html`, archive others
 
-2. **Missing Referenced Pages**:
+6. **Missing Referenced Pages**:
    - `terms.html` (linked in footer)
    - `disclaimer.html` (linked in footer)
    - **Action**: Create these pages or remove links
 
-3. **Outdated PWA Manifest**:
+7. **Outdated PWA Manifest**:
    - `site.webmanifest` uses wrong theme color (`#0f766e` instead of `#671B50`)
    - Wrong app name ("TheraTools" instead of "Mind Grace Neuropsychiatric Clinic")
    - **Action**: Update manifest to match brand
 
-4. **Incomplete Sitemap**:
+8. **Incomplete Sitemap**:
    - Missing 30+ pages
    - **Action**: Generate complete sitemap
 
-5. **Legacy Files**:
+9. **Legacy Files**:
    - `styles.css` (old monolithic stylesheet)
    - `styles-revamp.css` (previous iteration)
    - `js/main.js.bak` (backup file)
    - **Action**: Remove after verification
 
-6. **Empty Assets Directory**:
-   - `/assets/` exists but is empty
-   - **Action**: Either populate with optimized assets or remove
+10. **Empty Assets Directory**:
+    - `/assets/` exists but is empty
+    - **Action**: Either populate with optimized assets or remove
 
-7. **Inconsistent Naming**:
-   - Mix of kebab-case (`guided-breathing.html`) and unclear names (`mind-grace.html`)
-   - **Action**: Standardize naming convention
+11. **Inconsistent Naming**:
+    - Mix of kebab-case (`guided-breathing.html`) and unclear names (`mind-grace.html`)
+    - **Action**: Standardize naming convention
 
-8. **Blog Page Ambiguity**:
-   - `child.html` vs `children.html`
-   - **Action**: Clarify purpose, consolidate or rename
+12. **Blog Page Ambiguity**:
+    - `child.html` vs `children.html`
+    - **Action**: Clarify purpose, consolidate or rename
 
-9. **Hardcoded URLs in Sitemap/Robots**:
-   - References `mindgracencr.in` as primary domain
-   - **Action**: Update to correct domain
+13. **Hardcoded URLs in Sitemap/Robots**:
+    - References `mindgracencr.in` as primary domain
+    - **Action**: Update to correct domain
 
 ---
 

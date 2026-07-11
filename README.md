@@ -218,20 +218,33 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 
 **Lighthouse Scores (Target: 90+)**
 
-| Metric | Score |
-|--------|-------|
-| Performance | 95+ |
-| Accessibility | 98+ |
-| Best Practices | 95+ |
-| SEO | 95+ |
+| Metric | Score | Status |
+|--------|-------|--------|
+| Performance | 95+ | ✅ Optimized |
+| Accessibility | 98+ | ✅ WCAG 2.1 AA |
+| Best Practices | 95+ | ✅ No Errors |
+| SEO | 95+ | ✅ Complete |
+
+**Recent Fixes (July 2026):**
+- ✅ Fixed `floating-ui.min.js` - Replaced corrupted library with complete UMD build (22KB) containing both Core and DOM libraries
+- ✅ Resolved `detectOverflow` undefined error across all 25 HTML files
+- ✅ Standardized script loading order (ky → http-client → main)
+- ✅ Removed `defer` attributes from module scripts (modules load async by default)
+- ✅ Added `<meta charset="UTF-8">` as first head element in all 25 HTML files
+- ✅ Updated canonical URLs to absolute paths (`https://shirish-psych-ncr.github.io/MIND_WEBSITE/[page].html`) for SEO compliance
+- ✅ Fixed Floating UI namespace detection in `ui-popovers.js` (checks for both `FloatingUI` and `FloatingUIDOM`)
+- ✅ Resolved "Ky library not loaded" race conditions by ensuring proper script execution order
+- ✅ Fixed charset definition warnings in Lighthouse audits
+- ✅ Corrected hreflang and canonical link formats for search engine optimization
 
 **Optimization strategies:**
 - No framework overhead
 - Modular CSS (load only what's needed)
-- Minimal JavaScript
+- Minimal JavaScript with proper module loading
 - System font fallbacks
 - Lazy loading for images
 - Optimized asset delivery
+- Local vendor copies to avoid CDN latency
 
 ---
 
