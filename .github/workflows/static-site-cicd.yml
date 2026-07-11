@@ -1,6 +1,6 @@
 # =============================================================================
 # Ultra-Robust Static Site CI/CD Fortress
-# Version 2.0 (Unified & Final)
+# Version 2.1 (Parallel Execution & No Cascading Skips)
 # =============================================================================
 
 name: Ultra-Robust Static Site CI/CD Fortress
@@ -136,13 +136,12 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
 ################################################################################
-# AI SANITIZER
+# AI SANITIZER (Runs in Parallel)
 ################################################################################
 
   ai-sanitizer:
     name: 🤖 AI Sanitizer & Static Analysis
     runs-on: ubuntu-latest
-    needs: [pre-flight]
     timeout-minutes: 20
 
     steps:
@@ -257,13 +256,12 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
 ################################################################################
-# ACCESSIBILITY & SEO AUDITOR
+# ACCESSIBILITY & SEO AUDITOR (Runs in Parallel)
 ################################################################################
 
   accessibility-seo:
     name: ♿ Accessibility • SEO • Structured Data
     runs-on: ubuntu-latest
-    needs: [ai-sanitizer]
     timeout-minutes: 20
 
     steps:
@@ -383,13 +381,12 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
 ################################################################################
-# QUALITY • PERFORMANCE • LIGHTHOUSE
+# QUALITY • PERFORMANCE • LIGHTHOUSE (Runs in Parallel)
 ################################################################################
 
   quality-performance:
     name: 🚀 Quality • Performance • Lighthouse
     runs-on: ubuntu-latest
-    needs: [accessibility-seo]
     timeout-minutes: 30
 
     steps:
@@ -495,13 +492,12 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
 ################################################################################
-# PLAYWRIGHT
+# PLAYWRIGHT (Runs in Parallel)
 ################################################################################
 
   playwright:
     name: 🌐 Cross-Browser Smoke Tests
     runs-on: ubuntu-latest
-    needs: [quality-performance]
     timeout-minutes: 30
 
     steps:
@@ -546,7 +542,7 @@ jobs:
           if-no-files-found: ignore
 
 ################################################################################
-# DEPLOY
+# DEPLOY (Gated - Only runs if ALL parallel jobs succeed)
 ################################################################################
 
   deploy:
