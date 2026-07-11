@@ -7,38 +7,43 @@
 # Environment
 .env
 .env.local
-.env.*
+*.env.*
 
 # Dependencies
 node_modules/
 __pycache__/
-*.egg-info/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
 dist/
 build/
 target/
+.gradle/
 
 # Editors
 .vscode/
 .idea/
 
-# OS generated files
+# System
 .DS_Store
 Thumbs.db
 
-# Coverage reports
+# Compiled files
+*.pyc
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
+
+# Coverage
 coverage/
 htmlcov/
 .coverage
-
-# Python specific
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-*.egg
-*.manifest
-*.spec
 
 # Compressed files
 *.zip

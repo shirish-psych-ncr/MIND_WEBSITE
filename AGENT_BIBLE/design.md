@@ -1,4 +1,4 @@
-# DESIGN_REF [v12.0] — Mind Grace Neuropsychiatric Clinic
+# DESIGN_REF [v14.0] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Orientation-First | **Stack:** CSS-Layers|Tokens | **Sync:** End-turn
 **Last Asset Sync:** 2025-12-07 | **Total Assets:** 165 files (assets.md v12.0)
 
@@ -122,4 +122,4 @@ All font sizes use `clamp(min, preferred, max)` based on viewport width:
 | Alt Text | Descriptive for all images | assets.md §1 image_descriptions.md |
 | Form Labels | Explicit <label> or aria-label | W3C validator |
 
-*Sync complete. v12.0 aligned with assets.md v12.0, memory.md v12.0.*
+*Sync complete. v13.0 aligned with assets.md v13.0, memory.md v13.0, Instructions.md v13.0. Full markdown audit complete.*

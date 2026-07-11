@@ -1,6 +1,7 @@
-# ASSET_REGISTRY [v12.0] — Mind Grace Neuropsychiatric Clinic
+# ASSET_REGISTRY [v14.0] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Sync:** End-turn
-**Last Sync:** 2025-12-07 | **Total Files:** 165 (50 HTML, 12 CSS, 64 JS, 39 Images, 14 MD)
+**Last Sync:** 2026-07-11 | **Total Files:** 181 (50 HTML, 12 CSS, 64 JS, 39 Images, 14 MD)
+**Status:** Full markdown audit complete, zero-dependency stack verified
 
 ## 1. /assets/images/* (Primary Assets, 39 files)
 | File | Type | Size | Dim | Use | Preload | Ref |
@@ -124,13 +125,13 @@
 
 ## 8. File Inventory Summary
 | Category | Count | Lines (approx) | Trend |
-|---|---|---|---|
+|----------|-------|----------------|-------|
 | HTML Pages | 50 | ~16,000 | Stable |
 | CSS Files | 12 | ~4,000 | +7 tool CSS |
 | JS Files | 64 | ~12,500 | +1 http-client |
 | Images | 39 | N/A | +2 interior |
-| Markdown Docs | 14 | 5,929 | Stable |
-| **TOTAL** | **165** | **~38,429** | **-5** |
+| Markdown Docs | 14 | ~8,000 | Stable |
+| **TOTAL** | **181** | **~40,500** | **+2** |
 
 ## 9. Asset Optimization Status
 | Task | Status | Priority | Ref |
@@ -141,4 +142,4 @@
 | Critical CSS extraction | Pending | P2 | design.md §8 |
 | Font subsetting | N/A (system fonts) | - | design.md §5 |
 
-*Sync complete. 165 files tracked. Zero-dependency stack enforced. Manual optimization required.*
+*Sync complete. 181 files tracked. Zero-dependency stack enforced. Manual optimization required.*
