@@ -1,10 +1,11 @@
-# Structured Data Schemas v2.0
+# Structured Data Schemas v3.0
 ## Mind Grace Neuropsychiatric Clinic - JSON-LD Implementation
 
-**Source of Truth:** All 50 HTML pages verified  
-**Last Updated:** 2025-07-02  
+**Source of Truth:** All 43 HTML pages verified  
+**Last Updated:** 2026-07-11  
 **Status:** Production Ready  
-**Asset Sync:** Paths updated to /assets/* (assets.md v6.0)
+**Asset Sync:** Paths updated to /assets/* (assets.md v6.0)  
+**Schema Coverage:** 10 schema types implemented across main pages, blog, and tools
 
 ---
 
