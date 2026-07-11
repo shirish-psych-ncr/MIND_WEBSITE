@@ -1,6 +1,6 @@
-# ASSET_REGISTRY [v14.0] — Mind Grace Neuropsychiatric Clinic
+# ASSET_REGISTRY [v14.1] — Mind Grace Neuropsychiatric Clinic
 **Mode:** Machine-Readable | **Format:** Dense-Table | **Sync:** End-turn
-**Last Sync:** 2026-07-11 | **Total Files:** 181 (50 HTML, 12 CSS, 64 JS, 39 Images, 14 MD)
+**Last Sync:** 2026-07-11 | **Total Files:** 179 (43 HTML, 12 CSS, 20 JS, 39 Images, 14 MD)
 **Status:** Full markdown audit complete, zero-dependency stack verified
 
 ## 1. /assets/images/* (Primary Assets, 39 files)
@@ -95,7 +95,7 @@
 | Splide | splide.min.css, splide.min.js | Latest | Carousel/slider | components.md §3 |
 | Swup | swup.min.js | Latest | Page transitions | pages.md §6 |
 
-## 6. /assets/js/* (Application Scripts, 40 files)
+## 6. /assets/js/* (Application Scripts, 20 files)
 | File | Lines | Purpose | Dependencies | Status |
 |---|---|---|---|---|
 | main.js | ~560 | Core initialization, nav, scroll, theme | Base libs | ✓ Fixed |
@@ -103,18 +103,23 @@
 | discovery.js | ~150 | Service discovery, feature detection | None | ✓ Active |
 | a11y-audit.js | ~200 | Accessibility runtime checks | None | ✓ Active |
 | animations-auto.js | ~120 | Auto-animation triggers | anime.min.js | ✓ Active |
-| blog-adult-config.js | ~60 | Adult blog page config | None | ✓ Active |
-| blog-child-config.js | ~60 | Child blog page config | None | ✓ Active |
-| blog-index-config.js | ~70 | Blog index config | None | ✓ Active |
-| mood-tracker.js | ~180 | Mood tracker tool logic | nanoID | ✓ Active |
-| anxiety-level.js | ~160 | Anxiety level tool logic | None | ✓ Active |
-| sleep-logger.js | ~170 | Sleep logger tool logic | None | ✓ Active |
-| medication-tracker.js | ~190 | Medication tracker logic | None | ✓ Active |
-| thought-challenge.js | ~200 | CBT thought challenge | None | ✓ Active |
-| grounding-exercises.js | ~150 | 5-4-3-2-1 grounding | None | ✓ Active |
-| self-care-plan.js | ~160 | Self care planning | None | ✓ Active |
+| blog-config-adult.js | ~60 | Adult blog page config | None | ✓ Active |
+| blog-config-child.js | ~60 | Child blog page config | None | ✓ Active |
+| blog-discovery.js | ~70 | Blog post discovery & rendering | None | ✓ Active |
+| tools-breathing.js | ~100 | Breathing exercise logic | None | ✓ Active |
+| tools-butterfly.js | ~150 | Butterfly tapper logic | None | ✓ Active |
+| tools-eye.js | ~90 | Eye movement tool logic | None | ✓ Active |
+| tools-fractal.js | ~120 | Fractal animation control | None | ✓ Active |
+| tools-horizon.js | ~80 | Horizon scan interaction | None | ✓ Active |
+| tools-leaf.js | ~200 | Leaf on stream interaction | None | ✓ Active |
+| tools-book.js | ~80 | Resource book functionality | None | ✓ Active |
+| tools-map.js | ~60 | Location map integration | Leaflet | ✓ Active |
+| ui-popovers.js | ~100 | Popover UI components | Floating UI | ✓ Active |
+| booking.js | ~150 | Booking system | None | ✓ Active |
+| gallery.js | ~120 | Gallery functionality | Splide | ✓ Active |
+| page-transitions.js | ~90 | Page transition effects | None | ✓ Active |
 
-**Note:** Total 40 app scripts including tool modules, blog configs, and utilities. All ESLint errors resolved as of T21.
+**Note:** Total 20 app scripts including tool modules, blog configs, and utilities. All ESLint errors resolved as of T21.
 
 ## 7. /_templates/* (Page Templates, 3 files)
 | File | Purpose | Variables | Usage |
@@ -126,12 +131,12 @@
 ## 8. File Inventory Summary
 | Category | Count | Lines (approx) | Trend |
 |----------|-------|----------------|-------|
-| HTML Pages | 50 | ~16,000 | Stable |
-| CSS Files | 12 | ~4,000 | +7 tool CSS |
-| JS Files | 64 | ~12,500 | +1 http-client |
-| Images | 39 | N/A | +2 interior |
+| HTML Pages | 43 | ~14,500 | Stable (25 root + 6 tools + 12 blog) |
+| CSS Files | 12 | ~4,200 | +7 tool CSS |
+| JS Files | 20 | ~8,500 | Core modules only |
+| Images | 39 | N/A | Complete |
 | Markdown Docs | 14 | ~8,000 | Stable |
-| **TOTAL** | **181** | **~40,500** | **+2** |
+| **TOTAL** | **179** | **~35,200** | **Current** |
 
 ## 9. Asset Optimization Status
 | Task | Status | Priority | Ref |
@@ -142,4 +147,4 @@
 | Critical CSS extraction | Pending | P2 | design.md §8 |
 | Font subsetting | N/A (system fonts) | - | design.md §5 |
 
-*Sync complete. 181 files tracked. Zero-dependency stack enforced. Manual optimization required.*
+*Sync complete. 179 files tracked. Zero-dependency stack enforced. Manual optimization required.*

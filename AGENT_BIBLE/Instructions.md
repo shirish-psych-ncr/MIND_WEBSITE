@@ -1,5 +1,5 @@
 # 📖 AGENT BIBLE — Mind Grace Neuropsychiatric Clinic
-**Version:** 14.0 | **Last Updated:** 2026-07-11 | **Status:** Active | **Sync:** AGENT_BIBLE_v14_FULL_SYNC
+**Version:** 14.1 | **Last Updated:** 2026-07-11 | **Status:** Active | **Sync:** AGENT_BIBLE_v14.1_FULL_SYNC
 
 ## 🎯 Core Mission
 Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientation-first** neuropsychiatric clinic website using pure static HTML, CSS Layers, and Vanilla JavaScript. No build tools, no npm, no frameworks.
@@ -7,44 +7,44 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 ## 📚 Knowledge Base Registry (14 Documents)
 | Document | Version | Purpose | Cross-Ref |
 |----------|---------|---------|-----------|
-| memory.md | v14.0 | Session state, delta logs, continuity checkpoints | All docs |
-| design.md | v14.0 | Design tokens, orientation-first, fluid type, dark mode | components.md §4 |
-| worker.md | v14.0 | Worker spec, manual ops, deployment checklist | pages.md §6 |
-| assets.md | v14.0 | Complete asset registry (165 files), vendor libs | design.md §7 |
-| pages.md | v14.0 | Page inventory (50 HTML), URL mappings, templates | worker.md §3 |
-| tools.md | v14.0 | Tool specifications (8 therapeutic tools) | components.md §3 |
-| components.md | v14.0 | UI component library (Vanilla JS patterns) | design.md §4 |
-| schemas.md | v2.0 | JSON-LD structured data for SEO | pages.md §8 |
-| opengraph.md | v1.0 | OpenGraph metadata, social sharing | pages.md §8 |
-| ARCHITECTURE.md | v3.0 | Technical architecture, file organization | assets.md §1 |
-| _multiphasic_plan.md | v4.0 | Phased implementation roadmap | worker.md §6 |
+| memory.md | v14.1 | Session state, delta logs, continuity checkpoints | All docs |
+| design.md | v14.1 | Design tokens, orientation-first, fluid type, dark mode | components.md §4 |
+| worker.md | v14.1 | Worker spec, manual ops, deployment checklist | pages.md §6 |
+| assets.md | v14.1 | Complete asset registry (179 files), vendor libs | design.md §7 |
+| pages.md | v14.1 | Page inventory (43 HTML), URL mappings, templates | worker.md §3 |
+| tools.md | v14.1 | Tool specifications (8 therapeutic tools) | components.md §3 |
+| components.md | v14.1 | UI component library (Vanilla JS patterns) | design.md §4 |
+| schemas.md | v14.1 | JSON-LD structured data for SEO | pages.md §8 |
+| opengraph.md | v14.1 | OpenGraph metadata, social sharing | pages.md §8 |
+| ARCHITECTURE.md | v14.1 | Technical architecture, file organization | assets.md §1 |
+| _multiphasic_plan.md | v14.1 | Phased implementation roadmap | worker.md §6 |
 | Bible_Generator.md | - | Engineering operating system | Instructions.md |
-| css/README.md | - | CSS layer documentation | design.md §8 |
+| css/README.md | v14.1 | CSS layer documentation | design.md §8 |
 
-**Total KB Lines:** ~5,929 across 14 markdown files
+**Total KB Lines:** ~6,500 across 14 markdown files
 
 ## 🏗️ Project Stats (Current)
 | Category | Count | Lines | Trend |
 |----------|-------|-------|-------|
-| HTML Pages | 50 | ~16,000 | Stable |
-| CSS Files | 12 | ~4,000 | +7 tool CSS |
-| JS Files | 64 | ~12,500 | +1 http-client |
-| Images | 39 | N/A | +2 interior |
+| HTML Pages | 43 | ~14,500 | Stable (25 root + 6 tools + 12 blog) |
+| CSS Files | 12 | ~4,200 | +7 tool CSS |
+| JS Files | 20 | ~8,500 | Core modules only |
+| Images | 39 | N/A | Complete |
 | MD Docs | 14 | ~8,000 | Stable |
-| **TOTAL** | **181** | **~40,500** | **+2** |
+| **TOTAL** | **179** | **~35,200** | **Current** |
 
 ## 🛠️ Tech Stack Mandate
-- **HTML5:** Semantic, accessible, 50 pages
+- **HTML5:** Semantic, accessible, 43 pages (25 root + 6 tools + 12 blog)
 - **CSS:** 5-layer cascade (base→layout→components→utilities→animations) + 7 tool CSS
-- **JavaScript:** Vanilla ES6+ with 19 vendor libraries (no frameworks)
+- **JavaScript:** Vanilla ES6+ with essential vendor libraries (no frameworks)
 - **Zero Dependency:** NO package.json, NO npm, NO build tools
 - **Testing:** Manual only (browser DevTools, Rich Results Test)
 
-## 📦 Vendor Libraries (24 Total)
-**Core:** Ky (fetch), HTMX (AJAX), Alpine.js (reactive), Navigo (router), Swup (transitions)
+## 📦 Vendor Libraries (Essential Only)
+**Core:** Ky (fetch), HTMX (AJAX), Alpine.js (reactive), Navigo (router)
 **Animation:** Anime.js, Motion One, ScrollReveal, Auto Animate, Canvas Confetti
 **UI:** Floating UI (tooltips), Splide (carousel), Iconify, Lucide (icons)
-**Utility:** Fuse.js (search), Nano ID (IDs), Quicklink (prefetch), Petite Vue, Preact Signals
+**Utility:** Fuse.js (search), Nano ID (IDs), Quicklink (prefetch)
 
 ## 🎨 Design Principles
 1. **Orientation-First:** Body class detection (.portrait/.landscape), no breakpoints
@@ -56,7 +56,7 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 ## 🔧 Current Priorities (P0-P6)
 | Priority | Task | Status | Ref |
 |----------|------|--------|-----|
-| P0 | Browser console error audit (about.html prime case) | ✅ Resolved | worker.md §4 |
+| P0 | Documentation sync v14.1 | ✅ Complete | This file |
 | P1 | Component library build (Button, Card, Nav) | Pending | components.md §1 |
 | P2 | Manual E2E checklist (A11y, Mobile, Print) | Pending | worker.md §6 |
 | P3 | Asset optimization (WebP, SVG sprites) | Pending | assets.md §9 |
@@ -67,14 +67,14 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 ## 📁 Critical File Paths
 ```
 /workspace/
-├── *.html (50 pages: index, about, services, book, location, contact, faq, emergency, resources, gallery, tools/*)
+├── *.html (43 pages: index, about, services, book, location, contact, faq, emergency, resources, gallery, tools/*)
 ├── /blog/* (12 files: index, adult, children, pages/adult×5, pages/child×4)
 ├── /_templates/* (3 templates: clean, adult-mental-health, child-development)
 ├── /assets/
 │   ├── css/* (5 core: base, layout, components, utilities, animations)
 │   ├── css-tools/* (7 tool-specific)
-│   ├── js/* (40 app scripts)
-│   ├── vendor/* (24 third-party libs)
+│   ├── js/* (20 app scripts)
+│   ├── vendor/* (third-party libs)
 │   ├── images/* (39 images)
 │   └── components/* (4 HTML partials)
 ├── /AGENT_BIBLE/ (14 markdown docs)
@@ -88,9 +88,9 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 - **VALIDATION:** Rich Results Test, W3C Validator, manual checklist
 
 ## 🔄 Session Continuity
-- **Session ID:** mg-019 | **Turn:** T+32 | **Sync:** AGENT_BIBLE_v14_FULL_SYNC
-- **Last Action:** Full markdown audit v14.0, all docs synchronized
+- **Session ID:** mg-019 | **Turn:** T+33 | **Sync:** AGENT_BIBLE_v14.1_FULL_SYNC
+- **Last Action:** Full markdown audit v14.1, all docs synchronized to current repo state
 - **Next Action:** Component library integration, manual E2E testing
-- **Recovery Point:** 181 files tracked tracked, all ESLint errors resolved, Ky HTTP client integrated, zero-dependency stack confirmed
+- **Recovery Point:** 179 files tracked (43 HTML, 12 CSS, 20 JS, 39 Images, 14 MD, 1 config), zero-dependency stack confirmed
 
-*End of Agent Bible Instructions v14.0. Full markdown sync complete. Zero-dependency stack enforced.*
+*End of Agent Bible Instructions v14.1. Full markdown sync complete. Zero-dependency stack enforced.*
