@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
-Disallow: /thank-you.html
+Sitemap: https://mindgrace.in/sitemap.xml
 
-Sitemap: /sitemap.xml
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tools/*/temp/

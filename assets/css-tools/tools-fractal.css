@@ -76,3 +76,11 @@
         }
 
         footer { background: #f1f5f9; padding: 60px 0; margin-top: 60px; transition: opacity 0.8s; }
+
+.skip-link {
+  color: #eb32b5;
+}
+.skip-link:focus {
+  color: #eb32b5;
+  background: #fff;
+}
