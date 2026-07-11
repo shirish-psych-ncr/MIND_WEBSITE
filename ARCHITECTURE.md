@@ -23,64 +23,82 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 ├── README.md                       # Project overview & deployment URL
 ├── index.html                      # Homepage (primary entry point)
 │
-├── css/                            # Core Stylesheets (Modular Architecture)
-│   ├── base.css                    # Variables, reset, base styles, dark mode
-│   ├── layout.css                  # Header, hero, footer, page structure
-│   ├── components.css              # Reusable UI components (cards, badges, buttons)
-│   ├── utilities.css               # Helper classes (spacing, typography, visibility)
-│   └── animations.css              # Keyframes, animation utilities, reveal effects
-│
-├── css-tools/                      # Tool-Specific Styles (Therapeutic Features)
-│   ├── tools-book.css              # Resource book styles
-│   ├── tools-breathing.css         # Guided breathing exercise
-│   ├── tools-butterfly.css         # Butterfly tapper EMDR tool
-│   ├── tools-eye.css               # Eye movement therapy
-│   ├── tools-fractal.css           # Hypnotic fractal visualization
-│   ├── tools-horizon.css           # Horizon scanning relaxation
-│   └── tools-leaf.css              # Leaf on stream mindfulness
-│
-├── js/                             # JavaScript Modules
-│   ├── main.js                     # Core interactions (nav, scroll, reveal)
-│   ├── blog-config-adult.js        # Blog configuration for adult mental health
-│   ├── blog-config-child.js        # Blog configuration for child development
-│   ├── tools-book.js               # Resource book functionality
-│   ├── tools-breathing.js          # Breathing exercise logic
-│   ├── tools-butterfly.js          # Butterfly tapper logic
-│   ├── tools-eye.js                # Eye movement tool logic
-│   ├── tools-fractal.js            # Fractal animation control
-│   ├── tools-horizon.js            # Horizon scan interaction
-│   ├── tools-leaf.js               # Leaf on stream interaction
-│   └── tools-map.js                # Location map integration
-│
-├── res/                            # Static Resources (Images, Logos, Brochures)
-│   ├── Mind_Grace_Clinic_Logo.svg              # Primary logo (full color)
-│   ├── Mind_Grace_Clinic_Logo_Black.svg        # Black variant
-│   ├── Mind_Grace_Clinic_Logo_Pink.svg         # Pink variant
-│   ├── Mind_Grace_Clinic_Logo_White.svg        # White variant
-│   ├── Mind_Grace_Clinic_Logo_Full.png         # Full logo raster
-│   ├── Mind_Grace_Clinic_Logo.png              # Logo icon raster
-│   ├── Dr_Anita_Sharma_Personal_Photo.jpg      # Doctor portrait
-│   ├── mind-grace-entry-n-reception.jpg        # Clinic entrance
-│   ├── mind-grace-consultation-room.jpg        # Consultation room
-│   ├── mind-grace-therapy-room.jpg             # Therapy room
-│   ├── mind-grace-small-room.jpg               # Small therapy room
-│   ├── Mind_Grace_Clinic_waiting_area.jpg      # Waiting area 1
-│   ├── Mind_Grace_Clinic_waiting_area_2.jpg    # Waiting area 2
-│   ├── Location_street_view_near.jpg           # Street view (near)
-│   ├── Location_street_view_distance.jpg       # Street view (far)
-│   ├── AASHA_Child_Development_Brochure.png    # AASHA program brochure
-│   ├── Mind_Grace_Clinic_Brochure.png          # Clinic brochure
-│   ├── aasha-*.jpg                             # AASHA therapy session photos
-│   └── aasha-speech-*.jpg                      # Speech therapy materials
+├── assets/                         # Core Assets Directory
+│   ├── css/                        # Core Stylesheets (Modular Architecture)
+│   │   ├── base.css                # Variables, reset, base styles, dark mode
+│   │   ├── layout.css              # Header, hero, footer, page structure
+│   │   ├── components.css          # Reusable UI components (cards, badges, buttons)
+│   │   ├── utilities.css           # Helper classes (spacing, typography, visibility)
+│   │   └── animations.css          # Keyframes, animation utilities, reveal effects
+│   │
+│   ├── css-tools/                  # Tool-Specific Styles (Therapeutic Features)
+│   │   ├── tools-book.css          # Resource book styles
+│   │   ├── tools-breathing.css     # Guided breathing exercise
+│   │   ├── tools-butterfly.css     # Butterfly tapper EMDR tool
+│   │   ├── tools-eye.css           # Eye movement therapy
+│   │   ├── tools-fractal.css       # Hypnotic fractal visualization
+│   │   ├── tools-horizon.css       # Horizon scanning relaxation
+│   │   └── tools-leaf.css          # Leaf on stream mindfulness
+│   │
+│   ├── js/                         # JavaScript Modules
+│   │   ├── main.js                 # Core interactions (nav, scroll, reveal)
+│   │   ├── blog-config-adult.js    # Blog configuration for adult mental health
+│   │   ├── blog-config-child.js    # Blog configuration for child development
+│   │   ├── blog-discovery.js       # Blog post discovery & rendering
+│   │   ├── tools-book.js           # Resource book functionality
+│   │   ├── tools-breathing.js      # Breathing exercise logic
+│   │   ├── tools-butterfly.js      # Butterfly tapper logic
+│   │   ├── tools-eye.js            # Eye movement tool logic
+│   │   ├── tools-fractal.js        # Fractal animation control
+│   │   ├── tools-horizon.js        # Horizon scan interaction
+│   │   ├── tools-leaf.js           # Leaf on stream interaction
+│   │   ├── tools-map.js            # Location map integration
+│   │   ├── ui-popovers.js          # Popover UI components
+│   │   ├── booking.js              # Booking system
+│   │   ├── gallery.js              # Gallery functionality
+│   │   ├── carousel-init.js        # Carousel initialization
+│   │   ├── icon-init.js            # Icon initialization
+│   │   ├── page-transitions.js     # Page transition effects
+│   │   ├── animations-auto.js      # Automatic animations
+│   │   ├── http-client.js          # HTTP client wrapper
+│   │   └── lib/                    # Utility libraries
+│   │
+│   ├── images/                     # Static Resources (Images, Logos, Brochures)
+│   │   ├── Mind_Grace_Clinic_Logo_*.svg/png  # Logo variants
+│   │   ├── Dr_Anita_Sharma_Personal_Photo.jpg
+│   │   ├── mind-grace-*.jpg        # Clinic photos
+│   │   ├── Location_street_view_*.jpg
+│   │   ├── AASHA_*.png             # AASHA brochures
+│   │   ├── aasha-*.jpg             # AASHA therapy photos
+│   │   └── image_descriptions.md   # Image accessibility descriptions
+│   │
+│   ├── components/                 # Reusable HTML/CSS Components
+│   │   ├── header.html
+│   │   ├── footer.html
+│   │   ├── button.css
+│   │   ├── card.css
+│   │   ├── nav-panel.html
+│   │   ├── library-stack.html
+│   │   └── README.md
+│   │
+│   └── vendor/                     # Third-party Libraries (local copies)
+│       ├── alpine.min.js
+│       ├── htmx.min.js
+│       ├── lucide.min.js
+│       ├── floating-ui.min.js
+│       ├── anime.min.js
+│       ├── motion-one.min.js
+│       ├── splide.min.js
+│       ├── scrollreveal.min.js
+│       ├── swup.min.js
+│       ├── navigo.min.js
+│       ├── ky.min.js
+│       └── [other libraries]
 │
 ├── blog/                           # Blog Section
 │   ├── index.html                  # Blog homepage
 │   ├── adult.html                  # Adult mental health category
-│   ├── child.html                  # Child development category
-│   ├── children.html               # Alternative child page (legacy?)
-│   ├── adult-mental-health-template.html   # Template for adult posts
-│   ├── child-development-template.html     # Template for child posts
-│   ├── blog-discovery.js           # Blog post discovery & rendering
+│   ├── children.html               # Child development category
 │   ├── pages/
 │   │   ├── adult/                  # Adult mental health articles
 │   │   │   ├── overthinking-vs-anxiety.html
@@ -93,39 +111,57 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 │   │       ├── school-concerns-and-adhd.html
 │   │       ├── sensory-overload-at-home.html
 │   │       └── speech-delay-red-flags.html
-│   └── res/                        # Blog-specific images
-│       ├── Aasha_Early_Intervention_Phases.png
-│       ├── Aasha_Early_Intervention_Phases_Butterfly.png
-│       ├── Early_Intervention_Steps.png
-│       └── Gender_Dysphoria.jpg
+│   └── res/                        # Blog-specific images (if any)
 │
-├── assets/                         # Future Asset Directory (currently empty)
-│                                   # Reserved for optimized images, icons, fonts
+├── tools/                          # Therapeutic Tools (Interactive Features)
+│   ├── guided-breathing.html       # Breathing Exercise
+│   ├── butterfly-tapper.html       # EMDR Butterfly Tapping
+│   ├── eye-movement.html           # Eye Movement Therapy
+│   ├── hypnos-fractal.html         # Hypnotic Fractal Visualization
+│   ├── horizon-scan.html           # Horizon Scanning Relaxation
+│   └── leaf-on-stream.html         # Mindfulness: Leaf on Stream
 │
 ├── inspo/                          # Inspiration & Design References
-│   ├── Anti-inspo UI UXI Anti Pattern.md   # Anti-patterns to avoid
-│   └── BIBLE BRAND IDENTITY.txt            # Brand identity guidelines
+│   ├── Anti-inspo UI UXI Anti Pattern.md
+│   ├── check1.md, check3.md, check4.md
+│   ├── skillscheck.md
+│   └── BIBLE BRAND IDENTITY.txt
 │
 ├── AGENT_BIBLE/                    # AI Agent Documentation
 │   ├── Instructions.md             # Agent operating instructions
 │   ├── Bible_Generator.md          # Documentation generation guide
+│   ├── ARCHITECTURE.md             # Agent architecture overview
 │   ├── assets.md                   # Asset management guidelines
+│   ├── components.md               # Component documentation
 │   ├── design.md                   # Design system documentation
 │   ├── memory.md                   # Context memory structure
+│   ├── opengraph.md                # OpenGraph metadata
 │   ├── pages.md                    # Page inventory & relationships
+│   ├── schemas.md                  # Data schemas
 │   ├── tools.md                    # Tool specifications
-│   └── worker.md                   # Worker process documentation
+│   ├── worker.md                   # Worker process documentation
+│   ├── _multiphasic_plan.md        # Development planning
+│   └── css/README.md               # CSS documentation for agents
 │
-├── Screenshots/                    # Visual Documentation
-│   └── Website_001.png             # Homepage screenshot
+├── [ROOT PAGES]                    # Individual HTML Pages (25 total)
+│   ├── about.html, services.html, process.html
+│   ├── location.html, contact.html, book.html
+│   ├── doctors.html, dr-anita-sharma.html
+│   ├── conditions.html, approach.html, fees.html
+│   ├── gallery.html, testimonials.html, faq.html
+│   ├── emergency.html, consent.html
+│   ├── privacy.html, terms.html, disclaimer.html
+│   ├── resources.html, mind-grace.html, aasha.html
+│   ├── thank-you.html, 404.html
+│   └── [legacy templates]
 │
-├── [ROOT PAGES]                    # Individual HTML Pages (see Page Inventory below)
-│
-├── site.webmanifest                # PWA manifest (outdated—needs update)
+├── site.webmanifest                # PWA manifest
 ├── robots.txt                      # Search engine crawling rules
-├── sitemap.xml                     # SEO sitemap (partial—needs completion)
+├── sitemap.xml                     # SEO sitemap
+├── package.json                    # Node.js dependencies (dev tools)
+├── eslint.config.mjs               # ESLint configuration
+├── netlify.toml                    # Netlify deployment config
 └── .gitignore                      # Git ignore rules
-```
 
 ---
 
