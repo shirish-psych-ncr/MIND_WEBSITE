@@ -17,10 +17,17 @@
   function initTooltips() {
     // Check if Floating UI is loaded
     if (typeof FloatingUI === 'undefined') {
-      console.warn('Floating UI library not loaded yet, waiting...');
-      setTimeout(initTooltips, 100);
+      // Only log once to avoid spam
+      if (!window._floatingUILogged) {
+        console.warn('Floating UI library not loaded yet, waiting...');
+        window._floatingUILogged = true;
+      }
+      setTimeout(initTooltips, 200);
       return;
     }
+    
+    // Reset flag once loaded
+    window._floatingUILogged = false;
 
     const { computePosition, flip, shift, offset, autoUpdate } = FloatingUI;
 
@@ -120,7 +127,11 @@
    */
   function initDropdowns() {
     if (typeof FloatingUI === 'undefined') {
-      setTimeout(initDropdowns, 100);
+      if (!window._floatingUILogged) {
+        console.warn('Floating UI library not loaded yet, waiting...');
+        window._floatingUILogged = true;
+      }
+      setTimeout(initDropdowns, 200);
       return;
     }
 
@@ -160,7 +171,11 @@
    */
   function initMedicalPopovers() {
     if (typeof FloatingUI === 'undefined') {
-      setTimeout(initMedicalPopovers, 100);
+      if (!window._floatingUILogged) {
+        console.warn('Floating UI library not loaded yet, waiting...');
+        window._floatingUILogged = true;
+      }
+      setTimeout(initMedicalPopovers, 200);
       return;
     }
 

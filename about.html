@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-IN" dir="ltr">
 <head>
-  <base href="/MIND_WEBSITE/"/>
+  <base href="./"/>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50"/>
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4A1438"/>
   <meta name="color-scheme" content="light dark"/>
   <meta name="author" content="Mind Grace Neuropsychiatric Clinic"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <meta name="publisher" content="Mind Grace Neuropsychiatric Clinic"/>
   <meta name="referrer" content="strict-origin-when-cross-origin"/>
 
@@ -74,18 +75,19 @@
   <link rel="stylesheet" href="assets/css/utilities.css"/>
   <link rel="stylesheet" href="assets/css/animations.css"/>
   
-  <!-- HTTP Client (Ky Library) - Required for API calls -->
+  <!-- MIND GRACE LIBRARY STACK -->
   <script src="assets/vendor/ky.min.js" type="module"></script>
-  <script src="assets/js/http-client.js"></script>
+  <script src="assets/js/http-client.js" type="module"></script>
   
   <script src="assets/vendor/lucide.min.js"></script>
   <script src="assets/js/icon-init.js"></script>
   <script src="assets/js/lib/splide.min.js"></script>
   <script src="assets/js/carousel-init.js"></script>
   <script src="assets/js/lib/floating-ui.core.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
   <script src="assets/js/ui-popovers.js"></script>
   <script src="assets/js/animations-auto.js"></script>
+  <!-- END LIBRARY STACK -->
 
   <!-- Network Status Toast -->
   <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
@@ -364,15 +366,15 @@
 
       <div class="gallery-grid">
         <figure class="gallery-item">
-          <img src="assets/images/Location_street_view_distance.jpg" alt="Clinic exterior and nearby street approach in Greater Noida" width="800" height="600" loading="lazy"/ decoding="async">
+          <img src="assets/images/Location_street_view_distance.jpg" alt="Clinic exterior and nearby street approach in Greater Noida" width="800" height="600" loading="lazy" decoding="async"/>
           <figcaption>Exterior and arrival area</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/mind-grace-entry-n-reception.webp" alt="Front desk and waiting area at Mind Grace Neuropsychiatric Clinic" width="800" height="600" loading="lazy"/ decoding="async">
+          <img src="assets/images/mind-grace-entry-n-reception.webp" alt="Front desk and waiting area at Mind Grace Neuropsychiatric Clinic" width="800" height="600" loading="lazy" decoding="async"/>
           <figcaption>Front desk and waiting area</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/mind-grace-consultation-room.jpg" alt="Consultation room at Mind Grace Neuropsychiatric Clinic with a calm clinical setting" width="800" height="600" loading="lazy"/ decoding="async">
+          <img src="assets/images/mind-grace-consultation-room.jpg" alt="Consultation room at Mind Grace Neuropsychiatric Clinic with a calm clinical setting" width="800" height="600" loading="lazy" decoding="async"/>
           <figcaption>Consultation room</figcaption>
         </figure>
       </div>
@@ -404,15 +406,6 @@
   </main>
 
   <!-- FOOTER -->
-
-  <!-- Year Update Script -->
-  <script>
-    if (document.getElementById('year')) {
-      document.getElementById('year').textContent = new Date().getFullYear();
-    }
-  </script>
-
-
 <footer class="site-footer">
   <div class="footer-content">
     <div class="footer-column">
@@ -454,15 +447,17 @@
   </div>
 </footer>
 
-<!-- Year Update Script -->
-<script>
-  if (document.getElementById('year')) {
-    document.getElementById('year').textContent = new Date().getFullYear();
-  }
-</script>
-
   <!-- MIND GRACE LIBRARY STACK -->
-
+  <script src="assets/vendor/ky.min.js" type="module"></script>
+  <script src="assets/js/http-client.js" type="module"></script>
+  <script src="assets/vendor/lucide.min.js"></script>
+  <script src="assets/js/icon-init.js"></script>
+  <script src="assets/js/lib/splide.min.js"></script>
+  <script src="assets/js/carousel-init.js"></script>
+  <script src="assets/js/lib/floating-ui.core.min.js"></script>
+  <script src="assets/js/ui-popovers.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
+  <script src="assets/js/animations-auto.js"></script>
   <!-- END LIBRARY STACK -->
 
 </body>
