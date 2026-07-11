@@ -1,5 +1,52 @@
-```markdown
-# Documentation and markdown files are source content
-# No build artifacts, dependencies, or temp files detected in changes
-# Current .gitignore is empty and no new ignores needed
+```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+dist/
+build/
+target/
+
+# Dependencies
+.venv/
+venv/
+node_modules/
+.julia/
+.zig-cache/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Package managers
+.npm/
+.yarn/
+.pnpm-store/
+.bazel/
+.buckd/
+.dart_tool/
+.pub/
 ```

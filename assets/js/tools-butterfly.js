@@ -54,7 +54,7 @@ function setupCanvas() {
     tCanvas = document.getElementById('trail-canvas');
     tCtx = tCanvas.getContext('2d');
     resize();
-    window.addEventListener('resize', resize);
+    window.addEventListener('resize', resize, { passive: true });
 }
 
 function resize() {

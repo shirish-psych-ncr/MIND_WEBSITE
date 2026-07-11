@@ -19,7 +19,7 @@
         w = canvas.width = canvas.parentElement.clientWidth;
         h = canvas.height = canvas.parentElement.clientHeight;
     }
-    window.addEventListener('resize', resize);
+    window.addEventListener('resize', resize, { passive: true });
     resize();
 
     function toggleZen() {
@@ -101,7 +101,7 @@
     window.addEventListener('mouseup', function() { isDown = false; });
     canvas.addEventListener('touchstart', start, {passive:false});
     window.addEventListener('touchmove', move, {passive:false});
-    window.addEventListener('touchend', function() { isDown = false; });
+    window.addEventListener('touchend', function() { isDown = false; }, {passive:true});
 
     function animate() {
         hue += 0.2;
