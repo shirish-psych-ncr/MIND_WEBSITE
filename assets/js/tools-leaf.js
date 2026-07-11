@@ -80,7 +80,7 @@ function init() {
         startAnimation();
         
         // Event Listeners (SINGLE handler for toggle)
-        window.addEventListener('resize', resize);
+        window.addEventListener('resize', resize, { passive: true });
         uiTrigger.addEventListener('click', toggleInput);
         input.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') releaseLeaf();
