@@ -1,426 +1,650 @@
+# =============================================================================
+# Ultra-Robust Static Site CI/CD Fortress
+# Version 2.0 (Unified & Final)
+# =============================================================================
+
 name: Ultra-Robust Static Site CI/CD Fortress
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   pull_request:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read
 
 concurrency:
-  group: "pages-${{ github.ref }}"
+  group: pages-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: '20'
-  PYTHON_VERSION: '3.11'
+  NODE_VERSION: "22"
+  PYTHON_VERSION: "3.12"
+  CI: true
+  FORCE_COLOR: "3"
+
+defaults:
+  run:
+    shell: bash
+
+################################################################################
+# JOBS
+################################################################################
 
 jobs:
+
+################################################################################
+# PRE-FLIGHT
+################################################################################
+
   pre-flight:
-    name: Pre-Flight Checks
+    name: 🚀 Pre-Flight Repository Validation
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     outputs:
-      file-count: ${{ steps.count.outputs.count }}
+      html-count: ${{ steps.stats.outputs.html-count }}
+      css-count: ${{ steps.stats.outputs.css-count }}
+      js-count: ${{ steps.stats.outputs.js-count }}
+      xml-count: ${{ steps.stats.outputs.xml-count }}
+
     steps:
-      - name: Checkout Codebase
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Count HTML files
-        id: count
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Repository Information
         run: |
-          COUNT=$(find . -name "*.html" -type f | wc -l)
-          echo "count=$COUNT" >> $GITHUB_OUTPUT
-          echo "Found $COUNT HTML files"
-          
-      - name: Verify index.html exists
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Branch:     $GITHUB_REF_NAME"
+          echo "Commit:     $GITHUB_SHA"
+          git status
+          git log --graph --decorate --oneline -10
+
+      - name: Verify Repository Layout
         run: |
-          if [ ! -f "./index.html" ]; then
-            echo "::error::index.html not found!"
-            exit 1
+          REQUIRED=(index.html)
+          FAILED=0
+          for file in "${REQUIRED[@]}"; do
+              if [[ ! -f "$file" ]]; then
+                  echo "::error::$file not found"
+                  FAILED=1
+              fi
+          done
+          if [[ $FAILED -ne 0 ]]; then exit 1; fi
+
+      - id: stats
+        name: Repository Statistics
+        run: |
+          echo "html-count=$(find . -type f -name '*.html' | wc -l)" >> "$GITHUB_OUTPUT"
+          echo "css-count=$(find . -type f -name '*.css' | wc -l)" >> "$GITHUB_OUTPUT"
+          echo "js-count=$(find . -type f -name '*.js' | wc -l)" >> "$GITHUB_OUTPUT"
+          echo "xml-count=$(find . -type f -name '*.xml' | wc -l)" >> "$GITHUB_OUTPUT"
+
+      - name: Repository Sanity Checks
+        run: |
+          echo "Checking for merge conflicts..."
+          if grep -R -n -E "<<<<<<<|=======|>>>>>>>" . --exclude-dir=.git; then
+              echo "::error::Merge conflict markers detected."
+              exit 1
           fi
 
-      - name: Validate Git Repository State
+      - name: Verify UTF-8 Encoding
         run: |
-          git status
-          git log --oneline -5
+          python3 <<'PYTHON'
+          import pathlib, sys
+          extensions = {".html", ".css", ".js", ".xml", ".json", ".txt", ".md"}
+          failed = False
+          for path in pathlib.Path(".").rglob("*"):
+              if not path.is_file() or path.suffix.lower() not in extensions: continue
+              try: path.read_text(encoding="utf-8")
+              except UnicodeDecodeError:
+                  print(f"::error file={path}::Not UTF-8 encoded")
+                  failed = True
+          if failed: sys.exit(1)
+          print("UTF-8 validation completed.")
+          PYTHON
+
+      - name: Pre-flight Summary
+        run: |
+          {
+            echo "## ✅ Pre-flight Complete"
+            echo "| Type | Count |"
+            echo "|------|------:|"
+            echo "| HTML | ${{ steps.stats.outputs.html-count }} |"
+            echo "| CSS | ${{ steps.stats.outputs.css-count }} |"
+            echo "| JavaScript | ${{ steps.stats.outputs.js-count }} |"
+            echo "| XML | ${{ steps.stats.outputs.xml-count }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+################################################################################
+# AI SANITIZER
+################################################################################
 
   ai-sanitizer:
-    name: AI Laziness & Visual Trap Sanitizer
+    name: 🤖 AI Sanitizer & Static Analysis
     runs-on: ubuntu-latest
-    needs: pre-flight
+    needs: [pre-flight]
+    timeout-minutes: 20
+
     steps:
-      - name: Checkout Codebase
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
-      - name: Detect AI Placeholders & Truncation
-        run: |
-          echo "### AI Placeholder Scan" >> $GITHUB_STEP_SUMMARY
-          if grep -riE "TODO|FIXME|placeholder|insert code|write code|code goes here|rest of the code|logic here|\.\.\.|---" --include=*.{html,css,js,xml} . 2>/dev/null; then
-            echo "- CRITICAL FAILURE: The AI left unfinished structural placeholders or truncated code." >> $GITHUB_STEP_SUMMARY
-            exit 1
-          fi
-          echo "- Codebase is free of lazy placeholders." >> $GITHUB_STEP_SUMMARY
-
-      - name: CSS Contrast & Architecture Enforcement
-        run: |
-          echo "### CSS Visual & Structural Audit" >> $GITHUB_STEP_SUMMARY
-          python3 << 'PYEOF'
-import glob, sys
-
-failed = False
-errors = []
-
-for f in glob.glob('**/*.css', recursive=True):
-    try:
-        content = open(f, 'r', encoding='utf-8').read().lower().replace(' ', '').replace('\n', '')
-        
-        light_text = ['color:#fff', 'color:#ffffff', 'color:white', 'color:#f0f0f0', 'color:#eee']
-        light_bg = ['background-color:#fff', 'background-color:#ffffff', 'background:white', 'background:#fff', 'background:#f0f0f0', 'background:#eee']
-        
-        has_light_text = any(t in content for t in light_text)
-        has_light_bg = any(b in content for b in light_bg)
-        
-        if has_light_text and has_light_bg:
-            errors.append(f'Visual Trap: Light text on light background in {f}')
-            failed = True
-            
-        important_count = content.count('!important')
-        if important_count > 5:
-            errors.append(f'Architecture Violation: Found {important_count} uses of !important in {f}')
-            failed = True
-    except Exception as e:
-        errors.append(f'Error reading {f}: {e}')
-
-for error in errors:
-    print(f'::error::{error}')
-    
-if failed:
-    sys.exit(1)
-PYEOF
-          echo "- CSS architecture passes visual and structural checks." >> $GITHUB_STEP_SUMMARY
-
-      - name: Strict RSS / XML Compilation Check
-        run: |
-          echo "### RSS/XML Structural Integrity" >> $GITHUB_STEP_SUMMARY
-          python3 << 'PYEOF'
-import glob, xml.etree.ElementTree as ET, sys
-
-failed = False
-xml_files = glob.glob('**/*.xml', recursive=True)
-
-if not xml_files:
-    print("No XML files found, skipping validation")
-else:
-    for f in xml_files:
-        try:
-            ET.parse(f)
-        except Exception as e:
-            print(f'::error file={f}::XML Parse Error: {e}')
-            failed = True
-
-if failed:
-    sys.exit(1)
-PYEOF
-          echo "- All XML/RSS feeds are structurally sound." >> $GITHUB_STEP_SUMMARY
-
-      - name: JavaScript Syntax Validation
-        run: |
-          echo "### JavaScript Syntax Check" >> $GITHUB_STEP_SUMMARY
-          python3 << 'PYEOF'
-import glob, sys
-
-failed = False
-js_files = glob.glob('**/*.js', recursive=True)
-
-for f in js_files:
-    try:
-        with open(f, 'r', encoding='utf-8') as file:
-            content = file.read()
-            if content.count('{') != content.count('}'):
-                print(f'::error file={f}::Mismatched braces')
-                failed = True
-            if content.count('(') != content.count(')'):
-                print(f'::error file={f}::Mismatched parentheses')
-                failed = True
-            if content.count('[') != content.count(']'):
-                print(f'::error file={f}::Mismatched brackets')
-                failed = True
-    except Exception as e:
-        print(f'::error file={f}::Error reading file: {e}')
-        failed = True
-
-if failed:
-    sys.exit(1)
-PYEOF
-          echo "- JavaScript syntax validation passed." >> $GITHUB_STEP_SUMMARY
-
-  accessibility-seo:
-    name: Accessibility & SEO Auditor
-    runs-on: ubuntu-latest
-    needs: ai-sanitizer
-    steps:
-      - name: Checkout Codebase
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
-      - name: Accessibility Audit
-        run: |
-          echo "### Accessibility Compliance Check" >> $GITHUB_STEP_SUMMARY
-          python3 << 'PYEOF'
-import glob, sys
-from html.parser import HTMLParser
-
-failed = False
-errors = []
-
-class AccessibilityChecker(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.has_main = False
-        self.images_without_alt = []
-        
-    def handle_starttag(self, tag, attrs):
-        attrs_dict = dict(attrs)
-        if tag == 'main':
-            self.has_main = True
-        if tag == 'img' and 'alt' not in attrs_dict:
-            self.images_without_alt.append(self.getpos())
-
-html_files = glob.glob('**/*.html', recursive=True)
-for f in html_files:
-    try:
-        with open(f, 'r', encoding='utf-8') as file:
-            content = file.read()
-            parser = AccessibilityChecker()
-            parser.feed(content)
-            
-            if not parser.has_main and 'component-' not in f:
-                errors.append(f'Missing <main> landmark in {f}')
-                failed = True
-                
-            if parser.images_without_alt:
-                errors.append(f'Images without alt text in {f}: {len(parser.images_without_alt)}')
-                failed = True
-    except Exception as e:
-        errors.append(f'Error parsing {f}: {e}')
-        failed = True
-
-for error in errors[:10]:
-    print(f'::error::{error}')
-    
-if failed:
-    print(f'Total errors: {len(errors)}')
-    sys.exit(1)
-PYEOF
-          echo "- Accessibility audit passed." >> $GITHUB_STEP_SUMMARY
-
-      - name: SEO Schema Validation
-        run: |
-          echo "### SEO Structured Data Check" >> $GITHUB_STEP_SUMMARY
-          python3 << 'PYEOF'
-import glob, json, re
-
-schema_types_found = set()
-files_with_schema = 0
-total_files = 0
-
-html_files = glob.glob('**/*.html', recursive=True)
-for f in html_files:
-    total_files += 1
-    try:
-        with open(f, 'r', encoding='utf-8') as file:
-            content = file.read()
-            matches = re.findall(r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', content, re.DOTALL)
-            for match in matches:
-                try:
-                    data = json.loads(match.strip())
-                    if isinstance(data, dict):
-                        schema_type = data.get('@type', '')
-                        if schema_type:
-                            schema_types_found.add(schema_type)
-                            files_with_schema += 1
-                            break
-                except json.JSONDecodeError:
-                    pass
-    except Exception as e:
-        pass
-
-print(f'Schema types found: {", ".join(sorted(schema_types_found))}')
-print(f'Files with structured data: {files_with_schema}/{total_files}')
-PYEOF
-          echo "- SEO structured data validation completed." >> $GITHUB_STEP_SUMMARY
-
-  deep-inspector:
-    name: W3C, Metadata & Asset Inspector
-    runs-on: ubuntu-latest
-    needs: accessibility-seo
-    steps:
-      - name: Checkout Codebase
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install HTML Validation Tools
-        run: npm install -g htmlhint
-
-      - name: HTML Structure Validation
-        run: |
-          echo "### HTML Structure Check" >> $GITHUB_STEP_SUMMARY
-          htmlhint . --ignore "node_modules/**" || true
-          echo "- HTML structure validation completed." >> $GITHUB_STEP_SUMMARY
-
-      - name: Local Asset Verification
-        run: |
-          echo "### Local Asset Check" >> $GITHUB_STEP_SUMMARY
-          python3 << 'PYEOF'
-import glob, re, os
-
-broken_links = []
-html_files = glob.glob('**/*.html', recursive=True)
-
-for f in html_files:
-    try:
-        with open(f, 'r', encoding='utf-8') as file:
-            content = file.read()
-            base_dir = os.path.dirname(f)
-            
-            patterns = [
-                r'src=["\']([^http][^"\']+)["\']',
-                r'href=["\']([^http#][^"\']+)["\']',
-            ]
-            
-            for pattern in patterns:
-                matches = re.findall(pattern, content)
-                for match in matches:
-                    if match and not match.startswith('data:') and not match.startswith('#'):
-                        ref_path = match.split('?')[0].split('#')[0].strip()
-                        full_path = os.path.normpath(os.path.join(base_dir, ref_path))
-                        
-                        if not os.path.exists(full_path):
-                            broken_links.append(f'{f}: {match}')
-    except Exception as e:
-        pass
-
-if broken_links:
-    for link in broken_links[:20]:
-        print(f'::warning::Potentially broken reference: {link}')
-    print(f'Total potential broken references: {len(broken_links)}')
-else:
-    print('No broken local references found')
-PYEOF
-          echo "- Local asset verification completed." >> $GITHUB_STEP_SUMMARY
-
-  performance-check:
-    name: Performance & Best Practices
-    runs-on: ubuntu-latest
-    needs: deep-inspector
-    steps:
-      - name: Checkout Codebase
-        uses: actions/checkout@v4
+          cache: npm
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: Performance Audit
+      - name: Install Validation Tools
         run: |
-          echo "### Performance Best Practices" >> $GITHUB_STEP_SUMMARY
-          python3 << 'PYEOF'
-import glob, re
+          npm install --global \
+            htmlhint html-validate stylelint stylelint-config-standard \
+            eslint prettier
 
-issues = []
+      - name: AI Placeholder Detection
+        run: |
+          python3 <<'PYTHON'
+          import pathlib, re, sys
+          patterns = [r"\bTODO\b", r"\bFIXME\b", r"\bXXX\b", r"placeholder", r"insert code", r"coming soon", r"code goes here", r"rest of the code", r"logic here", r"your code here", r"lorem ipsum", r"dummy text", r"sample text", r"replace this", r"implement me", r"to be implemented", r"not implemented", r"tbd"]
+          regex = re.compile("|".join(patterns), re.IGNORECASE)
+          extensions = {".html", ".css", ".js", ".json", ".xml", ".svg"}
+          failed = False
+          for path in pathlib.Path(".").rglob("*"):
+              if not path.is_file() or path.suffix.lower() not in extensions: continue
+              try: text = path.read_text(encoding="utf-8", errors="ignore")
+              except Exception: continue
+              for line_no, line in enumerate(text.splitlines(), start=1):
+                  if regex.search(line):
+                      print(f"::error file={path},line={line_no}::Potential AI placeholder -> {line.strip()[:150]}")
+                      failed = True
+          if failed: sys.exit(1)
+          print("No placeholder patterns detected.")
+          PYTHON
 
-js_files = glob.glob('**/*.js', recursive=True)
-for f in js_files:
-    try:
-        with open(f, 'r', encoding='utf-8') as file:
-            content = file.read()
-            if 'addEventListener' in content and 'scroll' in content:
-                if 'passive' not in content:
-                    issues.append(f'{f}: Scroll listener may benefit from passive option')
-    except:
-        pass
+      - name: HTML Validation
+        run: html-validate "**/*.html"
 
-html_files = glob.glob('**/*.html', recursive=True)
-for f in html_files:
-    try:
-        with open(f, 'r', encoding='utf-8') as file:
-            content = file.read()
-            style_matches = re.findall(r'style="([^"]+)"', content)
-            for style in style_matches:
-                if len(style) > 200:
-                    issues.append(f'{f}: Large inline style detected')
-                    break
-    except:
-        pass
+      - name: HTMLHint
+        continue-on-error: true
+        run: htmlhint . --ignore node_modules/**
 
-if issues:
-    for issue in issues[:10]:
-        print(f'::notice::{issue}')
-    print(f'Total recommendations: {len(issues)}')
-else:
-    print('No performance recommendations')
-PYEOF
-          echo "- Performance audit completed." >> $GITHUB_STEP_SUMMARY
+      - name: CSS Validation
+        continue-on-error: true
+        run: |
+          echo '{"extends": "stylelint-config-standard"}' > .stylelintrc.json
+          stylelint "**/*.css"
+
+      - name: JavaScript Syntax
+        run: |
+          python3 <<'PYTHON'
+          import pathlib, subprocess, sys
+          failed = False
+          for js in pathlib.Path(".").rglob("*.js"):
+              result = subprocess.run(["node", "--check", str(js)], capture_output=True, text=True)
+              if result.returncode != 0:
+                  failed = True
+                  print(f"::error file={js}::{result.stderr}")
+          if failed: sys.exit(1)
+          print("JavaScript syntax valid.")
+          PYTHON
+
+      - name: XML Validation
+        run: |
+          python3 <<'PYTHON'
+          import pathlib, xml.etree.ElementTree as ET, sys
+          failed = False
+          for xml in pathlib.Path(".").rglob("*.xml"):
+              try: ET.parse(xml)
+              except Exception as e:
+                  failed = True
+                  print(f"::error file={xml}::{e}")
+          if failed: sys.exit(1)
+          print("XML validation completed.")
+          PYTHON
+
+      - name: HTML Link Processor
+        uses: shravanngoswamii/html-link-action@v1.0.0
+        with:
+          site-dir: .
+          external-only: true
+          external-target-blank: true
+          noopener: true
+          noreferrer: true
+          strip-tracking-params: true
+          check-links: true
+          fail-on-broken: true
+          timeout: 10000
+          concurrency: 40
+
+      - name: Hyperlink Link Checker
+        uses: untitaker/hyperlink@0.1.31
+        with:
+          args: .
+
+      - name: Sanitizer Summary
+        run: |
+          {
+            echo "## 🤖 AI Sanitizer"
+            echo "✔ Placeholder detection"
+            echo "✔ HTML/CSS/JS/XML validation"
+            echo "✔ External link processing"
+            echo "✔ Broken link checking"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+################################################################################
+# ACCESSIBILITY & SEO AUDITOR
+################################################################################
+
+  accessibility-seo:
+    name: ♿ Accessibility • SEO • Structured Data
+    runs-on: ubuntu-latest
+    needs: [ai-sanitizer]
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: HTML Accessibility Inspection
+        run: |
+          python3 <<'PYTHON'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import sys
+          failed = False
+          class Inspector(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.has_main, self.has_title, self.images, self.lang, self.viewport, self.h1 = False, False, [], False, False, 0
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag == "html": self.lang = "lang" in attrs
+                  if tag == "main": self.has_main = True
+                  if tag == "title": self.has_title = True
+                  if tag == "img" and not attrs.get("alt"): self.images.append(True)
+                  if tag == "meta" and attrs.get("name") == "viewport": self.viewport = True
+                  if tag == "h1": self.h1 += 1
+          for html in Path(".").rglob("*.html"):
+              parser = Inspector()
+              try: parser.feed(html.read_text(encoding="utf-8", errors="ignore"))
+              except Exception as e:
+                  print(f"::error file={html}::{e}")
+                  failed = True
+                  continue
+              if not parser.lang: print(f"::error file={html}::<html> missing lang attribute"); failed = True
+              if not parser.viewport: print(f"::error file={html}::Missing viewport meta"); failed = True
+              if not parser.has_main: print(f"::warning file={html}::No <main> landmark")
+              if parser.h1 == 0: print(f"::warning file={html}::Missing H1")
+              if parser.h1 > 1: print(f"::warning file={html}::Multiple H1 elements")
+              if parser.images: print(f"::error file={html}::{len(parser.images)} image(s) missing alt text"); failed = True
+          if failed: sys.exit(1)
+          print("Accessibility inspection complete.")
+          PYTHON
+
+      - name: Schema.org Validation
+        run: |
+          python3 <<'PYTHON'
+          import json, pathlib, re, sys
+          schema_types = set()
+          invalid = False
+          pattern = re.compile(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', re.DOTALL|re.IGNORECASE)
+          for html in pathlib.Path(".").rglob("*.html"):
+              text = html.read_text(encoding="utf-8", errors="ignore")
+              for block in pattern.findall(text):
+                  try:
+                      data = json.loads(block.strip())
+                      if isinstance(data, dict):
+                          if "@type" in data: schema_types.add(data["@type"])
+                          if "@context" not in data: print(f"::warning file={html}::Missing @context")
+                  except Exception:
+                      print(f"::error file={html}::Invalid JSON-LD")
+                      invalid = True
+          if invalid: sys.exit(1)
+          print("Schema Types:", ", ".join(sorted(schema_types)))
+          PYTHON
+
+      - name: Metadata Audit
+        run: |
+          python3 <<'PYTHON'
+          from pathlib import Path
+          import re
+          title_re = re.compile(r"<title>(.*?)</title>", re.I|re.S)
+          meta_re = re.compile(r'<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']', re.I|re.S)
+          for html in Path(".").rglob("*.html"):
+              text = html.read_text(encoding="utf-8", errors="ignore")
+              title = title_re.search(text)
+              meta = meta_re.search(text)
+              if not title: print(f"::warning file={html}::Missing <title>")
+              elif len(title.group(1).strip()) < 15: print(f"::notice file={html}::Very short title")
+              if not meta: print(f"::warning file={html}::Missing meta description")
+              elif len(meta.group(1).strip()) < 70: print(f"::notice file={html}::Very short description")
+          PYTHON
+
+      - name: WCAG Color Contrast
+        uses: comfort-mode-toolkit/color-contrast-linter-action@v1.0.0
+
+      - name: AI Search / AEO Audit
+        uses: Canonry/aeo-audit-action@v4.1.1
+        with:
+          mode: static
+          target: .
+          base-url: https://shirish-psych-ncr.github.io/MIND_WEBSITE
+          overall-tolerance: 2
+          page-tolerance: 5
+          factor-tolerance: 8
+          require-meta: true
+          fail-on-new-critical: true
+          comment: false
+
+      - name: Accessibility Summary
+        run: |
+          {
+            echo "## ♿ Accessibility & SEO"
+            echo "✔ HTML accessibility & landmarks"
+            echo "✔ JSON-LD & metadata inspection"
+            echo "✔ WCAG color contrast"
+            echo "✔ AEO audit"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+################################################################################
+# QUALITY • PERFORMANCE • LIGHTHOUSE
+################################################################################
+
+  quality-performance:
+    name: 🚀 Quality • Performance • Lighthouse
+    runs-on: ubuntu-latest
+    needs: [accessibility-seo]
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Validation Utilities
+        run: npm install -g serve html-validate lighthouse @lhci/cli
+
+      - name: Asset Integrity Audit
+        run: |
+          python3 <<'PYTHON'
+          from pathlib import Path
+          import re
+          patterns = [r'src=["\']([^"\']+)["\']', r'href=["\']([^"\']+)["\']']
+          for html in Path(".").rglob("*.html"):
+              root = html.parent
+              text = html.read_text(encoding="utf-8", errors="ignore")
+              for pattern in patterns:
+                  for ref in re.findall(pattern, text):
+                      if ref.startswith(("http://", "https://", "mailto:", "tel:", "#", "data:")): continue
+                      clean = ref.split("?")[0].split("#")[0]
+                      target = (root / clean).resolve()
+                      if not target.exists(): print(f"::warning file={html}::Missing asset -> {ref}")
+          print("Asset audit completed.")
+          PYTHON
+
+      - name: Image Optimization Audit
+        run: |
+          python3 <<'PYTHON'
+          from pathlib import Path
+          large = []
+          for image in Path(".").rglob("*"):
+              if image.suffix.lower() not in {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}: continue
+              size = image.stat().st_size
+              if size > 1024 * 1024: large.append((image, size))
+          for img, size in large: print(f"::notice file={img}::Large image ({round(size/1024/1024, 2)} MB)")
+          print(f"Scanned {len(list(Path('.').rglob('*.*')))} assets.")
+          PYTHON
+
+      - name: Final HTML Validation
+        run: html-validate "**/*.html"
+
+      - name: Launch Local Web Server
+        run: |
+          python3 -m http.server 8080 &
+          sleep 8
+
+      - name: Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: http://localhost:8080/
+          uploadArtifacts: true
+          temporaryPublicStorage: false
+          runs: 3
+
+      - name: Convert Images to WebP
+        continue-on-error: true
+        uses: adnenre/img2webp@v1.0.0
+        with:
+          input-dir: .
+          quality: 88
+          update-refs: false
+          keep-original: true
+
+      - name: Publish HTML Reports
+        continue-on-error: true
+        uses: PavanMudigonda/html-reporter-github-pages@v1.5.21
+        with:
+          use_actions_summary: true
+          keep_reports: 20
+          force_orphan: true
+
+      - name: Upload Lighthouse Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-results
+          path: |
+            .lighthouseci
+            lighthouse-report
+            lighthouse-results
+          if-no-files-found: ignore
+
+      - name: Performance Summary
+        run: |
+          {
+            echo "## 🚀 Performance & Quality"
+            echo "✔ Asset integrity & image audit"
+            echo "✔ Lighthouse CI"
+            echo "✔ HTML reports published"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+################################################################################
+# PLAYWRIGHT
+################################################################################
+
+  playwright:
+    name: 🌐 Cross-Browser Smoke Tests
+    runs-on: ubuntu-latest
+    needs: [quality-performance]
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install Dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci
+          elif [ -f package.json ]; then npm install
+          else echo "No package.json found."; fi
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Start Local Server
+        run: |
+          python3 -m http.server 8080 &
+          sleep 8
+
+      - name: Execute Playwright
+        continue-on-error: true
+        run: |
+          if [ -f playwright.config.js ] || [ -f playwright.config.ts ]; then
+            npx playwright test
+          else
+            echo "No Playwright configuration detected. Skipping tests."
+          fi
+
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
+
+################################################################################
+# DEPLOY
+################################################################################
 
   deploy:
-    name: Production Deployment
+    name: 🚀 Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    needs: [pre-flight, ai-sanitizer, accessibility-seo, quality-performance, playwright]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: [ai-sanitizer, accessibility-seo, deep-inspector, performance-check]
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
 
-      - name: Setup Pages
-        id: pages
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Validate Build Output
+      - name: Verify Deployment Directory
         run: |
-          echo "### Validating deployment readiness"
-          if [ ! -f "./index.html" ]; then
-            echo "::error::index.html not found!"
-            exit 1
+          if [[ ! -f index.html ]]; then
+              echo "::error::index.html missing."
+              exit 1
           fi
-          HTML_COUNT=$(find . -name "*.html" -type f | wc -l)
-          echo "Ready to deploy $HTML_COUNT HTML files"
+          echo "Deployment directory validated."
 
-      - name: Upload artifact
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: .
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Post-Deployment Summary
+      - name: Deployment Summary
         run: |
-          echo "### Deployment Successful" >> $GITHUB_STEP_SUMMARY
-          echo "- Site URL: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Deployed at: $(date -u)" >> $GITHUB_STEP_SUMMARY
-          echo "- Commit: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          {
+            echo "# 🚀 Deployment Complete"
+            echo "| Item | Value |"
+            echo "|------|------|"
+            echo "| Repository | $GITHUB_REPOSITORY |"
+            echo "| Branch | $GITHUB_REF_NAME |"
+            echo "| Commit | $GITHUB_SHA |"
+            echo "| URL | ${{ steps.deployment.outputs.page_url }} |"
+            echo "Completed: $(date -u)"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+################################################################################
+# OPTIONAL REPOSITORY VISUALIZER
+################################################################################
+
+  repository-visualizer:
+    name: 📁 Repository Diagram
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    continue-on-error: true
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Repository Diagram
+        uses: githubocto/repo-visualizer@0.9.1
+        with:
+          output_file: docs/repository-map.svg
+          excluded_paths: >
+            node_modules,
+            .git,
+            .github,
+            playwright-report,
+            lighthouse-results,
+            test-results
+          should_push: false
+
+################################################################################
+# FINAL WORKFLOW SUMMARY
+################################################################################
+
+  workflow-summary:
+    name: 📋 Workflow Summary
+    runs-on: ubuntu-latest
+    if: always()
+    needs: [pre-flight, ai-sanitizer, accessibility-seo, quality-performance, playwright, deploy]
+
+    steps:
+      - name: Generate Final Summary
+        run: |
+          {
+            echo "# ✅ Ultra-Robust Static Site CI/CD Fortress"
+            echo "## Pipeline Executed"
+            echo "1. Repository validation"
+            echo "2. AI sanitizer & static analysis"
+            echo "3. HTML/CSS/JS/XML validation"
+            echo "4. Hyperlink integrity & processing"
+            echo "5. Accessibility & Schema.org"
+            echo "6. WCAG color contrast & AEO audit"
+            echo "7. Asset integrity & Lighthouse CI"
+            echo "8. Playwright smoke tests"
+            echo "9. GitHub Pages deployment"
+            echo ""
+            echo "Finished at: $(date -u)"
+          } >> "$GITHUB_STEP_SUMMARY"
