@@ -13,15 +13,15 @@
     <link rel="stylesheet" href="assets/css/utilities.css">
     <link rel="icon" type="image/svg+xml" href="/MIND_WEBSITE/assets/images/Mind_Grace_Clinic_Logo_Pink.svg">
  <!-- MIND GRACE LIBRARY STACK -->
-  <script src="assets/vendor/ky.min.js" type="module" defer></script>
-  <script src="assets/js/http-client.js" defer></script>
-  <script src="assets/vendor/lucide.min.js" defer></script>
-  <script src="assets/js/icon-init.js" defer></script>
-  <script src="assets/js/lib/floating-ui.core.min.js" defer></script>
-  <script src="assets/js/ui-popovers.js" defer></script>
-  <script src="assets/js/carousel-init.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/animations-auto.js" defer></script>
+  <script src="assets/vendor/ky.min.js" type="module"></script>
+  <script src="assets/js/http-client.js"></script>
+  <script src="assets/vendor/lucide.min.js"></script>
+  <script src="assets/js/icon-init.js"></script>
+  <script src="assets/js/lib/floating-ui.core.min.js"></script>
+  <script src="assets/js/ui-popovers.js"></script>
+  <script src="assets/js/carousel-init.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations-auto.js"></script>
   <!-- END LIBRARY STACK -->
 
   <!-- Network Status Toast -->
@@ -122,7 +122,7 @@
 <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
-        <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60"/ fetchpriority="high">
+        <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60" fetchpriority="high">
         <div>
           <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
           <div class="logo-tagline">Where You Come First</div>
@@ -130,7 +130,7 @@
       </a>
 
       <!-- DESKTOP NAVIGATION -->
-      <nav class="desktop-nav"  aria-label="Main navigation">
+      <nav class="desktop-nav" aria-label="Main navigation">
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -206,11 +206,7 @@
     </div>
   </nav>
 
-<!-- MOBILE NAV OVERLAY -->
-
-<!-- MOBILE NAV PANEL -->
-
-    <main id="main-content" class="page-content">
+  <main id="main-content" class="page-content">
         <div class="container">
             <article class="legal-content">
                 <h1>Medical Disclaimer</h1>
@@ -269,12 +265,11 @@
         </div>
     </main>
 
-<!-- Year Update Script -->
-<script defer>
-  if (document.getElementById('year')) {
-    document.getElementById('year').textContent = new Date().getFullYear();
-  }
-</script>
+  <script>
+    if (document.getElementById('year')) {
+      document.getElementById('year').textContent = new Date().getFullYear();
+    }
+  </script>
 
 
 <footer class="site-footer">
