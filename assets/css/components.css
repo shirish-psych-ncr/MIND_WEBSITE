@@ -11,7 +11,7 @@
   padding: clamp(2rem, 4vw, 3rem);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
-  border: 1px solid rgba(103, 27, 80, 0.08);
+  border: none; /* Remove borders for open, flowing feel */
   display: flex;
   flex-direction: column;
   color: var(--text-body);
@@ -277,8 +277,10 @@ svg[aria-hidden="true"] {
 .form-group input, .form-group textarea {
   width: 100%;
   padding: var(--space-sm) var(--space-md);
-  border: 1px solid var(--support);
-  border-radius: var(--radius-md);
+  border: none; /* Remove borders for cleaner look */
+  border-bottom: 2px solid var(--support); /* Only bottom border for input clarity */
+  border-radius: 0; /* Remove radius for underline style */
+  background: transparent;
   /* Ensure minimum touch target height */
   min-height: 48px;
   /* Logical properties for RTL support */
@@ -289,9 +291,9 @@ svg[aria-hidden="true"] {
 /* Focus visible styling for form inputs */
 .form-group input:focus-visible,
 .form-group textarea:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
-  border-color: var(--primary);
+  outline: none;
+  border-bottom-color: var(--primary);
+  background: rgba(103, 27, 80, 0.02);
 }
 
 /* Reduced data mode: simplify form appearance */
@@ -546,14 +548,14 @@ svg[aria-hidden="true"] {
   border-radius: var(--radius-xl);
   padding: clamp(2rem, 4vw, 3rem);
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(103, 27, 80, 0.08);
+  border: none; /* Remove borders for open, flowing design */
 }
 
 .surface-soft {
   background: var(--soft-plum);
   border-radius: var(--radius-xl);
   padding: clamp(2rem, 4vw, 3rem);
-  border: 1px solid rgba(103, 27, 80, 0.05);
+  border: none; /* Remove borders for open, flowing design */
 }
 
 .panel {

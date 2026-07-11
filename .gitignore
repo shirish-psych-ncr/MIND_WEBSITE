@@ -1,8 +1,4 @@
-```markdown
-# Documentation and assets
-AGENT_BIBLE/*.md
-AGENT_BIBLE/assets/
-
+```
 # Compiled and build artifacts
 *.pyc
 __pycache__/
@@ -16,43 +12,35 @@ __pycache__/
 *.out
 
 # Dependencies
-.venv/
-venv/
 node_modules/
+venv/
+.venv/
+.env
+.env.local
+.env.*
+
+# Build directories
 dist/
 build/
 target/
-.gradle/
+coverage/
+htmlcov/
 .mypy_cache/
 .pytest_cache/
-.julia/
-zig*/
 
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-*.swo
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
+# Editors and IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
+*.tmp
 
 # System files
 .DS_Store
 Thumbs.db
 
-# Coverage
-coverage/
-htmlcov/
-.coverage
+# Logs
+*.log
 
 # Compressed files
 *.zip

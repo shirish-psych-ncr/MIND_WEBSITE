@@ -143,15 +143,30 @@
     --cream: #2A1F1A;
     --blush: #352028;
     --warm-gray: #2A2530;
-    --text-dark: #FFFFFF;
+    --light-bg: #251525; /* Invert light bg to match dark theme */
+    --text-dark: #FDF6F0; /* Soft cream instead of stark white */
     --text-body: #E8D8E8;
-    --text-muted: #D0C0D0;
-    --text-light: #B0A0B0;
-    --card-heading: #FFFFFF;
+    --text-muted: #E0D0C8;
+    --text-light: #D0C0D0;
+    --card-heading: #FDF6F0;
     --card-text: #E0D0E0;
-    --hero-badge-text: #FFFFFF;
-    --cta-heading: #FFFFFF;
+    --hero-badge-text: #FDF6F0;
+    --cta-heading: #FDF6F0;
     --cta-text: #E0D0E0;
+    --border-color: rgba(224, 208, 200, 0.15);
+    --primary-accent: #FFB7C5; /* Softer pink for dark mode */
+  }
+  
+  body {
+    background-color: var(--off-white);
+    color: var(--text-dark);
+  }
+
+  /* Ensure cards, inputs, and sections adapt */
+  .card, .tool-card, input, textarea, select, .hero-section, header {
+    background-color: var(--off-white) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-dark) !important;
   }
 }
 
