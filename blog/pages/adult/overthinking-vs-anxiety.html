@@ -27,6 +27,65 @@
 
   <!-- Network Status Toast -->
   <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
+  
+  <!-- Structured Data: Article + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Overthinking vs anxiety",
+        "description": "Understand the overlap between overthinking and anxiety, and when one may be feeding the other.",
+        "datePublished": "2026-03-21",
+        "author": {
+          "@type": "Physician",
+          "name": "Dr Anita Sharma",
+          "url": "https://mindgracencr.in/dr-anita-sharma.html"
+        },
+        "publisher": {
+          "@type": "MedicalClinic",
+          "name": "Mind Grace Neuropsychiatric Clinic",
+          "url": "https://mindgracencr.in/"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg"
+        },
+        "articleSection": "Adult Mental Health"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://mindgracencr.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://mindgracencr.in/blog/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Adult Mental Health",
+            "item": "https://mindgracencr.in/blog/adult.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Overthinking vs Anxiety",
+            "item": "https://mindgracencr.in/blog/pages/adult/overthinking-vs-anxiety.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   </HEAD>
   <BODY>
   <!-- Skip Link for Accessibility -->
