@@ -91,7 +91,7 @@ function init() {
         
         // Focus input on load
         setTimeout(() => {
-            try { input.focus(); } catch {}
+            try { input.focus(); } catch (e) { /* ignore */ }
         }, 500);
     } catch (err) {
         console.error('Init error:', err);

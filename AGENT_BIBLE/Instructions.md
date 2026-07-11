@@ -1,152 +1,96 @@
 # 📖 AGENT BIBLE — Mind Grace Neuropsychiatric Clinic
-**Version:** 9.0 | **Last Updated:** Current Session | **Status:** Active
+**Version:** 12.0 | **Last Updated:** Current Session | **Status:** Active
 
-## 🎯 Purpose
+## 🎯 Core Mission
+Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientation-first** neuropsychiatric clinic website using pure static HTML, CSS Layers, and Vanilla JavaScript. No build tools, no npm, no frameworks.
 
-This knowledge base serves as the **cognitive architecture** for autonomous AI agents working on the Mind Grace website. It externalizes engineering intent, design philosophy, architectural decisions, and operational continuity so that any AI or human can understand and modify this system without losing coherence.
+## 📚 Knowledge Base Registry (14 Documents)
+| Document | Version | Purpose | Cross-Ref |
+|----------|---------|---------|-----------|
+| memory.md | v12.0 | Session state, delta logs, continuity checkpoints | All docs |
+| design.md | v7.0 | Design tokens, orientation-first, fluid type, dark mode | components.md §4 |
+| worker.md | v4.0 | Worker spec, manual ops, deployment checklist | pages.md §6 |
+| assets.md | v12.0 | Complete asset registry (165 files), vendor libs | design.md §7 |
+| pages.md | v9.0 | Page inventory (50 HTML), URL mappings, templates | worker.md §3 |
+| tools.md | v5.0 | Tool specifications (8 therapeutic tools) | components.md §3 |
+| components.md | v4.0 | UI component library (Vanilla JS patterns) | design.md §4 |
+| schemas.md | v2.0 | JSON-LD structured data for SEO | pages.md §8 |
+| opengraph.md | v1.0 | OpenGraph metadata, social sharing | pages.md §8 |
+| ARCHITECTURE.md | v3.0 | Technical architecture, file organization | assets.md §1 |
+| _multiphasic_plan.md | v4.0 | Phased implementation roadmap | worker.md §6 |
+| Bible_Generator.md | - | Engineering operating system | Instructions.md |
+| css/README.md | - | CSS layer documentation | design.md §8 |
 
----
+**Total KB Lines:** ~5,929 across 14 markdown files
 
-## 📚 Document Registry
+## 🏗️ Project Stats (Current)
+| Category | Count | Lines | Trend |
+|----------|-------|-------|-------|
+| HTML Pages | 50 | ~16,000 | Stable |
+| CSS Files | 12 | ~4,000 | +7 tool CSS |
+| JS Files | 64 | ~12,500 | +1 http-client |
+| Images | 39 | N/A | +2 interior |
+| MD Docs | 14 | 5,929 | Stable |
+| **TOTAL** | **165** | **~38,429** | **-5** |
 
-| Document | Purpose | Reading Order | Cross-Ref |
-|----------|---------|---------------|-----------|
-| [`Instructions.md`](./Instructions.md) | Operating protocol, constraints, workflow | 1st | All docs |
-| [`memory.md`](./memory.md) | Session state, delta log, pending queue | 2nd | worker.md §10 |
-| [`design.md`](./design.md) | Design tokens, layout rules, accessibility | 3rd | assets.md §6 |
-| [`worker.md`](./worker.md) | Architecture, hydration, security, QA | 4th | tools.md §2 |
-| [`pages.md`](./pages.md) | Page inventory, URL structure, migration | 5th | worker.md §1 |
-| [`tools.md`](./tools.md) | Therapeutic tool specifications | 6th | design.md §8 |
-| [`assets.md`](./assets.md) | Asset registry, optimization pipeline | 7th | design.md §7 |
-| [`schemas.md`](./schemas.md) | JSON-LD schemas, metadata validation | Reference | worker.md §7 |
-| [`components.md`](./components.md) | UI component library spec | Reference | design.md §4 |
-| [`opengraph.md`](./opengraph.md) | OpenGraph & metadata spec | Reference | pages.md §9 |
-| [`ARCHITECTURE.md`](./ARCHITECTURE.md) | System overview, dual-clinician model | Reference | pages.md §8 |
-| [`Bible_Generator.md`](./Bible_Generator.md) | Engineering philosophy, AI cognition | Philosophy | Instructions.md §1 |
-| [`_RESTRUCTURE_PLAN.md`](_RESTRUCTURE_PLAN.md) | URL restructuring implementation guide | P0 Priority | pages.md §11 |
-| [`_multiphasic_plan.md`](_multiphasic_plan.md) | Implementation roadmap (Phase 3 complete) | Reference | memory.md §Δ_LOG |
-| [`VERIFICATION_REPORT.md`](./VERIFICATION_REPORT.md) | Verification & audit results | Reference | worker.md §6 |
-| [`css/README.md`](./css/README.md) | CSS component library docs | Reference | design.md §8 |
+## 🛠️ Tech Stack Mandate
+- **HTML5:** Semantic, accessible, 50 pages
+- **CSS:** 5-layer cascade (base→layout→components→utilities→animations) + 7 tool CSS
+- **JavaScript:** Vanilla ES6+ with 24 vendor libraries (no frameworks)
+- **Zero Dependency:** NO package.json, NO npm, NO build tools
+- **Testing:** Manual only (browser DevTools, Rich Results Test)
 
----
+## 📦 Vendor Libraries (24 Total)
+**Core:** Ky (fetch), HTMX (AJAX), Alpine.js (reactive), Navigo (router), Swup (transitions)
+**Animation:** Anime.js, Motion One, ScrollReveal, Auto Animate, Canvas Confetti
+**UI:** Floating UI (tooltips), Splide (carousel), Iconify, Lucide (icons)
+**Utility:** Fuse.js (search), Nano ID (IDs), Quicklink (prefetch), Petite Vue, Preact Signals
 
-## 🔁 Update Cycle (Auto-Execute Every Turn)
+## 🎨 Design Principles
+1. **Orientation-First:** Body class detection (.portrait/.landscape), no breakpoints
+2. **Fluid Typography:** clamp() based, 16px-20px base
+3. **Dark Mode:** System preference + manual toggle
+4. **WCAG-2.2-AA:** Contrast ratios, focus states, ARIA labels
+5. **Performance:** Lazy loading, critical CSS, WebP where available
 
+## 🔧 Current Priorities (P0-P6)
+| Priority | Task | Status | Ref |
+|----------|------|--------|-----|
+| P0 | Browser console error audit (about.html prime case) | In Progress | worker.md §4 |
+| P1 | Component library build (Button, Card, Nav) | Pending | components.md §1 |
+| P2 | Manual E2E checklist (A11y, Mobile, Print) | Pending | worker.md §6 |
+| P3 | Asset optimization (WebP, SVG sprites) | Pending | assets.md §9 |
+| P4 | Blog article template expansion | Pending | pages.md §3 |
+| P5 | Book page integration | In Progress | pages.md §2 |
+| P6 | SEO audit via Rich Results Test | Pending | schemas.md §4 |
+
+## 📁 Critical File Paths
 ```
-START_TURN:
-  1. READ memory.md → Get state, queue, recover
-  2. READ design.md → Get tokens, layout, a11y
-  3. READ worker.md → Get arch, hydration, security
-  4. READ assets.md → Get asset paths, optimization
-  5. READ pages.md → Get page structure, URLs
-  6. READ tools.md → Get tool specs, hydration
-  7. READ Instructions.md → Get constraints, workflow
-  
-EXECUTE_TASK:
-  - Plan (reference KB, check constraints)
-  - Execute (code, edit, create)
-  - Validate (a11y, perf, design, clinical)
-  
-END_TURN:
-  1. APPEND Δ to memory.md §Δ_LOG
-  2. SYNC design.md (if new tokens/components)
-  3. SYNC worker.md (if new scripts/tools)
-  4. SYNC assets.md (if asset changes)
-  5. SYNC pages.md (if page/URL changes)
-  6. SYNC tools.md (if tool changes)
-  7. REFRESH Instructions.md (if workflow changes)
-  8. COMPRESS all docs (remove redundancy)
+/workspace/
+├── *.html (50 pages: index, about, services, book, location, contact, faq, emergency, resources, gallery, tools/*)
+├── /blog/* (12 files: index, adult, children, pages/adult×5, pages/child×4)
+├── /_templates/* (3 templates: clean, adult-mental-health, child-development)
+├── /assets/
+│   ├── css/* (5 core: base, layout, components, utilities, animations)
+│   ├── css-tools/* (7 tool-specific)
+│   ├── js/* (40 app scripts)
+│   ├── vendor/* (24 third-party libs)
+│   ├── images/* (39 images)
+│   └── components/* (4 HTML partials)
+├── /AGENT_BIBLE/ (14 markdown docs)
+└── netlify.toml (redirect rules)
 ```
 
----
+## ⚠️ Zero-Dependency Mandate (v9.1+)
+- **DELETED:** package.json, Playwright, CI/CD configs
+- **MANDATE:** All operations must be executable manually or via Netlify deploy
+- **TESTING:** Browser DevTools only (Lighthouse, Accessibility tab, Network tab)
+- **VALIDATION:** Rich Results Test, W3C Validator, manual checklist
 
-## ⚡ Core Axioms (Priority Order)
+## 🔄 Session Continuity
+- **Session ID:** mg-019 | **Turn:** T+30 | **Sync:** AGENT_BIBLE_v12_FULL_SYNC
+- **Last Action:** Agent Bible full sync (memory.md, assets.md updated to v12.0)
+- **Next Action:** Browser console error resolution (about.html focus)
+- **Recovery Point:** 165 files tracked, all ESLint errors resolved, Ky HTTP client integrated
 
-1. **Trust:** Empathetic UI, therapeutic communication, clinical-grade professionalism
-2. **Accessibility:** WCAG 2.2 AA (0 violations mandatory)
-3. **Performance:** LCP<2.5s, INP<200ms, CLS<0.1, JS<50kb
-4. **Maintainability:** Vanilla JS strict, semantic HTML, CSS-layers, no hardcoded values
-5. **Responsive:** Orientation-first detection (landscape/portrait), JS-driven graceful fallbacks
-
----
-
-## 🚨 Hard Constraints
-
-- **CSS:** Vanilla + Cascade Layers ONLY. NO Tailwind, NO inline styles, NO `!important`
-- **Values:** Design tokens only `var(--x)`. NO hex codes, NO px, NO magic numbers
-- **JavaScript:** Surgical hydration. NO framework bloat, vanilla islands, graceful degradation
-- **HTML:** Semantic elements. NO div-soup, use `<main>`, `<article>`, `<nav>`, `<section>`
-- **Assets:** All from `/assets/images/` or `/blog/res/`. Preload LCP images, lazy load rest
-- **Motion:** Respect `prefers-reduced-motion`. Disable parallax/fades if set
-- **Security:** NO PII in localStorage, CSP strict, HSTS preload, rate limiting
-
----
-
-## 📱 Responsive Philosophy (Orientation-First)
-
-**THE RULING:** Single orientation detection via `@media (orientation: landscape/portrait)`
-
-| Mode | Body Class | Layout | Navigation |
-|------|------------|--------|------------|
-| Portrait | `.view-mode-vertical` | Single column, stacked hero, full-width buttons | Mobile popup modal (centered, sectioned) |
-| Landscape | `.view-mode-horizontal` | 2-3 column grids, side-by-side hero | Desktop nav bar |
-
-- **Typography:** Fluid `clamp(min, vw, max)` for ALL headings
-- **Touch Targets:** min-h:44px, min-w:44px for interactive elements
-- **Grid Progression:** 1col → 2col → 3col via orientation class
-- **JS Fallbacks:** Graceful degradation if JavaScript disabled
-
----
-
-## 🔗 Quick References
-
-- **Live Site:** [mindgracencr.in](https://mindgracencr.in/)
-- **GitHub:** [shirish-psych-ncr/MIND_WEBSITE](https://github.com/shirish-psych-ncr/MIND_WEBSITE)
-- **Clinic Address:** J-123, Gamma-2, Greater Noida, UP 201308
-- **Contact:** +91-96678-63295, dranitasharma86@gmail.com
-
----
-
-## 📊 Repository Stats (v9.1)
-
-- **Total Files:** 95+ (HTML, MD, JS, JSON, CSS)
-- **Core Pages:** 37 root-level HTML files
-- **Tool Pages:** 6 interactive therapy modules (butterfly-tapper, eye-movement, guided-breathing, horizon-scan, hypnos-fractal, leaf-on-stream)
-- **Blog Pages:** 13 (index + adult + children + pages/adult×5 + pages/child×4)
-- **Templates:** 3 template files (template-clean, adult-mental-health, child-development)
-- **Components:** 3 HTML partials (header, footer, navigation)
-- **CSS Modules:** 12 files (5 core + 7 tools)
-- **JS Modules:** 13 files (main + 8 tools + 2 blog-config + blog-discovery + tools-map)
-- **Assets:** 31 images in /assets/images/
-- **Documentation:** 16 MD files (AGENT_BIBLE)
-- **Config:** netlify.toml (NO package.json - zero dependencies)
-
----
-
-## 🎯 Current Priorities (Zero-Dependency Stack)
-
-| Priority | Task | Ref Doc | Status |
-|----------|------|---------|--------|
-| P0 | Component library build (Button, Card, Nav) - Vanilla HTML/CSS only | components.md §1-§4 | Pending |
-| P1 | Manual E2E checklist (A11y, Mobile, Print) - No Playwright/Node | worker.md §6 | Pending |
-| P2 | Asset optimization (WebP conversion, SVG sprites) - Manual process | assets.md §5 | Pending |
-| P3 | Blog article template expansion | pages.md §3 | Pending |
-| P3 | Book page integration | pages.md §2 | In Progress |
-| P4 | SEO audit via Rich Results Test - Manual verification | schemas.md §4 | Pending |
-
----
-
-## ⚡ Zero-Dependency Mandate (NEW v9.1)
-
-**STRICT RULES:**
-1. **NO Node.js:** Delete `package.json` if it exists. No `npm install` ever.
-2. **NO Build Tools:** No Vite, Webpack, Parcel, Astro, or bundlers.
-3. **NO Testing Frameworks:** No Playwright, Jest, Cypress. Use manual browser testing.
-4. **NO TypeScript:** Pure ES6+ JavaScript only.
-5. **Tiny Libs Only:** Single-file utilities <5KB may be copied to `/assets/js/lib/` manually.
-
-**Philosophy:** "If it needs `npm install`, it's too heavy."
-
----
-
-*This is a living document. Auto-update every turn. Compress pre/post. END_ON_SYNC.*
+*End of Agent Bible Instructions v12.0. Sync complete. Zero-dependency stack enforced.*
