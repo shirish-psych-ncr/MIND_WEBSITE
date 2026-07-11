@@ -53,13 +53,20 @@
           "postalCode": "201310",
           "addressCountry": "IN"
         },
-        "priceRange": "₹₹",
+        "priceRange": "₹1000",
+        "paymentAccepted": "Cash, UPI, Card",
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "10:00",
-            "closes": "19:00"
+            "opens": "10:30",
+            "closes": "13:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "14:30",
+            "closes": "17:30"
           }
         ]
       }
@@ -71,6 +78,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="dns-prefetch" href="//mindgracencr.in"/>
   <link rel="dns-prefetch" href="//wa.me"/>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.mindgracencr.in/"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Book Appointment",
+        "item": "https://www.mindgracencr.in/book.html"
+      }]
+    }
+  </script>
 </head>
   <body>
 
