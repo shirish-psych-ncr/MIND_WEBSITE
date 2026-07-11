@@ -55,6 +55,7 @@
    * @returns {Splide|null}
    */
   function initCarousel(element, options = {}) {
+    /* global Splide */
     if (typeof Splide === 'undefined') {
       console.warn('Splide library not loaded yet');
       return null;

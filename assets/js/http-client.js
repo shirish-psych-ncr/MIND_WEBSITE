@@ -15,6 +15,7 @@
    * Create Ky API instance with default configuration
    */
   function createApiClient() {
+    /* global ky */
     if (typeof ky === 'undefined') {
       console.warn('Ky library not loaded, falling back to fetch');
       return null;
@@ -31,7 +32,7 @@
       },
       hooks: {
         beforeRetry: [
-          ({ request, options, error, retryCount }) => {
+          ({ request, _options, _error, retryCount }) => {
             console.log(`Retry ${retryCount} for ${request.url}`);
           }
         ],
