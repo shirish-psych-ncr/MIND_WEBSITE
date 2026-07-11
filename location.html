@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <title>Clinic Location & Directions | Mind Grace Neuropsychiatric Clinic</title>
     <meta name="description" content="Get clinic directions for Mind Grace Neuropsychiatric Clinic in Greater Noida with landmark guidance from Alpha-1 Metro, Delta-1 Metro, Pari Chowk, schools, universities, and Knowledge Park.">
-    
+
     <!-- SEO & Social -->
     <link rel="canonical" href="https://www.mindgracencr.in/location.html">
     <meta property="og:title" content="Clinic Location | Mind Grace Neuropsychiatric Clinic">
@@ -20,10 +20,20 @@
     <!-- Preconnect to external domains for faster loading -->
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://maps.app.goo.gl" crossorigin>
-    
+
     <!-- Favicon (Adjust paths if your favicons are located elsewhere) -->
     <link rel="icon" href="/MIND_WEBSITE/assets/images/favicon.ico" sizes="any">
     <link rel="icon" href="/MIND_WEBSITE/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" type="image/svg+xml">
+    
+ <!-- MIND GRACE LIBRARY STACK -->
+  <script src="assets/vendor/lucide.min.js" defer></script>
+  <script src="assets/js/icon-init.js" defer></script>
+  <script src="assets/js/ui-popovers.js" defer></script>
+  <script src="assets/js/carousel-init.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/ui-popovers.js" defer></script>
+  <script src="assets/js/animations-auto.js" defer></script>
+  <!-- END LIBRARY STACK -->
 
     <!-- Structured Data (Enhanced) -->
     <script type="application/ld+json">
@@ -107,7 +117,7 @@
     </svg>
 
     <a href="#main-content" class="skip-link">Skip to content</a>
-  
+
   <!-- Scroll Progress Bar -->
   <div class="scroll-progress" aria-hidden="true"></div>
 <header class="site-header" >
@@ -138,12 +148,10 @@
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Mobile Book Button (Calendar Icon) -->
       <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-        </svg>
+        <i data-lucide="calendar" aria-hidden="true"></i>
       </a>
     </div>
   </header>
@@ -155,9 +163,7 @@
     <div class="mobile-nav-header">
       <h2>Menu</h2>
       <button type="button" class="close-mobile-menu" aria-label="Close menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M18 6L6 18M6 6l12 12"/>
-        </svg>
+        <i data-lucide="x" width="24" height="24" aria-hidden="true"></i>
       </button>
     </div>
     <div class="mobile-nav-content">
@@ -245,7 +251,7 @@
                                 </noscript>
                             </div>
                         </div>
-                        
+
                         <!-- Street View Gallery -->
                         <div class="grid grid-2-col gap-4 mt-6">
                             <img src="assets/images/Location_street_view_near.jpg" alt="Street view close to the clinic entrance in Greater Noida" class="rounded-lg shadow-md w-full h-48 object-cover" loading="lazy" decoding="async" width="600" height="192">
@@ -258,7 +264,7 @@
                         <div class="card-body">
                             <div class="hero-badge bg-accent mb-4">Visit Details</div>
                             <h2 class="h3 mb-6" id="visit-details-title">Contact Information</h2>
-                            
+
                             <div class="stack gap-4 mb-8">
                                 <div class="bg-white/10 p-4 rounded-lg backdrop-blur">
                                     <strong class="block text-accent mb-1">Address:</strong>
@@ -457,14 +463,11 @@
 </footer>
 
 <!-- Year Update Script -->
-\<script\>
+<script>
   if (document.getElementById('year')) {
     document.getElementById('year').textContent = new Date().getFullYear();
   }
 </script>
-
-  <!-- MIND GRACE LIBRARY STACK --></script>
-  <!-- END LIBRARY STACK -->
 
 </body>
 </html>

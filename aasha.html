@@ -8,19 +8,29 @@
 
   <title>Aasha Initiative | Mind Grace Neuropsychiatric Clinic</title>
   <meta name="description" content="Aasha Early Intervention - Bringing hope through child development support, community workshops, and mental health awareness in Greater Noida." />
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  
+
   <!-- CSS Files -->
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
   <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/utilities.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
-  
+  <!-- JavaScript -->
+  <script src="assets/js/lib/splide.min.js" defer></script>
+  <script src="assets/js/carousel-init.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <!-- MIND GRACE LIBRARY STACK -->
+  <script src="assets/vendor/lucide.min.js" defer></script>
+  <script src="assets/js/animations-auto.js" defer></script>
+  <script src="assets/js/icon-init.js" defer></script>
+  <script src="assets/js/ui-popovers.js" defer></script></script>
+  <!-- END LIBRARY STACK -->
+
   <!-- JavaScript -->
   <script src="assets/js/main.js" defer></script>
 
@@ -60,7 +70,7 @@
 
 
   <!-- SKIP LINK -->
-  
+
 <header class="site-header" >
     <div class="header-inner">
       <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
@@ -89,12 +99,10 @@
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Mobile Book Button (Calendar Icon) -->
       <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-        </svg>
+        <i data-lucide="calendar" aria-hidden="true"></i>
       </a>
     </div>
   </header>
@@ -106,9 +114,7 @@
     <div class="mobile-nav-header">
       <h2>Menu</h2>
       <button type="button" class="close-mobile-menu" aria-label="Close menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M18 6L6 18M6 6l12 12"/>
-        </svg>
+        <i data-lucide="x" width="24" height="24" aria-hidden="true"></i>
       </button>
     </div>
     <div class="mobile-nav-content">
@@ -209,13 +215,15 @@
   </main>
 
 <!-- Year Update Script -->
-\<script\>
+<script>
   if (document.getElementById('year')) {
     document.getElementById('year').textContent = new Date().getFullYear();
   }
 </script>
 
-  <!-- MIND GRACE LIBRARY STACK --></script>
+  <!-- MIND GRACE LIBRARY STACK -->
+  <script src="assets/vendor/lucide.min.js" defer></script>
+  <script src="assets/js/icon-init.js" defer></script>
   <!-- END LIBRARY STACK -->
 
 </body>

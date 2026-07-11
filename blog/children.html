@@ -12,7 +12,14 @@
     <meta name="description" content="Explore mental health and child development guides: anxiety, overthinking, ADHD, sleep issues, autism, and parenting support explained clearly for India." />
 
     <link rel="stylesheet" href="assets/css/base.css" />
-
+<script src="assets/vendor/lucide.min.js" defer></script>
+  <script src="assets/js/icon-init.js" defer></script>
+  <script src="assets/js/lib/splide.min.js" defer></script>
+  <script src="assets/js/carousel-init.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/ui-popovers.js" defer></script>
+  <script src="assets/js/animations-auto.js" defer></script>
+  
   <!-- Network Status Toast -->
   <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
     <link rel="dns-prefetch" href="//mindgracencr.in"/>
@@ -81,9 +88,7 @@
 
     <!-- Mobile Book Button (Calendar Icon) -->
     <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-      </svg>
+      <i data-lucide="calendar" aria-hidden="true"></i>
     </a>
   </div>
 </header>
@@ -97,9 +102,7 @@
   <div class="mobile-nav-header">
     <h2>Menu</h2>
     <button type="button" class="close-mobile-menu" aria-label="Close menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M18 6L6 18M6 6l12 12"/>
-      </svg>
+      <i data-lucide="x" width="24" height="24" aria-hidden="true"></i>
     </button>
   </div>
   <div class="mobile-nav-content">
@@ -147,7 +150,7 @@
 <!-- MOBILE NAV OVERLAY -->
 
   <!-- MOBILE NAV PANEL - Simplified -->
-  
+
     <div class="progress"><div class="progress-bar" data-progress></div></div>
 
     <main id="main-content" class="section">
@@ -161,7 +164,7 @@
         </h1>
 
         <p class="lead">
-          Most people don’t search for “psychiatry.”  
+          Most people don’t search for “psychiatry.”
           They search for things like <strong>overthinking, anxiety, sleep problems, ADHD, or delayed speech</strong>.
         </p>
 
@@ -379,6 +382,7 @@
 </script>
 
   <!-- MIND GRACE LIBRARY STACK -->
+
 
 </body>
 </html>

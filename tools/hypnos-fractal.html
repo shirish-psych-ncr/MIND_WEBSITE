@@ -10,8 +10,12 @@
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/utilities.css" />
     <link rel="stylesheet" href="assets/css/animations.css" />
-    
+<script src="assets/vendor/lucide.min.js" defer></script>
+  <script src="assets/js/icon-init.js" defer></script>
     <link rel="stylesheet" href="assets/css-tools/tools-fractal.css" />
+    <script src="assets/js/animations-auto.js" defer></script>
+  <script src="assets/vendor/splide.min.js" defer></script>
+  <script src="assets/js/carousel-init.js" defer></script>
 
   <!-- Network Status Toast -->
   <div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
@@ -53,12 +57,10 @@
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Mobile Book Button (Calendar Icon) -->
       <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-        </svg>
+        <i data-lucide="calendar" aria-hidden="true"></i>
       </a>
     </div>
   </header>
@@ -70,9 +72,7 @@
     <div class="mobile-nav-header">
       <h2>Menu</h2>
       <button type="button" class="close-mobile-menu" aria-label="Close menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M18 6L6 18M6 6l12 12"/>
-        </svg>
+        <i data-lucide="x" width="24" height="24" aria-hidden="true"></i>
       </button>
     </div>
     <div class="mobile-nav-content">
@@ -123,7 +123,7 @@
         .top-banner { background: #fee2e2; color: #991b1b; padding: 10px; font-size: 0.8rem; text-align: center; font-weight: 600; }
         .site-header { background: #fff7fa; padding: 15px 0; border-bottom: 1px solid #e2e8f0; transition: opacity 0.8s; }
         .header-row { display: flex; justify-content: space-between; align-items: center; }
-        
+
         .brand-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
         .logo { height: 45px; width: auto; }
         .brand-kicker { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--brand-accent); font-weight: 700; }
@@ -133,13 +133,13 @@
         .button { background: var(--brand-primary); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
 
         /* FRACTAL TOOL CONTAINER */
-        .tool-section { 
-            position: relative; 
-            width: 100%; 
-            height: 650px; 
-            background: var(--bg-dark); 
-            border-radius: 40px; 
-            overflow: hidden; 
+        .tool-section {
+            position: relative;
+            width: 100%;
+            height: 650px;
+            background: var(--bg-dark);
+            border-radius: 40px;
+            overflow: hidden;
             margin: 40px 0;
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
         }
@@ -180,8 +180,8 @@
         }
 
         /* ZEN MODE HIDING */
-        .zen-active .site-header, .zen-active .top-banner, .zen-active footer, .zen-active h1, .zen-active .lead { 
-            opacity: 0; pointer-events: none; 
+        .zen-active .site-header, .zen-active .top-banner, .zen-active footer, .zen-active h1, .zen-active .lead {
+            opacity: 0; pointer-events: none;
         }
 
         footer { background: #f1f5f9; padding: 60px 0; margin-top: 60px; transition: opacity 0.8s; }
@@ -215,7 +215,7 @@
         <canvas id="canvas"></canvas>
         <div class="breath-tag" id="breath-text">Centering...</div>
         <div id="min-btn" onclick="toggleZen()">⚙️</div>
-        
+
         <div class="interface" id="fractal-ui">
             <div class="drawer">
                 <div class="row">

@@ -49,8 +49,8 @@
   <link rel="manifest" href="site.webmanifest"/>
 
   <!-- Base64 Favicon (Red for Emergency) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2RjMjYyNiIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
-  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2RjMjYyNiIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
+  <link rel="icon" type="image/svg+xml" href="image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2RjMjYyNiIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
+  <link rel="apple-touch-icon" href="image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2RjMjYyNiIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="/>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
@@ -63,6 +63,15 @@
   <link rel="stylesheet" href="assets/css/components.css"/>
   <link rel="stylesheet" href="assets/css/utilities.css"/>
   <link rel="stylesheet" href="assets/css/animations.css"/>
+<!-- MIND GRACE LIBRARY STACK -->
+  <script src="assets/vendor/lucide.min.js" defer></script>
+  <script src="assets/js/icon-init.js" defer></script>
+  <script src="assets/js/ui-popovers.js" defer></script>
+  <script src="assets/js/carousel-init.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/ui-popovers.js" defer></script>
+  <script src="assets/js/animations-auto.js" defer></script>
+  <!-- END LIBRARY STACK -->
 
   <!-- Critical inline CSS for above-the-fold only -->
   <style>
@@ -136,12 +145,10 @@
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Mobile Book Button (Calendar Icon) -->
       <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-        </svg>
+        <i data-lucide="calendar" aria-hidden="true"></i>
       </a>
     </div>
   </header>
@@ -153,9 +160,7 @@
     <div class="mobile-nav-header">
       <h2>Menu</h2>
       <button type="button" class="close-mobile-menu" aria-label="Close menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M18 6L6 18M6 6l12 12"/>
-        </svg>
+        <i data-lucide="x" width="24" height="24" aria-hidden="true"></i>
       </button>
     </div>
     <div class="mobile-nav-content">
@@ -215,7 +220,7 @@
 
   <!-- MAIN CONTENT -->
   <main id="main-content" >
-    
+
     <!-- HERO SECTION - High Contrast Emergency -->
     <section class="hero hero-small emergency-hero">
       <div class="hero-inner">
@@ -223,146 +228,14 @@
           <span class="section-badge emergency-badge">In Crisis? Read This First</span>
           <h1>You're not alone — but this needs immediate support</h1>
           <p class="lead">
-            If you or someone near you is in immediate danger, at risk of self-harm, 
-            experiencing a severe mental health crisis, or has taken an overdose — 
+            If you or someone near you is in immediate danger, at risk of self-harm,
+            experiencing a severe mental health crisis, or has taken an overdose —
             <strong>please act now.</strong>
           </p>
-          
+
           <!-- PRIMARY EMERGENCY ACTION -->
           <div class="emergency-alert alert alert-error">
-            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-            </svg>
-            <div>
-              <strong>Call emergency services immediately:</strong>
-              <div class="helpline-number">112</div>
-              <p>Or go to the nearest hospital emergency room.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUICK STEPS SECTION -->
-    <section class="section">
-      <div class="shell">
-        <div class="section-header">
-          <h2>What you can do right now</h2>
-          <p>Immediate actions to keep yourself or others safe</p>
-        </div>
-
-        <div class="features-grid">
-          <!-- Step 1 -->
-          <article class="feature-card">
-            <div class="feature-icon emergency-icon" aria-hidden="true">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M17 21v-2H7v2H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2h-2z"/>
-                <path d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/>
-              </svg>
-            </div>
-            <h3>Stay Together</h3>
-            <p>Do not leave the person alone. Your presence matters more than perfect words.</p>
-          </article>
-
-          <!-- Step 2 -->
-          <article class="feature-card">
-            <div class="feature-icon emergency-icon" aria-hidden="true">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M12 14l9-5-9-5-9 5 9 5z"/>
-                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-              </svg>
-            </div>
-            <h3>Remove Dangers</h3>
-            <p>Safely remove access to medications, sharp objects, or anything harmful.</p>
-          </article>
-
-          <!-- Step 3 -->
-          <article class="feature-card">
-            <div class="feature-icon emergency-icon" aria-hidden="true">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-              </svg>
-            </div>
-            <h3>Speak Calmly</h3>
-            <p>Use a gentle voice. Listen without judgment. Reassure them help is coming.</p>
-          </article>
-
-          <!-- Step 4 -->
-          <article class="feature-card">
-            <div class="feature-icon emergency-icon" aria-hidden="true">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-              </svg>
-            </div>
-            <h3>Call for Help</h3>
-            <p>Reach out to emergency services or a 24/7 helpline immediately. Keep trying if lines are busy.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- HELPLINES SECTION -->
-    <section class="section section-alt">
-      <div class="shell">
-        <div class="section-header">
-          <h2>24/7 Mental Health Helplines (India)</h2>
-          <p>Free, confidential support available any time, day or night</p>
-        </div>
-
-        <div class="helpline-grid">
-          <!-- Kiran Helpline -->
-          <div class="contact-card">
-            <div class="contact-icon emergency-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-              </svg>
-            </div>
-            <h3>Kiran Mental Health Helpline</h3>
-            <p class="helpline-number">1800-599-0019</p>
-            <p>Government of India initiative. Available in multiple languages.</p>
-          </div>
-
-          <!-- Vandrevala Foundation -->
-          <div class="contact-card">
-            <div class="contact-icon emergency-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-              </svg>
-            </div>
-            <h3>Vandrevala Foundation</h3>
-            <p class="helpline-number">9999 666 555</p>
-            <p>24/7 crisis intervention and suicide prevention support.</p>
-          </div>
-
-          <!-- Childline -->
-          <div class="contact-card">
-            <div class="contact-icon emergency-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-              </svg>
-            </div>
-            <h3>Childline</h3>
-            <p class="helpline-number">1098</p>
-            <p>For children in distress, abuse, or harm. Free and confidential.</p>
-          </div>
-
-          <!-- Emergency Services -->
-          <div class="contact-card">
-            <div class="contact-icon emergency-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-              </svg>
-            </div>
-            <h3>Emergency Services</h3>
-            <p class="helpline-number">112</p>
-            <p>Single emergency number for police, fire, and medical assistance.</p>
-          </div>
-        </div>
-
-        <div class="notice-box notice-info" style="margin-top: 2rem;">
-          <svg class="icon icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+            <i data-lucide="info" class="icon icon-lg" aria-hidden="true"></i>
           <div>
             <strong>If one line is busy, try another. Keep trying.</strong>
             <p style="margin-top: 0.5rem;">These helplines are staffed by trained counselors who can provide immediate support and guidance.</p>
@@ -382,9 +255,7 @@
         <div class="services-grid">
           <article class="service-card">
             <div class="service-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
+              <i data-lucide="building" class="icon icon-lg" aria-hidden="true"></i>
             </div>
             <h3>Sharda Hospital</h3>
             <p>Sharda University Campus, Greater Noida. 24/7 emergency and psychiatric care.</p>
@@ -396,9 +267,7 @@
 
           <article class="service-card">
             <div class="service-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
+              <i data-lucide="building" class="icon icon-lg" aria-hidden="true"></i>
             </div>
             <h3>Yatharth Super Speciality Hospital</h3>
             <p>Gamma-1, Greater Noida. Full-service emergency department with ICU.</p>
@@ -410,9 +279,7 @@
 
           <article class="service-card">
             <div class="service-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
+              <i data-lucide="building" class="icon icon-lg" aria-hidden="true"></i>
             </div>
             <h3>Fortis Hospital</h3>
             <p>Bishan Tower, Sector B, Pocket 1, Jasola, New Delhi. Advanced trauma care.</p>
@@ -429,13 +296,11 @@
     <section class="section section-alt">
       <div class="shell">
         <div class="notice-box notice-warning">
-          <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-          </svg>
+          <i data-lucide="alert-triangle" class="icon icon-lg" aria-hidden="true"></i>
           <div>
             <h3>This page is for urgent situations only</h3>
             <p>
-              If this is <strong>not an emergency</strong> but you still need help, please reach out through our regular consultation process. 
+              If this is <strong>not an emergency</strong> but you still need help, please reach out through our regular consultation process.
               For ongoing mental health support, therapy, or psychiatric evaluation, we're here to help through scheduled appointments.
             </p>
           </div>
@@ -519,14 +384,12 @@
 </footer>
 
 <!-- Year Update Script -->
-\<script\>
+<script>
   if (document.getElementById('year')) {
     document.getElementById('year').textContent = new Date().getFullYear();
   }
 </script>
 
-  <!-- MIND GRACE LIBRARY STACK --></script>
-  <!-- END LIBRARY STACK -->
 
 </body>
 </html>
