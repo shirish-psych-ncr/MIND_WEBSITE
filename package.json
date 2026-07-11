@@ -1,7 +1,10 @@
 {
   "devDependencies": {
     "@axe-core/cli": "^4.12.1",
+    "@eslint/js": "^10.0.1",
     "axe-core": "^4.12.1",
+    "eslint": "^10.7.0",
+    "globals": "^17.7.0",
     "puppeteer-core": "^24.43.1"
   },
   "name": "workspace",

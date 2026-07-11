@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
     
     navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
+      link.addEventListener('click', () => {
         closeNav();
       });
     });
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 7. Number Counter Animation (rAF Optimized)
   // ==========================================
-  function initCounters(el) {
+  function _initCounters(el) {
     const { counters } = el;
     if (!counters.length || !('IntersectionObserver' in window)) return;
   
@@ -327,11 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 // 9. Scroll Progress Bar
 // ==========================================
-function initScrollProgress() {
+function _initScrollProgress() {
   const progressBar = document.querySelector('.scroll-progress');
   if (!progressBar) return;
 
-  let lastScrollY = window.scrollY;
   let ticking = false;
 
   const updateProgress = () => {
@@ -339,7 +338,6 @@ function initScrollProgress() {
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
     progressBar.style.width = Math.min(scrollPercent, 100) + '%';
-    lastScrollY = scrollTop;
     ticking = false;
   };
 
@@ -357,7 +355,7 @@ function initScrollProgress() {
 // ==========================================
 // 10. Enhanced Smooth Scroll with Offset
 // ==========================================
-function initSmoothScroll() {
+function _initSmoothScroll() {
   const header = document.querySelector('.site-header');
   const headerHeight = header ? header.offsetHeight : 0;
   
@@ -392,7 +390,7 @@ function initSmoothScroll() {
 // ==========================================
 // 11. Orientation Adaptive Handler (No Warning, CSS-Only)
 // ==========================================
-function initOrientationAdapter() {
+function _initOrientationAdapter() {
   const adapter = document.getElementById('orientation-adapter');
   if (!adapter) return;
 
@@ -551,12 +549,12 @@ function initSkipLink() {
 // ==========================================
 (function bootstrap() {
   try {
-    initOrientationMonitor();
+    _initOrientationAdapter();
     initNetworkStatus();
     initOpenGraphMeta();
     initErrorBoundary();
     initSkipLink();
-    initScrollProgress();
+    _initScrollProgress();
     
     console.log('[Mind Grace] All modules initialized successfully');
   } catch (error) {
