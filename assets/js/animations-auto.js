@@ -35,6 +35,7 @@
     }
 
     try {
+      /* global autoAnimate */
       autoAnimate(element, {
         duration: 300,
         easing: 'ease-out',

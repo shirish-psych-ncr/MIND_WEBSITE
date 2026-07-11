@@ -16,6 +16,7 @@
    * @param {Object} options - Lucide createIcons options
    */
   function initIcons(options = {}) {
+    /* global lucide */
     // Check if Lucide is loaded
     if (typeof lucide === 'undefined') {
       console.warn('Lucide library not loaded yet, waiting...');

@@ -13,6 +13,7 @@
   'use strict';
 
   // Check if required libraries are loaded
+  /* global Swup, Motion, AutoAnimate, lucide */
   if (typeof Swup === 'undefined') {
     console.warn('Swup library not loaded, transitions disabled');
     return;
