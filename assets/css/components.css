@@ -1449,3 +1449,56 @@ svg[aria-hidden="true"] {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+/* --- 14. HERO LOCATION CTA - Emotional Connection to Place --- */
+.hero-location-cta {
+  margin-top: var(--space-lg);
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.location-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(103, 27, 80, 0.05);
+  border-radius: var(--radius-full);
+  color: var(--text-body);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: all var(--transition-base);
+  border: 1px solid rgba(103, 27, 80, 0.1);
+}
+
+.location-link:hover {
+  background: rgba(103, 27, 80, 0.1);
+  transform: translateX(4px);
+  border-color: rgba(103, 27, 80, 0.2);
+}
+
+.location-link .arrow {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all var(--transition-base);
+}
+
+.location-link:hover .arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .location-link {
+    background: rgba(255, 183, 197, 0.1);
+    border-color: rgba(255, 183, 197, 0.2);
+    color: var(--text-dark);
+  }
+  
+  .location-link:hover {
+    background: rgba(255, 183, 197, 0.15);
+    border-color: rgba(255, 183, 197, 0.3);
+  }
+}
