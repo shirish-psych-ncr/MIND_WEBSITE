@@ -100,8 +100,9 @@
     --color-success: oklch(65% 0.15 150);
     --color-warning: var(--amber-300);
 
-    /* Gradients */
-    --gradient-pink: linear-gradient(135deg, var(--pink-500) 0%, var(--pink-400) 50%, var(--rose-400) 100%);
+    /* Gradients - Enhanced Pink Spectrum */
+    --gradient-pink: linear-gradient(135deg, var(--pink-500) 0%, var(--pink-400) 35%, var(--pink-600) 65%, var(--rose-400) 100%);
+    --gradient-pink-soft: linear-gradient(135deg, var(--pink-100) 0%, var(--pink-200) 50%, var(--rose-100) 100%);
     --gradient-blush: linear-gradient(135deg, var(--pink-50) 0%, var(--pink-100) 25%, var(--rose-50) 50%, var(--pink-50) 100%);
     --gradient-sunset: linear-gradient(180deg, var(--rose-50) 0%, var(--pink-100) 50%, var(--pink-50) 100%);
     --gradient-warm: linear-gradient(135deg, var(--amber-200) 0%, var(--rose-300) 50%, var(--amber-200) 100%);
@@ -532,18 +533,26 @@
     border-radius: var(--radius-xl);
     padding: var(--space-6);
     transition: all var(--duration-base) var(--ease-out);
-    border: 1px solid var(--color-border-primary);
+    box-shadow: var(--shadow-sm);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 300px;
   }
 
   .card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg), 0 0 0 1px oklch(52% 0.22 340 / 0.1);
     background: oklch(100% 0 0 / 0.7);
   }
 
   @media (prefers-color-scheme: dark) {
+    .card {
+      background: oklch(20% 0.08 340 / 0.3);
+      box-shadow: 0 4px 12px oklch(0% 0 0 / 0.3);
+    }
+
     .card:hover {
       background: oklch(25% 0.08 340 / 0.5);
+      box-shadow: var(--shadow-lg), 0 0 0 1px oklch(340 0.12 0.7 / 0.2);
     }
   }
 
@@ -833,6 +842,25 @@
 }
 
 /* ==========================================================================
+   COMPONENTS - Services Flow Container
+   ========================================================================== */
+@layer components {
+  .services-flow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: var(--space-8);
+    container-type: inline-size;
+    container-name: services-grid;
+  }
+
+  @container services-grid (max-width: 600px) {
+    .services-flow {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* ==========================================================================
    COMPONENTS - Service Items
    ========================================================================== */
 @layer components {
@@ -840,21 +868,30 @@
     position: relative;
     padding: var(--space-8);
     background: var(--color-bg-surface-subtle);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: var(--radius-2xl);
     transition: all var(--duration-slow) var(--ease-out);
-    border: 1px solid var(--color-border-primary);
+    box-shadow: var(--shadow-sm);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 300px;
   }
 
   .service-item:hover {
     transform: translateY(-8px);
-    background: oklch(100% 0 0 / 0.7);
-    box-shadow: var(--shadow-lg);
+    background: oklch(100% 0 0 / 0.75);
+    box-shadow: var(--shadow-xl), 0 0 0 1px oklch(52% 0.22 340 / 0.1);
   }
 
   @media (prefers-color-scheme: dark) {
+    .service-item {
+      background: oklch(20% 0.08 340 / 0.4);
+      box-shadow: 0 4px 12px oklch(0% 0 0 / 0.3);
+    }
+
     .service-item:hover {
-      background: oklch(25% 0.08 340 / 0.5);
+      background: oklch(25% 0.08 340 / 0.6);
+      box-shadow: var(--shadow-xl), 0 0 0 1px oklch(340 0.12 0.7 / 0.2);
     }
   }
 
@@ -1148,8 +1185,19 @@
     scroll-behavior: auto;
   }
 
-  .ambient-orb {
+  .ambient-orb,
+  .emotional-cta:before,
+  .site-footer:before,
+  .hero-badge {
     animation: none;
+  }
+
+  .emotional-cta{
+    background:linear-gradient(135deg,var(--pink-100),var(--pink-50),var(--rose-50));
+  }
+
+  .site-footer{
+    background:linear-gradient(180deg,var(--pink-900),var(--pink-800));
   }
 }
 
