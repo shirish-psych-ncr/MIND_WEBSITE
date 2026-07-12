@@ -166,9 +166,9 @@
         transform:translateY(-2px);box-shadow:0 8px 24px rgba(236,72,153,0.45);
       }
       
-      /* Burger Menu */
+      /* Burger Menu - Visible on ALL screens */
       .mobile-nav-trigger{
-        display:none;flex-direction:column;gap:5px;
+        display:flex;flex-direction:column;gap:5px;
         background:none;border:none;cursor:pointer;padding:0.5rem;
         z-index:1001;
       }
@@ -188,54 +188,84 @@
         transform:translateY(-7.5px) rotate(-45deg);
       }
       
-      /* Mobile Navigation Overlay */
-      .mobile-nav-overlay{
-        position:fixed;top:0;left:0;width:100%;height:100vh;
+      /* Dropdown Navigation - Opens below header on ALL screens */
+      .nav-dropdown{
+        position:absolute;top:100%;left:0;right:0;
         background:rgba(255,255,255,0.98);
         backdrop-filter:blur(20px);
         -webkit-backdrop-filter:blur(20px);
-        z-index:999;
-        display:flex;align-items:center;justify-content:center;
+        box-shadow:0 8px 32px rgba(236,72,153,0.15);
+        padding:2rem 5%;
+        transform:translateY(-20px);
         opacity:0;visibility:hidden;
         transition:all 0.4s var(--ease-out);
+        max-height:0;overflow:hidden;
+        z-index:999;
       }
       @media(prefers-color-scheme:dark){
-        .mobile-nav-overlay{background:rgba(15,23,42,0.98)}
+        .nav-dropdown{background:rgba(15,23,42,0.98)}
       }
-      .mobile-nav-overlay.active{
+      .nav-dropdown.active{
+        transform:translateY(0);
         opacity:1;visibility:visible;
+        max-height:80vh;overflow-y:auto;
       }
-      .mobile-nav-list{
-        list-style:none;text-align:center;
-        transform:translateY(30px);opacity:0;
-        transition:all 0.5s var(--ease-out) 0.1s;
+      .nav-dropdown ul{
+        list-style:none;
+        display:flex;flex-direction:column;
+        gap:1.5rem;
+        max-width:1400px;
+        margin:0 auto;
       }
-      .mobile-nav-overlay.active .mobile-nav-list{
-        transform:translateY(0);opacity:1;
-      }
-      .mobile-nav-list li{margin:1.5rem 0}
-      .mobile-nav-list a{
-        font-family:var(--font-serif);
-        font-size:clamp(1.5rem,4vw,2.5rem);
-        color:var(--slate-700);
+      .nav-dropdown a{
         text-decoration:none;
+        color:var(--slate-700);
+        font-size:1.25rem;
         font-weight:500;
-        transition:color 0.3s;
+        transition:all 0.3s ease;
+        display:block;
+        padding:0.75rem 0;
+        position:relative;
       }
-      @media(prefers-color-scheme:dark){.mobile-nav-list a{color:var(--slate-200)}}
-      .mobile-nav-list a:hover{color:var(--pink-500)}
-      .mobile-nav-list .cta-button{
-        display:inline-block;
+      @media(prefers-color-scheme:dark){.nav-dropdown a{color:var(--slate-200)}}
+      .nav-dropdown a::after{
+        content:'';
+        position:absolute;
+        bottom:0;left:0;
+        width:0;height:2px;
         background:var(--gradient-pink);
-        -webkit-background-clip:text;
-        -webkit-text-fill-color:transparent;
-        font-size:clamp(1.3rem,3.5vw,2rem);
+        transition:width 0.3s ease;
+      }
+      .nav-dropdown a:hover{
+        color:var(--pink-600);
+        transform:translateX(10px);
+      }
+      .nav-dropdown a:hover::after{
+        width:40px;
+      }
+      .nav-dropdown .cta-button{
+        background:var(--gradient-pink);
+        color:#fff;
+        padding:1rem 2rem;
+        border-radius:var(--radius-full);
+        text-align:center;
+        font-weight:600;
+        box-shadow:0 4px 16px rgba(236,72,153,0.35);
+        transition:all 0.3s ease;
+        margin-top:1rem;
+        display:inline-block;
+      }
+      .nav-dropdown .cta-button:hover{
+        transform:translateY(-3px);
+        box-shadow:0 8px 24px rgba(236,72,153,0.45);
+        color:#fff;
+      }
+      .nav-dropdown .cta-button::after{
+        display:none;
       }
       
-      @media(max-width:900px){
-        .desktop-nav{display:none}
-        .mobile-nav-trigger{display:flex}
-      }
+      /* Hide desktop nav on all screens - use burger menu everywhere */
+      .desktop-nav{display:none !important}
       @media(max-width:600px){
         .logo-tagline{display:none}
         .logo-text{font-size:clamp(1rem,2vw,1.4rem)}
@@ -258,12 +288,12 @@
         display:inline-flex;align-items:center;gap:0.5rem;
         background:rgba(255,255,255,0.6);backdrop-filter:blur(10px);
         padding:0.5rem 1.2rem;border-radius:var(--radius-full);
-        font-size:0.9rem;font-weight:500;color:var(--teal-700);
+        font-size:0.9rem;font-weight:500;color:var(--pink-700);
         border:1px solid rgba(13,148,136,0.15);
         margin-bottom:1.5rem;
       }
       @media(prefers-color-scheme:dark){
-        .hero-badge{background:rgba(15,95,85,0.3);color:var(--teal-200);border-color:rgba(45,212,191,0.3)}
+        .hero-badge{background:rgba(15,95,85,0.3);color:var(--pink-200);border-color:rgba(45,212,191,0.3)}
       }
       .hero-subtitle{
         font-size:clamp(1.1rem,2.2vw,1.35rem);
@@ -281,20 +311,20 @@
         border:none;cursor:pointer;min-height:56px;
       }
       .btn-primary{
-        background:var(--gradient-teal);color:#fff;
+        background:var(--gradient-pink);color:#fff;
         box-shadow:0 4px 14px rgba(13,148,136,0.3);
       }
       .btn-primary:hover{
         transform:translateY(-3px);box-shadow:0 8px 24px rgba(13,148,136,0.4);
       }
       .btn-secondary{
-        background:rgba(255,255,255,0.5);color:var(--teal-700);
-        border:2px solid var(--teal-300);
+        background:rgba(255,255,255,0.5);color:var(--pink-700);
+        border:2px solid var(--pink-300);
       }
       @media(prefers-color-scheme:dark){
-        .btn-secondary{background:rgba(15,95,85,0.3);color:var(--teal-200);border-color:var(--teal-500)}
+        .btn-secondary{background:rgba(15,95,85,0.3);color:var(--pink-200);border-color:var(--pink-500)}
       }
-      .btn-secondary:hover{background:rgba(13,148,136,0.1);border-color:var(--teal-500)}
+      .btn-secondary:hover{background:rgba(13,148,136,0.1);border-color:var(--pink-500)}
       
       .hero-visual{position:relative}
       .hero-image-wrapper{
@@ -315,8 +345,8 @@
         font-size:0.9rem;color:var(--slate-500);font-weight:500;
       }
       @media(prefers-color-scheme:dark){.hero-trust-item{color:var(--slate-400)}}
-      .hero-trust-item svg{width:18px;height:18px;stroke:var(--teal-600)}
-      @media(prefers-color-scheme:dark){.hero-trust-item svg{stroke:var(--teal-400)}}
+      .hero-trust-item svg{width:18px;height:18px;stroke:var(--pink-600)}
+      @media(prefers-color-scheme:dark){.hero-trust-item svg{stroke:var(--pink-400)}}
       
       /* Services Section - Flowing Layout */
       .services-section{background:transparent}
@@ -351,7 +381,7 @@
       }
       .service-icon{
         width:clamp(56px,10vw,72px);height:clamp(56px,10vw,72px);
-        background:var(--gradient-teal);border-radius:50%;
+        background:var(--gradient-pink);border-radius:50%;
         display:flex;align-items:center;justify-content:center;
         margin-bottom:1.5rem;
         box-shadow:0 4px 14px rgba(13,148,136,0.3);
@@ -366,11 +396,11 @@
       }
       @media(prefers-color-scheme:dark){.service-item p{color:var(--slate-300)}}
       .service-link{
-        color:var(--teal-600);text-decoration:none;font-weight:600;
+        color:var(--pink-600);text-decoration:none;font-weight:600;
         display:inline-flex;align-items:center;gap:0.5rem;
         transition:gap 0.3s var(--ease-out);
       }
-      @media(prefers-color-scheme:dark){.service-link{color:var(--teal-300)}}
+      @media(prefers-color-scheme:dark){.service-link{color:var(--pink-300)}}
       .service-link:hover{gap:0.75rem}
       .service-link svg{width:18px;height:18px}
       
@@ -394,7 +424,7 @@
       .emotional-cta *{position:relative;z-index:1}
       .emotional-cta h2{
         font-size:clamp(1.8rem,4vw,3rem);margin-bottom:1rem;
-        background:var(--gradient-teal);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+        background:var(--gradient-pink);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
       }
       .emotional-cta p{
         font-size:clamp(1.1rem,2vw,1.3rem);color:var(--slate-600);
@@ -421,7 +451,7 @@
         color:var(--slate-400);text-decoration:none;font-size:0.95rem;
         transition:color 0.2s var(--ease-out);
       }
-      .footer-column a:hover{color:var(--teal-300)}
+      .footer-column a:hover{color:var(--pink-300)}
       .footer-bottom{
         padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);
       }
@@ -457,7 +487,7 @@
       /* Skip Link */
       .skip-link{
         position:absolute;top:-100%;left:50%;transform:translateX(-50%);
-        background:var(--teal-600);color:#fff;padding:0.75rem 1.5rem;
+        background:var(--pink-600);color:#fff;padding:0.75rem 1.5rem;
         text-decoration:none;font-weight:600;z-index:10001;border-radius:var(--radius-gentle);
         transition:top 0.3s;
       }
@@ -496,34 +526,23 @@
                 </div>
             </a>
             
-            <nav class="desktop-nav" aria-label="Main navigation">
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="process.html">Process</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="location.html">Location</a></li>
-                    <li><a href="book.html" class="cta-button">Book Now</a></li>
-                </ul>
-            </nav>
-            
-            <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false">
+            <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" id="burgerMenuBtn">
                 <span></span><span></span><span></span>
             </button>
         </div>
+        
+        <!-- Dropdown Navigation - Opens below header -->
+        <div class="nav-dropdown" id="navDropdown">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="book.html" class="cta-button">Book Now</a></li>
+            </ul>
+        </div>
     </header>
-    
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay">
-        <ul class="mobile-nav-list">
-            <li><a href="about.html" class="mobile-nav-link">About</a></li>
-            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-            <li><a href="process.html" class="mobile-nav-link">Process</a></li>
-            <li><a href="resources.html" class="mobile-nav-link">Resources</a></li>
-            <li><a href="location.html" class="mobile-nav-link">Location</a></li>
-            <li><a href="book.html" class="cta-button mobile-nav-link">Book Now</a></li>
-        </ul>
-    </div>
     
     <main id="main-content">
         <!-- Hero Section -->
@@ -541,7 +560,7 @@
                     </h1>
                     <p class="hero-subtitle">
                         At Mind Grace Neuropsychiatric Clinic, everything revolves around 
-                        <strong style="color:var(--teal-600)">you</strong>. Whether you're 
+                        <strong style="color:var(--pink-600)">you</strong>. Whether you're 
                         navigating anxiety, seeking support for your child, or finding 
                         balance again—Dr. Anita Sharma and our compassionate team are here.
                     </p>
@@ -701,36 +720,37 @@
         }
       });
       
-      // Mobile nav toggle with burger animation
-      const mobileTrigger = document.querySelector('.mobile-nav-trigger');
-      const mobileOverlay = document.getElementById('mobileNavOverlay');
-      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+      // Burger menu toggle with dropdown navigation
+      const burgerBtn = document.getElementById('burgerMenuBtn');
+      const navDropdown = document.getElementById('navDropdown');
+      const dropdownLinks = navDropdown ? navDropdown.querySelectorAll('a') : [];
       
-      if (mobileTrigger && mobileOverlay) {
-        mobileTrigger.addEventListener('click', () => {
-          const isActive = mobileTrigger.classList.contains('active');
-          mobileTrigger.classList.toggle('active');
-          mobileOverlay.classList.toggle('active');
-          mobileTrigger.setAttribute('aria-expanded', !isActive);
+      if (burgerBtn && navDropdown) {
+        burgerBtn.addEventListener('click', () => {
+          const isActive = burgerBtn.classList.contains('active');
+          burgerBtn.classList.toggle('active');
+          navDropdown.classList.toggle('active');
+          burgerBtn.setAttribute('aria-expanded', !isActive);
+          // Prevent body scroll when menu is open
           document.body.style.overflow = !isActive ? 'hidden' : '';
         });
         
-        // Close overlay when clicking a link
-        mobileLinks.forEach(link => {
+        // Close dropdown when clicking a link
+        dropdownLinks.forEach(link => {
           link.addEventListener('click', () => {
-            mobileTrigger.classList.remove('active');
-            mobileOverlay.classList.remove('active');
-            mobileTrigger.setAttribute('aria-expanded', 'false');
+            burgerBtn.classList.remove('active');
+            navDropdown.classList.remove('active');
+            burgerBtn.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
           });
         });
         
-        // Close overlay when clicking outside
-        mobileOverlay.addEventListener('click', (e) => {
-          if (e.target === mobileOverlay) {
-            mobileTrigger.classList.remove('active');
-            mobileOverlay.classList.remove('active');
-            mobileTrigger.setAttribute('aria-expanded', 'false');
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!navDropdown.contains(e.target) && !burgerBtn.contains(e.target)) {
+            burgerBtn.classList.remove('active');
+            navDropdown.classList.remove('active');
+            burgerBtn.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
           }
         });
