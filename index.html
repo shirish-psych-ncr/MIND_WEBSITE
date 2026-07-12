@@ -155,7 +155,7 @@
         transition:all 0.4s var(--ease-out);
         background:transparent;
       }
-      .site-header.scrolled{
+      .site-header--scrolled{
         background:rgba(255,255,255,0.7);
         backdrop-filter:blur(24px) saturate(180%);
         -webkit-backdrop-filter:blur(24px) saturate(180%);
@@ -163,9 +163,9 @@
         padding-block:0.75rem;
       }
       @media(prefers-color-scheme:dark){
-        .site-header.scrolled{background:rgba(15,23,42,0.75)}
+        .site-header--scrolled{background:rgba(15,23,42,0.75)}
       }
-      .header-inner{
+      .header-inner, .flex--between {
         display:flex;align-items:center;justify-content:space-between;gap:2rem;
       }
       .logo-link{
@@ -188,33 +188,23 @@
       @media(prefers-color-scheme:dark){.desktop-nav a{color:var(--slate-300)}}
       .desktop-nav a:hover{background:var(--pink-100);color:var(--pink-700)}
       @media(prefers-color-scheme:dark){.desktop-nav a:hover{background:var(--pink-900);color:var(--pink-200)}}
-      .desktop-nav .cta-button{
-        background:var(--gradient-pink);color:#fff;font-weight:600;
-        box-shadow:0 4px 16px rgba(236,72,153,0.35);
-      }
-      .desktop-nav .cta-button:hover{
-        transform:translateY(-2px);box-shadow:0 8px 24px rgba(236,72,153,0.45);
-      }
-      
-      /* Burger Menu - Visible on ALL screens */
-      .mobile-nav-trigger{
         display:flex;flex-direction:column;gap:5px;
         background:none;border:none;cursor:pointer;padding:0.5rem;
         z-index:1001;
       }
-      .mobile-nav-trigger span{
+      .burger-btn span {
         display:block;width:28px;height:2.5px;
         background:var(--pink-600);border-radius:3px;
         transition:all 0.3s var(--ease-out);
         transform-origin:center;
       }
-      .mobile-nav-trigger.active span:nth-child(1){
+      .burger-btn--active span:nth-child(1){
         transform:translateY(7.5px) rotate(45deg);
       }
-      .mobile-nav-trigger.active span:nth-child(2){
+      .burger-btn--active span:nth-child(2){
         opacity:0;transform:translateX(-10px);
       }
-      .mobile-nav-trigger.active span:nth-child(3){
+      .burger-btn--active span:nth-child(3){
         transform:translateY(-7.5px) rotate(-45deg);
       }
       
@@ -235,7 +225,7 @@
       @media(prefers-color-scheme:dark){
         .nav-dropdown{background:rgba(15,23,42,0.98)}
       }
-      .nav-dropdown.active{
+      .nav-dropdown--active{
         transform:translateY(0);
         opacity:1;visibility:visible;
         max-height:80vh;overflow-y:auto;
@@ -273,7 +263,7 @@
       .nav-dropdown a:hover::after{
         width:40px;
       }
-      .nav-dropdown .cta-button{
+      .nav-dropdown .btn--primary {
         background:var(--gradient-pink);
         color:#fff;
         padding:1rem 2rem;
@@ -285,17 +275,15 @@
         margin-top:1rem;
         display:inline-block;
       }
-      .nav-dropdown .cta-button:hover{
+      .nav-dropdown .btn--primary:hover{
         transform:translateY(-3px);
         box-shadow:0 8px 24px rgba(236,72,153,0.45);
         color:#fff;
       }
-      .nav-dropdown .cta-button::after{
+      .nav-dropdown .btn--primary::after{
         display:none;
       }
       
-      /* Hide desktop nav on all screens - use burger menu everywhere */
-      .desktop-nav{display:none !important}
       @media(max-width:600px){
         .logo-tagline{display:none}
         .logo-text{font-size:clamp(1rem,2vw,1.4rem)}
@@ -547,7 +535,7 @@
     
     <!-- Header -->
     <header class="site-header">
-        <div class="container header-inner">
+        <div class="container flex--between">
             <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
                 <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60" fetchpriority="high">
                 <div>
@@ -556,22 +544,22 @@
                 </div>
             </a>
             
-            <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" id="burgerMenuBtn">
+            <button class="burger-btn" aria-label="Toggle menu" aria-expanded="false" id="burgerMenuBtn">
                 <span></span><span></span><span></span>
             </button>
         </div>
         
         <!-- Dropdown Navigation - Opens below header -->
-        <div class="nav-dropdown" id="navDropdown">
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="location.html">Location</a></li>
-                <li><a href="book.html" class="cta-button">Book Now</a></li>
+        <nav class="nav-dropdown" id="navDropdown" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="process.html" class="nav-link">Process</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="location.html" class="nav-link">Location</a></li>
+                <li><a href="book.html" class="btn btn--primary">Book Now</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
     
     <main id="main-content">
@@ -801,7 +789,7 @@
       const handleScroll = _rafThrottle(() => {
         const header = document.querySelector('.site-header');
         if (header) {
-          header.classList.toggle('scrolled', window.scrollY > 50);
+          header.classList.toggle('site-header--scrolled', window.scrollY > 50);
         }
       });
 
@@ -815,8 +803,8 @@
       
       if (burgerBtn && navDropdown) {
         const toggleMenu = (shouldOpen) => {
-          burgerBtn.classList.toggle('active', shouldOpen);
-          navDropdown.classList.toggle('active', shouldOpen);
+          burgerBtn.classList.toggle('burger-btn--active', shouldOpen);
+          navDropdown.classList.toggle('nav-dropdown--active', shouldOpen);
           burgerBtn.setAttribute('aria-expanded', String(shouldOpen));
           
           if (shouldOpen) {
@@ -831,7 +819,7 @@
         };
 
         burgerBtn.addEventListener('click', () => {
-          const isOpen = burgerBtn.classList.contains('active');
+          const isOpen = burgerBtn.classList.contains('burger-btn--active');
           toggleMenu(!isOpen);
         });
         
@@ -849,7 +837,7 @@
         
         // Close on Escape key
         document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && burgerBtn.classList.contains('active')) {
+          if (e.key === 'Escape' && burgerBtn.classList.contains('burger-btn--active')) {
             toggleMenu(false);
           }
         });
@@ -860,10 +848,10 @@
           const firstLink = dropdownLinks[0];
           const lastLink = dropdownLinks[dropdownLinks.length - 1];
           
-          if (e.shiftKey && document.activeElement === firstLink) {
+          if (e.shiftKey && document.activeElement; === firstLink) {
             e.preventDefault();
             burgerBtn.focus();
-          } else if (!e.shiftKey && document.activeElement === lastLink) {
+          } else if (!e.shiftKey && document.activeElement; === lastLink) {
             e.preventDefault();
             burgerBtn.focus();
           }
