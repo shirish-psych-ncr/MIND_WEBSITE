@@ -1242,7 +1242,8 @@
 
   .card, .service-item {
     break-inside: avoid;
-    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px oklch(52% 0.22 340 / 0.15);
+    border: none;
   }
 }
 
@@ -1334,6 +1335,7 @@
 @media (forced-colors: active) {
   .btn, .card, .service-item {
     border: 2px solid CanvasText;
+    box-shadow: none;
   }
 
   .nav-link:hover::after {
