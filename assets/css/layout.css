@@ -1053,3 +1053,5 @@ body.compact-nav .mobile-nav-trigger{display:flex}
     outline: 2px solid Highlight;
   }
 }
+
+.mobile-nav-panel[hidden],.mobile-nav-overlay[hidden]{display:none !important}

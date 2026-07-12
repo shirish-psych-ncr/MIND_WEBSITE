@@ -43,8 +43,8 @@
   </script>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&#x26;family=Playfair+Display:wght@600;700&#x26;display=swap">
 
   <!-- Stylesheets - Modular CSS Architecture -->
@@ -67,9 +67,8 @@
   <!-- END LIBRARY STACK -->
 
   <!-- Network Status Toast -->
-  </head><body><div id="network-status" role="status" aria-live="polite" style="display:none;"></div>
   <link rel="dns-prefetch" href="//wa.me">
-  <link rel="dns-prefetch" href="//wa.me">
+  </head><body><div id="network-status" role="status" aria-live="polite" hidden></div>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -110,14 +109,11 @@
       "paymentAccepted": "Cash, UPI, Card"
     }
   </script>
-
-
-  <a href="#main-content" class="skip-link">Skip to content</a>
   <a href="#main-content" class="skip-link">Skip to content</a>
   <!-- EMERGENCY BANNER WITH MARQUEE -->
   <div class="emergency-banner" role="alert" aria-label="Emergency crisis support information">
     <div class="emergency-banner__marquee">
-      <div class="emergency-banner__inner" aria-hidden="true">
+      <div class="emergency-banner__inner">
         <span class="emergency-banner__message">
           <span class="emergency-indicator" aria-hidden="true"></span>
           In a crisis? Get immediate help now.
@@ -179,10 +175,10 @@
     </div>
   </header>
 <!-- MOBILE NAV OVERLAY -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" hidden></div>
 
   <!-- MOBILE NAV PANEL - Simplified -->
-  <nav class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile navigation" inert>
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile navigation" inert hidden>
     <div class="mobile-nav-header">
       <h2>Menu</h2>
       <button type="button" class="close-mobile-menu" aria-label="Close menu">
@@ -311,7 +307,7 @@
             <h3>First-Visit Process</h3>
             <p>See what usually happens before, during, and after the first consultation.</p>
             <span class="card-link">Learn More →</span>
-          
+
 
         </div>
       </div>
@@ -326,7 +322,7 @@
         </p>
         <div class="cta-group">
           <a href="book.html" class="button-primary button-large">Book an Appointment</a>
-          <a href="tel:+919667863295" class="button-outline button-large">Call Us Now</a>
+          <a href="tel:+919667863295" class="button-outline button-large">Call&nbsp;+91&nbsp;96678&nbsp;63295</a>
         </div>
       </div>
     </section>
@@ -337,7 +333,10 @@
 
   <script>
     // Year update
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
 
     // Form validation hook
     const contactForm = document.querySelector('.contact-form');

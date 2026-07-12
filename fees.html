@@ -1,4 +1,4 @@
-<!doctype html><html lang="en-IN" dir="ltr"><head>
+<!DOCTYPE html><html lang="en-IN" dir="ltr"><head>
   <base href="./">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50">
@@ -50,8 +50,8 @@
   <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iI2EzMTk3MSIvPjxwYXRoIGQ9Ik01MCAyMHYxMEwzNSA0NWwxNSAxNXYxMGgxMFY1NWwxNS0xNUw1MCAzMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&#x26;family=Playfair+Display:wght@600;700&#x26;display=swap">
 
   <!-- Stylesheets - Modular CSS Architecture -->
@@ -206,10 +206,10 @@
     </div>
   </header>
 <!-- MOBILE NAV OVERLAY -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" hidden></div>
 
   <!-- MOBILE NAV PANEL - Simplified -->
-  <nav class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile navigation" inert>
+  <nav class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile navigation" inert hidden>
     <div class="mobile-nav-header">
       <h2>Menu</h2>
       <button type="button" class="close-mobile-menu" aria-label="Close menu">
@@ -561,7 +561,7 @@
   \<script\>
     // Year update
     document.getElementById('year').textContent = new Date().getFullYear();
-  
+
 
 <!-- Year Update Script -->
 \<script\>

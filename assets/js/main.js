@@ -93,37 +93,38 @@ function initOpenGraphMeta() {
 
 // Network status indicator
 function initNetworkStatus() {
-  if (!document.body) {
-    console.warn('[Mind Grace] Body not ready for network status');
-    return;
-  }
-  
-  if (document.getElementById('network-status')) return;
-  
-  const statusEl = document.createElement('div');
-  statusEl.id = 'network-status';
-  statusEl.className = 'network-status';
-  statusEl.setAttribute('role', 'alert');
-  statusEl.setAttribute('aria-live', 'polite');
-  statusEl.innerHTML = `
-    <span class="network-status-icon">📡</span>
-    <span class="network-status-message">You're offline. Some features may be unavailable.</span>
-  `;
-  document.body.appendChild(statusEl);
-  
-  const updateStatus = () => {
-    if (navigator.onLine) {
-      statusEl.classList.remove('is-offline');
-      statusEl.classList.add('is-online');
-    } else {
-      statusEl.classList.remove('is-online');
-      statusEl.classList.add('is-offline');
-    }
+  const mount = () => {
+    if (!document.body || document.getElementById('network-status')) return;
+
+    const statusEl = document.createElement('div');
+    statusEl.id = 'network-status';
+    statusEl.className = 'network-status';
+    statusEl.setAttribute('role', 'alert');
+    statusEl.setAttribute('aria-live', 'polite');
+    statusEl.hidden = true;
+    statusEl.innerHTML = `
+      <span class="network-status-icon">📡</span>
+      <span class="network-status-message">You're offline. Some features may be unavailable.</span>
+    `;
+    document.body.appendChild(statusEl);
+
+    const updateStatus = () => {
+      const offline = !navigator.onLine;
+      statusEl.hidden = !offline;
+      statusEl.classList.toggle('is-online', !offline);
+      statusEl.classList.toggle('is-offline', offline);
+    };
+
+    window.addEventListener('online', updateStatus);
+    window.addEventListener('offline', updateStatus);
+    updateStatus();
   };
-  
-  window.addEventListener('online', updateStatus);
-  window.addEventListener('offline', updateStatus);
-  updateStatus();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount, { once: true });
+  } else {
+    mount();
+  }
 }
 
 // Global error boundary
