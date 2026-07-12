@@ -999,48 +999,165 @@
 }
 
 /* ==========================================================================
-   COMPONENTS - Emergency Banner
+   COMPONENTS - Emergency Banner (Pink-Themed, Anti-Card)
    ========================================================================== */
 @layer components {
   .emergency-banner {
-    background: linear-gradient(90deg, var(--rose-100), var(--rose-200) 50%, var(--rose-100));
-    color: var(--rose-700);
+    background: linear-gradient(
+      90deg,
+      oklch(95% 0.04 340 / 0.95),
+      oklch(90% 0.08 340 / 0.95) 50%,
+      oklch(95% 0.04 340 / 0.95)
+    );
+    color: oklch(44% 0.20 340);
     text-align: center;
-    font-size: var(--font-size-xs);
-    border-bottom: 1px solid var(--rose-200);
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    border-bottom: none;
     font-weight: 600;
     overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 8px oklch(52% 0.22 340 / 0.15);
+    backdrop-filter: blur(8px);
+  }
+
+  .emergency-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at 20% 50%,
+      oklch(52% 0.22 340 / 0.08) 0%,
+      transparent 50%
+    );
+    pointer-events: none;
+    animation: emergencyGlow 8s ease-in-out infinite;
+  }
+
+  @keyframes emergencyGlow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
   }
 
   .emergency-banner__marquee {
     display: flex;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
   }
 
   .emergency-banner__inner {
     width: fit-content;
     display: flex;
-    animation: marquee 15s linear infinite;
+    animation: marquee-scroll 20s linear infinite;
+    will-change: transform;
   }
 
-  .emergency-banner:hover .emergency-banner__inner {
+  .emergency-banner:hover .emergency-banner__inner,
+  .emergency-banner:focus-within .emergency-banner__inner {
     animation-play-state: paused;
   }
 
   .emergency-banner__message {
-    padding: var(--space-2) var(--space-6);
+    padding: var(--space-3) var(--space-8);
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .emergency-indicator {
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    background: oklch(58% 0.20 20);
+    border-radius: 50%;
+    animation: pulse-emergency 2s ease-in-out infinite;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 0 oklch(58% 0.20 20 / 0.7);
+  }
+
+  @keyframes pulse-emergency {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+      box-shadow: 0 0 0 0 oklch(58% 0.20 20 / 0.7);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.1);
+      box-shadow: 0 0 0 8px oklch(58% 0.20 20 / 0);
+    }
   }
 
   .emergency-banner a {
-    color: var(--rose-700);
+    color: oklch(44% 0.20 340);
     text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: all var(--transition-fast);
     font-weight: 700;
+    text-decoration-thickness: 2px;
+    text-decoration-color: oklch(52% 0.22 340 / 0.4);
   }
 
-  @keyframes marquee {
+  .emergency-banner a:hover,
+  .emergency-banner a:focus-visible {
+    color: oklch(38% 0.18 340);
+    text-decoration-color: oklch(52% 0.22 340);
+    outline: 2px solid oklch(52% 0.22 340);
+    outline-offset: 2px;
+    border-radius: 4px;
+    text-decoration-thickness: 2px;
+  }
+
+  @keyframes marquee-scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .emergency-banner__inner {
+      animation: none;
+      transform: translateX(0);
+    }
+    .emergency-banner__marquee {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .emergency-indicator {
+      animation: none;
+      opacity: 1;
+    }
+    .emergency-banner::before {
+      animation: none;
+      opacity: 0.5;
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (width <= 768px) {
+    .emergency-banner {
+      font-size: 0.8125rem;
+    }
+    .emergency-banner__message {
+      padding: var(--space-2) var(--space-4);
+    }
+  }
+
+  /* High Contrast Mode */
+  @media (forced-colors: active) {
+    .emergency-banner {
+      background: Canvas;
+      color: CanvasText;
+      border-bottom: 2px solid CanvasText;
+    }
+    .emergency-banner a {
+      color: LinkText;
+      text-decoration: underline;
+    }
+    .emergency-indicator {
+      background: Highlight;
+    }
   }
 }
 
