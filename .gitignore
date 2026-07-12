@@ -1,38 +1,50 @@
-# Examples 1:
-# Project with only source/config files - no build artifacts, dependencies, or temp files
-
-# Example 2:
-# Project with artifacts
+```
+# Compiled and build artifacts
 *.pyc
 __pycache__/
 *.o
 *.obj
 dist/
 build/
+target/
+
+# Dependencies
 .venv/
 venv/
 node_modules/
-*.tmp
-*.swp
-.env
-.env.local
-.env.*
-.vscode/
-.idea/
-*.log
-*.exe
-*.dll
-*.so
-*.a
-*.out
-target/
-.gradle/
+.julia/
+zig*/
 .mypy_cache/
 .pytest_cache/
-coverage/
-htmlcov/
+.gradle/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
 .DS_Store
 Thumbs.db
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# Compressed files
 *.zip
 *.gz
 *.tar
@@ -55,3 +67,4 @@ Thumbs.db
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+```
