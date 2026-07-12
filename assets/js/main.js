@@ -1,1 +1,518 @@
-function _initScrollProgress(){const e=document.querySelector(".scroll-progress");if(!e)return;let t=!1;const n=()=>{const n=window.scrollY,o=document.documentElement.scrollHeight-window.innerHeight,r=o>0?n/o*100:0;e.style.width=`${Math.min(r,100)}%`,t=!1};window.addEventListener("scroll",()=>{t||(window.requestAnimationFrame(n),t=!0)},{passive:!0}),n()}function _initOrientationAdapter(){if(!document.getElementById("orientation-adapter"))return;const e=window.matchMedia("(orientation: landscape) and (max-height: 500px)"),t=e=>{const t=new CustomEvent("orientationchange",{detail:{isLandscape:e.matches}});window.dispatchEvent(t),e.matches?(document.body.classList.add("is-landscape-mobile"),document.body.classList.remove("is-portrait-mobile")):(document.body.classList.add("is-portrait-mobile"),document.body.classList.remove("is-landscape-mobile"))};t(e),e.addEventListener("change",t)}function initOpenGraphMeta(){const e="/assets/images/og-default.jpg",t=document.title.split("|")[0].trim()||"Mind Grace Neuropsychiatric Clinic",n=document.querySelector('meta[name="description"]')?.content||"Compassionate, evidence-based neuropsychiatric care in India. Specialized treatment for anxiety, depression, ADHD, and more.";[{property:"og:title",content:`${t} | Mind Grace Neuropsychiatric Clinic`},{property:"og:description",content:n},{property:"og:image",content:e},{property:"og:url",content:document.querySelector('link[rel="canonical"]')?.href||window.location.href},{property:"og:type",content:"website"},{property:"og:locale",content:"en_IN"},{property:"og:site_name",content:"Mind Grace Neuropsychiatric Clinic"},{name:"twitter:card",content:"summary_large_image"},{name:"twitter:title",content:`${t} | Mind Grace`},{name:"twitter:description",content:n},{name:"twitter:image",content:e}].forEach(e=>{let t;if(e.property?t=document.querySelector(`meta[property="${e.property}"]`):e.name&&(t=document.querySelector(`meta[name="${e.name}"]`)),t)t.setAttribute("content",e.content);else{const t=document.createElement("meta");e.property&&t.setAttribute("property",e.property),e.name&&t.setAttribute("name",e.name),t.setAttribute("content",e.content),document.head.appendChild(t)}})}function initNetworkStatus(){if(!document.body)return void console.warn("[Mind Grace] Body not ready for network status toast");if(document.getElementById("network-status"))return;const e=document.createElement("div");e.id="network-status",e.className="network-status",e.setAttribute("role","alert"),e.setAttribute("aria-live","polite"),e.innerHTML='\n    <span class="network-status-icon">📡</span>\n    <span class="network-status-message">You\'re offline. Some features may be unavailable.</span>\n  ',document.body.appendChild(e);const t=()=>{navigator.onLine?(e.classList.remove("is-offline"),e.classList.add("is-online")):(e.classList.remove("is-online"),e.classList.add("is-offline"))};window.addEventListener("online",t),window.addEventListener("offline",t),t()}function initErrorBoundary(){window.addEventListener("error",e=>{console.error("[Mind Grace Error]",e.message,e.filename,e.lineno),"localhost"!==window.location.hostname&&e.preventDefault()}),window.addEventListener("unhandledrejection",e=>{console.error("[Mind Grace Unhandled Promise]",e.reason),"localhost"!==window.location.hostname&&e.preventDefault()})}function initSkipLink(){const e=document.querySelector(".skip-link"),t=document.getElementById("main-content");e&&t&&e.addEventListener("click",e=>{e.preventDefault(),t.setAttribute("tabindex","-1"),t.focus({preventScroll:!0}),t.addEventListener("blur",()=>{t.removeAttribute("tabindex")},{once:!0})})}document.addEventListener("DOMContentLoaded",()=>{const e={mobileNavTrigger:document.querySelector(".mobile-nav-trigger"),mobileNavPanel:document.getElementById("mobile-nav-panel"),mobileNavOverlay:document.getElementById("mobile-nav-overlay"),siteHeader:document.querySelector(".site-header"),reveals:document.querySelectorAll(".reveal"),accordionTriggers:document.querySelectorAll("[data-accordion-trigger]"),forms:document.querySelectorAll("form[novalidate]"),counters:document.querySelectorAll(".stat-number")};!function(e){const{mobileNavTrigger:t,mobileNavPanel:n,mobileNavOverlay:o}=e,r=n?.querySelector(".close-mobile-menu"),i=n?.querySelectorAll("a[href]")||[];if(!t||!n||!o)return;let a=!1,s=null;if("true"===localStorage.getItem("compact-nav-preference")&&window.innerWidth>=768){document.body.classList.add("compact-nav"),t.classList.add("force-show");const e=document.querySelector(".desktop-nav");e&&e.classList.add("force-hide")}const c=()=>{a&&(a=!1,t.setAttribute("aria-expanded","false"),n.classList.remove("active"),o.classList.remove("active"),n.setAttribute("inert",""),document.body.style.overflow="",s&&s.focus())};t.addEventListener("click",e=>{e.preventDefault(),a?c():(a=!0,s=document.activeElement,t.setAttribute("aria-expanded","true"),n.classList.add("active"),o.classList.add("active"),n.removeAttribute("inert"),document.body.style.overflow="hidden",r&&Promise.resolve().then(()=>r.focus()))}),o.addEventListener("click",c),r?.addEventListener("click",c),document.addEventListener("keydown",e=>{if("Escape"===e.key&&a&&c(),"Tab"===e.key&&a){const t=n.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),o=t[0],r=t[t.length-1];e.shiftKey&&document.activeElement===o?(e.preventDefault(),r.focus()):e.shiftKey||document.activeElement!==r||(e.preventDefault(),o.focus())}}),window.addEventListener("resize",()=>{window.innerWidth>=768&&a&&c()},{passive:!0}),i.forEach(e=>{e.addEventListener("click",()=>{c()})});const l=document.querySelector(".logo-link");l&&window.innerWidth>=768&&l.addEventListener("dblclick",e=>{e.preventDefault();const n=document.body.classList.toggle("compact-nav");localStorage.setItem("compact-nav-preference",n);const o=document.querySelector(".desktop-nav");n?(t.classList.add("force-show"),o&&o.classList.add("force-hide")):(t.classList.remove("force-show"),o&&o.classList.remove("force-hide"))})}(e),function(e){const{siteHeader:t}=e;if(!t)return;let n=!1;const o=()=>{t.classList.toggle("scrolled",window.scrollY>50),n=!1};o(),window.addEventListener("scroll",()=>{n||(requestAnimationFrame(o),n=!0)},{passive:!0})}(e),function(){const e=window.matchMedia("(prefers-reduced-motion: reduce)").matches;document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(t){const n=this.getAttribute("href");if(!n||"#"===n)return;const o=document.querySelector(n);o&&(t.preventDefault(),o.scrollIntoView({behavior:e?"auto":"smooth",block:"start"}))})})}(),function(){let e=!1;const t=()=>{document.documentElement.style.setProperty("--vw",`${window.innerWidth}px`),document.documentElement.style.setProperty("--vh",`${window.innerHeight}px`),e=!1};t();const n=()=>{e||(requestAnimationFrame(t),e=!0)};window.addEventListener("resize",n,{passive:!0}),window.visualViewport?.addEventListener("resize",n,{passive:!0})}(),function(e){const{accordionTriggers:t}=e;t.forEach(e=>{e.addEventListener("click",()=>{const n="true"===e.getAttribute("aria-expanded"),o=e.getAttribute("aria-controls"),r=document.getElementById(o);t.forEach(e=>{e.setAttribute("aria-expanded","false");const t=document.getElementById(e.getAttribute("aria-controls"));t&&(t.hidden=!0)}),!n&&r&&(e.setAttribute("aria-expanded","true"),r.hidden=!1)})})}(e),function(e){const{forms:t}=e,n=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;t.forEach(e=>{e.addEventListener("submit",t=>{t.preventDefault();let o=!0;const r=Array.from(e.querySelectorAll("[required]")),i=new Map;r.forEach(e=>{const t=e.value.trim(),n="email"===e.type;i.set(e,{value:t,isEmail:n,isValid:!0})}),r.forEach(e=>{const t=i.get(e);let r=!0;if(t.value?t.isEmail&&!n.test(t.value)&&(r=!1):r=!1,r)e.classList.remove("error"),e.parentNode.querySelector(".error-message")?.remove();else if(o=!1,e.classList.add("error"),!e.parentNode.querySelector(".error-message")){const n=document.createElement("span");n.className="error-message",n.textContent=t.isEmail&&t.value?"Please enter a valid email":"This field is required",n.style.cssText="color: var(--error); font-size: 0.75rem; margin-top: var(--space-xs); display: block;",e.parentNode.appendChild(n)}}),o&&console.log("Form submitted successfully")}),e.querySelectorAll("input, select, textarea").forEach(e=>{e.addEventListener("input",()=>{e.classList.remove("error"),e.parentNode.querySelector(".error-message")?.remove()})})})}(e),function(){const e=document.getElementById("year");e&&(e.textContent=(new Date).getFullYear())}(),function(e){const{counters:t}=e;if(!t.length||!("IntersectionObserver"in window))return;const n=new IntersectionObserver((e,t)=>{e.forEach(e=>{if(e.isIntersecting){const n=e.target,o=parseInt(n.getAttribute("data-target"),10)||100,r=2e3;let i=null;const a=e=>{i||(i=e);const t=Math.min((e-i)/r,1),s=1-(1-t)**4,c=Math.floor(s*o);n.innerText=`${c}+`,t<1?requestAnimationFrame(a):n.innerText=`${o}+`};requestAnimationFrame(a),t.unobserve(n)}})},{threshold:.5});t.forEach(e=>n.observe(e))}(e)}),function(){try{_initOrientationAdapter(),initNetworkStatus(),initOpenGraphMeta(),initErrorBoundary(),initSkipLink(),_initScrollProgress(),console.log("[Mind Grace] All modules initialized successfully")}catch(e){console.error("[Mind Grace Bootstrap Error]",e)}}();
+/**
+ * Mind Grace Neuropsychiatric Clinic - Main JavaScript Module
+ * Optimized for 2026 Web Standards
+ * Features: Core Web Vitals, WCAG 2.2 Accessibility, PWA Ready
+ */
+
+// RAF-throttled scroll handler for performance
+function _initScrollProgress() {
+  const progress = document.querySelector('.scroll-progress');
+  if (!progress) return;
+  
+  let ticking = false;
+  const updateProgress = () => {
+    const scrolled = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const percentage = max > 0 ? (scrolled / max) * 100 : 0;
+    progress.style.width = `${Math.min(percentage, 100)}%`;
+    ticking = false;
+  };
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateProgress);
+      ticking = true;
+    }
+  }, { passive: true });
+  
+  updateProgress();
+}
+
+// Orientation adapter for mobile layouts
+function _initOrientationAdapter() {
+  if (!document.getElementById('orientation-adapter')) return;
+  
+  const mediaQuery = window.matchMedia('(orientation: landscape) and (max-height: 500px)');
+  const handleOrientation = (e) => {
+    const event = new CustomEvent('orientationchange', { detail: { isLandscape: e.matches } });
+    window.dispatchEvent(event);
+    
+    if (e.matches) {
+      document.body.classList.add('is-landscape-mobile');
+      document.body.classList.remove('is-portrait-mobile');
+    } else {
+      document.body.classList.add('is-portrait-mobile');
+      document.body.classList.remove('is-landscape-mobile');
+    }
+  };
+  
+  handleOrientation(mediaQuery);
+  mediaQuery.addEventListener('change', handleOrientation);
+}
+
+// OpenGraph meta tags initialization
+function initOpenGraphMeta() {
+  const defaultImage = '/assets/images/og-default.jpg';
+  const pageTitle = document.title.split('|')[0].trim() || 'Mind Grace Neuropsychiatric Clinic';
+  const description = document.querySelector('meta[name="description"]')?.content || 
+    'Compassionate, evidence-based neuropsychiatric care in India.';
+  
+  const metaTags = [
+    { property: 'og:title', content: `${pageTitle} | Mind Grace Neuropsychiatric Clinic` },
+    { property: 'og:description', content: description },
+    { property: 'og:image', content: defaultImage },
+    { property: 'og:url', content: document.querySelector('link[rel="canonical"]')?.href || window.location.href },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:locale', content: 'en_IN' },
+    { property: 'og:site_name', content: 'Mind Grace Neuropsychiatric Clinic' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: `${pageTitle} | Mind Grace` },
+    { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: defaultImage }
+  ];
+  
+  metaTags.forEach(meta => {
+    let element;
+    if (meta.property) {
+      element = document.querySelector(`meta[property="${meta.property}"]`);
+    } else if (meta.name) {
+      element = document.querySelector(`meta[name="${meta.name}"]`);
+    }
+    
+    if (element) {
+      element.setAttribute('content', meta.content);
+    } else {
+      const newMeta = document.createElement('meta');
+      if (meta.property) newMeta.setAttribute('property', meta.property);
+      if (meta.name) newMeta.setAttribute('name', meta.name);
+      newMeta.setAttribute('content', meta.content);
+      document.head.appendChild(newMeta);
+    }
+  });
+}
+
+// Network status indicator
+function initNetworkStatus() {
+  if (!document.body) {
+    console.warn('[Mind Grace] Body not ready for network status');
+    return;
+  }
+  
+  if (document.getElementById('network-status')) return;
+  
+  const statusEl = document.createElement('div');
+  statusEl.id = 'network-status';
+  statusEl.className = 'network-status';
+  statusEl.setAttribute('role', 'alert');
+  statusEl.setAttribute('aria-live', 'polite');
+  statusEl.innerHTML = `
+    <span class="network-status-icon">📡</span>
+    <span class="network-status-message">You're offline. Some features may be unavailable.</span>
+  `;
+  document.body.appendChild(statusEl);
+  
+  const updateStatus = () => {
+    if (navigator.onLine) {
+      statusEl.classList.remove('is-offline');
+      statusEl.classList.add('is-online');
+    } else {
+      statusEl.classList.remove('is-online');
+      statusEl.classList.add('is-offline');
+    }
+  };
+  
+  window.addEventListener('online', updateStatus);
+  window.addEventListener('offline', updateStatus);
+  updateStatus();
+}
+
+// Global error boundary
+function initErrorBoundary() {
+  window.addEventListener('error', (e) => {
+    console.error('[Mind Grace Error]', e.message, e.filename, e.lineno);
+    if (window.location.hostname !== 'localhost') {
+      e.preventDefault();
+    }
+  });
+  
+  window.addEventListener('unhandledrejection', (e) => {
+    console.error('[Mind Grace Unhandled Promise]', e.reason);
+    if (window.location.hostname !== 'localhost') {
+      e.preventDefault();
+    }
+  });
+}
+
+// Skip link functionality
+function initSkipLink() {
+  const skipLink = document.querySelector('.skip-link');
+  const mainContent = document.getElementById('main-content');
+  
+  if (skipLink && mainContent) {
+    skipLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      mainContent.setAttribute('tabindex', '-1');
+      mainContent.focus({ preventScroll: true });
+      mainContent.addEventListener('blur', () => {
+        mainContent.removeAttribute('tabindex');
+      }, { once: true });
+    });
+  }
+}
+
+// Burger Menu with sleek dropdown - visible on ALL screens
+function initBurgerMenu() {
+  const burgerBtn = document.getElementById('burgerMenuBtn');
+  const navDropdown = document.getElementById('navDropdown');
+  
+  if (!burgerBtn || !navDropdown) return;
+  
+  let isOpen = false;
+  let lastFocusedElement = null;
+  const navLinks = navDropdown.querySelectorAll('a[href]');
+  
+  // Close menu function
+  const closeMenu = () => {
+    if (!isOpen) return;
+    isOpen = false;
+    burgerBtn.classList.remove('burger-btn--active');
+    navDropdown.classList.remove('nav-dropdown--active');
+    navDropdown.setAttribute('inert', '');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    
+    // Restore focus to burger button
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+  };
+  
+  // Open menu function
+  const openMenu = () => {
+    if (isOpen) return;
+    isOpen = true;
+    lastFocusedElement = document.activeElement;
+    burgerBtn.classList.add('burger-btn--active');
+    navDropdown.classList.add('nav-dropdown--active');
+    navDropdown.removeAttribute('inert');
+    burgerBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = '';
+    
+    // Focus first link after animation
+    setTimeout(() => {
+      if (navLinks.length > 0) {
+        navLinks[0].focus();
+      }
+    }, 300);
+  };
+  
+  // Toggle menu on burger click
+  burgerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+  
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (isOpen && !navDropdown.contains(e.target) && !burgerBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+  
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen) {
+      closeMenu();
+      burgerBtn.focus();
+    }
+    
+    // Focus trap within dropdown
+    if (e.key === 'Tab' && isOpen) {
+      const firstLink = navLinks[0];
+      const lastLink = navLinks[navLinks.length - 1];
+      
+      if (e.shiftKey && document.activeElement === firstLink) {
+        e.preventDefault();
+        lastLink.focus();
+      } else if (!e.shiftKey && document.activeElement === lastLink) {
+        e.preventDefault();
+        firstLink.focus();
+      }
+    }
+  });
+  
+  // Close when clicking a link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+  
+  // Handle resize
+  window.addEventListener('resize', () => {
+    if (isOpen) {
+      closeMenu();
+    }
+  }, { passive: true });
+}
+
+// Header scroll state with RAF throttling
+function initHeaderScroll() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  
+  let ticking = false;
+  
+  const updateHeader = () => {
+    header.classList.toggle('site-header--scrolled', window.scrollY > 50);
+    ticking = false;
+  };
+  
+  updateHeader();
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
+}
+
+// Smooth scroll for anchor links with reduced motion support
+function initSmoothScroll() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: prefersReducedMotion ? 'auto' : 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+}
+
+// Dynamic viewport units
+function initDynamicViewport() {
+  let ticking = false;
+  
+  const setViewportUnits = () => {
+    document.documentElement.style.setProperty('--vw', `${window.innerWidth}px`);
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+    ticking = false;
+  };
+  
+  setViewportUnits();
+  
+  const updateOnResize = () => {
+    if (!ticking) {
+      requestAnimationFrame(setViewportUnits);
+      ticking = true;
+    }
+  };
+  
+  window.addEventListener('resize', updateOnResize, { passive: true });
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', updateOnResize, { passive: true });
+  }
+}
+
+// Accordion functionality
+function initAccordions(accordionTriggers) {
+  accordionTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+      const controlsId = trigger.getAttribute('aria-controls');
+      const panel = document.getElementById(controlsId);
+      
+      // Close all accordions
+      accordionTriggers.forEach(t => {
+        t.setAttribute('aria-expanded', 'false');
+        const panelToClose = document.getElementById(t.getAttribute('aria-controls'));
+        if (panelToClose) panelToClose.hidden = true;
+      });
+      
+      // Open clicked accordion if it wasn't already open
+      if (!isExpanded && panel) {
+        trigger.setAttribute('aria-expanded', 'true');
+        panel.hidden = false;
+      }
+    });
+  });
+}
+
+// Form validation
+function initForms(forms) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  forms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isValid = true;
+      
+      const requiredFields = Array.from(form.querySelectorAll('[required]'));
+      const fieldData = new Map();
+      
+      // Collect field data
+      requiredFields.forEach(field => {
+        const value = field.value.trim();
+        const isEmail = field.type === 'email';
+        fieldData.set(field, { value, isEmail, isValid: true });
+      });
+      
+      // Validate fields
+      requiredFields.forEach(field => {
+        const data = fieldData.get(field);
+        let fieldValid = true;
+        
+        if (data.value) {
+          if (data.isEmail && !emailRegex.test(data.value)) {
+            fieldValid = false;
+          }
+        } else {
+          fieldValid = false;
+        }
+        
+        if (fieldValid) {
+          field.classList.remove('error');
+          const errorMsg = field.parentNode.querySelector('.error-message');
+          if (errorMsg) errorMsg.remove();
+        } else {
+          isValid = false;
+          field.classList.add('error');
+          
+          if (!field.parentNode.querySelector('.error-message')) {
+            const errorMsg = document.createElement('span');
+            errorMsg.className = 'error-message';
+            errorMsg.textContent = data.isEmail && data.value 
+              ? 'Please enter a valid email' 
+              : 'This field is required';
+            errorMsg.style.cssText = 'color: var(--color-error); font-size: 0.75rem; margin-top: var(--space-xs); display: block;';
+            field.parentNode.appendChild(errorMsg);
+          }
+        }
+      });
+      
+      if (isValid) {
+        console.log('Form submitted successfully');
+        // form.submit(); // Uncomment for production
+      }
+    });
+    
+    // Clear errors on input
+    form.querySelectorAll('input, select, textarea').forEach(field => {
+      field.addEventListener('input', () => {
+        field.classList.remove('error');
+        const errorMsg = field.parentNode.querySelector('.error-message');
+        if (errorMsg) errorMsg.remove();
+      });
+    });
+  });
+}
+
+// Counter animations with Intersection Observer
+function initCounters(counters) {
+  if (!counters.length || !('IntersectionObserver' in window)) return;
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = parseInt(counter.getAttribute('data-target'), 10) || 100;
+        const duration = 2000;
+        let startTime = null;
+        
+        const animate = (currentTime) => {
+          if (!startTime) startTime = currentTime;
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+          const current = Math.floor(easeOutQuart * target);
+          counter.innerText = `${current}+`;
+          
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            counter.innerText = `${target}+`;
+          }
+        };
+        
+        requestAnimationFrame(animate);
+        observer.unobserve(counter);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  counters.forEach(counter => observer.observe(counter));
+}
+
+// Update footer year
+function updateFooterYear() {
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+}
+
+// Initialize all modules on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = {
+    burgerMenuBtn: document.getElementById('burgerMenuBtn'),
+    navDropdown: document.getElementById('navDropdown'),
+    siteHeader: document.querySelector('.site-header'),
+    reveals: document.querySelectorAll('.reveal'),
+    accordionTriggers: document.querySelectorAll('[data-accordion-trigger]'),
+    forms: document.querySelectorAll('form[novalidate]'),
+    counters: document.querySelectorAll('.stat-number')
+  };
+  
+  // Initialize burger menu
+  initBurgerMenu();
+  
+  // Initialize header scroll
+  initHeaderScroll();
+  
+  // Initialize smooth scroll
+  initSmoothScroll();
+  
+  // Initialize dynamic viewport
+  initDynamicViewport();
+  
+  // Initialize accordions
+  initAccordions(elements.accordionTriggers);
+  
+  // Initialize forms
+  initForms(elements.forms);
+  
+  // Update footer year
+  updateFooterYear();
+  
+  // Initialize counters
+  initCounters(elements.counters);
+});
+
+// Bootstrap all modules
+(function bootstrap() {
+  try {
+    _initOrientationAdapter();
+    initNetworkStatus();
+    initOpenGraphMeta();
+    initErrorBoundary();
+    initSkipLink();
+    _initScrollProgress();
+    console.log('[Mind Grace] All modules initialized successfully');
+  } catch (error) {
+    console.error('[Mind Grace Bootstrap Error]', error);
+  }
+})();
