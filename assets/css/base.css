@@ -693,36 +693,81 @@
   .burger-btn {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    background: oklch(100% 0 0 / 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid oklch(52% 0.22 340 / 0.2);
+    border-radius: var(--radius-lg);
     cursor: pointer;
-    padding: var(--space-2);
     z-index: 1001;
     touch-action: manipulation;
+    transition: all var(--duration-base) var(--ease-out);
+    min-height: var(--touch-target-comfortable);
+    min-width: var(--touch-target-comfortable);
+  }
+
+  .burger-btn:hover,
+  .burger-btn:focus-visible {
+    background: oklch(52% 0.22 340 / 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px oklch(52% 0.22 340 / 0.2);
+    outline: none;
   }
 
   .burger-btn span {
     display: block;
-    width: 28px;
-    height: 2.5px;
-    background: var(--color-primary);
-    border-radius: 3px;
-    transition: all var(--duration-base) var(--ease-out);
-    transform-origin: center;
+    width: 24px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--pink-500), var(--pink-700));
+    border-radius: 2px;
+    transition: all 0.3s var(--ease-out);
+    transform-origin: left center;
+    box-shadow: 0 1px 3px oklch(52% 0.22 340 / 0.3);
+  }
+
+  .burger-btn--active {
+    background: oklch(52% 0.22 340 / 0.15);
+    border-color: var(--color-primary);
   }
 
   .burger-btn--active span:nth-child(1) {
-    transform: translateY(7.5px) rotate(45deg);
+    transform: rotate(45deg) translate(4px, 4px);
+    width: 24px;
+    background: linear-gradient(90deg, var(--pink-600), var(--rose-500));
   }
 
   .burger-btn--active span:nth-child(2) {
     opacity: 0;
     transform: translateX(-10px);
+    width: 0;
   }
 
   .burger-btn--active span:nth-child(3) {
-    transform: translateY(-7.5px) rotate(-45deg);
+    transform: rotate(-45deg) translate(4px, -5px);
+    width: 24px;
+    background: linear-gradient(90deg, var(--rose-500), var(--pink-600));
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .burger-btn {
+      background: oklch(20% 0.08 340 / 0.5);
+      border-color: oklch(30% 0.08 340 / 0.3);
+    }
+
+    .burger-btn:hover,
+    .burger-btn:focus-visible {
+      background: oklch(25% 0.08 340 / 0.8);
+    }
+
+    .burger-btn--active {
+      background: oklch(30% 0.1 340 / 0.6);
+    }
   }
 }
 

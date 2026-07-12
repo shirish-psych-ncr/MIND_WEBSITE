@@ -79,12 +79,8 @@
     
     <!-- Critical Inline CSS for Navigation & Above-the-fold (matches base.css) -->
     <style>
-      /* Burger Button - visible on ALL screens with pink bars */
-      .burger-btn{display:flex;flex-direction:column;justify-content:center;gap:6px;width:40px;height:40px;padding:8px;z-index:1001;touch-action:manipulation}
-      .burger-btn span{display:block;width:100%;height:2px;background:var(--pink-600);border-radius:2px;transition:transform 0.3s var(--ease-out),opacity 0.3s var(--ease-out),width 0.3s var(--ease-out);transform-origin:left center}
-      .burger-btn--active span:nth-child(1){transform:rotate(45deg) translate(4px,4px);width:100%}
-      .burger-btn--active span:nth-child(2){opacity:0;width:0%}
-      .burger-btn--active span:nth-child(3){transform:rotate(-45deg) translate(4px,-5px);width:100%}
+      /* Burger Button - visible on ALL screens with pink gradient bars */
+      .burger-btn{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:48px;height:48px;padding:8px;background:oklch(100% 0 0 / 0.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid oklch(52% 0.22 340 / 0.2);border-radius:var(--radius-lg);cursor:pointer;z-index:1001;touch-action:manipulation;transition:all var(--duration-base) var(--ease-out);min-height:var(--touch-target-comfortable);min-width:var(--touch-target-comfortable)}.burger-btn:hover,.burger-btn:focus-visible{background:oklch(52% 0.22 340 / 0.1);border-color:var(--color-primary);box-shadow:0 4px 12px oklch(52% 0.22 340 / 0.2);outline:none}.burger-btn span{display:block;width:24px;height:2px;background:linear-gradient(90deg,var(--pink-500),var(--pink-700));border-radius:2px;transition:all 0.3s var(--ease-out);transform-origin:left center;box-shadow:0 1px 3px oklch(52% 0.22 340 / 0.3)}.burger-btn--active{background:oklch(52% 0.22 340 / 0.15);border-color:var(--color-primary)}.burger-btn--active span:nth-child(1){transform:rotate(45deg) translate(4px,4px);width:24px;background:linear-gradient(90deg,var(--pink-600),var(--rose-500))}.burger-btn--active span:nth-child(2){opacity:0;transform:translateX(-10px);width:0}.burger-btn--active span:nth-child(3){transform:rotate(-45deg) translate(4px,-5px);width:24px;background:linear-gradient(90deg,var(--rose-500),var(--pink-600))}@media(prefers-color-scheme:dark){.burger-btn{background:oklch(20% 0.08 340 / 0.5);border-color:oklch(30% 0.08 340 / 0.3)}.burger-btn:hover,.burger-btn:focus-visible{background:oklch(25% 0.08 340 / 0.8)}.burger-btn--active{background:oklch(30% 0.1 340 / 0.6)}}
       
       /* Sleek Compact Dropdown - Opens BELOW header (not behind) */
       .nav-dropdown{position:absolute;top:var(--header-height);right:clamp(1rem,5vw,2rem);width:calc(100% - clamp(2rem,10vw,4rem));max-width:420px;background:oklch(100% 0 0 / 0.95);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid var(--color-border-primary);border-radius:var(--radius-lg);box-shadow:var(--shadow-xl),0 0 0 1px oklch(52% 0.22 340 / 0.1);transform-origin:top right;transform:translateY(-12px) scale(0.97);opacity:0;visibility:hidden;transition:opacity 0.3s var(--ease-out),transform 0.3s var(--ease-out),visibility 0.3s;padding:var(--space-5);z-index:999}
@@ -103,7 +99,10 @@
       
       @media(max-width:600px){
         .logo-tagline{display:none}
-        .logo-text{font-size:clamp(1rem,2vw,1.4rem)}
+        .logo-text{font-size:clamp(0.9rem,3vw,1.2rem)}
+        .burger-btn{width:44px;height:44px}
+        .burger-btn span{width:20px}
+        .burger-btn--active span:nth-child(1),.burger-btn--active span:nth-child(3){width:20px}
       }
       
       /* Skip Link */
@@ -142,7 +141,7 @@
     
     <!-- Header -->
     <header class="site-header">
-        <div class="container flex--between">
+        <div class="header-inner">
             <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
                 <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60" fetchpriority="high">
                 <div>
