@@ -535,7 +535,7 @@
     transition: all var(--duration-base) var(--ease-out);
     box-shadow: var(--shadow-sm);
     content-visibility: auto;
-    contain-intrinsic-size: 0 300px;
+    contain-intrinsic-size: auto 300px;
   }
 
   .card:hover {
@@ -919,7 +919,7 @@
     transition: all var(--duration-slow) var(--ease-out);
     box-shadow: var(--shadow-sm);
     content-visibility: auto;
-    contain-intrinsic-size: 0 300px;
+    contain-intrinsic-size: auto 300px;
   }
 
   .service-item:hover {
