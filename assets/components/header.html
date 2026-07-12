@@ -1,39 +1,73 @@
 <!-- ============================================
-     SITE HEADER (v2.0)
+     SITE HEADER (v3.0 - 2026 Pink Anti-Card Design)
      Mind Grace Neuropsychiatric Clinic
-     Calm Editorial Design System
-     ============================================ --><html><head></head><body><header class="site-header">
+     Universal Burger Menu | Glassmorphism | OKLCH Pink Theme
+     ============================================ -->
+<header class="site-header" role="banner">
   <div class="header-inner">
-    <!-- Logo -->
+    <!-- Logo Section -->
     <a href="index.html" class="logo-link" aria-label="Mind Grace Home">
-      <img loading="eager" fetchpriority="high" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60">
-      <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
+      <img 
+        loading="eager" 
+        fetchpriority="high" 
+        decoding="async" 
+        src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" 
+        alt="Mind Grace Neuropsychiatric Clinic Logo" 
+        class="logo-img" 
+        width="180" 
+        height="60"
+      >
+      <div class="logo-text">
+        <span class="logo-name">Mind Grace</span>
+        <span class="logo-sub">Neuropsychiatric Clinic</span>
+      </div>
       <div class="logo-tagline">Where You Come First</div>
     </a>
 
-    <!-- Desktop Navigation -->
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="location.html">Location</a></li>
-        <li><a href="book.html" class="cta-button">Book Now</a></li>
-      </ul>
-    </nav>
-
-    <!-- Mobile Controls -->
-    <button class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
-      <span></span>
-      <span></span>
-      <span></span>
+    <!-- Universal Burger Menu (Visible on ALL devices) -->
+    <button 
+      class="burger-toggle" 
+      id="burgerToggle"
+      aria-label="Toggle navigation menu" 
+      aria-expanded="false" 
+      aria-controls="nav-panel"
+      aria-haspopup="true"
+    >
+      <span class="burger-line burger-line-1"></span>
+      <span class="burger-line burger-line-2"></span>
+      <span class="burger-line burger-line-3"></span>
     </button>
-
-    <!-- Mobile Book Button -->
-    <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">
-      <i data-lucide="calendar" aria-hidden="true"></i>
-    </a>
   </div>
 </header>
-</body></html>
+
+<!-- Navigation Panel (Dropdown below header) -->
+<div 
+  class="nav-panel" 
+  id="navPanel"
+  role="dialog" 
+  aria-label="Main navigation"
+  aria-modal="true"
+  inert
+>
+  <nav class="nav-content">
+    <ul class="nav-list">
+      <li><a href="about.html" class="nav-link"><span>About</span></a></li>
+      <li><a href="services.html" class="nav-link"><span>Services</span></a></li>
+      <li><a href="process.html" class="nav-link"><span>Process</span></a></li>
+      <li><a href="resources.html" class="nav-link"><span>Resources</span></a></li>
+      <li><a href="location.html" class="nav-link"><span>Location</span></a></li>
+      <li><a href="doctors.html" class="nav-link"><span>Our Team</span></a></li>
+      <li><a href="conditions.html" class="nav-link"><span>Conditions</span></a></li>
+      <li><a href="approach.html" class="nav-link"><span>Approach</span></a></li>
+      <li><a href="mind-grace.html" class="nav-link"><span>Mind Grace</span></a></li>
+      <li><a href="gallery.html" class="nav-link"><span>Gallery</span></a></li>
+      <li><a href="testimonials.html" class="nav-link"><span>Testimonials</span></a></li>
+      <li><a href="faq.html" class="nav-link"><span>FAQ</span></a></li>
+      <li><a href="fees.html" class="nav-link"><span>Fees</span></a></li>
+      <li><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
+      <li><a href="emergency.html" class="nav-link nav-link--urgent"><span>Emergency</span></a></li>
+      <li class="nav-divider"></li>
+      <li><a href="book.html" class="nav-link nav-link--cta"><span>Book Appointment</span></a></li>
+    </ul>
+  </nav>
+</div>

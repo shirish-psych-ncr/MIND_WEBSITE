@@ -516,3 +516,142 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('[Mind Grace Bootstrap Error]', error);
   }
 })();
+
+/**
+ * Burger Menu Toggle with Focus Trap (v3.0)
+ * Universal burger menu for all devices with WCAG 2.2 compliance
+ */
+function _initBurgerMenu() {
+  const burgerToggle = document.getElementById('burgerToggle');
+  const navPanel = document.getElementById('navPanel');
+  
+  if (!burgerToggle || !navPanel) return;
+  
+  let isMenuOpen = false;
+  let previouslyFocusedElement = null;
+  
+  // Get all focusable elements in the nav panel
+  const getFocusableElements = () => {
+    const focusableSelectors = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    return Array.from(navPanel.querySelectorAll(focusableSelectors));
+  };
+  
+  // Open menu
+  const openMenu = () => {
+    previouslyFocusedElement = document.activeElement;
+    isMenuOpen = true;
+    
+    burgerToggle.setAttribute('aria-expanded', 'true');
+    navPanel.removeAttribute('inert');
+    navPanel.classList.add('is-open');
+    navPanel.setAttribute('aria-expanded', 'true');
+    
+    // Focus first link after animation
+    setTimeout(() => {
+      const firstLink = navPanel.querySelector('.nav-link');
+      if (firstLink) firstLink.focus();
+    }, 150);
+    
+    document.body.style.overflow = 'hidden';
+  };
+  
+  // Close menu
+  const closeMenu = () => {
+    isMenuOpen = false;
+    
+    burgerToggle.setAttribute('aria-expanded', 'false');
+    navPanel.setAttribute('inert', '');
+    navPanel.classList.remove('is-open');
+    navPanel.removeAttribute('aria-expanded');
+    
+    // Return focus to burger button
+    if (previouslyFocusedElement) {
+      previouslyFocusedElement.focus();
+    } else {
+      burgerToggle.focus();
+    }
+    
+    document.body.style.overflow = '';
+  };
+  
+  // Toggle handler
+  const handleToggle = () => {
+    if (isMenuOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+  
+  // Keyboard navigation with focus trap
+  const handleKeydown = (e) => {
+    if (!isMenuOpen) return;
+    
+    const focusableElements = getFocusableElements();
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    
+    // Escape key closes menu
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeMenu();
+      return;
+    }
+    
+    // Tab key traps focus within menu
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        // Shift+Tab: If on first element, wrap to last
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        // Tab: If on last element, wrap to first
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    }
+  };
+  
+  // Click outside to close
+  const handleClickOutside = (e) => {
+    if (!isMenuOpen) return;
+    
+    const isClickInsideBurger = burgerToggle.contains(e.target);
+    const isClickInsidePanel = navPanel.contains(e.target);
+    
+    if (!isClickInsideBurger && !isClickInsidePanel) {
+      closeMenu();
+    }
+  };
+  
+  // Event listeners
+  burgerToggle.addEventListener('click', handleToggle);
+  document.addEventListener('keydown', handleKeydown);
+  document.addEventListener('click', handleClickOutside);
+  
+  // Close on resize if open
+  window.addEventListener('resize', () => {
+    if (isMenuOpen && window.innerWidth > 768) {
+      closeMenu();
+    }
+  });
+}
+
+// Initialize all modules when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    _initScrollProgress();
+    _initOrientationAdapter();
+    initOpenGraphMeta();
+    _initBurgerMenu();
+  });
+} else {
+  _initScrollProgress();
+  _initOrientationAdapter();
+  initOpenGraphMeta();
+  _initBurgerMenu();
+}
