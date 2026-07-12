@@ -582,75 +582,103 @@
     }
   }
 
+  /* Sleek Compact Dropdown Panel - Opens BELOW header on ALL screens */
   .nav-dropdown {
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: oklch(100% 0 0 / 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: var(--shadow-lg);
-    padding: var(--space-6);
-    transform: translateY(-10px);
+    top: calc(var(--header-height) + 0px); /* Exactly below header */
+    left: auto;
+    right: clamp(1rem, 5vw, 2rem); /* Align with header padding */
+    width: calc(100% - clamp(2rem, 10vw, 4rem));
+    max-width: 420px; /* Compact width */
+    
+    /* Glassmorphism with pink tint */
+    background: oklch(100% 0 0 / 0.95);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: 
+      var(--shadow-xl),
+      0 0 0 1px oklch(52% 0.22 340 / 0.1); /* Pink-tinted border glow */
+    
+    /* Animation from top-right */
+    transform-origin: top right;
+    transform: translateY(-12px) scale(0.97);
     opacity: 0;
     visibility: hidden;
-    transition: all var(--duration-base) var(--ease-out);
-    max-height: 0;
-    overflow: hidden;
-    z-index: 999;
+    
+    transition: 
+      opacity var(--duration-base) var(--ease-out),
+      transform var(--duration-base) var(--ease-out),
+      visibility var(--duration-base);
+    
+    padding: var(--space-5);
+    z-index: 999; /* Below burger button (1001) */
   }
 
   @media (prefers-color-scheme: dark) {
     .nav-dropdown {
-      background: oklch(15% 0.05 340 / 0.98);
+      background: oklch(15% 0.05 340 / 0.96);
+      border-color: oklch(30% 0.08 340);
     }
   }
 
   .nav-dropdown--active {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
     visibility: visible;
-    max-height: 80vh;
-    overflow-y: auto;
   }
 
   .nav-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-2);
   }
 
   .nav-link {
     display: block;
-    padding: var(--space-3) 0;
-    font-size: var(--font-size-lg);
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-base);
     font-weight: 500;
     color: var(--color-text-secondary);
     text-decoration: none;
+    border-radius: var(--radius-md);
     transition: all var(--duration-fast) var(--ease-out);
     position: relative;
+    overflow: hidden;
   }
 
+  /* Pink underline hover effect */
   .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: var(--space-2);
+    left: var(--space-4);
     width: 0;
     height: 2px;
     background: var(--gradient-pink);
+    border-radius: var(--radius-full);
     transition: width var(--duration-base) var(--ease-out);
   }
 
-  .nav-link:hover {
+  .nav-link:hover,
+  .nav-link:focus-visible {
     color: var(--color-text-accent);
-    transform: translateX(var(--space-2));
+    background: var(--pink-100);
   }
 
-  .nav-link:hover::after {
-    width: 40px;
+  @media (prefers-color-scheme: dark) {
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      background: oklch(25% 0.08 340);
+    }
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    width: calc(100% - var(--space-8));
   }
 
   .burger-btn {
