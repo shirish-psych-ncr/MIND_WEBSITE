@@ -253,7 +253,7 @@ body.compact-nav .mobile-nav-trigger{display:flex}
 }
 
 .hero{
-  padding-block:var(--space-20) var(--space-16);
+  padding-block:var(--space-12) var(--space-10);
   padding-inline:var(--space-6);
   width:var(--container-content);
   margin:0 auto;
@@ -385,7 +385,7 @@ body.compact-nav .mobile-nav-trigger{display:flex}
 }
 
 .main-section{
-  padding-block:var(--space-16);
+  padding-block:var(--space-12);
   padding-inline:var(--space-6);
   background:transparent;
 }
@@ -434,13 +434,13 @@ body.compact-nav .mobile-nav-trigger{display:flex}
 }
 
 .emotional-cta{
-  padding-block:var(--space-16);
+  padding-block:var(--space-12);
   padding-inline:var(--space-6);
   background:linear-gradient(135deg,var(--pink-100) 0%,var(--pink-50) 20%,var(--rose-50) 40%,var(--pink-100) 60%,var(--pink-200) 80%,var(--pink-100) 100%);
   background-size:200% 200%;
   animation:pink-gradient-shift 15s ease infinite;
   border-radius:var(--radius-2xl);
-  margin-block:var(--space-12) auto;
+  margin-block:var(--space-8) auto;
   width:var(--container-content);
   text-align:center;
   box-shadow:var(--shadow-md),0 0 0 1px oklch(52% 0.22 340 / 0.1);
@@ -492,7 +492,7 @@ body.compact-nav .mobile-nav-trigger{display:flex}
   background-size:100% 200%;
   animation:footer-pink-shift 20s ease-in-out infinite;
   color:var(--pink-100);
-  padding-block:var(--space-16);
+  padding-block:var(--space-12);
   padding-inline:var(--space-6);
   width:100%;
   position:relative;
