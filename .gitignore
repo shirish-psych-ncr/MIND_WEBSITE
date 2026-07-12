@@ -1,11 +1,26 @@
 # Examples 1:
-# Project contains only source/config files (.css in this case)
-# No build artifacts, dependencies, or temp files detected
-# Therefore output remains empty
 
-# Example 2:
-# Even though .env.local was detected, since the change list shows only CSS files
-# and no other artifacts, we maintain the empty output
-
-# Final output for the given input:
-# (empty - no content output)
+# Example 2 (Project with artifacts):
+*.pyc
+pycache/
+*.o
+*.obj
+dist/
+build/
+#Dependencies
+.venv/
+venv/
+node_modules/
+#Logs and temp files
+*.log
+*.tmp
+*.swp
+#Environment
+.env
+.env.local
+.env.
+#Editors
+.vscode/
+.idea/
+#Original rules preserved
+*.log
