@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0d9488">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f766e">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ec4899">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#be185d">
     <meta name="color-scheme" content="light dark">
     <meta name="author" content="Mind Grace Neuropsychiatric Clinic">
     <meta name="publisher" content="Mind Grace Neuropsychiatric Clinic">
@@ -44,35 +44,34 @@
     <style>
       *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
       :root{
-        --teal-50:#f0fdfa;--teal-100:#ccfbf1;--teal-200:#99f6e4;--teal-300:#5eead4;--teal-400:#2dd4bf;--teal-500:#14b8a6;--teal-600:#0d9488;--teal-700:#0f766e;--teal-800:#115e59;--teal-900:#134e4a;
-        --sky-50:#f0f9ff;--sky-100:#e0f2fe;--sky-200:#bae6fd;--sky-300:#7dd3fc;--sky-400:#38bdf8;--sky-500:#0ea5e9;--sky-600:#0284c7;--sky-700:#0369a1;
+        --pink-50:#fdf2f8;--pink-100:#fce7f3;--pink-200:#fbcfe8;--pink-300:#f9a8d4;--pink-400:#f472b6;--pink-500:#ec4899;--pink-600:#db2777;--pink-700:#be185d;--pink-800:#9d174d;--pink-900:#831843;
+        --rose-50:#fff1f2;--rose-100:#ffe4e6;--rose-200:#fecdd3;--rose-300:#fda4af;--rose-400:#fb7185;--rose-500:#f43f5e;
         --slate-50:#f8fafc;--slate-100:#f1f5f9;--slate-200:#e2e8f0;--slate-300:#cbd5e1;--slate-400:#94a3b8;--slate-500:#64748b;--slate-600:#475569;--slate-700:#334155;--slate-800:#1e293b;--slate-900:#0f172a;
-        --amber-50:#fffbeb;--amber-100:#fef3c7;--amber-200:#fde68a;--amber-300:#fcd34d;--amber-400:#fbbf24;
-        --rose-50:#fff1f2;--rose-100:#ffe4e6;--rose-200:#fecdd3;--rose-300:#fda4af;
+        --amber-50:#fffbeb;--amber-100:#fef3c7;--amber-200:#fde68a;--amber-300:#fcd34d;
         --font-sans:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
         --font-serif:'Cormorant Garamond',Georgia,serif;
-        --gradient-ocean:linear-gradient(135deg,#f0fdfa 0%,#e0f2fe 25%,#ccfbf1 50%,#f0f9ff 75%,#fffbeb 100%);
-        --gradient-warm:linear-gradient(180deg,#fffbeb 0%,#fef3c7 50%,#f0fdfa 100%);
-        --gradient-teal:linear-gradient(135deg,#0d9488 0%,#14b8a6 50%,#2dd4bf 100%);
-        --gradient-sky:linear-gradient(135deg,#0ea5e9 0%,#38bdf8 50%,#7dd3fc 100%);
-        --gradient-sunset:linear-gradient(135deg,#fcd34d 0%,#fda4af 50%,#fde68a 100%);
-        --shadow-soft:0 8px 32px rgba(13,148,136,0.08);
-        --shadow-medium:0 12px 48px rgba(13,148,136,0.12);
-        --shadow-deep:0 20px 80px rgba(13,148,136,0.16);
+        --gradient-blush:linear-gradient(135deg,#fdf2f8 0%,#fce7f3 25%,#fff1f2 50%,#fef2f2 75%,#fdf2f8 100%);
+        --gradient-sunset:linear-gradient(180deg,#fff1f2 0%,#fce7f3 50%,#fdf2f8 100%);
+        --gradient-pink:linear-gradient(135deg,#ec4899 0%,#f472b6 50%,#fb7185 100%);
+        --gradient-rose:linear-gradient(135deg,#f43f5e 0%,#fb7185 50%,#fda4af 100%);
+        --gradient-warm:linear-gradient(135deg,#fcd34d 0%,#fda4af 50%,#fde68a 100%);
+        --shadow-soft:0 8px 32px rgba(236,72,153,0.08);
+        --shadow-medium:0 12px 48px rgba(236,72,153,0.12);
+        --shadow-deep:0 20px 80px rgba(236,72,153,0.16);
         --radius-gentle:12px;--radius-round:24px;--radius-full:9999px;
         --ease-out: cubic-bezier(0.215,0.61,0.355,1);
         --ease-in-out: cubic-bezier(0.645,0.045,0.355,1);
       }
       @media(prefers-color-scheme:dark){
         :root{
-          --gradient-ocean:linear-gradient(135deg,#0f172a 0%,#1e293b 25%,#115e59 50%,#0f172a 75%,#134e4a 100%);
-          --gradient-warm:linear-gradient(180deg,#1e293b 0%,#334155 50%,#0f172a 100%);
+          --gradient-blush:linear-gradient(135deg,#0f172a 0%,#1e293b 25%,#831843 50%,#0f172a 75%,#9d174d 100%);
+          --gradient-sunset:linear-gradient(180deg,#1e293b 0%,#334155 50%,#0f172a 100%);
         }
       }
       html{scroll-behavior:smooth;font-size:clamp(15px,1.6vw,18px)}
       body{
         font-family:var(--font-sans);
-        background:var(--gradient-ocean);
+        background:var(--gradient-blush);
         color:var(--slate-700);
         line-height:1.7;
         min-height:100dvh;
@@ -86,17 +85,16 @@
       
       /* Ambient Background Orbs */
       .ambient-orb{
-        position:fixed;border-radius:50%;filter:blur(80px);opacity:0.5;pointer-events:none;z-index:0;
-        animation:orbFloat 20s ease-in-out infinite;
+        position:fixed;border-radius:50%;filter:blur(100px);opacity:0.4;pointer-events:none;z-index:0;
+        animation:orbFloat 25s ease-in-out infinite;
       }
-      .ambient-orb--1{width:600px;height:600px;background:var(--teal-200);top:-200px;left:-200px;animation-delay:0s}
-      .ambient-orb--2{width:500px;height:500px;background:var(--sky-200);bottom:-150px;right:-150px;animation-delay:-7s}
-      .ambient-orb--3{width:400px;height:400px;background:var(--amber-200);top:50%;left:50%;transform:translate(-50%,-50%);animation-delay:-14s;opacity:0.3}
+      .ambient-orb--1{width:700px;height:700px;background:radial-gradient(circle,var(--pink-300) 0%,transparent 70%);top:-300px;left:-300px;animation-delay:0s}
+      .ambient-orb--2{width:600px;height:600px;background:radial-gradient(circle,var(--rose-300) 0%,transparent 70%);bottom:-250px;right:-250px;animation-delay:-8s}
+      .ambient-orb--3{width:500px;height:500px;background:radial-gradient(circle,var(--amber-200) 0%,transparent 70%);top:40%;left:60%;transform:translate(-50%,-50%);animation-delay:-16s;opacity:0.25}
       @keyframes orbFloat{
         0%,100%{transform:translate(0,0) scale(1)}
-        25%{transform:translate(30px,-30px) scale(1.05)}
-        50%{transform:translate(-20px,20px) scale(0.95)}
-        75%{transform:translate(20px,30px) scale(1.02)}
+        33%{transform:translate(40px,-40px) scale(1.08)}
+        66%{transform:translate(-30px,30px) scale(0.92)}
       }
       @media(prefers-reduced-motion:reduce){
         .ambient-orb{animation:none}
@@ -105,12 +103,12 @@
       /* Typography */
       h1,h2,h3,h4{font-family:var(--font-serif);font-weight:500;line-height:1.2;color:var(--slate-800)}
       @media(prefers-color-scheme:dark){h1,h2,h3,h4{color:var(--slate-100)}}
-      h1{font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-0.02em}
-      h2{font-size:clamp(2rem,5vw,3.5rem)}
-      h3{font-size:clamp(1.5rem,3vw,2.25rem)}
-      p{max-width:65ch}
+      h1{font-size:clamp(2.8rem,7vw,5.5rem);letter-spacing:-0.02em;line-height:1.1}
+      h2{font-size:clamp(2.2rem,5.5vw,4rem)}
+      h3{font-size:clamp(1.6rem,3.5vw,2.5rem)}
+      p{max-width:70ch}
       .text-gradient{
-        background:var(--gradient-teal);
+        background:var(--gradient-pink);
         -webkit-background-clip:text;
         -webkit-text-fill-color:transparent;
         background-clip:text;
@@ -118,60 +116,129 @@
       
       /* Layout */
       .container{width:min(90%,1400px);margin-inline:auto;padding-inline:clamp(1.5rem,4vw,3rem)}
-      .section{padding-block:clamp(4rem,10vw,8rem);position:relative;z-index:1}
+      .section{padding-block:clamp(5rem,12vw,10rem);position:relative;z-index:1}
       
       /* Navigation */
       .site-header{
         position:sticky;top:0;z-index:1000;
-        padding-block:1rem;
-        transition:background 0.3s var(--ease-out),box-shadow 0.3s var(--ease-out);
+        padding-block:1.25rem;
+        transition:all 0.4s var(--ease-out);
+        background:transparent;
       }
       .site-header.scrolled{
-        background:rgba(255,255,255,0.85);
-        backdrop-filter:blur(20px);
-        -webkit-backdrop-filter:blur(20px);
+        background:rgba(255,255,255,0.7);
+        backdrop-filter:blur(24px) saturate(180%);
+        -webkit-backdrop-filter:blur(24px) saturate(180%);
         box-shadow:var(--shadow-soft);
+        padding-block:0.75rem;
       }
       @media(prefers-color-scheme:dark){
-        .site-header.scrolled{background:rgba(15,23,42,0.85)}
+        .site-header.scrolled{background:rgba(15,23,42,0.75)}
       }
       .header-inner{
         display:flex;align-items:center;justify-content:space-between;gap:2rem;
       }
       .logo-link{
-        display:flex;align-items:center;gap:1rem;text-decoration:none;
-        color:var(--teal-700);
+        display:flex;align-items:center;gap:1.2rem;text-decoration:none;
+        color:var(--pink-700);
       }
-      @media(prefers-color-scheme:dark){.logo-link{color:var(--teal-300)}}
-      .logo-img{height:clamp(40px,7vw,56px);width:auto}
-      .logo-text{font-family:var(--font-serif);font-size:clamp(1.1rem,2vw,1.5rem);font-weight:600}
-      .logo-tagline{font-size:0.85rem;color:var(--slate-500);font-weight:400}
+      @media(prefers-color-scheme:dark){.logo-link{color:var(--pink-300)}}
+      .logo-img{height:clamp(48px,8vw,64px);width:auto}
+      .logo-text{font-family:var(--font-serif);font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:600;line-height:1.1}
+      .logo-tagline{font-size:0.8rem;color:var(--slate-500);font-weight:400;letter-spacing:0.05em;text-transform:uppercase}
       @media(prefers-color-scheme:dark){.logo-tagline{color:var(--slate-400)}}
       
-      .desktop-nav ul{display:flex;list-style:none;gap:0.5rem;align-items:center}
+      .desktop-nav ul{display:flex;list-style:none;gap:0.25rem;align-items:center}
       .desktop-nav a{
         text-decoration:none;color:var(--slate-600);font-weight:500;font-size:0.95rem;
-        padding:0.6rem 1.2rem;border-radius:var(--radius-full);
-        transition:all 0.2s var(--ease-out);
+        padding:0.7rem 1.4rem;border-radius:var(--radius-full);
+        transition:all 0.3s var(--ease-out);
         display:inline-flex;align-items:center;
       }
       @media(prefers-color-scheme:dark){.desktop-nav a{color:var(--slate-300)}}
-      .desktop-nav a:hover{background:var(--teal-100);color:var(--teal-700)}
-      @media(prefers-color-scheme:dark){.desktop-nav a:hover{background:var(--teal-900);color:var(--teal-200)}}
+      .desktop-nav a:hover{background:var(--pink-100);color:var(--pink-700)}
+      @media(prefers-color-scheme:dark){.desktop-nav a:hover{background:var(--pink-900);color:var(--pink-200)}}
       .desktop-nav .cta-button{
-        background:var(--gradient-teal);color:#fff;font-weight:600;
-        box-shadow:0 4px 14px rgba(13,148,136,0.3);
+        background:var(--gradient-pink);color:#fff;font-weight:600;
+        box-shadow:0 4px 16px rgba(236,72,153,0.35);
       }
       .desktop-nav .cta-button:hover{
-        transform:translateY(-2px);box-shadow:0 6px 20px rgba(13,148,136,0.4);
+        transform:translateY(-2px);box-shadow:0 8px 24px rgba(236,72,153,0.45);
       }
       
-      .mobile-nav-trigger{display:none;background:none;border:none;cursor:pointer;padding:0.5rem}
-      .mobile-nav-trigger span{display:block;width:24px;height:2px;background:var(--teal-700);border-radius:2px;transition:all 0.3s}
-      @media(max-width:768px){
+      /* Burger Menu */
+      .mobile-nav-trigger{
+        display:none;flex-direction:column;gap:5px;
+        background:none;border:none;cursor:pointer;padding:0.5rem;
+        z-index:1001;
+      }
+      .mobile-nav-trigger span{
+        display:block;width:28px;height:2.5px;
+        background:var(--pink-600);border-radius:3px;
+        transition:all 0.3s var(--ease-out);
+        transform-origin:center;
+      }
+      .mobile-nav-trigger.active span:nth-child(1){
+        transform:translateY(7.5px) rotate(45deg);
+      }
+      .mobile-nav-trigger.active span:nth-child(2){
+        opacity:0;transform:translateX(-10px);
+      }
+      .mobile-nav-trigger.active span:nth-child(3){
+        transform:translateY(-7.5px) rotate(-45deg);
+      }
+      
+      /* Mobile Navigation Overlay */
+      .mobile-nav-overlay{
+        position:fixed;top:0;left:0;width:100%;height:100vh;
+        background:rgba(255,255,255,0.98);
+        backdrop-filter:blur(20px);
+        -webkit-backdrop-filter:blur(20px);
+        z-index:999;
+        display:flex;align-items:center;justify-content:center;
+        opacity:0;visibility:hidden;
+        transition:all 0.4s var(--ease-out);
+      }
+      @media(prefers-color-scheme:dark){
+        .mobile-nav-overlay{background:rgba(15,23,42,0.98)}
+      }
+      .mobile-nav-overlay.active{
+        opacity:1;visibility:visible;
+      }
+      .mobile-nav-list{
+        list-style:none;text-align:center;
+        transform:translateY(30px);opacity:0;
+        transition:all 0.5s var(--ease-out) 0.1s;
+      }
+      .mobile-nav-overlay.active .mobile-nav-list{
+        transform:translateY(0);opacity:1;
+      }
+      .mobile-nav-list li{margin:1.5rem 0}
+      .mobile-nav-list a{
+        font-family:var(--font-serif);
+        font-size:clamp(1.5rem,4vw,2.5rem);
+        color:var(--slate-700);
+        text-decoration:none;
+        font-weight:500;
+        transition:color 0.3s;
+      }
+      @media(prefers-color-scheme:dark){.mobile-nav-list a{color:var(--slate-200)}}
+      .mobile-nav-list a:hover{color:var(--pink-500)}
+      .mobile-nav-list .cta-button{
+        display:inline-block;
+        background:var(--gradient-pink);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        font-size:clamp(1.3rem,3.5vw,2rem);
+      }
+      
+      @media(max-width:900px){
         .desktop-nav{display:none}
-        .mobile-nav-trigger{display:block}
-        .logo-tagline,.logo-text{display:none}
+        .mobile-nav-trigger{display:flex}
+      }
+      @media(max-width:600px){
+        .logo-tagline{display:none}
+        .logo-text{font-size:clamp(1rem,2vw,1.4rem)}
       }
       
       /* Hero Section */
@@ -424,7 +491,7 @@
             <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
                 <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60" fetchpriority="high">
                 <div>
-                    <div class="logo-text">Mind Grace</div>
+                    <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
                     <div class="logo-tagline">Where You Come First</div>
                 </div>
             </a>
@@ -445,6 +512,18 @@
             </button>
         </div>
     </header>
+    
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <ul class="mobile-nav-list">
+            <li><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li><a href="process.html" class="mobile-nav-link">Process</a></li>
+            <li><a href="resources.html" class="mobile-nav-link">Resources</a></li>
+            <li><a href="location.html" class="mobile-nav-link">Location</a></li>
+            <li><a href="book.html" class="cta-button mobile-nav-link">Book Now</a></li>
+        </ul>
+    </div>
     
     <main id="main-content">
         <!-- Hero Section -->
@@ -622,12 +701,38 @@
         }
       });
       
-      // Mobile nav toggle
+      // Mobile nav toggle with burger animation
       const mobileTrigger = document.querySelector('.mobile-nav-trigger');
-      if (mobileTrigger) {
+      const mobileOverlay = document.getElementById('mobileNavOverlay');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+      
+      if (mobileTrigger && mobileOverlay) {
         mobileTrigger.addEventListener('click', () => {
-          const expanded = mobileTrigger.getAttribute('aria-expanded') === 'true';
-          mobileTrigger.setAttribute('aria-expanded', !expanded);
+          const isActive = mobileTrigger.classList.contains('active');
+          mobileTrigger.classList.toggle('active');
+          mobileOverlay.classList.toggle('active');
+          mobileTrigger.setAttribute('aria-expanded', !isActive);
+          document.body.style.overflow = !isActive ? 'hidden' : '';
+        });
+        
+        // Close overlay when clicking a link
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileTrigger.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            mobileTrigger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          });
+        });
+        
+        // Close overlay when clicking outside
+        mobileOverlay.addEventListener('click', (e) => {
+          if (e.target === mobileOverlay) {
+            mobileTrigger.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            mobileTrigger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
         });
       }
       
