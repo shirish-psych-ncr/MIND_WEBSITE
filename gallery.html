@@ -198,31 +198,7 @@
             <!-- Main Stage (Large View) -->
             <div class="media-stage" id="media-stage" role="region" aria-label="Image Viewer">
                 <div class="stage-viewport">
-                    <!-- Loading State -->
-                    <div class="stage-loader" id="stage-loader" aria-hidden="true">
-                        <div class="spinner"></div>
-                        <span>Loading...</span>
-                    </div>
-                    
-                    <!-- Error State -->
-                    <div class="stage-error" id="stage-error" hidden>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                        <p>Failed to load image</p>
-                        <button class="retry-btn" id="retry-btn" type="button">Retry</button>
-                    </div>
-                    
-                    <!-- Main Image -->
-                    <img 
-                        id="stage-image" 
-                        src="" 
-                        alt="" 
-                        class="stage-img" 
-                        loading="eager" 
-                        fetchpriority="high"
-                        decoding="async"
-                    >
-                    
-                    <!-- Caption Overlay -->
+                    <img id="stage-image" src="" alt="" class="stage-img active" loading="eager" fetchpriority="high">
                     <div class="stage-overlay">
                         <h2 id="stage-caption" class="stage-caption"></h2>
                         <p id="stage-description" class="stage-desc"></p>
@@ -452,12 +428,6 @@
     }
     
     init() {
-      if (!this.data || this.data.length === 0) {
-        console.error('Gallery: No image data available');
-        this.showError('No images available');
-        return;
-      }
-      
       // Render thumbnails
       this.renderFilmstrip();
       
@@ -465,16 +435,9 @@
       this.showImage(0);
       
       // Event listeners
-      this.prevBtn?.addEventListener('click', this.prev);
-      this.nextBtn?.addEventListener('click', this.next);
-      this.retryBtn?.addEventListener('click', this.handleRetry);
+      this.prevBtn.addEventListener('click', this.prev);
+      this.nextBtn.addEventListener('click', this.next);
       document.addEventListener('keydown', this.handleKeydown);
-      
-      // Image error handling
-      if (this.stageImage) {
-        this.stageImage.addEventListener('load', () => this.handleImageLoad());
-        this.stageImage.addEventListener('error', () => this.handleImageError());
-      }
       
       // Touch gestures for swipe navigation
       this.setupTouchGestures();
@@ -580,15 +543,13 @@
     }
     
     renderFilmstrip() {
-      if (!this.filmstrip) return;
-      
       this.filmstrip.innerHTML = this.data.map((item, index) => `
         <button 
           class="filmstrip-thumb ${index === 0 ? 'active' : ''}" 
           data-index="${index}"
           aria-label="View ${item.caption}"
           aria-current="${index === 0 ? 'true' : 'false'}"
-          type="button"
+          style="--thumb-bg: url('${item.src}')"
         >
           <img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async">
         </button>
@@ -601,8 +562,6 @@
           this.showImage(index);
         });
       });
-      
-      this.refreshIcons();
     }
     
     showImage(index) {
