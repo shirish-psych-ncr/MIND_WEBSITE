@@ -36,7 +36,7 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 | **Styling**       | CSS3 (Modern, Modular)                  |
 | **Interactivity** | Vanilla JavaScript (ES6+)               |
 | **Fonts**         | Inter + Playfair Display (Google Fonts) |
-| **Icons**         | Inline SVG                              |
+| **Icons**         | Inline SVG (Lucide)                     |
 | **Deployment**    | GitHub Pages                            |
 | **Domain**        | mindgracencr.in                         |
 
@@ -48,93 +48,21 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 
 ```
 /
-├── ARCHITECTURE.md           # Complete system documentation
-├── README.md                 # Project overview & deployment URL
-├── index.html                # Homepage (primary entry point)
-│
-├── assets/                   # Core Assets Directory
-│   ├── css/                  # Core Stylesheets (Modular Architecture)
-│   │   ├── base.css          # Design tokens, reset, dark mode
-│   │   ├── layout.css        # Header, hero, footer, structure
-│   │   ├── components.css    # Reusable UI components
-│   │   ├── utilities.css     # Helper classes
-│   │   └── animations.css    # Motion & effects
-│   │
-│   ├── css-tools/            # Therapeutic Tool Stylesheets
-│   │   ├── tools-breathing.css
-│   │   ├── tools-butterfly.css
-│   │   ├── tools-eye.css
-│   │   ├── tools-fractal.css
-│   │   ├── tools-horizon.css
-│   │   ├── tools-leaf.css
-│   │   └── tools-book.css
-│   │
-│   ├── js/                   # JavaScript Modules
-│   │   ├── main.js           # Core interactions
-│   │   ├── blog-*.js         # Blog system
-│   │   ├── tools-*.js        # Therapeutic tools logic
-│   │   ├── ui-popovers.js    # Popover UI components
-│   │   ├── booking.js        # Booking system
-│   │   ├── gallery.js        # Gallery functionality
-│   │   └── lib/              # Utility libraries
-│   │
-│   ├── images/               # Static Resources (Images, Logos, Brochures)
-│   │   ├── Mind_Grace_Clinic_Logo_*.svg/png  # Logo variants
-│   │   ├── Dr_Anita_Sharma_Personal_Photo.webp
-│   │   ├── mind-grace-*.webp                  # Clinic photos
-│   │   ├── Location_street_view_*.webp        # Location photos
-│   │   ├── AASHA_*.webp                       # AASHA brochures
-│   │   ├── aasha-*.webp                       # AASHA therapy photos
-│   │   └── image_descriptions.md             # Image accessibility descriptions
-│   │
-│   ├── components/           # Reusable HTML/CSS Components
-│   │   ├── header.html
-│   │   ├── footer.html
-│   │   ├── button.css
-│   │   ├── card.css
-│   │   └── README.md
-│   │
-│   └── vendor/               # Third-party Libraries (local copies)
-│       ├── alpine.min.js
-│       ├── htmx.min.js
-│       ├── lucide.min.js
-│       ├── floating-ui.min.js
-│       └── [other libraries]
-│
-├── blog/                     # Blog Section
-│   ├── index.html            # Blog homepage
-│   ├── adult.html            # Adult mental health category
-│   ├── children.html         # Child development category
-│   ├── pages/
-│   │   ├── adult/            # Adult mental health articles
-│   │   │   ├── overthinking-vs-anxiety.html
-│   │   │   ├── scheduled-worry-time-technique.html
-│   │   │   ├── sleep-and-anxiety-cycle.html
-│   │   │   ├── stimulus-control-therapy.html
-│   │   │   └── when-to-see-a-psychiatrist.html
-│   │   └── child/            # Child development articles
-│   │       ├── early-signs-of-autism.html
-│   │       ├── school-concerns-and-adhd.html
-│   │       ├── sensory-overload-at-home.html
-│   │       └── speech-delay-red-flags.html
-│   └── res/                  # Blog-specific images (if any)
-│
-├── tools/                    # Therapeutic Tools (Interactive Features)
-│   ├── guided-breathing.html # Breathing exercise
-│   ├── butterfly-tapper.html # EMDR butterfly tapping
-│   ├── eye-movement.html     # Eye movement therapy
-│   ├── hypnos-fractal.html   # Hypnotic fractal visualization
-│   ├── horizon-scan.html     # Horizon scanning relaxation
-│   └── leaf-on-stream.html   # Mindfulness exercise
-│
-├── inspo/                    # Inspiration & Design References
-│   ├── Anti-inspo UI UXI Anti Pattern.md
-│   ├── check1.md, check3.md, check4.md
-│   ├── skillscheck.md
-│   └── BIBLE BRAND IDENTITY.txt
-│
-├── AGENT_BIBLE/              # AI Agent Documentation
-│   ├── Instructions.md       # Agent operating instructions
+├── *.html (23 root pages)
+├── blog/ (3 pages)
+├── tools/ (6 therapeutic tools)
+├── assets/
+│   ├── css/ (12 stylesheets)
+│   ├── js/ (20 custom modules)
+│   ├── vendor/ (47 vendor libraries)
+│   └── images/ (28 WebP files)
+├── sitemap.xml
+├── robots.txt
+├── DEPLOYMENT_CHECKLIST.md    # Deployment procedures
+├── MAINTENANCE_GUIDE.md       # Ongoing maintenance instructions
+└── Documentation (README.md, ARCHITECTURE.md, etc.)
+```
+
 │   ├── Bible_Generator.md    # Documentation generation guide
 │   ├── ARCHITECTURE.md       # Agent architecture overview
 │   ├── assets.md             # Asset management guidelines
