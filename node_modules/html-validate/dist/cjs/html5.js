@@ -1,0 +1,1 @@
+"use strict";var elements=require("./elements.js");require("./meta-helper.js"),require("./utils/natural-join.js");var html5=elements.bundledElements.html5;module.exports=html5;

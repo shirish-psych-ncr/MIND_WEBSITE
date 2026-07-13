@@ -1,0 +1,1 @@
+import{b as bundledElements}from"./elements.js";import"./meta-helper.js";import"./utils/natural-join.js";var html5=bundledElements.html5;export{html5 as default};

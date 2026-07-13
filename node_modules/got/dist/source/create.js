@@ -1,0 +1,287 @@
+import { setTimeout as delay } from 'node:timers/promises';
+import is, { assert } from '@sindresorhus/is';
+import asPromise from './as-promise/index.js';
+import Request from './core/index.js';
+import Options, { applyUrlOverride, assertUrlHasSameOriginAsPrefixUrlIfNeeded, getUrlPrefixBoundary, hasUrlOrPrefixUrlBoundaryChanged, isSameOrigin, snapshotCrossOriginState, } from './core/options.js';
+const isGotInstance = (value) => is.function(value);
+const aliases = [
+    'get',
+    'post',
+    'put',
+    'patch',
+    'head',
+    'delete',
+];
+const optionsObjectUrlErrorMessage = 'The `url` option is not supported in options objects. Pass it as the first argument instead.';
+const assertNoUrlInOptionsObject = (options) => {
+    if (Object.hasOwn(options, 'url')) {
+        throw new TypeError(optionsObjectUrlErrorMessage);
+    }
+};
+const cloneWithProperty = (value, property, propertyValue) => {
+    const clone = Object.create(Object.getPrototypeOf(value), Object.getOwnPropertyDescriptors(value));
+    Object.defineProperty(clone, property, {
+        value: propertyValue,
+        enumerable: true,
+        configurable: true,
+        writable: true,
+    });
+    return clone;
+};
+const create = (defaults) => {
+    defaults = {
+        options: new Options(undefined, undefined, defaults.options),
+        handlers: [...defaults.handlers],
+        mutableDefaults: defaults.mutableDefaults,
+    };
+    Object.defineProperty(defaults, 'mutableDefaults', {
+        enumerable: true,
+        configurable: false,
+        writable: false,
+    });
+    const makeRequest = (url, options, defaultOptions, isStream) => {
+        if (is.plainObject(url)) {
+            assertNoUrlInOptionsObject(url);
+        }
+        if (is.plainObject(options)) {
+            assertNoUrlInOptionsObject(options);
+        }
+        // `isStream` is skipped by `merge()`, so set it via the direct setter after construction.
+        // Avoid a synthetic second merge only for the single-options-object stream form.
+        const requestUrl = isStream && is.plainObject(url) ? cloneWithProperty(url, 'isStream', true) : url;
+        const requestOptions = isStream && !is.plainObject(url) && options ? cloneWithProperty(options, 'isStream', true) : options;
+        const request = new Request(requestUrl, requestOptions, defaultOptions);
+        if (isStream && request.options) {
+            request.options.isStream = true;
+        }
+        let promise;
+        const urlBeforeHandlers = request.options?.url instanceof URL ? new URL(request.options.url) : undefined;
+        const boundaryBeforeHandlers = request.options ? getUrlPrefixBoundary(request.options) : undefined;
+        const lastHandler = (normalized) => {
+            if (urlBeforeHandlers
+                && boundaryBeforeHandlers
+                && normalized?.url instanceof URL
+                && hasUrlOrPrefixUrlBoundaryChanged(normalized, normalized.url, boundaryBeforeHandlers)) {
+                assertUrlHasSameOriginAsPrefixUrlIfNeeded(normalized, normalized.url);
+            }
+            // Note: `options` is `undefined` when `new Options(...)` fails
+            request.options = normalized;
+            const shouldReturnStream = normalized?.isStream ?? isStream;
+            request._noPipe = !shouldReturnStream;
+            void request.flush();
+            if (shouldReturnStream) {
+                return request;
+            }
+            promise ??= asPromise(request);
+            return promise;
+        };
+        let iteration = 0;
+        const iterateHandlers = (newOptions) => {
+            const handler = defaults.handlers[iteration++] ?? lastHandler;
+            const result = handler(newOptions, iterateHandlers);
+            if (is.promise(result) && !request.options?.isStream) {
+                promise ??= asPromise(request);
+                if (result !== promise) {
+                    const descriptors = Object.getOwnPropertyDescriptors(promise);
+                    for (const key in descriptors) {
+                        if (key in result) {
+                            // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+                            delete descriptors[key];
+                        }
+                    }
+                    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+                    Object.defineProperties(result, descriptors);
+                }
+            }
+            return result;
+        };
+        return iterateHandlers(request.options);
+    };
+    // Got interface
+    const got = ((url, options, defaultOptions = defaults.options) => makeRequest(url, options, defaultOptions, false));
+    got.extend = (...instancesOrOptions) => {
+        const options = new Options(undefined, undefined, defaults.options);
+        const handlers = [...defaults.handlers];
+        let mutableDefaults;
+        for (const value of instancesOrOptions) {
+            if (isGotInstance(value)) {
+                options.merge(value.defaults.options);
+                handlers.push(...value.defaults.handlers);
+                mutableDefaults = value.defaults.mutableDefaults;
+            }
+            else {
+                assertNoUrlInOptionsObject(value);
+                options.merge(value);
+                if (value.handlers) {
+                    handlers.push(...value.handlers);
+                }
+                mutableDefaults = value.mutableDefaults;
+            }
+        }
+        return create({
+            options,
+            handlers,
+            mutableDefaults: Boolean(mutableDefaults),
+        });
+    };
+    // Pagination
+    const paginateEach = (async function* (url, options) {
+        if (is.plainObject(url)) {
+            assertNoUrlInOptionsObject(url);
+        }
+        if (is.plainObject(options)) {
+            assertNoUrlInOptionsObject(options);
+        }
+        let normalizedOptions = new Options(url, options, defaults.options);
+        normalizedOptions.resolveBodyOnly = false;
+        const { pagination } = normalizedOptions;
+        assert.function(pagination.transform);
+        assert.function(pagination.shouldContinue);
+        assert.function(pagination.filter);
+        assert.function(pagination.paginate);
+        assert.number(pagination.countLimit);
+        assert.number(pagination.requestLimit);
+        assert.number(pagination.backoff);
+        const allItems = [];
+        let { countLimit } = pagination;
+        let numberOfRequests = 0;
+        while (numberOfRequests < pagination.requestLimit) {
+            if (numberOfRequests !== 0) {
+                // eslint-disable-next-line no-await-in-loop
+                await delay(pagination.backoff);
+            }
+            // eslint-disable-next-line no-await-in-loop
+            const response = (await got(undefined, undefined, normalizedOptions));
+            // eslint-disable-next-line no-await-in-loop
+            const parsed = await pagination.transform(response);
+            const currentItems = [];
+            assert.array(parsed);
+            for (const item of parsed) {
+                if (pagination.filter({ item, currentItems, allItems })) {
+                    if (!pagination.shouldContinue({ item, currentItems, allItems })) {
+                        return;
+                    }
+                    yield item;
+                    if (pagination.stackAllItems) {
+                        allItems.push(item);
+                    }
+                    currentItems.push(item);
+                    if (--countLimit <= 0) {
+                        return;
+                    }
+                }
+            }
+            const requestOptions = response.request.options;
+            const previousUrl = requestOptions.url ? new URL(requestOptions.url) : undefined;
+            const previousBoundary = getUrlPrefixBoundary(requestOptions);
+            const previousState = previousUrl ? snapshotCrossOriginState(requestOptions) : undefined;
+            // eslint-disable-next-line no-await-in-loop
+            const [optionsToMerge, changedState] = await requestOptions.trackStateMutations(async (changedState) => [
+                pagination.paginate({
+                    response,
+                    currentItems,
+                    allItems,
+                }),
+                changedState,
+            ]);
+            if (optionsToMerge === false) {
+                return;
+            }
+            if (optionsToMerge === response.request.options) {
+                normalizedOptions = response.request.options;
+                normalizedOptions.clearUnchangedCookieHeader(previousState, changedState);
+                if (previousUrl) {
+                    const nextUrl = normalizedOptions.url;
+                    if (nextUrl
+                        && hasUrlOrPrefixUrlBoundaryChanged(normalizedOptions, nextUrl, previousBoundary)) {
+                        assertUrlHasSameOriginAsPrefixUrlIfNeeded(normalizedOptions, nextUrl);
+                    }
+                    if (nextUrl && !isSameOrigin(previousUrl, nextUrl)) {
+                        normalizedOptions.prefixUrl = '';
+                        normalizedOptions.stripUnchangedCrossOriginState(previousState, changedState);
+                    }
+                }
+            }
+            else {
+                const paginationOptions = normalizedOptions;
+                const paginationUrl = paginationOptions.url instanceof URL ? new URL(paginationOptions.url) : undefined;
+                const paginationBoundary = getUrlPrefixBoundary(paginationOptions);
+                const hasExplicitBody = (Object.hasOwn(optionsToMerge, 'body') && optionsToMerge.body !== undefined)
+                    || (Object.hasOwn(optionsToMerge, 'json') && optionsToMerge.json !== undefined)
+                    || (Object.hasOwn(optionsToMerge, 'form') && optionsToMerge.form !== undefined);
+                const clearsCookieJar = Object.hasOwn(optionsToMerge, 'cookieJar') && optionsToMerge.cookieJar === undefined;
+                if (hasExplicitBody) {
+                    paginationOptions.clearBody();
+                }
+                if (clearsCookieJar) {
+                    paginationOptions.cookieJar = undefined;
+                }
+                const { url, ...optionsToMergeWithoutUrl } = optionsToMerge;
+                paginationOptions.merge(optionsToMergeWithoutUrl);
+                paginationOptions.syncCookieHeaderAfterMerge(previousState, optionsToMergeWithoutUrl.headers);
+                if (paginationOptions.url instanceof URL
+                    && hasUrlOrPrefixUrlBoundaryChanged(paginationOptions, paginationOptions.url, paginationBoundary)) {
+                    assertUrlHasSameOriginAsPrefixUrlIfNeeded(paginationOptions, paginationOptions.url);
+                }
+                if (previousUrl
+                    && paginationUrl
+                    && !isSameOrigin(paginationUrl, previousUrl)) {
+                    paginationOptions.stripSensitiveHeaders(paginationUrl, previousUrl, optionsToMerge);
+                    if (!hasExplicitBody) {
+                        paginationOptions.clearBody();
+                    }
+                }
+                try {
+                    assert.any([is.string, is.urlInstance, is.undefined], optionsToMerge.url);
+                }
+                catch (error) {
+                    if (error instanceof Error) {
+                        error.message = `Option 'pagination.paginate.url': ${error.message}`;
+                    }
+                    throw error;
+                }
+                if (url !== undefined) {
+                    const nextUrl = applyUrlOverride(paginationOptions, url, {
+                        ...optionsToMerge,
+                        baseUrl: previousUrl,
+                    });
+                    if (paginationOptions.prefixUrl.toString() !== paginationBoundary.prefixUrl
+                        || paginationOptions.allowAbsoluteUrls !== paginationBoundary.allowAbsoluteUrls) {
+                        assertUrlHasSameOriginAsPrefixUrlIfNeeded(paginationOptions, nextUrl);
+                    }
+                    if (previousUrl) {
+                        paginationOptions.stripSensitiveHeaders(previousUrl, nextUrl, optionsToMerge);
+                        if (!isSameOrigin(previousUrl, nextUrl) && !hasExplicitBody) {
+                            paginationOptions.clearBody();
+                        }
+                    }
+                }
+                normalizedOptions = paginationOptions;
+            }
+            numberOfRequests++;
+        }
+    });
+    got.paginate = paginateEach;
+    got.paginate.all = (async (url, options) => Array.fromAsync(paginateEach(url, options)));
+    // For those who like very descriptive names
+    got.paginate.each = paginateEach;
+    // Stream API
+    got.stream = ((url, options) => makeRequest(url, options, defaults.options, true));
+    // Shortcuts
+    for (const method of aliases) {
+        got[method] = ((url, options) => got(url, { ...options, method }));
+        got.stream[method] = ((url, options) => makeRequest(url, { ...options, method }, defaults.options, true));
+    }
+    if (!defaults.mutableDefaults) {
+        Object.freeze(defaults.handlers);
+        defaults.options.freeze();
+    }
+    Object.defineProperty(got, 'defaults', {
+        value: defaults,
+        writable: false,
+        configurable: false,
+        enumerable: true,
+    });
+    return got;
+};
+export default create;

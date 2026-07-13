@@ -1,0 +1,1 @@
+var baseFlatten=require("./_baseFlatten"),baseOrderBy=require("./_baseOrderBy"),baseRest=require("./_baseRest"),isIterateeCall=require("./_isIterateeCall"),sortBy=baseRest(function(e,r){if(null==e)return[];var t=r.length;return t>1&&isIterateeCall(e,r[0],r[1])?r=[]:t>2&&isIterateeCall(r[0],r[1],r[2])&&(r=[r[0]]),baseOrderBy(e,baseFlatten(r,1),[])});module.exports=sortBy;

@@ -1,0 +1,1 @@
+import*as jestDiffDefault from"jest-diff";import jestDiffDefault__default from"jest-diff";const diffCandidates=[jestDiffDefault__default?.diff,jestDiffDefault__default,jestDiffDefault?.diff,jestDiffDefault],isFunction=f=>"function"==typeof f,diff=diffCandidates.find(isFunction);export{diff as d};

@@ -1,0 +1,1 @@
+var arrayEach=require("./_arrayEach"),baseAssignValue=require("./_baseAssignValue"),bind=require("./bind"),flatRest=require("./_flatRest"),toKey=require("./_toKey"),bindAll=flatRest(function(e,r){return arrayEach(r,function(r){r=toKey(r),baseAssignValue(e,r,bind(e[r],e))}),e});module.exports=bindAll;

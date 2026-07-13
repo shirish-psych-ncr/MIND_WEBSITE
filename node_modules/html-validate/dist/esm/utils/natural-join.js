@@ -1,0 +1,1 @@
+function naturalJoin(n,e="or"){switch(n.length){case 0:return"";case 1:return n[0];case 2:return`${n[0]} ${e} ${n[1]}`;default:return`${n.slice(0,-1).join(", ")} ${e} ${n.slice(-1)[0]}`}}export{naturalJoin as n};

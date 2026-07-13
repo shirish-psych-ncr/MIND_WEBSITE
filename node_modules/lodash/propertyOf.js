@@ -1,0 +1,1 @@
+var baseGet=require("./_baseGet");function propertyOf(e){return function(r){return null==e?void 0:baseGet(e,r)}}module.exports=propertyOf;
