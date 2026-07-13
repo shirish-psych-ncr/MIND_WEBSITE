@@ -1,32 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://shirish-psych-ncr.github.io/MIND_WEBSITE/index.html</loc></url>
-  <url><loc>about.html</loc></url>
-  <url><loc>conditions.html</loc></url>
-  <url><loc>services.html</loc></url>
-  <url><loc>process.html</loc></url>
-  <url><loc>faq.html</loc></url>
-  <url><loc>location.html</loc></url>
-  <url><loc>book.html</loc></url>
-  <url><loc>contact.html</loc></url>
-  <url><loc>resources.html</loc></url>
-  <url><loc>mind-grace.html</loc></url>
-  <url><loc>aasha.html</loc></url>
-  <url><loc>gallery.html</loc></url>
-  <url><loc>fees.html</loc></url>
-  <url><loc>testimonials.html</loc></url>
-  <url><loc>emergency.html</loc></url>
-  <url><loc>blog/index.html</loc></url>
-  <url><loc>blog/adult.html</loc></url>
-  <url><loc>blog/children.html</loc></url>
-  <url><loc>blog/pages/adult/overthinking-vs-anxiety.html</loc></url>
-  <url><loc>blog/pages/adult/scheduled-worry-time-technique.html</loc></url>
-  <url><loc>blog/pages/adult/sleep-and-anxiety-cycle.html</loc></url>
-  <url><loc>blog/pages/adult/stimulus-control-therapy.html</loc></url>
-  <url><loc>blog/pages/adult/when-to-see-a-psychiatrist.html</loc></url>
-  <url><loc>blog/pages/child/early-signs-of-autism.html</loc></url>
-  <url><loc>blog/pages/child/school-concerns-and-adhd.html</loc></url>
-  <url><loc>blog/pages/child/sensory-overload-at-home.html</loc></url>
-  <url><loc>blog/pages/child/speech-delay-red-flags.html</loc></url>
-</urlset>
+  <!-- Core Pages -->
+  <url><loc>https://mindgracencr.in/index.html</loc><lastmod>2025-06-15</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mindgracencr.in/about.html</loc><lastmod>2025-06-15</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mindgracencr.in/services.html</loc><lastmod>2025-06-15</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mindgracencr.in/conditions.html</loc><lastmod>2025-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mindgracencr.in/process.html</loc><lastmod>2025-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mindgracencr.in/doctors.html</loc><lastmod>2025-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mindgracencr.in/dr-anita-sharma.html</loc><lastmod>2025-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mindgracencr.in/approach.html</loc><lastmod>2025-06-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mindgracencr.in/fees.html</loc><lastmod>2025-06-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mindgracencr.in/location.html</loc><lastmod>2025-06-15</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mindgracencr.in/contact.html</loc><lastmod>2025-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mindgracencr.in/book.html</loc><lastmod>2025-06-15</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mindgracencr.in/gallery.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/testimonials.html</loc><lastmod>2025-06-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mindgracencr.in/faq.html</loc><lastmod>2025-06-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mindgracencr.in/emergency.html</loc><lastmod>2025-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mindgracencr.in/resources.html</loc><lastmod>2025-06-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mindgracencr.in/mind-grace.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/aasha.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/thank-you.html</loc><lastmod>2025-06-15</lastmod><priority>0.5</priority></url>
+  <url><loc>https://mindgracencr.in/consent.html</loc><lastmod>2025-06-15</lastmod><priority>0.5</priority></url>
+  <url><loc>https://mindgracencr.in/privacy.html</loc><lastmod>2025-06-15</lastmod><priority>0.5</priority></url>
+  <url><loc>https://mindgracencr.in/terms.html</loc><lastmod>2025-06-15</lastmod><priority>0.5</priority></url>
+  <url><loc>https://mindgracencr.in/disclaimer.html</loc><lastmod>2025-06-15</lastmod><priority>0.5</priority></url>
+  <url><loc>https://mindgracencr.in/404.html</loc><lastmod>2025-06-15</lastmod><priority>0.1</priority></url>
 
+  <!-- Therapeutic Tools -->
+  <url><loc>https://mindgracencr.in/tools/butterfly-tapper.html</loc><lastmod>2025-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mindgracencr.in/tools/guided-breathing.html</loc><lastmod>2025-06-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mindgracencr.in/tools/eye-movement.html</loc><lastmod>2025-06-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mindgracencr.in/tools/hypnos-fractal.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/tools/horizon-scan.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/tools/leaf-on-stream.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+
+  <!-- Blog Index -->
+  <url><loc>https://mindgracencr.in/blog/index.html</loc><lastmod>2025-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mindgracencr.in/blog/adult.html</loc><lastmod>2025-06-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mindgracencr.in/blog/children.html</loc><lastmod>2025-06-15</lastmod><priority>0.7</priority></url>
+
+  <!-- Blog Articles - Adult -->
+  <url><loc>https://mindgracencr.in/blog/pages/adult/anxiety.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/blog/pages/adult/overthinking.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/blog/pages/adult/sleep.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/blog/pages/adult/worry-time.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/blog/pages/adult/stimulus-control.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+
+  <!-- Blog Articles - Child -->
+  <url><loc>https://mindgracencr.in/blog/pages/child/autism-signs.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/blog/pages/child/adhd.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/blog/pages/child/sensory-overload.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://mindgracencr.in/blog/pages/child/speech-delays.html</loc><lastmod>2025-06-15</lastmod><priority>0.6</priority></url>
+</urlset>
