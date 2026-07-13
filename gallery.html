@@ -18,7 +18,6 @@
   <script src="assets/js/icon-init.js"></script>
   <script src="assets/vendor/floating-ui.min.js"></script>
   <script src="assets/js/ui-popovers.js"></script>
-  <script src="assets/js/carousel-init.js"></script>
   <script src="assets/js/main.js" type="module"></script>
   <!-- HTTP Client (Ky Library) -->
   <script src="assets/vendor/ky.min.js" type="module"></script>
@@ -181,164 +180,369 @@
 
 <div class="progress"><div class="progress-bar" data-progress=""></div></div>
 
-<main id="main-content" tabindex="-1" class="section">
-  <div class="shell stack">
-
-    <!-- HERO -->
-    <section class="surface panel">
-      <h1>Inside the clinic</h1>
-      <p class="lead">
-        A calm, structured space designed for clarity, comfort, and focused care — for both adults and children.
-      </p>
+<!-- Main Content -->
+<main id="main-content" class="site-main">
+    
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="hero-title">Our Clinic Gallery</h1>
+            <p class="hero-subtitle">A visual tour of our facilities, therapy rooms, and team.</p>
+        </div>
     </section>
 
-    <!-- HYBRID GALLERY TOUR -->
-    <div class="gallery-tour">
+    <!-- Media Player Interface -->
+    <section class="gallery-player-section" aria-label="Clinic Gallery">
+        <div class="container gallery-container">
+            
+            <!-- Main Stage (Large View) -->
+            <div class="media-stage" id="media-stage" role="region" aria-label="Image Viewer">
+                <div class="stage-viewport">
+                    <img id="stage-image" src="" alt="" class="stage-img active" loading="eager" fetchpriority="high">
+                    <div class="stage-overlay">
+                        <h2 id="stage-caption" class="stage-caption"></h2>
+                        <p id="stage-description" class="stage-desc"></p>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="stage-nav prev-btn" id="prev-btn" aria-label="Previous Image" type="button">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <button class="stage-nav next-btn" id="next-btn" aria-label="Next Image" type="button">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
 
-      <!-- Sticky Sidebar Navigation -->
-      <aside class="tour-nav" aria-label="Gallery sections">
-        <a href="#zone-exterior" class="tour-dot active" data-zone="exterior">Exterior &#x26; Entry</a>
-        <a href="#zone-consult" class="tour-dot" data-zone="consult">Adult Consultation</a>
-        <a href="#zone-aasha" class="tour-dot" data-zone="aasha">Aasha Early Intervention</a>
-        <a href="#zone-speech" class="tour-dot" data-zone="speech">Speech &#x26; Language</a>
-        <a href="#zone-special-ed" class="tour-dot" data-zone="special-ed">Special Education</a>
-        <a href="#zone-ot" class="tour-dot" data-zone="ot">Occupational Therapy</a>
-        <a href="#zone-leadership" class="tour-dot" data-zone="leadership">Clinical Leadership</a>
-      </aside>
+            <!-- Filmstrip (Thumbnails) -->
+            <div class="media-filmstrip" id="filmstrip" role="list" aria-label="Image Thumbnails">
+                <!-- Thumbnails injected via JS -->
+            </div>
 
-      <!-- Scrollable Content Zones -->
-      <div class="tour-content">
+        </div>
+    </section>
 
-        <!-- ZONE: EXTERIOR + ENTRY -->
-        <section id="zone-exterior" class="surface panel tour-zone">
-          <h2>Getting here</h2>
-          <div class="image-grid">
-            <figure class="image-card" style="view-transition-name: card-ext-1;">
-              <img loading="lazy" decoding="async" src="assets/images/Location_street_view_distance.jpg" alt="Clinic exterior view">
-              <figcaption>Clinic exterior — designed for a calm, grounded arrival</figcaption>
-            </figure>
+    <!-- Categories / Info Section -->
+    <section class="gallery-meta container">
+        <div class="meta-grid">
+            <div class="meta-card">
+                <h3>Facilities</h3>
+                <p>Modern consultation rooms and waiting areas designed for comfort.</p>
+            </div>
+            <div class="meta-card">
+                <h3>Therapy Zones</h3>
+                <p>Specialized rooms for Speech, Occupational, and Behavioral therapy.</p>
+            </div>
+            <div class="meta-card">
+                <h3>Team</h3>
+                <p>Meet our dedicated professionals committed to your care.</p>
+            </div>
+        </div>
+    </section>
 
-            <figure class="image-card" style="view-transition-name: card-ext-2;">
-              <img loading="lazy" decoding="async" src="assets/images/mind-grace-entry-n-reception.webp" alt="Entry and reception">
-              <figcaption>Reception area — structured for privacy and seamless check-in</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <!-- ZONE: CONSULTATION FLOW -->
-        <section id="zone-consult" class="surface panel tour-zone">
-          <h2>Adult consultation spaces</h2>
-          <div class="image-grid">
-            <figure class="image-card" style="view-transition-name: card-consult-1;">
-              <img loading="lazy" decoding="async" src="assets/images/mind-grace-consultation-room.jpg" alt="Consultation room">
-              <figcaption>Consultation room — focused, private discussions</figcaption>
-            </figure>
-
-            <figure class="image-card" style="view-transition-name: card-consult-2;">
-              <img loading="lazy" decoding="async" src="assets/images/mind-grace-therapy-room.jpg" alt="Therapy room">
-              <figcaption>Therapy space for structured, evidence-based sessions</figcaption>
-            </figure>
-
-            <figure class="image-card" style="view-transition-name: card-consult-3;">
-              <img loading="lazy" decoding="async" src="assets/images/mind-grace-small-room.jpg" alt="Additional clinic room">
-              <figcaption>Flexible clinical space for specialized assessments</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <!-- ZONE: AASHA INTRO -->
-        <section id="zone-aasha" class="surface-soft panel tour-zone">
-          <h2>Aasha Early Intervention</h2>
-          <p>
-            Dedicated child development spaces designed for engagement, learning, and structured therapeutic work.
-          </p>
-        </section>
-
-        <!-- ZONE: SPEECH THERAPY -->
-        <section id="zone-speech" class="surface panel tour-zone">
-          <h2>Speech &amp; language development</h2>
-          <div class="image-grid">
-            <figure class="image-card" style="view-transition-name: card-speech-1;">
-              <img loading="lazy" decoding="async" src="assets/images/aasha-speech-hindi-varnmala.jpg" alt="Hindi varnmala learning setup used for child speech and language support">
-              <figcaption>Multilingual speech and language mapping (Hindi Varnmala)</figcaption>
-            </figure>
-
-            <figure class="image-card" style="view-transition-name: card-speech-2;">
-              <img loading="lazy" decoding="async" src="assets/images/aasha-speech-english-alphabets.jpg" alt="English alphabet learning board used in child language sessions">
-              <figcaption>Phonetic and language development aids</figcaption>
-            </figure>
-
-            <figure class="image-card" style="view-transition-name: card-speech-3;">
-              <img loading="lazy" decoding="async" src="assets/images/aasha-speech-english-alphabets-closeup.jpg" alt="Close-up language learning aids used in Aasha speech support sessions">
-              <figcaption>Tactile and visual language tools</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <!-- ZONE: SPECIAL EDUCATION -->
-        <section id="zone-special-ed" class="surface panel tour-zone">
-          <h2>Special education &amp; cognitive development</h2>
-          <div class="image-grid">
-            <figure class="image-card" style="view-transition-name: card-sped-1;">
-              <img loading="lazy" decoding="async" src="assets/images/aasha-special-ed-fruit-sort.jpg" alt="Fruit sorting activity used for structured child learning and special education support">
-              <figcaption>Sorting and categorisation tasks for cognitive structuring</figcaption>
-            </figure>
-
-            <figure class="image-card" style="view-transition-name: card-sped-2;">
-              <img loading="lazy" decoding="async" src="assets/images/aasha-special-ed-fruit-sort-closeup.jpg" alt="Close-up of sorting materials used for cognitive learning activities">
-              <figcaption>Fine motor and executive function building</figcaption>
-            </figure>
-
-            <figure class="image-card" style="view-transition-name: card-sped-3;">
-              <img loading="lazy" decoding="async" src="assets/images/aasha-special-ed-jigsaw.jpg" alt="Jigsaw activity used for problem-solving and cognitive development support">
-              <figcaption>Problem-solving and spatial reasoning tasks</figcaption>
-            </figure>
-
-            <figure class="image-card" style="view-transition-name: card-sped-4;">
-              <img loading="lazy" decoding="async" src="assets/images/aasha-special-ed-abacus.jpg" alt="Abacus learning tool used for number sense and attention-building activities">
-              <figcaption>Number sense and attention-building activities</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <!-- ZONE: OCCUPATIONAL THERAPY -->
-        <section id="zone-ot" class="surface panel tour-zone">
-          <h2>Occupational therapy &amp; sensory work</h2>
-          <div class="image-grid">
-            <figure class="image-card" style="view-transition-name: card-ot-1;">
-              <img loading="lazy" decoding="async" src="assets/images/aasha-occupational-therapy-junglejim-trampoline.jpg" alt="Movement-based occupational therapy setup with trampoline for sensory regulation">
-              <figcaption>Proprioceptive input for sensory regulation</figcaption>
-            </figure>
-
-            <figure class="image-card" style="view-transition-name: card-ot-2;">
-              <img loading="lazy" decoding="async" src="assets/images/aasha-occupational-therapy-lycra-junglejim.jpg" alt="Lycra-based occupational therapy support used for sensory integration work">
-              <figcaption>Deep pressure and sensory integration support</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <!-- ZONE: DOCTOR -->
-        <section id="zone-leadership" class="surface panel tour-zone">
-          <h2>Clinical leadership</h2>
-          <div class="image-grid">
-            <figure class="image-card" style="view-transition-name: card-doc-1;">
-              <img loading="lazy" decoding="async" src="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg" alt="Professional portrait of Dr Anita Sharma">
-              <figcaption>Dr Anita Sharma — Consultant Psychiatrist &amp; Clinical Director</figcaption>
-            </figure>
-          </div>
-        </section>
-
-      </div>
-    </div>
-
-  </div>
 </main>
 
-<!-- BACKDROP FOR FOCUS MODE -->
-<div class="gallery-backdrop" id="gallery-backdrop"></div>
 
-<script src="assets/js/main.js" type="module"></script>
-<script src="assets/js/gallery.js" type="module"></script>
+<script type="module">
+  // Expose gallery data globally for the module to consume
+  window.galleryData = [
+    {
+      id: 'ext-1',
+      src: 'assets/images/Location_street_view_distance.jpg',
+      alt: 'Clinic exterior view',
+      caption: 'Clinic Exterior',
+      description: 'Designed for a calm, grounded arrival experience'
+    },
+    {
+      id: 'ext-2',
+      src: 'assets/images/mind-grace-entry-n-reception.webp',
+      alt: 'Entry and reception',
+      caption: 'Reception Area',
+      description: 'Structured for privacy and seamless check-in'
+    },
+    {
+      id: 'consult-1',
+      src: 'assets/images/mind-grace-consultation-room.jpg',
+      alt: 'Consultation room',
+      caption: 'Adult Consultation Room',
+      description: 'Focused, private discussions in a comfortable setting'
+    },
+    {
+      id: 'consult-2',
+      src: 'assets/images/mind-grace-therapy-room.jpg',
+      alt: 'Therapy room',
+      caption: 'Therapy Space',
+      description: 'Evidence-based therapy sessions in a structured environment'
+    },
+    {
+      id: 'consult-3',
+      src: 'assets/images/mind-grace-small-room.jpg',
+      alt: 'Additional clinic room',
+      caption: 'Assessment Room',
+      description: 'Flexible clinical space for specialized assessments'
+    },
+    {
+      id: 'speech-1',
+      src: 'assets/images/aasha-speech-hindi-varnmala.jpg',
+      alt: 'Hindi varnmala learning setup used for child speech and language support',
+      caption: 'Speech & Language (Hindi)',
+      description: 'Multilingual speech and language mapping tools'
+    },
+    {
+      id: 'speech-2',
+      src: 'assets/images/aasha-speech-english-alphabets.jpg',
+      alt: 'English alphabet learning board used in child language sessions',
+      caption: 'Phonetic Development',
+      description: 'Phonetic and language development aids'
+    },
+    {
+      id: 'speech-3',
+      src: 'assets/images/aasha-speech-english-alphabets-closeup.jpg',
+      alt: 'Close-up language learning aids used in Aasha speech support sessions',
+      caption: 'Tactile Learning Tools',
+      description: 'Visual and tactile language learning resources'
+    },
+    {
+      id: 'sped-1',
+      src: 'assets/images/aasha-special-ed-fruit-sort.jpg',
+      alt: 'Fruit sorting activity used for structured child learning and special education support',
+      caption: 'Cognitive Sorting Tasks',
+      description: 'Sorting and categorization for cognitive structuring'
+    },
+    {
+      id: 'sped-2',
+      src: 'assets/images/aasha-special-ed-fruit-sort-closeup.jpg',
+      alt: 'Close-up of sorting materials used for cognitive learning activities',
+      caption: 'Fine Motor Skills',
+      description: 'Fine motor and executive function building exercises'
+    },
+    {
+      id: 'sped-3',
+      src: 'assets/images/aasha-special-ed-jigsaw.jpg',
+      alt: 'Jigsaw activity used for problem-solving and cognitive development support',
+      caption: 'Problem Solving',
+      description: 'Spatial reasoning and problem-solving tasks'
+    },
+    {
+      id: 'sped-4',
+      src: 'assets/images/aasha-special-ed-abacus.jpg',
+      alt: 'Abacus learning tool used for number sense and attention-building activities',
+      caption: 'Number Sense',
+      description: 'Attention-building and numerical cognition activities'
+    },
+    {
+      id: 'ot-1',
+      src: 'assets/images/aasha-occupational-therapy-junglejim-trampoline.jpg',
+      alt: 'Movement-based occupational therapy setup with trampoline for sensory regulation',
+      caption: 'Sensory Regulation',
+      description: 'Proprioceptive input through movement-based therapy'
+    },
+    {
+      id: 'ot-2',
+      src: 'assets/images/aasha-occupational-therapy-lycra-junglejim.jpg',
+      alt: 'Lycra-based occupational therapy support used for sensory integration work',
+      caption: 'Deep Pressure Therapy',
+      description: 'Sensory integration support with deep pressure techniques'
+    },
+    {
+      id: 'doc-1',
+      src: 'assets/images/Dr_Anita_Sharma_Personal_Photo.jpg',
+      alt: 'Professional portrait of Dr Anita Sharma',
+      caption: 'Dr. Anita Sharma',
+      description: 'Consultant Psychiatrist & Clinical Director'
+    }
+  ];
+
+  // Media Player Controller Class (2026 Best Practices)
+  class MediaPlayerGallery {
+    constructor(data) {
+      this.data = data;
+      this.currentIndex = 0;
+      this.isLoading = false;
+      
+      // DOM Elements
+      this.stageImage = document.getElementById('stage-image');
+      this.stageCaption = document.getElementById('stage-caption');
+      this.stageDesc = document.getElementById('stage-description');
+      this.filmstrip = document.getElementById('filmstrip');
+      this.prevBtn = document.getElementById('prev-btn');
+      this.nextBtn = document.getElementById('next-btn');
+      
+      // Bind methods
+      this.loadImage = this.loadImage.bind(this);
+      this.showImage = this.showImage.bind(this);
+      this.next = this.next.bind(this);
+      this.prev = this.prev.bind(this);
+      this.handleKeydown = this.handleKeydown.bind(this);
+      this.renderFilmstrip = this.renderFilmstrip.bind(this);
+      
+      // Initialize
+      this.init();
+    }
+    
+    init() {
+      // Render thumbnails
+      this.renderFilmstrip();
+      
+      // Load first image
+      this.showImage(0);
+      
+      // Event listeners
+      this.prevBtn.addEventListener('click', this.prev);
+      this.nextBtn.addEventListener('click', this.next);
+      document.addEventListener('keydown', this.handleKeydown);
+      
+      // Touch gestures for swipe navigation
+      this.setupTouchGestures();
+      
+      // Preload adjacent images
+      this.preloadAdjacent();
+    }
+    
+    renderFilmstrip() {
+      this.filmstrip.innerHTML = this.data.map((item, index) => `
+        <button 
+          class="filmstrip-thumb ${index === 0 ? 'active' : ''}" 
+          data-index="${index}"
+          aria-label="View ${item.caption}"
+          aria-current="${index === 0 ? 'true' : 'false'}"
+          style="--thumb-bg: url('${item.src}')"
+        >
+          <img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async">
+        </button>
+      `).join('');
+      
+      // Add click handlers to thumbnails
+      this.filmstrip.querySelectorAll('.filmstrip-thumb').forEach(thumb => {
+        thumb.addEventListener('click', (e) => {
+          const index = parseInt(e.currentTarget.dataset.index);
+          this.showImage(index);
+        });
+      });
+    }
+    
+    showImage(index) {
+      if (this.isLoading || index < 0 || index >= this.data.length) return;
+      
+      this.currentIndex = index;
+      const item = this.data[index];
+      
+      // Update active states
+      this.filmstrip.querySelectorAll('.filmstrip-thumb').forEach((thumb, i) => {
+        thumb.classList.toggle('active', i === index);
+        thumb.setAttribute('aria-current', i === index ? 'true' : 'false');
+      });
+      
+      // Crossfade transition
+      this.stageImage.classList.remove('active');
+      
+      // Force reflow for transition
+      void this.stageImage.offsetWidth;
+      
+      this.stageImage.src = item.src;
+      this.stageImage.alt = item.alt;
+      this.stageCaption.textContent = item.caption;
+      this.stageDesc.textContent = item.description;
+      
+      this.stageImage.onload = () => {
+        this.stageImage.classList.add('active');
+      };
+      
+      // Update button states
+      this.prevBtn.disabled = index === 0;
+      this.nextBtn.disabled = index === this.data.length - 1;
+      
+      // Scroll thumbnail into view
+      this.scrollToThumb(index);
+      
+      // Preload next/prev images
+      this.preloadAdjacent();
+    }
+    
+    scrollToThumb(index) {
+      const thumb = this.filmstrip.querySelectorAll('.filmstrip-thumb')[index];
+      if (thumb) {
+        thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+    
+    preloadAdjacent() {
+      const indices = [
+        this.currentIndex - 1,
+        this.currentIndex + 1,
+        this.currentIndex - 2,
+        this.currentIndex + 2
+      ].filter(i => i >= 0 && i < this.data.length);
+      
+      indices.forEach(i => {
+        const img = new Image();
+        img.src = this.data[i].src;
+      });
+    }
+    
+    next() {
+      if (this.currentIndex < this.data.length - 1) {
+        this.showImage(this.currentIndex + 1);
+      }
+    }
+    
+    prev() {
+      if (this.currentIndex > 0) {
+        this.showImage(this.currentIndex - 1);
+      }
+    }
+    
+    handleKeydown(e) {
+      switch(e.key) {
+        case 'ArrowRight':
+          e.preventDefault();
+          this.next();
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          this.prev();
+          break;
+        case 'Home':
+          e.preventDefault();
+          this.showImage(0);
+          break;
+        case 'End':
+          e.preventDefault();
+          this.showImage(this.data.length - 1);
+          break;
+      }
+    }
+    
+    setupTouchGestures() {
+      let startX = 0;
+      let endX = 0;
+      const threshold = 50;
+      
+      const stage = document.getElementById('media-stage');
+      
+      stage.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+      
+      stage.addEventListener('touchmove', (e) => {
+        endX = e.touches[0].clientX;
+      }, { passive: true });
+      
+      stage.addEventListener('touchend', () => {
+        if (startX - endX > threshold) {
+          this.next();
+        } else if (endX - startX > threshold) {
+          this.prev();
+        }
+      });
+    }
+  }
+
+  // Initialize when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    window.galleryPlayer = new MediaPlayerGallery(window.galleryData);
+  });
+</script>
 
 <!-- FOOTER -->
 <footer class="site-footer">
