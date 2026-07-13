@@ -214,8 +214,8 @@
                     <!-- Main Image -->
                     <img 
                         id="stage-image" 
-                        src="" 
-                        alt="" 
+                        src="assets/images/Location_street_view_distance.jpg" 
+                        alt="Street view of Mind Grace Neuropsychiatric Clinic and AASHA Child Development Centre located in Greater Noida, Uttar Pradesh" 
                         class="stage-img" 
                         loading="eager" 
                         fetchpriority="high"
@@ -224,8 +224,8 @@
                     
                     <!-- Caption Overlay -->
                     <div class="stage-overlay">
-                        <h2 id="stage-caption" class="stage-caption"></h2>
-                        <p id="stage-description" class="stage-desc"></p>
+                        <h2 id="stage-caption" class="stage-caption">Clinic Exterior</h2>
+                        <p id="stage-description" class="stage-desc">An exterior photograph showing the clinic building, entrance, parking area, roadside access, and clinic signage. The image helps patients and families identify the location before visiting.</p>
                     </div>
                 </div>
                 
@@ -241,8 +241,8 @@
             </div>
 
             <!-- Section Title Card (appears between categories) -->
-            <div class="section-title-card" id="section-title-card" hidden aria-live="polite">
-                <h2 class="section-title-text"></h2>
+            <div class="section-title-card" id="section-title-card" aria-live="polite">
+                <h2 class="section-title-text">Welcome to Our Clinic</h2>
                 <div class="section-title-decoration"></div>
             </div>
 
@@ -275,7 +275,7 @@
 </main>
 
 
-<script type="module">
+<script>
   // Gallery data with rich descriptions from image_descriptions.md
   window.galleryData = [
     // === EXTERIOR & RECEPTION ===
@@ -460,32 +460,35 @@
         return;
       }
       
-      // Render thumbnails
+      // Render thumbnails first
       this.renderFilmstrip();
       
-      // Load first image and show initial section title
-      this.showImage(0);
-      
-      // Event listeners
-      this.prevBtn?.addEventListener('click', this.prev);
-      this.nextBtn?.addEventListener('click', this.next);
-      this.retryBtn?.addEventListener('click', this.handleRetry);
-      document.addEventListener('keydown', this.handleKeydown);
-      
-      // Image error handling
-      if (this.stageImage) {
-        this.stageImage.addEventListener('load', () => this.handleImageLoad());
-        this.stageImage.addEventListener('error', () => this.handleImageError());
-      }
-      
-      // Touch gestures for swipe navigation
-      this.setupTouchGestures();
-      
-      // Preload adjacent images
-      this.preloadAdjacent();
-      
-      // Re-initialize lucide icons after DOM updates
-      this.refreshIcons();
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        // Load first image and show initial section title
+        this.showImage(0);
+        
+        // Event listeners
+        this.prevBtn?.addEventListener('click', this.prev);
+        this.nextBtn?.addEventListener('click', this.next);
+        this.retryBtn?.addEventListener('click', this.handleRetry);
+        document.addEventListener('keydown', this.handleKeydown);
+        
+        // Image error handling
+        if (this.stageImage) {
+          this.stageImage.addEventListener('load', () => this.handleImageLoad());
+          this.stageImage.addEventListener('error', () => this.handleImageError());
+        }
+        
+        // Touch gestures for swipe navigation
+        this.setupTouchGestures();
+        
+        // Preload adjacent images
+        this.preloadAdjacent();
+        
+        // Re-initialize lucide icons after DOM updates
+        this.refreshIcons();
+      }, 100);
     }
     
     refreshIcons() {
@@ -630,11 +633,11 @@
       this.stageImage.style.opacity = '0';
       
       setTimeout(() => {
-        // Set new image source
+        // Set new image source with error handling
         this.stageImage.src = item.src;
-        this.stageImage.alt = item.alt;
-        this.stageCaption.textContent = item.caption;
-        this.stageDesc.textContent = item.description;
+        this.stageImage.alt = item.alt || '';
+        this.stageCaption.textContent = item.caption || '';
+        this.stageDesc.textContent = item.description || '';
         
         // Fade in
         requestAnimationFrame(() => {
@@ -732,10 +735,15 @@
     }
   }
 
-  // Initialize when DOM is ready
+  // Initialize Gallery when DOM is ready
   document.addEventListener('DOMContentLoaded', () => {
-    window.galleryPlayer = new MediaPlayerGallery(window.galleryData);
+    if (window.galleryData && window.galleryData.length > 0) {
+      new MediaPlayerGallery(window.galleryData);
+    } else {
+      console.error('Gallery: No image data found');
+    }
   });
+
 </script>
 
 <!-- FOOTER -->
