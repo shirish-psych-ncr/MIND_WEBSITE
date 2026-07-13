@@ -249,16 +249,16 @@ osc.start();
 **Example Fix Needed:**
 ```html
 <!-- CURRENT (WRONG): -->
-<link rel="canonical" href="https://mindgrace.in/tools/butterfly-tapper.html">
-<link rel="canonical" href="https://mindgrace.in/tools/butterfly-tapper.html">
-<link rel="canonical" href="https://mindgrace.in/tools/butterfly-tapper.html">
-<link rel="canonical" href="https://mindgrace.in/butterfly-tapper.html">
+<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">
+<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">
+<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">
+<link rel="canonical" href="https://mindgracencr.in/butterfly-tapper.html">
 
 <!-- SHOULD BE: -->
 <link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">
 ```
 
-⚠️ **Domain Inconsistency:** All canonicals use `mindgrace.in` instead of `mindgracencr.in`
+⚠️ **Domain Inconsistency:** All canonicals use `mindgracencr.in` instead of `mindgracencr.in`
 
 ### Code Quality
 ⚠️ **Minified Source Files:** All tool JS/CSS files are minified (hard to maintain)

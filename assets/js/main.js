@@ -130,14 +130,14 @@ function initNetworkStatus() {
 // Global error boundary
 function initErrorBoundary() {
   window.addEventListener('error', (e) => {
-    console.error('[Mind Grace Error]', e.message, e.filename, e.lineno);
+    
     if (window.location.hostname !== 'localhost') {
       e.preventDefault();
     }
   });
   
   window.addEventListener('unhandledrejection', (e) => {
-    console.error('[Mind Grace Unhandled Promise]', e.reason);
+    
     if (window.location.hostname !== 'localhost') {
       e.preventDefault();
     }
@@ -407,7 +407,7 @@ function initForms(forms) {
       });
       
       if (isValid) {
-        console.log('Form submitted successfully');
+        // Form validated and ready for submission
         // form.submit(); // Uncomment for production
       }
     });
@@ -512,9 +512,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initErrorBoundary();
     initSkipLink();
     _initScrollProgress();
-    console.log('[Mind Grace] All modules initialized successfully');
+    // All modules initialized
   } catch (error) {
-    console.error('[Mind Grace Bootstrap Error]', error);
+    
   }
 })();
 

@@ -51,7 +51,7 @@
 
     init() {
       if (!this.data || this.data.length === 0) {
-        console.error('Gallery: No image data available');
+        
         this.showError('No images available');
         return;
       }
@@ -166,7 +166,7 @@
     }
 
     handleImageError() {
-      console.error('Gallery: Failed to load image at index ' + this.currentIndex);
+      
       this.showError();
 
       // Auto-advance to next image if available
@@ -353,7 +353,7 @@
     if (window.galleryData && window.galleryData.length > 0) {
       window.galleryPlayer = new MediaPlayerGallery(window.galleryData);
     } else {
-      console.error('Gallery: No image data available');
+      
     }
   }
 
