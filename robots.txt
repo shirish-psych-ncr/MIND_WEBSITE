@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mindgrace.in/sitemap.xml
+Sitemap: https://mindgracencr.in/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
