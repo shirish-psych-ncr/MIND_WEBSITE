@@ -238,6 +238,12 @@
                 </button>
             </div>
 
+            <!-- Section Title Card (appears between categories) -->
+            <div class="section-title-card" id="section-title-card" hidden aria-live="polite">
+                <h2 class="section-title-text"></h2>
+                <div class="section-title-decoration"></div>
+            </div>
+
             <!-- Filmstrip (Thumbnails) -->
             <div class="media-filmstrip" id="filmstrip" role="list" aria-label="Image Thumbnails">
                 <!-- Thumbnails injected via JS -->
@@ -268,112 +274,144 @@
 
 
 <script type="module">
-  // Expose gallery data globally for the module to consume
+  // Gallery data with rich descriptions from image_descriptions.md
   window.galleryData = [
+    // === EXTERIOR & RECEPTION ===
     {
       id: 'ext-1',
       src: 'assets/images/Location_street_view_distance.jpg',
-      alt: 'Clinic exterior view',
+      alt: 'Street view of Mind Grace Neuropsychiatric Clinic and AASHA Child Development Centre located in Greater Noida, Uttar Pradesh',
       caption: 'Clinic Exterior',
-      description: 'Designed for a calm, grounded arrival experience'
+      description: 'An exterior photograph showing the clinic building, entrance, parking area, roadside access, and clinic signage. The image helps patients and families identify the location before visiting.',
+      category: 'exterior',
+      sectionTitle: 'Welcome to Our Clinic'
     },
     {
       id: 'ext-2',
       src: 'assets/images/mind-grace-entry-n-reception.webp',
-      alt: 'Entry and reception',
+      alt: 'Entry and reception area at Mind Grace Clinic',
       caption: 'Reception Area',
-      description: 'Structured for privacy and seamless check-in'
+      description: 'Structured for privacy and seamless check-in. Our welcoming reception area is designed to create a calm, grounded arrival experience for all patients and families.',
+      category: 'exterior'
     },
+    
+    // === CONSULTATION ROOMS ===
     {
       id: 'consult-1',
       src: 'assets/images/mind-grace-consultation-room.jpg',
-      alt: 'Consultation room',
+      alt: 'Adult consultation room at Mind Grace Neuropsychiatric Clinic',
       caption: 'Adult Consultation Room',
-      description: 'Focused, private discussions in a comfortable setting'
+      description: 'Focused, private discussions in a comfortable setting. Our consultation rooms provide a safe, confidential environment for psychiatric evaluation and psychotherapy.',
+      category: 'consultation',
+      sectionTitle: 'Consultation Spaces'
     },
     {
       id: 'consult-2',
       src: 'assets/images/mind-grace-therapy-room.jpg',
-      alt: 'Therapy room',
+      alt: 'Therapy room for evidence-based sessions',
       caption: 'Therapy Space',
-      description: 'Evidence-based therapy sessions in a structured environment'
+      description: 'Evidence-based therapy sessions in a structured environment. Designed for CBT, family counselling, and individual psychotherapy.',
+      category: 'consultation'
     },
     {
       id: 'consult-3',
       src: 'assets/images/mind-grace-small-room.jpg',
-      alt: 'Additional clinic room',
+      alt: 'Assessment room for specialized clinical evaluations',
       caption: 'Assessment Room',
-      description: 'Flexible clinical space for specialized assessments'
+      description: 'Flexible clinical space for specialized assessments including psychological testing, developmental screening, and diagnostic evaluations.',
+      category: 'consultation'
     },
+    
+    // === SPEECH & LANGUAGE THERAPY ===
     {
       id: 'speech-1',
       src: 'assets/images/aasha-speech-hindi-varnmala.jpg',
-      alt: 'Hindi varnmala learning setup used for child speech and language support',
-      caption: 'Speech & Language (Hindi)',
-      description: 'Multilingual speech and language mapping tools'
+      alt: 'Child learning Hindi alphabet using a colourful Devanagari wooden peg puzzle during speech therapy and special education',
+      caption: 'Hindi Language Development',
+      description: 'A child participates in Hindi language learning using a wooden Devanagari Varnmala puzzle. The activity encourages letter identification, phonological awareness, early reading readiness, bilingual language acquisition, and communication development.',
+      category: 'speech',
+      sectionTitle: 'Speech & Language Therapy'
     },
     {
       id: 'speech-2',
       src: 'assets/images/aasha-speech-english-alphabets.jpg',
-      alt: 'English alphabet learning board used in child language sessions',
-      caption: 'Phonetic Development',
-      description: 'Phonetic and language development aids'
+      alt: 'Child learning uppercase English alphabets using a wooden peg puzzle during speech therapy and early literacy intervention',
+      caption: 'English Phonetic Development',
+      description: 'A child practises English alphabet recognition using a colourful uppercase wooden peg puzzle. Alphabet puzzles promote letter recognition, phonological awareness, receptive language, expressive language, and pre-reading skills.',
+      category: 'speech'
     },
     {
       id: 'speech-3',
       src: 'assets/images/aasha-speech-english-alphabets-closeup.jpg',
-      alt: 'Close-up language learning aids used in Aasha speech support sessions',
+      alt: 'Close-up of child placing an English alphabet puzzle piece into its matching slot during speech and occupational therapy',
       caption: 'Tactile Learning Tools',
-      description: 'Visual and tactile language learning resources'
+      description: 'A close-up image capturing a child\'s hand accurately orienting and placing an alphabet puzzle piece. The activity strengthens letter recognition, visual discrimination, motor planning, precision grip, and early literacy development.',
+      category: 'speech'
     },
+    
+    // === SPECIAL EDUCATION ===
     {
       id: 'sped-1',
       src: 'assets/images/aasha-special-ed-fruit-sort.jpg',
-      alt: 'Fruit sorting activity used for structured child learning and special education support',
+      alt: 'Child completing a fruit matching wooden puzzle during occupational therapy and developmental intervention session at AASHA Child Development Centre in Greater Noida',
       caption: 'Cognitive Sorting Tasks',
-      description: 'Sorting and categorization for cognitive structuring'
+      description: 'A child actively participates in a fruit recognition and matching exercise using a wooden peg puzzle. The activity develops object recognition, receptive language, expressive vocabulary, visual discrimination, and problem-solving skills.',
+      category: 'special-education',
+      sectionTitle: 'Special Education & Cognitive Development'
     },
     {
       id: 'sped-2',
       src: 'assets/images/aasha-special-ed-fruit-sort-closeup.jpg',
-      alt: 'Close-up of sorting materials used for cognitive learning activities',
-      caption: 'Fine Motor Skills',
-      description: 'Fine motor and executive function building exercises'
+      alt: 'Close-up of child placing a mango puzzle piece into a wooden fruit matching board during occupational therapy and speech therapy',
+      caption: 'Fine Motor Integration',
+      description: 'A close-up image showing a child carefully positioning a mango puzzle piece into its corresponding slot. The photograph illustrates precision grip, pincer grasp development, visual-motor integration, and bilateral coordination.',
+      category: 'special-education'
     },
     {
       id: 'sped-3',
       src: 'assets/images/aasha-special-ed-jigsaw.jpg',
-      alt: 'Jigsaw activity used for problem-solving and cognitive development support',
-      caption: 'Problem Solving',
-      description: 'Spatial reasoning and problem-solving tasks'
+      alt: 'Child assembling a wooden jigsaw puzzle during occupational therapy and cognitive development session at AASHA Early Intervention Centre',
+      caption: 'Problem Solving Activities',
+      description: 'A child works independently to assemble a large wooden jigsaw puzzle depicting an outdoor scene. Puzzle-solving activities strengthen visual-spatial reasoning, planning, sustained attention, cognitive flexibility, and executive functioning.',
+      category: 'special-education'
     },
     {
       id: 'sped-4',
       src: 'assets/images/aasha-special-ed-abacus.jpg',
-      alt: 'Abacus learning tool used for number sense and attention-building activities',
-      caption: 'Number Sense',
-      description: 'Attention-building and numerical cognition activities'
+      alt: 'Wooden educational abacus used during early intervention therapy to develop counting, numeracy, visual tracking, fine motor skills and cognitive development in young children at AASHA Child Development Centre, Greater Noida',
+      caption: 'Numerical Cognition',
+      description: 'A close-angle photograph of a colourful wooden abacus used during an early intervention therapy session. The abacus serves as a multisensory learning tool that strengthens counting skills, one-to-one correspondence, visual attention, and executive functioning.',
+      category: 'special-education'
     },
+    
+    // === OCCUPATIONAL THERAPY ===
     {
       id: 'ot-1',
       src: 'assets/images/aasha-occupational-therapy-junglejim-trampoline.jpg',
       alt: 'Movement-based occupational therapy setup with trampoline for sensory regulation',
       caption: 'Sensory Regulation',
-      description: 'Proprioceptive input through movement-based therapy'
+      description: 'Proprioceptive input through movement-based therapy. Our occupational therapy gym includes equipment for sensory integration, motor planning, and self-regulation activities.',
+      category: 'occupational-therapy',
+      sectionTitle: 'Occupational Therapy'
     },
     {
       id: 'ot-2',
       src: 'assets/images/aasha-occupational-therapy-lycra-junglejim.jpg',
       alt: 'Lycra-based occupational therapy support used for sensory integration work',
       caption: 'Deep Pressure Therapy',
-      description: 'Sensory integration support with deep pressure techniques'
+      description: 'Sensory integration support with deep pressure techniques. Lycra-based equipment provides calming proprioceptive input for children with sensory processing differences.',
+      category: 'occupational-therapy'
     },
+    
+    // === CLINICAL TEAM ===
     {
       id: 'doc-1',
       src: 'assets/images/Dr_Anita_Sharma_Personal_Photo.jpg',
-      alt: 'Professional portrait of Dr Anita Sharma',
+      alt: 'Professional portrait of Dr Anita Sharma, Consultant Psychiatrist',
       caption: 'Dr. Anita Sharma',
-      description: 'Consultant Psychiatrist & Clinical Director'
+      description: 'Consultant Psychiatrist & Clinical Director. Leading our multidisciplinary team in providing comprehensive mental health and developmental services.',
+      category: 'team',
+      sectionTitle: 'Our Clinical Team'
     }
   ];
 
@@ -384,6 +422,7 @@
       this.currentIndex = 0;
       this.isLoading = false;
       this.hasLoaded = false;
+      this.lastCategory = null;
       
       // DOM Elements
       this.stageImage = document.getElementById('stage-image');
@@ -395,6 +434,8 @@
       this.stageLoader = document.getElementById('stage-loader');
       this.stageError = document.getElementById('stage-error');
       this.retryBtn = document.getElementById('retry-btn');
+      this.sectionTitleCard = document.getElementById('section-title-card');
+      this.sectionTitleText = this.sectionTitleCard?.querySelector('.section-title-text');
       
       // Bind methods
       this.loadImage = this.loadImage.bind(this);
@@ -404,6 +445,7 @@
       this.handleKeydown = this.handleKeydown.bind(this);
       this.renderFilmstrip = this.renderFilmstrip.bind(this);
       this.handleRetry = this.handleRetry.bind(this);
+      this.updateSectionTitle = this.updateSectionTitle.bind(this);
       
       // Initialize
       this.init();
@@ -419,7 +461,7 @@
       // Render thumbnails
       this.renderFilmstrip();
       
-      // Load first image
+      // Load first image and show initial section title
       this.showImage(0);
       
       // Event listeners
@@ -451,6 +493,40 @@
           window.lucide.createIcons();
         }
       });
+    }
+    
+    updateSectionTitle(index) {
+      const item = this.data[index];
+      if (!item?.sectionTitle || !this.sectionTitleCard) return;
+      
+      // Only update if category changed
+      if (item.category === this.lastCategory) return;
+      
+      this.lastCategory = item.category;
+      
+      // Fade out, update text, fade in
+      this.sectionTitleCard.style.opacity = '0';
+      
+      setTimeout(() => {
+        if (this.sectionTitleText) {
+          this.sectionTitleText.textContent = item.sectionTitle;
+        }
+        this.sectionTitleCard.hidden = false;
+        
+        // Force reflow
+        void this.sectionTitleCard.offsetWidth;
+        
+        this.sectionTitleCard.style.opacity = '1';
+      }, 300);
+    }
+    
+    hideSectionTitle() {
+      if (!this.sectionTitleCard) return;
+      
+      this.sectionTitleCard.style.opacity = '0';
+      setTimeout(() => {
+        this.sectionTitleCard.hidden = true;
+      }, 300);
     }
     
     showError(message = 'Failed to load image') {
@@ -535,6 +611,9 @@
       this.currentIndex = index;
       const item = this.data[index];
       
+      // Update section title when category changes
+      this.updateSectionTitle(index);
+      
       // Show loader
       this.showLoader();
       
@@ -544,24 +623,32 @@
         thumb.setAttribute('aria-current', i === index ? 'true' : 'false');
       });
       
-      // Crossfade transition
-      this.stageImage.classList.remove('active');
+      // Crossfade transition with enhanced animation
+      this.stageImage.style.transition = 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+      this.stageImage.style.opacity = '0';
       
-      // Set new image source
-      this.stageImage.src = item.src;
-      this.stageImage.alt = item.alt;
-      this.stageCaption.textContent = item.caption;
-      this.stageDesc.textContent = item.description;
-      
-      // Update button states
-      if (this.prevBtn) this.prevBtn.disabled = index === 0;
-      if (this.nextBtn) this.nextBtn.disabled = index === this.data.length - 1;
-      
-      // Scroll thumbnail into view
-      this.scrollToThumb(index);
-      
-      // Preload next/prev images
-      this.preloadAdjacent();
+      setTimeout(() => {
+        // Set new image source
+        this.stageImage.src = item.src;
+        this.stageImage.alt = item.alt;
+        this.stageCaption.textContent = item.caption;
+        this.stageDesc.textContent = item.description;
+        
+        // Fade in
+        requestAnimationFrame(() => {
+          this.stageImage.style.opacity = '1';
+        });
+        
+        // Update button states
+        if (this.prevBtn) this.prevBtn.disabled = index === 0;
+        if (this.nextBtn) this.nextBtn.disabled = index === this.data.length - 1;
+        
+        // Scroll thumbnail into view
+        this.scrollToThumb(index);
+        
+        // Preload next/prev images
+        this.preloadAdjacent();
+      }, 400);
     }
     
     scrollToThumb(index) {

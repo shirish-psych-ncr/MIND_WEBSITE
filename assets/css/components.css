@@ -126,7 +126,9 @@
   display: none;
 }
 
-.stage-img.active {
+/* Active state handled by JS inline styles for crossfade */
+.stage-img.active,
+.stage-img[style*="opacity: 1"] {
   opacity: 1;
   transform: scale(1);
 }
@@ -368,5 +370,80 @@
   
   .stage-nav {
     border: 2px solid currentColor;
+  }
+}
+
+/* Section Title Cards - Fade Animation Between Categories */
+.section-title-card {
+  max-width: 600px;
+  margin: 2rem auto 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.section-title-card:not([hidden]) {
+  opacity: 1;
+}
+
+.section-title-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary, #007bff);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.section-title-decoration {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--color-primary, #007bff), transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 16px rgba(0, 123, 255, 0.6);
+  }
+}
+
+/* Responsive section titles */
+@media (max-width: 768px) {
+  .section-title-text {
+    font-size: 1.25rem;
+  }
+  
+  .section-title-card {
+    margin: 1.5rem auto 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title-text {
+    font-size: 1.1rem;
+  }
+  
+  .section-title-decoration {
+    width: 40px;
+    height: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .section-title-card {
+    transition: none;
+  }
+  
+  .section-title-decoration {
+    animation: none;
   }
 }
