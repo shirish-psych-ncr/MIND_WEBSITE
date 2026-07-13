@@ -1,20 +1,176 @@
-# Multi-Turn Markdown Update Plan
+# Multi-Turn Markdown Update Plan — Phase 1 Consolidation
 
 ## Executive Summary
 
-This document outlines a systematic, token-efficient approach to audit and update all markdown documentation files in the Mind Grace Neuropsychiatric Clinic repository.
+Systematic audit and update of all markdown documentation files in the Mind Grace Neuropsychiatric Clinic repository.
 
-**Current State (Verified):**
-- 25 core HTML pages (~17,030 lines total)
-- 6 therapeutic tool pages
-- 9 blog article pages (5 adult + 4 child)
-- 5 core CSS files (~3,950 lines: base.css=1,505, layout.css=1,057, components.css=364, animations.css=6,134, utilities.css=11,747)
-- 7 tool-specific CSS files (~13KB total)
-- 20 JavaScript modules (~8,500 lines: main.js=658, gallery.js=365, tools-leaf.js=266, etc.)
-- 22 vendor libraries in `/assets/vendor/` and `/assets/js/lib/`
-- 38 images (~21MB total)
-- 14 AGENT_BIBLE documentation files (~6,500 lines)
-- 3 component README files
+**Repository Statistics (Verified July 2026):**
+
+| Category        | Count | Details                                    |
+| --------------- | ----- | ------------------------------------------ |
+| **HTML Pages**  | 51    | 25 root + 6 tools + 12 blog + 8 templates  |
+| **CSS Files**   | 12    | 5 core + 7 tool-specific                   |
+| **JS Files**    | 67    | 20 app modules + 20 lib + 27 vendor        |
+| **Images**      | 31    | Logos, photos, brochures, diagrams         |
+| **MD Docs**     | 24    | 14 AGENT_BIBLE + 10 asset docs             |
+| **Components**  | 6     | HTML partials + CSS components             |
+| **Config**      | 8     | manifest, robots, sitemap, package, etc.   |
+
+**Total Files:** 222 (excluding node_modules)  
+**Total Lines:** ~35,000+ across all files
+
+---
+
+## Critical Issues Identified (Phase 1 Complete)
+
+### 1. SEO & Domain Inconsistencies
+
+**robots.txt:**
+- ❌ References wrong domain: `mindgrace.in` instead of `mindgracencr.in`
+- ❌ Sitemap URL incorrect: `https://mindgrace.in/sitemap.xml`
+
+**sitemap.xml:**
+- ❌ Mixed URL formats: first entry absolute (`https://shirish-psych-ncr.github.io/MIND_WEBSITE/index.html`), rest relative (`about.html`)
+- ❌ Missing pages: about.html, doctors.html, dr-anita-sharma.html, approach.html, consent.html, privacy.html, terms.html, disclaimer.html, thank-you.html, 404.html, all 6 tool pages
+- ❌ Only 28 URLs present, should have 51+
+
+### 2. Documentation Path Errors
+
+**README.md:**
+- ✅ Fixed: Links to `assets/css/README.md` and `assets/js/README.md`
+- ✅ Fixed: Tool script locations corrected
+- ⚠️ Still references old deployment URL format inconsistently
+
+**ARCHITECTURE.md:**
+- ❌ Claims `terms.html` and `disclaimer.html` are missing (they exist)
+- ❌ References `index-old.html` and `index-revamp.html` (need verification)
+- ❌ CSS line counts outdated
+
+**AGENT_BIBLE/Instructions.md:**
+- ✅ Version 14.3, synchronized
+- ⚠️ Claims 182 files, actual count is 222
+- ⚠️ Says 43 HTML pages, actual is 51
+
+**AGENT_BIBLE/pages.md:**
+- ✅ Lists 25 core pages correctly
+- ✅ Lists 6 tool pages correctly
+- ✅ Lists 12 blog pages correctly
+- ⚠️ Status flags need verification against actual files
+
+**AGENT_BIBLE/assets.md:**
+- ❌ Claims 176 total files (actual: 222)
+- ❌ Says 38 images (actual: 31)
+- ❌ Says 20 JS files (actual: 67 including vendors)
+- ⚠️ Vendor library count outdated (says 24, actual: 27 in /vendor/)
+
+### 3. Duplicate Canonical Tags
+
+**Tool Pages with 4 canonical tags each (should be 1):**
+- guided-breathing.html
+- butterfly-tapper.html
+- eye-movement.html
+- hypnos-fractal.html
+- horizon-scan.html
+- leaf-on-stream.html
+
+### 4. File Count Discrepancies
+
+| Document | Claimed | Actual | Gap |
+| -------- | ------- | ------ | --- |
+| Instructions.md | 182 files | 222 files | +40 |
+| Instructions.md | 43 HTML | 51 HTML | +8 |
+| Instructions.md | 39 images | 31 images | -8 |
+| assets.md | 176 files | 222 files | +46 |
+| assets.md | 38 images | 31 images | -7 |
+
+---
+
+## Phase 1 Updates Completed
+
+### Turn 1: README.md
+- ✅ Fixed CSS/JS README paths
+- ✅ Updated tool script locations
+- ✅ Verified page inventory links
+
+### Turn 2: ARCHITECTURE.md
+- ✅ Verified file structure accuracy
+- ⚠️ Need to update technical debt section
+- ⚠️ Need to fix "missing files" claims
+
+### Turn 3: Repository Statistics
+- ✅ Counted actual files: 222 total
+- ✅ Verified HTML pages: 51 (25 root + 6 tools + 12 blog + 8 templates)
+- ✅ Verified CSS files: 12 (5 core + 7 tools)
+- ✅ Verified JS files: 67 (20 app + 20 lib + 27 vendor)
+- ✅ Verified images: 31
+
+### Turn 4: AGENT_BIBLE Audit
+- ✅ Instructions.md: Version 14.3 confirmed
+- ✅ pages.md: Page inventory accurate
+- ⚠️ assets.md: File counts need update
+
+### Turn 5: Consolidation (This Turn)
+- ✅ Compiled all findings
+- ✅ Identified critical SEO issues
+- ✅ Documented path errors
+- ✅ Listed duplicate canonical tag issues
+- ✅ Created discrepancy table
+
+---
+
+## Next Steps (Phase 2 Planning)
+
+**Priority P0 (Immediate):**
+1. Fix robots.txt domain reference
+2. Regenerate sitemap.xml with all 51+ pages, consistent absolute URLs
+3. Remove duplicate canonical tags from 6 tool pages
+
+**Priority P1 (Documentation Sync):**
+1. Update AGENT_BIBLE/assets.md with correct file counts
+2. Update AGENT_BIBLE/Instructions.md statistics
+3. Update ARCHITECTURE.md technical debt section
+4. Verify and update status flags in pages.md
+
+**Priority P2 (Cleanup):**
+1. Verify existence of index-old.html, index-revamp.html
+2. Remove or consolidate duplicate homepage files
+3. Standardize URL format across all documentation
+
+---
+
+## Token-Efficient Strategy for Remaining Phases
+
+**Phase 2 (Turns 6-10): Technical Documentation**
+- Turn 6: design.md — Verify design tokens match base.css
+- Turn 7: components.md — Verify component inventory
+- Turn 8: tools.md — Verify tool specifications
+- Turn 9: schemas.md — Verify JSON-LD examples
+- Turn 10: opengraph.md — Verify metadata patterns
+
+**Phase 3 (Turns 11-15): Asset & Component Docs**
+- Turn 11: assets.md — Update file counts, verify image inventory
+- Turn 12: components/README.md — Verify component library
+- Turn 13: css/README.md — Verify CSS architecture docs
+- Turn 14: js/README.md — Verify JS module docs
+- Turn 15: image_descriptions.md — Verify alt text coverage
+
+**Phase 4 (Turns 16-20): Specialized Documentation**
+- Turn 16: worker.md — Verify deployment checklist
+- Turn 17: memory.md — Verify session state structure
+- Turn 18: _multiphasic_plan.md — Update roadmap
+- Turn 19: Bible_Generator.md — Verify generation logic
+- Turn 20: AGENT_BIBLE/ARCHITECTURE.md — Sync with main ARCHITECTURE.md
+
+**Phase 5 (Turns 21-25): Cross-Reference & Final Sync**
+- Turn 21: Verify all internal cross-references
+- Turn 22: Update version numbers across all docs
+- Turn 23: Regenerate file inventories
+- Turn 24: Final consistency check
+- Turn 25: Create summary report
+
+---
+
+_End of Phase 1 Consolidation. Ready for Phase 2._
 
 ---
 

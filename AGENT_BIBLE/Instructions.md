@@ -13,9 +13,9 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 | memory.md            | v14.3   | Session state, delta logs, continuity checkpoints       | All docs         |
 | design.md            | v14.3   | Design tokens, orientation-first, fluid type, dark mode | components.md §4 |
 | worker.md            | v14.3   | Worker spec, manual ops, deployment checklist           | pages.md §6      |
-| assets.md            | v14.3   | Complete asset registry (176 files), vendor libs        | design.md §7     |
+| assets.md            | v14.3   | Complete asset registry (182 files), vendor libs        | design.md §7     |
 | pages.md             | v14.3   | Page inventory (43 HTML), URL mappings, templates       | worker.md §3     |
-| tools.md             | v14.3   | Tool specifications (8 therapeutic tools)               | components.md §3 |
+| tools.md             | v14.3   | Tool specifications (6 therapeutic tools)               | components.md §3 |
 | components.md        | v14.3   | UI component library (Vanilla JS patterns)              | design.md §4     |
 | schemas.md           | v14.3   | JSON-LD structured data for SEO                         | pages.md §8      |
 | opengraph.md         | v14.3   | OpenGraph metadata, social sharing                      | pages.md §8      |
@@ -28,14 +28,14 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 
 ## 🏗️ Project Stats (Current)
 
-| Category   | Count   | Lines       | Trend                                |
-| ---------- | ------- | ----------- | ------------------------------------ |
-| HTML Pages | 43      | ~14,500     | Stable (25 root + 6 tools + 12 blog) |
-| CSS Files  | 12      | ~4,200      | +7 tool CSS                          |
-| JS Files   | 20      | ~8,500      | Core modules only                    |
-| Images     | 38      | N/A         | Complete                             |
-| MD Docs    | 14      | ~8,000      | Stable                               |
-| **TOTAL**  | **176** | **~35,200** | **Current**                          |
+| Category   | Count   | Lines       | Trend                               |
+| ---------- | ------- | ----------- | ----------------------------------- |
+| HTML Pages | 43      | ~14,500     | Stable (25 root + 6 tools + 12 blog)|
+| CSS Files  | 12      | ~4,200      | 5 core + 7 tool CSS                 |
+| JS Files   | 20      | ~8,500      | Core modules only                   |
+| Images     | 39      | N/A         | Complete                            |
+| MD Docs    | 14      | ~8,000      | Stable                              |
+| **TOTAL**  | **182** | **~35,200** | **Current**                         |
 
 ## 🛠️ Tech Stack Mandate
 
@@ -51,6 +51,8 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 **Animation:** Anime.js, Motion One, ScrollReveal, Auto Animate, Canvas Confetti
 **UI:** Floating UI (tooltips), Splide (carousel), Iconify, Lucide (icons)
 **Utility:** Fuse.js (search), Nano ID (IDs), Quicklink (prefetch)
+
+**Vendor Files:** 28 in `/assets/vendor/` + 21 in `/assets/js/lib/` = 49 total vendor files
 
 ## 🎨 Design Principles
 
@@ -78,12 +80,13 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 /workspace/
 ├── *.html (43 pages: index, about, services, book, location, contact, faq, emergency, resources, gallery, tools/*)
 ├── /blog/* (12 files: index, adult, children, pages/adult×5, pages/child×4)
-├── /_templates/* (3 templates: clean, adult-mental-health, child-development)
+├── /inspo/_templates_archive/* (3 templates: clean, adult-mental-health, child-development)
 ├── /assets/
 │   ├── css/* (5 core: base, layout, components, utilities, animations)
 │   ├── css-tools/* (7 tool-specific)
 │   ├── js/* (20 app scripts)
-│   ├── vendor/* (third-party libs)
+│   ├── js/lib/* (21 vendor libs)
+│   ├── vendor/* (28 third-party libs)
 │   ├── images/* (39 images)
 │   └── components/* (4 HTML partials)
 ├── /AGENT_BIBLE/ (14 markdown docs)
@@ -99,9 +102,10 @@ Build and maintain a **zero-dependency**, **WCAG-2.2-AA compliant**, **orientati
 
 ## 🔄 Session Continuity
 
-- **Session ID:** mg-019 | **Turn:** T+33 | **Sync:** AGENT_BIBLE_v14.3_FULL_SYNC
-- **Last Action:** Full markdown audit v14.3, all docs synchronized to current repo state (176 files)
+- **Session ID:** mg-019 | **Turn:** T+34 | **Sync:** AGENT_BIBLE_v14.3_FULL_SYNC
+- **Last Action:** Full markdown audit v14.3, all docs synchronized to current repo state (182 files)
 - **Next Action:** Component library integration, manual E2E testing
-- **Recovery Point:** 176 files tracked (43 HTML, 12 CSS, 20 JS, 39 Images, 14 MD), zero-dependency stack confirmed
+- **Recovery Point:** 182 files tracked (43 HTML, 12 CSS, 20 JS, 39 Images, 14 MD, 49 vendor), zero-dependency stack confirmed
+- **Verified Counts:** 25 root HTML + 6 tools + 12 blog = 43 total; 5 core CSS + 7 tool CSS = 12 total; 20 app JS + 49 vendor JS = 69 total JS files
 
 _End of Agent Bible Instructions v14.3. Full markdown sync complete. Zero-dependency stack enforced._

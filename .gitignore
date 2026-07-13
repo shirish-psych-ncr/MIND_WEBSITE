@@ -1,52 +1,77 @@
-```
 # Logs and temp files
 *.log
-*.tmp
-*.swp
 
-# Environment
+# Environment variables
 .env
 .env.local
-.env.*
-
-# Editors
-.vscode/
-.idea/
+*.env.*
 
 # Dependencies
 node_modules/
-venv/
-.venv/
 __pycache__/
-.mypy_cache/
-.pytest_cache/
-dist/
-build/
-target/
-.gradle/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
 
-# OS generated files
+# Build directories
+build/
+dist/
+*.egg
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# OS specific
 .DS_Store
 Thumbs.db
 
-# Compiled files
-*.pyc
-*.class
-*.o
-*.exe
-*.dll
-*.so
-*.a
-*.obj
-*.out
-
-# Coverage
-coverage/
-htmlcov/
+# Testing
 .coverage
+htmlcov/
+.coverage.*
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Distribution / packaging
+*.tar.gz
+*.whl
+*.zip
+
+# Python
+*.py[cod]
+*$py.class
+*$py.o
+*$py.d
+*.so
+.Python
+install-sh
+mkinstalldirs
+configure
+config.status
+libtool
+config.log
+
+# Virtual environments
+venv/
+ENV/
+env.bak/
+.venv/
+env/
+ENV/
+
+# Project specific build outputs
+target/
+.gradle/
+build/
 
 # Compressed files
-*.zip
 *.gz
 *.tar
 *.tgz
@@ -68,4 +93,3 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-```
