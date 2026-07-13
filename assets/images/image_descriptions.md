@@ -4,7 +4,7 @@ The following descriptions are designed for **website image metadata**, **Open G
 
 ---
 
-# aasha-special-ed-abacus.jpg
+# aasha-special-ed-abacus.webp
 
 ## Title
 
@@ -28,7 +28,7 @@ Autism therapy Greater Noida, ASD intervention, developmental delay therapy, occ
 
 ---
 
-# aasha-special-ed-fruit-sort.jpg
+# aasha-special-ed-fruit-sort.webp
 
 ## Title
 
@@ -52,7 +52,7 @@ Speech therapy Greater Noida, occupational therapy Delhi NCR, autism learning ac
 
 ---
 
-# aasha-special-ed-fruit-sort-closeup.jpg
+# aasha-special-ed-fruit-sort-closeup.webp
 
 ## Title
 
@@ -76,7 +76,7 @@ Fine motor therapy, occupational therapy Greater Noida, autism occupational ther
 
 ---
 
-# aasha-special-ed-jigsaw.jpg
+# aasha-special-ed-jigsaw.webp
 
 ## Title
 
@@ -100,7 +100,7 @@ Autism activities, ASD therapy Greater Noida, occupational therapy puzzles, exec
 
 ---
 
-# aasha-speech-english-alphabets.jpg
+# aasha-speech-english-alphabets.webp
 
 ## Title
 
@@ -122,7 +122,7 @@ Speech therapy Greater Noida, speech language pathology, language development, s
 
 ---
 
-# aasha-speech-english-alphabets-closeup.jpg
+# aasha-speech-english-alphabets-closeup.webp
 
 ## Title
 
@@ -146,7 +146,7 @@ Speech therapist Greater Noida, autism speech therapy, language intervention, al
 
 ---
 
-# aasha-speech-hindi-varnmala.jpg
+# aasha-speech-hindi-varnmala.webp
 
 ## Title
 
@@ -170,7 +170,7 @@ Hindi speech therapy, Hindi language development, Varnmala learning, bilingual s
 
 ---
 
-# AASHA_Child_Development_Brochure.png
+# AASHA_Child_Development_Brochure.webp
 
 ## Title
 
@@ -194,7 +194,7 @@ Autism centre Greater Noida, child psychologist Greater Noida, speech therapist 
 
 ---
 
-# Location_street_view_distance.jpg
+# Location_street_view_distance.webp
 
 ## Title
 
@@ -216,7 +216,7 @@ Psychiatrist Greater Noida, psychologist Greater Noida, child psychiatrist, neur
 
 ---
 
-# Mind_Grace_Clinic_Brochure.png
+# Mind_Grace_Clinic_Brochure.webp
 
 ## Title
 
@@ -240,7 +240,7 @@ Psychiatrist Greater Noida, psychologist Greater Noida, mental health clinic Del
 
 ---
 
-# Mind_Grace_Clinic_Logo.png
+# Mind_Grace_Clinic_Logo.webp
 
 ## Title
 
@@ -262,7 +262,7 @@ Mental health logo, psychiatrist branding, psychology clinic, neuropsychiatric c
 
 ---
 
-# Mind_Grace_Clinic_Logo_Full.png
+# Mind_Grace_Clinic_Logo_Full.webp
 
 ## Title
 
