@@ -167,10 +167,22 @@
 }
 
 /* Navigation Buttons */
+/* Navigation Container */
 .stage-nav {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Navigation Buttons */
+.stage-nav {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -183,31 +195,28 @@
   color: var(--text-primary, #1e293b);
   box-shadow: var(--shadow-lg, 0 10px 15px -3px rgb(0 0 0 / 0.1));
   transition: all 0.2s ease;
-  z-index: 10;
   backdrop-filter: blur(8px);
+  pointer-events: auto;
 }
 
-.stage-nav:hover:not(:disabled) {
+.stage-nav-btn:hover:not(:disabled) {
   background: white;
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
   box-shadow: var(--shadow-xl, 0 20px 25px -5px rgb(0 0 0 / 0.1));
 }
 
-.stage-nav:active:not(:disabled) {
-  transform: translateY(-50%) scale(0.95);
+.stage-nav-btn:active:not(:disabled) {
+  transform: scale(0.95);
 }
 
-.stage-nav:disabled {
+.stage-nav-btn:disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }
 
-.prev-btn {
-  left: 1rem;
-}
-
-.next-btn {
-  right: 1rem;
+.stage-nav-btn svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* Filmstrip - Thumbnail Navigation */
@@ -308,13 +317,7 @@
     height: 40px;
   }
   
-  .prev-btn {
-    left: 0.5rem;
-  }
   
-  .next-btn {
-    right: 0.5rem;
-  }
   
   .stage-caption {
     font-size: 1.25rem;
