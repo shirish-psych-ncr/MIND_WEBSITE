@@ -1,1 +1,0 @@
-var baseSortedIndex=require("./_baseSortedIndex");function sortedLastIndex(e,d){return baseSortedIndex(e,d,!0)}module.exports=sortedLastIndex;

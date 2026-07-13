@@ -1,1 +1,0 @@
-var toString=require("./toString"),reRegExpChar=/[\\^$.*+?()[\]{}|]/g,reHasRegExpChar=RegExp(reRegExpChar.source);function escapeRegExp(e){return(e=toString(e))&&reHasRegExpChar.test(e)?e.replace(reRegExpChar,"\\$&"):e}module.exports=escapeRegExp;

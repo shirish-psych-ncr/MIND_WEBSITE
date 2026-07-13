@@ -1,1 +1,0 @@
-var escapeHtmlChar=require("./_escapeHtmlChar"),toString=require("./toString"),reUnescapedHtml=/[&<>"']/g,reHasUnescapedHtml=RegExp(reUnescapedHtml.source);function escape(e){return(e=toString(e))&&reHasUnescapedHtml.test(e)?e.replace(reUnescapedHtml,escapeHtmlChar):e}module.exports=escape;

@@ -1,1 +1,0 @@
-var baseUnset=require("./_baseUnset");function unset(e,n){return null==e||baseUnset(e,n)}module.exports=unset;

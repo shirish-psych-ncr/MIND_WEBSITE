@@ -1,1 +1,0 @@
-function stubString(){return""}module.exports=stubString;

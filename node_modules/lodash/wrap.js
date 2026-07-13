@@ -1,1 +1,0 @@
-var castFunction=require("./_castFunction"),partial=require("./partial");function wrap(r,a){return partial(castFunction(a),r)}module.exports=wrap;

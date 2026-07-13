@@ -1,1 +1,0 @@
-var baseMean=require("./_baseMean"),identity=require("./identity");function mean(e){return baseMean(e,identity)}module.exports=mean;

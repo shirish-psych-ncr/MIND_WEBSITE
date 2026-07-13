@@ -1,1 +1,0 @@
-var baseIteratee=require("./_baseIteratee"),negate=require("./negate"),pickBy=require("./pickBy");function omitBy(e,t){return pickBy(e,negate(baseIteratee(t)))}module.exports=omitBy;

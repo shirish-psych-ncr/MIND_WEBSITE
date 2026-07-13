@@ -1,1 +1,0 @@
-var createCaseFirst=require("./_createCaseFirst"),upperFirst=createCaseFirst("toUpperCase");module.exports=upperFirst;

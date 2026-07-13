@@ -1,1 +1,0 @@
-var arrayFilter=require("./_arrayFilter"),baseFilter=require("./_baseFilter"),baseIteratee=require("./_baseIteratee"),isArray=require("./isArray");function filter(r,e){return(isArray(r)?arrayFilter:baseFilter)(r,baseIteratee(e,3))}module.exports=filter;

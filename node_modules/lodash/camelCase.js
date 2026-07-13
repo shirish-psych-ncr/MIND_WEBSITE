@@ -1,1 +1,0 @@
-var capitalize=require("./capitalize"),createCompounder=require("./_createCompounder"),camelCase=createCompounder(function(e,a,r){return a=a.toLowerCase(),e+(r?capitalize(a):a)});module.exports=camelCase;

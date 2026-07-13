@@ -1,1 +1,0 @@
-var copyObject=require("./_copyObject"),createAssigner=require("./_createAssigner"),keysIn=require("./keysIn"),assignIn=createAssigner(function(e,r){copyObject(r,keysIn(r),e)});module.exports=assignIn;

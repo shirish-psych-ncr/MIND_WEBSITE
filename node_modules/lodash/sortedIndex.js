@@ -1,1 +1,0 @@
-var baseSortedIndex=require("./_baseSortedIndex");function sortedIndex(e,d){return baseSortedIndex(e,d)}module.exports=sortedIndex;

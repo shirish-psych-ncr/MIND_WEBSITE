@@ -1,1 +1,0 @@
-var toString=require("./toString");function toUpper(r){return toString(r).toUpperCase()}module.exports=toUpper;

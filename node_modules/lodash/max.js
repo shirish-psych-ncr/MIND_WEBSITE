@@ -1,1 +1,0 @@
-var baseExtremum=require("./_baseExtremum"),baseGt=require("./_baseGt"),identity=require("./identity");function max(e){return e&&e.length?baseExtremum(e,identity,baseGt):void 0}module.exports=max;

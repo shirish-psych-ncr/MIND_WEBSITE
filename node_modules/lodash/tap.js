@@ -1,1 +1,0 @@
-function tap(t,e){return e(t),t}module.exports=tap;

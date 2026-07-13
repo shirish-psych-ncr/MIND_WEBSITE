@@ -1,1 +1,0 @@
-var baseClamp=require("./_baseClamp"),toInteger=require("./toInteger"),MAX_ARRAY_LENGTH=4294967295;function toLength(e){return e?baseClamp(toInteger(e),0,MAX_ARRAY_LENGTH):0}module.exports=toLength;

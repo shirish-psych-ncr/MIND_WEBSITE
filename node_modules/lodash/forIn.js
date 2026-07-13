@@ -1,1 +1,0 @@
-var baseFor=require("./_baseFor"),castFunction=require("./_castFunction"),keysIn=require("./keysIn");function forIn(e,n){return null==e?e:baseFor(e,castFunction(n),keysIn)}module.exports=forIn;

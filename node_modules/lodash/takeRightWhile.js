@@ -1,1 +1,0 @@
-var baseIteratee=require("./_baseIteratee"),baseWhile=require("./_baseWhile");function takeRightWhile(e,t){return e&&e.length?baseWhile(e,baseIteratee(t,3),!1,!0):[]}module.exports=takeRightWhile;

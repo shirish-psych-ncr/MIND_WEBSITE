@@ -1,1 +1,0 @@
-var baseIsSet=require("./_baseIsSet"),baseUnary=require("./_baseUnary"),nodeUtil=require("./_nodeUtil"),nodeIsSet=nodeUtil&&nodeUtil.isSet,isSet=nodeIsSet?baseUnary(nodeIsSet):baseIsSet;module.exports=isSet;

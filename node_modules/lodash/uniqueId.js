@@ -1,1 +1,0 @@
-var toString=require("./toString"),idCounter=0;function uniqueId(r){var t=++idCounter;return toString(r)+t}module.exports=uniqueId;

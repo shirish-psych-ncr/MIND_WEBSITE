@@ -1,1 +1,0 @@
-var arrayEvery=require("./_arrayEvery"),createOver=require("./_createOver"),overEvery=createOver(arrayEvery);module.exports=overEvery;

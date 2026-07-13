@@ -1,1 +1,0 @@
-var createMathOperation=require("./_createMathOperation"),subtract=createMathOperation(function(t,e){return t-e},0);module.exports=subtract;

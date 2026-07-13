@@ -1,1 +1,0 @@
-var createRound=require("./_createRound"),floor=createRound("floor");module.exports=floor;

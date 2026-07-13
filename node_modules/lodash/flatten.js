@@ -1,1 +1,0 @@
-var baseFlatten=require("./_baseFlatten");function flatten(e){return(null==e?0:e.length)?baseFlatten(e,1):[]}module.exports=flatten;

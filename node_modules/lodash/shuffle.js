@@ -1,1 +1,0 @@
-var arrayShuffle=require("./_arrayShuffle"),baseShuffle=require("./_baseShuffle"),isArray=require("./isArray");function shuffle(r){return(isArray(r)?arrayShuffle:baseShuffle)(r)}module.exports=shuffle;

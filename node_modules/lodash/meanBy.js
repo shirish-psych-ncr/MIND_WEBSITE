@@ -1,1 +1,0 @@
-var baseIteratee=require("./_baseIteratee"),baseMean=require("./_baseMean");function meanBy(e,a){return baseMean(e,baseIteratee(a,2))}module.exports=meanBy;

@@ -1,1 +1,0 @@
-var baseIsTypedArray=require("./_baseIsTypedArray"),baseUnary=require("./_baseUnary"),nodeUtil=require("./_nodeUtil"),nodeIsTypedArray=nodeUtil&&nodeUtil.isTypedArray,isTypedArray=nodeIsTypedArray?baseUnary(nodeIsTypedArray):baseIsTypedArray;module.exports=isTypedArray;

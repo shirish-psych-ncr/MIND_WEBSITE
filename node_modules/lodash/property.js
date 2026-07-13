@@ -1,1 +1,0 @@
-var baseProperty=require("./_baseProperty"),basePropertyDeep=require("./_basePropertyDeep"),isKey=require("./_isKey"),toKey=require("./_toKey");function property(e){return isKey(e)?baseProperty(toKey(e)):basePropertyDeep(e)}module.exports=property;

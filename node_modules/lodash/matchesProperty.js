@@ -1,1 +1,0 @@
-var baseClone=require("./_baseClone"),baseMatchesProperty=require("./_baseMatchesProperty"),CLONE_DEEP_FLAG=1;function matchesProperty(e,r){return baseMatchesProperty(e,baseClone(r,CLONE_DEEP_FLAG))}module.exports=matchesProperty;

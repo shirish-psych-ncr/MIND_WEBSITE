@@ -1,1 +1,0 @@
-var arrayMap=require("./_arrayMap"),copyArray=require("./_copyArray"),isArray=require("./isArray"),isSymbol=require("./isSymbol"),stringToPath=require("./_stringToPath"),toKey=require("./_toKey"),toString=require("./toString");function toPath(r){return isArray(r)?arrayMap(r,toKey):isSymbol(r)?[r]:copyArray(stringToPath(toString(r)))}module.exports=toPath;

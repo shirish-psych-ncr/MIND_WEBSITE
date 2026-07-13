@@ -1,1 +1,0 @@
-var baseUpdate=require("./_baseUpdate"),castFunction=require("./_castFunction");function updateWith(t,e,a,n){return n="function"==typeof n?n:void 0,null==t?t:baseUpdate(t,e,castFunction(a),n)}module.exports=updateWith;
