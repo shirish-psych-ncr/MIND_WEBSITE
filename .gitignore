@@ -1,77 +1,50 @@
-# Logs and temp files
+```
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.julia/
+zig*/
+target/
+.gradle/
+
+# Compiled and build artifacts
+*.pyc
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
+dist/
+build/
+coverage/
+htmlcov/
 *.log
 
-# Environment variables
+# Environment
 .env
 .env.local
 *.env.*
 
-# Dependencies
-node_modules/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.egg-info/
-.eggs/
-
-# Build directories
-build/
-dist/
-*.egg
-
-# IDE specific
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
 *.tmp
 
-# OS specific
+# System
 .DS_Store
 Thumbs.db
 
-# Testing
-.coverage
-htmlcov/
-.coverage.*
-.cache/
-.pytest_cache/
-.mypy_cache/
-
-# Distribution / packaging
-*.tar.gz
-*.whl
-*.zip
-
-# Python
-*.py[cod]
-*$py.class
-*$py.o
-*$py.d
-*.so
-.Python
-install-sh
-mkinstalldirs
-configure
-config.status
-libtool
-config.log
-
-# Virtual environments
-venv/
-ENV/
-env.bak/
-.venv/
-env/
-ENV/
-
-# Project specific build outputs
-target/
-.gradle/
-build/
-
 # Compressed files
+*.zip
 *.gz
 *.tar
 *.tgz
@@ -93,3 +66,4 @@ build/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+```
