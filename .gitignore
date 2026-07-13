@@ -1,8 +1,7 @@
 <<<<<<< HEAD
 node_modules
 =======
-# Images
-*.webp
+
 
 # Build artifacts
 dist/
