@@ -1,1 +1,18 @@
-Nothing needs to be added to the .gitignore file based on the provided file changes, as they consist only of Python source files (.py) and HTML files, which are not build artifacts, dependencies, or temporary files that should be ignored.
+```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+```
