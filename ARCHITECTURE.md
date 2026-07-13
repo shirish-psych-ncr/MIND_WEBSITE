@@ -599,7 +599,7 @@ Each tool script follows a consistent pattern:
    - **Action**: Standardize to absolute GitHub Pages URLs
 
 6. **Robots.txt Domain Reference**:
-   - References `mindgrace.in` instead of `mindgracencr.in`
+   - References `mindgracencr.in` instead of `mindgracencr.in`
    - **Action**: Update domain reference
 
 7. **Legacy Files Cleanup**:

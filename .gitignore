@@ -1,46 +1,44 @@
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
-
+```
 # Dependencies
 node_modules/
-venv/
-.venv/
-__pycache__/
-.mypy_cache/
-.pytest_cache/
-.julia/
-zig*/
 
 # Build artifacts
 dist/
 build/
-target/
-*.pyc
-*.class
-*.o
-*.exe
-*.dll
-*.so
-*.a
-*.obj
-*.out
+*.min.js
+*.min.css
+*.bundle.js
 
-# System files
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# OS generated files
 .DS_Store
 Thumbs.db
 
-# Coverage
+# Python (if applicable)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+*.egg-info/
+
+# Coverage reports
 coverage/
 htmlcov/
 .coverage
@@ -68,3 +66,4 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+```

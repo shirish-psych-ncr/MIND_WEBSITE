@@ -26,8 +26,8 @@ Systematic audit and update of all markdown documentation files in the Mind Grac
 ### 1. SEO & Domain Inconsistencies
 
 **robots.txt:**
-- ❌ References wrong domain: `mindgrace.in` instead of `mindgracencr.in`
-- ❌ Sitemap URL incorrect: `https://mindgrace.in/sitemap.xml`
+- ❌ References wrong domain: `mindgracencr.in` instead of `mindgracencr.in`
+- ❌ Sitemap URL incorrect: `https://mindgracencr.in/sitemap.xml`
 
 **sitemap.xml:**
 - ❌ Mixed URL formats: first entry absolute (`https://shirish-psych-ncr.github.io/MIND_WEBSITE/index.html`), rest relative (`about.html`)

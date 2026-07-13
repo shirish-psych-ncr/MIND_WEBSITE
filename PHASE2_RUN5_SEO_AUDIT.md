@@ -65,7 +65,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mindgrace.in/sitemap.xml  ❌ WRONG DOMAIN
+Sitemap: https://mindgracencr.in/sitemap.xml  ❌ WRONG DOMAIN
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -74,7 +74,7 @@ Disallow: /tools/*/temp/
 ```
 
 ### Critical Issue
-- **Wrong Domain:** References `mindgrace.in` instead of `mindgracencr.in`
+- **Wrong Domain:** References `mindgracencr.in` instead of `mindgracencr.in`
 - **Impact:** Search engines will look for sitemap at wrong domain → 404 error
 
 ### Required Fix
@@ -127,10 +127,10 @@ Sitemap: https://mindgracencr.in/sitemap.xml
 
 #### Example: `tools/butterfly-tapper.html`
 ```html
-<link rel="canonical" href="https://mindgrace.in/tools/butterfly-tapper.html">  ❌
-<link rel="canonical" href="https://mindgrace.in/tools/butterfly-tapper.html">  ❌ DUPLICATE
-<link rel="canonical" href="https://mindgrace.in/tools/butterfly-tapper.html">  ❌ DUPLICATE
-<link rel="canonical" href="https://mindgrace.in/butterfly-tapper.html">        ❌ WRONG PATH
+<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">  ❌
+<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">  ❌ DUPLICATE
+<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">  ❌ DUPLICATE
+<link rel="canonical" href="https://mindgracencr.in/butterfly-tapper.html">        ❌ WRONG PATH
 ```
 
 #### Affected Files:
@@ -234,11 +234,11 @@ Two separate Article schemas with different headlines:
 
 ### 🔴 CRITICAL (Fix Immediately)
 1. **Fix robots.txt domain:**
-   - Change `mindgrace.in` → `mindgracencr.in`
+   - Change `mindgracencr.in` → `mindgracencr.in`
 
 2. **Fix tool page canonical tags:**
    - Remove duplicates (keep only 1 per page)
-   - Fix domain: `mindgrace.in` → `mindgracencr.in`
+   - Fix domain: `mindgracencr.in` → `mindgracencr.in`
    - Fix paths: ensure `/tools/` prefix present
 
 3. **Regenerate sitemap.xml:**
