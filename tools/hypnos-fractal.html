@@ -1,7 +1,7 @@
 <!doctype html><html lang="en-IN" dir="ltr"><head>
-  <meta charset="UTF-8">
-  <link rel="canonical" href="https://mindgrace.in/tools/hypnos-fractal.html">
+  
   <base href="/">
+  <link rel="canonical" href="https://mindgracencr.in/tools/hypnos-fractal.html">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Fractal Tool | Mind Grace Neuropsychiatric Clinic</title>
     <meta name="description" content="A dynamic fractal grounding tool to reduce anxiety and support calm.">
@@ -19,7 +19,6 @@
     <script src="assets/js/animations-auto.js" type="module"></script>
   <script src="assets/vendor/splide.min.js"></script>
   <script src="assets/js/carousel-init.js" type="module"></script>
-
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
   <body>
@@ -28,9 +27,8 @@
     <div class="visually-hidden">
       In a crisis? Get immediate help. Call emergency services if in immediate danger. Visit our emergency page for 24/7 crisis support resources.
     </div>
-
-
 <header class="site-header">
+  <a href="#main-content" class="skip-link">Skip to content</a>
     <div class="header-inner">
       <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
         <img loading="eager" fetchpriority="high" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60">
@@ -39,7 +37,6 @@
           <div class="logo-tagline">Where You Come First</div>
         </div>
       </a>
-
       <!-- DESKTOP NAVIGATION -->
       <nav class="desktop-nav" aria-label="Main navigation">
         <ul>
@@ -51,14 +48,12 @@
           <li><a href="book.html" class="cta-button">Book Now</a></li>
         </ul>
       </nav>
-
       <!-- MOBILE NAV TRIGGER -->
       <button type="button" class="mobile-nav-trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-panel">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
       <!-- Mobile Book Button (Calendar Icon) -->
       <a href="book.html" class="mobile-book-btn" aria-label="Book Appointment">
         <i data-lucide="calendar" aria-hidden="true"></i>
@@ -67,7 +62,6 @@
   </header>
 <!-- MOBILE NAV OVERLAY -->
   <div class="mobile-nav-overlay" id="mobile-nav-overlay" hidden></div>
-
   <!-- MOBILE NAV PANEL - Simplified -->
   <nav class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile navigation" inert hidden>
     <div class="mobile-nav-header">
@@ -87,7 +81,6 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-
       <div class="mobile-nav-section">
         <div class="mobile-nav-section-title">Resources &#x26; Tools</div>
         <ul class="mobile-nav-list">
@@ -98,7 +91,6 @@
           <li><a href="faq.html">FAQ</a></li>
         </ul>
       </div>
-
       <div class="mobile-nav-section">
         <div class="mobile-nav-section-title">Therapeutic Tools</div>
         <ul class="mobile-nav-list">
@@ -110,29 +102,22 @@
           <li><a href="tools/leaf-on-stream.html">Leaf on Stream</a></li>
         </ul>
       </div>
-
       <div class="mobile-nav-section">
         <a href="book.html" class="cta-button">Book Appointment</a>
       </div>
     </div>
   </nav>
-
 <!-- MOBILE NAV OVERLAY -->
-
 <!-- MOBILE NAV PANEL -->
-
         .top-banner { background: #fee2e2; color: #991b1b; padding: 10px; font-size: 0.8rem; text-align: center; font-weight: 600; }
         .site-header { background: #fff7fa; padding: 15px 0; border-bottom: 1px solid #e2e8f0; transition: opacity 0.8s; }
         .header-row { display: flex; justify-content: space-between; align-items: center; }
-
         .brand-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
         .logo { height: 45px; width: auto; }
         .brand-kicker { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--brand-accent); font-weight: 700; }
         .brand-name { font-size: 1.1rem; font-weight: 600; }
-
         nav a { margin: 0 10px; text-decoration: none; color: var(--text-main); font-size: 0.9rem; font-weight: 500; }
         .button { background: var(--brand-primary); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
-
         /* FRACTAL TOOL CONTAINER */
         .tool-section {
             position: relative;
@@ -144,9 +129,7 @@
             margin: 40px 0;
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
         }
-
         canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; cursor: crosshair; }
-
         /* TOOL UI */
         #min-btn {
             position: absolute; top: 25px; right: 25px; z-index: 101;
@@ -156,53 +139,38 @@
             display: flex; align-items: center; justify-content: center;
             cursor: pointer; pointer-events: auto; font-size: 1.2rem; transition: 0.3s;
         }
-
         .interface {
             position: absolute; z-index: 100; width: 100%; height: 100%;
             display: flex; flex-direction: column; justify-content: flex-end;
             padding: 30px; pointer-events: none; transition: 0.5s ease-out;
         }
         .interface.collapsed { opacity: 0; transform: translateY(30px); }
-
         .drawer {
             pointer-events: auto; background: rgba(10, 15, 25, 0.9);
             backdrop-filter: blur(30px); padding: 25px; border-radius: 30px;
             width: 100%; max-width: 380px; align-self: center;
         }
-
         .row { margin-bottom: 20px; text-align: left; }
         label { display: block; font-size: 0.6rem; text-transform: uppercase; color: var(--brand-accent); letter-spacing: 2px; margin-bottom: 10px; }
         input[type=range] { -webkit-appearance: none; width: 100%; height: 4px; background: #1e293b; border-radius: 10px; }
         input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; background: #fff; border-radius: 50%; border: 3px solid var(--brand-accent); }
-
         .breath-tag {
             position: absolute; top: 40px; left: 50%; transform: translateX(-50%);
             color: rgba(255,255,255,0.4); font-size: 0.7rem; letter-spacing: 5px; text-transform: uppercase; z-index: 5;
         }
-
         /* ZEN MODE HIDING */
         .zen-active .site-header, .zen-active .top-banner, .zen-active footer, .zen-active h1, .zen-active .lead {
             opacity: 0; pointer-events: none;
         }
-
         footer { background: #f1f5f9; padding: 60px 0; margin-top: 60px; transition: opacity 0.8s; }
-
-
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-
-
 <header class="site-header">
   <a href="#main-content" class="skip-link">Skip to content</a>
-
     <div class="progress"><div class="progress-bar" data-progress=""></div></div>
-
     <div class="top-banner">
       In case of a medical emergency or immediate danger, please call 112 or visit the nearest hospital immediately.
     </div>
-
     <!-- HEADER -->
-
     <main id="main-content" tabindex="-1" class="section shell stack">
       <section>
         <h1>Grounding Fractal Tool</h1>
@@ -210,13 +178,11 @@
           Tap to explode a fractal. Hold and move to swirl. Match your breath to the glow.
         </p>
       </section>
-
       <!-- FRACTAL TOOL -->
       <div class="tool-section">
         <canvas id="canvas"></canvas>
         <div class="breath-tag" id="breath-text">Centering...</div>
         <div id="min-btn" onclick="toggleZen()">⚙️</div>
-
         <div class="interface" id="fractal-ui">
             <div class="drawer">
                 <div class="row">
@@ -235,17 +201,13 @@
         </div>
       </div>
     </main>
-
     <script src="assets/js/tools-fractal.js" type="module"></script>
-
 <!-- Year Update Script -->
 <script defer>
   if (document.getElementById('year')) {
     document.getElementById('year').textContent = new Date().getFullYear();
   }
 </script>
-
-
 <footer class="site-footer">
   <div class="footer-content">
     <div class="footer-column">
@@ -256,7 +218,6 @@
         <li><a href="process.html">What to Expect</a></li>
       </ul>
     </div>
-
     <div class="footer-column">
       <h3>About Us</h3>
       <ul>
@@ -265,7 +226,6 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
     <div class="footer-column">
       <h3>Help &#x26; Resources</h3>
       <ul>
@@ -275,7 +235,6 @@
       </ul>
     </div>
   </div>
-
   <div class="footer-bottom">
     <p class="disclaimer">
       Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice.
@@ -286,23 +245,11 @@
     </p>
   </div>
 </footer>
-
 <!-- Year Update Script -->
 <script defer>
   if (document.getElementById('year')) {
     document.getElementById('year').textContent = new Date().getFullYear();
   }
 </script>
-
   <!-- MIND GRACE LIBRARY STACK -->
-
-
-
-
-
-
-
-
-
-
 </header></header></body></html>
