@@ -172,15 +172,14 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 | File | Purpose | Status | Notes |
 |------|---------|--------|-------|
 | `index.html` | Homepage | ✅ Active | Primary entry point, modern fluid design |
-| `index-revamp.html` | Homepage (experimental) | ⚠️ Duplicate | Merge or remove |
-| `index-old.html` | Homepage (legacy) | ❌ Deprecated | Remove after verification |
 | `about.html` | About Dr. Sharma & Clinic | ✅ Active | |
 | `services.html` | Services Overview | ✅ Active | Psychiatry, counseling, child development |
 | `process.html` | What to Expect | ✅ Active | Patient journey |
 | `location.html` | Clinic Location & Map | ✅ Active | Uses `tools-map.js` |
 | `contact.html` | Contact Form & Info | ✅ Active | |
 | `book.html` | Booking System | ✅ Active | Appointment scheduling |
-| `doctor.html` | Doctor Profile | ✅ Active | Dr. Anita Sharma bio |
+| `doctors.html` | All Doctors | ✅ Active | Doctor listings |
+| `dr-anita-sharma.html` | Lead Doctor Profile | ✅ Active | Dr. Anita Sharma bio |
 | `conditions.html` | Conditions Treated | ✅ Active | Mental health conditions |
 | `approach.html` | Treatment Approach | ✅ Active | Methodology |
 | `fees.html` | Pricing & Insurance | ✅ Active | |
@@ -190,26 +189,24 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 | `emergency.html` | Crisis Resources | ✅ Active | Emergency contacts |
 | `consent.html` | Patient Consent Forms | ✅ Active | Legal documents |
 | `privacy.html` | Privacy Policy | ✅ Active | GDPR/India compliance |
-| `terms.html` | Terms of Service | ⚠️ Missing | Referenced but not found |
-| `disclaimer.html` | Medical Disclaimer | ⚠️ Missing | Referenced but not found |
+| `terms.html` | Terms of Service | ✅ Active | Legal terms |
+| `disclaimer.html` | Medical Disclaimer | ✅ Active | Medical disclaimer |
 | `resources.html` | Self-Help Resources | ✅ Active | Links to therapeutic tools |
 | `mind-grace.html` | Mind Grace Program | ✅ Active | Signature program |
 | `aasha.html` | AASHA Child Development | ✅ Active | Child development program |
 | `thank-you.html` | Post-Submission Thank You | ✅ Active | Form confirmation |
 | `404.html` | Error Page | ✅ Active | Custom 404 |
-| `template-clean.html` | Blank Template | 🛠 Utility | For creating new pages |
 
 ### Therapeutic Tools (Interactive Features)
 
 | File | Purpose | Technology |
 |------|---------|------------|
-| `guided-breathing.html` | Breathing Exercise | CSS + JS (`tools-breathing.js`) |
-| `butterfly-tapper.html` | EMDR Butterfly Tapping | CSS + JS (`tools-butterfly.js`) |
-| `eye-movement.html` | Eye Movement Therapy | CSS + JS (`tools-eye.js`) |
-| `hypnos-fractal.html` | Hypnotic Fractal Visualization | CSS + JS (`tools-fractal.js`) |
-| `horizon-scan.html` | Horizon Scanning Relaxation | CSS + JS (`tools-horizon.js`) |
-| `leaf-on-stream.html` | Mindfulness: Leaf on Stream | CSS + JS (`tools-leaf.js`) |
-| `book.html` | Interactive Resource Book | CSS + JS (`tools-book.js`) |
+| `tools/guided-breathing.html` | Breathing Exercise | CSS + JS (`tools-breathing.js`) |
+| `tools/butterfly-tapper.html` | EMDR Butterfly Tapping | CSS + JS (`tools-butterfly.js`) |
+| `tools/eye-movement.html` | Eye Movement Therapy | CSS + JS (`tools-eye.js`) |
+| `tools/hypnos-fractal.html` | Hypnotic Fractal Visualization | CSS + JS (`tools-fractal.js`) |
+| `tools/horizon-scan.html` | Horizon Scanning Relaxation | CSS + JS (`tools-horizon.js`) |
+| `tools/leaf-on-stream.html` | Mindfulness: Leaf on Stream | CSS + JS (`tools-leaf.js`) |
 
 ### Blog Pages
 
@@ -597,25 +594,21 @@ Each tool script follows a consistent pattern:
 
 ### Remaining Issues ⚠️
 
-5. **Duplicate Homepage Files**:
-   - `index.html` (active)
-   - `index-revamp.html` (experimental)
-   - `index-old.html` (legacy)
-   - **Action**: Consolidate to single `index.html`, archive others
+5. **Sitemap Inconsistencies**:
+   - Mixed relative and absolute URLs in sitemap.xml
+   - **Action**: Standardize to absolute GitHub Pages URLs
 
-6. **Missing Referenced Pages**:
-   - `terms.html` (linked in footer)
-   - `disclaimer.html` (linked in footer)
-   - **Action**: Create these pages or remove links
+6. **Robots.txt Domain Reference**:
+   - References `mindgrace.in` instead of `mindgracencr.in`
+   - **Action**: Update domain reference
 
-7. **Outdated PWA Manifest**:
-   - `site.webmanifest` uses wrong theme color (`#0f766e` instead of `#671B50`)
-   - Wrong app name ("TheraTools" instead of "Mind Grace Neuropsychiatric Clinic")
-   - **Action**: Update manifest to match brand
+7. **Legacy Files Cleanup**:
+   - Potential duplicate/legacy files may exist from previous iterations
+   - **Action**: Audit and remove unnecessary files
 
-8. **Incomplete Sitemap**:
-   - Missing 30+ pages
-   - **Action**: Generate complete sitemap
+8. **Sitemap Completeness**:
+   - sitemap.xml contains 28 URLs but may need additional pages
+   - **Action**: Verify all pages are included
 
 9. **Legacy Files**:
    - `styles.css` (old monolithic stylesheet)

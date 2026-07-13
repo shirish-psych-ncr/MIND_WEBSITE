@@ -22,8 +22,8 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 
 - **🌐 Live Site:** [https://shirish-psych-ncr.github.io/MIND_WEBSITE/](https://shirish-psych-ncr.github.io/MIND_WEBSITE/)
 - **📐 Architecture Documentation:** [`ARCHITECTURE.md`](./ARCHITECTURE.md)
-- **🎨 CSS Documentation:** [`css/README.md`](./css/README.md)
-- **⚙️ JavaScript Documentation:** [`js/README.md`](./js/README.md)
+- **🎨 CSS Documentation:** [`assets/css/README.md`](./assets/css/README.md)
+- **⚙️ JavaScript Documentation:** [`assets/js/README.md`](./assets/js/README.md)
 - **🤖 AI Agent Guide:** [`AGENT_BIBLE/`](./AGENT_BIBLE/)
 
 ---
@@ -382,7 +382,7 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Technical Debt & Issues_ for com
 ### Priority Tasks
 
 1. ⚠️ Remove duplicate homepage files (`index-old.html`, `index-revamp.html`)
-2. ⚠️ Create missing `terms.html` and `disclaimer.html`
+2. ✅ Created `terms.html` and `disclaimer.html`
 3. ⚠️ Update `site.webmanifest` with correct branding
 4. ⚠️ Generate complete `sitemap.xml`
 5. ⚠️ Optimize images (WebP/AVIF conversion)
@@ -405,8 +405,8 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed pla
 | Document                               | Purpose                                                                 |
 | -------------------------------------- | ----------------------------------------------------------------------- |
 | [`ARCHITECTURE.md`](./ARCHITECTURE.md) | Complete system architecture, dependency graphs, design system, roadmap |
-| [`css/README.md`](./css/README.md)     | CSS module responsibilities, load order, design tokens                  |
-| [`js/README.md`](./js/README.md)       | JavaScript modules, coding conventions, accessibility                   |
+| [`assets/css/README.md`](./assets/css/README.md)     | CSS module responsibilities, load order, design tokens                  |
+| [`assets/js/README.md`](./assets/js/README.md)       | JavaScript modules, coding conventions, accessibility                   |
 | [`AGENT_BIBLE/`](./AGENT_BIBLE/)       | AI agent operating instructions and context                             |
 | [`inspo/`](./inspo/)                   | Design inspiration and anti-patterns                                    |
 

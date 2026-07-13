@@ -34,9 +34,9 @@ Handles site-wide infrastructure.
 
 ---
 
-## Therapeutic Tool Scripts (`/js/tools/`)
+## Therapeutic Tool Scripts (in `assets/js/` (tools-*.js files))
 
-Each tool follows a standardized module pattern, loading its specific logic alongside a dedicated stylesheet in `/css/tools/`.
+Each tool follows a standardized module pattern, loading its specific logic alongside a dedicated stylesheet in `/assets/css-tools/`.
 
 | Script               | Purpose             | Interaction Focus          |
 | -------------------- | ------------------- | -------------------------- |
@@ -57,10 +57,10 @@ Load scripts at the bottom of the `<body>` using the `defer` attribute to ensure
 
 ```html
 <!-- Load Base Infrastructure -->
-<script src="js/main.js" defer></script>
+<script src="js/main.js" type="module"></script>
 
 <!-- Load Tool-Specific Logic -->
-<script src="js/tools/tools-breathing.js" defer></script>
+<script src="assets/js/tools-breathing.js" type="module"></script>
 ```
 
 ---
