@@ -6,6 +6,7 @@ __pycache__/
 *.obj
 dist/
 build/
+target/
 *.class
 *.exe
 *.dll
@@ -19,8 +20,9 @@ venv/
 node_modules/
 .mypy_cache/
 .pytest_cache/
-target/
 .gradle/
+julia-*/
+zig*/
 
 # Logs and temp files
 *.log
