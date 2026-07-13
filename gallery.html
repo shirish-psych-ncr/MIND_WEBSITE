@@ -585,15 +585,13 @@
     }
     
     renderFilmstrip() {
-      if (!this.filmstrip) return;
-      
       this.filmstrip.innerHTML = this.data.map((item, index) => `
         <button 
           class="filmstrip-thumb ${index === 0 ? 'active' : ''}" 
           data-index="${index}"
           aria-label="View ${item.caption}"
           aria-current="${index === 0 ? 'true' : 'false'}"
-          type="button"
+          style="--thumb-bg: url('${item.src}')"
         >
           <img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async">
         </button>
@@ -606,8 +604,6 @@
           this.showImage(index);
         });
       });
-      
-      this.refreshIcons();
     }
     
     showImage(index) {
