@@ -198,10 +198,34 @@
             <!-- Main Stage (Large View) -->
             <div class="media-stage" id="media-stage" role="region" aria-label="Image Viewer">
                 <div class="stage-viewport">
-                    <img id="stage-image" src="" alt="" class="stage-img active" loading="eager" fetchpriority="high">
+                    <!-- Loading State -->
+                    <div class="stage-loader" id="stage-loader" aria-hidden="true">
+                        <div class="spinner"></div>
+                        <span>Loading...</span>
+                    </div>
+                    
+                    <!-- Error State -->
+                    <div class="stage-error" id="stage-error" hidden>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                        <p>Failed to load image</p>
+                        <button class="retry-btn" id="retry-btn" type="button">Retry</button>
+                    </div>
+                    
+                    <!-- Main Image -->
+                    <img 
+                        id="stage-image" 
+                        src="assets/images/Location_street_view_distance.jpg" 
+                        alt="Street view of Mind Grace Neuropsychiatric Clinic and AASHA Child Development Centre located in Greater Noida, Uttar Pradesh" 
+                        class="stage-img" 
+                        loading="eager" 
+                        fetchpriority="high"
+                        decoding="async"
+                    >
+                    
+                    <!-- Caption Overlay -->
                     <div class="stage-overlay">
-                        <h2 id="stage-caption" class="stage-caption"></h2>
-                        <p id="stage-description" class="stage-desc"></p>
+                        <h2 id="stage-caption" class="stage-caption">Clinic Exterior</h2>
+                        <p id="stage-description" class="stage-desc">An exterior photograph showing the clinic building, entrance, parking area, roadside access, and clinic signage. The image helps patients and families identify the location before visiting.</p>
                     </div>
                 </div>
                 
@@ -217,8 +241,8 @@
             </div>
 
             <!-- Section Title Card (appears between categories) -->
-            <div class="section-title-card" id="section-title-card" hidden aria-live="polite">
-                <h2 class="section-title-text"></h2>
+            <div class="section-title-card" id="section-title-card" aria-live="polite">
+                <h2 class="section-title-text">Welcome to Our Clinic</h2>
                 <div class="section-title-decoration"></div>
             </div>
 
@@ -251,7 +275,7 @@
 </main>
 
 
-<script type="module">
+<script>
   // Gallery data with rich descriptions from image_descriptions.md
   window.galleryData = [
     // === EXTERIOR & RECEPTION ===
@@ -430,25 +454,41 @@
     }
     
     init() {
-      // Render thumbnails
+      if (!this.data || this.data.length === 0) {
+        console.error('Gallery: No image data available');
+        this.showError('No images available');
+        return;
+      }
+      
+      // Render thumbnails first
       this.renderFilmstrip();
       
-      // Load first image and show initial section title
-      this.showImage(0);
-      
-      // Event listeners
-      this.prevBtn.addEventListener('click', this.prev);
-      this.nextBtn.addEventListener('click', this.next);
-      document.addEventListener('keydown', this.handleKeydown);
-      
-      // Touch gestures for swipe navigation
-      this.setupTouchGestures();
-      
-      // Preload adjacent images
-      this.preloadAdjacent();
-      
-      // Re-initialize lucide icons after DOM updates
-      this.refreshIcons();
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        // Load first image and show initial section title
+        this.showImage(0);
+        
+        // Event listeners
+        this.prevBtn?.addEventListener('click', this.prev);
+        this.nextBtn?.addEventListener('click', this.next);
+        this.retryBtn?.addEventListener('click', this.handleRetry);
+        document.addEventListener('keydown', this.handleKeydown);
+        
+        // Image error handling
+        if (this.stageImage) {
+          this.stageImage.addEventListener('load', () => this.handleImageLoad());
+          this.stageImage.addEventListener('error', () => this.handleImageError());
+        }
+        
+        // Touch gestures for swipe navigation
+        this.setupTouchGestures();
+        
+        // Preload adjacent images
+        this.preloadAdjacent();
+        
+        // Re-initialize lucide icons after DOM updates
+        this.refreshIcons();
+      }, 100);
     }
     
     refreshIcons() {
@@ -589,11 +629,11 @@
       this.stageImage.style.opacity = '0';
       
       setTimeout(() => {
-        // Set new image source
+        // Set new image source with error handling
         this.stageImage.src = item.src;
-        this.stageImage.alt = item.alt;
-        this.stageCaption.textContent = item.caption;
-        this.stageDesc.textContent = item.description;
+        this.stageImage.alt = item.alt || '';
+        this.stageCaption.textContent = item.caption || '';
+        this.stageDesc.textContent = item.description || '';
         
         // Fade in
         requestAnimationFrame(() => {
@@ -691,10 +731,15 @@
     }
   }
 
-  // Initialize when DOM is ready
+  // Initialize Gallery when DOM is ready
   document.addEventListener('DOMContentLoaded', () => {
-    window.galleryPlayer = new MediaPlayerGallery(window.galleryData);
+    if (window.galleryData && window.galleryData.length > 0) {
+      new MediaPlayerGallery(window.galleryData);
+    } else {
+      console.error('Gallery: No image data found');
+    }
   });
+
 </script>
 
 <!-- FOOTER -->

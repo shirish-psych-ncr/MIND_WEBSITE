@@ -1,8 +1,11 @@
+```
 # Compiled and build artifacts
 *.pyc
 __pycache__/
 *.o
 *.obj
+dist/
+build/
 *.class
 *.exe
 *.dll
@@ -11,12 +14,13 @@ __pycache__/
 *.out
 
 # Dependencies
-node_modules/
-venv/
 .venv/
-.env
-.env.local
-.env.*
+venv/
+node_modules/
+.mypy_cache/
+.pytest_cache/
+target/
+.gradle/
 
 # Logs and temp files
 *.log
@@ -24,19 +28,25 @@ venv/
 *.swp
 *.swo
 
+# Environment
+.env
+.env.local
+*.env.*
+
 # Editors
 .vscode/
 .idea/
+
+# System files
+.DS_Store
+Thumbs.db
 
 # Coverage
 coverage/
 htmlcov/
 .coverage
 
-# Distribution / packaging
-dist/
-build/
-*.tar.gz
+# Compressed files
 *.zip
 *.gz
 *.tar
@@ -55,94 +65,8 @@ build/
 *.Z
 *.lz
 *.lzo
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Python specific
-*.pyc
-__pycache__/
-.mypy_cache/
-.pytest_cache/
-*.pyo
-*.pyd
-
-# Java specific
-*.class
-*.jar
-*.war
-*.ear
-target/
-.gradle/
-
-# Node specific
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Go specific
-*.exe
-*.dll
-*.so
-*.dylib
-
-# C/C++ specific
-*.o
-*.a
-*.obj
-*.out
-*.exe
-*.dll
-*.so
-
-# Ruby specific
-*.gem
-*.rbc
-coverage/
-InstalledFiles
-pkg/
-spec/reports/
-test/tmp/
-test/version_tmp/
-tmp/
-
-# Rust specific
-target/
-
-# Zig specific
-zig-cache/
-zig-out/
-
-# Julia specific
-julia-*/
-
-# MyPy cache
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# PyTest cache
-.pytest_cache/
-
-# VS Code
-.vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# IntelliJ IDEA
-.idea/
-
-# Web specific
-*.css.map
-*.js.map
-static/dist/
-public/dist/
-
-# Image files (not to be ignored)
-# .png, .jpg, .jpeg, .bmp, .gif, .webm files are preserved
-
-# Original rules preserved
-*.log
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+```
