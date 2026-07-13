@@ -288,7 +288,7 @@ Each article includes dual structured data:
 <meta property="og:description" content="Understand the overlap between overthinking and anxiety...">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://mindgracencr.in/blog/pages/adult/overthinking-vs-anxiety.html">
-<meta property="og:image" content="https://mindgracencr.in/assets/images/blog/overthinking-anxiety.jpg">
+<meta property="og:image" content="https://mindgracencr.in/assets/images/blog/overthinking-anxiety.webp">
 <meta property="article:published_time" content="2026-03-21">
 <meta property="article:author" content="Dr Anita Sharma">
 ```
@@ -301,7 +301,7 @@ Each article includes dual structured data:
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Overthinking vs anxiety | Mind Grace Blog">
 <meta name="twitter:description" content="Understand the overlap between overthinking and anxiety...">
-<meta name="twitter:image" content="https://mindgracencr.in/assets/images/blog/overthinking-anxiety.jpg">
+<meta name="twitter:image" content="https://mindgracencr.in/assets/images/blog/overthinking-anxiety.webp">
 ```
 
 ---

@@ -480,7 +480,7 @@
         <picture>
           <source srcset="./res/image.webp" type="image/webp" />
           <img
-            src="./res/image.jpg"
+            src="./res/image.webp"
             alt="..."
             fetchpriority="high"
             style="border-radius: 32px; filter: saturate(1.1) contrast(0.95);"

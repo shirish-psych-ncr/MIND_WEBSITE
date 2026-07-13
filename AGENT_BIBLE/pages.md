@@ -146,12 +146,12 @@
 | Asset Type         | Location                                        | Status     | Notes                    |
 | ------------------ | ----------------------------------------------- | ---------- | ------------------------ |
 | Clinic Logo (Pink) | res/MindGraceClinicLogo_Pink.svg                | ✅ Present | Primary header logo      |
-| Clinic Logo (Full) | res/Mind_Grace_Clinic_Logo.png                  | ✅ Present | Fallback PNG             |
+| Clinic Logo (Full) | res/Mind_Grace_Clinic_Logo.webp                  | ✅ Present | Fallback PNG             |
 | Hero Images        | images/aasha-hero.svg, images/approach-hero.svg | ✅ Present | SVG hero graphics        |
-| Doctor Photo       | res/Dr_Anita_Sharma_Personal_Photo.jpg          | ✅ Present | Dr. Anita Sharma profile |
-| Location Photos    | res/Location_street_view_*.jpg                  | ✅ Present | Street view images       |
+| Doctor Photo       | res/Dr_Anita_Sharma_Personal_Photo.webp          | ✅ Present | Dr. Anita Sharma profile |
+| Location Photos    | res/Location_street_view_*.webp                  | ✅ Present | Street view images       |
 | Favicons           | Inline base64 SVG                               | ✅ Present | Embedded in all pages    |
-| Brochures          | res/*_Brochure.png                              | ✅ Present | AASHA & Clinic brochures |
+| Brochures          | res/*_Brochure.webp                              | ✅ Present | AASHA & Clinic brochures |
 
 ## 10. EXTERNAL INTEGRATIONS
 

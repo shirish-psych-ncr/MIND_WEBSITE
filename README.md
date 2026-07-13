@@ -80,11 +80,11 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 │   │
 │   ├── images/               # Static Resources (Images, Logos, Brochures)
 │   │   ├── Mind_Grace_Clinic_Logo_*.svg/png  # Logo variants
-│   │   ├── Dr_Anita_Sharma_Personal_Photo.jpg
-│   │   ├── mind-grace-*.jpg                  # Clinic photos
-│   │   ├── Location_street_view_*.jpg        # Location photos
-│   │   ├── AASHA_*.png                       # AASHA brochures
-│   │   ├── aasha-*.jpg                       # AASHA therapy photos
+│   │   ├── Dr_Anita_Sharma_Personal_Photo.webp
+│   │   ├── mind-grace-*.webp                  # Clinic photos
+│   │   ├── Location_street_view_*.webp        # Location photos
+│   │   ├── AASHA_*.webp                       # AASHA brochures
+│   │   ├── aasha-*.webp                       # AASHA therapy photos
 │   │   └── image_descriptions.md             # Image accessibility descriptions
 │   │
 │   ├── components/           # Reusable HTML/CSS Components

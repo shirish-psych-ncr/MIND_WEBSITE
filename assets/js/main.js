@@ -52,7 +52,7 @@ function _initOrientationAdapter() {
 
 // OpenGraph meta tags initialization
 function initOpenGraphMeta() {
-  const defaultImage = '/assets/images/og-default.jpg';
+  const defaultImage = '/assets/images/og-default.webp';
   const pageTitle = document.title.split('|')[0].trim() || 'Mind Grace Neuropsychiatric Clinic';
   const description = document.querySelector('meta[name="description"]')?.content || 
     'Compassionate, evidence-based neuropsychiatric care in India.';

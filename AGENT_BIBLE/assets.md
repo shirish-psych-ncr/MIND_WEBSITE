@@ -9,36 +9,36 @@
 | File                                                | Type     | Size  | Dim     | Use                | Preload | Ref                |
 | --------------------------------------------------- | -------- | ----- | ------- | ------------------ | ------- | ------------------ |
 | Mind_Grace_Clinic_Logo_Pink.svg                     | Logo     | 15KB  | -       | Header, Footer, OG | ✓ LCP   | design.md §7       |
-| Mind_Grace_Clinic_Logo_Pink.png                     | Logo     | 170KB | -       | Fallback           | ✗       | design.md §7       |
+| Mind_Grace_Clinic_Logo_Pink.webp                     | Logo     | 170KB | -       | Fallback           | ✗       | design.md §7       |
 | Mind_Grace_Clinic_Logo.ico                          | Logo     | 213KB | -       | Favicon            | ✗       | design.md §7       |
 | Mind_Grace_Clinic_Logo_Black.svg                    | Logo     | -     | -       | Alt variant        | ✗       | design.md §7       |
 | Mind_Grace_Clinic_Logo_White.svg                    | Logo     | -     | -       | Dark mode          | ✗       | design.md §7       |
-| Mind_Grace_Clinic_Logo_Full_With_ClinicName.png     | Logo     | -     | -       | Full branding      | ✗       | design.md §7       |
-| Dr_Anita_Sharma_Personal_Photo.jpg                  | Photo    | 658KB | 600×800 | Hero, Doctor card  | ✓ LCP   | design.md §7       |
-| Location_street_view_near.jpg                       | Location | 95KB  | -       | Map, Contact       | ✗       | pages.md §CORE     |
-| Location_street_view_distance.jpg                   | Location | 435KB | -       | Map, Contact       | ✗       | pages.md §CORE     |
-| Mind_Grace_Clinic_Brochure.png                      | Brochure | 345KB | -       | Resources          | ✗       | pages.md §TEMPLATE |
-| AASHA_Child_Development_Brochure.png                | Brochure | 469KB | -       | Resources          | ✗       | aasha.html         |
-| Mind_Grace_Clinic_waiting_area.jpg                  | Interior | 82KB  | -       | Gallery, Trust     | ✗       | gallery.html       |
-| Mind_Grace_Clinic_waiting_area_2.jpg                | Interior | 703KB | -       | Gallery, Trust     | ✗       | gallery.html       |
-| mind-grace-consultation-room.jpg                    | Interior | -     | -       | Gallery            | ✗       | gallery.html       |
+| Mind_Grace_Clinic_Logo_Full_With_ClinicName.webp     | Logo     | -     | -       | Full branding      | ✗       | design.md §7       |
+| Dr_Anita_Sharma_Personal_Photo.webp                  | Photo    | 658KB | 600×800 | Hero, Doctor card  | ✓ LCP   | design.md §7       |
+| Location_street_view_near.webp                       | Location | 95KB  | -       | Map, Contact       | ✗       | pages.md §CORE     |
+| Location_street_view_distance.webp                   | Location | 435KB | -       | Map, Contact       | ✗       | pages.md §CORE     |
+| Mind_Grace_Clinic_Brochure.webp                      | Brochure | 345KB | -       | Resources          | ✗       | pages.md §TEMPLATE |
+| AASHA_Child_Development_Brochure.webp                | Brochure | 469KB | -       | Resources          | ✗       | aasha.html         |
+| Mind_Grace_Clinic_waiting_area.webp                  | Interior | 82KB  | -       | Gallery, Trust     | ✗       | gallery.html       |
+| Mind_Grace_Clinic_waiting_area_2.webp                | Interior | 703KB | -       | Gallery, Trust     | ✗       | gallery.html       |
+| mind-grace-consultation-room.webp                    | Interior | -     | -       | Gallery            | ✗       | gallery.html       |
 | mind-grace-entry-n-reception.webp                   | Interior | -     | -       | Gallery            | ✗       | gallery.html       |
-| mind-grace-small-room.jpg                           | Interior | -     | -       | Gallery            | ✗       | gallery.html       |
-| mind-grace-therapy-room.jpg                         | Interior | -     | -       | Gallery            | ✗       | gallery.html       |
-| aasha-occupational-therapy-junglejim-trampoline.jpg | AASHA    | 1.1MB | -       | OT page            | ✗       | services.html      |
-| aasha-occupational-therapy-lycra-junglejim.jpg      | AASHA    | 1.1MB | -       | OT page            | ✗       | services.html      |
-| aasha-special-ed-abacus.jpg                         | AASHA    | 1.7MB | -       | SpecEd page        | ✗       | services.html      |
-| aasha-special-ed-fruit-sort-closeup.jpg             | AASHA    | 593KB | -       | SpecEd page        | ✗       | services.html      |
-| aasha-special-ed-fruit-sort.jpg                     | AASHA    | 901KB | -       | SpecEd page        | ✗       | services.html      |
-| aasha-special-ed-jigsaw.jpg                         | AASHA    | 736KB | -       | SpecEd page        | ✗       | services.html      |
-| aasha-speech-english-alphabets.jpg                  | AASHA    | -     | -       | Speech therapy     | ✗       | services.html      |
-| aasha-speech-english-alphabets-closeup.jpg          | AASHA    | -     | -       | Speech therapy     | ✗       | services.html      |
-| aasha-speech-hindi-varnmala.jpg                     | AASHA    | -     | -       | Speech therapy     | ✗       | services.html      |
-| Gender_Dysphoria.jpg                                | Article  | 192KB | -       | Blog cover         | ✗       | blog/adult/*       |
-| Early_Intervention_Steps.png                        | Diagram  | 160KB | -       | Blog diagram       | ✗       | blog/child/*       |
-| Aasha_Early_Intervention_Phases.png                 | Diagram  | 160KB | -       | Blog diagram       | ✗       | blog/child/*       |
-| Aasha_Early_Intervention_Phases_Butterfly.png       | Diagram  | 287KB | -       | Blog diagram       | ✗       | blog/child/*       |
-| booking-hero.jpg                                    | Hero     | -     | -       | Booking page       | ✗       | book.html          |
+| mind-grace-small-room.webp                           | Interior | -     | -       | Gallery            | ✗       | gallery.html       |
+| mind-grace-therapy-room.webp                         | Interior | -     | -       | Gallery            | ✗       | gallery.html       |
+| aasha-occupational-therapy-junglejim-trampoline.webp | AASHA    | 1.1MB | -       | OT page            | ✗       | services.html      |
+| aasha-occupational-therapy-lycra-junglejim.webp      | AASHA    | 1.1MB | -       | OT page            | ✗       | services.html      |
+| aasha-special-ed-abacus.webp                         | AASHA    | 1.7MB | -       | SpecEd page        | ✗       | services.html      |
+| aasha-special-ed-fruit-sort-closeup.webp             | AASHA    | 593KB | -       | SpecEd page        | ✗       | services.html      |
+| aasha-special-ed-fruit-sort.webp                     | AASHA    | 901KB | -       | SpecEd page        | ✗       | services.html      |
+| aasha-special-ed-jigsaw.webp                         | AASHA    | 736KB | -       | SpecEd page        | ✗       | services.html      |
+| aasha-speech-english-alphabets.webp                  | AASHA    | -     | -       | Speech therapy     | ✗       | services.html      |
+| aasha-speech-english-alphabets-closeup.webp          | AASHA    | -     | -       | Speech therapy     | ✗       | services.html      |
+| aasha-speech-hindi-varnmala.webp                     | AASHA    | -     | -       | Speech therapy     | ✗       | services.html      |
+| Gender_Dysphoria.webp                                | Article  | 192KB | -       | Blog cover         | ✗       | blog/adult/*       |
+| Early_Intervention_Steps.webp                        | Diagram  | 160KB | -       | Blog diagram       | ✗       | blog/child/*       |
+| Aasha_Early_Intervention_Phases.webp                 | Diagram  | 160KB | -       | Blog diagram       | ✗       | blog/child/*       |
+| Aasha_Early_Intervention_Phases_Butterfly.webp       | Diagram  | 287KB | -       | Blog diagram       | ✗       | blog/child/*       |
+| booking-hero.webp                                    | Hero     | -     | -       | Booking page       | ✗       | book.html          |
 | booking-hero-optimized.webp                         | Hero     | -     | -       | Booking page       | ✗       | book.html          |
 | favicon.ico                                         | Icon     | -     | 32×32   | Browser tab        | ✓       | global             |
 | favicon.svg                                         | Icon     | -     | -       | Browser tab        | ✓       | global             |

@@ -499,7 +499,7 @@ All schemas are implemented as inline `<script type="application/ld+json">` tags
   "@type": "BlogPosting",
   "headline": "Understanding Anxiety: Signs, Symptoms, and When to Seek Help",
   "alternativeHeadline": "A Comprehensive Guide to Anxiety Disorders",
-  "image": "https://mindgracencr.in/res/blog/anxiety-guide.jpg",
+  "image": "https://mindgracencr.in/res/blog/anxiety-guide.webp",
   "datePublished": "2025-06-15",
   "dateModified": "2025-06-20",
   "author": {

@@ -40,8 +40,8 @@ check as CSS
   <!-- OpenGraph / Social Sharing -->
   <meta property="og:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>
   <meta property="og:description" content="Mental Health care in Greater Noida for anxiety, depression, ADHD, child development & more."/>
-  <meta property="og:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>
-  <meta property="og:image:secure_url" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>
+  <meta property="og:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.webp"/>
+  <meta property="og:image:secure_url" content="assets/images/Dr_Anita_Sharma_Personal_Photo.webp"/>
   <meta property="og:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Neuropsychiatric Clinic"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="675"/>
@@ -55,7 +55,7 @@ check as CSS
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>
   <meta name="twitter:description" content="You matter. Expert psychiatric care in Greater Noida."/>
-  <meta name="twitter:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>
+  <meta name="twitter:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.webp"/>
   <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist"/>
 
   <!-- Robots & Indexing -->
@@ -553,7 +553,7 @@ check as CSS
         "url": "https://mindgracencr.in/dr-anita-sharma.html",
         "image": {
           "@type": "ImageObject",
-          "url": "https://mindgracencr.in/assets/images/Dr_Anita_Sharma_Personal_Photo.jpg",
+          "url": "https://mindgracencr.in/assets/images/Dr_Anita_Sharma_Personal_Photo.webp",
           "width": 800,
           "height": 1000
         },
@@ -852,8 +852,8 @@ Source
   <!-- OpenGraph / Social Sharing -->↩
   <meta property="og:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>↩
   <meta property="og:description" content="Mental Health care in Greater Noida for anxiety, depression, ADHD, child development & more."/>↩
-  <meta property="og:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>↩
-  <meta property="og:image:secure_url" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>↩
+  <meta property="og:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.webp"/>↩
+  <meta property="og:image:secure_url" content="assets/images/Dr_Anita_Sharma_Personal_Photo.webp"/>↩
   <meta property="og:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Neuropsychiatric Clinic"/>↩
   <meta property="og:image:width" content="1200"/>↩
   <meta property="og:image:height" content="675"/>↩
@@ -867,7 +867,7 @@ Source
   <meta name="twitter:card" content="summary_large_image"/>↩
   <meta name="twitter:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic"/>↩
   <meta name="twitter:description" content="You matter. Expert psychiatric care in Greater Noida."/>↩
-  <meta name="twitter:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.jpg"/>↩
+  <meta name="twitter:image" content="assets/images/Dr_Anita_Sharma_Personal_Photo.webp"/>↩
   <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist"/>↩
   ↩
   <!-- Robots & Indexing -->↩
@@ -1361,7 +1361,7 @@ Source
         "url": "https://mindgracencr.in/dr-anita-sharma.html",↩
         "image": {↩
           "@type": "ImageObject",↩
-          "url": "https://mindgracencr.in/assets/images/Dr_Anita_Sharma_Personal_Photo.jpg",↩
+          "url": "https://mindgracencr.in/assets/images/Dr_Anita_Sharma_Personal_Photo.webp",↩
           "width": 800,↩
           "height": 1000↩
         },↩

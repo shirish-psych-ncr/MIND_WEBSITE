@@ -178,7 +178,7 @@ Proper metadata ensures your pages display correctly when:
 />
 <meta
   property="og:image"
-  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg"
+  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.webp"
 />
 <meta property="og:url" content="https://mindgracencr.in/" />
 <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic" />
@@ -193,11 +193,11 @@ Proper metadata ensures your pages display correctly when:
 ```html
 <meta
   property="og:image"
-  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg"
+  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.webp"
 />
 <meta
   property="og:image:secure_url"
-  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg"
+  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.webp"
 />
 <meta
   property="og:image:alt"
@@ -270,7 +270,7 @@ Proper metadata ensures your pages display correctly when:
 />
 <meta
   name="twitter:image"
-  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg"
+  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.webp"
 />
 <meta
   name="twitter:image:alt"
@@ -314,7 +314,7 @@ Proper metadata ensures your pages display correctly when:
 />
 <meta
   property="og:image"
-  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg"
+  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.webp"
 />
 <meta
   property="og:image:alt"
@@ -339,7 +339,7 @@ Proper metadata ensures your pages display correctly when:
 />
 <meta
   name="twitter:image"
-  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg"
+  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.webp"
 />
 <meta
   name="twitter:image:alt"
@@ -372,7 +372,7 @@ Proper metadata ensures your pages display correctly when:
 />
 <meta
   property="og:image"
-  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg"
+  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.webp"
 />
 <meta property="og:url" content="https://mindgracencr.in/about.html" />
 <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic" />
@@ -390,7 +390,7 @@ Proper metadata ensures your pages display correctly when:
 />
 <meta
   name="twitter:image"
-  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.jpg"
+  content="https://mindgracencr.in/res/Dr_Anita_Sharma_Personal_Photo.webp"
 />
 ```
 
@@ -418,7 +418,7 @@ Proper metadata ensures your pages display correctly when:
 />
 <meta
   property="og:image"
-  content="https://mindgracencr.in/res/doctor-profile.jpg"
+  content="https://mindgracencr.in/res/doctor-profile.webp"
 />
 <meta property="og:type" content="profile" />
 ```
@@ -473,7 +473,7 @@ Proper metadata ensures your pages display correctly when:
 />
 <meta
   property="og:image"
-  content="https://mindgracencr.in/res/services-overview.jpg"
+  content="https://mindgracencr.in/res/services-overview.webp"
 />
 ```
 
@@ -500,7 +500,7 @@ Proper metadata ensures your pages display correctly when:
 />
 <meta
   property="og:image"
-  content="https://mindgracencr.in/res/blog/anxiety-guide.jpg"
+  content="https://mindgracencr.in/res/blog/anxiety-guide.webp"
 />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-06-15T09:00:00+05:30" />
@@ -526,10 +526,10 @@ Proper metadata ensures your pages display correctly when:
 **File Naming:**
 
 ```
-✅ Dr_Anita_Sharma_Personal_Photo.jpg
-✅ mind-grace-clinic-exterior.jpg
-❌ IMG_1234.jpg
-❌ image.jpg
+✅ Dr_Anita_Sharma_Personal_Photo.webp
+✅ mind-grace-clinic-exterior.webp
+❌ IMG_1234.webp
+❌ image.webp
 ```
 
 **Alt Text:**
@@ -613,7 +613,7 @@ Proper metadata ensures your pages display correctly when:
   <!-- OpenGraph -->
   <meta property="og:title" content="[Page Title]" />
   <meta property="og:description" content="[Description]" />
-  <meta property="og:image" content="https://mindgracencr.in/res/[image].jpg" />
+  <meta property="og:image" content="https://mindgracencr.in/res/[image].webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://mindgracencr.in/[page].html" />
@@ -627,7 +627,7 @@ Proper metadata ensures your pages display correctly when:
   <meta name="twitter:description" content="[Description]" />
   <meta
     name="twitter:image"
-    content="https://mindgracencr.in/res/[image].jpg"
+    content="https://mindgracencr.in/res/[image].webp"
   />
 </head>
 ```
