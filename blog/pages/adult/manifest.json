@@ -1,0 +1,16 @@
+{
+"files": [
+"overthinking-vs-anxiety.html",
+"scheduled-worry-time-technique.html",
+"sleep-and-anxiety-cycle.html",
+"stimulus-control-therapy.html",
+"when-to-see-a-psychiatrist.html"
+],
+"pinned": ["sleep-and-anxiety-cycle.html", "overthinking-vs-anxiety.html"],
+"mostSearched": ["overthinking-vs-anxiety.html"],
+"symptoms": ["anxiety", "overthinking", "sleep", "insomnia", "worry"],
+"clusters": [
+{ "label": "Anxiety & Worry", "tags": ["anxiety", "overthinking", "worry"] },
+{ "label": "Sleep Issues", "tags": ["sleep", "insomnia"] }
+]
+}
