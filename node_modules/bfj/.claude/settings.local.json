@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm info:*)",
+      "Bash(npm view:*)",
+      "Bash(node -e:*)",
+      "WebSearch",
+      "Bash(npx mocha:*)",
+      "Bash(export PATH:*)",
+      "Bash(node:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run unit:*)",
+      "Bash(npm run lint:*)",
+      "Bash(/usr/bin/tail:*)",
+      "Bash(/usr/bin/grep -E '\\(passing|failing\\)')",
+      "Bash(npm run integration:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run memory:*)"
+    ]
+  }
+}
