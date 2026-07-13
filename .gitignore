@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-node_modules
-=======
 
 
 # Build artifacts
-dist/
-build/
+
+
 node_modules/
 node_modules/bin/
 
@@ -435,5 +432,4 @@ git-rebase-todo.backup
 *.tmpmerge
 *.tmprebase
 *.tmppatch
-......
->>>>>>> 426aa95989e9c8fd2e29eda487acd1720e9c4b7f
+
