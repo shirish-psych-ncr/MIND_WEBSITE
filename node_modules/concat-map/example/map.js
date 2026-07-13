@@ -1,1 +1,0 @@
-var concatMap=require("../"),xs=[1,2,3,4,5,6],ys=concatMap(xs,function(c){return c%2?[c-.1,c,c+.1]:[]});console.dir(ys);
