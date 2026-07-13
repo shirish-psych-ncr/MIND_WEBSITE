@@ -1,1 +1,0 @@
-var baseIsDate=require("./_baseIsDate"),baseUnary=require("./_baseUnary"),nodeUtil=require("./_nodeUtil"),nodeIsDate=nodeUtil&&nodeUtil.isDate,isDate=nodeIsDate?baseUnary(nodeIsDate):baseIsDate;module.exports=isDate;

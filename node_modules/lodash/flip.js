@@ -1,1 +1,0 @@
-var createWrap=require("./_createWrap"),WRAP_FLIP_FLAG=512;function flip(r){return createWrap(r,WRAP_FLIP_FLAG)}module.exports=flip;

@@ -1,1 +1,0 @@
-var baseGetTag=require("./_baseGetTag"),isObjectLike=require("./isObjectLike"),symbolTag="[object Symbol]";function isSymbol(e){return"symbol"==typeof e||isObjectLike(e)&&baseGetTag(e)==symbolTag}module.exports=isSymbol;

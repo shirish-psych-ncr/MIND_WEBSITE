@@ -1,1 +1,0 @@
-var baseGetTag=require("./_baseGetTag"),isObjectLike=require("./isObjectLike"),boolTag="[object Boolean]";function isBoolean(e){return!0===e||!1===e||isObjectLike(e)&&baseGetTag(e)==boolTag}module.exports=isBoolean;

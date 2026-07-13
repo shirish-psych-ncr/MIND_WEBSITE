@@ -1,1 +1,0 @@
-var baseFlatten=require("./_baseFlatten"),map=require("./map");function flatMap(a,e){return baseFlatten(map(a,e),1)}module.exports=flatMap;

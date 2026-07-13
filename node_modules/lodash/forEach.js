@@ -1,1 +1,0 @@
-var arrayEach=require("./_arrayEach"),baseEach=require("./_baseEach"),castFunction=require("./_castFunction"),isArray=require("./isArray");function forEach(r,a){return(isArray(r)?arrayEach:baseEach)(r,castFunction(a))}module.exports=forEach;

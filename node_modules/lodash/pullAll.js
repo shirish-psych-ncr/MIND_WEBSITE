@@ -1,1 +1,0 @@
-var basePullAll=require("./_basePullAll");function pullAll(l,e){return l&&l.length&&e&&e.length?basePullAll(l,e):l}module.exports=pullAll;

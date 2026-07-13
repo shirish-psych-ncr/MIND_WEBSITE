@@ -1,1 +1,0 @@
-var isArray=require("./isArray");function castArray(){if(!arguments.length)return[];var r=arguments[0];return isArray(r)?r:[r]}module.exports=castArray;

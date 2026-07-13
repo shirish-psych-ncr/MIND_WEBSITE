@@ -1,1 +1,0 @@
-var createWrap=require("./_createWrap"),flatRest=require("./_flatRest"),WRAP_REARG_FLAG=256,rearg=flatRest(function(e,r){return createWrap(e,WRAP_REARG_FLAG,void 0,void 0,void 0,r)});module.exports=rearg;

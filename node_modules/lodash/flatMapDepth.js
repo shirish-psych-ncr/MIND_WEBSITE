@@ -1,1 +1,0 @@
-var baseFlatten=require("./_baseFlatten"),map=require("./map"),toInteger=require("./toInteger");function flatMapDepth(e,t,a){return a=void 0===a?1:toInteger(a),baseFlatten(map(e,t),a)}module.exports=flatMapDepth;

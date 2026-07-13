@@ -1,1 +1,0 @@
-var createMathOperation=require("./_createMathOperation"),multiply=createMathOperation(function(e,t){return e*t},1);module.exports=multiply;

@@ -1,1 +1,0 @@
-var baseIsMap=require("./_baseIsMap"),baseUnary=require("./_baseUnary"),nodeUtil=require("./_nodeUtil"),nodeIsMap=nodeUtil&&nodeUtil.isMap,isMap=nodeIsMap?baseUnary(nodeIsMap):baseIsMap;module.exports=isMap;

@@ -1,1 +1,0 @@
-var baseForOwnRight=require("./_baseForOwnRight"),castFunction=require("./_castFunction");function forOwnRight(n,t){return n&&baseForOwnRight(n,castFunction(t))}module.exports=forOwnRight;

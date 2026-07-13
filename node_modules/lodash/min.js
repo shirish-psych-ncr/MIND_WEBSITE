@@ -1,1 +1,0 @@
-var baseExtremum=require("./_baseExtremum"),baseLt=require("./_baseLt"),identity=require("./identity");function min(e){return e&&e.length?baseExtremum(e,identity,baseLt):void 0}module.exports=min;

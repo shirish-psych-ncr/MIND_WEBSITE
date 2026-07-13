@@ -1,1 +1,0 @@
-var baseGetTag=require("./_baseGetTag"),isObjectLike=require("./isObjectLike"),weakSetTag="[object WeakSet]";function isWeakSet(e){return isObjectLike(e)&&baseGetTag(e)==weakSetTag}module.exports=isWeakSet;

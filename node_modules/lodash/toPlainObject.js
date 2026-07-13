@@ -1,1 +1,0 @@
-var copyObject=require("./_copyObject"),keysIn=require("./keysIn");function toPlainObject(e){return copyObject(e,keysIn(e))}module.exports=toPlainObject;

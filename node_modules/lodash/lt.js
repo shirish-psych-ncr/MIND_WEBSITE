@@ -1,1 +1,0 @@
-var baseLt=require("./_baseLt"),createRelationalOperation=require("./_createRelationalOperation"),lt=createRelationalOperation(baseLt);module.exports=lt;
