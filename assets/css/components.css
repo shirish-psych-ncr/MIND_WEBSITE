@@ -93,28 +93,29 @@
   transform: translateY(-50%);
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons - Pink Theme 2026 */
 .stage-nav-btn {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgb(255 255 255 / 0.9);
-  border: none;
+  background: rgb(236 72 153 / 0.95); /* Pink primary color */
+  border: 2px solid rgb(236 72 153 / 0.3);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-primary, #1e293b);
-  box-shadow: var(--shadow-lg, 0 10px 15px -3px rgb(0 0 0 / 0.1));
-  transition: all 0.2s ease;
+  color: white;
+  box-shadow: var(--shadow-lg, 0 10px 15px -3px rgb(236 72 153 / 0.3));
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(8px);
   pointer-events: auto;
 }
 
 .stage-nav-btn:hover:not(:disabled) {
-  background: white;
-  transform: scale(1.1);
-  box-shadow: var(--shadow-xl, 0 20px 25px -5px rgb(0 0 0 / 0.1));
+  background: rgb(236 72 153);
+  transform: scale(1.15);
+  box-shadow: 0 15px 30px -5px rgb(236 72 153 / 0.5);
+  border-color: transparent;
 }
 
 .stage-nav-btn:active:not(:disabled) {
@@ -122,13 +123,42 @@
 }
 
 .stage-nav-btn:disabled {
-  opacity: 0.3;
+  opacity: 0.4;
   cursor: not-allowed;
+  background: rgb(148 163 184 / 0.5);
 }
 
 .stage-nav-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.5;
+}
+
+/* Mobile Navigation Buttons - Fixed positioning */
+@media (max-width: 768px) {
+  .stage-nav-btn {
+    width: 44px;
+    height: 44px;
+    background: rgb(236 72 153 / 0.98);
+    box-shadow: 0 8px 20px rgb(236 72 153 / 0.4);
+  }
+  
+  .stage-nav-btn.prev-btn {
+    left: 8px !important;
+  }
+  
+  .stage-nav-btn.next-btn {
+    right: 8px !important;
+  }
+  
+  .stage-nav-btn:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+  
+  .stage-nav-btn svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* Filmstrip - Thumbnail Navigation */
@@ -218,6 +248,86 @@
   line-height: 1.6;
 }
 
+/* Meta Buttons - Pink Ghost Buttons 2026 */
+.meta-btn {
+  padding: 1.75rem;
+  background: transparent;
+  border: 2px solid var(--primary, #ec4899);
+  border-radius: var(--radius-lg, 12px);
+  box-shadow: var(--shadow-sm, 0 1px 3px 0 rgb(236 72 153 / 0.1));
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.meta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgb(236 72 153 / 0.05), rgb(236 72 153 / 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.meta-btn:hover::before {
+  opacity: 1;
+}
+
+.meta-btn:hover {
+  background: var(--primary, #ec4899);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgb(236 72 153 / 0.3);
+  border-color: transparent;
+}
+
+.meta-btn:hover h3,
+.meta-btn:hover p {
+  color: white;
+}
+
+.meta-btn--ghost {
+  background: transparent;
+  border-color: var(--primary, #ec4899);
+}
+
+.meta-btn h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #1e293b);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.meta-btn p {
+  color: var(--text-secondary, #64748b);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile optimization for meta buttons */
+@media (max-width: 768px) {
+  .meta-btn {
+    padding: 1.25rem;
+  }
+  
+  .meta-btn h3 {
+    font-size: 1.1rem;
+  }
+  
+  .meta-btn p {
+    font-size: 0.9rem;
+  }
+}
+
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .media-stage {
@@ -248,6 +358,26 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Mobile Navigation Button Fixes */
+@media (max-width: 768px) {
+  .stage-nav {
+    padding: 0 0.5rem;
+  }
+  
+  .stage-nav-btn {
+    width: 44px;
+    height: 44px;
+    background: rgba(236, 72, 153, 0.9);
+    color: white;
+  }
+  
+  .stage-nav-btn:hover:not(:disabled) {
+    background: rgba(236, 72, 153, 1);
+  }
+}
+
+
 
 @media (max-width: 480px) {
   .media-stage {

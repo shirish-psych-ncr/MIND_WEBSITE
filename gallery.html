@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <link rel="preconnect" href="https:/fonts.googleapis.com" crossorigin>
-    <link rel="preload" as="style" href="https:/fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-  <link rel="preconnect" href="https:/fonts.gstatic.com" crossorigin>
-  <link rel="canonical" href="https:/mindgracencr.in/gallery.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="canonical" href="https://mindgracencr.in/gallery.html">
 
   <title>Clinic Gallery | Mind Grace</title>
   <meta name="description" content="Explore Mind Grace Neuropsychiatric Clinic and Aasha Early Intervention spaces — consultation rooms, therapy areas, and child development setups.">
     <!-- OpenGraph Meta Tags -->
     <meta property="og:title" content="Clinic Gallery">
     <meta property="og:description" content="Photo gallery of Mind Grace Clinic facilities and Aasha Early Intervention center.">
-    <meta property="og:image" content="https:/mindgracencr.in/assets/images/Mind_Grace_Clinic_waiting_area.webp">
+    <meta property="og:image" content="https://mindgracencr.in/assets/images/Mind_Grace_Clinic_waiting_area.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="675">
     <meta property="og:image:alt" content="Mind Grace Neuropsychiatric Clinic - Compassionate Mental Health Care">
     <meta property="og:image:type" content="image/webp">
-    <meta property="og:url" content="https:/mindgracencr.in">
+    <meta property="og:url" content="https://mindgracencr.in">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic">
     
@@ -26,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Clinic Gallery">
     <meta name="twitter:description" content="Photo gallery of Mind Grace Clinic facilities and Aasha Early Intervention center.">
-    <meta name="twitter:image" content="https:/mindgracencr.in/assets/images/Mind_Grace_Clinic_waiting_area.webp">
+    <meta name="twitter:image" content="https://mindgracencr.in/assets/images/Mind_Grace_Clinic_waiting_area.webp">
 
 
   <link rel="stylesheet" href="assets/css/base.css">
@@ -55,7 +55,7 @@
   <link rel="dns-prefetch" href="/mindgracencr.in">
   <script type="application/ld+json">
     {
-      "@context": "https:/schema.org",
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [{
         "@type": "ListItem",
@@ -227,7 +227,7 @@
                     
                     <!-- Error State -->
                     <div class="stage-error" id="stage-error" hidden>
-                        <svg xmlns="http:/www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
                         <p>Failed to load image</p>
                         <button class="retry-btn" id="retry-btn" type="button">Retry</button>
                     </div>
@@ -278,18 +278,18 @@
     <!-- Categories / Info Section -->
     <section class="gallery-meta container">
         <div class="meta-grid">
-            <div class="meta-card">
+            <button class="meta-btn meta-btn--ghost" data-category="exterior" data-target-index="0" type="button" aria-label="View Facilities images">
                 <h3>Facilities</h3>
                 <p>Modern consultation rooms and waiting areas designed for comfort.</p>
-            </div>
-            <div class="meta-card">
+            </button>
+            <button class="meta-btn meta-btn--ghost" data-category="speech" data-target-index="4" type="button" aria-label="View Therapy Zones images">
                 <h3>Therapy Zones</h3>
                 <p>Specialized rooms for Speech, Occupational, and Behavioral therapy.</p>
-            </div>
-            <div class="meta-card">
+            </button>
+            <button class="meta-btn meta-btn--ghost" data-category="team" data-target-index="15" type="button" aria-label="View Team images">
                 <h3>Team</h3>
                 <p>Meet our dedicated professionals committed to your care.</p>
-            </div>
+            </button>
         </div>
     </section>
 
@@ -297,15 +297,18 @@
 
 <script src="assets/js/gallery.js" defer></script>
 <script>
-/ Gallery data with rich descriptions from image_descriptions.md
+/**
+ * Gallery Data - Robust 2026 Implementation
+ * Fallback-first approach: images will display even if JS partially fails
+ */
 window.galleryData = [
-  / === EXTERIOR & RECEPTION ===
+  // === EXTERIOR & RECEPTION (Facilities) ===
   {
     id: 'ext-1',
     src: 'assets/images/Location_street_view_distance.webp',
-    alt: 'Street view of Mind Grace Neuropsychiatric Clinic and AASHA Child Development Centre located in Greater Noida, Uttar Pradesh',
+    alt: 'Street view of Mind Grace Neuropsychiatric Clinic and AASHA Child Development Centre',
     caption: 'Clinic Exterior',
-    description: 'An exterior photograph showing the clinic building, entrance, parking area, roadside access, and clinic signage. The image helps patients and families identify the location before visiting.',
+    description: 'Exterior view showing clinic building, entrance, parking, and signage.',
     category: 'exterior',
     sectionTitle: 'Welcome to Our Clinic'
   },
@@ -314,18 +317,18 @@ window.galleryData = [
     src: 'assets/images/mind-grace-entry-n-reception.webp',
     alt: 'Entry and reception area at Mind Grace Clinic',
     caption: 'Reception Area',
-    description: 'Structured for privacy and seamless check-in. Our welcoming reception area is designed to create a calm, grounded arrival experience for all patients and families.',
+    description: 'Welcoming reception area designed for calm, grounded arrival.',
     category: 'exterior'
   },
   
-  / === CONSULTATION ROOMS ===
+  // === CONSULTATION ROOMS (Facilities) ===
   {
     id: 'consult-1',
     src: 'assets/images/mind-grace-consultation-room.webp',
     alt: 'Adult consultation room at Mind Grace Neuropsychiatric Clinic',
     caption: 'Adult Consultation Room',
-    description: 'Focused, private discussions in a comfortable setting. Our consultation rooms provide a safe, confidential environment for psychiatric evaluation and psychotherapy.',
-    category: 'consultation',
+    description: 'Private, comfortable setting for psychiatric evaluation.',
+    category: 'exterior',
     sectionTitle: 'Consultation Spaces'
   },
   {
@@ -333,102 +336,127 @@ window.galleryData = [
     src: 'assets/images/mind-grace-therapy-room.webp',
     alt: 'Therapy room for evidence-based sessions',
     caption: 'Therapy Space',
-    description: 'Evidence-based therapy sessions in a structured environment. Designed for CBT, family counselling, and individual psychotherapy.',
-    category: 'consultation'
-  },
-  {
-    id: 'consult-3',
-    src: 'assets/images/mind-grace-small-room.webp',
-    alt: 'Assessment room for specialized clinical evaluations',
-    caption: 'Assessment Room',
-    description: 'Flexible clinical space for specialized assessments including psychological testing, developmental screening, and diagnostic evaluations.',
-    category: 'consultation'
+    description: 'Structured environment for CBT and psychotherapy.',
+    category: 'exterior'
   },
   
-  / === SPEECH & LANGUAGE THERAPY ===
+  // === SPEECH & LANGUAGE THERAPY (Therapy Zones) ===
   {
     id: 'speech-1',
     src: 'assets/images/aasha-speech-hindi-varnmala.webp',
-    alt: 'Child learning Hindi alphabet using a colourful Devanagari wooden peg puzzle during speech therapy and special education',
+    alt: 'Child learning Hindi alphabet during speech therapy',
     caption: 'Hindi Language Development',
-    description: 'A child participates in Hindi language learning using a wooden Devanagari Varnmala puzzle. The activity encourages letter identification, phonological awareness, early reading readiness, bilingual language acquisition, and communication development.',
+    description: 'Devanagari Varnmala puzzle for bilingual language acquisition.',
     category: 'speech',
     sectionTitle: 'Speech & Language Therapy'
   },
   {
     id: 'speech-2',
     src: 'assets/images/aasha-speech-english-alphabets.webp',
-    alt: 'Child learning uppercase English alphabets using a wooden peg puzzle during speech therapy and early literacy intervention',
+    alt: 'Child learning English alphabets during speech therapy',
     caption: 'English Phonetic Development',
-    description: 'A child practises English alphabet recognition using a colourful uppercase wooden peg puzzle. Alphabet puzzles promote letter recognition, phonological awareness, receptive language, expressive language, and pre-reading skills.',
+    description: 'Uppercase alphabet puzzle for letter recognition.',
     category: 'speech'
   },
   {
     id: 'speech-3',
     src: 'assets/images/aasha-speech-english-alphabets-closeup.webp',
-    alt: 'Close-up of child placing an English alphabet puzzle piece into its matching slot during speech and occupational therapy',
+    alt: 'Close-up of child placing alphabet puzzle piece',
     caption: 'Tactile Learning Tools',
-    description: 'A close-up image capturing a child\'s hand accurately orienting and placing an alphabet puzzle piece. The activity strengthens letter recognition, visual discrimination, motor planning, precision grip, and early literacy development.',
+    description: 'Fine motor precision and letter recognition activity.',
     category: 'speech'
   },
-  
-  / === SPECIAL EDUCATION ===
+
+  // === SPECIAL EDUCATION (Therapy Zones) ===
   {
     id: 'sped-1',
     src: 'assets/images/aasha-special-ed-fruit-sort.webp',
-    alt: 'Child completing a fruit sorting and matching activity with realistic fruit models during special education and cognitive development session',
+    alt: 'Child completing fruit sorting activity',
     caption: 'Cognitive Sorting Activities',
-    description: 'A child engages in fruit sorting and matching, categorizing realistic fruit models by type. This activity builds cognitive skills including classification, visual discrimination, colour recognition, vocabulary development, and logical reasoning.',
-    category: 'special-education',
+    description: 'Fruit categorization builds classification skills.',
+    category: 'speech',
     sectionTitle: 'Special Education'
   },
   {
     id: 'sped-2',
     src: 'assets/images/aasha-special-ed-colour-sort.webp',
-    alt: 'Child sorting coloured pom-poms into matching bowls using tweezers during occupational therapy and special education',
+    alt: 'Child sorting coloured pom-poms with tweezers',
     caption: 'Colour Recognition & Fine Motor',
-    description: 'Using tweezers to sort coloured pom-poms into matching bowls, this activity combines colour identification with fine motor skill development, pincer grasp strengthening, hand-eye coordination, and bilateral coordination.',
-    category: 'special-education'
+    description: 'Pincer grasp strengthening with colour identification.',
+    category: 'speech'
   },
   {
     id: 'sped-3',
     src: 'assets/images/aasha-special-ed-counting.webp',
-    alt: 'Child counting with colourful bear manipulatives on a ten-frame grid during special education and early math intervention',
+    alt: 'Child counting with bear manipulatives',
     caption: 'Early Mathematics Skills',
-    description: 'A child learns counting and one-to-one correspondence using colourful bear manipulatives placed on a ten-frame grid. Bear counting activities introduce early mathematical concepts including number sense, subitizing, addition, subtraction, and pattern recognition.',
-    category: 'special-education'
+    description: 'Ten-frame grid for number sense development.',
+    category: 'speech'
   },
   {
     id: 'sped-4',
     src: 'assets/images/aasha-special-ed-bead-thread.webp',
-    alt: 'Child threading large beads onto a string during fine motor skill development and occupational therapy',
+    alt: 'Child threading beads for fine motor development',
     caption: 'Fine Motor Precision',
-    description: 'Threading large beads onto a string requires precise pincer grasp, bilateral coordination, hand-eye coordination, and sequential motor planning. This foundational activity supports self-care skills like buttoning and zipping.',
-    category: 'special-education'
+    description: 'Bilateral coordination and pincer grasp activity.',
+    category: 'speech'
   },
-  
-  / === OCCUPATIONAL THERAPY ===
+
+  // === OCCUPATIONAL THERAPY (Therapy Zones) ===
   {
     id: 'ot-1',
     src: 'assets/images/aasha-ot-sensory-circuit.webp',
-    alt: 'Child jumping through a hula hoop as part of a sensory motor circuit during occupational therapy session',
+    alt: 'Child in sensory motor circuit',
     caption: 'Sensory Motor Circuit',
-    description: 'A child participates in a structured sensory motor circuit, jumping through a hula hoop. Sensory circuits provide proprioceptive, vestibular, and tactile input to support attention, self-regulation, motor planning, and body awareness.',
-    category: 'occupational-therapy',
+    description: 'Proprioceptive input for attention and regulation.',
+    category: 'speech',
     sectionTitle: 'Occupational Therapy'
   },
   {
     id: 'ot-2',
     src: 'assets/images/aasha-ot-balance-board.webp',
-    alt: 'Child standing on a balance board while reaching for toys during vestibular and balance training in occupational therapy',
+    alt: 'Child on balance board during therapy',
     caption: 'Balance & Core Strength',
-    description: 'Standing on a balance board while reaching for objects challenges core stability, dynamic balance, postural control, and bilateral integration. This activity strengthens trunk muscles and improves coordination.',
-    category: 'occupational-therapy'
+    description: 'Dynamic balance and postural control training.',
+    category: 'speech'
+  },
+  {
+    id: 'ot-3',
+    src: 'assets/images/aasha-occupational-therapy-junglejim-trampoline.webp',
+    alt: 'Child on jungle gym trampoline',
+    caption: 'Gross Motor Integration',
+    description: 'Vestibular stimulation through jumping activities.',
+    category: 'speech'
+  },
+  {
+    id: 'ot-4',
+    src: 'assets/images/aasha-occupational-therapy-lycra-junglejim.webp',
+    alt: 'Child in lycra swing for sensory input',
+    caption: 'Deep Pressure Therapy',
+    description: 'Proprioceptive input through compression.',
+    category: 'speech'
+  },
+
+  // === TEAM (using Dr. Sharma photo as team representative) ===
+  {
+    id: 'team-1',
+    src: 'assets/images/Dr_Anita_Sharma_Personal_Photo.webp',
+    alt: 'Dr. Anita Sharma, Lead Psychiatrist',
+    caption: 'Our Team',
+    description: 'Meet our dedicated professionals committed to your care.',
+    category: 'team',
+    sectionTitle: 'Meet Our Team'
+  },
+  {
+    id: 'team-2',
+    src: 'assets/images/Mind_Grace_Clinic_waiting_area.webp',
+    alt: 'Clinic waiting area with comfortable seating',
+    caption: 'Patient-Centered Environment',
+    description: 'Comfortable spaces designed for patient well-being.',
+    category: 'team'
   }
 ];
 </script>
-
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-content">
     <div class="footer-column">
