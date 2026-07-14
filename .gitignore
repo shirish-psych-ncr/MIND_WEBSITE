@@ -1,3 +1,53 @@
-The modified files consist entirely of HTML files, JavaScript files, and existing .gitignore entries - all of which appear to be source code and configuration files that should not be ignored. There are no build artifacts, dependency directories, compiled files, or temporary files in the change list that would warrant adding ignore rules.
+```
+# Logs and temp files
+*.log
+*.tmp
+*.swp
 
-Since the changes include only source/config files (.html, .js) and .gitignore itself, no additional ignore rules are needed.
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.tox/
+
+# Build directories
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Testing
+playwright-report/
+```
