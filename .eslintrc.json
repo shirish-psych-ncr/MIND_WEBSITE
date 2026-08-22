@@ -1,8 +1,0 @@
-{
-	"extends": ["@eslint/js/recommended"],
-	"env": { "browser": true, "es2022": true },
-	"rules": {
-		"no-unused-vars": "warn",
-		"no-console": "off"
-	}
-}
