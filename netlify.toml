@@ -1,6 +1,25 @@
 [build]
   publish = "."
-  command = "echo 'No build step required for static site'"
+  command = """
+    # Remove vendor directory if exists (using CDN instead)
+    rm -rf assets/vendor
+    
+    # Minify HTML files
+    for file in *.html; do
+      if [ -f "$file" ]; then
+        npx html-minifier-terser "$file" --output "$file" --collapse-whitespace --remove-comments --minify-css true --minify-js true 2>/dev/null || true
+      fi
+    done
+    
+    # Minify JS files
+    for file in js/*.js; do
+      if [ -f "$file" ]; then
+        npx terser "$file" --output "$file" --compress --mangle 2>/dev/null || true
+      fi
+    done
+    
+    echo 'Build complete'
+  """
 
 [[redirects]]
   from = "/api/*"
