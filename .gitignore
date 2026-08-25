@@ -1,49 +1,13 @@
 ```
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-.ENV
-.ENV.local
+# Dependencies
+node_modules/
 
-# Logs
-*.log
-
-# Coverage
-.coverage
-coverage/
-htmlcov/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Build
-build/
+# Build artifacts
 dist/
-*.egg-info/
+build/
+target/
 
-# Testing
-.pytest_cache/
-.mypy_cache/
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Compressed
+# Compressed files
 *.zip
 *.gz
 *.tar
@@ -66,4 +30,152 @@ dist/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+*.env.*
+
+# Cache directories
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage/
+htmlcov/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Binary files
+*.exe
+*.dll
+*.so
+*.a
+*.o
+*.obj
+*.out
+*.class
+
+# Mobile
+*.apk
+*.ipa
+
+# Documentation
+docs/_build/
+
+# Node.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.pytest_cache/
+.coverage.*
+htmlcov/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+build/
+
+# C/C++
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.out
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Ruby
+*.gem
+*.rbc
+coverage/
+InstalledFiles
+pkg/
+spec/reports/
+test/tmp/
+test/version_tmp/
+tmp/
+
+# Rust
+target/
+Cargo.lock
+
+# Web
+.svelte-kit/
+.vercel/
+.next/
+.nuxt/
+
+# Database
+*.db
+*.db-journal
+
+# Backup files
+*~
+*.bak
+*.orig
+*.rej
+
+# Testing
+.rspec
+capybara-*.html
+_saved_session
+*.har
+{test,spec}{,-*}.rb
+*_test.rb
+test_*.rb
+test/*.*
+spec/*.*
+*.csv
+*.rbc
+.minitest.tmp
+
+# Temporary folders
+temp/
+tmp/
+
+# Configuration
+config/*.json
+config/*.yml
+config/*.yaml
+
+# Secrets
+secrets/
+.secret
+*.key
+*.pem
+*.crt
+*.cert
 ```
