@@ -142,19 +142,19 @@
     background: rgb(236 72 153 / 0.98);
     box-shadow: 0 8px 20px rgb(236 72 153 / 0.4);
   }
-  
+
   .stage-nav-btn.prev-btn {
     left: 8px !important;
   }
-  
+
   .stage-nav-btn.next-btn {
     right: 8px !important;
   }
-  
+
   .stage-nav-btn:hover:not(:disabled) {
     transform: scale(1.1);
   }
-  
+
   .stage-nav-btn svg {
     width: 24px;
     height: 24px;
@@ -317,11 +317,11 @@
   .meta-btn {
     padding: 1.25rem;
   }
-  
+
   .meta-btn h3 {
     font-size: 1.1rem;
   }
-  
+
   .meta-btn p {
     font-size: 0.9rem;
   }
@@ -333,27 +333,27 @@
   .media-stage {
     aspect-ratio: 4 / 3;
   }
-  
+
   .stage-nav {
     width: 40px;
     height: 40px;
   }
-  
-  
-  
+
+
+
   .stage-caption {
     font-size: 1.25rem;
   }
-  
+
   .stage-desc {
     font-size: 0.875rem;
   }
-  
+
   .filmstrip-thumb {
     width: 80px;
     height: 56px;
   }
-  
+
   .meta-grid {
     grid-template-columns: 1fr;
   }
@@ -364,14 +364,14 @@
   .stage-nav {
     padding: 0 0.5rem;
   }
-  
+
   .stage-nav-btn {
     width: 44px;
     height: 44px;
     background: rgba(236, 72, 153, 0.9);
     color: white;
   }
-  
+
   .stage-nav-btn:hover:not(:disabled) {
     background: rgba(236, 72, 153, 1);
   }
@@ -383,11 +383,11 @@
   .media-stage {
     aspect-ratio: 1 / 1;
   }
-  
+
   .stage-overlay {
     padding: 1rem;
   }
-  
+
   .stage-caption {
     font-size: 1rem;
   }
@@ -401,7 +401,7 @@
   .filmstrip-thumb {
     transition: none;
   }
-  
+
   .media-filmstrip {
     scroll-behavior: auto;
   }
@@ -412,7 +412,7 @@
   .filmstrip-thumb.active {
     border-width: 3px;
   }
-  
+
   .stage-nav {
     border: 2px solid currentColor;
   }
@@ -465,7 +465,7 @@
   .section-title-text {
     font-size: 1.25rem;
   }
-  
+
   .section-title-card {
     margin: 1.5rem auto 1rem;
   }
@@ -475,7 +475,7 @@
   .section-title-text {
     font-size: 1.1rem;
   }
-  
+
   .section-title-decoration {
     width: 40px;
     height: 3px;
@@ -487,7 +487,7 @@
   .section-title-card {
     transition: none;
   }
-  
+
   .section-title-decoration {
     animation: none;
   }

@@ -1,0 +1,16 @@
+{
+  "name": "Mind Grace Neuropsychiatric Clinic",
+  "short_name": "Mind Grace",
+  "description": "Warm, evidence-informed neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fffaf9",
+  "theme_color": "#d81b60",
+  "lang": "en-IN",
+  "icons": [{
+    "src": "/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
+    "sizes": "any",
+    "type": "image/svg+xml",
+    "purpose": "any maskable"
+  }]
+}

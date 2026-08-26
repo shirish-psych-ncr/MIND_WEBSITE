@@ -35,11 +35,11 @@ This repository contains the complete source code for the Mind Grace Neuropsychi
 ### Core Web Vitals Targets
 | Metric | Target | Achieved | Status |
 |--------|--------|----------|--------|
-| LCP (Largest Contentful Paint) | < 2.5s | ~1.8s | ✅ Pass |
-| CLS (Cumulative Layout Shift) | < 0.1 | ~0.05 | ✅ Pass |
-| INP (Interaction to Next Paint) | < 200ms | ~120ms | ✅ Pass |
-| FCP (First Contentful Paint) | < 1.8s | ~1.2s | ✅ Pass |
-| TTI (Time to Interactive) | < 3.8s | ~2.9s | ✅ Pass |
+| LCP (Largest Contentful Paint) | < 2.5s | ~1.8s | [OK] Pass |
+| CLS (Cumulative Layout Shift) | < 0.1 | ~0.05 | [OK] Pass |
+| INP (Interaction to Next Paint) | < 200ms | ~120ms | [OK] Pass |
+| FCP (First Contentful Paint) | < 1.8s | ~1.2s | [OK] Pass |
+| TTI (Time to Interactive) | < 3.8s | ~2.9s | [OK] Pass |
 
 ### Optimization Techniques Applied
 1. **Image Optimization**: 100% WebP conversion with srcset for responsive loading

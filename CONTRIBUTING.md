@@ -133,19 +133,19 @@ Visit `http://localhost:8000` in your browser.
    ```html
    <meta name="description" content="...">
    <link rel="canonical" href="https://mindgracencr.in/page.html">
-   
+
    <!-- OpenGraph -->
    <meta property="og:title" content="...">
    <meta property="og:description" content="...">
    <meta property="og:image" content="...">
    <meta property="og:url" content="...">
    <meta property="og:type" content="website">
-   
+
    <!-- Twitter Card -->
    <meta name="twitter:card" content="summary_large_image">
    ```
 
-4. **Performance**: 
+4. **Performance**:
    - Add `loading="lazy"` to below-fold images
    - Use `fetchpriority="high"` for LCP images
    - Include explicit `width` and `height` attributes
@@ -169,7 +169,7 @@ Visit `http://localhost:8000` in your browser.
      --color-secondary: #7c3aed;
      --spacing-unit: 1rem;
    }
-   
+
    .button {
      background-color: var(--color-primary);
      padding: calc(var(--spacing-unit) * 2);
@@ -181,7 +181,7 @@ Visit `http://localhost:8000` in your browser.
    .container {
      padding: 1rem;
    }
-   
+
    @media (min-width: 768px) {
      .container {
        padding: 2rem;
@@ -203,7 +203,7 @@ Visit `http://localhost:8000` in your browser.
    // main.js
    import { initComponents } from './components/init.js';
    import { utils } from './utils/helpers.js';
-   
+
    export function init() {
      initComponents();
    }
@@ -214,7 +214,7 @@ Visit `http://localhost:8000` in your browser.
    // Good - Vanilla JS
    const button = document.querySelector('.btn');
    button.addEventListener('click', handleClick);
-   
+
    // Bad - No frameworks allowed
    ```
 
@@ -329,7 +329,7 @@ Visit `http://localhost:8000` in your browser.
    ```bash
    # Using Python script
    python scripts/convert-to-webp.py path/to/image.jpg
-   
+
    # Or using Node.js Sharp
    npx sharp input.jpg -o output.webp
    ```
@@ -340,8 +340,8 @@ Visit `http://localhost:8000` in your browser.
 
 4. Update HTML with proper attributes:
    ```html
-   <img 
-     src="assets/images/photo.webp" 
+   <img
+     src="assets/images/photo.webp"
      alt="Descriptive alt text"
      width="800"
      height="600"

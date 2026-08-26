@@ -390,8 +390,8 @@ Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsaf
 3. **Subresource Integrity:**
 For vendor scripts, add integrity hashes:
 ```html
-<script src="assets/vendor/lucide.min.js" 
-        integrity="sha384-[hash]" 
+<script src="assets/vendor/lucide.min.js"
+        integrity="sha384-[hash]"
         crossorigin="anonymous"></script>
 ```
 
@@ -519,7 +519,7 @@ If site is compromised:
    # Restore from known-good backup
    git reset --hard [last-known-good-commit]
    git push --force origin main
-   
+
    # Change all passwords
    # Update security measures
    ```
@@ -565,6 +565,6 @@ git push origin main
 
 ---
 
-**Last Updated:** 2025-01-13  
-**Next Review:** 2025-04-13  
+**Last Updated:** 2025-01-13
+**Next Review:** 2025-04-13
 **Version:** 1.0.0

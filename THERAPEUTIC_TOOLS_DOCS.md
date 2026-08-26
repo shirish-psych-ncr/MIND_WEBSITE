@@ -60,8 +60,8 @@ Mind Grace Neuropsychiatric Clinic includes **6 interactive therapeutic tools** 
 ## Clinical Purposes
 
 ### 1. Butterfly Tapper (EMDR Bilateral Stimulation)
-**Clinical Use:** Trauma processing, anxiety reduction, grounding  
-**Mechanism:** Alternating tactile stimulation (left/right tapping)  
+**Clinical Use:** Trauma processing, anxiety reduction, grounding
+**Mechanism:** Alternating tactile stimulation (left/right tapping)
 **Features:**
 - Canvas-based comet animation following user taps
 - Web Audio API: 432Hz sine wave with stereo panning
@@ -76,7 +76,7 @@ Mind Grace Neuropsychiatric Clinic includes **6 interactive therapeutic tools** 
 ---
 
 ### 2. Guided Breathing Exercise
-**Clinical Use:** Panic attacks, anxiety management, sleep preparation  
+**Clinical Use:** Panic attacks, anxiety management, sleep preparation
 **Techniques Supported:**
 - **Box Breathing** (4-4-4-4): Navy SEALs technique
 - **4-7-8 Relaxation**: Dr. Andrew Weil's method
@@ -92,8 +92,8 @@ Mind Grace Neuropsychiatric Clinic includes **6 interactive therapeutic tools** 
 ---
 
 ### 3. Eye Movement Therapy (EMDR Tracking)
-**Clinical Use:** Trauma desensitization, cognitive reprocessing  
-**Mechanism:** Horizontal eye tracking follows moving orb  
+**Clinical Use:** Trauma desensitization, cognitive reprocessing
+**Mechanism:** Horizontal eye tracking follows moving orb
 **Features:**
 - Adjustable speed (500ms - 2000ms per crossing)
 - Smooth CSS transitions with ease-in-out timing
@@ -104,8 +104,8 @@ Mind Grace Neuropsychiatric Clinic includes **6 interactive therapeutic tools** 
 ---
 
 ### 4. Hypnotic Fractal Visualization
-**Clinical Use:** Deep relaxation, meditation induction, dissociation grounding  
-**Mechanism:** User draws on canvas, generates recursive fractal patterns  
+**Clinical Use:** Deep relaxation, meditation induction, dissociation grounding
+**Mechanism:** User draws on canvas, generates recursive fractal patterns
 **Features:**
 - Quadratic Bézier curve fractal generation (depth: 5 levels)
 - Dynamic hue rotation (180° base + 15° per recursion level)
@@ -120,8 +120,8 @@ Mind Grace Neuropsychiatric Clinic includes **6 interactive therapeutic tools** 
 ---
 
 ### 5. Horizon Scan Grounding
-**Clinical Use:** Dissociation, panic, present-moment awareness  
-**Mechanism:** Visual tracking of moving target along horizon line  
+**Clinical Use:** Dissociation, panic, present-moment awareness
+**Mechanism:** Visual tracking of moving target along horizon line
 **Features:**
 - Adjustable session duration (1-10 minutes)
 - Parallax scrolling background (3x width, seamless loop)
@@ -134,15 +134,15 @@ Mind Grace Neuropsychiatric Clinic includes **6 interactive therapeutic tools** 
 ---
 
 ### 6. Leaf on Stream (Mindfulness Metaphor)
-**Clinical Use:** Cognitive defusion, worry externalization, acceptance  
-**Mechanism:** Write worries on virtual leaves, watch them float away  
+**Clinical Use:** Cognitive defusion, worry externalization, acceptance
+**Mechanism:** Write worries on virtual leaves, watch them float away
 **Features:**
 - **Advanced Physics Engine:**
   - Leaf sizing based on text length (max 3 lines, ellipsis overflow)
   - Waterfall acceleration zone (scale ×0.97, opacity ×0.96 per frame)
   - Angular velocity increase in waterfall
   - Mist particle generation during dissolution
-  
+
 - **Environmental Rendering:**
   - Multi-layer mountains (far: 4 peaks, near: 3 peaks) with parallax
   - Procedural grass blades (75 count, sway animation)
@@ -215,7 +215,7 @@ osc.start();
 
 ## Accessibility Features
 
-✅ **All Tools Include:**
+[OK] **All Tools Include:**
 - Skip links (`href="#main-content"`)
 - ARIA live regions for status updates
 - Keyboard navigation support
@@ -235,39 +235,11 @@ osc.start();
 
 ---
 
-## Known Issues
+## Known issues and current verification
 
-### Critical (SEO/Metadata)
-⚠️ **Duplicate Canonical Tags** (5 of 6 tools):
-- `butterfly-tapper.html`: 4 canonical tags (should be 1)
-- `guided-breathing.html`: 4 canonical tags
-- `eye-movement.html`: 4 canonical tags
-- `horizon-scan.html`: 4 canonical tags
-- `leaf-on-stream.html`: 4 canonical tags
-- ✅ `hypnos-fractal.html`: Correct (1 tag)
+The original audit findings in this section were rechecked on 2026-08-26. All six tool routes now have one canonical URL, consistent domain references, one shared header/footer/main shell, working script references, breadcrumbs, and a visible two-mode tool view control. The browser interaction sweep exercised each start/control path.
 
-**Example Fix Needed:**
-```html
-<!-- CURRENT (WRONG): -->
-<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">
-<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">
-<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">
-<link rel="canonical" href="https://mindgracencr.in/butterfly-tapper.html">
-
-<!-- SHOULD BE: -->
-<link rel="canonical" href="https://mindgracencr.in/tools/butterfly-tapper.html">
-```
-
-⚠️ **Domain Inconsistency:** All canonicals use `mindgracencr.in` instead of `mindgracencr.in`
-
-### Code Quality
-⚠️ **Minified Source Files:** All tool JS/CSS files are minified (hard to maintain)
-- Recommendation: Keep unminified source in `/src/`, build to `/assets/`
-
-⚠️ **Duplicate Headers:** Some tools have nested `<header>` elements
-- Example: `leaf-on-stream.html` has emergency banner header inside main header
-
-⚠️ **Missing Script:** Tools reference `assets/js/tools-*.js` but some may not exist or be misnamed
+The remaining maintainability item is that several legacy tool bundles are minified. They are functional in production; unminified source maps or a source directory can be added if the project adopts a build step.
 
 ---
 
@@ -348,17 +320,14 @@ Update all tool pages' `.tool-link-bar` to include new tool link.
 
 ## Testing Checklist
 
-- [ ] Canvas renders correctly on mobile/desktop
-- [ ] Audio plays without user gesture (after first interaction)
-- [ ] Haptics work on Android (iOS requires user permission)
-- [ ] Reduced motion mode respects preferences
-- [ ] Keyboard navigation works (Tab, Enter, Space)
-- [ ] Screen reader announces state changes
-- [ ] Offline mode functions (Service Worker caching)
-- [ ] No console errors in production build
-- [ ] Lighthouse accessibility score ≥ 95
-- [ ] No duplicate canonical tags
-- [ ] Correct domain in all metadata
+The local verification sweep on 2026-08-26 covered the items that can be proven from this static preview:
+
+- [x] All six tools render with one shared shell and responsive tool-view controls.
+- [x] Reduced-motion CSS is present and the primary controls are keyboard-operable buttons.
+- [x] Tool pages have one canonical tag and consistent `mindgracencr.in` metadata.
+- [x] The fractal controls, gallery-style start states, and Leaf release flow were exercised in-browser.
+- [x] No missing local HTML/CSS/JavaScript references were reported by the static checker.
+- [ ] Audio/haptics, offline caching, Lighthouse score, and production console behavior require device/hosting verification.
 
 ---
 
@@ -384,5 +353,5 @@ Update all tool pages' `.tool-link-bar` to include new tool link.
 
 ---
 
-**Last Updated:** Phase 2, Run 3 - Verified against actual codebase  
-**Documentation Status:** ✅ Complete for all 6 tools
+**Last Updated:** Phase 2, Run 3 - Verified against actual codebase
+**Documentation Status:** [OK] Complete for all 6 tools

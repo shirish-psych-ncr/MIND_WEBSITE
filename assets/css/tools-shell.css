@@ -1,0 +1,137 @@
+/* Shared presentation controls for Mind Grace therapeutic tools. */
+:root {
+  --tool-lava: #c52f69;
+  --tool-lava-deep: #86163f;
+  --tool-baby: #f6c6d7;
+  --tool-ink: #24121b;
+  --tool-surface: #fffafc;
+  --tool-line: #d6a2b4;
+}
+
+body.tool-page {
+  --tool-accent: var(--tool-lava);
+  --tool-accent-strong: var(--tool-lava-deep);
+  --tool-accent-soft: var(--tool-baby);
+  --tool-surface: var(--mg-surface-strong, #fffafc);
+  --tool-ink: var(--mg-ink-strong, #24121b);
+}
+
+.tool-viewbar {
+  position: relative;
+  z-index: 320;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto 1rem;
+  padding: .55rem .65rem .55rem .85rem;
+  border: 1px solid color-mix(in srgb, var(--tool-accent) 34%, currentColor 18%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--tool-surface) 94%, var(--tool-accent-soft));
+  color: var(--tool-ink);
+  box-shadow: 0 14px 40px rgb(62 18 39 / 10%);
+}
+
+.tool-viewbar__title,
+.tool-viewbar__actions,
+.tool-viewbar__action {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tool-viewbar__title { gap: .45rem; font-size: .82rem; font-weight: 800; letter-spacing: .02em; }
+.tool-viewbar__title svg { width: 1rem; height: 1rem; color: var(--tool-accent-strong); }
+.tool-viewbar__actions { gap: .35rem; flex-wrap: wrap; justify-content: flex-end; }
+.tool-viewbar__action {
+  min-height: 42px;
+  gap: .35rem;
+  padding: .55rem .75rem;
+  border: 1px solid var(--tool-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--tool-ink);
+  font: inherit;
+  font-size: .76rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+.tool-viewbar__action:hover,
+.tool-viewbar__action:focus-visible,
+.tool-viewbar__action[aria-pressed="true"] {
+  border-color: var(--tool-accent-strong);
+  background: var(--tool-accent-strong);
+  color: #fff;
+}
+.tool-viewbar__action:active { transform: translateY(1px); }
+.tool-viewbar__action[hidden] { display: none !important; }
+.tool-viewbar__action svg { width: 1rem; height: 1rem; }
+.tool-viewbar__status { color: color-mix(in srgb, var(--tool-ink) 70%, transparent); font-size: .72rem; white-space: nowrap; }
+
+body.tool-page[data-tool-view="window"] .tool-viewbar__action[data-tool-view="window"],
+body.tool-page[data-tool-view="fullscreen"] .tool-viewbar__action[data-tool-view="fullscreen"] { background: var(--tool-accent-strong); color: #fff; }
+
+html:fullscreen body.tool-page {
+  min-height: 100dvh;
+  overflow: hidden;
+  background: #100a0f;
+}
+html:fullscreen body.tool-page .site-header,
+html:fullscreen body.tool-page .site-footer,
+html:fullscreen body.tool-page .breadcrumbs,
+html:fullscreen body.tool-page .top-banner,
+html:fullscreen body.tool-page .emergency-banner,
+html:fullscreen body.tool-page > .mobile-nav-panel,
+html:fullscreen body.tool-page > .mobile-nav-overlay,
+html:fullscreen body.tool-page > .skip-link { display: none !important; }
+html:fullscreen body.tool-page main,
+html:fullscreen body.tool-page .page-content,
+html:fullscreen body.tool-page .section { min-height: 100dvh; }
+html:fullscreen body.tool-page .tool-viewbar {
+  position: fixed;
+  inset: max(.75rem, env(safe-area-inset-top)) .75rem auto auto;
+  width: auto;
+  margin: 0;
+  background: rgb(20 10 16 / 82%);
+  color: #fff7fa;
+  border-color: rgb(255 190 210 / 42%);
+  box-shadow: 0 16px 50px rgb(0 0 0 / 28%);
+}
+html:fullscreen body.tool-page .tool-viewbar__status { color: #ffd7e3; }
+html:fullscreen body.tool-page .tool-viewbar__title { display: none; }
+html:fullscreen body.tool-page .tool-viewbar__action[data-tool-view="window"],
+html:fullscreen body.tool-page .tool-viewbar__action[data-tool-view="fullscreen"] { display: none; }
+html:fullscreen body.tool-page .tool-viewbar__action[data-tool-view="exit"] { display: inline-flex !important; }
+
+/* The compact tools become a full, calm workspace rather than a narrow card. */
+body.tool-page #breath-app,
+body.tool-page .tool-card,
+body.tool-page .horizon-shell,
+body.tool-page .tool-section {
+  border: 1px solid color-mix(in srgb, var(--tool-accent) 24%, #fff 20%);
+  box-shadow: 0 22px 60px rgb(52 13 35 / 16%);
+}
+body.tool-page #breath-app { width: min(720px, calc(100% - 2rem)); min-height: min(680px, 72dvh); height: auto; }
+body.tool-page #breath-app .view { width: min(86%, 520px); }
+body.tool-page .tool-card { width: min(980px, 100%); margin-inline: auto; }
+
+@media (max-width: 640px) {
+  .tool-viewbar { width: min(100% - 1rem, 1180px); margin-bottom: .65rem; border-radius: 1.2rem; align-items: stretch; flex-wrap: wrap; }
+  .tool-viewbar__title { flex: 1 0 100%; }
+  .tool-viewbar__actions { width: 100%; justify-content: stretch; }
+  .tool-viewbar__action { flex: 1 1 0; justify-content: center; }
+  .tool-viewbar__status { flex: 1 0 100%; }
+  body.tool-page #breath-app { width: min(100% - 1rem, 720px); min-height: 620px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-viewbar { animation: none !important; }
+  .tool-viewbar__action { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .tool-viewbar { border: 2px solid ButtonText; background: Canvas; color: CanvasText; box-shadow: none; }
+  .tool-viewbar__action { border-color: ButtonText; color: ButtonText; }
+  .tool-viewbar__action:focus-visible { outline: 3px solid Highlight; }
+}

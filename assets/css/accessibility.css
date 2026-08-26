@@ -1,0 +1,93 @@
+/* Final accessibility layer. Loaded after page-specific styles so legacy rules cannot lower contrast. */
+:root {
+  --access-ink: #24131a;
+  --access-muted: #4b3640;
+  --access-surface: #ffffff;
+  --access-soft: #fff1f4;
+  --access-border: #b88e9c;
+  --access-primary: #8f123f;
+  --access-primary-hover: #6f0d31;
+  --access-on-primary: #ffffff;
+}
+body { background: var(--access-surface) !important; color: var(--access-ink) !important; }
+body p, body li, body label, body small, body figcaption, body dt, body dd { color: var(--access-muted) !important; }
+body h1, body h2, body h3, body h4, body h5, body h6 { color: var(--access-ink) !important; }
+body a { color: var(--access-primary) !important; }
+body a:hover, body a:focus-visible { color: var(--access-primary-hover) !important; }
+body button, body .btn, body .button, body .button-primary, body .button-secondary, body .btn-primary, body .btn--primary, body .cta-button, body .mobile-book-btn { background: var(--access-primary) !important; background-image: none !important; border-color: var(--access-primary) !important; color: var(--access-on-primary) !important; text-shadow: none !important; }
+body button:hover, body .btn:hover, body .button:hover, body .button-primary:hover, body .button-secondary:hover, body .btn-primary:hover, body .btn--primary:hover, body .cta-button:hover, body .mobile-book-btn:hover { background: var(--access-primary-hover) !important; border-color: var(--access-primary-hover) !important; color: #ffffff !important; }
+body .card, body .service-card, body .feature-card, body .condition-card, body .price-card, body .contact-card, body .testimonial-card, body .resource-card, body .article-card, body .tool-card, body .notice, body .notice-box, body .panel, body .surface, body .surface-soft, body .legal-content, body .form-card, body .contact-form, body .accordion-item, body .link-preview-card { background: var(--access-surface) !important; color: var(--access-ink) !important; border-color: var(--access-border) !important; }
+body .card p, body .service-card p, body .feature-card p, body .condition-card p, body .price-card p, body .contact-card p, body .testimonial-card p, body .resource-card p, body .article-card p, body .tool-card p, body .notice p, body .panel p, body .surface p, body .legal-content p { color: var(--access-muted) !important; }
+body input, body select, body textarea { background: #ffffff !important; color: var(--access-ink) !important; border: 1px solid var(--access-border) !important; }
+body input::placeholder, body textarea::placeholder { color: #5d4750 !important; opacity: 1; }
+body :focus-visible { outline: 3px solid #9f1239 !important; outline-offset: 3px; }
+@media (prefers-color-scheme: dark) {
+  :root { --access-ink: #fff8fa; --access-muted: #f0dce3; --access-surface: #2c1a22; --access-soft: #40232e; --access-border: #b77b8e; --access-primary: #ffb4ca; --access-primary-hover: #ffd3df; --access-on-primary: #2b0d19; }
+  body { background: #1d1217 !important; color: var(--access-ink) !important; }
+  body p, body li, body label, body small, body figcaption, body dt, body dd { color: var(--access-muted) !important; }
+  body h1, body h2, body h3, body h4, body h5, body h6 { color: var(--access-ink) !important; }
+  body a { color: #ffb4ca !important; }
+  body a:hover, body a:focus-visible { color: #ffd3df !important; }
+  body button, body .btn, body .button, body .button-primary, body .button-secondary, body .btn-primary, body .btn--primary, body .cta-button, body .mobile-book-btn { background: var(--access-primary) !important; background-image: none !important; border-color: var(--access-primary) !important; color: var(--access-on-primary) !important; }
+  body button:hover, body .btn:hover, body .button:hover, body .button-primary:hover, body .button-secondary:hover, body .btn-primary:hover, body .btn--primary:hover, body .cta-button:hover, body .mobile-book-btn:hover { background: var(--access-primary-hover) !important; border-color: var(--access-primary-hover) !important; color: #2b0d19 !important; }
+  body .card, body .service-card, body .feature-card, body .condition-card, body .price-card, body .contact-card, body .testimonial-card, body .resource-card, body .article-card, body .tool-card, body .notice, body .notice-box, body .panel, body .surface, body .surface-soft, body .legal-content, body .form-card, body .contact-form, body .accordion-item, body .link-preview-card { background: var(--access-surface) !important; color: var(--access-ink) !important; border-color: var(--access-border) !important; }
+  body .card p, body .service-card p, body .feature-card p, body .condition-card p, body .price-card p, body .contact-card p, body .testimonial-card p, body .resource-card p, body .article-card p, body .tool-card p, body .notice p, body .panel p, body .surface p, body .legal-content p { color: var(--access-muted) !important; }
+  body input, body select, body textarea { background: #24161c !important; color: var(--access-ink) !important; border-color: var(--access-border) !important; }
+  body input::placeholder, body textarea::placeholder { color: #e6c4cf !important; }
+  body :focus-visible { outline-color: #ffd3df !important; }
+}
+
+/* Keep immersive canvas tools inside normal document flow so chrome never overlaps the artwork. */
+body:has(#riverCanvas), body:has(#ui-canvas) { display: block !important; width: auto !important; min-height: 100dvh; height: auto !important; overflow-x: hidden !important; overflow-y: auto !important; }
+body:has(#riverCanvas) main, body:has(#ui-canvas) main { position: relative !important; min-height: 100dvh; overflow: hidden; background: #080b12; }
+body:has(#riverCanvas) #riverCanvas, body:has(#ui-canvas) canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+body:has(#riverCanvas) #ui, body:has(#ui-canvas) .tapper-container { position: absolute; inset: 0; min-height: 100%; }
+body:has(#ui-canvas) .tapper-container { height: 100%; }
+
+/* Explicit theme selection wins over the operating-system preference. Keep
+   these tokens at the end because this file is the final accessibility layer
+   loaded after page-specific styles. */
+html[data-theme="light"] {
+  --access-ink: #24131a;
+  --access-muted: #4b3640;
+  --access-surface: #ffffff;
+  --access-soft: #fff1f4;
+  --access-border: #b88e9c;
+  --access-primary: #8f123f;
+  --access-primary-hover: #6f0d31;
+  --access-on-primary: #ffffff;
+}
+html[data-theme="dark"] {
+  --access-ink: #fff8fa;
+  --access-muted: #f0dce3;
+  --access-surface: #2c1a22;
+  --access-soft: #40232e;
+  --access-border: #b77b8e;
+  --access-primary: #ffb4ca;
+  --access-primary-hover: #ffd3df;
+  --access-on-primary: #2b0d19;
+}
+html[data-theme="light"] body { background: #fffaf9 !important; }
+html[data-theme="dark"] body { background: #1d1217 !important; }
+html[data-theme="light"] body .site-header { background: #fffaf9 !important; border-color: #b88e9c !important; }
+html[data-theme="dark"] body .site-header { background: #1d1217 !important; border-color: #b77b8e !important; }
+html[data-theme="light"] body .mobile-nav-panel { background: #ffffff !important; }
+html[data-theme="dark"] body .mobile-nav-panel { background: #2c1a22 !important; }
+html[data-theme="light"] body .eyebrow,
+html[data-theme="light"] body .hero-badge,
+html[data-theme="light"] body .section-badge,
+html[data-theme="light"] body .tag,
+html[data-theme="light"] body .filter-chip {
+  color: #7a1038 !important;
+  background: #fff1f4 !important;
+  border-color: #b88e9c !important;
+}
+html[data-theme="dark"] body .eyebrow,
+html[data-theme="dark"] body .hero-badge,
+html[data-theme="dark"] body .section-badge,
+html[data-theme="dark"] body .tag,
+html[data-theme="dark"] body .filter-chip {
+  color: #ffd3df !important;
+  background: #40232e !important;
+  border-color: #b77b8e !important;
+}

@@ -287,7 +287,7 @@ const results = fuse.search("anxiety");
 
 ## Usage Guidelines
 
-**⚠️ Critical Update (July 2026):** Module scripts must NOT use `defer` attribute. Using `defer` with `type="module"` causes race conditions and loading errors like "Ky library not loaded" and "detectOverflow undefined".
+**[WARNING] Critical Update (July 2026):** Module scripts must NOT use `defer` attribute. Using `defer` with `type="module"` causes race conditions and loading errors like "Ky library not loaded" and "detectOverflow undefined".
 
 1. **Module-based libs:** Use `type="module"` WITHOUT defer
 
@@ -299,7 +299,7 @@ const results = fuse.search("anxiety");
 
    <!-- WRONG: Don't do this -->
    <script src="main.js" type="module" defer></script>
-   ❌
+   [ERROR]
    ```
 
 2. **UMD libs:** No defer needed when loaded at body end (Lucide, Floating UI, Splide)
@@ -336,7 +336,7 @@ const results = fuse.search("anxiety");
 
 ## Library Stack Component
 
-**⚠️ Deprecated (July 2026):** The library-stack.html component is no longer used. Scripts are now loaded directly in each HTML file's `<head>` section with correct dependency order.
+**[WARNING] Deprecated (July 2026):** The library-stack.html component is no longer used. Scripts are now loaded directly in each HTML file's `<head>` section with correct dependency order.
 
 Location: `/assets/components/library-stack.html` (legacy - do not use)
 

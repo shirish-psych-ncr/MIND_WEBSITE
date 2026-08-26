@@ -1,1 +1,18 @@
-(async()=>{const e="pages/adult/",t=`${e}manifest.json`;try{const o=await fetch(t,{method:"GET",headers:{"Cache-Control":"no-cache"}});if(!o.ok)throw new Error(`HTTP error! status: ${o.status}`);const s=await o.json();window.ADULT_BLOG_CONFIG=Object.freeze({sourceDir:e,posts:Object.freeze(s.files.map(t=>`${e}${t}`)),pinned:Object.freeze(s.pinned||[]),mostSearched:Object.freeze(s.mostSearched||[]),symptoms:Object.freeze(s.symptoms||[]),clusters:Object.freeze(s.clusters||[])}),window.dispatchEvent(new CustomEvent("adultBlogConfigLoaded"))}catch(e){}})();
+(() => {
+  const manifestUrl = "/blog/pages/adult/manifest.json";
+  const sourceDir = "/blog/pages/adult/";
+  fetch(manifestUrl, { cache: "no-store" })
+    .then((response) => { if (!response.ok) throw new Error(`Adult blog manifest: ${response.status}`); return response.json(); })
+    .then((manifest) => {
+      window.BLOG_DISCOVERY_CONFIG = Object.freeze({
+        sourceDir,
+        posts: Object.freeze((manifest.files || []).map((file) => `${sourceDir}${file}`)),
+        pinned: Object.freeze((manifest.pinned || []).map((file) => `${sourceDir}${file}`)),
+        mostSearched: Object.freeze((manifest.mostSearched || []).map((file) => `${sourceDir}${file}`)),
+        symptoms: Object.freeze(manifest.symptoms || []),
+        clusters: Object.freeze(manifest.clusters || [])
+      });
+      window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
+    })
+    .catch((error) => { window.BLOG_DISCOVERY_CONFIG = { error: true, message: error.message }; window.dispatchEvent(new CustomEvent("blogConfigLoaded")); });
+})();

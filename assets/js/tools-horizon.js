@@ -1,1 +1,56 @@
-(()=>{function e(){const e=document.getElementById("horizon-setup"),t=document.getElementById("horizon-active"),n=document.getElementById("horizon-start-btn"),o=document.getElementById("horizon-stop-btn"),d=document.getElementById("duration-selector"),r=document.getElementById("horizon-timer");if(!(e&&t&&n&&o))return;let i=null,c=null,l=6e4,a=50,s=1,m=0;const u=t.querySelector(".track-line"),h=document.getElementById("horizon-dot");function f(e){if(!c)return;const t=e-c,n=Math.max(0,l-t),d=Math.floor(n/6e4),u=Math.floor(n%6e4/1e3);if(r.textContent=(d>0?`${d}:`:"")+String(u).padStart(2,"0"),t>=l)return o.click();const y=e-m||16;m=e;a+=.02*s*(y/16),a>95?(a=95,s=-1):a<5&&(a=5,s=1);const E=10*Math.sin(.001*e);h.style.left=`${a}%`,h.style.top=`calc(50% + ${E}px)`,i=requestAnimationFrame(f)}u&&h?(n.addEventListener("click",()=>{l=1e3*parseInt(d.value,10),e.classList.add("hidden"),t.classList.remove("hidden"),c=performance.now(),m=c,a=50,s=1,f(performance.now())}),o.addEventListener("click",()=>{i&&(cancelAnimationFrame(i),i=null),t.classList.add("hidden"),e.classList.remove("hidden"),r.textContent=""})):}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e()})();
+(() => {
+  function init() {
+    const setup = document.getElementById("horizon-setup");
+    const active = document.getElementById("horizon-active");
+    const start = document.getElementById("horizon-start-btn");
+    const stop = document.getElementById("horizon-stop-btn");
+    const duration = document.getElementById("duration-selector");
+    const timer = document.getElementById("horizon-timer");
+    const dot = document.getElementById("horizon-dot");
+    if (!setup || !active || !start || !stop || !duration || !timer || !dot) return;
+
+    let frame = null;
+    let startedAt = 0;
+    let durationMs = 60000;
+    let position = 50;
+    let direction = 1;
+
+    function animate(now) {
+      const elapsed = now - startedAt;
+      const remaining = Math.max(0, durationMs - elapsed);
+      const minutes = Math.floor(remaining / 60000);
+      const seconds = Math.floor((remaining % 60000) / 1000);
+      timer.textContent = `${minutes > 0 ? `${minutes}:` : ""}${String(seconds).padStart(2, "0")}`;
+      if (elapsed >= durationMs) {
+        stop.click();
+        return;
+      }
+      position += direction * 0.02;
+      if (position >= 95 || position <= 5) direction *= -1;
+      dot.style.left = `${position}%`;
+      dot.style.top = `calc(50% + ${10 * Math.sin(now / 1000)}px)`;
+      frame = requestAnimationFrame(animate);
+    }
+
+    start.addEventListener("click", () => {
+      durationMs = 1000 * Number.parseInt(duration.value, 10);
+      setup.classList.add("hidden");
+      active.classList.remove("hidden");
+      startedAt = performance.now();
+      position = 50;
+      direction = 1;
+      frame = requestAnimationFrame(animate);
+    });
+
+    stop.addEventListener("click", () => {
+      if (frame !== null) cancelAnimationFrame(frame);
+      frame = null;
+      active.classList.add("hidden");
+      setup.classList.remove("hidden");
+      timer.textContent = "";
+    });
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();

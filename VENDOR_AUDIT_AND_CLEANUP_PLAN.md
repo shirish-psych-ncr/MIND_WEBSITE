@@ -39,12 +39,12 @@ Actually 17 files are common to both directories. The diff showed:
 
 ### Critical Issues Identified
 1. **Duplicate Storage**: 17 libraries stored twice = ~800KB wasted bandwidth
-2. **Version Inconsistency**: 
+2. **Version Inconsistency**:
    - `anime.min.js`: 116K (lib) vs 16K (vendor) - Likely different versions
    - `lucide.min.js`: 350K (lib) vs 402K (vendor) - Different icon sets/versions
    - `navigo.min.js`: 20K (lib) vs 11K (vendor) - Major version difference
 3. **Split References**: Some pages load from `/lib/`, others from `/vendor/`, preventing browser caching benefits
-4. **Orphaned Files**: 
+4. **Orphaned Files**:
    - `petite-vue.min.js` - Not referenced in any HTML (grep returned 0 matches)
    - `assets/js/lib/README.md` - Documentation only, no code impact
 

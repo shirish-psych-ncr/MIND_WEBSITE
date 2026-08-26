@@ -1,1 +1,32 @@
-const app={timer:null,breath:null,dur:1,tech:"box",running:!1,patterns:{box:[{p:"Inhale",t:4,s:2.2,c:"#38bdf8"},{p:"Hold",t:4,s:2.2,c:"#4ade80"},{p:"Exhale",t:4,s:1,c:"#fb7185"},{p:"Hold",t:4,s:1,c:"#94a3b8"}],relax:[{p:"Inhale",t:4,s:2.2,c:"#38bdf8"},{p:"Hold",t:7,s:2.2,c:"#4ade80"},{p:"Exhale",t:8,s:1,c:"#fb7185"}],calm:[{p:"Inhale",t:7,s:2.2,c:"#38bdf8"},{p:"Exhale",t:11,s:1,c:"#fb7185"}]},init(){document.querySelectorAll(".chip").forEach(t=>{t.onclick=t=>{document.querySelectorAll(".chip").forEach(t=>t.classList.remove("active")),t.target.classList.add("active"),this.dur=t.target.dataset.m}}),document.getElementById("start-btn").onclick=()=>this.start(),document.getElementById("stop-btn").onclick=()=>this.finish(),document.getElementById("reset-btn").onclick=()=>this.reset()},start(){this.running=!0,this.tech=document.getElementById("tech-sel").value;let t=60*this.dur;document.getElementById("menu").classList.add("hidden"),document.getElementById("session").classList.remove("hidden"),this.timer=setInterval(()=>{t--;const e=Math.floor(t/60),n=t%60;document.getElementById("timer").innerText=`${e}:${n<10?`0${n}`:n}`,t<=0&&this.finish()},1e3),this.loop(0)},loop(t){if(!this.running)return;const e=this.patterns[this.tech][t],n=document.getElementById("circle");document.getElementById("label").innerText=e.p,n.style.transition=`all ${e.t}s linear`,n.style.transform=`scale(${e.s})`,n.style.background=e.c,this.breath=setTimeout(()=>{this.loop((t+1)%this.patterns[this.tech].length)},1e3*e.t)},finish(){this.running=!1,clearInterval(this.timer),clearTimeout(this.breath),document.getElementById("session").classList.add("hidden"),document.getElementById("end").classList.remove("hidden")},reset(){document.getElementById("end").classList.add("hidden"),document.getElementById("menu").classList.remove("hidden")}};app.init();
+(() => {
+  const state = { timer: null, breath: null, duration: 1, technique: "box", running: false, patterns: {
+    box: [{ label: "Inhale", seconds: 4, scale: 2.2, color: "#38bdf8" }, { label: "Hold", seconds: 4, scale: 2.2, color: "#4ade80" }, { label: "Exhale", seconds: 4, scale: 1, color: "#fb7185" }, { label: "Hold", seconds: 4, scale: 1, color: "#94a3b8" }],
+    relax: [{ label: "Inhale", seconds: 4, scale: 2.2, color: "#38bdf8" }, { label: "Hold", seconds: 7, scale: 2.2, color: "#4ade80" }, { label: "Exhale", seconds: 8, scale: 1, color: "#fb7185" }],
+    calm: [{ label: "Inhale", seconds: 7, scale: 2.2, color: "#38bdf8" }, { label: "Exhale", seconds: 11, scale: 1, color: "#fb7185" }]
+  }};
+  const get = (id) => document.getElementById(id);
+  const show = (id, visible) => get(id)?.classList.toggle("hidden", !visible);
+  function finish() { state.running = false; clearInterval(state.timer); clearTimeout(state.breath); get("breath-app")?.classList.remove("is-session"); show("session", false); show("end", true); }
+  function loop(index) {
+    if (!state.running) return;
+    const phase = state.patterns[state.technique][index]; const circle = get("circle"); const label = get("label");
+    if (!phase || !circle || !label) return finish();
+    label.textContent = phase.label; circle.style.transition = `all ${phase.seconds}s linear`; circle.style.transform = `scale(${phase.scale})`; circle.style.background = phase.color;
+    state.breath = setTimeout(() => loop((index + 1) % state.patterns[state.technique].length), phase.seconds * 1000);
+  }
+  function start() {
+    if (state.running) return;
+    state.running = true; state.technique = get("tech-sel")?.value || "box"; let remaining = 60 * state.duration;
+    show("menu", false); show("session", true); get("breath-app")?.classList.add("is-session");
+    const timerLabel = get("timer"); const tick = () => { const minutes = Math.floor(remaining / 60); const seconds = remaining % 60; if (timerLabel) timerLabel.textContent = `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`; if (remaining <= 0) finish(); remaining -= 1; };
+    tick(); state.timer = setInterval(tick, 1000); loop(0);
+  }
+  function reset() { state.running = false; clearInterval(state.timer); clearTimeout(state.breath); get("breath-app")?.classList.remove("is-session"); show("end", false); show("session", false); show("menu", true); }
+  function init() {
+    const startButton = get("start-btn"); if (!startButton || startButton.dataset.bound === "true") return;
+    startButton.dataset.bound = "true"; startButton.addEventListener("click", start); get("stop-btn")?.addEventListener("click", finish); get("reset-btn")?.addEventListener("click", reset);
+    document.querySelectorAll(".chip").forEach((chip) => chip.addEventListener("click", () => { document.querySelectorAll(".chip").forEach((item) => item.classList.remove("active")); chip.classList.add("active"); state.duration = Number(chip.dataset.m) || 1; }));
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true }); else init();
+  window.addEventListener("mindgrace:chrome-ready", init);
+})();

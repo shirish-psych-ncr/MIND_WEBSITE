@@ -184,7 +184,7 @@ Every page must load these files in **exact order**:
 
 All CSS modules use design tokens from `base.css`. Never hardcode values like:
 
-❌ **Don't do this:**
+[ERROR] **Don't do this:**
 
 ```css
 .card {
@@ -194,7 +194,7 @@ All CSS modules use design tokens from `base.css`. Never hardcode values like:
 }
 ```
 
-✅ **Do this:**
+[OK] **Do this:**
 
 ```css
 .card {

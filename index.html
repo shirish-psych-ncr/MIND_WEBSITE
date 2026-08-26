@@ -1,528 +1,177 @@
 <!doctype html>
 <html lang="en-IN" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#db2777">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#831843">
-    <meta name="color-scheme" content="light dark">
-    <meta name="author" content="Mind Grace Neuropsychiatric Clinic">
-    <meta name="publisher" content="Mind Grace Neuropsychiatric Clinic">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="generator" content="Hand-coded HTML5 2026 Standards">
-
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/svg+xml" href="assets/images/Mind_Grace_Clinic_Logo_Pink.svg">
-    <link rel="apple-touch-icon" href="assets/images/Mind_Grace_Clinic_Logo.webp">
-
-    <!-- Primary Meta Tags -->
-    <title>You Deserve Care | Mind Grace Neuropsychiatric Clinic — Psychiatrist in Greater Noida</title>
-    <meta name="title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic">
-    <meta name="description" content="You matter. Consult Dr Anita Sharma at Mind Grace Neuropsychiatric Clinic, Greater Noida for anxiety, depression, ADHD, sleep concerns, child development, autism assessment, and psychiatric care.">
-    <meta name="keywords" content="psychiatrist, mental health, anxiety, depression, ADHD, therapy, counseling, Greater Noida, child psychology, autism assessment">
-
-    <!-- SEO & Canonical -->
-    <link rel="canonical" href="https:/mindgracencr.in/">
-    <link rel="alternate" hreflang="en-IN" href="https:/mindgracencr.in/">
-    <link rel="alternate" hreflang="x-default" href="https:/mindgracencr.in/">
-    <link rel="sitemap" href="/sitemap.xml">
-
-    <!-- Preconnect to External Origins -->
-    <link rel="preconnect" href="https:/fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https:/fonts.gstatic.com" crossorigin>
-
-    <!-- OpenGraph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https:/mindgracencr.in/">
-    <meta property="og:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic">
-    <meta property="og:description" content="Mental Health care in Greater Noida for anxiety, depression, ADHD, child development & more.">
-    <meta property="og:image" content="https:/mindgracencr.in/assets/images/og-image.webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="675">
-    <meta property="og:image:alt" content="Mind Grace Neuropsychiatric Clinic - Compassionate Mental Health Care">
-    <meta property="og:image:type" content="image/webp">
-    <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic">
-    <meta property="og:locale" content="en_IN">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https:/mindgracencr.in/">
-    <meta name="twitter:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic">
-    <meta name="twitter:description" content="Mental Health care in Greater Noida for anxiety, depression, ADHD, child development & more.">
-    <meta name="twitter:image" content="https:/mindgracencr.in/assets/images/og-image.webp">
-    <meta name="twitter:image:alt" content="Mind Grace Neuropsychiatric Clinic - Calming pink tones representing mental wellness">
-    <meta name="twitter:creator" content="@mindgraceclinic">
-    <meta name="twitter:site" content="@mindgraceclinic">
-
-    <!-- Security Headers -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:/fonts.googleapis.com; style-src 'self' 'unsafe-inline' https:/fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https:/fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none';">
-
-    <!-- Critical Fonts (Preload) -->
-    <link rel="preload" as="style" href="https:/fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-    <link rel="stylesheet" href="https:/fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-      <link rel="stylesheet" href="https:/fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-    </noscript>
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/utilities.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-
-    <!-- Critical Inline CSS for Navigation & Above-the-fold (matches base.css) -->
-    <style>
-      /* Burger Button - visible on ALL screens with pink gradient bars */
-      .burger-btn{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:48px;height:48px;padding:8px;background:oklch(100% 0 0 / 0.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid oklch(52% 0.22 340 / 0.2);border-radius:var(--radius-lg);cursor:pointer;z-index:1001;touch-action:manipulation;transition:all var(--duration-base) var(--ease-out);min-height:var(--touch-target-comfortable);min-width:var(--touch-target-comfortable)}.burger-btn:hover,.burger-btn:focus-visible{background:oklch(52% 0.22 340 / 0.1);border-color:var(--color-primary);box-shadow:0 4px 12px oklch(52% 0.22 340 / 0.2);outline:none}.burger-btn span{display:block;width:24px;height:2px;background:linear-gradient(90deg,var(--pink-500),var(--pink-700));border-radius:2px;transition:all 0.3s var(--ease-out);transform-origin:left center;box-shadow:0 1px 3px oklch(52% 0.22 340 / 0.3)}.burger-btn--active{background:oklch(52% 0.22 340 / 0.15);border-color:var(--color-primary)}.burger-btn--active span:nth-child(1){transform:rotate(45deg) translate(4px,4px);width:24px;background:linear-gradient(90deg,var(--pink-600),var(--rose-500))}.burger-btn--active span:nth-child(2){opacity:0;transform:translateX(-10px);width:0}.burger-btn--active span:nth-child(3){transform:rotate(-45deg) translate(4px,-5px);width:24px;background:linear-gradient(90deg,var(--rose-500),var(--pink-600))}@media(prefers-color-scheme:dark){.burger-btn{background:oklch(20% 0.08 340 / 0.5);border-color:oklch(30% 0.08 340 / 0.3)}.burger-btn:hover,.burger-btn:focus-visible{background:oklch(25% 0.08 340 / 0.8)}.burger-btn--active{background:oklch(30% 0.1 340 / 0.6)}}
-
-      /* Sleek Compact Dropdown - Opens BELOW header (not behind) */
-      .nav-dropdown{position:absolute;top:var(--header-height);right:clamp(1rem,5vw,2rem);width:calc(100% - clamp(2rem,10vw,4rem));max-width:420px;background:oklch(100% 0 0 / 0.95);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid var(--color-border-primary);border-radius:var(--radius-lg);box-shadow:var(--shadow-xl),0 0 0 1px oklch(52% 0.22 340 / 0.1);transform-origin:top right;transform:translateY(-12px) scale(0.97);opacity:0;visibility:hidden;transition:opacity 0.3s var(--ease-out),transform 0.3s var(--ease-out),visibility 0.3s;padding:var(--space-5);z-index:999}
-      @media(prefers-color-scheme:dark){.nav-dropdown{background:oklch(15% 0.05 340 / 0.96);border-color:oklch(30% 0.08 340)}}
-      .nav-dropdown--active{transform:translateY(0) scale(1);opacity:1;visibility:visible}
-      .nav-dropdown ul{list-style:none;display:flex;flex-direction:column;gap:var(--space-2)}
-      .nav-dropdown a{text-decoration:none;color:var(--color-text-secondary);font-size:var(--font-size-base);font-weight:500;padding:var(--space-3) var(--space-4);border-radius:var(--radius-md);transition:all 0.2s var(--ease-out);position:relative;overflow:hidden;display:block}
-      @media(prefers-color-scheme:dark){.nav-dropdown a{color:var(--color-text-secondary)}}
-      .nav-dropdown a::after{content:'';position:absolute;bottom:var(--space-2);left:var(--space-4);width:0;height:2px;background:var(--gradient-pink);border-radius:var(--radius-full);transition:width 0.3s var(--ease-out)}
-      .nav-dropdown a:hover,.nav-dropdown a:focus-visible{color:var(--color-text-accent);background:var(--pink-100)}
-      @media(prefers-color-scheme:dark){.nav-dropdown a:hover,.nav-dropdown a:focus-visible{background:oklch(25% 0.08 340)}}
-      .nav-dropdown a:hover::after,.nav-dropdown a:focus-visible::after{width:calc(100% - var(--space-8))}
-      .nav-dropdown .btn--primary{background:var(--gradient-pink);color:#fff;padding:0.875rem 1.5rem;border-radius:var(--radius-full);text-align:center;font-weight:600;box-shadow:0 4px 12px oklch(340 0.2 0 / 0.3);transition:transform 0.2s,box-shadow 0.2s;margin-top:var(--space-3);display:inline-flex;align-items:center;justify-content:center;width:100%}
-      .nav-dropdown .btn--primary:hover,.nav-dropdown .btn--primary:focus-visible{transform:translateY(-2px);box-shadow:0 6px 16px oklch(340 0.25 0 / 0.4);outline:2px solid var(--color-primary);outline-offset:2px;color:#fff}
-      .nav-dropdown .btn--primary::after{display:none}
-
-      @media(max-width:600px){
-        .logo-tagline{display:none}
-        .logo-text{font-size:clamp(0.9rem,3vw,1.2rem)}
-        .burger-btn{width:44px;height:44px}
-        .burger-btn span{width:20px}
-        .burger-btn--active span:nth-child(1),.burger-btn--active span:nth-child(3){width:20px}
-      }
-
-      /* Skip Link */
-      .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--pink-600);color:#fff;padding:0.75rem 1.5rem;text-decoration:none;font-weight:600;z-index:10001;border-radius:var(--radius-gentle);transition:top 0.3s}
-      .skip-link:focus{top:1rem}
-
-      @media(prefers-reduced-motion:reduce){
-        *{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
-        .ambient-orb{animation:none}
-      }
-    </style>
-
-    <link rel="icon" type="image/svg+xml" href="assets/images/Mind_Grace_Clinic_Logo_Pink.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#d81b60">
+  <meta name="color-scheme" content="light dark">
+  <meta name="author" content="Mind Grace Neuropsychiatric Clinic">
+  <meta name="description" content="Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.">
+  <meta property="og:title" content="Mind Grace Neuropsychiatric Clinic | Mental Health Care in Greater Noida">
+  <meta property="og:description" content="Warm, evidence-informed psychiatric and child-development care in Greater Noida, with clear next steps for families and adults.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mindgracencr.in/">
+  <meta property="og:image" content="https://mindgracencr.in/assets/images/og-image.webp">
+  <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mind Grace Neuropsychiatric Clinic | Greater Noida">
+  <meta name="twitter:description" content="Warm, evidence-informed mental health care for adults, children, adolescents, and families.">
+  <meta name="twitter:image" content="https://mindgracencr.in/assets/images/og-image.webp">
+  <link rel="canonical" href="https://mindgracencr.in/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/utilities.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/breadcrumbs.css">
+  <link rel="stylesheet" href="/assets/css/inspiration.css">
+  <script src="/assets/js/visitor-friendly.js?v=chrome12" defer></script>
+<script src="/assets/js/icon-init.js" defer></script>
+  <script type="module" src="/assets/js/main.js"></script>
+  <title>Mind Grace Neuropsychiatric Clinic | Compassionate Care in Greater Noida</title>
+  <style>
+    .home-hero { min-height: min(780px, 86vh); display: grid; align-items: center; }
+    .home-hero .hero-content { width: min(1180px, 92vw); margin-inline: auto; }
+    .home-hero .hero-copy { max-width: 620px; }
+    .home-hero .hero-copy h1 { font-size: clamp(2.7rem, 6vw, 5.8rem); }
+    .home-hero .hero-copy h1 span { color: var(--rose-serenity-pink); }
+    .home-hero .hero-subtitle { max-width: 56ch; font-size: clamp(1.05rem, 1.5vw, 1.25rem); }
+    .home-hero .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.75rem; }
+    .home-hero .hero-trust { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 2rem; color: var(--rose-serenity-muted); font-size: .9rem; }
+    .home-hero .hero-trust span { display: inline-flex; align-items: center; gap: .45rem; }
+    .home-hero .hero-trust svg { width: 1rem; color: var(--rose-serenity-pink); }
+    .home-hero .hero-visual { position: relative; width: min(520px, 88vw); margin-inline: auto; }
+    .home-hero .hero-portrait { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 46% 46% 18% 18%; border: 8px solid rgba(255,255,255,.84); box-shadow: 0 24px 70px rgba(216,27,96,.18); }
+    .home-hero .hero-orb { position: absolute; inset: 8% -7% auto auto; width: 70%; aspect-ratio: 1; border-radius: 50%; background: rgba(255,178,191,.34); filter: blur(2px); z-index: -1; }
+    .home-hero .hero-note { position: absolute; left: -2rem; bottom: 1.5rem; display: flex; align-items: center; gap: .75rem; max-width: 230px; padding: 1rem; border: 1px solid rgba(255,255,255,.7); border-radius: 1rem; background: rgba(255,255,255,.82); box-shadow: 0 16px 34px rgba(216,27,96,.12); backdrop-filter: blur(14px); }
+    .home-hero .hero-note-icon { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; flex: 0 0 auto; border-radius: 50%; color: var(--rose-serenity-pink); background: var(--rose-serenity-blush); }
+    .home-hero .hero-note strong { display: block; color: var(--rose-serenity-ink); font-size: .9rem; }
+    .home-hero .hero-note small { color: var(--rose-serenity-muted); }
+    .home-quick-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; width: min(1100px, 92vw); margin: -2.5rem auto 0; position: relative; z-index: 2; }
+    .home-quick-link { display: flex; align-items: center; gap: .85rem; padding: 1.15rem 1.25rem; border: 1px solid var(--rose-serenity-line); border-radius: 1rem; background: rgba(255,255,255,.9); box-shadow: 0 12px 30px rgba(216,27,96,.08); color: var(--rose-serenity-ink); text-decoration: none; }
+    .home-quick-link:hover, .home-quick-link:focus-visible { color: var(--rose-serenity-pink); transform: translateY(-3px); }
+    .home-quick-link svg { color: var(--rose-serenity-pink); }
+    .home-section { padding-block: clamp(4.5rem, 9vw, 8rem); }
+    .home-section-heading { max-width: 700px; margin-bottom: 2.5rem; }
+    .home-section-heading h2 { font-size: clamp(2rem, 4vw, 3.6rem); }
+    .home-care-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .home-care-card { padding: clamp(1.5rem, 3vw, 2.25rem); }
+    .home-care-card .card-icon { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; margin-bottom: 1.25rem; border-radius: 1rem; background: var(--rose-serenity-blush); color: var(--rose-serenity-pink); }
+    .home-care-card .card-icon svg { width: 1.7rem; }
+    .home-care-card h3 { font-size: 1.35rem; margin-bottom: .7rem; }
+    .home-care-card p { min-height: 5rem; }
+    .home-care-card a { display: inline-flex; align-items: center; gap: .4rem; margin-top: 1.2rem; color: var(--rose-serenity-pink); font-weight: 700; text-decoration: none; }
+    .home-care-card a:hover { gap: .7rem; }
+    .home-path-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .home-path-card { padding: clamp(1.5rem, 4vw, 3rem); background: linear-gradient(135deg, rgba(255,255,255,.88), rgba(255,242,243,.75)); }
+    .home-path-card h3 { font-size: 1.7rem; }
+    .home-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; counter-reset: step; }
+    .home-step { position: relative; padding: 1.5rem; }
+    .home-step::before { counter-increment: step; content: counter(step, decimal-leading-zero); display: block; margin-bottom: 1.2rem; color: var(--rose-serenity-pink); font-family: var(--font-family-sans); font-size: 2rem; font-weight: 700; }
+    .home-cta { padding: clamp(2rem, 6vw, 5rem); text-align: center; background: linear-gradient(135deg, #fff0f3, #fffaf9); }
+    .home-cta h2 { max-width: 16ch; margin-inline: auto; font-size: clamp(2rem, 4vw, 3.4rem); }
+    .home-cta p { max-width: 50ch; margin: 1rem auto 1.5rem; }
+    @media (max-width: 800px) { .home-hero .hero-content, .home-quick-links { width: 100%; } .home-hero .hero-copy, .home-hero .hero-actions, .home-hero .hero-visual { min-width: 0; max-width: 100%; } .home-hero .hero-visual { width: 100%; margin-top: 2.5rem; } .home-hero .hero-portrait { display: block; max-width: 100%; } .home-hero .hero-note { left: .5rem; } .home-quick-links, .home-care-grid, .home-path-grid, .home-steps { grid-template-columns: 1fr; } .home-quick-links { margin-top: 1rem; } .home-care-card p { min-height: 0; } }
+  </style>
+<link rel="stylesheet" href="/assets/css/accessibility.css?v=theme4">
+<link rel="stylesheet" href="/assets/css/site-foundation.css?v=chrome5">
+<link rel="manifest" href="/site.webmanifest">
 </head>
-<body>
-    <div id="network-status" role="status" aria-live="polite" style="display:none"></div>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+<body data-design-system="rose-serenity">
+  <div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status-message"></span></div>
 
-    <!-- Ambient Background -->
-    <div class="ambient-orb ambient-orb--1"></div>
-    <div class="ambient-orb ambient-orb--2"></div>
-    <div class="ambient-orb ambient-orb--3"></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="emergency-banner" role="alert" aria-label="Emergency crisis support information">
+    <div class="emergency-banner__marquee"><div class="emergency-banner__inner">
+      <span class="emergency-banner__message"><span class="emergency-indicator" aria-hidden="true"></span>In a crisis? Get immediate help now.</span>
+      <span class="emergency-banner__message"><a href="/emergency.html">View emergency resources</a></span>
+    </div></div>
+  </div>
 
-    <!-- Emergency Banner -->
-    <div class="emergency-banner" role="alert" aria-label="Emergency crisis support information">
-        <div class="emergency-banner__marquee">
-            <div class="emergency-banner__inner">
-                <span class="emergency-banner__message">
-                    <span class="emergency-indicator" aria-hidden="true"></span>
-                    In a crisis? Get immediate help now.
-                </span>
-                <span class="emergency-banner__message"><a href="emergency.html">Click here for emergency resources</a></span>
-            </div>
-        </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-link" href="/index.html" aria-label="Mind Grace Neuropsychiatric Clinic home">
+        <img class="logo-img" src="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" fetchpriority="high">
+        <span><span class="logo-text">Mind Grace</span><span class="logo-tagline">Neuropsychiatric Clinic · Where you come first</span></span>
+      </a>
+      <button class="burger-btn" id="burgerMenuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDropdown"><span></span><span></span><span></span></button>
     </div>
+    <nav class="nav-dropdown" id="navDropdown" aria-label="Main navigation" inert>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="/index.html">Home</a></li>
+        <li><a class="nav-link" href="/about.html">About</a></li>
+        <li><a class="nav-link" href="/services.html">Services</a></li>
+        <li><a class="nav-link" href="/process.html">What to expect</a></li>
+        <li><a class="nav-link" href="/resources.html">Resources</a></li>
+        <li><a class="nav-link" href="/location.html">Location</a></li>
+        <li><a class="nav-link" href="/contact.html">Contact</a></li>
+        <li><a class="btn btn--primary" href="/book.html">Book an appointment</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Header -->
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="index.html" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Home">
-                <img loading="eager" decoding="async" src="assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60" fetchpriority="high">
-                <div>
-                    <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
-                    <div class="logo-tagline">Where You Come First</div>
-                </div>
-            </a>
-
-            <button class="burger-btn" aria-label="Toggle menu" aria-expanded="false" id="burgerMenuBtn">
-                <span></span><span></span><span></span>
-            </button>
+  <main id="main-content" tabindex="-1">
+    <section class="hero home-hero" aria-labelledby="home-title">
+      <div class="hero-content grid-container">
+        <div class="hero-copy">
+          <span class="hero-badge"><i data-lucide="sparkles" aria-hidden="true"></i> Compassionate care</span>
+          <h1 id="home-title">Clarity and peace of <span>mind begin here.</span></h1>
+          <p class="hero-subtitle">Expert neuropsychiatric care tailored to your unique journey. We blend clinical precision with human warmth to support your mental well-being.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/book.html">Book an appointment <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            <a class="btn btn-secondary" href="/services.html">Explore our services</a>
+          </div>
+          <div class="hero-trust" role="group" aria-label="Clinic commitments">
+            <span><i data-lucide="lock-keyhole" aria-hidden="true"></i> Confidential</span><span><i data-lucide="badge-check" aria-hidden="true"></i> Evidence-based</span><span><i data-lucide="heart-handshake" aria-hidden="true"></i> Personalised</span>
+          </div>
+          <p class="hero-contact">Prefer to ask first? <a href="tel:+919667863295">Call +91 96678 63295</a> or <a href="https://wa.me/919667863295" target="_blank" rel="noopener">WhatsApp the clinic</a>.</p>
         </div>
-
-        <!-- Dropdown Navigation - Opens below header -->
-        <nav class="nav-dropdown" id="navDropdown" aria-label="Main navigation">
-            <ul class="nav-list">
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="process.html" class="nav-link">Process</a></li>
-                <li><a href="resources.html" class="nav-link">Resources</a></li>
-                <li><a href="location.html" class="nav-link">Location</a></li>
-                <li><a href="book.html" class="btn btn--primary">Book Now</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero section" aria-labelledby="hero-title">
-            <div class="container hero-content">
-                <div class="hero-text fade-in-up">
-                    <span class="hero-badge" style="background:linear-gradient(135deg,var(--pink-100),var(--rose-100));border-color:oklch(52% 0.22 340 / 0.2);">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        You Matter Here
-                    </span>
-                    <h1 id="hero-title">
-                        Your Mental Health<br>
-                        <span class="text-gradient">Your Journey</span><br>
-                        Your Safe Space
-                    </h1>
-                    <p class="hero-subtitle">
-                        At Mind Grace Neuropsychiatric Clinic, everything revolves around
-                        <strong style="color:var(--pink-600)">you</strong>. Whether you're
-                        navigating anxiety, seeking support for your child, or finding
-                        balance again—Dr. Anita Sharma and our compassionate team are here.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="book.html" class="btn btn-primary">
-                            Book Your Session
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                        <a href="process.html" class="btn btn-secondary">
-                            See How It Works
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-                        </a>
-                    </div>
-                    <div class="hero-trust">
-                        <div class="hero-trust-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                            Confidential
-                        </div>
-                        <div class="hero-trust-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-                            Evidence-based
-                        </div>
-                        <div class="hero-trust-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-                            Personalized Care
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual fade-in-up delay-2">
-                    <div class="hero-image-wrapper">
-                        <picture>
-                            <source srcset="assets/images/mind-grace-entry-n-reception.webp" type="image/webp">
-                            <img src="assets/images/mind-grace-entry-n-reception.webp" alt="Warm, welcoming entrance of Mind Grace Neuropsychiatric Clinic" class="hero-image" fetchpriority="high" decoding="async" loading="eager" width="800" height="533" srcset="assets/images/mind-grace-entry-n-reception.webp">
-                        </picture>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services-section section" aria-labelledby="services-title" content-visibility="auto" contain-intrinsic-size="auto 800px">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 id="services-title">Care Designed Around You</h2>
-                    <p>Personalized, evidence-based support for every stage of your journey</p>
-                </div>
-
-                <div class="services-flow">
-                    <article class="service-item fade-in-up delay-1">
-                        <div class="service-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        </div>
-                        <h3>Psychiatric Care</h3>
-                        <p>Expert diagnosis and treatment for anxiety, depression, bipolar disorder, OCD, and more—with you at the center.</p>
-                        <a href="services.html#psychiatry" class="service-link">
-                            Learn more
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-                        </a>
-                    </article>
-
-                    <article class="service-item fade-in-up delay-2">
-                        <div class="service-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-                        </div>
-                        <h3>Child Development</h3>
-                        <p>Autism assessment, ADHD support, speech therapy, and special education tailored to your child's unique needs.</p>
-                        <a href="aasha.html" class="service-link">
-                            Explore AASHA
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-                        </a>
-                    </article>
-
-                    <article class="service-item fade-in-up delay-3">
-                        <div class="service-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-                        </div>
-                        <h3>Counseling</h3>
-                        <p>Individual, couple, and family therapy in a safe, non-judgmental space where your voice is heard.</p>
-                        <a href="services.html#counseling" class="service-link">
-                            Meet Our Therapists
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Emotional CTA -->
-        <section class="section" aria-labelledby="emotional-cta-title">
-            <div class="container">
-                <div class="emotional-cta fade-in-up">
-                    <h2 id="emotional-cta-title">You don't have to go through it alone</h2>
-                    <p>We're here to listen, support, and walk beside you on your journey to wellness.</p>
-                    <a href="book.html" class="btn btn-primary">
-                        Talk to Someone
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer" content-visibility="auto" contain-intrinsic-size="auto 600px">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Patient Care</h4>
-                    <ul>
-                        <li><a href="book.html">Book Appointment</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="process.html">What to Expect</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="about.html">Dr. Sharma</a></li>
-                        <li><a href="location.html">Find Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Help & Resources</h4>
-                    <ul>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="resources.html">Self-Help Tools</a></li>
-                        <li><a href="emergency.html">Emergency Help</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="disclaimer">
-                    Disclaimer: Information on this website is for educational purposes only and does not replace professional medical advice. Always consult a qualified healthcare provider for diagnosis and treatment. In crisis, call emergency services immediately.
-                </p>
-                <p class="footer-copyright">
-                    © <span id="year"></span> Mind Grace Neuropsychiatric Clinic, Greater Noida. All rights reserved.
-                </p>
-            </div>
+        <div class="hero-visual">
+          <div class="hero-orb" aria-hidden="true"></div>
+          <img class="hero-portrait" src="/assets/images/Dr_Anita_Sharma_Personal_Photo.webp" alt="Dr Anita Sharma, consultant psychiatrist at Mind Grace Clinic" width="600" height="750" fetchpriority="high">
+          <div class="hero-note"><span class="hero-note-icon" aria-hidden="true"><i data-lucide="badge-check"></i></span><span><strong>Dr Anita Sharma</strong><small>Lead Neuropsychiatrist</small></span></div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https:/schema.org",
-      "@type": "MedicalClinic",
-      "name": "Mind Grace Neuropsychiatric Clinic",
-      "url": "https:/mindgracencr.in/",
-      "logo": "https:/mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
-      "description": "Compassionate neuropsychiatric care in Greater Noida for anxiety, depression, ADHD, child development, and more.",
-      "telephone": "+91-XXX-XXXX-XXX",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Greater Noida",
-        "addressRegion": "Uttar Pradesh",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "28.4744",
-        "longitude": "77.5040"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "medicalSpecialty": ["Psychiatry", "Psychology", "Counseling"],
-      "sameAs": [
-        "https:/www.facebook.com/mindgraceclinic",
-        "https:/www.instagram.com/mindgraceclinic"
-      ]
-    }
-    </script>
+    <nav class="home-quick-links" aria-label="Popular destinations">
+      <a class="home-quick-link" href="/book.html"><i data-lucide="calendar" aria-hidden="true"></i><span><strong>Book a visit</strong><small>Take the first step</small></span></a>
+      <a class="home-quick-link" href="/services.html"><i data-lucide="heart-handshake" aria-hidden="true"></i><span><strong>Find the right care</strong><small>Explore our services</small></span></a>
+      <a class="home-quick-link" href="/emergency.html"><i data-lucide="life-buoy" aria-hidden="true"></i><span><strong>Need urgent help?</strong><small>See crisis resources</small></span></a>
+    </nav>
 
-    <!-- Preload Critical Assets -->
-    <link rel="preload" as="image" href="assets/images/mind-grace-entry-n-reception.webp" fetchpriority="high">
+    <section class="home-section" aria-labelledby="care-title">
+      <div class="container">
+        <div class="home-section-heading section-header"><span class="eyebrow">Care designed around you</span><h2 id="care-title">Support for every part of your journey.</h2><p>Clear guidance, thoughtful treatment, and a calm place to be heard.</p></div>
+        <div class="home-care-grid">
+          <article class="home-care-card card"><div class="card-icon" aria-hidden="true"><i data-lucide="stethoscope"></i></div><h3>Psychiatric care</h3><p>Assessment and treatment for anxiety, depression, bipolar disorder, OCD, sleep concerns, and more.</p><a href="/services.html#adult-title">Explore adult care <i data-lucide="arrow-right" aria-hidden="true"></i></a></article>
+          <article class="home-care-card card"><div class="card-icon" aria-hidden="true"><i data-lucide="baby"></i></div><h3>Child development</h3><p>Early intervention, developmental assessment, ADHD support, autism guidance, and parent support through Aasha.</p><a href="/aasha.html">Explore Aasha <i data-lucide="arrow-right" aria-hidden="true"></i></a></article>
+          <article class="home-care-card card"><div class="card-icon" aria-hidden="true"><i data-lucide="message-circle-heart"></i></div><h3>Counselling</h3><p>A safe, non-judgmental space for individual, couple, and family conversations.</p><a href="/services.html">Discover counselling <i data-lucide="arrow-right" aria-hidden="true"></i></a></article>
+        </div>
+      </div>
+    </section>
 
-    <!-- JavaScript - Optimized Loading Strategy -->
-    <!-- Core UI libraries (deferred) -->
-    <script src="https://unpkg.com/lucide@latest" integrity="sha384-pCaS97I1/v5yuZPV8HRAKExcQuzf4BdVeA8YCwDD1pAxv0qD7UzSa7nfzGpqPrpq" crossorigin="anonymous" defer></script>
-    <script src="assets/js/icon-init.js" defer></script>
-    <!-- Main application logic (module type for modern browsers) -->
-    <script type="module" src="assets/js/main.js" defer></script>
-    <!-- Animation libraries (non-critical, deferred) -->
-    <script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion-one.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@4.5.0/lib/anime.min.js" defer></script>
+    <section class="home-section section-alt" aria-labelledby="path-title">
+      <div class="container"><div class="home-section-heading section-header"><span class="eyebrow">A gentler next step</span><h2 id="path-title">Start where it feels right.</h2><p>You do not need to have all the answers before reaching out.</p></div>
+        <div class="home-path-grid"><article class="home-path-card card"><span class="section-badge">For adults & families</span><h3>Make sense of what you are feeling.</h3><p>From overthinking and low mood to sleep and relationship concerns, we can help you find a practical way forward.</p><a class="btn btn-outline" href="/conditions.html">See common concerns</a></article><article class="home-path-card card"><span class="section-badge">For children & parents</span><h3>Understand your child with confidence.</h3><p>Early support can make everyday life easier. Aasha brings assessment, therapy, and parent guidance together.</p><a class="btn btn-outline" href="/aasha.html">Explore child development care</a></article></div>
+      </div>
+    </section>
 
-    <!-- Inline Scripts (Critical Path) -->
-    <script type="module">
-      / Performance: RAF throttle utility
-      const _rafThrottle = (fn) => {
-        let ticking = false;
-        return (...args) => {
-          if (!ticking) {
-            requestAnimationFrame(() => {
-              fn(...args);
-              ticking = false;
-            });
-            ticking = true;
-          }
-        };
-      };
+    <section class="home-section" aria-labelledby="steps-title">
+      <div class="container"><div class="home-section-heading section-header"><span class="eyebrow">Your first visit</span><h2 id="steps-title">Simple, confidential, human.</h2><p>We make the process clear so you can focus on yourself.</p></div><div class="home-steps"><article class="home-step card"><h3>Reach out</h3><p>Book online, call, or message the clinic with whatever you are comfortable sharing.</p></article><article class="home-step card"><h3>Be heard</h3><p>Your first consultation is a calm conversation about your concerns, goals, and context.</p></article><article class="home-step card"><h3>Move forward</h3><p>We agree on practical next steps, whether that means treatment, therapy, assessment, or guidance.</p></article></div><div class="cta-row"><a class="btn btn-primary" href="/process.html">See how care works <i data-lucide="arrow-right" aria-hidden="true"></i></a></div></div>
+    </section>
 
-      / Header scroll effect with throttling
-      const handleScroll = _rafThrottle(() => {
-        const header = document.querySelector('.site-header');
-        if (header) {
-          header.classList.toggle('site-header--scrolled', window.scrollY > 50);
-        }
-      });
+  <section class="home-section" aria-labelledby="home-cta-title"><div class="container"><div class="home-cta card"><span class="eyebrow">You deserve care</span><h2 id="home-cta-title">You do not have to go through it alone.</h2><p>Whenever you are ready, we are here to listen and help you take the next step.</p><a class="btn btn-primary" href="/book.html">Talk to someone <i data-lucide="arrow-right" aria-hidden="true"></i></a></div></div></section>
+  </main>
 
-      window.addEventListener('scroll', handleScroll, { passive: true });
+  <footer class="site-footer"><div class="container"><div class="footer-content"><div class="footer-column"><h4>Mind Grace</h4><p>Compassionate neuropsychiatric care in Greater Noida.</p><a href="/book.html" class="btn btn-primary btn-sm">Book an appointment</a></div><div class="footer-column"><h4>Explore</h4><ul><li><a href="/about.html">About the clinic</a></li><li><a href="/services.html">Our services</a></li><li><a href="/process.html">What to expect</a></li><li><a href="/location.html">Find us</a></li></ul></div><div class="footer-column"><h4>Support</h4><ul><li><a href="/faq.html">Frequently asked questions</a></li><li><a href="/resources.html">Mental health resources</a></li><li><a href="/emergency.html">Emergency help</a></li><li><a href="/contact.html">Contact the clinic</a></li></ul></div></div><div class="footer-bottom"><p class="disclaimer">Information on this website is educational and does not replace professional medical advice. In crisis, contact emergency services immediately.</p><p class="footer-copyright">© <span id="year">2026</span> Mind Grace Neuropsychiatric Clinic. All rights reserved.</p></div></div></footer>
 
-      / Burger menu with accessible focus management
-      const burgerBtn = document.getElementById('burgerMenuBtn');
-      const navDropdown = document.getElementById('navDropdown');
-      const dropdownLinks = navDropdown ? Array.from(navDropdown.querySelectorAll('a')) : [];
-      let lastFocusedElement = null;
-
-      if (burgerBtn && navDropdown) {
-        const toggleMenu = (shouldOpen) => {
-          burgerBtn.classList.toggle('burger-btn--active', shouldOpen);
-          navDropdown.classList.toggle('nav-dropdown--active', shouldOpen);
-          burgerBtn.setAttribute('aria-expanded', String(shouldOpen));
-
-          if (shouldOpen) {
-            lastFocusedElement = document.activeElement;
-            document.body.style.overflow = 'hidden';
-            setTimeout(() => dropdownLinks[0]?.focus(), 100);
-          } else {
-            document.body.style.overflow = '';
-            lastFocusedElement?.focus();
-          }
-        };
-
-        burgerBtn.addEventListener('click', () => {
-          const isOpen = burgerBtn.classList.contains('burger-btn--active');
-          toggleMenu(!isOpen);
-        });
-
-        dropdownLinks.forEach(link => {
-          link.addEventListener('click', () => toggleMenu(false));
-        });
-
-        document.addEventListener('click', (e) => {
-          if (!navDropdown.contains(e.target) && !burgerBtn.contains(e.target)) {
-            toggleMenu(false);
-          }
-        }, { passive: true });
-
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && burgerBtn.classList.contains('burger-btn--active')) {
-            toggleMenu(false);
-          }
-        });
-
-        navDropdown.addEventListener('keydown', (e) => {
-          if (e.key !== 'Tab') return;
-          const firstLink = dropdownLinks[0];
-          const lastLink = dropdownLinks[dropdownLinks.length - 1];
-
-          if (e.shiftKey && document.activeElement === firstLink) {
-            e.preventDefault();
-            burgerBtn.focus();
-          } else if (!e.shiftKey && document.activeElement === lastLink) {
-            e.preventDefault();
-            burgerBtn.focus();
-          }
-        });
-      }
-
-      / Dynamic year update
-      const yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-      / Network status indicator
-      if ('connection' in navigator) {
-        const updateNetworkStatus = () => {
-          const statusEl = document.getElementById('network-status');
-          if (!statusEl) return;
-          const isOnline = navigator.onLine;
-          statusEl.style.display = isOnline ? 'none' : 'block';
-          statusEl.setAttribute('aria-label', isOnline ? 'Online' : 'Offline');
-        };
-        window.addEventListener('online', updateNetworkStatus);
-        window.addEventListener('offline', updateNetworkStatus);
-        updateNetworkStatus();
-      }
-    </script>
-
-    <!-- Service Worker Registration (PWA readiness) -->
-    <script>
-      if ('serviceWorker' in navigator && window.isSecureContext) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-              console.log('[SW] Service Worker registered:', registration.scope);
-
-              / Check for updates periodically
-              setInterval(() => {
-                registration.update();
-              }, 60 * 60 * 1000); / Every hour
-            })
-            .catch((error) => {
-              console.warn('[SW] Service Worker registration failed:', error);
-            });
-
-          / Listen for SW updates
-          navigator.serviceWorker.addEventListener('controllerchange', () => {
-            console.log('[SW] New service worker detected, page will reload on next visit');
-          });
-        });
-      }
-
-      / Share Target API detection (for PWA sharing)
-      if ('shareTarget' in window || 'canShare' in navigator) {
-        console.log('[PWA] Share Target API supported');
-      }
-    </script>
-
-    <!-- Web App Install Prompt Handler -->
-    <script>
-      let deferredPrompt;
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        console.log('[PWA] Install prompt available');
-
-        / Could show custom install button here
-        document.dispatchEvent(new CustomEvent('pwa-install-ready'));
-      });
-
-      window.addEventListener('appinstalled', () => {
-        console.log('[PWA] App successfully installed');
-        deferredPrompt = null;
-      });
-    </script>
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"MedicalClinic","name":"Mind Grace Neuropsychiatric Clinic","url":"https://mindgracencr.in/","logo":"https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg","description":"Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.","telephone":"+91-9667863295","address":{"@type":"PostalAddress","streetAddress":"J123, Gamma II","postalCode":"201310","addressLocality":"Greater Noida","addressRegion":"Uttar Pradesh","addressCountry":"IN"},"areaServed":["Greater Noida","Noida","Delhi NCR"],"medicalSpecialty":["Psychiatry","Psychology","Counseling"]
+  }</script>
 </body>
 </html>

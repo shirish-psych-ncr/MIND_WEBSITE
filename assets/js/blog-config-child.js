@@ -1,1 +1,18 @@
-(async()=>{const e="pages/child/",o=`${e}manifest.json`;try{const s=await fetch(o,{method:"GET",headers:{"Cache-Control":"no-cache"}});if(!s.ok)throw new Error(`HTTP error! status: ${s.status}`);const t=await s.json();window.BLOGDISCOVERYCONFIG=Object.freeze({sourceDir:e,posts:Object.freeze(t.files.map(o=>`${e}${o}`)),pinned:Object.freeze(t.pinned||[]),mostSearched:Object.freeze(t.mostSearched||[]),symptoms:Object.freeze(t.symptoms||[]),clusters:Object.freeze(t.clusters||[]),refresh:async()=>window.location.reload()}),window.dispatchEvent(new CustomEvent("blogConfigLoaded",{detail:{status:"ready",timestamp:Date.now()}}))}catch(e){,window.BLOGDISCOVERYCONFIG={error:!0,message:e.message}}})();
+(() => {
+  const manifestUrl = "/blog/pages/child/manifest.json";
+  const sourceDir = "/blog/pages/child/";
+  fetch(manifestUrl, { cache: "no-store" })
+    .then((response) => { if (!response.ok) throw new Error(`Child blog manifest: ${response.status}`); return response.json(); })
+    .then((manifest) => {
+      window.BLOG_DISCOVERY_CONFIG = Object.freeze({
+        sourceDir,
+        posts: Object.freeze((manifest.files || []).map((file) => `${sourceDir}${file}`)),
+        pinned: Object.freeze((manifest.pinned || []).map((file) => `${sourceDir}${file}`)),
+        mostSearched: Object.freeze((manifest.mostSearched || []).map((file) => `${sourceDir}${file}`)),
+        symptoms: Object.freeze(manifest.symptoms || []),
+        clusters: Object.freeze(manifest.clusters || [])
+      });
+      window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
+    })
+    .catch((error) => { window.BLOG_DISCOVERY_CONFIG = { error: true, message: error.message }; window.dispatchEvent(new CustomEvent("blogConfigLoaded")); });
+})();

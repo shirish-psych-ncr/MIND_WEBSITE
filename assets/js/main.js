@@ -8,7 +8,7 @@
 function _initScrollProgress() {
   const progress = document.querySelector('.scroll-progress');
   if (!progress) return;
-  
+
   let ticking = false;
   const updateProgress = () => {
     const scrolled = window.scrollY;
@@ -17,26 +17,26 @@ function _initScrollProgress() {
     progress.style.width = `${Math.min(percentage, 100)}%`;
     ticking = false;
   };
-  
+
   window.addEventListener('scroll', () => {
     if (!ticking) {
       window.requestAnimationFrame(updateProgress);
       ticking = true;
     }
   }, { passive: true });
-  
+
   updateProgress();
 }
 
 // Orientation adapter for mobile layouts
 function _initOrientationAdapter() {
   if (!document.getElementById('orientation-adapter')) return;
-  
+
   const mediaQuery = window.matchMedia('(orientation: landscape) and (max-height: 500px)');
   const handleOrientation = (e) => {
     const event = new CustomEvent('orientationchange', { detail: { isLandscape: e.matches } });
     window.dispatchEvent(event);
-    
+
     if (e.matches) {
       document.body.classList.add('is-landscape-mobile');
       document.body.classList.remove('is-portrait-mobile');
@@ -45,18 +45,18 @@ function _initOrientationAdapter() {
       document.body.classList.remove('is-landscape-mobile');
     }
   };
-  
+
   handleOrientation(mediaQuery);
   mediaQuery.addEventListener('change', handleOrientation);
 }
 
 // OpenGraph meta tags initialization
 function initOpenGraphMeta() {
-  const defaultImage = '/assets/images/og-default.webp';
+  const defaultImage = '/assets/images/og-image.webp';
   const pageTitle = document.title.split('|')[0].trim() || 'Mind Grace Neuropsychiatric Clinic';
-  const description = document.querySelector('meta[name="description"]')?.content || 
+  const description = document.querySelector('meta[name="description"]')?.content ||
     'Compassionate, evidence-based neuropsychiatric care in India.';
-  
+
   const metaTags = [
     { property: 'og:title', content: `${pageTitle} | Mind Grace Neuropsychiatric Clinic` },
     { property: 'og:description', content: description },
@@ -70,7 +70,7 @@ function initOpenGraphMeta() {
     { name: 'twitter:description', content: description },
     { name: 'twitter:image', content: defaultImage }
   ];
-  
+
   metaTags.forEach(meta => {
     let element;
     if (meta.property) {
@@ -78,7 +78,7 @@ function initOpenGraphMeta() {
     } else if (meta.name) {
       element = document.querySelector(`meta[name="${meta.name}"]`);
     }
-    
+
     if (element) {
       element.setAttribute('content', meta.content);
     } else {
@@ -94,19 +94,23 @@ function initOpenGraphMeta() {
 // Network status indicator
 function initNetworkStatus() {
   const mount = () => {
-    if (!document.body || document.getElementById('network-status')) return;
-
-    const statusEl = document.createElement('div');
-    statusEl.id = 'network-status';
+    if (!document.body) return;
+    let statusEl = document.getElementById('network-status');
+    if (!statusEl) {
+      statusEl = document.createElement('div');
+      statusEl.id = 'network-status';
+      document.body.appendChild(statusEl);
+    }
     statusEl.className = 'network-status';
-    statusEl.setAttribute('role', 'alert');
+    statusEl.setAttribute('role', 'status');
     statusEl.setAttribute('aria-live', 'polite');
     statusEl.hidden = true;
-    statusEl.innerHTML = `
-      <span class="network-status-icon">📡</span>
-      <span class="network-status-message">You're offline. Some features may be unavailable.</span>
-    `;
-    document.body.appendChild(statusEl);
+    if (!statusEl.querySelector('.network-status-message')) {
+      statusEl.innerHTML = '<span class="network-status-icon" aria-hidden="true"><i data-lucide="wifi-off"></i></span><span class="network-status-message">You are offline. Some features may be unavailable.</span>';
+      document.dispatchEvent(new Event('icons:refresh'));
+    }
+    if (statusEl.dataset.networkBound === 'true') return;
+    statusEl.dataset.networkBound = 'true';
 
     const updateStatus = () => {
       const offline = !navigator.onLine;
@@ -130,14 +134,14 @@ function initNetworkStatus() {
 // Global error boundary
 function initErrorBoundary() {
   window.addEventListener('error', (e) => {
-    
+
     if (window.location.hostname !== 'localhost') {
       e.preventDefault();
     }
   });
-  
+
   window.addEventListener('unhandledrejection', (e) => {
-    
+
     if (window.location.hostname !== 'localhost') {
       e.preventDefault();
     }
@@ -148,7 +152,7 @@ function initErrorBoundary() {
 function initSkipLink() {
   const skipLink = document.querySelector('.skip-link');
   const mainContent = document.getElementById('main-content');
-  
+
   if (skipLink && mainContent) {
     skipLink.addEventListener('click', (e) => {
       e.preventDefault();
@@ -165,13 +169,13 @@ function initSkipLink() {
 function initBurgerMenu() {
   const burgerBtn = document.getElementById('burgerMenuBtn');
   const navDropdown = document.getElementById('navDropdown');
-  
+
   if (!burgerBtn || !navDropdown) return;
-  
+
   let isOpen = false;
   let lastFocusedElement = null;
   const navLinks = navDropdown.querySelectorAll('a[href]');
-  
+
   // Close menu function
   const closeMenu = () => {
     if (!isOpen) return;
@@ -181,13 +185,13 @@ function initBurgerMenu() {
     navDropdown.setAttribute('inert', '');
     burgerBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
-    
+
     // Restore focus to burger button
     if (lastFocusedElement) {
       lastFocusedElement.focus();
     }
   };
-  
+
   // Open menu function
   const openMenu = () => {
     if (isOpen) return;
@@ -198,7 +202,7 @@ function initBurgerMenu() {
     navDropdown.removeAttribute('inert');
     burgerBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = '';
-    
+
     // Focus first link after animation
     setTimeout(() => {
       if (navLinks.length > 0) {
@@ -206,7 +210,7 @@ function initBurgerMenu() {
       }
     }, 300);
   };
-  
+
   // Toggle menu on burger click
   burgerBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -217,26 +221,26 @@ function initBurgerMenu() {
       openMenu();
     }
   });
-  
+
   // Close when clicking outside
   document.addEventListener('click', (e) => {
     if (isOpen && !navDropdown.contains(e.target) && !burgerBtn.contains(e.target)) {
       closeMenu();
     }
   });
-  
+
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && isOpen) {
       closeMenu();
       burgerBtn.focus();
     }
-    
+
     // Focus trap within dropdown
     if (e.key === 'Tab' && isOpen) {
       const firstLink = navLinks[0];
       const lastLink = navLinks[navLinks.length - 1];
-      
+
       if (e.shiftKey && document.activeElement === firstLink) {
         e.preventDefault();
         lastLink.focus();
@@ -246,14 +250,14 @@ function initBurgerMenu() {
       }
     }
   });
-  
+
   // Close when clicking a link
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       closeMenu();
     });
   });
-  
+
   // Handle resize
   window.addEventListener('resize', () => {
     if (isOpen) {
@@ -266,16 +270,16 @@ function initBurgerMenu() {
 function initHeaderScroll() {
   const header = document.querySelector('.site-header');
   if (!header) return;
-  
+
   let ticking = false;
-  
+
   const updateHeader = () => {
     header.classList.toggle('site-header--scrolled', window.scrollY > 50);
     ticking = false;
   };
-  
+
   updateHeader();
-  
+
   window.addEventListener('scroll', () => {
     if (!ticking) {
       requestAnimationFrame(updateHeader);
@@ -287,12 +291,12 @@ function initHeaderScroll() {
 // Smooth scroll for anchor links with reduced motion support
 function initSmoothScroll() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       if (!targetId || targetId === '#') return;
-      
+
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
@@ -308,22 +312,22 @@ function initSmoothScroll() {
 // Dynamic viewport units
 function initDynamicViewport() {
   let ticking = false;
-  
+
   const setViewportUnits = () => {
     document.documentElement.style.setProperty('--vw', `${window.innerWidth}px`);
     document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
     ticking = false;
   };
-  
+
   setViewportUnits();
-  
+
   const updateOnResize = () => {
     if (!ticking) {
       requestAnimationFrame(setViewportUnits);
       ticking = true;
     }
   };
-  
+
   window.addEventListener('resize', updateOnResize, { passive: true });
   if (window.visualViewport) {
     window.visualViewport.addEventListener('resize', updateOnResize, { passive: true });
@@ -337,14 +341,14 @@ function initAccordions(accordionTriggers) {
       const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
       const controlsId = trigger.getAttribute('aria-controls');
       const panel = document.getElementById(controlsId);
-      
+
       // Close all accordions
       accordionTriggers.forEach(t => {
         t.setAttribute('aria-expanded', 'false');
         const panelToClose = document.getElementById(t.getAttribute('aria-controls'));
         if (panelToClose) panelToClose.hidden = true;
       });
-      
+
       // Open clicked accordion if it wasn't already open
       if (!isExpanded && panel) {
         trigger.setAttribute('aria-expanded', 'true');
@@ -357,27 +361,27 @@ function initAccordions(accordionTriggers) {
 // Form validation
 function initForms(forms) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
+
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       let isValid = true;
-      
+
       const requiredFields = Array.from(form.querySelectorAll('[required]'));
       const fieldData = new Map();
-      
+
       // Collect field data
       requiredFields.forEach(field => {
         const value = field.value.trim();
         const isEmail = field.type === 'email';
         fieldData.set(field, { value, isEmail, isValid: true });
       });
-      
+
       // Validate fields
       requiredFields.forEach(field => {
         const data = fieldData.get(field);
         let fieldValid = true;
-        
+
         if (data.value) {
           if (data.isEmail && !emailRegex.test(data.value)) {
             fieldValid = false;
@@ -385,7 +389,7 @@ function initForms(forms) {
         } else {
           fieldValid = false;
         }
-        
+
         if (fieldValid) {
           field.classList.remove('error');
           const errorMsg = field.parentNode.querySelector('.error-message');
@@ -393,25 +397,25 @@ function initForms(forms) {
         } else {
           isValid = false;
           field.classList.add('error');
-          
+
           if (!field.parentNode.querySelector('.error-message')) {
             const errorMsg = document.createElement('span');
             errorMsg.className = 'error-message';
-            errorMsg.textContent = data.isEmail && data.value 
-              ? 'Please enter a valid email' 
+            errorMsg.textContent = data.isEmail && data.value
+              ? 'Please enter a valid email'
               : 'This field is required';
             errorMsg.style.cssText = 'color: var(--color-error); font-size: 0.75rem; margin-top: var(--space-xs); display: block;';
             field.parentNode.appendChild(errorMsg);
           }
         }
       });
-      
+
       if (isValid) {
         // Form validated and ready for submission
         // form.submit(); // Uncomment for production
       }
     });
-    
+
     // Clear errors on input
     form.querySelectorAll('input, select, textarea').forEach(field => {
       field.addEventListener('input', () => {
@@ -426,7 +430,7 @@ function initForms(forms) {
 // Counter animations with Intersection Observer
 function initCounters(counters) {
   if (!counters.length || !('IntersectionObserver' in window)) return;
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -434,27 +438,27 @@ function initCounters(counters) {
         const target = parseInt(counter.getAttribute('data-target'), 10) || 100;
         const duration = 2000;
         let startTime = null;
-        
+
         const animate = (currentTime) => {
           if (!startTime) startTime = currentTime;
           const progress = Math.min((currentTime - startTime) / duration, 1);
           const easeOutQuart = 1 - Math.pow(1 - progress, 4);
           const current = Math.floor(easeOutQuart * target);
           counter.innerText = `${current}+`;
-          
+
           if (progress < 1) {
             requestAnimationFrame(animate);
           } else {
             counter.innerText = `${target}+`;
           }
         };
-        
+
         requestAnimationFrame(animate);
         observer.unobserve(counter);
       }
     });
   }, { threshold: 0.5 });
-  
+
   counters.forEach(counter => observer.observe(counter));
 }
 
@@ -477,28 +481,28 @@ document.addEventListener('DOMContentLoaded', () => {
     forms: document.querySelectorAll('form[novalidate]'),
     counters: document.querySelectorAll('.stat-number')
   };
-  
+
   // Initialize burger menu
   initBurgerMenu();
-  
+
   // Initialize header scroll
   initHeaderScroll();
-  
+
   // Initialize smooth scroll
   initSmoothScroll();
-  
+
   // Initialize dynamic viewport
   initDynamicViewport();
-  
+
   // Initialize accordions
   initAccordions(elements.accordionTriggers);
-  
+
   // Initialize forms
   initForms(elements.forms);
-  
+
   // Update footer year
   updateFooterYear();
-  
+
   // Initialize counters
   initCounters(elements.counters);
 });
@@ -514,7 +518,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _initScrollProgress();
     // All modules initialized
   } catch (error) {
-    
+
   }
 })();
 
@@ -525,56 +529,56 @@ document.addEventListener('DOMContentLoaded', () => {
 function _initBurgerMenu() {
   const burgerToggle = document.getElementById('burgerToggle');
   const navPanel = document.getElementById('navPanel');
-  
+
   if (!burgerToggle || !navPanel) return;
-  
+
   let isMenuOpen = false;
   let previouslyFocusedElement = null;
-  
+
   // Get all focusable elements in the nav panel
   const getFocusableElements = () => {
     const focusableSelectors = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
     return Array.from(navPanel.querySelectorAll(focusableSelectors));
   };
-  
+
   // Open menu
   const openMenu = () => {
     previouslyFocusedElement = document.activeElement;
     isMenuOpen = true;
-    
+
     burgerToggle.setAttribute('aria-expanded', 'true');
     navPanel.removeAttribute('inert');
     navPanel.classList.add('is-open');
     navPanel.setAttribute('aria-expanded', 'true');
-    
+
     // Focus first link after animation
     setTimeout(() => {
       const firstLink = navPanel.querySelector('.nav-link');
       if (firstLink) firstLink.focus();
     }, 150);
-    
+
     document.body.style.overflow = 'hidden';
   };
-  
+
   // Close menu
   const closeMenu = () => {
     isMenuOpen = false;
-    
+
     burgerToggle.setAttribute('aria-expanded', 'false');
     navPanel.setAttribute('inert', '');
     navPanel.classList.remove('is-open');
     navPanel.removeAttribute('aria-expanded');
-    
+
     // Return focus to burger button
     if (previouslyFocusedElement) {
       previouslyFocusedElement.focus();
     } else {
       burgerToggle.focus();
     }
-    
+
     document.body.style.overflow = '';
   };
-  
+
   // Toggle handler
   const handleToggle = () => {
     if (isMenuOpen) {
@@ -583,22 +587,22 @@ function _initBurgerMenu() {
       openMenu();
     }
   };
-  
+
   // Keyboard navigation with focus trap
   const handleKeydown = (e) => {
     if (!isMenuOpen) return;
-    
+
     const focusableElements = getFocusableElements();
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
-    
+
     // Escape key closes menu
     if (e.key === 'Escape') {
       e.preventDefault();
       closeMenu();
       return;
     }
-    
+
     // Tab key traps focus within menu
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -616,24 +620,24 @@ function _initBurgerMenu() {
       }
     }
   };
-  
+
   // Click outside to close
   const handleClickOutside = (e) => {
     if (!isMenuOpen) return;
-    
+
     const isClickInsideBurger = burgerToggle.contains(e.target);
     const isClickInsidePanel = navPanel.contains(e.target);
-    
+
     if (!isClickInsideBurger && !isClickInsidePanel) {
       closeMenu();
     }
   };
-  
+
   // Event listeners
   burgerToggle.addEventListener('click', handleToggle);
   document.addEventListener('keydown', handleKeydown);
   document.addEventListener('click', handleClickOutside);
-  
+
   // Close on resize if open
   window.addEventListener('resize', () => {
     if (isMenuOpen && window.innerWidth > 768) {

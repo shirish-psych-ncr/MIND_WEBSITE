@@ -171,31 +171,31 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 
 | File | Purpose | Status | Notes |
 |------|---------|--------|-------|
-| `index.html` | Homepage | ✅ Active | Primary entry point, modern fluid design |
-| `about.html` | About Dr. Sharma & Clinic | ✅ Active | |
-| `services.html` | Services Overview | ✅ Active | Psychiatry, counseling, child development |
-| `process.html` | What to Expect | ✅ Active | Patient journey |
-| `location.html` | Clinic Location & Map | ✅ Active | Uses `tools-map.js` |
-| `contact.html` | Contact Form & Info | ✅ Active | |
-| `book.html` | Booking System | ✅ Active | Appointment scheduling |
-| `doctors.html` | All Doctors | ✅ Active | Doctor listings |
-| `dr-anita-sharma.html` | Lead Doctor Profile | ✅ Active | Dr. Anita Sharma bio |
-| `conditions.html` | Conditions Treated | ✅ Active | Mental health conditions |
-| `approach.html` | Treatment Approach | ✅ Active | Methodology |
-| `fees.html` | Pricing & Insurance | ✅ Active | |
-| `gallery.html` | Photo Gallery | ✅ Active | Clinic photos |
-| `testimonials.html` | Patient Reviews | ✅ Active | |
-| `faq.html` | Frequently Asked Questions | ✅ Active | |
-| `emergency.html` | Crisis Resources | ✅ Active | Emergency contacts |
-| `consent.html` | Patient Consent Forms | ✅ Active | Legal documents |
-| `privacy.html` | Privacy Policy | ✅ Active | GDPR/India compliance |
-| `terms.html` | Terms of Service | ✅ Active | Legal terms |
-| `disclaimer.html` | Medical Disclaimer | ✅ Active | Medical disclaimer |
-| `resources.html` | Self-Help Resources | ✅ Active | Links to therapeutic tools |
-| `mind-grace.html` | Mind Grace Program | ✅ Active | Signature program |
-| `aasha.html` | AASHA Child Development | ✅ Active | Child development program |
-| `thank-you.html` | Post-Submission Thank You | ✅ Active | Form confirmation |
-| `404.html` | Error Page | ✅ Active | Custom 404 |
+| `index.html` | Homepage | [OK] Active | Primary entry point, modern fluid design |
+| `about.html` | About Dr. Sharma & Clinic | [OK] Active | |
+| `services.html` | Services Overview | [OK] Active | Psychiatry, counseling, child development |
+| `process.html` | What to Expect | [OK] Active | Patient journey |
+| `location.html` | Clinic Location & Map | [OK] Active | Uses `tools-map.js` |
+| `contact.html` | Contact Form & Info | [OK] Active | |
+| `book.html` | Booking System | [OK] Active | Appointment scheduling |
+| `doctors.html` | All Doctors | [OK] Active | Doctor listings |
+| `dr-anita-sharma.html` | Lead Doctor Profile | [OK] Active | Dr. Anita Sharma bio |
+| `conditions.html` | Conditions Treated | [OK] Active | Mental health conditions |
+| `approach.html` | Treatment Approach | [OK] Active | Methodology |
+| `fees.html` | Pricing & Insurance | [OK] Active | |
+| `gallery.html` | Photo Gallery | [OK] Active | Clinic photos |
+| `testimonials.html` | Patient Reviews | [OK] Active | |
+| `faq.html` | Frequently Asked Questions | [OK] Active | |
+| `emergency.html` | Crisis Resources | [OK] Active | Emergency contacts |
+| `consent.html` | Patient Consent Forms | [OK] Active | Legal documents |
+| `privacy.html` | Privacy Policy | [OK] Active | GDPR/India compliance |
+| `terms.html` | Terms of Service | [OK] Active | Legal terms |
+| `disclaimer.html` | Medical Disclaimer | [OK] Active | Medical disclaimer |
+| `resources.html` | Self-Help Resources | [OK] Active | Links to therapeutic tools |
+| `mind-grace.html` | Mind Grace Program | [OK] Active | Signature program |
+| `aasha.html` | AASHA Child Development | [OK] Active | Child development program |
+| `thank-you.html` | Post-Submission Thank You | [OK] Active | Form confirmation |
+| `404.html` | Error Page | [OK] Active | Custom 404 |
 
 ### Therapeutic Tools (Interactive Features)
 
@@ -515,23 +515,23 @@ Each tool script follows a consistent pattern:
 
 ### Implemented Features
 
-✅ Skip link to main content  
-✅ Semantic HTML5 landmarks (`header`, `nav`, `main`, `footer`)  
-✅ ARIA labels on interactive elements  
-✅ Focus visible outlines  
-✅ Reduced motion media query support  
-✅ Mobile navigation focus trap  
-✅ Keyboard navigation (Escape to close)  
-✅ Color contrast (mostly compliant)
+[OK] Skip link to main content
+[OK] Semantic HTML5 landmarks (`header`, `nav`, `main`, `footer`)
+[OK] ARIA labels on interactive elements
+[OK] Focus visible outlines
+[OK] Reduced motion media query support
+[OK] Mobile navigation focus trap
+[OK] Keyboard navigation (Escape to close)
+[OK] Color contrast (mostly compliant)
 
 ### Areas for Improvement
 
-⚠️ **Form Accessibility**: Labels, error messages, ARIA live regions  
-⚠️ **Skip Links**: Only one exists; consider adding more  
-⚠️ **Heading Hierarchy**: Needs audit  
-⚠️ **Link Purposes**: Some links lack descriptive text  
-⚠️ **Dynamic Content**: ARIA live regions for tool interactions  
-⚠️ **Color Contrast**: Verify all text meets WCAG AA (4.5:1)
+[WARNING] **Form Accessibility**: Labels, error messages, ARIA live regions
+[WARNING] **Skip Links**: Only one exists; consider adding more
+[WARNING] **Heading Hierarchy**: Needs audit
+[WARNING] **Link Purposes**: Some links lack descriptive text
+[WARNING] **Dynamic Content**: ARIA live regions for tool interactions
+[WARNING] **Color Contrast**: Verify all text meets WCAG AA (4.5:1)
 
 ---
 
@@ -559,78 +559,50 @@ Each tool script follows a consistent pattern:
 
 ## Technical Debt & Issues
 
-### Resolved Issues ✅
+### Resolved Issues [OK]
 
 1. **Floating UI Library Error** (July 2026):
    - **Problem**: `Cannot read properties of undefined (reading 'detectOverflow')` error at floating-ui.min.js:1:7345
    - **Cause**: Corrupted `floating-ui.min.js` file missing core functions (detectOverflow, computePosition, flip, shift)
    - **Solution**: Replaced with complete UMD build (22KB) containing both @floating-ui/core and @floating-ui/dom libraries
    - **Verification**: File now exports both `FloatingUIDOM` and `FloatingUICore` global namespaces
-   - **Status**: ✅ Fixed - All 25 HTML files now load correctly without console errors
+   - **Status**: [OK] Fixed - All 25 HTML files now load correctly without console errors
 
 2. **Script Loading Order** (July 2026):
    - **Problem**: Race conditions with `ky` library not loaded when `http-client.js` executed, "Ky library not loaded, falling back to fetch" warnings
    - **Cause**: Incorrect use of `defer` attribute on module scripts causing async loading race conditions
    - **Solution**: Removed `defer` from all module scripts, ensured proper loading order in HTML head sections
-   - **Status**: ✅ Fixed - Scripts load in correct sequence: ky.min.js → http-client.js → main.js
+   - **Status**: [OK] Fixed - Scripts load in correct sequence: ky.min.js → http-client.js → main.js
 
 3. **Character Encoding** (July 2026):
    - **Problem**: Lighthouse warning "Properly defines charset" despite meta tag presence
    - **Cause**: Meta charset tag not positioned as first element in `<head>` or using non-standard format
    - **Solution**: Moved `<meta charset="UTF-8">` to first position in all 25 HTML files, standardized format
-   - **Status**: ✅ Fixed - No more charset warnings in Lighthouse audits
+   - **Status**: [OK] Fixed - No more charset warnings in Lighthouse audits
 
 4. **SEO Canonical URLs** (July 2026):
    - **Problem**: Relative canonical links (`process.html`) and hreflang values causing SEO issues, Lighthouse warnings
    - **Cause**: Using relative paths instead of absolute URLs for canonical and alternate links
    - **Solution**: Updated all canonical and hreflang tags to absolute GitHub Pages URLs (`https://shirish-psych-ncr.github.io/MIND_WEBSITE/[page].html`)
-   - **Status**: ✅ Fixed - All pages use absolute URLs for search engine compliance
+   - **Status**: [OK] Fixed - All pages use absolute URLs for search engine compliance
 
 5. **Floating UI Namespace Detection** (July 2026):
    - **Problem**: `ui-popovers.js` failing to detect Floating UI library, repeated "Floating UI library not loaded yet, waiting..." console spam
    - **Cause**: Code only checked for `FloatingUI` namespace but vendor file uses `FloatingUIDOM`
    - **Solution**: Updated detection logic in initTooltips, initDropdowns, initMedicalPopovers to check both namespaces
-   - **Status**: ✅ Fixed - No more console spam, popovers initialize correctly
+   - **Status**: [OK] Fixed - No more console spam, popovers initialize correctly
 
-### Remaining Issues ⚠️
+### Current verification (2026-08-26)
 
-5. **Sitemap Inconsistencies**:
-   - Mixed relative and absolute URLs in sitemap.xml
-   - **Action**: Standardize to absolute GitHub Pages URLs
+The historical findings below were rechecked against the current source and are no longer open defects:
 
-6. **Robots.txt Domain Reference**:
-   - References `mindgracencr.in` instead of `mindgracencr.in`
-   - **Action**: Update domain reference
+- `sitemap.xml` contains 41 absolute URLs for indexable content; `404.html` and `thank-you.html` are excluded and now carry `noindex,follow`.
+- `robots.txt`, canonicals, OpenGraph URLs, and JSON-LD use the same `mindgracencr.in` domain.
+- Legacy duplicate homepages and the old stylesheet/backup names listed in the earlier audit are not present in the current root inventory.
+- `assets/` is populated with the active CSS, JavaScript, component, library, and image modules.
+- `children.html` is the intentional child-development hub; no ambiguous `child.html` route is present.
 
-7. **Legacy Files Cleanup**:
-   - Potential duplicate/legacy files may exist from previous iterations
-   - **Action**: Audit and remove unnecessary files
-
-8. **Sitemap Completeness**:
-   - sitemap.xml contains 28 URLs but may need additional pages
-   - **Action**: Verify all pages are included
-
-9. **Legacy Files**:
-   - `styles.css` (old monolithic stylesheet)
-   - `styles-revamp.css` (previous iteration)
-   - `js/main.js.bak` (backup file)
-   - **Action**: Remove after verification
-
-10. **Empty Assets Directory**:
-    - `/assets/` exists but is empty
-    - **Action**: Either populate with optimized assets or remove
-
-11. **Inconsistent Naming**:
-    - Mix of kebab-case (`guided-breathing.html`) and unclear names (`mind-grace.html`)
-    - **Action**: Standardize naming convention
-
-12. **Blog Page Ambiguity**:
-    - `child.html` vs `children.html`
-    - **Action**: Clarify purpose, consolidate or rename
-
-13. **Hardcoded URLs in Sitemap/Robots**:
-    - References `mindgracencr.in` as primary domain
-    - **Action**: Update to correct domain
+Deployment configuration remains outside the static preview: response security headers, production cache policy, and final Lighthouse measurements must be checked after deployment.
 
 ---
 
@@ -691,31 +663,31 @@ Changing this order will break the cascade.
 
 ## Future Roadmap
 
-### Phase 1: Cleanup (Immediate)
+### Phase 1: Cleanup (completed locally)
 
-- [ ] Remove duplicate homepage files
-- [ ] Create missing `terms.html` and `disclaimer.html`
-- [ ] Update `site.webmanifest` with correct branding
-- [ ] Generate complete `sitemap.xml`
-- [ ] Remove legacy files (`styles.css`, `styles-revamp.css`, `main.js.bak`)
-- [ ] Fix domain references in SEO files
+- [x] Remove duplicate homepage files
+- [x] Create `terms.html` and `disclaimer.html`
+- [x] Update `site.webmanifest` with clinic branding
+- [x] Generate the indexable-page sitemap
+- [x] Remove legacy files (`styles.css`, `styles-revamp.css`, `main.js.bak`)
+- [x] Align domain references in SEO files
 
-### Phase 2: Optimization (Short-term)
+### Phase 2: Optimization (deployment follow-up)
 
-- [ ] Optimize all images (WebP/AVIF conversion)
-- [ ] Implement responsive images with `srcset`
-- [ ] Add lazy loading to below-fold images
+- [x] Optimize the supplied photographic assets to WebP
+- [x] Add responsive image dimensions and `srcset` where supplied
+- [x] Add lazy loading to below-fold images
 - [ ] Minify CSS/JS for production
 - [ ] Add critical CSS inlining
 - [ ] Configure cache headers
 
-### Phase 3: Enhancement (Medium-term)
+### Phase 3: Enhancement (current baseline)
 
-- [ ] Add JSON-LD structured data to all pages
-- [ ] Complete meta descriptions for all pages
-- [ ] Audit and fix heading hierarchy
-- [ ] Improve form accessibility
-- [ ] Add ARIA live regions to dynamic tools
+- [x] Add JSON-LD structured data to public pages
+- [x] Complete meta descriptions for public pages
+- [x] Audit and fix heading hierarchy
+- [x] Improve form accessibility
+- [x] Add ARIA live regions to dynamic tools
 - [ ] Implement service worker for offline support
 
 ### Phase 4: Expansion (Long-term)
@@ -767,10 +739,10 @@ Changing this order will break the cascade.
 
 ## Contact & Maintenance
 
-**Primary Maintainer**: Repository Owner  
-**Last Updated**: 2025  
-**Technology Stack**: HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)  
-**Deployment**: GitHub Pages  
+**Primary Maintainer**: Repository Owner
+**Last Updated**: 2025
+**Technology Stack**: HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)
+**Deployment**: GitHub Pages
 **Domain**: mindgracencr.in (primary)
 
 For questions or contributions, refer to the repository owner or consult the AGENT_BIBLE documentation for AI-assisted maintenance.

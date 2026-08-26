@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /session/
 
 Sitemap: https://mindgracencr.in/sitemap.xml
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /tools/*/temp/

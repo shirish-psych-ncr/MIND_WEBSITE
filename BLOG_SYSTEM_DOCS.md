@@ -1,24 +1,24 @@
 # Blog System Documentation — Mind Grace Neuropsychiatric Clinic
 
-**Last Updated:** Phase 2, Run 4 (Verified)  
+**Last Updated:** Phase 2, Run 4 (Verified)
 **Status:** Production-Ready with Manifest-Based Architecture
 
 ---
 
-## 📊 System Overview
+## [DATA] System Overview
 
 The Mind Grace blog is a **dynamic, manifest-driven content system** built without a backend CMS. It uses JSON manifests for configuration and vanilla JavaScript for dynamic article discovery and rendering.
 
 ### Architecture Highlights
-- ✅ **Zero Backend**: Static HTML files with client-side discovery
-- ✅ **Manifest-Driven**: JSON manifests define posts, tags, clusters
-- ✅ **Dynamic Rendering**: `blog-discovery.js` fetches metadata and renders cards
-- ✅ **Category Separation**: Adult mental health vs child development
-- ✅ **SEO Optimized**: Structured data, canonical URLs, breadcrumbs
+- [OK] **Zero Backend**: Static HTML files with client-side discovery
+- [OK] **Manifest-Driven**: JSON manifests define posts, tags, clusters
+- [OK] **Dynamic Rendering**: `blog-discovery.js` fetches metadata and renders cards
+- [OK] **Category Separation**: Adult mental health vs child development
+- [OK] **SEO Optimized**: Structured data, canonical URLs, breadcrumbs
 
 ---
 
-## 📁 File Structure (Verified)
+## [FILES] File Structure (Verified)
 
 ```
 /workspace/blog/
@@ -41,12 +41,12 @@ The Mind Grace blog is a **dynamic, manifest-driven content system** built witho
 │       └── speech-delay-red-flags.html (279 lines)
 ```
 
-**Total Articles:** 9 (5 adult + 4 child)  
+**Total Articles:** 9 (5 adult + 4 child)
 **Total Lines:** ~3,168 lines across all article HTML files
 
 ---
 
-## 🔧 Core Components
+## [TOOLS] Core Components
 
 ### 1. Manifest Files
 
@@ -109,7 +109,7 @@ The Mind Grace blog is a **dynamic, manifest-driven content system** built witho
     });
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const data = await response.json();
-    
+
     window.ADULT_BLOG_CONFIG = Object.freeze({
       sourceDir: dir,
       posts: Object.freeze(data.files.map(file => `${dir}${file}`)),
@@ -118,7 +118,7 @@ The Mind Grace blog is a **dynamic, manifest-driven content system** built witho
       symptoms: Object.freeze(data.symptoms || []),
       clusters: Object.freeze(data.clusters || [])
     });
-    
+
     window.dispatchEvent(new CustomEvent("adultBlogConfigLoaded"));
     console.info("AdultBlogConfig: Initialized successfully.");
   } catch (error) {
@@ -177,7 +177,7 @@ The Mind Grace blog is a **dynamic, manifest-driven content system** built witho
 
 ---
 
-## 🏷️ Article Metadata Schema
+## [LABEL] Article Metadata Schema
 
 Each article HTML file includes these meta tags in `<head>`:
 
@@ -206,7 +206,7 @@ These tags are filtered out from display but used for logic:
 
 ---
 
-## 🔍 SEO Implementation
+## SEO Implementation
 
 ### Canonical URLs
 All articles use **absolute canonical URLs**:
@@ -215,7 +215,7 @@ All articles use **absolute canonical URLs**:
 <link rel="canonical" href="https://mindgracencr.in/blog/pages/adult/overthinking-vs-anxiety.html">
 ```
 
-**Verified Status:** ✅ All 9 articles have correct canonical URLs with `mindgracencr.in` domain.
+**Verified Status:** [OK] All 9 articles have correct canonical URLs with `mindgracencr.in` domain.
 
 ### Structured Data (JSON-LD)
 
@@ -280,7 +280,7 @@ Each article includes dual structured data:
 ```
 
 ### OpenGraph Tags
-**Current Status:** ⚠️ Not implemented (missing from articles)
+**Current Status:** [OK] Implemented on all nine articles. Each page includes title, description, URL, branded image, dimensions, alt text, and article metadata.
 
 **Recommended Addition:**
 ```html
@@ -294,7 +294,7 @@ Each article includes dual structured data:
 ```
 
 ### Twitter Cards
-**Current Status:** ⚠️ Not implemented
+**Current Status:** [OK] Implemented on all nine articles with `summary_large_image` cards.
 
 **Recommended Addition:**
 ```html
@@ -306,7 +306,7 @@ Each article includes dual structured data:
 
 ---
 
-## 🎨 UI Components
+## [DESIGN] UI Components
 
 ### Listing Pages (`adult.html`, `children.html`)
 
@@ -371,30 +371,30 @@ Each article includes dual structured data:
 
 ---
 
-## 📝 Article Inventory
+## Article Inventory
 
 ### Adult Mental Health (5 articles)
 
 | File | Title | Tags | Read Time | Pinned | Most Searched |
 |------|-------|------|-----------|--------|---------------|
-| `overthinking-vs-anxiety.html` | Overthinking vs anxiety | adult, overthinking, anxiety, beginner, most-searched | 5 min | ✅ | ✅ |
-| `scheduled-worry-time-technique.html` | Scheduled worry time technique | adult, anxiety, worry, technique | 7 min | ❌ | ❌ |
-| `sleep-and-anxiety-cycle.html` | Sleep and anxiety cycle | adult, sleep, anxiety, insomnia, beginner | 6 min | ✅ | ❌ |
-| `stimulus-control-therapy.html` | Stimulus control therapy | adult, sleep, insomnia, therapy, cbt-i | 8 min | ❌ | ❌ |
-| `when-to-see-a-psychiatrist.html` | When to see a psychiatrist | adult, psychiatry, help-seeking, beginner | 4 min | ❌ | ❌ |
+| `overthinking-vs-anxiety.html` | Overthinking vs anxiety | adult, overthinking, anxiety, beginner, most-searched | 5 min | [OK] | [OK] |
+| `scheduled-worry-time-technique.html` | Scheduled worry time technique | adult, anxiety, worry, technique | 7 min | [ERROR] | [ERROR] |
+| `sleep-and-anxiety-cycle.html` | Sleep and anxiety cycle | adult, sleep, anxiety, insomnia, beginner | 6 min | [OK] | [ERROR] |
+| `stimulus-control-therapy.html` | Stimulus control therapy | adult, sleep, insomnia, therapy, cbt-i | 8 min | [ERROR] | [ERROR] |
+| `when-to-see-a-psychiatrist.html` | When to see a psychiatrist | adult, psychiatry, help-seeking, beginner | 4 min | [ERROR] | [ERROR] |
 
 ### Child Development (4 articles)
 
 | File | Title | Tags | Read Time | Pinned | Most Searched |
 |------|-------|------|-----------|--------|---------------|
-| `early-signs-of-autism.html` | Early signs of autism | child, autism, red-flags, developmental, beginner | 6 min | ✅ | ❌ |
-| `school-concerns-and-adhd.html` | School concerns and ADHD | child, adhd, school, attention, learning | 5 min | ❌ | ❌ |
-| `sensory-overload-at-home.html` | Sensory overload at home | child, sensory, autism, adhd, parenting | 5 min | ❌ | ❌ |
-| `speech-delay-red-flags.html` | Speech delay red flags | child, speech-delay, communication, red-flags, beginner | 5 min | ✅ | ✅ |
+| `early-signs-of-autism.html` | Early signs of autism | child, autism, red-flags, developmental, beginner | 6 min | [OK] | [ERROR] |
+| `school-concerns-and-adhd.html` | School concerns and ADHD | child, adhd, school, attention, learning | 5 min | [ERROR] | [ERROR] |
+| `sensory-overload-at-home.html` | Sensory overload at home | child, sensory, autism, adhd, parenting | 5 min | [ERROR] | [ERROR] |
+| `speech-delay-red-flags.html` | Speech delay red flags | child, speech-delay, communication, red-flags, beginner | 5 min | [OK] | [OK] |
 
 ---
 
-## 🔗 Integration Guide
+## Integration Guide
 
 ### Adding a New Article
 
@@ -444,34 +444,15 @@ Add filename to appropriate `manifest.json`:
 
 ---
 
-## 🐛 Known Issues & Recommendations
+## Known Issues & Recommendations
 
-### Current Issues
+### Current status (verified 2026-08-26)
 
-1. **⚠️ Missing OpenGraph Tags**
-   - Articles lack `og:title`, `og:description`, `og:image`
-   - Impact: Poor social media sharing previews
-   - Fix: Add OG meta tags to all 9 articles
-
-2. **⚠️ Missing Twitter Cards**
-   - No `twitter:card` meta tags
-   - Impact: No rich previews on Twitter/X
-   - Fix: Add Twitter Card meta tags
-
-3. **⚠️ No Featured Images**
-   - Articles use clinic logo as fallback image
-   - Impact: Generic social sharing images
-   - Fix: Create unique featured images per article, reference in OG tags
-
-4. **⚠️ Minified JavaScript**
-   - `blog-discovery.js` is minified (~6.5KB)
-   - Impact: Hard to debug and maintain
-   - Fix: Keep unminified source in repo, build minified version for production
-
-5. **⚠️ No Search Functionality**
-   - Fuse.js included in vendor but not integrated
-   - Impact: Users can't search articles by keyword
-   - Fix: Implement search bar using Fuse.js for fuzzy search
+1. **[OK] Social metadata** — all nine articles have OpenGraph and Twitter card metadata.
+2. **[OK] Discovery** — adult and child hubs provide keyword search, symptom filters, and guided reading paths through `blog-discovery.js`.
+3. **[OK] Editorial enhancement** — article pages load related reading, next-step guidance, and helpfulness controls through `article-enhancements.js`.
+4. **[PLANNED] Unique featured images** — articles currently share the clinic’s branded `og-image.webp`; topic-specific editorial art would improve sharing previews.
+5. **[PLANNED] Source maintainability** — `blog-discovery.js` remains a compact production bundle; add an unminified source/build pipeline if blog complexity grows.
 
 ### Recommended Enhancements
 
@@ -497,7 +478,7 @@ Add filename to appropriate `manifest.json`:
 
 ---
 
-## 🧪 Testing Checklist
+## Testing Checklist
 
 ### Functional Tests
 - [ ] All 9 articles load without errors
@@ -531,7 +512,7 @@ Add filename to appropriate `manifest.json`:
 
 ---
 
-## 📈 Analytics Integration
+## Analytics Integration
 
 **Recommended Events to Track:**
 ```javascript
@@ -558,7 +539,7 @@ gtag('event', 'article_click', {
 
 ---
 
-## 🚀 Deployment Notes
+## [LAUNCH] Deployment Notes
 
 ### Base URL Configuration
 All articles use `<base href="/">` which assumes deployment at root domain.
@@ -581,7 +562,7 @@ Manifests are fetched with `Cache-Control: no-cache` header.
 
 ---
 
-## 📞 Support
+## Support
 
 **For questions about blog system architecture:**
 - Review `assets/js/blog-discovery.js` (decoded logic above)
@@ -595,5 +576,5 @@ Manifests are fetched with `Cache-Control: no-cache` header.
 
 ---
 
-**Documentation Version:** 1.0 (Phase 2, Run 4 Verified)  
+**Documentation Version:** 1.0 (Phase 2, Run 4 Verified)
 **Last Audit:** All files fetched and verified against actual codebase

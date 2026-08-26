@@ -26,7 +26,7 @@
     border-block-end-color:oklch(340 0.12 0.7 / 0.2);
     box-shadow:0 4px 20px oklch(0% 0 0 / 0.3);
   }
-  
+
   .site-header.scrolled{
     background:oklch(20% 0.08 340 / 0.95);
   }
@@ -589,28 +589,28 @@ body.compact-nav .mobile-nav-trigger{display:flex}
   .footer-content{
     grid-template-columns:repeat(2,1fr);
   }
-  
+
   .site-header .header-inner{
     padding-block:var(--space-2);
     padding-inline:var(--space-4);
   }
-  
+
   .desktop-nav{
     display:none;
   }
-  
+
   .logo-link{
     display:flex;
   }
-  
+
   .logo-tagline,.logo-text{
     display:none;
   }
-  
+
   .mobile-nav-trigger{
     display:flex;
   }
-  
+
   .mobile-book-btn{
     display:flex;
     align-items:center;
@@ -623,7 +623,7 @@ body.compact-nav .mobile-nav-trigger{display:flex}
     min-height:var(--touch-target-comfortable);
     min-width:var(--touch-target-comfortable);
   }
-  
+
   .mobile-book-btn svg{
     width:24px;
     height:24px;
@@ -685,7 +685,7 @@ body.compact-nav .mobile-nav-trigger{display:flex}
   .hero-buttons{
     flex-direction:column;
   }
-  
+
   .btn{
     width:100%;
   }
@@ -695,7 +695,7 @@ body.compact-nav .mobile-nav-trigger{display:flex}
   .logo-text{
     font-size:clamp(0.875rem,3vw,1.25rem);
   }
-  
+
   .desktop-nav a:not(.btn){
     padding-inline:var(--space-2);
     font-size:var(--font-size-xs);
@@ -707,11 +707,11 @@ body.compact-nav .mobile-nav-trigger{display:flex}
     grid-template-columns:1fr;
     text-align:center;
   }
-  
+
   .hero-badge{
     margin-inline:auto;
   }
-  
+
   .hero-buttons,.hero-trust{
     justify-content:center;
   }
@@ -767,7 +767,7 @@ body.compact-nav .mobile-nav-trigger{display:flex}
     background: oklch(20% 0.08 340 / 0.6);
     border-color: oklch(52% 0.22 340 / 0.3);
   }
-  
+
   .burger-toggle:hover,
   .burger-toggle:focus-visible {
     background: oklch(20% 0.08 340 / 0.85);
@@ -1013,7 +1013,7 @@ body.compact-nav .mobile-nav-trigger{display:flex}
     min-width: 44px;
     min-height: 44px;
   }
-  
+
   .nav-panel {
     right: 1rem;
     width: calc(100% - 2rem);
@@ -1038,16 +1038,16 @@ body.compact-nav .mobile-nav-trigger{display:flex}
     border: 2px solid CanvasText;
     background: Canvas;
   }
-  
+
   .burger-line {
     background: CanvasText;
   }
-  
+
   .nav-panel {
     border: 2px solid CanvasText;
     background: Canvas;
   }
-  
+
   .nav-link:hover,
   .nav-link:focus-visible {
     outline: 2px solid Highlight;

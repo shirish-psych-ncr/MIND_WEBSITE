@@ -1,1 +1,163 @@
-const canvas=document.getElementById("riverCanvas"),ctx=canvas.getContext("2d",{alpha:!1,desynchronized:!0}),ui=document.getElementById("ui"),input=document.getElementById("worryInput"),uiTrigger=document.getElementById("ui-trigger"),breathText=document.getElementById("breath-text"),inputModal=document.getElementById("inputModal");let w,h,time=0,lastTime=0,leaves=[],grass=[],mistParticles=[],waterRipples=[];const mountains={far:[],near:[]};let isInputOpen=!0,animationId=null,_breathPhase=0;const CONFIG={riverStart:.22,riverEnd:.78,waterfallStart:.82,colors:{skyTop:getCSSVar("--sky-top","#1a2a4a"),skyBottom:getCSSVar("--sky-bottom","#2a4a6a"),mountainFar:getCSSVar("--mountain-far","#1a2a3a"),mountainNear:getCSSVar("--mountain-near","#2a3a4a"),waterDeep:getCSSVar("--water-deep","#1a3a52"),waterMid:getCSSVar("--water-mid","#2a5a7a"),waterLight:getCSSVar("--water-light","#3a7a9a"),waterFoam:getCSSVar("--water-foam","rgba(255,255,255,0.12)"),grassSurface:getCSSVar("--grass-surface","#3d6b4f"),grassShadow:getCSSVar("--grass-shadow","#2a4a35"),earthBase:getCSSVar("--earth-base","#4a3728"),earthShadow:getCSSVar("--earth-shadow","#2a1f15"),leafGold:getCSSVar("--leaf-gold","#c9a961"),leafShadow:getCSSVar("--leaf-shadow","#8b7345")},leafMinWidth:70,leafPadding:40,leafLineHeight:16,leafMaxLines:3,baseSpeed:.0022,accelerationFactor:.0015,waterfallPull:.025,grassCount:75,rippleCount:12,mistDensity:3,mountainPeaksFar:4,mountainPeaksNear:3,breathCycleMs:5e3,leafLifetime:1};function getCSSVar(t,a){try{return getComputedStyle(document.documentElement).getPropertyValue(t).trim()||a}catch{return a}}function init(){try{resize(),initMountains(),initGrass(),initWaterRipples(),startAnimation(),window.addEventListener("resize",resize,{passive:!0}),uiTrigger.addEventListener("click",toggleInput),input.addEventListener("keypress",t=>{"Enter"===t.key&&releaseLeaf()}),document.addEventListener("contextmenu",t=>t.preventDefault()),setTimeout(()=>{try{input.focus()}catch(t){}},500)}catch(t){,ctx&&(ctx.fillStyle=CONFIG.colors.earthShadow,ctx.fillRect(0,0,w||800,h||600))}}function resize(){try{w=canvas.width=window.innerWidth,h=canvas.height=window.innerHeight,initMountains(),initGrass(),initWaterRipples()}catch(t){}}function initMountains(){try{mountains.far=[],mountains.near=[];const{mountainPeaksFar:t,mountainPeaksNear:a,colors:e}=CONFIG,i=w*CONFIG.riverStart,r=w*(CONFIG.riverEnd-CONFIG.riverStart);for(let a=0;a<t;a++){const s=i+(a+.5)*(r/t),n=80+60*Math.random(),o=60+40*Math.random();mountains.far.push({x:s,baseY:.4*h,height:n,width:o,color:e.mountainFar,parallax:.2})}for(let t=0;t<a;t++){const s=i+(t+.7)*(r/a),n=40+30*Math.random(),o=80+50*Math.random();mountains.near.push({x:s,baseY:.6*h,height:n,width:o,color:e.mountainNear,parallax:.5})}}catch(t){}}function initGrass(){try{grass=[];const{riverStart:t,riverEnd:a,grassCount:e,colors:i}=CONFIG;for(let r=0;r<2*e;r++){const e=Math.random()>.5?"left":"right",r="left"===e?w*t:w*(1-a),s="left"===e?Math.random()*(r-15)+8:w-Math.random()*(r-15)-8;grass.push({x:s,y:Math.random()*h*.95,length:8+18*Math.random(),thickness:1+1.2*Math.random(),sways:Math.random()>.4,phase:Math.random()*Math.PI*2,swaySpeed:.02+.03*Math.random(),color:Math.random()>.6?i.grassSurface:i.grassShadow})}}catch(t){}}function initWaterRipples(){try{waterRipples=[];const{riverStart:t,riverEnd:a,rippleCount:e}=CONFIG,i=w*(a-t);for(let a=0;a<e;a++)waterRipples.push({x:w*t+Math.random()*i,y:Math.random()*h*.9,radius:15+25*Math.random(),speed:.3+.4*Math.random(),opacity:.03+.04*Math.random(),phase:Math.random()*Math.PI*2})}catch(t){}}function toggleInput(t){try{t&&t.stopPropagation(),isInputOpen=!isInputOpen,isInputOpen?(ui.classList.remove("hidden"),inputModal.classList.remove("hidden"),uiTrigger.classList.add("active"),setTimeout(()=>{try{input.focus(),input.select()}catch{}},200)):(ui.classList.add("hidden"),inputModal.classList.add("hidden"),uiTrigger.classList.remove("active"))}catch(t){}}class Leaf{constructor(t){this.text=t.trim(),this.measureAndSize(),this.resetPosition(),this.initPhysics()}measureAndSize(){try{ctx.font="italic 14px 'Outfit', sans-serif",ctx.textAlign="center";const t=this.text.split(" "),a=[];let e="";for(const i of t){const t=e?`${e} ${i}`:i;ctx.measureText(t).width>CONFIG.leafMinWidth-20&&e?(a.push(e),e=i):e=t}e&&a.push(e),a.length>CONFIG.leafMaxLines&&(a.length=CONFIG.leafMaxLines,a[CONFIG.leafMaxLines-1]=`${a[CONFIG.leafMaxLines-1].slice(0,-3)}…`),this.lines=a,this.lineCount=a.length;const i=Math.max(...a.map(t=>ctx.measureText(t).width));this.leafWidth=Math.max(CONFIG.leafMinWidth,i+CONFIG.leafPadding);const r=this.lineCount*CONFIG.leafLineHeight,s=35;this.leafHeight=Math.max(45,r+s)}catch(t){,this.lines=[this.text.slice(0,30)],this.lineCount=1,this.leafWidth=CONFIG.leafMinWidth,this.leafHeight=28}}resetPosition(){try{const t=w*(CONFIG.riverEnd-CONFIG.riverStart),a=w*CONFIG.riverStart;this.x=a+.35*t+Math.random()*t*.3,this.y=-80,this.progress=0,this.baseAngle=.3*(Math.random()-.5),this.wobblePhase=Math.random()*Math.PI*2,this.wobbleSpeed=.015+.01*Math.random(),this.opacity=1,this.scale=1,this.inWaterfall=!1,this.dissolving=!1}catch(t){,this.x=.5*w,this.y=-80,this.progress=0}}initPhysics(){this.angle=this.baseAngle,this.angularVel=.005*(Math.random()-.5),this.vx=.3*(Math.random()-.5)}update(t){try{const a=t/16.67,e=CONFIG.baseSpeed+this.progress*CONFIG.accelerationFactor;this.progress+=e*a,this.y=this.progress*h,this.x+=this.vx+.25*Math.sin(.015*time+.006*this.y+this.wobblePhase),this.angle=this.baseAngle+.15*Math.sin(this.wobblePhase+time*this.wobbleSpeed),this.wobblePhase+=.01*a;const i=w*CONFIG.riverStart,r=w*(CONFIG.riverEnd-CONFIG.riverStart),s=.55*this.leafWidth;if(this.x<i+s&&(this.x=i+s,this.vx=.3*Math.abs(this.vx)+.1),this.x>i+r-s&&(this.x=i+r-s,this.vx=.3*-Math.abs(this.vx)-.1),this.progress>CONFIG.waterfallStart&&!this.inWaterfall&&(this.inWaterfall=!0,this.angularVel=.04*(Math.random()-.5)),this.inWaterfall){if(this.scale*=.97,this.opacity*=.96,this.angularVel*=1.05,this.angle+=this.angularVel*a,Math.random()>.6)for(let t=0;t<CONFIG.mistDensity;t++)mistParticles.push(new MistParticle(this.x+(Math.random()-.5)*this.leafWidth*.4,this.y+(Math.random()-.5)*this.leafHeight*.4));this.scale<.3&&!this.dissolving&&(this.dissolving=!0)}}catch(t){}}draw(t){try{if(this.opacity<.02)return;ctx.save(),ctx.translate(this.x,this.y),ctx.rotate(this.angle),ctx.scale(this.scale*t,this.scale*t),ctx.globalAlpha=this.opacity;const a=this.leafWidth/2,e=this.leafHeight/2,i=Math.min(.85,.75+this.leafHeight/200);ctx.beginPath(),ctx.moveTo(0,.88*-e),ctx.quadraticCurveTo(a*i,.28*-e,.82*a,0),ctx.quadraticCurveTo(a*i,.28*e,0,.78*e),ctx.quadraticCurveTo(-a*i,.28*e,.82*-a,0),ctx.quadraticCurveTo(-a*i,.28*-e,0,.88*-e),ctx.closePath(),ctx.clip();const r=ctx.createLinearGradient(-a,-e,a,e);r.addColorStop(0,CONFIG.colors.leafGold),r.addColorStop(.5,CONFIG.colors.leafGold),r.addColorStop(1,CONFIG.colors.leafShadow),ctx.fillStyle=r,ctx.shadowBlur=this.inWaterfall?8:15,ctx.shadowColor="rgba(0, 0, 0, 0.35)",ctx.fill(),ctx.fillStyle="rgba(255, 255, 255, 0.95)",ctx.font="italic 13px 'Outfit', sans-serif",ctx.textAlign="center",ctx.textBaseline="middle",ctx.shadowBlur=4,ctx.shadowColor="rgba(0, 0, 0, 0.5)";const s=.85*this.leafWidth,n=(this.leafHeight,-(this.lineCount*CONFIG.leafLineHeight)/2+2);this.lines.forEach((t,a)=>{let e=t;if(ctx.measureText(t).width>s){for(;ctx.measureText(`${e}…`).width>s&&e.length>4;)e=e.slice(0,-1);e+="…"}ctx.fillText(e,0,n+a*CONFIG.leafLineHeight)}),ctx.restore()}catch(t){}}isExpired(){return this.opacity<.02||this.scale<.05||this.y>h+100}}class MistParticle{constructor(t,a){this.x=t+30*(Math.random()-.5),this.y=a,this.vx=2.5*(Math.random()-.5),this.vy=2*-Math.random()-1,this.alpha=.35+.3*Math.random(),this.size=1+3*Math.random(),this.decay=.008+.006*Math.random()}update(t){const a=t/16.67;this.x+=this.vx*a,this.y+=this.vy*a,this.alpha-=this.decay*a,this.size*=.99}draw(){this.alpha<=0||(ctx.fillStyle=`rgba(255, 255, 255, ${this.alpha})`,ctx.beginPath(),ctx.arc(this.x,this.y,this.size,0,2*Math.PI),ctx.fill())}isExpired(){return this.alpha<=.01}}function releaseLeaf(){try{const t=input.value.trim();if(!t)return input.style.animation="none",void setTimeout(()=>{input.style.animation=null},200);leaves.push(new Leaf(t)),input.value="",input.focus(),navigator.vibrate&&navigator.vibrate([10,25,10])}catch(t){}}function drawSky(){try{const t=ctx.createLinearGradient(0,0,0,.6*h);t.addColorStop(0,CONFIG.colors.skyTop),t.addColorStop(1,CONFIG.colors.skyBottom),ctx.fillStyle=t,ctx.fillRect(0,0,w,.6*h)}catch(t){ctx.fillStyle=CONFIG.colors.skyBottom,ctx.fillRect(0,0,w,h)}}function drawMountains(t){try{ctx.fillStyle=CONFIG.colors.mountainFar,mountains.far.forEach(a=>{const e=a.x-t*a.parallax;ctx.beginPath(),ctx.moveTo(e-a.width/2,a.baseY),ctx.lineTo(e,a.baseY-a.height),ctx.lineTo(e+a.width/2,a.baseY),ctx.closePath(),ctx.fill()}),ctx.fillStyle=CONFIG.colors.mountainNear,mountains.near.forEach(a=>{const e=a.x-t*a.parallax;ctx.beginPath(),ctx.ellipse(e,a.baseY,a.width/2,a.height,0,Math.PI,0),ctx.fill()})}catch(t){}}function drawBanks(){try{const{riverStart:t,riverEnd:a,colors:e}=CONFIG,i=w*t;ctx.fillStyle=e.earthShadow,ctx.fillRect(0,0,i,h),ctx.fillStyle=e.earthBase,ctx.fillRect(0,0,i-8,h),ctx.fillStyle=e.earthShadow,ctx.fillRect(w-i,0,i,h),ctx.fillStyle=e.earthBase,ctx.fillRect(w-i+8,0,i,h)}catch(t){}}function drawWater(){try{const{riverStart:t,riverEnd:a,colors:e}=CONFIG,i=w*t,r=w*(a-t),s=ctx.createLinearGradient(i,0,i+r,h);s.addColorStop(0,e.waterDeep),s.addColorStop(.4,e.waterMid),s.addColorStop(1,e.waterLight),ctx.fillStyle=s,ctx.fillRect(i,0,r,h),ctx.strokeStyle="rgba(255, 255, 255, 0.03)",ctx.lineWidth=1;for(let t=0;t<14;t++){const a=(time*(.4+t%3*.15)+140*t)%h,e=i+t*(r/14),s=8*Math.sin(.005*time+.2*t);ctx.beginPath(),ctx.moveTo(e,a),ctx.quadraticCurveTo(e+s,a+35,e+.5*s,a+70),ctx.stroke()}waterRipples.forEach(t=>{t.y+=t.speed,t.y>h&&(t.y=-t.radius);const a=.5+.3*Math.sin(.015*time+t.phase);ctx.strokeStyle=`rgba(255, 255, 255, ${t.opacity*a})`,ctx.lineWidth=.7,ctx.beginPath(),ctx.ellipse(t.x,t.y,t.radius*(.8+.3*a),.25*t.radius,0,2*Math.PI),ctx.stroke()});const n=ctx.createLinearGradient(0,h*CONFIG.waterfallStart,0,h);n.addColorStop(0,"transparent"),n.addColorStop(.7,CONFIG.colors.waterFoam),n.addColorStop(1,"rgba(255,255,255,0.2)"),ctx.fillStyle=n,ctx.fillRect(i,h*CONFIG.waterfallStart,r,h*(1-CONFIG.waterfallStart))}catch(t){}}function drawGrass(t){try{grass.forEach(t=>{const a=t.sways?6*Math.sin(time*t.swaySpeed+t.phase):0;ctx.strokeStyle=t.color,ctx.lineWidth=t.thickness,ctx.lineCap="round",ctx.beginPath(),ctx.moveTo(t.x,t.y),ctx.quadraticCurveTo(t.x+.4*a,t.y-.5*t.length,t.x+a+1.5*(t.thickness-1),t.y-t.length),ctx.stroke()})}catch(t){}}function drawBreathPulse(){try{const t=Date.now()%CONFIG.breathCycleMs/CONFIG.breathCycleMs;return _breathPhase=t,breathText.textContent=t<.5?`Inhale ${Math.round(200*t)}%`:`Exhale ${Math.round(200*(t-.5))}%`,.99+.015*Math.sin(t*Math.PI*2)}catch{return 1}}function drawLeaves(t,a){try{const e=a/16.67;for(let a=leaves.length-1;a>=0;a--){const i=leaves[a];i.update(e),i.draw(t),i.isExpired()&&leaves.splice(a,1)}}catch(t){}}function drawMist(t){try{const a=t/16.67;for(let t=mistParticles.length-1;t>=0;t--){const e=mistParticles[t];e.update(a),e.draw(),e.isExpired()&&mistParticles.splice(t,1)}}catch(t){}}function animate(t){try{lastTime||(lastTime=t);const a=Math.min(t-lastTime,100);lastTime=t,ctx.fillStyle=CONFIG.colors.earthShadow,ctx.fillRect(0,0,w,h),drawSky(),drawMountains(.05*time),drawBanks(),drawWater(),drawGrass(a);const e=drawBreathPulse();drawMist(a),drawLeaves(e,a),time++,animationId=requestAnimationFrame(animate)}catch(t){,animationId&&cancelAnimationFrame(animationId),animationId=requestAnimationFrame(animate)}}function startAnimation(){animationId&&cancelAnimationFrame(animationId),lastTime=0,animate(0)}document.addEventListener("visibilitychange",()=>{document.hidden&&animationId?(cancelAnimationFrame(animationId),animationId=null):document.hidden||animationId||startAnimation()}),init();
+(() => {
+  "use strict";
+
+  const canvas = document.getElementById("riverCanvas");
+  const context = canvas?.getContext("2d", { alpha: false });
+  const input = document.getElementById("worryInput");
+  const form = document.getElementById("releaseForm");
+  const sendButton = document.getElementById("sendBtn");
+  const trigger = document.getElementById("ui-trigger");
+  const panel = document.getElementById("inputModal");
+  const interfacePanel = document.getElementById("ui");
+  const count = document.getElementById("charCount");
+  const status = document.getElementById("breath-text");
+
+  if (!canvas || !context || !input || !form) return;
+
+  const state = { width: 0, height: 0, ratio: 1, time: 0, lastFrame: 0, animation: 0, inputOpen: true, leaves: [], ripples: [], reeds: [] };
+  const colors = {
+    skyTop: "#2d1025", skyBottom: "#f4b3c8", riverDeep: "#32194b", riverMid: "#663b78", riverLight: "#d581a4",
+    bank: "#28162a", pink: "#f4a8c4", lava: "#c52f69", gold: "#f4c66d", foam: "rgb(255 239 246 / 46%)"
+  };
+  const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  const riverCenter = (progress) => state.width * .5 + Math.sin(progress * 4.4 + .35) * state.width * .11;
+  const riverWidth = (progress) => state.width * (.28 + progress * .15 + Math.sin(progress * 2.5) * .025);
+
+  function resize() {
+    state.ratio = Math.min(window.devicePixelRatio || 1, 2);
+    state.width = Math.max(320, window.innerWidth);
+    state.height = Math.max(480, window.innerHeight);
+    canvas.width = Math.round(state.width * state.ratio);
+    canvas.height = Math.round(state.height * state.ratio);
+    canvas.style.width = `${state.width}px`;
+    canvas.style.height = `${state.height}px`;
+    context.setTransform(state.ratio, 0, 0, state.ratio, 0, 0);
+    buildDetails();
+  }
+
+  function buildDetails() {
+    state.ripples = Array.from({ length: 18 }, (_, index) => ({ progress: Math.random(), offset: (Math.random() - .5) * .7, length: 18 + Math.random() * 62, phase: index * .8 + Math.random() * 2 }));
+    state.reeds = Array.from({ length: Math.max(36, Math.round(state.width / 16)) }, () => ({ side: Math.random() > .5 ? -1 : 1, progress: Math.random(), height: 10 + Math.random() * 34, lean: (Math.random() - .5) * 13 }));
+  }
+
+  function setStatus(message) { if (status) status.textContent = message; }
+  function updateCount() { if (count) count.textContent = String(input.value.length); }
+  function setInputOpen(open) {
+    state.inputOpen = open;
+    interfacePanel?.classList.toggle("hidden", !open);
+    panel?.classList.toggle("hidden", !open);
+    trigger?.classList.toggle("active", open);
+    trigger?.setAttribute("aria-expanded", String(open));
+    if (open) window.setTimeout(() => input.focus(), 120);
+  }
+
+  function wrapText(text, maxWidth, font) {
+    context.font = font;
+    const lines = [];
+    let line = "";
+    text.split(/\s+/).filter(Boolean).forEach((word) => {
+      const candidate = line ? `${line} ${word}` : word;
+      if (line && context.measureText(candidate).width > maxWidth) { lines.push(line); line = word; } else line = candidate;
+    });
+    if (line) lines.push(line);
+    if (lines.length > 3) {
+      lines.length = 3;
+      let last = lines[2];
+      while (context.measureText(`${last}…`).width > maxWidth && last.length > 4) last = last.slice(0, -1);
+      lines[2] = `${last}…`;
+    }
+    return lines;
+  }
+
+  class ThoughtLeaf {
+    constructor(text) {
+      this.text = text; this.progress = 0; this.speed = .000018 + Math.random() * .00001; this.phase = Math.random() * Math.PI * 2;
+      this.rotation = (Math.random() - .5) * .45; this.rotationSpeed = (Math.random() - .5) * .0009; this.falling = false;
+      this.x = riverCenter(0); this.y = state.height * .09; this.opacity = 0; this.lines = wrapText(text, 118, "600 13px Outfit, sans-serif");
+    }
+    update(milliseconds) {
+      const dt = Math.min(milliseconds, 80);
+      if (!this.falling) {
+        this.speed = Math.min(.00024, this.speed + dt * .000000045);
+        this.progress += this.speed * dt;
+        const wave = Math.sin(state.time * .0011 + this.phase) * state.height * .014;
+        const sink = Math.sin(state.time * .00062 + this.phase) * state.height * .032;
+        const progress = clamp(this.progress, 0, 1);
+        const center = riverCenter(progress); const width = riverWidth(progress);
+        this.x = center + Math.sin(state.time * .0008 + this.phase) * width * .27;
+        this.y = state.height * (.09 + this.progress * .74) + wave + sink;
+        this.rotation += this.rotationSpeed * dt + Math.sin(state.time * .0007 + this.phase) * .0005;
+        this.opacity = clamp(this.opacity + dt * .003, 0, 1);
+        if (this.progress >= .86) this.falling = true;
+      } else {
+        this.y += dt * (.16 + this.progress * .3); this.x += dt * .08; this.rotation += dt * .004; this.opacity -= dt * .0017;
+      }
+    }
+    draw() {
+      if (this.opacity <= .01) return;
+      const scale = clamp(1 + Math.sin(state.time * .001 + this.phase) * .04, .94, 1.06);
+      const width = 78 + Math.min(54, this.lines.join(" ").length * .2); const height = 54 + (this.lines.length - 1) * 4;
+      context.save(); context.translate(this.x, this.y); context.rotate(this.rotation); context.scale(scale, scale); context.globalAlpha = this.opacity;
+      context.shadowColor = "rgb(24 5 21 / 38%)"; context.shadowBlur = 18; context.shadowOffsetY = 8;
+      context.beginPath(); context.moveTo(0, -height / 2); context.bezierCurveTo(width * .48, -height * .3, width * .48, height * .2, width * .05, height / 2); context.bezierCurveTo(-width * .3, height * .38, -width * .5, -height * .08, 0, -height / 2); context.closePath();
+      const gradient = context.createLinearGradient(-width / 2, -height / 2, width / 2, height / 2); gradient.addColorStop(0, colors.pink); gradient.addColorStop(.55, colors.lava); gradient.addColorStop(1, colors.gold); context.fillStyle = gradient; context.fill();
+      context.shadowColor = "transparent"; context.strokeStyle = "rgb(255 245 249 / 78%)"; context.lineWidth = 1; context.beginPath(); context.moveTo(-width * .35, 0); context.quadraticCurveTo(0, -height * .04, width * .35, -height * .15); context.stroke();
+      context.fillStyle = "#2b1020"; context.font = "600 13px Outfit, sans-serif"; context.textAlign = "center"; context.textBaseline = "middle";
+      this.lines.forEach((line, index) => context.fillText(line, 0, (index - (this.lines.length - 1) / 2) * 15)); context.restore();
+    }
+    expired() { return this.opacity <= .01 || this.y > state.height + 100; }
+  }
+
+  function releaseLeaf() {
+    const text = input.value.trim();
+    if (!text) {
+      panel?.classList.add("is-invalid"); window.setTimeout(() => panel?.classList.remove("is-invalid"), 420); setStatus("Write one thought before releasing it."); input.focus(); return false;
+    }
+    state.leaves.push(new ThoughtLeaf(text)); input.value = ""; updateCount(); setStatus("Released. Watch it drift, settle, and leave the river.");
+    if (navigator.vibrate) navigator.vibrate([10, 25, 10]);
+    return true;
+  }
+
+  function drawSky() {
+    const gradient = context.createLinearGradient(0, 0, 0, state.height * .72); gradient.addColorStop(0, colors.skyTop); gradient.addColorStop(.55, "#914263"); gradient.addColorStop(1, colors.skyBottom); context.fillStyle = gradient; context.fillRect(0, 0, state.width, state.height);
+    context.fillStyle = "rgb(255 227 236 / 28%)"; context.beginPath(); context.arc(state.width * .78, state.height * .18, Math.min(state.width, state.height) * .08, 0, Math.PI * 2); context.fill();
+  }
+  function drawHills() {
+    context.fillStyle = "rgb(42 18 43 / 74%)"; context.beginPath(); context.moveTo(0, state.height * .34); context.quadraticCurveTo(state.width * .2, state.height * .22, state.width * .42, state.height * .35); context.quadraticCurveTo(state.width * .68, state.height * .18, state.width, state.height * .32); context.lineTo(state.width, state.height); context.lineTo(0, state.height); context.closePath(); context.fill();
+    context.fillStyle = "rgb(113 48 79 / 78%)"; context.beginPath(); context.moveTo(0, state.height * .47); context.quadraticCurveTo(state.width * .28, state.height * .34, state.width * .5, state.height * .48); context.quadraticCurveTo(state.width * .78, state.height * .36, state.width, state.height * .45); context.lineTo(state.width, state.height); context.lineTo(0, state.height); context.closePath(); context.fill();
+  }
+  function riverPath() {
+    const topCenter = riverCenter(0); const bottomCenter = riverCenter(1); const topHalf = riverWidth(0) / 2; const bottomHalf = riverWidth(1) / 2;
+    context.beginPath(); context.moveTo(topCenter - topHalf, 0); context.bezierCurveTo(state.width * .25, state.height * .3, state.width * .22, state.height * .62, bottomCenter - bottomHalf, state.height); context.lineTo(bottomCenter + bottomHalf, state.height); context.bezierCurveTo(state.width * .78, state.height * .62, state.width * .76, state.height * .3, topCenter + topHalf, 0); context.closePath();
+  }
+  function drawRiver() {
+    riverPath(); const gradient = context.createLinearGradient(0, 0, 0, state.height); gradient.addColorStop(0, colors.riverDeep); gradient.addColorStop(.46, colors.riverMid); gradient.addColorStop(1, colors.riverLight); context.fillStyle = gradient; context.fill();
+    context.save(); riverPath(); context.clip();
+    state.ripples.forEach((ripple) => { const y = (ripple.progress * state.height + state.time * (.012 + ripple.progress * .016)) % (state.height + 70) - 30; const progress = clamp(y / state.height, 0, 1); const x = riverCenter(progress) + ripple.offset * riverWidth(progress); const alpha = .16 + Math.sin(state.time * .001 + ripple.phase) * .06; context.strokeStyle = `rgb(255 235 244 / ${alpha})`; context.lineWidth = 1; context.beginPath(); context.moveTo(x - ripple.length / 2, y); context.quadraticCurveTo(x, y + Math.sin(state.time * .001 + ripple.phase) * 5, x + ripple.length / 2, y); context.stroke(); });
+    const mist = context.createLinearGradient(0, state.height * .78, 0, state.height); mist.addColorStop(0, "transparent"); mist.addColorStop(1, "rgb(255 232 243 / 36%)"); context.fillStyle = mist; context.fillRect(0, state.height * .76, state.width, state.height * .24); context.restore();
+  }
+  function drawBanks() {
+    context.save(); context.globalAlpha = .92; context.fillStyle = colors.bank;
+    context.beginPath(); context.moveTo(0, 0); context.lineTo(state.width * .28, 0); context.bezierCurveTo(state.width * .18, state.height * .3, state.width * .23, state.height * .7, state.width * .3, state.height); context.lineTo(0, state.height); context.closePath(); context.fill();
+    context.beginPath(); context.moveTo(state.width, 0); context.lineTo(state.width * .72, 0); context.bezierCurveTo(state.width * .82, state.height * .3, state.width * .77, state.height * .7, state.width * .7, state.height); context.lineTo(state.width, state.height); context.closePath(); context.fill(); context.restore();
+  }
+  function drawCliff() { const y = state.height * .86; context.fillStyle = "rgb(255 231 240 / 18%)"; context.fillRect(0, y, state.width, 2); context.fillStyle = colors.foam; context.fillRect(state.width * .32, y, state.width * .36, 3); context.fillStyle = "rgb(30 10 28 / 42%)"; context.fillRect(0, state.height * .93, state.width, state.height * .07); }
+  function drawReeds() { state.reeds.forEach((reed) => { const center = riverCenter(reed.progress); const edge = center + reed.side * (riverWidth(reed.progress) / 2 + 9); const y = reed.progress * state.height; context.strokeStyle = reed.side < 0 ? "rgb(244 168 196 / 48%)" : "rgb(255 220 171 / 42%)"; context.lineWidth = 1.2; context.beginPath(); context.moveTo(edge, y); context.quadraticCurveTo(edge + reed.lean, y - reed.height * .55, edge + reed.lean * .7, y - reed.height); context.stroke(); }); }
+
+  function render(milliseconds) {
+    state.time = milliseconds; context.clearRect(0, 0, state.width, state.height); drawSky(); drawHills(); drawRiver(); drawBanks(); drawReeds(); drawCliff();
+    for (let index = state.leaves.length - 1; index >= 0; index -= 1) { const leaf = state.leaves[index]; leaf.update(milliseconds - state.lastFrame); leaf.draw(); if (leaf.expired()) state.leaves.splice(index, 1); }
+    state.lastFrame = milliseconds; state.animation = window.requestAnimationFrame(render);
+  }
+
+  function init() {
+    resize(); window.addEventListener("resize", resize, { passive: true });
+    form.addEventListener("submit", (event) => { event.preventDefault(); releaseLeaf(); }); sendButton?.addEventListener("click", releaseLeaf); input.addEventListener("input", updateCount);
+    input.addEventListener("keydown", (event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); releaseLeaf(); } });
+    trigger?.addEventListener("click", () => setInputOpen(!state.inputOpen)); document.addEventListener("visibilitychange", () => { if (document.hidden && state.animation) { window.cancelAnimationFrame(state.animation); state.animation = 0; } else if (!document.hidden && !state.animation) { state.lastFrame = performance.now(); state.animation = window.requestAnimationFrame(render); } });
+    updateCount(); setInputOpen(true); state.lastFrame = performance.now(); state.animation = window.requestAnimationFrame(render);
+  }
+
+  window.MindGraceLeaf = { release: releaseLeaf, toggleInput: () => setInputOpen(!state.inputOpen), getState: () => ({ leafCount: state.leaves.length, inputOpen: state.inputOpen }) };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true }); else init();
+})();

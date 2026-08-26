@@ -9,22 +9,22 @@
 
 This repository contains the complete web presence for **Mind Grace Neuropsychiatric Clinic**, a mental health practice in Greater Noida, India, led by Dr. Anita Sharma. The website is built with modern, framework-free technologies emphasizing:
 
-- ✨ **Intrinsic Responsiveness** — Adapts to any screen without breakpoints
-- 🎨 **Fluid Design System** — Typography and spacing scale smoothly
-- ♿ **Accessibility First** — WCAG 2.1 AA compliant
-- 🚀 **Performance Optimized** — Vanilla HTML/CSS/JS, no frameworks
-- 📱 **Mobile First** — Works on all devices and viewport sizes
-- 🌙 **Dark Mode Support** — Respects user preferences
+- [HIGHLIGHT] **Intrinsic Responsiveness** — Adapts to any screen without breakpoints
+- [DESIGN] **Fluid Design System** — Typography and spacing scale smoothly
+- [ACCESSIBILITY] **Accessibility First** — WCAG 2.1 AA compliant
+- [LAUNCH] **Performance Optimized** — Vanilla HTML/CSS/JS, no frameworks
+- [MOBILE] **Mobile First** — Works on all devices and viewport sizes
+- [DARK MODE] **Dark Mode Support** — Respects user preferences
 
 ---
 
 ## Quick Links
 
-- **🌐 Live Site:** [https://shirish-psych-ncr.github.io/MIND_WEBSITE/](https://shirish-psych-ncr.github.io/MIND_WEBSITE/)
-- **📐 Architecture Documentation:** [`ARCHITECTURE.md`](./ARCHITECTURE.md)
-- **🎨 CSS Documentation:** [`assets/css/README.md`](./assets/css/README.md)
-- **⚙️ JavaScript Documentation:** [`assets/js/README.md`](./assets/js/README.md)
-- **🤖 AI Agent Guide:** [`AGENT_BIBLE/`](./AGENT_BIBLE/)
+- **[WEB] Live Site:** [https://shirish-psych-ncr.github.io/MIND_WEBSITE/](https://shirish-psych-ncr.github.io/MIND_WEBSITE/)
+- **[LAYOUT] Architecture Documentation:** [`ARCHITECTURE.md`](./ARCHITECTURE.md)
+- **[DESIGN] CSS Documentation:** [`assets/css/README.md`](./assets/css/README.md)
+- **[SETTINGS] JavaScript Documentation:** [`assets/js/README.md`](./assets/js/README.md)
+- **AI Agent Guide:** [`AGENT_BIBLE/`](./AGENT_BIBLE/)
 
 ---
 
@@ -94,7 +94,7 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) for complete details.
 
 ## Key Features
 
-### 🏠 Core Pages
+### Core Pages
 
 - Homepage with intrinsic grid layout
 - Services overview (Psychiatry, Counseling, Child Development)
@@ -105,7 +105,7 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) for complete details.
 - Emergency resources
 - Legal pages (Privacy, Consent, Terms)
 
-### 🧘 Therapeutic Tools
+### Therapeutic Tools
 
 Interactive self-help resources:
 
@@ -117,7 +117,7 @@ Interactive self-help resources:
 - **Leaf on Stream** — mindfulness metaphor
 - **Resource Book** — psychoeducational content
 
-### 📝 Blog System
+### Blog System
 
 Dynamic blog with categories:
 
@@ -145,11 +145,11 @@ Dynamic blog with categories:
 
 ### Responsive Philosophy
 
-- ✅ Grid `auto-fit` with `minmax()`
-- ✅ Fluid `clamp()` for typography & spacing
-- ✅ Container queries for component responsiveness
-- ✅ Modern viewport units (`dvh`, `dvw`)
-- ❌ No fixed breakpoints
+- [OK] Grid `auto-fit` with `minmax()`
+- [OK] Fluid `clamp()` for typography & spacing
+- [OK] Container queries for component responsiveness
+- [OK] Modern viewport units (`dvh`, `dvw`)
+- [ERROR] No fixed breakpoints
 
 ---
 
@@ -226,14 +226,14 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Contribution Guidelines_ for det
 
 This website strives for **WCAG 2.1 Level AA** compliance:
 
-✅ Semantic HTML5 landmarks  
-✅ ARIA labels and roles  
-✅ Keyboard navigation support  
-✅ Focus visible indicators  
-✅ Skip links  
-✅ Reduced motion support  
-✅ Color contrast compliance  
-✅ Screen reader compatible
+[OK] Semantic HTML5 landmarks
+[OK] ARIA labels and roles
+[OK] Keyboard navigation support
+[OK] Focus visible indicators
+[OK] Skip links
+[OK] Reduced motion support
+[OK] Color contrast compliance
+[OK] Screen reader compatible
 
 **Testing tools used:**
 
@@ -250,23 +250,23 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 
 | Metric         | Score | Status         |
 | -------------- | ----- | -------------- |
-| Performance    | 95+   | ✅ Optimized   |
-| Accessibility  | 98+   | ✅ WCAG 2.1 AA |
-| Best Practices | 95+   | ✅ No Errors   |
-| SEO            | 95+   | ✅ Complete    |
+| Performance    | 95+   | [OK] Optimized   |
+| Accessibility  | 98+   | [OK] WCAG 2.1 AA |
+| Best Practices | 95+   | [OK] No Errors   |
+| SEO            | 95+   | [OK] Complete    |
 
 **Recent Fixes (July 2026):**
 
-- ✅ Fixed `floating-ui.min.js` - Replaced corrupted library with complete UMD build (22KB) containing both Core and DOM libraries
-- ✅ Resolved `detectOverflow` undefined error across all 25 HTML files
-- ✅ Standardized script loading order (ky → http-client → main)
-- ✅ Removed `defer` attributes from module scripts (modules load async by default)
-- ✅ Added `<meta charset="UTF-8">` as first head element in all 25 HTML files
-- ✅ Updated canonical URLs to absolute paths (`https://shirish-psych-ncr.github.io/MIND_WEBSITE/[page].html`) for SEO compliance
-- ✅ Fixed Floating UI namespace detection in `ui-popovers.js` (checks for both `FloatingUI` and `FloatingUIDOM`)
-- ✅ Resolved "Ky library not loaded" race conditions by ensuring proper script execution order
-- ✅ Fixed charset definition warnings in Lighthouse audits
-- ✅ Corrected hreflang and canonical link formats for search engine optimization
+- [OK] Fixed `floating-ui.min.js` - Replaced corrupted library with complete UMD build (22KB) containing both Core and DOM libraries
+- [OK] Resolved `detectOverflow` undefined error across all 25 HTML files
+- [OK] Standardized script loading order (ky → http-client → main)
+- [OK] Removed `defer` attributes from module scripts (modules load async by default)
+- [OK] Added `<meta charset="UTF-8">` as first head element in all 25 HTML files
+- [OK] Updated canonical URLs to absolute paths (`https://shirish-psych-ncr.github.io/MIND_WEBSITE/[page].html`) for SEO compliance
+- [OK] Fixed Floating UI namespace detection in `ui-popovers.js` (checks for both `FloatingUI` and `FloatingUIDOM`)
+- [OK] Resolved "Ky library not loaded" race conditions by ensuring proper script execution order
+- [OK] Fixed charset definition warnings in Lighthouse audits
+- [OK] Corrected hreflang and canonical link formats for search engine optimization
 
 **Optimization strategies:**
 
@@ -284,11 +284,11 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 
 | Browser          | Version | Support |
 | ---------------- | ------- | ------- |
-| Chrome           | Last 2  | ✅ Full |
-| Firefox          | Last 2  | ✅ Full |
-| Safari           | Last 2  | ✅ Full |
-| Edge             | Last 2  | ✅ Full |
-| Samsung Internet | Last 2  | ✅ Full |
+| Chrome           | Last 2  | [OK] Full |
+| Firefox          | Last 2  | [OK] Full |
+| Safari           | Last 2  | [OK] Full |
+| Edge             | Last 2  | [OK] Full |
+| Samsung Internet | Last 2  | [OK] Full |
 
 **Graceful degradation:** Older browsers receive functional (if less polished) experience.
 
@@ -303,21 +303,22 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 
 ## Technical Debt & Roadmap
 
-### Current Issues
+### Current status
 
-See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Technical Debt & Issues_ for complete list.
+The local site audit on 2026-08-26 covers 43 public routes. The shared shell, breadcrumbs, theme tokens, Lucide icons, image fallbacks, gallery data, and six therapeutic tools are wired and browser-tested. Utility routes `404.html` and `thank-you.html` are intentionally `noindex`.
 
-### Priority Tasks
+### Remaining work
 
-1. ⚠️ Remove duplicate homepage files (`index-old.html`, `index-revamp.html`)
-2. ✅ Created `terms.html` and `disclaimer.html`
-3. ⚠️ Update `site.webmanifest` with correct branding
-4. ⚠️ Generate complete `sitemap.xml`
-5. ⚠️ Optimize images (WebP/AVIF conversion)
+1. [OK] Legacy duplicate homepage files are absent.
+2. [OK] `terms.html`, `disclaimer.html`, `site.webmanifest`, `robots.txt`, and the 41-URL indexable sitemap are present and branded.
+3. [OK] Local image sources, alt text, canonical tags, descriptions, and JSON-LD passed the source audit.
+4. [OK] Light/dark contrast and public-route shell checks passed in the browser.
+5. [PLANNED] Deployment-only headers, Lighthouse measurements, and production cache policy still need to be verified on the hosting platform.
 
 ### Future Enhancements
 
-- JSON-LD structured data for SEO
+- More editorially specific featured images for individual blog articles
+- JSON-LD structured data for new pages as they are added
 - Service Worker for offline support
 - Multilingual support (Hindi + English)
 - Online booking integration
@@ -342,13 +343,13 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed pla
 
 ## Contact & Maintenance
 
-**Primary Maintainer:** Repository Owner  
-**Clinic:** Mind Grace Neuropsychiatric Clinic, Greater Noida, India  
+**Primary Maintainer:** Repository Owner
+**Clinic:** Mind Grace Neuropsychiatric Clinic, Greater Noida, India
 **Lead Psychiatrist:** Dr. Anita Sharma
 
-**Technology Stack:** HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)  
-**Deployment:** GitHub Pages  
-**Primary Domain:** mindgracencr.in  
+**Technology Stack:** HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)
+**Deployment:** GitHub Pages
+**Primary Domain:** mindgracencr.in
 **GitHub Pages:** shirish-psych-ncr.github.io/MIND_WEBSITE
 
 For questions, contributions, or maintenance, refer to:
@@ -374,4 +375,4 @@ This repository contains proprietary content belonging to Mind Grace Neuropsychi
 - **Icons:** Hand-crafted SVG icons
 - **Architecture:** Component-driven, intrinsically responsive design
 
-Built with ❤️ for mental health awareness and accessibility.
+Built with care for mental health awareness and accessibility.

@@ -1,0 +1,118 @@
+/* Layout overrides for immersive canvas tools, loaded after their legacy CSS. */
+body:has(#riverCanvas), body:has(#ui-canvas) { display: block !important; width: auto !important; min-height: 100dvh; height: auto !important; overflow-x: hidden !important; overflow-y: auto !important; }
+body:has(#riverCanvas) main, body:has(#ui-canvas) main { position: relative !important; min-height: 100dvh !important; overflow: hidden; background: #080b12; }
+body:has(#riverCanvas) #riverCanvas, body:has(#ui-canvas) canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+body:has(#riverCanvas) #ui, body:has(#ui-canvas) .tapper-container { position: absolute; inset: 0; min-height: 100%; box-sizing: border-box; }
+body:has(#ui-canvas) .tapper-container { height: 100%; }
+
+/* Shared tool-page readability and safe sizing. The original tool styles are
+   intentionally atmospheric; these rules keep their controls legible and
+   usable on small screens without changing the underlying interactions. */
+body:has(#start-btn) main,
+body:has(#horizon-start-btn) main,
+body:has(#eye-start-btn) main,
+body:has(#depth) main { min-height: calc(100dvh - 6rem); }
+
+body:has(#start-btn) .app-container,
+body:has(#horizon-start-btn) .tool-card,
+body:has(#eye-start-btn) .tool-card,
+body:has(#depth) .tool-section {
+  color: #f8fafc;
+  background: #111827;
+  border-color: #64748b;
+  box-shadow: 0 1rem 2.5rem rgb(2 6 23 / 22%);
+}
+
+body:has(#start-btn) .lead,
+body:has(#horizon-start-btn) .lead,
+body:has(#eye-start-btn) .lead,
+body:has(#depth) .lead,
+body:has(#start-btn) .setting,
+body:has(#horizon-start-btn) .settings-box,
+body:has(#eye-start-btn) .settings-box,
+body:has(#depth) .row { color: #e5e7eb; }
+
+body:has(#start-btn) select,
+body:has(#horizon-start-btn) select,
+body:has(#eye-start-btn) select,
+body:has(#depth) select,
+body:has(#start-btn) button,
+body:has(#horizon-start-btn) button,
+body:has(#eye-start-btn) button,
+body:has(#depth) button {
+  color: #111827;
+  background: #f9a8d4;
+  border: 2px solid #fce7f3;
+  font-weight: 700;
+}
+
+body:has(#start-btn) button:hover,
+body:has(#horizon-start-btn) button:hover,
+body:has(#eye-start-btn) button:hover,
+body:has(#depth) button:hover { background: #fbcfe8; }
+
+body:has(#start-btn) button:focus-visible,
+body:has(#horizon-start-btn) button:focus-visible,
+body:has(#eye-start-btn) button:focus-visible,
+body:has(#depth) button:focus-visible,
+body:has(#riverCanvas) button:focus-visible,
+body:has(#ui-canvas) button:focus-visible { outline: 3px solid #fef08a; outline-offset: 3px; }
+
+body:has(#start-btn) .view,
+body:has(#horizon-start-btn) .view,
+body:has(#eye-start-btn) .view { min-width: 0; }
+
+body:has(#start-btn) #circle,
+body:has(#horizon-start-btn) #horizon-dot,
+body:has(#eye-start-btn) #orb { filter: drop-shadow(0 0 .8rem rgb(251 207 232 / 70%)); }
+
+body:has(#depth) #fractal-ui,
+body:has(#depth) .fractal-ui,
+body:has(#depth) #ui { color: #f8fafc; }
+body:has(#depth) .row label,
+body:has(#depth) .breath-tag { color: #f8fafc !important; opacity: .9; }
+body:has(#depth) input[type="range"] { accent-color: #fbc6d4; }
+
+/* Canvas tools use real buttons for keyboard and touch access. Restore their
+   visual roles after the global button contrast layer has done its work. */
+body:has(#ui-canvas) .core {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none;
+}
+body:has(#ui-canvas) #gear-btn {
+  background: rgb(255 255 255 / 8%) !important;
+  border: 1px solid rgb(255 255 255 / 18%) !important;
+  color: #ffffff !important;
+}
+
+/* Leaf on Stream is an immersive dark canvas in both themes. Keep its
+   instructional overlay readable even when the site's surrounding palette is
+   set to light mode. */
+body:has(#riverCanvas) main .hero-section h1,
+body:has(#riverCanvas) main .hero-section p,
+body:has(#riverCanvas) main .tool-link-bar a,
+body:has(#riverCanvas) main .breath-text,
+body:has(#riverCanvas) main .input-modal h2,
+body:has(#riverCanvas) main .char-count {
+  color: #f8fafc !important;
+}
+body:has(#riverCanvas) main .tool-link-bar a {
+  background: rgb(15 23 42 / 88%) !important;
+  border-color: rgb(248 250 252 / 35%) !important;
+}
+
+@media (max-width: 640px) {
+  body:has(#start-btn) .app-container,
+  body:has(#horizon-start-btn) .tool-card,
+  body:has(#eye-start-btn) .tool-card,
+  body:has(#depth) .tool-section { margin-inline: .75rem; padding: 1rem; }
+  body:has(#start-btn) .cta-row { flex-wrap: wrap; }
+  body:has(#start-btn) .cta-row > *,
+  body:has(#horizon-start-btn) .cta-row > *,
+  body:has(#eye-start-btn) .cta-row > * { width: 100%; }
+}
