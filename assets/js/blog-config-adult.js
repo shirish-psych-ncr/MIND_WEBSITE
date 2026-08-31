@@ -14,5 +14,9 @@
       });
       window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
     })
-    .catch((error) => { window.BLOG_DISCOVERY_CONFIG = { error: true, message: error.message }; window.dispatchEvent(new CustomEvent("blogConfigLoaded")); });
+    .catch(() => {
+      const files = ["overthinking-vs-anxiety.html", "scheduled-worry-time-technique.html", "sleep-and-anxiety-cycle.html", "stimulus-control-therapy.html", "when-to-see-a-psychiatrist.html"];
+      window.BLOG_DISCOVERY_CONFIG = { sourceDir, posts: files.map((file) => `${sourceDir}${file}`), pinned: [], mostSearched: [], symptoms: [], clusters: [] };
+      window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
+    });
 })();

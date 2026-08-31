@@ -554,6 +554,33 @@ function updateFooterYear() {
   }
 }
 
+function initAccessibleArticleLabels() {
+  const labelArticles = () => document.querySelectorAll('article').forEach((article, index) => {
+    if (article.hasAttribute('aria-label') || article.hasAttribute('aria-labelledby')) return;
+    const heading = article.querySelector('h1, h2, h3, h4, h5, h6');
+    if (heading) {
+      if (!heading.id) heading.id = `article-heading-${index + 1}`;
+      article.setAttribute('aria-labelledby', heading.id);
+    } else {
+      article.setAttribute('aria-label', `Content section ${index + 1}`);
+    }
+  });
+  labelArticles();
+  if (document.body && !document.body.dataset.articleLabelObserver) {
+    const observer = new MutationObserver(labelArticles);
+    observer.observe(document.body, { childList: true, subtree: true });
+    document.body.dataset.articleLabelObserver = 'true';
+  }
+}
+
+function initExternalLinkAnnouncements() {
+  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    const existing = link.getAttribute('aria-label') || link.textContent.replace(/\s+/g, ' ').trim();
+    if (!existing || /opens in (a )?new (window|tab)/i.test(existing)) return;
+    link.setAttribute('aria-label', `${existing} (opens in a new tab)`);
+  });
+}
+
 // Initialize all modules on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   const elements = {
@@ -586,6 +613,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Update footer year
   updateFooterYear();
+
+  initAccessibleArticleLabels();
+  initExternalLinkAnnouncements();
 
   // Initialize counters
   initCounters(elements.counters);

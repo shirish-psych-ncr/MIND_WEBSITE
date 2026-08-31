@@ -14,5 +14,9 @@
       });
       window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
     })
-    .catch((error) => { window.BLOG_DISCOVERY_CONFIG = { error: true, message: error.message }; window.dispatchEvent(new CustomEvent("blogConfigLoaded")); });
+    .catch(() => {
+      const files = ["early-signs-of-autism.html", "school-concerns-and-adhd.html", "sensory-overload-at-home.html", "speech-delay-red-flags.html"];
+      window.BLOG_DISCOVERY_CONFIG = { sourceDir, posts: files.map((file) => `${sourceDir}${file}`), pinned: [], mostSearched: [], symptoms: [], clusters: [] };
+      window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
+    });
 })();

@@ -399,7 +399,8 @@ select:focus-visible,
 textarea:focus-visible {
   border-color: var(--rose-serenity-pink);
   box-shadow: 0 0 0 4px rgba(216, 27, 96, 0.12);
-  outline: none;
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
 }
 
 label {
@@ -532,7 +533,8 @@ footer a:focus-visible { color: var(--rose-serenity-pink); }
 .gallery-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: .55rem; }
 .gallery-thumb:hover,
 .gallery-thumb:focus-visible,
-.gallery-thumb.is-active { border-color: var(--rose-serenity-pink); outline: none; }
+.gallery-thumb.is-active { border-color: var(--rose-serenity-pink); }
+.gallery-thumb:focus-visible { outline: 3px solid var(--rose-serenity-pink); outline-offset: 3px; }
 .stage-nav {
   position: absolute;
   inset: 50% 0 auto;

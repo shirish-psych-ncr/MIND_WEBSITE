@@ -57,6 +57,8 @@ body:not(.is-scrolling-down) .site-header { transition: translate .24s ease; }
 .mobile-nav-trigger { display: none; width: 46px; min-width: 46px; height: 46px; padding: .5rem; border: 2px solid var(--mg-lava-deep); border-radius: .7rem; background: #fff; cursor: pointer; }
 .mobile-nav-trigger span { display: block; width: 22px; height: 3px; margin: 4px auto; border-radius: 4px; background: var(--mg-lava-deep); }
 .mobile-book-btn { display: none; padding-inline: .85rem; }
+.mobile-book-btn svg { display: block; width: 1.25rem; height: 1.25rem; flex: 0 0 auto; stroke: currentColor; }
+.mobile-book-label { display: none; }
 .mobile-nav-overlay { position: fixed; inset: 0; z-index: 1001; background: rgb(40 23 29 / 60%); }
 .mobile-nav-panel { position: fixed; inset: 76px 1rem auto; z-index: 1002; max-height: calc(100dvh - 88px); overflow: auto; padding: 1rem; border: 2px solid var(--mg-line); border-radius: 1rem; background: #fffaf9 !important; box-shadow: 0 18px 44px rgb(40 23 29 / 24%); }
 .mobile-nav-panel[hidden], .mobile-nav-overlay[hidden] { display: none; }
@@ -92,6 +94,7 @@ body .meta-btn:hover, body .meta-btn:active { transform: none !important; transi
 .footer-bottom > div { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 @media (max-width: 900px) { .desktop-nav { display: none !important; } .mobile-nav-trigger, .mobile-book-btn { display: inline-flex; } .header-inner { width: min(100% - 1.25rem, 1220px); } }
+@media (max-width: 640px) { body .mobile-book-btn { gap: .35rem; min-width: 4.1rem; white-space: nowrap; } body .mobile-book-label { display: inline; font-size: .78rem; line-height: 1; white-space: nowrap; } }
 @media (max-width: 640px) { .logo-tagline { font-size: .58rem; } .logo-text { font-size: 1rem; } .footer-container, .footer-links { grid-template-columns: 1fr; } .footer-bottom { display: grid; } }
 @media (prefers-color-scheme: dark) {
   body { background: #211319; color: #fff5f8; }
@@ -256,6 +259,21 @@ body .btn:hover, body .btn:focus-visible, body .btn--primary:hover, body .btn--p
   body a, body button, body .btn, body .skip-link { color: LinkText !important; border-color: ButtonText !important; }
   body button, body .btn { background: ButtonFace !important; }
   body :focus-visible { outline: 3px solid Highlight !important; }
+}
+
+/* Component-level focus overrides must preserve the site-wide keyboard ring. */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible,
+.form-group select:focus-visible {
+  outline: 3px solid currentColor !important;
+  outline-offset: 3px;
+}
+
+body:has(#riverCanvas) input:focus-visible,
+body:has(#riverCanvas) textarea:focus-visible,
+body:has(#riverCanvas) button:focus-visible {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 3px;
 }
 
 /* Gallery: the same photo provides a tiny, blurred, low-opacity backdrop while

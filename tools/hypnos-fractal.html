@@ -144,17 +144,17 @@
       <!-- FRACTAL TOOL -->
       <div class="tool-section">
         <canvas id="canvas"></canvas>
-        <div class="breath-tag" id="breath-text">Centering...</div>
+        <div class="breath-tag" id="breath-text">Centering…</div>
         <button id="min-btn" type="button" aria-label="Toggle fractal controls"><i data-lucide="settings" aria-hidden="true"></i></button>
         <div class="interface" id="fractal-ui">
             <div class="drawer">
                 <div class="row">
                     <label for="depth">Complexity</label>
-                    <input type="range" id="depth" min="3" max="8" value="5">
+                    <input type="range" id="depth" name="depth" min="3" max="8" value="5">
                 </div>
                 <div class="row">
                     <label for="speed">Sensitivity</label>
-                    <input type="range" id="speed" min="5" max="80" value="30">
+                    <input type="range" id="speed" name="speed" min="5" max="80" value="30">
                 </div>
                 <div>
                     <button type="button" id="clear-canvas">Clear canvas</button>

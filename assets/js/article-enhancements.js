@@ -76,7 +76,18 @@
     const nav = document.createElement("nav");
     nav.className = "article-toc";
     nav.setAttribute("aria-label", "On this page");
-    nav.innerHTML = `<strong>On this page</strong><ol>${headings.map((heading) => `<li><a href="#${heading.id}">${heading.textContent}</a></li>`).join("")}</ol>`;
+    const title = document.createElement("strong");
+    title.textContent = "On this page";
+    const list = document.createElement("ol");
+    headings.forEach((heading) => {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = `#${encodeURIComponent(heading.id)}`;
+      link.textContent = heading.textContent || "Section";
+      item.append(link);
+      list.append(item);
+    });
+    nav.append(title, list);
     const intro = article.querySelector("section");
     (intro || article.firstElementChild)?.after(nav);
   }
@@ -86,7 +97,7 @@
     const panel = document.createElement("section");
     panel.className = "article-next-step surface-soft panel";
     panel.setAttribute("aria-labelledby", "article-next-step-title");
-    panel.innerHTML = `<p class="eyebrow">A practical next step</p><h2 id="article-next-step-title">You do not need a perfect explanation before asking for help</h2><p>Use this guide to notice patterns, not to diagnose yourself or your child. If the concern is persistent, distressing, or affecting daily life, a confidential first conversation can help you decide what to do next.</p><div class="cta-row"><a class="button-primary" href="/book.html">Book a consultation</a><a class="button-ghost" href="https://wa.me/919667863295" target="_blank" rel="noopener">Ask on WhatsApp</a><a class="button-ghost" href="/emergency.html">Urgent help</a></div>`;
+    panel.innerHTML = `<p class="eyebrow">A practical next step</p><h2 id="article-next-step-title">You do not need a perfect explanation before asking for help</h2><p>Use this guide to notice patterns, not to diagnose yourself or your child. If the concern is persistent, distressing, or affecting daily life, a confidential first conversation can help you decide what to do next.</p><div class="cta-row"><a class="button-primary" href="/book.html">Book a consultation</a><a class="button-ghost" href="https://wa.me/919667863295" target="_blank" rel="noopener" aria-label="Ask on WhatsApp (opens in a new tab)">Ask on WhatsApp</a><a class="button-ghost" href="/emergency.html">Urgent help</a></div>`;
     article.appendChild(panel);
 
     const choices = document.createElement("div");

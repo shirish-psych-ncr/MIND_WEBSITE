@@ -471,7 +471,7 @@
     border-radius: var(--radius-full);
     border: none;
     cursor: pointer;
-    transition: all var(--duration-base) var(--ease-out);
+    transition: transform var(--duration-base) var(--ease-out), opacity var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out), background-color var(--duration-base) var(--ease-out), border-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
     min-height: var(--touch-target-comfortable);
     white-space: nowrap;
     position: relative;
@@ -532,7 +532,7 @@
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
-    transition: all var(--duration-base) var(--ease-out);
+    transition: transform var(--duration-base) var(--ease-out), opacity var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out), background-color var(--duration-base) var(--ease-out), border-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
     box-shadow: var(--shadow-sm);
     content-visibility: auto;
     contain-intrinsic-size: auto 300px;
@@ -573,7 +573,7 @@
     top: 0;
     z-index: 1000;
     padding-block: var(--space-4);
-    transition: all var(--duration-base) var(--ease-out);
+    transition: transform var(--duration-base) var(--ease-out), opacity var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out), background-color var(--duration-base) var(--ease-out), border-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
     background: transparent;
   }
 
@@ -654,7 +654,7 @@
     color: var(--color-text-secondary);
     text-decoration: none;
     border-radius: var(--radius-md);
-    transition: all var(--duration-fast) var(--ease-out);
+    transition: transform var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
     position: relative;
     overflow: hidden;
   }
@@ -707,7 +707,7 @@
     cursor: pointer;
     z-index: 1001;
     touch-action: manipulation;
-    transition: all var(--duration-base) var(--ease-out);
+    transition: transform var(--duration-base) var(--ease-out), opacity var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out), background-color var(--duration-base) var(--ease-out), border-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
     min-height: var(--touch-target-comfortable);
     min-width: var(--touch-target-comfortable);
   }
@@ -717,7 +717,8 @@
     background: oklch(52% 0.22 340 / 0.1);
     border-color: var(--color-primary);
     box-shadow: 0 4px 12px oklch(52% 0.22 340 / 0.2);
-    outline: none;
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
   }
 
   .burger-btn span {
@@ -726,7 +727,7 @@
     height: 2px;
     background: linear-gradient(90deg, var(--pink-500), var(--pink-700));
     border-radius: 2px;
-    transition: all 0.3s var(--ease-out);
+    transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out), color 0.3s var(--ease-out), background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
     transform-origin: left center;
     box-shadow: 0 1px 3px oklch(52% 0.22 340 / 0.3);
   }
@@ -916,7 +917,7 @@
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: var(--radius-2xl);
-    transition: all var(--duration-slow) var(--ease-out);
+    transition: transform var(--duration-slow) var(--ease-out), opacity var(--duration-slow) var(--ease-out), color var(--duration-slow) var(--ease-out), background-color var(--duration-slow) var(--ease-out), border-color var(--duration-slow) var(--ease-out), box-shadow var(--duration-slow) var(--ease-out);
     box-shadow: var(--shadow-sm);
     content-visibility: auto;
     contain-intrinsic-size: auto 300px;
@@ -1138,7 +1139,7 @@
     color: oklch(44% 0.20 340);
     text-decoration: underline;
     text-underline-offset: 3px;
-    transition: all var(--transition-fast);
+    transition: transform var(--transition-fast), opacity var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
     font-weight: 700;
     text-decoration-thickness: 2px;
     text-decoration-color: oklch(52% 0.22 340 / 0.4);

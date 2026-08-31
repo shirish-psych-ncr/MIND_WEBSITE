@@ -191,7 +191,7 @@
       <div class="header-actions">
         <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Use dark theme"><i data-lucide="moon" aria-hidden="true"></i><span class="visually-hidden">Dark theme</span></button>
         <button type="button" class="mobile-nav-trigger" id="burgerMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel"><i data-lucide="menu" aria-hidden="true"></i></button>
-        <a class="mobile-book-btn" href="/book.html" aria-label="Book an appointment"><i data-lucide="calendar" aria-hidden="true"></i><span class="visually-hidden">Book an appointment</span></a>
+        <a class="mobile-book-btn" href="/book.html" aria-label="Book an appointment"><i data-lucide="calendar-days" aria-hidden="true"></i><span class="mobile-book-label">Book</span><span class="visually-hidden">Book an appointment</span></a>
       </div>
     </div>`;
     return header;
