@@ -2,7 +2,7 @@
 
 [![Live Site](https://img.shields.io/badge/live-site-671B50?style=flat-square)](https://mindgracencr.in/)
 [![Technology](https://img.shields.io/badge/HTML5-CSS3-Vanilla%20JS-success?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Architecture](https://img.shields.io/badge/architecture-modular--CSS-blue?style=flat-square)](./AGENT_BIBLE/ARCHITECTURE.md)
+[![Architecture](https://img.shields.io/badge/architecture-modular--CSS-blue?style=flat-square)](./ARCHITECTURE.md)
 [![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1-AA-orange?style=flat-square)](https://www.w3.org/WAI/WCAG21/quickref/)
 
 ## Overview
@@ -20,11 +20,11 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 
 ## Quick Links
 
-- **[WEB] Live Site:** [https://shirish-psych-ncr.github.io/MIND_WEBSITE/](https://shirish-psych-ncr.github.io/MIND_WEBSITE/)
+- **[WEB] Live Site:** [https://mindgracencr.in/](https://mindgracencr.in/)
 - **[LAYOUT] Architecture Documentation:** [`ARCHITECTURE.md`](./ARCHITECTURE.md)
 - **[DESIGN] CSS Documentation:** [`assets/css/README.md`](./assets/css/README.md)
 - **[SETTINGS] JavaScript Documentation:** [`assets/js/README.md`](./assets/js/README.md)
-- **AI Agent Guide:** [`AGENT_BIBLE/`](./AGENT_BIBLE/)
+- **[DEPLOY] Cloudflare Deployment Guide:** [`CLOUDFLARE_DEPLOYMENT.md`](./CLOUDFLARE_DEPLOYMENT.md)
 
 ---
 
@@ -37,7 +37,7 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 | **Interactivity** | Vanilla JavaScript (ES6+)               |
 | **Fonts**         | Inter + Playfair Display (Google Fonts) |
 | **Icons**         | Inline SVG (Lucide)                     |
-| **Deployment**    | GitHub Pages                            |
+| **Deployment**    | Cloudflare Pages                        |
 | **Domain**        | mindgracencr.in                         |
 
 **No frameworks. No build tools. No dependencies.** Pure web standards.
@@ -54,7 +54,6 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 ├── assets/
 │   ├── css/ (12 stylesheets)
 │   ├── js/ (20 custom modules)
-│   ├── vendor/ (47 vendor libraries)
 │   └── images/ (28 WebP files)
 ├── sitemap.xml
 ├── robots.txt
@@ -186,7 +185,7 @@ Dynamic blog with categories:
 
 ### Deployment
 
-The site deploys automatically to GitHub Pages on push to `main` branch:
+The site deploys to Cloudflare Pages from the `main` branch. Configure the Pages project with build command `exit 0` and output directory `.`.
 
 ```bash
 git add .
@@ -195,7 +194,7 @@ git push origin main
 ```
 
 Live site updates within minutes at:
-[https://shirish-psych-ncr.github.io/MIND_WEBSITE/](https://shirish-psych-ncr.github.io/MIND_WEBSITE/)
+[https://mindgracencr.in/](https://mindgracencr.in/)
 
 ---
 
@@ -262,7 +261,7 @@ This website strives for **WCAG 2.1 Level AA** compliance:
 - [OK] Standardized script loading order (ky → http-client → main)
 - [OK] Removed `defer` attributes from module scripts (modules load async by default)
 - [OK] Added `<meta charset="UTF-8">` as first head element in all 25 HTML files
-- [OK] Updated canonical URLs to absolute paths (`https://shirish-psych-ncr.github.io/MIND_WEBSITE/[page].html`) for SEO compliance
+- [OK] Canonical URLs point to the production domain (`https://mindgracencr.in/`)
 - [OK] Fixed Floating UI namespace detection in `ui-popovers.js` (checks for both `FloatingUI` and `FloatingUIDOM`)
 - [OK] Resolved "Ky library not loaded" race conditions by ensuring proper script execution order
 - [OK] Fixed charset definition warnings in Lighthouse audits
@@ -336,8 +335,6 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed pla
 | [`ARCHITECTURE.md`](./ARCHITECTURE.md) | Complete system architecture, dependency graphs, design system, roadmap |
 | [`assets/css/README.md`](./assets/css/README.md)     | CSS module responsibilities, load order, design tokens                  |
 | [`assets/js/README.md`](./assets/js/README.md)       | JavaScript modules, coding conventions, accessibility                   |
-| [`AGENT_BIBLE/`](./AGENT_BIBLE/)       | AI agent operating instructions and context                             |
-| [`inspo/`](./inspo/)                   | Design inspiration and anti-patterns                                    |
 
 ---
 
@@ -348,15 +345,9 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) → _Future Roadmap_ for detailed pla
 **Lead Psychiatrist:** Dr. Anita Sharma
 
 **Technology Stack:** HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)
-**Deployment:** GitHub Pages
+**Deployment:** Cloudflare Pages
 **Primary Domain:** mindgracencr.in
-**GitHub Pages:** shirish-psych-ncr.github.io/MIND_WEBSITE
-
-For questions, contributions, or maintenance, refer to:
-
-1. This README
-2. [`ARCHITECTURE.md`](./ARCHITECTURE.md)
-3. [`AGENT_BIBLE/Instructions.md`](./AGENT_BIBLE/Instructions.md)
+For questions, contributions, or maintenance, refer to this README and [`ARCHITECTURE.md`](./ARCHITECTURE.md).
 
 ---
 

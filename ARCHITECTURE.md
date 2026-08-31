@@ -58,7 +58,6 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 │   │   ├── gallery.js              # Gallery functionality
 │   │   ├── carousel-init.js        # Carousel initialization
 │   │   ├── icon-init.js            # Icon initialization
-│   │   ├── page-transitions.js     # Page transition effects
 │   │   ├── animations-auto.js      # Automatic animations
 │   │   ├── http-client.js          # HTTP client wrapper
 │   │   └── lib/                    # Utility libraries
@@ -78,23 +77,8 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 │   │   ├── button.css
 │   │   ├── card.css
 │   │   ├── nav-panel.html
-│   │   ├── library-stack.html
 │   │   └── README.md
 │   │
-│   └── vendor/                     # Third-party Libraries (local copies)
-│       ├── alpine.min.js
-│       ├── htmx.min.js
-│       ├── lucide.min.js
-│       ├── floating-ui.min.js
-│       ├── anime.min.js
-│       ├── motion-one.min.js
-│       ├── splide.min.js
-│       ├── scrollreveal.min.js
-│       ├── swup.min.js
-│       ├── navigo.min.js
-│       ├── ky.min.js
-│       └── [other libraries]
-│
 ├── blog/                           # Blog Section
 │   ├── index.html                  # Blog homepage
 │   ├── adult.html                  # Adult mental health category
@@ -121,21 +105,6 @@ This repository contains the complete web presence for **Mind Grace Neuropsychia
 │   ├── horizon-scan.html           # Horizon Scanning Relaxation
 │   └── leaf-on-stream.html         # Mindfulness: Leaf on Stream
 │
-├── inspo/                          # Inspiration & Design References
-│   ├── Anti-inspo UI UXI Anti Pattern.md
-│   ├── check1.md, check3.md, check4.md
-│   ├── skillscheck.md
-│   └── BIBLE BRAND IDENTITY.txt
-│
-├── AGENT_BIBLE/                    # AI Agent Documentation
-│   ├── Instructions.md             # Agent operating instructions
-│   ├── Bible_Generator.md          # Documentation generation guide
-│   ├── ARCHITECTURE.md             # Agent architecture overview
-│   ├── assets.md                   # Asset management guidelines
-│   ├── components.md               # Component documentation
-│   ├── design.md                   # Design system documentation
-│   ├── memory.md                   # Context memory structure
-│   ├── opengraph.md                # OpenGraph metadata
 │   ├── pages.md                    # Page inventory & relationships
 │   ├── schemas.md                  # Data schemas
 │   ├── tools.md                    # Tool specifications
@@ -583,7 +552,7 @@ Each tool script follows a consistent pattern:
 4. **SEO Canonical URLs** (July 2026):
    - **Problem**: Relative canonical links (`process.html`) and hreflang values causing SEO issues, Lighthouse warnings
    - **Cause**: Using relative paths instead of absolute URLs for canonical and alternate links
-   - **Solution**: Updated all canonical and hreflang tags to absolute GitHub Pages URLs (`https://shirish-psych-ncr.github.io/MIND_WEBSITE/[page].html`)
+   - **Solution**: Updated all canonical and hreflang tags to absolute production URLs (`https://mindgracencr.in/[page].html`)
    - **Status**: [OK] Fixed - All pages use absolute URLs for search engine compliance
 
 5. **Floating UI Namespace Detection** (July 2026):
@@ -740,9 +709,9 @@ Changing this order will break the cascade.
 ## Contact & Maintenance
 
 **Primary Maintainer**: Repository Owner
-**Last Updated**: 2025
+**Last Updated**: 2026-08-26
 **Technology Stack**: HTML5, CSS3 (Modern), Vanilla JavaScript (ES6+)
-**Deployment**: GitHub Pages
+**Deployment**: Cloudflare Pages
 **Domain**: mindgracencr.in (primary)
 
-For questions or contributions, refer to the repository owner or consult the AGENT_BIBLE documentation for AI-assisted maintenance.
+For questions or contributions, refer to the repository owner and the project documentation in this repository.

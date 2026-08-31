@@ -17,9 +17,9 @@ body:has(#start-btn) .app-container,
 body:has(#horizon-start-btn) .tool-card,
 body:has(#eye-start-btn) .tool-card,
 body:has(#depth) .tool-section {
-  color: #f8fafc;
-  background: #111827;
-  border-color: #64748b;
+  color: #f8fafc !important;
+  background: #111827 !important;
+  border-color: #64748b !important;
   box-shadow: 0 1rem 2.5rem rgb(2 6 23 / 22%);
 }
 
@@ -31,6 +31,28 @@ body:has(#start-btn) .setting,
 body:has(#horizon-start-btn) .settings-box,
 body:has(#eye-start-btn) .settings-box,
 body:has(#depth) .row { color: #e5e7eb; }
+
+body:has(#start-btn) .title,
+body:has(#start-btn) .lead-mini,
+body:has(#start-btn) .setting label,
+body:has(#start-btn) .timer,
+body:has(#start-btn) .text-btn,
+body:has(#start-btn) .app-container h1,
+body:has(#start-btn) .app-container h2,
+body:has(#start-btn) .app-container p,
+body:has(#horizon-start-btn) .tool-card h1,
+body:has(#horizon-start-btn) .tool-card p,
+body:has(#eye-start-btn) .tool-card h1,
+body:has(#eye-start-btn) .tool-card p,
+body:has(#depth) .tool-section h1,
+body:has(#depth) .tool-section h2,
+body:has(#depth) .tool-section p { color: #f8fafc !important; }
+body:has(#start-btn) .lead-mini,
+body:has(#start-btn) .setting label,
+body:has(#start-btn) .timer,
+body:has(#start-btn) .text-btn,
+body:has(#horizon-start-btn) .tool-card p,
+body:has(#eye-start-btn) .tool-card p { color: #cbd5e1 !important; }
 
 body:has(#start-btn) select,
 body:has(#horizon-start-btn) select,
@@ -72,6 +94,18 @@ body:has(#depth) #ui { color: #f8fafc; }
 body:has(#depth) .row label,
 body:has(#depth) .breath-tag { color: #f8fafc !important; opacity: .9; }
 body:has(#depth) input[type="range"] { accent-color: #fbc6d4; }
+
+body:has(#start-btn) select,
+body:has(#horizon-start-btn) select,
+body:has(#eye-start-btn) select { background: #1f2937 !important; color: #f8fafc !important; border-color: #64748b !important; }
+
+/* Canvas tools are sized to the available window, including short landscape
+   screens, while retaining an internal drawing surface. */
+body:has(#riverCanvas) main,
+body:has(#ui-canvas) main {
+  min-height: clamp(520px, calc(100dvh - 5rem), 900px) !important;
+  height: clamp(520px, calc(100dvh - 5rem), 900px);
+}
 
 /* Canvas tools use real buttons for keyboard and touch access. Restore their
    visual roles after the global button contrast layer has done its work. */
@@ -115,4 +149,9 @@ body:has(#riverCanvas) main .tool-link-bar a {
   body:has(#start-btn) .cta-row > *,
   body:has(#horizon-start-btn) .cta-row > *,
   body:has(#eye-start-btn) .cta-row > * { width: 100%; }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  body:has(#riverCanvas) main,
+  body:has(#ui-canvas) main { min-height: 420px !important; height: 420px; }
 }

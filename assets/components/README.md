@@ -11,10 +11,9 @@
 
 The Mind Grace Component Library provides reusable, accessible, and responsive UI components following the **OKLCH Pink Glassmorphic Design System**. All components are built with vanilla CSS and semantic HTML—zero dependencies.
 
-**Total Files:** 6 files (~35KB total with documentation)
-- 4 HTML templates (header: 73 lines, nav-panel: 36 lines, footer: 115 lines, library-stack: 26 lines)
+**Production component files:** 5 files, plus this documentation
+- 3 HTML templates (header: 73 lines, nav-panel: 36 lines, footer: 115 lines)
 - 2 CSS component systems (button: 4.1KB minified, card: 8.6KB minified)
-- 1 README documentation (12.6KB)
 
 ---
 
@@ -239,31 +238,6 @@ The Mind Grace Component Library provides reusable, accessible, and responsive U
 
 ---
 
-### 6. Library Stack (`library-stack.html`)
-
-**File:** `library-stack.html` (1,224 bytes / 26 lines)
-
-**Purpose:** Centralized vendor library loader for all pages
-
-**Libraries Loaded (deferred, 15 total):**
-
-| Category | Libraries |
-|----------|-----------|
-| **Animation & Motion** | motion.min.js, anime.min.js, scrollreveal.min.js |
-| **Interactivity** | splide.min.js (carousel), floating-ui.core.min.js |
-| **State Management** | alpine.min.js, petite-vue.min.js, preact-signals.min.js |
-| **Data Fetching** | htmx.min.js |
-| **Routing & Performance** | swup.min.js, quicklink.min.js, navigo.min.js |
-| **Icons & Utilities** | iconify.min.js, lucide.min.js, fuse.min.js (search) |
-
-**Usage:**
-```html
-<!-- Include in <head> or before </body> -->
-<script src="assets/components/library-stack.html"></script>
-```
-
----
-
 ## Design Tokens Reference
 
 All components use CSS custom properties from `base.css`:
@@ -376,15 +350,9 @@ All measurements use `clamp(min, vw, max)` for smooth scaling across all viewpor
 
 ## Integration Guide
 
-### Step 1: Include Library Stack
-```html
-<head>
-  <!-- Include in head or before body close -->
-  <script src="assets/components/library-stack.html" defer></script>
-</head>
-```
+The live site loads only the scripts required by each route. Add the shared shell through `assets/js/visitor-friendly.js`, then use these fragments only when maintaining a static page template.
 
-### Step 2: Add Header
+### Step 1: Add Header
 ```html
 <body>
   <!-- Include header component -->
@@ -392,26 +360,26 @@ All measurements use `clamp(min, vw, max)` for smooth scaling across all viewpor
 </body>
 ```
 
-### Step 3: Add Navigation Panel
+### Step 2: Add Navigation Panel
 ```html
 <!-- After header, before main content -->
 <!-- Copy contents of assets/components/nav-panel.html -->
 ```
 
-### Step 4: Add Main Content
+### Step 3: Add Main Content
 ```html
 <main>
   <!-- Your page content -->
 </main>
 ```
 
-### Step 5: Add Footer
+### Step 4: Add Footer
 ```html
 <!-- Before body close -->
 <!-- Copy contents of assets/components/footer.html -->
 ```
 
-### Step 6: Initialize Icons
+### Step 5: Initialize Icons
 ```html
 <script>
   lucide.createIcons();
@@ -438,7 +406,6 @@ After component library completion:
 ├── header.html        (3,005 bytes / 73 lines)   - Site header with universal burger
 ├── nav-panel.html     (1,831 bytes / 36 lines)   - Navigation dropdown panel
 ├── footer.html        (3,894 bytes / 115 lines)  - Site footer with 4 columns
-├── library-stack.html (1,224 bytes / 26 lines)   - Vendor library loader
 ├── button.css         (4,110 bytes / minified)   - Button component system
 ├── card.css           (8,629 bytes / minified)   - Card component system
 └── README.md          (this file)                - Documentation

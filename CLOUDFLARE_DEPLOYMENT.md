@@ -28,8 +28,8 @@ Your website is now configured for **Cloudflare Pages** deployment from GitHub.
 
 4. **Configure Build Settings**
    - **Production branch**: `main`
-   - **Build command**: Leave empty (no build needed)
-   - **Build output directory**: `/` (root directory)
+   - **Build command**: `exit 0`
+   - **Build output directory**: `.` (repository root)
 
 5. **Environment Variables (Optional)**
    - No environment variables needed for this static site
@@ -42,7 +42,7 @@ Your website is now configured for **Cloudflare Pages** deployment from GitHub.
 
 ### Option 2: GitHub Actions Workflow
 
-If you prefer automated deployments via GitHub Actions:
+If you prefer automated deployments via GitHub Actions, add your own workflow using Wrangler and the project secrets:
 
 1. **Add Secrets to GitHub Repository**
 
@@ -60,8 +60,7 @@ If you prefer automated deployments via GitHub Actions:
    - `CLOUDFLARE_PROJECT_NAME` - Your Cloudflare Pages project name
 
 3. **Enable the Workflow**
-   - The workflow file is in `.github/workflows/deploy-cloudflare.yml`
-   - It will automatically deploy on every push to `main`
+   - This repository does not include a workflow by default.
 
 ---
 
@@ -102,27 +101,26 @@ If you prefer automated deployments via GitHub Actions:
 ## Troubleshooting
 
 ### Build Fails with "Module Not Found"
-- [OK] This site uses CDN resources only - no npm modules needed
-- [OK] All JavaScript loads from `unpkg.com` and `cdn.jsdelivr.net`
-- [OK] No build step required - it's pure static HTML
+- [OK] This is a no-build static site; no npm install is required for deployment
+- [OK] Runtime scripts are served from the repository, with external CDN resources used only where explicitly configured
+- [OK] No build step required - the Pages output directory is the repository root
 
 ### CSP Errors
 - Check browser console for Content Security Policy violations
-- Update `wrangler.toml` headers if you need additional CDN domains
+- Update `_headers` if you need additional CDN domains
 
 ### Assets Not Loading
-- Verify all paths are relative (not absolute)
-- Check that assets folder exists in repository
+- Verify root-relative paths resolve from the Cloudflare Pages project root
+- Check that the `assets` folder exists in the deployed repository output
 
 ---
 
 ## Configuration Files
 
-### `wrangler.toml`
-Contains Cloudflare-specific configuration:
-- Redirects for clean URLs
-- Security headers
-- Cache control settings
+### `_redirects`, `_headers`, and `wrangler.toml`
+- `_redirects` contains Cloudflare Pages clean-URL proxy rules.
+- `_headers` contains security headers, CSP, and cache policy.
+- `wrangler.toml` declares the Pages output directory for CLI deployments.
 
 ### `package.json`
 Minimal configuration - no dependencies needed:
@@ -146,7 +144,7 @@ Minimal configuration - no dependencies needed:
 ## What Was Cleaned
 
 [OK] Removed all npm dependencies (now using CDN)
-[OK] Deleted vendor files from `assets/vendor/`
+[OK] Removed stale vendor references from project documentation
 [OK] Removed complex build configurations
 [OK] Simplified to pure static site
 [OK] Added Cloudflare-ready configuration

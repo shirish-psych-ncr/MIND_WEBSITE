@@ -12,27 +12,68 @@
     ["Contact", "/contact.html"]
   ];
   const mobileNavigation = [
-    ["Home", "/index.html"],
-    ["About the clinic", "/about.html"],
-    ["Dr Anita Sharma", "/dr-anita-sharma.html"],
-    ["Our care team", "/doctors.html"],
-    ["Services", "/services.html"],
-    ["What to expect", "/process.html"],
-    ["Fees and payments", "/fees.html"],
-    ["Gallery", "/gallery.html"],
-    ["Patient experiences", "/testimonials.html"],
-    ["Frequently asked questions", "/faq.html"],
-    ["Blog", "/blog/index.html"],
-    ["Resources", "/resources.html"],
-    ["Guided breathing", "/tools/guided-breathing.html"],
-    ["Butterfly tapper", "/tools/butterfly-tapper.html"],
-    ["Eye movement", "/tools/eye-movement.html"],
-    ["Hypnotic fractal", "/tools/hypnos-fractal.html"],
-    ["Horizon scan", "/tools/horizon-scan.html"],
-    ["Leaf on Stream", "/tools/leaf-on-stream.html"],
-    ["Find the clinic", "/location.html"],
-    ["Contact", "/contact.html"],
-    ["Emergency help", "/emergency.html"]
+    {
+      label: "Start here",
+      icon: "compass",
+      children: [
+        ["Home", "/index.html"],
+        ["About the clinic", "/about.html"],
+        ["Dr Anita Sharma", "/dr-anita-sharma.html"],
+        ["Our care team", "/doctors.html"]
+      ]
+    },
+    {
+      label: "Care and services",
+      icon: "heart-handshake",
+      children: [
+        ["Services", "/services.html"],
+        ["What to expect", "/process.html"],
+        ["Fees and payments", "/fees.html"],
+        {
+          label: "Who we support",
+          icon: "users-round",
+          children: [
+            ["Adult mental health", "/conditions.html"],
+            ["Child development", "/aasha.html"],
+            ["Our care approach", "/approach.html"]
+          ]
+        }
+      ]
+    },
+    {
+      label: "Explore and learn",
+      icon: "book-open",
+      children: [
+        ["Resources", "/resources.html#tools"],
+        ["Clinic gallery", "/gallery.html"],
+        ["Patient experiences", "/testimonials.html"],
+        ["Blog", "/blog/index.html"],
+        ["Frequently asked questions", "/faq.html#common-questions"]
+      ]
+    },
+    {
+      label: "Self-help tools",
+      icon: "sparkles",
+      href: "/resources.html#tools",
+      children: [
+        ["All self-help tools", "/resources.html#tools"],
+        ["Guided breathing", "/tools/guided-breathing.html"],
+        ["Butterfly tapper", "/tools/butterfly-tapper.html"],
+        ["Eye movement", "/tools/eye-movement.html"],
+        ["Hypnotic fractal", "/tools/hypnos-fractal.html"],
+        ["Horizon scan", "/tools/horizon-scan.html"],
+        ["River of Release", "/tools/leaf-on-stream.html"]
+      ]
+    },
+    {
+      label: "Visit and contact",
+      icon: "map-pin",
+      children: [
+        ["Find the clinic", "/location.html"],
+        ["Contact", "/contact.html"],
+        ["Emergency help", "/emergency.html"]
+      ]
+    }
   ];
   const themeKey = "mindgrace-theme";
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -49,6 +90,23 @@
 
   function linkMarkup(items = navigation) {
     return items.map(([label, href]) => `<li><a href="${href}">${label}</a></li>`).join("");
+  }
+
+  function mobileTreeMarkup(items, level = 0, parentId = "mobile-nav") {
+    const listClass = level === 0 ? "mobile-nav-tree" : "mobile-nav-children";
+    const listId = level === 0 ? "" : ` id="${parentId}"`;
+    const hidden = level === 0 ? "" : " hidden";
+    return `<ul class="${listClass}"${listId}${hidden}>${items.map((item, index) => {
+      if (Array.isArray(item)) return `<li class="mobile-nav-tree-item"><a class="mobile-nav-tree-link" href="${item[1]}">${item[0]}</a></li>`;
+      const branchId = `${parentId}-branch-${level}-${index}`;
+      const parentLink = item.href
+        ? `<a class="mobile-nav-tree-link" href="${item.href}">${item.label}</a>`
+        : `<button type="button" class="mobile-nav-tree-parent" data-nav-label="${item.label}" aria-label="Show ${item.label} options" aria-controls="${branchId}" aria-expanded="false"><i data-lucide="${item.icon || "folder"}" aria-hidden="true"></i><span>${item.label}</span><i data-lucide="chevron-right" class="mobile-nav-branch-chevron" aria-hidden="true"></i></button>`;
+      const disclosure = item.href
+        ? `<button type="button" class="mobile-nav-disclosure" data-nav-label="${item.label}" aria-label="Show ${item.label} options" aria-controls="${branchId}" aria-expanded="false"><i data-lucide="chevron-right" aria-hidden="true"></i></button>`
+        : "";
+      return `<li class="mobile-nav-tree-item mobile-nav-tree-item--branch"><div class="mobile-nav-tree-row">${parentLink}${disclosure}</div>${mobileTreeMarkup(item.children || [], level + 1, branchId)}</li>`;
+    }).join("")}</ul>`;
   }
 
   function selectedTheme() {
@@ -91,6 +149,36 @@
     document.head.appendChild(script);
   }
 
+  function ensureFinalStyles() {
+    const placeLast = () => {
+      const parent = document.body || document.head;
+      [
+        document.querySelector("link[data-mindgrace-final-foundation]"),
+        document.querySelector("link[data-mindgrace-final-tool-overrides]"),
+        document.querySelector("link[data-mindgrace-final-tool-shell]")
+      ].filter(Boolean).forEach((link) => parent.appendChild(link));
+    };
+    if (document.querySelector("link[data-mindgrace-final-foundation]")) {
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", placeLast, { once: true });
+      else placeLast();
+      return;
+    }
+    const appendStylesheet = (href, marker) => {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = href;
+      link.dataset[marker] = "true";
+      document.head.appendChild(link);
+    };
+    appendStylesheet("/assets/css/site-foundation.css?v=chrome9", "mindgraceFinalFoundation");
+    if (window.location.pathname.replace(/\\/g, "/").includes("/tools/")) {
+      appendStylesheet("/assets/css/tool-overrides.css?v=tools5", "mindgraceFinalToolOverrides");
+      appendStylesheet("/assets/css/tools-shell.css?v=toolview6", "mindgraceFinalToolShell");
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", placeLast, { once: true });
+    else placeLast();
+  }
+
   function buildHeader() {
     const header = document.createElement("header");
     header.className = "site-header";
@@ -114,7 +202,7 @@
     footer.className = "site-footer";
     footer.innerHTML = `<div class="footer-container">
       <div class="footer-brand"><img class="footer-logo" src="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
-      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book.html">Book an appointment</a></li><li><a href="/services.html">Our services</a></li><li><a href="/process.html">What to expect</a></li><li><a href="/location.html">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/faq.html">Frequently asked questions</a></li><li><a href="/tools/guided-breathing.html">Self-help tools</a></li><li><a href="/gallery.html">Clinic gallery</a></li><li><a href="/emergency.html">Emergency help</a></li><li><a href="/contact.html">Contact</a></li></ul></div></nav>
+      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book.html">Book an appointment</a></li><li><a href="/services.html">Our services</a></li><li><a href="/process.html">What to expect</a></li><li><a href="/location.html">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/faq.html#common-questions">Frequently asked questions</a></li><li><a href="/resources.html#tools">Self-help tools</a></li><li><a href="/gallery.html">Clinic gallery</a></li><li><a href="/emergency.html">Emergency help</a></li><li><a href="/contact.html">Contact</a></li></ul></div></nav>
       <address class="footer-contact"><h2>Visit or call</h2><p>Mind Grace Neuropsychiatric Clinic<br>J123, Gamma II, Greater Noida, 201310</p><p><a href="tel:+919667863295">+91 96678 63295</a><br><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
     </div><div class="footer-bottom"><p>&copy; <span id="year"></span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/disclaimer.html">Disclaimer</a><a href="/consent.html">Consent</a></div></div>`;
     return footer;
@@ -150,7 +238,20 @@
   function bindMenu(header, mobileNav, overlay) {
     const toggle = $("#burgerMenuBtn", header);
     const close = $(".close-mobile-menu", mobileNav);
+    const branchButtons = $$(".mobile-nav-disclosure, .mobile-nav-tree-parent", mobileNav);
     let lastFocus = null;
+    const setBranchOpen = (button, open) => {
+      const panel = document.getElementById(button.getAttribute("aria-controls"));
+      if (!panel) return;
+      button.setAttribute("aria-expanded", String(open));
+      if (button.dataset.navLabel) button.setAttribute("aria-label", `${open ? "Hide" : "Show"} ${button.dataset.navLabel} options`);
+      panel.hidden = !open;
+      button.classList.toggle("is-expanded", open);
+      if (!open) $$(".mobile-nav-disclosure, .mobile-nav-tree-parent", panel).forEach((child) => setBranchOpen(child, false));
+    };
+    branchButtons.forEach((button) => {
+      button.addEventListener("click", () => setBranchOpen(button, button.getAttribute("aria-expanded") !== "true"));
+    });
     const setOpen = (open) => {
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
@@ -161,6 +262,7 @@
       mobileNav.classList.toggle("is-open", open);
       overlay.classList.toggle("is-active", open);
       document.body.classList.toggle("menu-open", open);
+      if (!open) branchButtons.forEach((button) => setBranchOpen(button, false));
       refreshIcons();
       if (open) { lastFocus = document.activeElement; close.focus(); } else { lastFocus?.focus?.(); }
     };
@@ -189,7 +291,7 @@
     mobileNav.setAttribute("aria-label", "Mobile navigation");
     mobileNav.hidden = true;
     mobileNav.setAttribute("inert", "");
-    mobileNav.innerHTML = `<div class="mobile-nav-panel-inner"><div class="mobile-nav-header"><div><p class="mobile-nav-kicker">Mind Grace</p><h2>Find your next step</h2></div><button type="button" class="close-mobile-menu" aria-label="Close navigation menu"><i data-lucide="x" aria-hidden="true"></i></button></div><p class="mobile-nav-intro">Care, practical resources, and the right starting point in one place.</p><ul>${linkMarkup(mobileNavigation)}<li><a class="btn btn--primary" href="/book.html"><i data-lucide="calendar" aria-hidden="true"></i> Book an appointment</a></li></ul></div>`;
+    mobileNav.innerHTML = `<div class="mobile-nav-panel-inner"><div class="mobile-nav-header"><div><p class="mobile-nav-kicker">Mind Grace</p><h2>Find your next step</h2></div><button type="button" class="close-mobile-menu" aria-label="Close navigation menu"><i data-lucide="x" aria-hidden="true"></i></button></div><p class="mobile-nav-intro">Choose a section, then open a branch to see the pages inside it.</p>${mobileTreeMarkup(mobileNavigation)}<a class="btn btn--primary mobile-nav-appointment" href="/book.html"><i data-lucide="calendar" aria-hidden="true"></i> Book an appointment</a></div>`;
     header.after(overlay, mobileNav);
     const footer = buildFooter();
     document.body.appendChild(footer);
@@ -278,6 +380,7 @@
 
   function initialize() {
     document.documentElement.dataset.designSystem = "rose-serenity";
+    ensureFinalStyles();
     const shell = normalizeSiteChrome();
     enhanceBreadcrumbs(shell?.main || $("main"));
     markCurrentNavigation();

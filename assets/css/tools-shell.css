@@ -8,6 +8,10 @@
   --tool-line: #d6a2b4;
 }
 
+/* Tool scenes intentionally use viewport-sized layers; keep animated layers
+   from creating a second horizontal document viewport. */
+html:has(body.tool-page) { overflow-x: clip; }
+
 body.tool-page {
   --tool-accent: var(--tool-lava);
   --tool-accent-strong: var(--tool-lava-deep);
@@ -23,7 +27,7 @@ body.tool-page {
   align-items: center;
   justify-content: space-between;
   gap: .75rem;
-  width: min(1180px, calc(100% - 2rem));
+  width: min(calc(100% - (2 * var(--mg-page-gutter, 1rem))), 1440px);
   margin: 0 auto 1rem;
   padding: .55rem .65rem .55rem .85rem;
   border: 1px solid color-mix(in srgb, var(--tool-accent) 34%, currentColor 18%);
@@ -114,10 +118,10 @@ body.tool-page .tool-section {
 }
 body.tool-page #breath-app { width: min(720px, calc(100% - 2rem)); min-height: min(680px, 72dvh); height: auto; }
 body.tool-page #breath-app .view { width: min(86%, 520px); }
-body.tool-page .tool-card { width: min(980px, 100%); margin-inline: auto; }
+body.tool-page .tool-card { width: min(calc(100% - (2 * var(--mg-page-gutter, 1rem))), 1120px); margin-inline: auto; }
 
 @media (max-width: 640px) {
-  .tool-viewbar { width: min(100% - 1rem, 1180px); margin-bottom: .65rem; border-radius: 1.2rem; align-items: stretch; flex-wrap: wrap; }
+  .tool-viewbar { width: min(calc(100% - 2rem), 1440px); margin-bottom: .65rem; border-radius: 1.2rem; align-items: stretch; flex-wrap: wrap; }
   .tool-viewbar__title { flex: 1 0 100%; }
   .tool-viewbar__actions { width: 100%; justify-content: stretch; }
   .tool-viewbar__action { flex: 1 1 0; justify-content: center; }

@@ -47,7 +47,45 @@ function _initOrientationAdapter() {
   };
 
   handleOrientation(mediaQuery);
-  mediaQuery.addEventListener('change', handleOrientation);
+  if (typeof mediaQuery.addEventListener === 'function') {
+    mediaQuery.addEventListener('change', handleOrientation);
+  } else if (typeof mediaQuery.addListener === 'function') {
+    mediaQuery.addListener(handleOrientation);
+  }
+  // Some embedded browsers resize without dispatching a MediaQueryList change.
+  // Re-read the query after rotation so tool canvases and compact shell styles
+  // update immediately in both orientations.
+  window.addEventListener('resize', () => handleOrientation(mediaQuery), { passive: true });
+}
+
+// Direction-aware chrome: the header yields space while reading downward and
+// returns as soon as the visitor reverses direction. CSS remains responsible
+// for the motion, so this listener only toggles a state class.
+function _initScrollDirection() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  let previousY = Math.max(0, window.scrollY);
+  let ticking = false;
+  const update = () => {
+    const currentY = Math.max(0, window.scrollY);
+    const delta = currentY - previousY;
+    const menuOpen = document.querySelector('.mobile-nav-panel.is-open');
+    if (currentY < 16 || delta < -3) {
+      document.body.classList.remove('is-scrolling-down');
+    } else if (delta > 3 && !menuOpen) {
+      document.body.classList.add('is-scrolling-down');
+    }
+    previousY = currentY;
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
 }
 
 // OpenGraph meta tags initialization
@@ -89,6 +127,52 @@ function initOpenGraphMeta() {
       document.head.appendChild(newMeta);
     }
   });
+}
+
+// Normalize contextual trails from older page templates and add a useful
+// fallback trail to utility pages that do not contain one in their HTML.
+function _initBreadcrumbs() {
+  const main = document.querySelector('main');
+  if (!main) return;
+  const path = window.location.pathname.replace(/\\/g, '/');
+  const isHome = path === '/' || (path.endsWith('/index.html') && !path.includes('/blog/'));
+  let nav = main.querySelector(':scope > .breadcrumbs') || document.querySelector('nav.breadcrumbs');
+
+  if (!nav && !isHome) {
+    nav = document.createElement('nav');
+    nav.className = 'breadcrumbs';
+    nav.setAttribute('aria-label', 'Breadcrumb');
+    nav.innerHTML = '<ol><li><a href="/index.html">Home</a></li><li aria-current="page"></li></ol>';
+    main.prepend(nav);
+  }
+  if (!nav) return;
+
+  const list = nav.querySelector('ol');
+  if (!list) return;
+  const items = [...list.children];
+  const current = items.at(-1);
+  if (current && !current.hasAttribute('aria-current')) current.setAttribute('aria-current', 'page');
+
+  nav.querySelectorAll('a').forEach((link) => {
+    if (link.textContent.trim().toLowerCase() === 'blog' && link.getAttribute('href') === '/index.html') {
+      link.setAttribute('href', '/blog/index.html');
+    }
+  });
+
+  const category = path.match(/^\/blog\/(adult|children)\.html$/i);
+  if (category && current && !nav.querySelector('a[href="/blog/index.html"]')) {
+    const blogItem = document.createElement('li');
+    blogItem.innerHTML = '<a href="/blog/index.html">Blog</a>';
+    list.insertBefore(blogItem, current);
+  }
+
+  if (category && current) {
+    current.textContent = category[1].toLowerCase() === 'adult' ? 'Adult Mental Health' : 'Child Development';
+  }
+
+  if (current && !current.textContent.trim()) {
+    current.textContent = document.querySelector('h1')?.textContent.trim() || 'Current page';
+  }
 }
 
 // Network status indicator
@@ -513,9 +597,11 @@ document.addEventListener('DOMContentLoaded', () => {
     _initOrientationAdapter();
     initNetworkStatus();
     initOpenGraphMeta();
+    _initBreadcrumbs();
     initErrorBoundary();
     initSkipLink();
     _initScrollProgress();
+    _initScrollDirection();
     // All modules initialized
   } catch (error) {
 
@@ -652,11 +738,14 @@ if (document.readyState === 'loading') {
     _initScrollProgress();
     _initOrientationAdapter();
     initOpenGraphMeta();
+    _initBreadcrumbs();
     _initBurgerMenu();
   });
 } else {
   _initScrollProgress();
+  _initScrollDirection();
   _initOrientationAdapter();
   initOpenGraphMeta();
+  _initBreadcrumbs();
   _initBurgerMenu();
 }

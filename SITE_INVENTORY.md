@@ -23,7 +23,6 @@ This is the source-of-truth map for the static website. It deliberately excludes
 - `assets/components/header.html` — reference header fragment; navigation and logo.
 - `assets/components/nav-panel.html` — reference navigation panel.
 - `assets/components/footer.html` — valid footer fragment; must be included inside an existing document and never as a standalone HTML document.
-- `assets/components/library-stack.html` — reference for optional vendor/library loading.
 
 The live pages are static HTML, so the canonical runtime chrome is assembled by `assets/js/visitor-friendly.js`. This avoids copying a different header/footer into every route while preserving each page's `main` content.
 
@@ -36,7 +35,7 @@ The live pages are static HTML, so the canonical runtime chrome is assembled by 
 
 ## Shared JavaScript
 
-- Site shell and visitor behavior: `assets/js/visitor-friendly.js`, `assets/js/main.js`, `assets/js/icon-init.js`, `assets/js/ui-popovers.js`, `assets/js/animations-auto.js`, `assets/js/page-transitions.js`.
+- Site shell and visitor behavior: `assets/js/visitor-friendly.js`, `assets/js/main.js`, `assets/js/icon-init.js`, `assets/js/ui-popovers.js`, `assets/js/animations-auto.js`.
 - Booking and map: `assets/js/booking.js`, `assets/js/tools-book.js`, `assets/js/tools-map.js`.
 - Gallery and carousels: `assets/js/gallery.js`, `assets/js/carousel-init.js`.
 - Blog discovery and editorial reading: `assets/js/blog-config-adult.js`, `assets/js/blog-config-child.js`, `assets/js/blog-discovery.js`, `assets/js/article-enhancements.js`.

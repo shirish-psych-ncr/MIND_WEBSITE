@@ -1,0 +1,6 @@
+# Clean public routes (Cloudflare Pages proxy rules)
+/services /services.html 200
+/conditions /conditions.html 200
+/about /about.html 200
+/contact /contact.html 200
+/blog /blog/index.html 200

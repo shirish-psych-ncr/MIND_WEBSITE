@@ -320,7 +320,7 @@ const results = fuse.search("anxiety");
 
 5. **Graceful degradation:** Wrap in try-catch, provide fallbacks
 
-6. **Library stack:** Scripts now loaded directly in each HTML file, no more library-stack.html component
+6. **Library stack:** Scripts are loaded directly in each HTML file; no shared loader component is needed.
 
 ## Performance Notes
 
@@ -336,9 +336,7 @@ const results = fuse.search("anxiety");
 
 ## Library Stack Component
 
-**[WARNING] Deprecated (July 2026):** The library-stack.html component is no longer used. Scripts are now loaded directly in each HTML file's `<head>` section with correct dependency order.
-
-Location: `/assets/components/library-stack.html` (legacy - do not use)
+The former shared library-stack component was removed during the production cleanup. Scripts are loaded directly in each HTML file's `<head>` section with the dependency order required by that route.
 
 All scripts are now loaded directly in each HTML file's `<head>` section with correct dependency order:
 

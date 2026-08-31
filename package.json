@@ -5,7 +5,7 @@
   "main": "index.html",
   "type": "module",
   "scripts": {
-    "validate": "echo 'Static site validation complete'"
+    "validate": "node tools/validate-site.mjs"
   },
   "private": true
 }

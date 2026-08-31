@@ -57,6 +57,14 @@
       button.classList.toggle("is-active", active);
       button.setAttribute("aria-pressed", String(active));
     });
+    const activeThumb = filmstrip.children[index];
+    if (activeThumb) {
+      // Keep the document anchored while bringing the selected thumbnail into
+      // view. Element.scrollIntoView() can scroll the whole page vertically,
+      // moving the arrow controls during a rapid next/previous sequence.
+      const centeredLeft = activeThumb.offsetLeft - (filmstrip.clientWidth - activeThumb.offsetWidth) / 2;
+      filmstrip.scrollTo({ left: Math.max(0, centeredLeft), behavior: "smooth" });
+    }
     if (previous) previous.disabled = items.length < 2;
     if (next) next.disabled = items.length < 2;
   };
@@ -100,6 +108,7 @@
     thumb.addEventListener("error", () => {
       button.classList.add("is-error");
       miniBackdrop.style.setProperty("--thumb-image", "none");
+      thumb.alt = "Image unavailable";
       thumb.removeAttribute("src");
     }, { once: true });
     button.append(miniBackdrop, thumb);

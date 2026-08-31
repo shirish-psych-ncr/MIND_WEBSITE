@@ -41,6 +41,19 @@
     ]
   };
 
+  const relatedTools = {
+    adult: [
+      ["Guided breathing", "/tools/guided-breathing.html"],
+      ["Horizon scan", "/tools/horizon-scan.html"],
+      ["Butterfly tapper", "/tools/butterfly-tapper.html"]
+    ],
+    child: [
+      ["Guided breathing", "/tools/guided-breathing.html"],
+      ["Horizon scan", "/tools/horizon-scan.html"],
+      ["Leaf on stream", "/tools/leaf-on-stream.html"]
+    ]
+  };
+
   const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const text = (selector, root = document) => root.querySelector(selector)?.textContent?.replace(/\s+/g, " ").trim() || "";
   const meta = (name) => document.querySelector(`meta[name="${name}"]`)?.content?.trim() || "";
@@ -100,6 +113,16 @@
     article.appendChild(aside);
   }
 
+  function addRelatedTools(article, file) {
+    const family = window.location.pathname.includes("/child/") ? "child" : "adult";
+    if (article.querySelector(".article-related-tools")) return;
+    const aside = document.createElement("aside");
+    aside.className = "article-related article-related-tools surface panel";
+    aside.setAttribute("aria-labelledby", "article-related-tools-title");
+    aside.innerHTML = `<p class="eyebrow">Try a gentle pause</p><h2 id="article-related-tools-title">Self-help tools to explore</h2><div class="article-related-grid">${relatedTools[family].map(([label, href]) => `<a class="article-related-link" href="${href}"><span>${label}</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>`).join("")}</div><p class="tool-related-reading__footer"><a href="/resources.html#tools">View all self-help tools</a> <span aria-hidden="true">·</span> <a href="/blog/index.html">Return to all guides</a></p>`;
+    article.appendChild(aside);
+  }
+
   function init() {
     const article = document.querySelector("main article");
     if (!article || !article.querySelector("h1")) return;
@@ -109,6 +132,7 @@
     addTableOfContents(article);
     addNextStep(article, file);
     addRelated(article, file);
+    addRelatedTools(article, file);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });

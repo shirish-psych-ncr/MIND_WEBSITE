@@ -21,7 +21,7 @@
   - Tool-specific: 7 files (tools-*.css in /assets/css-tools/)
 
 - **JavaScript Modules:** 20 app scripts in /assets/js/
-  - Core: main.js, ui-popovers.js, booking.js, gallery.js, page-transitions.js
+  - Core: main.js, ui-popovers.js, booking.js, gallery.js
   - Tools: tools-*.js for each therapeutic tool
   - Blog: blog-*.js for article interactions
   - Vendor libs: 12 micro-libraries in /assets/js/lib/ (alpine, anime, confetti, etc.)

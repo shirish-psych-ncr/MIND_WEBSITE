@@ -5,6 +5,7 @@ body:has(#riverCanvas) { background: #281329; color: #fff7fa; }
 body:has(#riverCanvas) .tool-link-bar { top: max(1rem, env(safe-area-inset-top)); }
 body:has(#riverCanvas) .tool-link-bar a { min-height: 44px; display: inline-flex; align-items: center; color: #fff7fa; background: rgb(34 13 28 / 82%); border-color: rgb(246 168 196 / 52%); }
 body:has(#riverCanvas) #ui-trigger { top: max(1rem, env(safe-area-inset-top)); right: max(1rem, env(safe-area-inset-right)); color: #fff7fa; background: rgb(34 13 28 / 88%); border-color: rgb(246 168 196 / 58%); }
+body:has(#riverCanvas) #ui-trigger { z-index: 500; }
 body:has(#riverCanvas) #ui-trigger.active { background: #f4a8c4; color: #2b1020; }
 body:has(#riverCanvas) .input-modal { max-width: 520px; padding: clamp(1.25rem, 3vw, 2rem); border-color: rgb(246 168 196 / 62%); background: rgb(34 13 28 / 90%); color: #fff7fa; }
 body:has(#riverCanvas) .input-modal h2 { color: #fff7fa; text-wrap: balance; }
@@ -24,3 +25,8 @@ body:has(#riverCanvas) button { user-select: none; }
 @keyframes release-shake { 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
 @media (max-width: 650px) { body:has(#riverCanvas) .interface { padding: 1rem; } .release-actions { grid-template-columns: 1fr; } .send-btn { min-height: 44px; } }
 @media (prefers-reduced-motion: reduce) { .input-modal.is-invalid { animation: none; } }
+/* Viewport-safe overrides: avoid scrollbar-width overflow and keep controls
+   usable on touch devices while the canvas retains its own interaction model. */
+html, body { width: 100%; min-width: 0; height: 100%; min-height: 100%; }
+body { height: 100dvh; min-height: 100dvh; }
+body :where(a, button, input, textarea, select) { touch-action: manipulation; -webkit-user-select: text; user-select: text; }

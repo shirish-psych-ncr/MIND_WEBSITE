@@ -3,30 +3,30 @@
 ## Pre-Deployment Verification
 
 ### [OK] Code Quality Checks
-- [x] All HTML files pass W3C validation (no critical errors)
-- [x] CSS is modular and organized (5 core + 7 tool stylesheets)
-- [x] JavaScript uses ES6+ modules with no console.log statements
-- [x] No duplicate vendor libraries (0 duplicates in assets/js/lib/)
-- [x] All paths use relative references with proper base href
+- [x] All 43 public HTML pages pass the repository validator
+- [x] CSS is modular and organized (11 core + 7 tool stylesheets)
+- [x] JavaScript syntax passes `node --check` with no console.log statements
+- [x] No duplicate vendor libraries in `assets/js/lib/`
+- [x] Root-relative paths are used consistently for Cloudflare Pages root deployment
 
 ### [OK] Performance Optimizations
-- [x] Images converted to WebP format (28 files, 0 JPG/PNG remaining)
-- [x] Lazy loading implemented on 31/32 pages (loading="lazy" attribute)
-- [x] Fetchpriority="high" on LCP images (31/32 pages)
-- [x] Font preconnect links on all pages
-- [x] Critical CSS inlined where applicable
-- [x] Non-critical scripts deferred or type="module"
+- [x] Responsive image dimensions and asynchronous decoding are applied to key imagery
+- [x] Lazy loading is used for below-the-fold imagery where appropriate
+- [x] High fetch priority is reserved for key above-the-fold imagery
+- [x] Font preconnect links are used where external fonts are loaded
+- [x] Critical CSS is inlined where applicable
+- [x] Non-critical scripts are deferred or loaded as modules
 
 ### [OK] SEO & Metadata
-- [x] Canonical URLs on all 51 pages (single per page, correct domain)
-- [x] OpenGraph tags on all content pages (44/44 HTML files)
+- [x] One canonical URL on all 43 public pages
+- [x] OpenGraph tags on all 43 public pages
 - [x] Twitter Card meta tags present
-- [x] JSON-LD structured data on all content pages (44/44)
+- [x] JSON-LD structured data on all 43 public pages
   - MedicalClinic schema for main pages
   - Physician schema for doctor pages
   - BlogPosting schema for blog articles
   - WebApplication schema for therapeutic tools
-- [x] Sitemap.xml generated with 51 URLs
+- [x] Sitemap.xml generated with 40 indexable URLs; noindex utility/error pages are excluded
 - [x] Robots.txt configured with correct domain
 
 ### [OK] Accessibility (WCAG 2.1 AA)
@@ -39,9 +39,9 @@
 - [x] Color contrast ratios meet AA standards
 
 ### [OK] Security
-- [x] HTTPS enforced (GitHub Pages default)
-- [x] No inline scripts (all external or type="module")
-- [ ] Content Security Policy headers (requires server config)
+- [x] HTTPS enforced (Cloudflare Pages)
+- [x] Executable JavaScript is kept in external files where practical; JSON-LD and a small number of page-specific modules remain inline by design
+- [x] Content Security Policy and security headers in `_headers`
 - [ ] Subresource Integrity hashes for vendor scripts (optional)
 
 ---
@@ -57,12 +57,12 @@ git commit -m "Final optimization before deployment"
 git push origin main
 ```
 
-### Step 2: GitHub Pages Configuration
-1. Go to Repository Settings → Pages
-2. Source: Deploy from branch
-3. Branch: main / root
-4. Save and wait for deployment (~30 seconds)
-5. Verify custom domain: mindgracencr.in
+### Step 2: Cloudflare Pages Configuration
+1. In Cloudflare Dashboard, open Workers & Pages → Create application → Pages.
+2. Connect the repository and select `main` as the production branch.
+3. Set build command to `exit 0` and build output directory to `.`.
+4. Save and deploy, then attach `mindgracencr.in` as the custom domain.
+5. Keep `_headers`, `_redirects`, and `wrangler.toml` in the deployed output.
 
 ### Step 3: DNS Verification
 ```bash
@@ -70,11 +70,7 @@ git push origin main
 dig mindgracencr.in
 dig www.mindgracencr.in
 
-# Expected: A record pointing to GitHub Pages IPs
-# 185.199.108.153
-# 185.199.109.153
-# 185.199.110.153
-# 185.199.111.153
+# Expected: the domain is proxied/managed by Cloudflare and resolves to Cloudflare edge IPs.
 ```
 
 ### Step 4: Post-Deployment Testing
@@ -141,7 +137,7 @@ If deployment issues occur:
 ### Daily Checks (First Week)
 - [ ] Site uptime (target: 99.9%)
 - [ ] Page load times (target: <3s on 4G)
-- [ ] Error logs (GitHub Pages has limited logging)
+- [ ] Error logs and deployment status in Cloudflare Pages
 - [ ] User feedback collection
 
 ### Weekly Checks (Ongoing)
@@ -162,7 +158,7 @@ If deployment issues occur:
 
 ### Domain Configuration
 - **Production Domain:** mindgracencr.in
-- **GitHub Pages URL:** shirish-psych-ncr.github.io/MIND_WEBSITE
+- **Cloudflare Pages URL:** `<project-name>.pages.dev` (set in the Cloudflare dashboard)
 - **Base Href:** `/` (root deployment)
 
 ### API Endpoints (if applicable)
@@ -193,7 +189,7 @@ tar -czf assets_backup_$(date +%Y%m%d).tar.gz assets/
 
 ### Recovery Time Objective (RTO)
 - Target: <1 hour for full restoration
-- GitHub Pages redeployment: ~30 seconds
+- Cloudflare Pages redeployment time varies by build queue and repository size
 
 ---
 
@@ -217,5 +213,5 @@ tar -czf assets_backup_$(date +%Y%m%d).tar.gz assets/
 
 ---
 
-**Last Updated:** $(date +%Y-%m-%d)
-**Next Review:** $(date -d "+3 months" +%Y-%m-%d)
+**Last Updated:** 2026-08-31
+**Next Review:** 2026-11-30
