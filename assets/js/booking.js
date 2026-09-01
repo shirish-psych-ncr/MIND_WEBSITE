@@ -1,1 +1,47 @@
-document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("booking-form-section"),t=document.getElementById("qualifications"),o=document.getElementById("continue-booking-btn")||document.getElementById("openBookingForm")||document.getElementById("heroStartBooking")||document.querySelector("#qualifications .btn-primary"),n=document.querySelector(".mobile-sticky-cta"),r=(document.querySelector(".hero"),window.matchMedia("(prefers-reduced-motion: reduce)").matches);function i(){e&&t&&(t.classList.add("hidden"),e.classList.remove("hidden"),a("Booking form is now visible. Please fill out the secure form below."),e.scrollIntoView({behavior:r?"auto":"smooth",block:"start"}),requestAnimationFrame(()=>{const t=e.querySelector('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])');t&&t.focus()}))}o&&(o.addEventListener("click",i),o.addEventListener("keydown",e=>{"Enter"!==e.key&&" "!==e.key||(e.preventDefault(),i())})),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){const t=this.getAttribute("href");if(!t||"#"===t)return;e.preventDefault();const o=document.querySelector(t);if(o){o.scrollIntoView({behavior:r?"auto":"smooth",block:"start"}),history.pushState(null,"",t);const e=o.querySelector("h1, h2, h3, h4, h5, h6");e&&(e.setAttribute("tabindex","-1"),e.focus({preventScroll:!0}))}})});let s=!1;function c(){if(!n)return;const e=document.querySelector(".site-footer");if(!e)return;e.getBoundingClientRect().top<window.innerHeight+80?(n.style.opacity="0",n.style.pointerEvents="none"):(n.style.opacity="1",n.style.pointerEvents="auto"),s=!1}function a(e){let t=document.getElementById("booking-live-region");t||(t=document.createElement("div"),t.id="booking-live-region",t.setAttribute("role","status"),t.setAttribute("aria-live","polite"),t.setAttribute("aria-atomic","true"),Object.assign(t.style,{position:"absolute",width:"1px",height:"1px",padding:"0",margin:"-1px",overflow:"hidden",clip:"rect(0, 0, 0, 0)",whiteSpace:"nowrap",border:"0"}),document.body.appendChild(t)),t.textContent="",requestAnimationFrame(()=>{t.textContent=e})}if(window.addEventListener("scroll",()=>{s||(requestAnimationFrame(c),s=!0)},{passive:!0}),c(),function(){const e=window.location.hash;if(e&&"#"!==e){const t=document.querySelector(e);t&&setTimeout(()=>{t.scrollIntoView({behavior:"auto",block:"start"})},100)}}(),"loading"in HTMLImageElement.prototype)document.querySelectorAll("img:not([loading])").forEach(e=>{e.loading="lazy"});else{const e=new IntersectionObserver((e,t)=>{e.forEach(e=>{if(e.isIntersecting){const o=e.target;o.dataset.src&&(o.src=o.dataset.src),o.classList.add("is-loaded"),t.unobserve(o)}})},{rootMargin:"50px 0px"});document.querySelectorAll("img[data-src]").forEach(t=>{e.observe(t)})}const l=e?.querySelector("iframe");l&&(l.addEventListener("load",()=>{const e=l.closest(".form-wrapper");e&&(e.classList.add("is-loaded"),a("Secure booking form has loaded successfully."))}),l.addEventListener("error",()=>{const e=l.closest(".form-wrapper");e&&(e.classList.add("is-error"),a("There was an issue loading the booking form. Please try refreshing the page or contact us directly."))}))});
+document.addEventListener("DOMContentLoaded", () => {
+  const formSection = document.getElementById("booking-form-section")
+    || document.getElementById("bookingFormSection");
+  const qualifications = document.getElementById("qualifications");
+  const controls = [
+    document.getElementById("continue-booking-btn"),
+    document.getElementById("openBookingForm"),
+    document.getElementById("heroStartBooking"),
+    document.querySelector("#qualifications .btn-primary")
+  ].filter(Boolean);
+  const sticky = document.getElementById("mobileStickyCtaBtn")
+    || document.querySelector(".mobile-sticky-cta");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const announce = (message) => {
+    let region = document.getElementById("booking-live-region");
+    if (!region) {
+      region = document.createElement("div");
+      region.id = "booking-live-region";
+      region.setAttribute("role", "status");
+      region.setAttribute("aria-live", "polite");
+      region.className = "visually-hidden";
+      document.body.appendChild(region);
+    }
+    region.textContent = message;
+  };
+
+  const revealBooking = (event) => {
+    event?.preventDefault();
+    if (!formSection) return;
+    qualifications?.classList.add("hidden");
+    formSection.classList.remove("hidden");
+    formSection.removeAttribute("hidden");
+    announce("Booking form is now visible. Please complete the form below.");
+    formSection.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+    requestAnimationFrame(() => formSection.querySelector("input, select, textarea")?.focus());
+  };
+
+  controls.forEach((control) => control.addEventListener("click", revealBooking));
+  sticky?.addEventListener("click", (event) => {
+    if (formSection?.classList.contains("hidden") || formSection?.hasAttribute("hidden")) {
+      revealBooking(event);
+    }
+  });
+
+  if (window.location.hash === "#booking-form-section") revealBooking();
+});

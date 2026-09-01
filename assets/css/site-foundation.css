@@ -1141,6 +1141,61 @@ body :where(.card, .surface, .panel, .notice-box, .contact-form, .article-card) 
   }
 }
 
+/* Shared concern-to-care copy block used across core pages, guides, and tools. */
+.content-pathway {
+  width: min(100% - 2rem, 72rem);
+  margin: clamp(1rem, 3vw, 2rem) auto clamp(2rem, 5vw, 4rem);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid color-mix(in srgb, var(--mg-link, #a31971) 18%, transparent);
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, color-mix(in srgb, #fff 92%, #f8dbe8), color-mix(in srgb, #fff 96%, #dcecf4));
+  box-shadow: 0 1rem 2.5rem color-mix(in srgb, #172033 9%, transparent);
+}
+
+.content-pathway h2 {
+  max-inline-size: 28ch;
+  margin: 0 0 .65rem;
+  color: var(--mg-heading, #172033);
+  font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+  text-wrap: balance;
+}
+
+.content-pathway p {
+  max-inline-size: 72ch;
+  margin: 0;
+  color: var(--mg-text, #384152);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.content-pathway__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem 1rem;
+  margin-top: 1.15rem;
+}
+
+.content-pathway__links a {
+  color: var(--mg-link, #8b145f);
+  font-weight: 700;
+  text-decoration-thickness: .1em;
+  text-underline-offset: .18em;
+}
+
+.content-pathway__links a::after {
+  content: " ↗";
+  text-decoration: none;
+}
+
+@media (max-width: 42rem) {
+  .content-pathway { width: min(100% - 1.25rem, 72rem); }
+  .content-pathway__links { display: grid; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content-pathway__links a { transition: none; }
+}
+
 @view-transition { navigation: auto; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
 

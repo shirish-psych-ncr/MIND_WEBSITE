@@ -1,1 +1,3 @@
-document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("openBookingForm"),t=document.getElementById("bookingFormSection");e&&t&&e.addEventListener("click",()=>{e.setAttribute("aria-expanded","true"),t.removeAttribute("hidden"),requestAnimationFrame(()=>{t.scrollIntoView({behavior:"smooth",block:"start"});const e=t.querySelector("input, select, textarea");e&&e.focus({preventScroll:!0})})})});
+// Kept as a module entrypoint for older page references.
+// Booking behavior is centralized in booking.js so every CTA follows the same path.
+export {};

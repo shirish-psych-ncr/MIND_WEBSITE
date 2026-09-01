@@ -82,6 +82,14 @@
     $$('[data-discovery-controls] [data-mode]').forEach((button) => button.addEventListener("click", () => { mode = button.dataset.mode; selectedTag = ""; draw(); }));
     $$('[data-symptom-grid] [data-value]').forEach((button) => button.addEventListener("click", () => { mode = "tag"; selectedTag = button.dataset.value; draw(); }));
     $$('[data-cluster-grid] [data-tags]').forEach((button) => button.addEventListener("click", () => { const tag = button.dataset.tags.split(",").find((candidate) => posts.some((post) => post.tags.includes(candidate))); if (tag) { mode = "tag"; selectedTag = tag; draw(); } }));
+    $$('[data-filter-tag]').forEach((button) => button.addEventListener("click", () => {
+      const tag = button.dataset.filterTag?.trim().toLowerCase();
+      if (!tag || !posts.some((post) => post.tags.includes(tag))) return;
+      mode = "tag";
+      selectedTag = tag;
+      draw();
+      document.getElementById("guide-library")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }));
     if (searchInput) searchInput.addEventListener("input", () => { searchQuery = searchInput.value.trim().toLowerCase(); mode = "all"; selectedTag = ""; draw(); });
     if (clearSearch) clearSearch.addEventListener("click", () => { if (searchInput) searchInput.value = ""; searchQuery = ""; mode = "all"; selectedTag = ""; draw(); searchInput?.focus(); });
     const total = $("[data-total-posts]"); if (total) total.textContent = String(posts.length);

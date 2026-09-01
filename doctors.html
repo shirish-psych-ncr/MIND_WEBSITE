@@ -63,7 +63,7 @@
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: transform .3s ease, opacity .3s ease, background-color .3s ease, color .3s ease;
             backdrop-filter: blur(5px);
         }
         .jump-btn:hover {
@@ -167,7 +167,7 @@
             font-size: 0.9rem;
             color: var(--text-dark);
             border: 1px solid var(--border-light);
-            transition: all 0.2s ease;
+            transition: transform .2s ease, opacity .2s ease, background-color .2s ease, color .2s ease;
         }
         .service-tag:hover {
             background: var(--primary);
@@ -387,8 +387,8 @@
                 <h1 style="color: white; margin-bottom: 1rem; font-size: clamp(2rem, 5vw, 3rem);">Comprehensive Care Under One Roof</h1>
                 <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
                     We offer both <strong>psychiatric medical care</strong> and <strong>psychological therapy services</strong>.
-                    Whether you need medication management, deep therapy, or child development support,
-                    our multidisciplinary team is here for you.
+                    Whether you need medication management, therapy, or child-development support,
+                    this page helps you understand which professional may fit your concern.
                 </p>
                 <div class="jump-buttons">
                     <a href="#psychiatrist" class="jump-btn"><i data-lucide="stethoscope" aria-hidden="true"></i> See Psychiatrist</a>
@@ -538,7 +538,6 @@
                             <i data-lucide="user-round" aria-hidden="true"></i>
                             <strong>Dr. Sana Firdous</strong>
                             <span>Clinical Psychologist</span>
-                            <small>Portrait coming soon</small>
                         </div>
                     </div>
 

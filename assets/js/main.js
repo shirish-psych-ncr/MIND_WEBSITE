@@ -581,6 +581,45 @@ function initExternalLinkAnnouncements() {
   });
 }
 
+function initCopyButtons() {
+  const copyText = async (value) => {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(value);
+      return;
+    }
+    const fallback = document.createElement('textarea');
+    fallback.value = value;
+    fallback.setAttribute('readonly', '');
+    Object.assign(fallback.style, { position: 'fixed', inset: '0 auto auto 0', opacity: '0', pointerEvents: 'none' });
+    document.body.appendChild(fallback);
+    fallback.select();
+    const copied = document.execCommand('copy');
+    fallback.remove();
+    if (!copied) throw new Error('Clipboard unavailable');
+  };
+  document.querySelectorAll("[data-copy-text]").forEach((button) => {
+    if (button.dataset.copyBound === "true") return;
+    button.dataset.copyBound = "true";
+    const originalLabel = button.textContent.trim();
+    button.addEventListener("click", async () => {
+      const value = button.dataset.copyText;
+      if (!value) return;
+      try {
+        await copyText(value);
+        button.textContent = "Address copied";
+        button.setAttribute("aria-label", "Clinic address copied");
+      } catch {
+        button.textContent = value;
+        button.setAttribute("aria-label", `Clinic address: ${value}`);
+      }
+      window.setTimeout(() => {
+        button.textContent = originalLabel;
+        button.setAttribute("aria-label", "Copy clinic address to clipboard");
+      }, 2200);
+    });
+  });
+}
+
 // Initialize all modules on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   const elements = {
@@ -616,6 +655,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initAccessibleArticleLabels();
   initExternalLinkAnnouncements();
+  initCopyButtons();
 
   // Initialize counters
   initCounters(elements.counters);
