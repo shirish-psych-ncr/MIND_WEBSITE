@@ -170,7 +170,7 @@
       link.dataset[marker] = "true";
       document.head.appendChild(link);
     };
-    appendStylesheet("/assets/css/site-foundation.css?v=chrome9", "mindgraceFinalFoundation");
+    appendStylesheet("/assets/css/site-foundation.css?v=chrome13", "mindgraceFinalFoundation");
     if (window.location.pathname.replace(/\\/g, "/").includes("/tools/")) {
       appendStylesheet("/assets/css/tool-overrides.css?v=tools5", "mindgraceFinalToolOverrides");
       appendStylesheet("/assets/css/tools-shell.css?v=toolview6", "mindgraceFinalToolShell");
@@ -539,20 +539,6 @@
     candidates.forEach((element) => observer.observe(element));
   }
 
-  function initializeImageFallbacks() {
-    $$('img[data-image-fallback]').forEach((image) => {
-      image.addEventListener('error', () => {
-        image.hidden = true;
-        const fallback = image.nextElementSibling;
-        if (fallback) {
-          fallback.style.display = 'block';
-          fallback.setAttribute('role', 'img');
-          fallback.setAttribute('aria-label', `Placeholder for ${image.alt || 'unavailable image'}`);
-        }
-      }, { once: true });
-    });
-  }
-
   function initialize() {
     document.documentElement.dataset.designSystem = "rose-serenity";
     ensureFinalStyles();
@@ -561,7 +547,6 @@
     addContentPathway(shell?.main || $("main"));
     markCurrentNavigation();
     initializeRevealMotion();
-    initializeImageFallbacks();
     document.body.dataset.visitorFriendly = "true";
     ensureIcons();
   }

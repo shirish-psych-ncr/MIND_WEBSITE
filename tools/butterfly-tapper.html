@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="/assets/css/breadcrumbs.css">
 <link rel="stylesheet" href="/assets/css/utilities.css">
 <link rel="stylesheet" href="/assets/css/animations.css">
-<link rel="stylesheet" href="/assets/css-tools/tools-butterfly.css">
+<link rel="stylesheet" href="/assets/css-tools/tools-butterfly.css?v=fix4">
 <script src="/assets/js/main.js" type="module"></script>
-<script src="/assets/js/tools-butterfly.js?v=fix3" type="module"></script>
+<script src="/assets/js/tools-butterfly.js?v=fix4" type="module"></script>
   <script src="/assets/js/icon-init.js" type="module"></script>
   <!-- HTTP Client (Ky Library) -->
   <script src="/assets/js/http-client.js" type="module"></script>
@@ -37,10 +37,10 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="/assets/css/inspiration.css">
-  <script src="/assets/js/visitor-friendly.js?v=chrome16" defer></script>
+  <script src="/assets/js/visitor-friendly.js?v=chrome20" defer></script>
   <meta name="theme-color" content="#d81b60">
 <link rel="stylesheet" href="/assets/css/accessibility.css?v=theme4">
-<link rel="stylesheet" href="/assets/css/site-foundation.css?v=chrome9">
+<link rel="stylesheet" href="/assets/css/site-foundation.css?v=chrome13">
 <link rel="stylesheet" href="/assets/css/tool-overrides.css?v=tools5">
   <link rel="stylesheet" href="/assets/css/tools-shell.css?v=toolview6">
   <script src="/assets/js/tools-shell.js?v=toolview3" defer></script>
@@ -173,8 +173,8 @@
 <canvas id="ui-canvas"></canvas>
 
 <!-- UI Elements -->
-<button id="gear-btn" type="button" aria-label="Open butterfly tapper settings"><i data-lucide="settings" aria-hidden="true"></i></button>
-<div class="status-overlay">
+<button id="gear-btn" type="button" aria-label="Pause butterfly tapper" aria-pressed="false"><i data-lucide="settings" aria-hidden="true"></i></button>
+<div class="status-overlay" role="status" aria-live="polite" aria-atomic="true">
     <div class="status-text" id="label">Tap Screen to Begin</div>
 </div>
 

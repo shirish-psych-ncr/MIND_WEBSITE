@@ -1187,6 +1187,37 @@ body :where(.card, .surface, .panel, .notice-box, .contact-form, .article-card) 
   text-decoration: none;
 }
 
+html[data-theme="dark"] .content-pathway,
+:root:not([data-theme="light"]) .content-pathway {
+  background: linear-gradient(135deg, #2c1a22, #40232e);
+  border-color: #b77b8e;
+  box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 22%);
+}
+
+html[data-theme="dark"] .content-pathway h2,
+:root:not([data-theme="light"]) .content-pathway h2 {
+  color: #fff8fa;
+}
+
+html[data-theme="dark"] .content-pathway p,
+:root:not([data-theme="light"]) .content-pathway p {
+  color: #f0dce3;
+}
+
+html[data-theme="dark"] .content-pathway__links a,
+:root:not([data-theme="light"]) .content-pathway__links a {
+  color: #ffd3df !important;
+}
+
+html[data-theme="light"] .content-pathway__links a,
+:root[data-theme="light"] .content-pathway__links a {
+  color: #8b145f !important;
+}
+
+html[data-theme="light"] body .content-pathway .content-pathway__links a {
+  color: #8b145f !important;
+}
+
 @media (max-width: 42rem) {
   .content-pathway { width: min(100% - 1.25rem, 72rem); }
   .content-pathway__links { display: grid; }

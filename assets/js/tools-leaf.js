@@ -25,12 +25,12 @@
 
   function resize() {
     state.ratio = Math.min(window.devicePixelRatio || 1, 2);
-    state.width = Math.max(320, window.innerWidth);
-    state.height = Math.max(480, window.innerHeight);
+    state.width = Math.max(320, document.documentElement.clientWidth || window.innerWidth);
+    state.height = Math.max(480, document.documentElement.clientHeight || window.innerHeight);
     canvas.width = Math.round(state.width * state.ratio);
     canvas.height = Math.round(state.height * state.ratio);
-    canvas.style.width = `${state.width}px`;
-    canvas.style.height = `${state.height}px`;
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
     context.setTransform(state.ratio, 0, 0, state.ratio, 0, 0);
     buildDetails();
   }

@@ -1,3 +1,105 @@
-const STATE={IDLE:0,TRAVEL:1,ORBIT:2,READY:3,EXPLODE:4,PAUSED:5};let canvas,ctx,tCanvas,tCtx,w,h,_midX,_midY,audioCtx,osc,panner,gain,currentState=STATE.IDLE,particles=[],side="L",count=0,brightness=100,isPaused=!1;const comet={x:0,y:0,sx:0,sy:0,tx:0,ty:0,cx:0,cy:0,progress:0,hue:190,active:!1};function initWorld(){audioCtx||(window.innerHeight,window.innerWidth,setupCanvas(),setupAudio(),currentState=STATE.TRAVEL,document.getElementById("label").innerText="Follow the Light",startTransition("L"),animate())}function setupCanvas(){canvas=document.getElementById("ui-canvas"),ctx=canvas.getContext("2d"),tCanvas=document.getElementById("trail-canvas"),tCtx=tCanvas.getContext("2d"),resize(),window.addEventListener("resize",resize,{passive:!0})}function resize(){w=canvas.width=tCanvas.width=window.innerWidth,h=canvas.height=tCanvas.height=window.innerHeight,_midX=w/2,_midY=h/2}function setupAudio(){const t=window.AudioContext||window.webkitAudioContext;audioCtx=new t,osc=audioCtx.createOscillator(),panner=audioCtx.createStereoPanner(),gain=audioCtx.createGain(),osc.type="sine",osc.frequency.setValueAtTime(432,audioCtx.currentTime),gain.gain.setValueAtTime(.05,audioCtx.currentTime),osc.connect(panner),panner.connect(gain),gain.connect(audioCtx.destination),osc.start()}function startTransition(t){currentState=STATE.TRAVEL,comet.active=!0,comet.progress=0,comet.hue="L"===t?190:280,document.getElementById("L").classList.remove("ready"),document.getElementById("R").classList.remove("ready"),document.getElementById("L").style.setProperty("--cyan","L"===t?"#22d3ee":"#a855f7"),document.getElementById("R").style.setProperty("--cyan","L"===t?"#22d3ee":"#a855f7");const e=document.getElementById(t).getBoundingClientRect();comet.tx=e.left+e.width/2,comet.ty=e.top+e.height/2;const n="L"===t?"R":"L",o=document.getElementById(n).getBoundingClientRect();if(comet.sx=o.left+o.width/2,comet.sy=o.top+o.height/2,comet.cx=(comet.sx+comet.tx)/2,comet.cy=(comet.sy+comet.ty)/2-.15*h,panner){const e="L"===t?-1:1;panner.pan.exponentialRampToValueAtTime(e,audioCtx.currentTime+1.5)}}function _handleTap(t){currentState===STATE.READY&&t===side&&(navigator.vibrate&&("L"===t?navigator.vibrate([40,30,40]):navigator.vibrate([60])),currentState=STATE.EXPLODE,spawnExplosion(comet.tx,comet.ty,comet.hue),count++,document.getElementById("label").innerText=`Cycle ${count}`,count%5==0&&brightness>30&&(brightness-=5,document.body.style.filter=`brightness(${brightness}%)`),count%20==0&&triggerSupernova(),side="L"===t?"R":"L",startTransition(side))}function spawnExplosion(t,e,n){for(let o=0;o<40;o++)particles.push({x:t,y:e,vx:15*(Math.random()-.5),vy:15*(Math.random()-.5),life:1,hue:n})}function triggerSupernova(){const t=document.getElementById("supernova");t.style.opacity="1",setTimeout(()=>{if(t.style.opacity="0",particles=[],osc){const t=Math.max(200,432-2*count);osc.frequency.exponentialRampToValueAtTime(t,audioCtx.currentTime+2)}},800)}function togglePause(t){t.stopPropagation(),isPaused=!isPaused;const e=document.getElementById("gear-btn");isPaused?(e.classList.add("paused"),currentState=STATE.PAUSED,audioCtx&&audioCtx.suspend()):(e.classList.remove("paused"),audioCtx&&audioCtx.resume(),currentState===STATE.PAUSED&&(currentState=STATE.READY))}function animate(){if(requestAnimationFrame(animate),!isPaused){if(tCtx.fillStyle="rgba(1, 2, 4, 0.1)",tCtx.fillRect(0,0,w,h),ctx.clearRect(0,0,w,h),currentState===STATE.TRAVEL||currentState===STATE.ORBIT){comet.progress+=.006;const t=10*Math.sin(30*comet.progress);if(comet.progress<.7){const e=comet.progress/.7;comet.x=(1-e)**2*comet.sx+2*(1-e)*e*comet.cx+e**2*comet.tx,comet.y=(1-e)**2*comet.sy+2*(1-e)*e*comet.cy+e**2*comet.ty+t,Math.random()>.5&&(tCtx.fillStyle=`hsla(${comet.hue}, 80%, 60%, 0.5)`,tCtx.beginPath(),tCtx.arc(comet.x,comet.y,3,0,2*Math.PI),tCtx.fill())}else{const t=(comet.progress-.7)/.3,e=t*Math.PI*4,n=80*(1-t);comet.x=comet.tx+Math.cos(e)*n,comet.y=comet.ty+Math.sin(e)*n,t>=1&&(currentState=STATE.READY,comet.active=!1,document.getElementById(side).classList.add("ready"),document.getElementById("label").innerText="Tap "+("L"===side?"Left":"Right"))}comet.active&&(ctx.shadowBlur=20,ctx.shadowColor=`hsl(${comet.hue}, 100%, 50%)`,ctx.fillStyle="#fff",ctx.beginPath(),ctx.arc(comet.x,comet.y,5,0,2*Math.PI),ctx.fill(),ctx.shadowBlur=0)}for(let t=particles.length-1;t>=0;t--){const e=particles[t];e.x+=e.vx,e.y+=e.vy,e.life-=.015,e.life<=0?particles.splice(t,1):(ctx.fillStyle=`hsla(${e.hue}, 80%, 60%, ${e.life})`,ctx.beginPath(),ctx.arc(e.x,e.y,4*e.life,0,2*Math.PI),ctx.fill())}}}document.addEventListener("DOMContentLoaded",()=>{document.addEventListener("click",initWorld,{once:true});const e=document.getElementById("gear-btn");e&&(e.addEventListener("click",togglePause),e.addEventListener("keydown",t=>{"Enter"!==t.key&&" "!==t.key||(t.preventDefault(),togglePause(t))}))});
-window.handleTap=_handleTap;
-document.addEventListener("DOMContentLoaded",()=>{document.getElementById("L")?.addEventListener("pointerdown",()=>_handleTap("L"));document.getElementById("R")?.addEventListener("pointerdown",()=>_handleTap("R"));});
+/* Butterfly Tapper: a small, dependency-free bilateral grounding interaction. */
+(() => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const STATE = Object.freeze({ idle: 'idle', travelling: 'travelling', ready: 'ready', paused: 'paused' });
+  const state = { phase: STATE.idle, side: 'L', cycle: 0, progress: 0, comet: { x: 0, y: 0, startX: 0, startY: 0, targetX: 0, targetY: 0, hue: 188 }, particles: [], width: 0, height: 0, dpr: 1, resizeObserver: null, audio: null };
+  const $ = (selector) => document.querySelector(selector);
+  const canvas = $('#ui-canvas');
+  const trailCanvas = $('#trail-canvas');
+  const left = $('#L');
+  const right = $('#R');
+  const label = $('#label');
+  const gear = $('#gear-btn');
+  const reduceMotion = () => prefersReducedMotion.matches;
+  if (!canvas || !trailCanvas || !left || !right || !label) return;
+  const context = canvas.getContext('2d', { alpha: true });
+  const trailContext = trailCanvas.getContext('2d', { alpha: true });
+
+  function announce(message) { label.textContent = message; }
+  function resize() {
+    const rect = document.body.getBoundingClientRect();
+    state.width = Math.max(1, Math.round(rect.width));
+    state.height = Math.max(1, Math.round(rect.height));
+    state.dpr = Math.min(window.devicePixelRatio || 1, 2);
+    [canvas, trailCanvas].forEach((element) => {
+      element.width = Math.round(state.width * state.dpr);
+      element.height = Math.round(state.height * state.dpr);
+      element.style.width = `${state.width}px`;
+      element.style.height = `${state.height}px`;
+    });
+    context.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+    trailContext.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+  }
+  function centre(element) { const rect = element.getBoundingClientRect(); return { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 }; }
+  function setReady(side) {
+    state.phase = STATE.ready;
+    state.side = side;
+    left.classList.toggle('ready', side === 'L');
+    right.classList.toggle('ready', side === 'R');
+    announce(`Tap ${side === 'L' ? 'left' : 'right'}`);
+  }
+  function beginAudio() {
+    if (state.audio || !('AudioContext' in window || 'webkitAudioContext' in window)) return;
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      const audioContext = new AudioContext();
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      const panner = audioContext.createStereoPanner();
+      oscillator.type = 'sine'; oscillator.frequency.value = 432; gain.gain.value = 0.025;
+      oscillator.connect(panner).connect(gain).connect(audioContext.destination); oscillator.start();
+      state.audio = { audioContext, panner };
+    } catch { state.audio = null; }
+  }
+  function moveAudio(side) {
+    const audio = state.audio; if (!audio) return;
+    const now = audio.audioContext.currentTime;
+    audio.audioContext.resume?.().catch(() => {});
+    audio.panner.pan.cancelScheduledValues(now);
+    audio.panner.pan.linearRampToValueAtTime(side === 'L' ? -0.75 : 0.75, now + 0.2);
+  }
+  function startSession() {
+    beginAudio(); state.phase = STATE.travelling; state.progress = 0;
+    state.comet.hue = state.side === 'L' ? 188 : 278;
+    const target = centre(state.side === 'L' ? left : right);
+    const start = centre(state.side === 'L' ? right : left);
+    Object.assign(state.comet, { startX: start.x, startY: start.y, targetX: target.x, targetY: target.y });
+    moveAudio(state.side); left.classList.remove('ready'); right.classList.remove('ready'); announce('Follow the light');
+  }
+  function addParticles(x, y, hue) {
+    if (reduceMotion()) return;
+    for (let index = 0; index < 22; index += 1) { const angle = (Math.PI * 2 * index) / 22; const speed = 1.5 + Math.random() * 2.5; state.particles.push({ x, y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed, life: 1, hue }); }
+  }
+  function tap(side) {
+    if (state.phase === STATE.idle) { state.side = side; startSession(); return; }
+    if (state.phase !== STATE.ready || side !== state.side) return;
+    const target = centre(side === 'L' ? left : right); addParticles(target.x, target.y, state.comet.hue);
+    state.cycle += 1; announce(`Cycle ${state.cycle}`); state.side = side === 'L' ? 'R' : 'L'; startSession();
+  }
+  function togglePause(event) {
+    event?.preventDefault(); beginAudio();
+    if (state.phase === STATE.paused) { state.phase = STATE.ready; gear.setAttribute('aria-label', 'Pause butterfly tapper'); gear.setAttribute('aria-pressed', 'false'); state.audio?.audioContext.resume?.().catch(() => {}); announce(`Tap ${state.side === 'L' ? 'left' : 'right'}`); }
+    else { state.phase = STATE.paused; gear.setAttribute('aria-label', 'Resume butterfly tapper'); gear.setAttribute('aria-pressed', 'true'); state.audio?.audioContext.suspend?.().catch(() => {}); announce('Paused'); }
+    gear.classList.toggle('paused', state.phase === STATE.paused);
+  }
+  function draw() {
+    requestAnimationFrame(draw);
+    if (state.phase === STATE.paused) return;
+    trailContext.fillStyle = 'rgba(1, 2, 4, 0.12)'; trailContext.fillRect(0, 0, state.width, state.height); context.clearRect(0, 0, state.width, state.height);
+    if (state.phase === STATE.travelling) {
+      state.progress = Math.min(1, state.progress + (reduceMotion() ? 0.08 : 0.018));
+      const eased = state.progress * state.progress * (3 - 2 * state.progress); const arc = Math.sin(state.progress * Math.PI) * Math.min(120, state.width * 0.16);
+      state.comet.x = state.comet.startX + (state.comet.targetX - state.comet.startX) * eased; state.comet.y = state.comet.startY + (state.comet.targetY - state.comet.startY) * eased - arc;
+      if (!reduceMotion()) { trailContext.fillStyle = `hsla(${state.comet.hue}, 90%, 65%, 0.35)`; trailContext.beginPath(); trailContext.arc(state.comet.x, state.comet.y, 3, 0, Math.PI * 2); trailContext.fill(); }
+      if (state.progress >= 1) setReady(state.side);
+      context.shadowBlur = reduceMotion() ? 0 : 24; context.shadowColor = `hsl(${state.comet.hue}, 100%, 60%)`; context.fillStyle = '#fff'; context.beginPath(); context.arc(state.comet.x, state.comet.y, 6, 0, Math.PI * 2); context.fill(); context.shadowBlur = 0;
+    }
+    state.particles = state.particles.filter((particle) => { particle.x += particle.vx; particle.y += particle.vy; particle.life -= 0.025; if (particle.life <= 0) return false; context.fillStyle = `hsla(${particle.hue}, 90%, 65%, ${particle.life})`; context.beginPath(); context.arc(particle.x, particle.y, 4 * particle.life, 0, Math.PI * 2); context.fill(); return true; });
+  }
+  function bind() {
+    [left, right].forEach((button) => { button.addEventListener('pointerdown', (event) => { event.preventDefault(); tap(button.id); }); button.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); tap(button.id); } }); });
+    gear?.addEventListener('click', togglePause); prefersReducedMotion.addEventListener?.('change', resize);
+    state.resizeObserver = new ResizeObserver(resize); state.resizeObserver.observe(document.body); resize(); draw();
+  }
+  document.addEventListener('DOMContentLoaded', bind, { once: true });
+})();

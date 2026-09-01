@@ -2,9 +2,38 @@
 /* Viewport-safe overrides: avoid scrollbar-width overflow and keep controls
    usable on touch devices while the canvas retains its own interaction model. */
 html, body { width: 100%; min-width: 0; height: 100%; min-height: 100%; }
-html:has(body.butterfly-tool) { overflow: hidden; }
+html:has(body.tool-page:has(#L)) { overflow: hidden; }
 body { height: 100dvh; min-height: 100dvh; }
 .tapper-container { position: relative; z-index: 1100; }
 .tapper-container .core { position: relative; z-index: 1101; }
 #trail-canvas, #ui-canvas { pointer-events: none; }
 body :where(a, button, input, textarea, select) { touch-action: manipulation; -webkit-user-select: text; user-select: text; }
+
+/* Modern tool-stage treatment: fixed to the viewport, DPR-safe, and comfortable
+   for both thumb use and keyboard focus without depending on a UI library. */
+body.tool-page:has(#L) { display: block; position: relative; isolation: isolate; min-height: 100dvh; background: radial-gradient(circle at 50% 42%, rgb(28 39 72 / 96%), var(--bg) 70%); }
+body.tool-page:has(#L) .site-header { position: fixed !important; inset: 0 0 auto; z-index: 800; background: linear-gradient(180deg, rgb(1 2 4 / 92%), rgb(1 2 4 / 0%)); border-bottom-color: transparent; }
+body.tool-page:has(#L) .site-footer { position: fixed !important; inset: auto 0 0; z-index: 800; padding: .75rem clamp(1rem, 4vw, 3rem); background: linear-gradient(0deg, rgb(1 2 4 / 92%), rgb(1 2 4 / 0%)); border-top-color: transparent; pointer-events: none; }
+body.tool-page:has(#L) .footer-content, body.tool-page:has(#L) .footer-container { display: none !important; }
+body.tool-page:has(#L) .footer-bottom { display: flex !important; justify-content: center; align-items: center; gap: .75rem; padding: 0 !important; }
+body.tool-page:has(#L) .footer-bottom > p { max-width: 54rem; margin: 0; color: rgb(255 255 255 / 55%) !important; font-size: clamp(.62rem, 1.4vw, .76rem); line-height: 1.3; text-align: center; }
+body.tool-page:has(#L) .footer-bottom > div { display: none; }
+body.tool-page:has(#L) #main-content { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; min-width: 0; min-height: 0; pointer-events: none; }
+body.tool-page:has(#L) #main-content > .tool-viewbar,
+body.tool-page:has(#L) #main-content > .content-pathway,
+body.tool-page:has(#L) #main-content > .tool-related-reading { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+body.tool-page:has(#L) .breadcrumbs { position: fixed; top: clamp(4.7rem, 10vh, 6.5rem); left: clamp(1rem, 4vw, 3rem); z-index: 50; max-width: calc(100vw - 2rem); opacity: .7; pointer-events: auto; }
+body.tool-page:has(#L) .breadcrumbs a, body.tool-page:has(#L) .breadcrumbs li { color: rgb(255 255 255 / 78%); }
+body.tool-page:has(#L) .scroll-progress { position: fixed; top: 0; left: 0; z-index: 900; }
+body.tool-page:has(#L) .tapper-container { position: absolute; inset: 0; width: 100%; height: 100%; padding-inline: clamp(1rem, 10vw, 10rem); pointer-events: none; }
+body.tool-page:has(#L) .core { width: clamp(7rem, 26vmin, 15rem); height: clamp(7rem, 26vmin, 15rem); border: 1px solid rgb(255 255 255 / 10%); background: radial-gradient(circle, rgb(255 255 255 / 7%), transparent 68%); box-shadow: inset 0 0 2rem rgb(255 255 255 / 4%); transition: transform .25s ease, border-color .25s ease, background-color .25s ease; }
+body.tool-page:has(#L) .core:hover { transform: scale(1.04); border-color: rgb(255 255 255 / 28%); }
+body.tool-page:has(#L) .core:active { transform: scale(.96); }
+body.tool-page:has(#L) .core:focus-visible, body.tool-page:has(#L) #gear-btn:focus-visible { outline: 3px solid #fda4af; outline-offset: 5px; }
+body.tool-page:has(#L) .core.ready { border-color: color-mix(in oklch, var(--cyan) 70%, white); }
+body.tool-page:has(#L) .status-overlay { bottom: clamp(5.5rem, 14vh, 9rem); padding-inline: 1rem; }
+body.tool-page:has(#L) .status-text { display: inline-flex; min-height: 2.5rem; align-items: center; justify-content: center; padding: .65rem 1rem; border: 1px solid rgb(255 255 255 / 12%); border-radius: 999px; background: rgb(1 2 4 / 42%); backdrop-filter: blur(12px); color: rgb(255 255 255 / 78%); font-size: clamp(.7rem, 1.8vw, .86rem); letter-spacing: clamp(.15em, .7vw, .3em); }
+body.tool-page:has(#L) #gear-btn { top: max(1rem, env(safe-area-inset-top)); right: max(4.8rem, calc(env(safe-area-inset-right) + 1rem)); width: 3rem; height: 3rem; border-color: rgb(255 255 255 / 18%); background: rgb(1 2 4 / 52%); }
+@media (max-width: 700px) { body.tool-page:has(#L) .site-header .desktop-nav, body.tool-page:has(#L) .site-header .mobile-book-btn { display: none; } body.tool-page:has(#L) .site-header .header-inner { padding-inline: 1rem; } body.tool-page:has(#L) .logo-text { font-size: .78rem; } body.tool-page:has(#L) .logo-tagline { font-size: .62rem; } body.tool-page:has(#L) .breadcrumbs { top: 4.2rem; font-size: .7rem; } body.tool-page:has(#L) .footer-bottom .disclaimer { line-height: 1.3; } }
+@media (orientation: landscape) and (max-height: 560px) { body.tool-page:has(#L) .breadcrumbs { top: 3.9rem; } body.tool-page:has(#L) .status-overlay { bottom: 3.4rem; } body.tool-page:has(#L) .core { width: clamp(5.5rem, 28vmin, 10rem); height: clamp(5.5rem, 28vmin, 10rem); } }
+@media (prefers-reduced-motion: reduce) { body.tool-page:has(#L) .core, body.tool-page:has(#L) .status-text { transition: none; } body.tool-page:has(#L)::before { animation: none; } }
