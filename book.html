@@ -380,12 +380,19 @@
             Fill out the secure form below. After submitting, you'll receive
             confirmation via your preferred contact method.
           </p>
+          <div class="booking-consent notice-box" data-booking-consent>
+            <label><input type="checkbox" id="booking-consent" required> I understand that this form is for appointment coordination only. I will not include emergency details or a detailed medical history, and I have read the <a href="/privacy.html">Privacy Notice</a> and <a href="/consent.html">Consent Notice</a>.</label>
+            <p class="form-error" id="booking-consent-error" hidden>Please confirm this notice before opening the booking form.</p>
+          </div>
           <div class="form-wrapper">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfr5yRtw_iWqw6rnigQ-pgw86Q_6ipIScgzS5lqf0DIdpF0ag/viewform?embedded=true" title="Appointment Booking Form" loading="lazy" referrerpolicy="no-referrer">Loading secure form…</iframe>
+            <div class="booking-embed-gate" data-booking-gate>
+              <p><strong>Before continuing:</strong> The clinic uses this form to coordinate routine appointments. A clinic team member will respond using the contact method you provide.</p>
+              <button type="button" class="btn btn-primary" data-open-embedded-booking>Open appointment form</button>
+            </div>
+            <iframe hidden data-booking-iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfr5yRtw_iWqw6rnigQ-pgw86Q_6ipIScgzS5lqf0DIdpF0ag/viewform?embedded=true" title="Appointment booking form" loading="lazy" referrerpolicy="no-referrer">Loading appointment form…</iframe>
           </div>
           <p class="c4">
-            <i data-lucide="lock-keyhole" aria-hidden="true"></i> Your information is encrypted and treated with strict medical
-            confidentiality.
+            <i data-lucide="info" aria-hidden="true"></i> Share only the basic information needed to request an appointment. Do not use this form for urgent or emergency support.
           </p>
           <div class="card c2">
             <h3>What happens next?</h3>
@@ -415,7 +422,7 @@
               <h3>Call Us</h3>
               <p>+91 96678 63295</p>
               <div class="card-footer">
-                <span>Mon–Sat, 10am–7pm</span>
+                <span>Mon–Sat: 10:00 AM–4:00 PM and 5:30–7:30 PM</span>
               </div></a>
             <a href="https://wa.me/919667863295" class="contact-card" target="_blank" rel="noopener">
               <div class="contact-icon"></div>
@@ -431,26 +438,6 @@
               <div class="card-footer">
                 <span>We reply within 24 hours</span>
               </div></a>
-          </div>
-        </div>
-      </section>
-      <!-- SOCIAL PROOF / TRUST SIGNALS -->
-      <section class="section c11">
-        <div class="container">
-          <h2 class="c6">Trusted by Patients Across NCR</h2>
-          <div class="trust-grid c10">
-            <div class="trust-item c9">
-              <div class="c7">15+</div>
-              <p class="c8">Years of Experience</p>
-            </div>
-            <div class="trust-item c9">
-              <div class="c7">5000+</div>
-              <p class="c8">Successful Consultations</p>
-            </div>
-            <div class="trust-item c9">
-              <div class="c7">4.9 <i data-lucide="star" aria-hidden="true"></i></div>
-              <p class="c8">Patient Satisfaction Rating</p>
-            </div>
           </div>
         </div>
       </section>

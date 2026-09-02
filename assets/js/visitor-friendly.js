@@ -122,6 +122,78 @@
     document.dispatchEvent(new Event("icons:refresh"));
   }
 
+  function normalizeSafetyNotice() {
+    $$(".emergency-banner").forEach((banner) => banner.remove());
+    const notice = document.createElement("aside");
+    notice.className = "emergency-banner emergency-banner--static";
+    notice.style.display = "block";
+    notice.setAttribute("role", "note");
+    notice.setAttribute("aria-labelledby", "emergency-notice-title");
+    notice.innerHTML = `<div class="emergency-banner__content"><strong id="emergency-notice-title">Emergency notice</strong><span>Mind Grace does not provide emergency or crisis services.</span><a href="/emergency.html">See emergency resources</a><span>If there is immediate danger, call <a href="tel:112">112</a> or go to the nearest hospital emergency department.</span></div>`;
+    document.body.prepend(notice);
+  }
+
+  function normalizePublicContactDetails() {
+    const replaceText = (root) => {
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach((node) => {
+        node.nodeValue = node.nodeValue.replace(/dranitasharma86@gmail\.com/gi, "contact@mindgracencr.in");
+      });
+    };
+    replaceText(document.body);
+    $$('a[href^="mailto:"]').forEach((link) => {
+      if (/dranitasharma86@gmail\.com/i.test(link.href)) link.href = "mailto:contact@mindgracencr.in";
+    });
+  }
+
+  function normalizeClinicStructuredData() {
+    const hours = [{
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "10:00",
+      closes: "16:00"
+    }, {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "17:30",
+      closes: "19:30"
+    }];
+    let clinicSchemaFound = false;
+    $$('script[type="application/ld+json"]').forEach((script) => {
+      try {
+        const data = JSON.parse(script.textContent);
+        const items = Array.isArray(data) ? data : [data];
+        let changed = false;
+        items.forEach((item) => {
+          if (!item || !["MedicalClinic", "MedicalBusiness", "Physician"].includes(item["@type"])) return;
+          clinicSchemaFound = true;
+          item.telephone = "+91-9667863295";
+          item.address ||= { "@type": "PostalAddress", streetAddress: "J123, Gamma II", addressLocality: "Greater Noida", addressRegion: "Uttar Pradesh", postalCode: "201310", addressCountry: "IN" };
+          if (item["@type"] !== "Physician") item.openingHoursSpecification = hours;
+          changed = true;
+        });
+        if (changed) script.textContent = JSON.stringify(Array.isArray(data) ? items : items[0]);
+      } catch (_) { /* Invalid third-party JSON-LD should not stop the page shell. */ }
+    });
+    if (!clinicSchemaFound) {
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        name: "Mind Grace Neuropsychiatric Clinic",
+        url: window.location.href.split("#")[0],
+        telephone: "+91-9667863295",
+        address: { "@type": "PostalAddress", streetAddress: "J123, Gamma II", addressLocality: "Greater Noida", addressRegion: "Uttar Pradesh", postalCode: "201310", addressCountry: "IN" },
+        geo: { "@type": "GeoCoordinates", latitude: 28.4910152, longitude: 77.5132324 },
+        openingHoursSpecification: hours
+      });
+      document.head.appendChild(script);
+    }
+  }
+
   function setTheme(theme, persist = true) {
     const value = theme === "dark" ? "dark" : "light";
     document.documentElement.dataset.theme = value;
@@ -189,6 +261,7 @@
       </a>
       <nav class="desktop-nav" aria-label="Main navigation"><ul>${linkMarkup()}<li><a class="btn btn--primary" href="/book.html">Book an appointment</a></li></ul></nav>
       <div class="header-actions">
+        <button type="button" class="accessibility-toggle" id="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-panel">Accessibility</button>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Use dark theme"><i data-lucide="moon" aria-hidden="true"></i><span class="visually-hidden">Dark theme</span></button>
         <button type="button" class="mobile-nav-trigger" id="burgerMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel"><i data-lucide="menu" aria-hidden="true"></i></button>
         <a class="mobile-book-btn" href="/book.html" aria-label="Book an appointment"><i data-lucide="calendar-days" aria-hidden="true"></i><span class="mobile-book-label">Book</span><span class="visually-hidden">Book an appointment</span></a>
@@ -293,6 +366,27 @@
     mobileNav.setAttribute("inert", "");
     mobileNav.innerHTML = `<div class="mobile-nav-panel-inner"><div class="mobile-nav-header"><div><p class="mobile-nav-kicker">Mind Grace</p><h2>Find your next step</h2></div><button type="button" class="close-mobile-menu" aria-label="Close navigation menu"><i data-lucide="x" aria-hidden="true"></i></button></div><p class="mobile-nav-intro">Choose a section, then open a branch to see the pages inside it.</p>${mobileTreeMarkup(mobileNavigation)}<a class="btn btn--primary mobile-nav-appointment" href="/book.html"><i data-lucide="calendar" aria-hidden="true"></i> Book an appointment</a></div>`;
     header.after(overlay, mobileNav);
+    const accessibilityPanel = document.createElement("section");
+    accessibilityPanel.id = "accessibility-panel";
+    accessibilityPanel.className = "accessibility-panel";
+    accessibilityPanel.hidden = true;
+    accessibilityPanel.setAttribute("aria-label", "Accessibility options");
+    accessibilityPanel.innerHTML = `<div><strong>Accessibility options</strong><button type="button" class="accessibility-close" aria-label="Close accessibility options">×</button></div><div class="accessibility-controls"><button type="button" data-accessibility="larger">Larger text</button><button type="button" data-accessibility="contrast">High contrast</button><button type="button" data-accessibility="motion">Reduce motion</button><button type="button" data-accessibility="reset">Reset</button></div>`;
+    header.after(accessibilityPanel);
+    const accessibilityToggle = $("#accessibility-toggle", header);
+    const setAccessibility = (mode, enabled) => {
+      document.documentElement.classList.toggle(`a11y-${mode}`, enabled);
+      if (enabled) window.localStorage?.setItem(`mindgrace-a11y-${mode}`, "true");
+      else window.localStorage?.removeItem(`mindgrace-a11y-${mode}`);
+    };
+    ["larger", "contrast", "motion"].forEach((mode) => setAccessibility(mode, window.localStorage?.getItem(`mindgrace-a11y-${mode}`) === "true"));
+    accessibilityToggle.addEventListener("click", () => { const open = accessibilityPanel.hidden; accessibilityPanel.hidden = !open; accessibilityToggle.setAttribute("aria-expanded", String(open)); if (open) accessibilityPanel.querySelector("button")?.focus(); });
+    $(".accessibility-close", accessibilityPanel).addEventListener("click", () => { accessibilityPanel.hidden = true; accessibilityToggle.setAttribute("aria-expanded", "false"); accessibilityToggle.focus(); });
+    $$('[data-accessibility]', accessibilityPanel).forEach((button) => button.addEventListener("click", () => {
+      const mode = button.dataset.accessibility;
+      if (mode === "reset") ["larger", "contrast", "motion"].forEach((name) => setAccessibility(name, false));
+      else setAccessibility(mode, !document.documentElement.classList.contains(`a11y-${mode}`));
+    }));
     const footer = buildFooter();
     document.body.appendChild(footer);
     footer.querySelector("#year").textContent = String(new Date().getFullYear());
@@ -543,6 +637,9 @@
     document.documentElement.dataset.designSystem = "rose-serenity";
     ensureFinalStyles();
     const shell = normalizeSiteChrome();
+    normalizeSafetyNotice();
+    normalizePublicContactDetails();
+    normalizeClinicStructuredData();
     enhanceBreadcrumbs(shell?.main || $("main"));
     addContentPathway(shell?.main || $("main"));
     markCurrentNavigation();
