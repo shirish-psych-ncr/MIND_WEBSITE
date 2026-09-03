@@ -1343,6 +1343,126 @@ html[data-theme="light"] body .content-pathway .content-pathway__links a {
 @view-transition { navigation: auto; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
 
+/* Navigation polish: a quiet, editorial command surface that keeps the
+   clinic's rose accent, clear hierarchy, and generous touch targets. */
+body .site-header {
+  background: color-mix(in srgb, var(--mg-surface) 88%, transparent) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+
+body .desktop-nav a:not(.btn) {
+  position: relative;
+  border: 1px solid transparent;
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+body .desktop-nav a:not(.btn)::after {
+  content: "";
+  position: absolute;
+  inset: auto .7rem .35rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--mg-lava);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .2s ease;
+}
+
+body .desktop-nav a:not(.btn):hover::after,
+body .desktop-nav a:not(.btn):focus-visible::after,
+body .desktop-nav a:not(.btn).is-current::after { transform: scaleX(1); }
+
+body .desktop-nav a.btn--primary,
+body .mobile-nav-appointment {
+  box-shadow: 0 .55rem 1.2rem rgb(122 16 56 / 18%);
+}
+
+body .mobile-nav-overlay {
+  background: rgb(40 23 29 / 48%);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+body .mobile-nav-panel {
+  inset: clamp(4.5rem, 11vh, 7rem) max(1rem, calc((100vw - 34rem) / 2)) auto;
+  max-height: min(42rem, calc(100dvh - 5.5rem));
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid color-mix(in srgb, var(--mg-lava) 42%, var(--mg-border-strong));
+  border-radius: 1.35rem;
+  background:
+    radial-gradient(circle at 100% 0%, rgb(251 198 212 / 42%), transparent 38%),
+    var(--mg-surface) !important;
+  box-shadow: 0 1.5rem 4rem rgb(40 23 29 / 28%), 0 1px 0 rgb(255 255 255 / 80%) inset;
+}
+
+body .mobile-nav-header {
+  padding-bottom: .9rem;
+  border-bottom: 1px solid var(--mg-border-strong);
+}
+
+body .mobile-nav-header h2 { font-size: clamp(1.25rem, 4vw, 1.6rem); letter-spacing: -.025em; }
+body .mobile-nav-intro { max-width: 34ch; font-size: .9rem; }
+
+body .mobile-nav-panel .mobile-nav-tree { gap: .55rem; }
+body .mobile-nav-panel .mobile-nav-tree-row { gap: .45rem; }
+body .mobile-nav-panel .mobile-nav-tree-link,
+body .mobile-nav-panel .mobile-nav-tree-parent {
+  min-height: 48px;
+  padding: .78rem .9rem;
+  border-color: color-mix(in srgb, var(--mg-border-strong) 58%, transparent);
+  background: color-mix(in srgb, var(--mg-surface-soft) 65%, transparent);
+}
+
+body .mobile-nav-panel .mobile-nav-tree-link:hover,
+body .mobile-nav-panel .mobile-nav-tree-link:focus-visible,
+body .mobile-nav-panel .mobile-nav-tree-parent:hover,
+body .mobile-nav-panel .mobile-nav-tree-parent:focus-visible,
+body .mobile-nav-panel .mobile-nav-tree-parent[aria-expanded="true"] {
+  border-color: color-mix(in srgb, var(--mg-lava) 48%, var(--mg-border-strong));
+  background: var(--mg-soft);
+}
+
+body .mobile-nav-panel .mobile-nav-children {
+  gap: .3rem;
+  margin-left: .85rem;
+  padding-left: .75rem;
+  border-left: 2px solid color-mix(in srgb, var(--mg-lava) 36%, var(--mg-border-strong));
+}
+
+body .mobile-nav-panel .mobile-nav-children .mobile-nav-tree-link,
+body .mobile-nav-panel .mobile-nav-children .mobile-nav-tree-parent {
+  min-height: 44px;
+  padding-block: .62rem;
+  background: transparent;
+  border-color: transparent;
+  font-size: .93rem;
+  font-weight: 650;
+}
+
+body .mobile-nav-panel .mobile-nav-disclosure {
+  min-height: 48px;
+  flex-basis: 48px;
+  width: 48px;
+  background: var(--mg-soft);
+}
+
+body .mobile-nav-panel .mobile-nav-appointment {
+  min-height: 50px;
+  margin-top: .65rem;
+  letter-spacing: .01em;
+}
+
+@media (min-width: 1101px) {
+  body .header-inner { min-height: 78px; }
+  body .desktop-nav ul { gap: .35rem; }
+  body .desktop-nav a.btn--primary { padding-inline: 1.15rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body .desktop-nav a:not(.btn)::after { transition: none; }
+}
+
 /* Curated design upgrade: soft structuralism, editorial hierarchy, and
    tactile controls inspired by the generated Clay/Figma/Linear/Stripe studies.
    The clinic palette and readable system font remain intentionally intact. */

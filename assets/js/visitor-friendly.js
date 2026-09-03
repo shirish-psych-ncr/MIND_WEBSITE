@@ -242,7 +242,7 @@
       link.dataset[marker] = "true";
       document.head.appendChild(link);
     };
-    appendStylesheet("/assets/css/site-foundation.css?v=chrome14", "mindgraceFinalFoundation");
+    appendStylesheet("/assets/css/site-foundation.css?v=chrome15", "mindgraceFinalFoundation");
     if (window.location.pathname.replace(/\\/g, "/").includes("/tools/")) {
       appendStylesheet("/assets/css/tool-overrides.css?v=tools5", "mindgraceFinalToolOverrides");
       appendStylesheet("/assets/css/tools-shell.css?v=toolview6", "mindgraceFinalToolShell");
@@ -256,7 +256,7 @@
     header.className = "site-header";
     header.innerHTML = `<div class="header-inner">
       <a class="logo-link" href="/index.html">
-        <img class="logo-img" src="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="" width="180" height="60" loading="eager" decoding="async">
+        <img class="logo-img" src="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
         <span class="logo-copy"><span class="logo-text" id="site-logo-name">Mind Grace</span><span class="logo-tagline">Neuropsychiatric Clinic | Where You Come First</span></span>
       </a>
       <nav class="desktop-nav" aria-label="Main navigation"><ul>${linkMarkup()}<li><a class="btn btn--primary" href="/book.html">Book an appointment</a></li></ul></nav>

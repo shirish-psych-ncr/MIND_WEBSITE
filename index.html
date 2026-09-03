@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
   <link rel="stylesheet" href="/assets/css/accessibility.css">
+  <link rel="stylesheet" href="/assets/css/site-foundation.css?v=chrome15">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/svg+xml" href="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg">
 
@@ -468,7 +469,11 @@
   }
   </script>
   
-  <!-- Simple script for dynamic year and mobile nav toggle (placeholder) -->
+  <!-- Shared shell: responsive navigation, accessibility controls, safety
+       notice, contact normalization, and the clinic footer. -->
+  <script src="/assets/js/visitor-friendly.js?v=chrome22" defer></script>
+  <script src="/assets/js/icon-init.js" defer></script>
+  <!-- Simple script for the dynamic year in this legacy homepage shell. -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     // Mobile nav toggle logic should be implemented in /assets/js/main.js
