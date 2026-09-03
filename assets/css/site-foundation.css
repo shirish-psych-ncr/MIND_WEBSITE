@@ -942,6 +942,27 @@ body :where(.grid-container, .card-grid, .features-grid, .services-grid, .condit
 }
 body :where(.card, .surface, .panel, .notice-box, .contact-form, .article-card) { min-width: 0; max-width: 100%; }
 
+/* Keep homepage process numbering sequential across both the current
+   `.step` cards and the legacy `.home-step` variant still used by some
+   preview builds. The counter belongs to the group, never to each card. */
+body .home-steps { counter-reset: home-step; }
+body .home-steps > .home-step {
+  counter-increment: home-step;
+  counter-reset: none;
+}
+body .home-steps > .home-step::before {
+  content: counter(home-step, decimal-leading-zero) !important;
+}
+
+body .grid[style*="counter-reset: step"] { counter-reset: step; }
+body .grid[style*="counter-reset: step"] > .step {
+  counter-increment: step;
+  counter-reset: none;
+}
+body .grid[style*="counter-reset: step"] > .step::before {
+  content: counter(step, decimal-leading-zero) !important;
+}
+
 @media (max-width: 1100px) {
   body .header-inner { width: min(calc(100% - 1rem), var(--mg-wide-max)); gap: .65rem; }
   body .logo-copy { min-width: 0; }
