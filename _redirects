@@ -4,3 +4,13 @@
 /about /about.html 200
 /contact /contact.html 200
 /blog /blog/index.html 200
+
+# Canonical SEO landing pages
+/psychiatrist-in-greater-noida /psychiatrist-greater-noida.html 301
+/psychiatrist-noida /psychiatrist-in-noida.html 301
+/mental-health-clinic-greater-noida /psychiatrist-greater-noida.html 301
+/mental-health-clinic-noida /psychiatrist-in-noida.html 301
+/counselling /psychology-counselling.html 301
+/psychotherapy /therapy.html 301
+/child-psychiatry /child-development.html 301
+/mental-health-assessment /assessments.html 301

@@ -27,6 +27,13 @@
       icon: "heart-handshake",
       children: [
         ["Services", "/services.html"],
+        ["Psychiatry", "/psychiatry.html"],
+        ["Psychology and counselling", "/psychology-counselling.html"],
+        ["Child development", "/child-development.html"],
+        ["Assessments", "/assessments.html"],
+        ["Therapy and psychotherapy", "/therapy.html"],
+        ["Teleconsultation", "/teleconsultation.html"],
+        ["Specialized enquiries", "/specialized-consultations.html"],
         ["What to expect", "/process.html"],
         ["Fees and payments", "/fees.html"],
         {
@@ -34,6 +41,8 @@
           icon: "users-round",
           children: [
             ["Adult mental health", "/conditions.html"],
+            ["Depression and anxiety", "/depression-anxiety.html"],
+            ["ADHD and autism assessment", "/adhd-autism-assessment.html"],
             ["Child development", "/aasha.html"],
             ["Our care approach", "/approach.html"]
           ]
@@ -124,6 +133,7 @@
 
   function normalizeSafetyNotice() {
     $$(".emergency-banner").forEach((banner) => banner.remove());
+    $$(".visually-hidden").filter((element) => /In a crisis\?|24\/7 Crisis Support Available|24\/7 crisis support resources/i.test(element.textContent || "")).forEach((element) => element.remove());
     const notice = document.createElement("aside");
     notice.className = "emergency-banner emergency-banner--static";
     notice.style.display = "block";
@@ -281,6 +291,21 @@
     return footer;
   }
 
+  function enhanceFooterLinks(footer) {
+    const nav = footer?.querySelector(".footer-links");
+    if (!nav || nav.querySelector("[data-seo-footer-links]")) return;
+    const group = document.createElement("div");
+    group.dataset.seoFooterLinks = "true";
+    group.innerHTML = `<h2>Care guides</h2><ul>
+      <li><a href="/psychiatry.html">Psychiatry</a></li>
+      <li><a href="/psychology-counselling.html">Psychology and counselling</a></li>
+      <li><a href="/child-development.html">Child development</a></li>
+      <li><a href="/assessments.html">Assessments</a></li>
+      <li><a href="/conditions.html">Conditions</a></li>
+    </ul>`;
+    nav.appendChild(group);
+  }
+
   function preserveMain() {
     let main = $("main");
     if (!main) {
@@ -389,6 +414,7 @@
     }));
     const footer = buildFooter();
     document.body.appendChild(footer);
+    enhanceFooterLinks(footer);
     footer.querySelector("#year").textContent = String(new Date().getFullYear());
     bindMenu(header, mobileNav, overlay);
     $("#theme-toggle", header).addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
@@ -420,13 +446,37 @@
       "doctors.html": "Care team", "dr-anita-sharma.html": "Dr Anita Sharma", "aasha.html": "Aasha child development",
       "gallery.html": "Clinic gallery", "fees.html": "Fees and payments", "faq.html": "Frequently asked questions",
       "privacy.html": "Privacy", "terms.html": "Terms", "disclaimer.html": "Medical disclaimer",
-      "consent.html": "Consent", "mind-grace.html": "Mind Grace overview", "thank-you.html": "Thank you"
+      "consent.html": "Consent", "mind-grace.html": "Mind Grace overview", "thank-you.html": "Thank you",
+      "psychiatrist-greater-noida.html": "Psychiatrist in Greater Noida",
+      "psychiatrist-in-noida.html": "Psychiatrist serving Noida",
+      "psychiatry.html": "Psychiatry consultations",
+      "psychology-counselling.html": "Psychology and counselling",
+      "child-development.html": "Child development",
+      "assessments.html": "Mental health assessments",
+      "therapy.html": "Therapy and psychotherapy",
+      "teleconsultation.html": "Teleconsultation",
+      "specialized-consultations.html": "Specialized consultations",
+      "depression-anxiety.html": "Depression and anxiety",
+      "bipolar-mood-disorders.html": "Bipolar and mood disorders",
+      "adhd-autism-assessment.html": "ADHD and autism assessment",
+      "ocd-panic-ptsd.html": "OCD, panic, and PTSD",
+      "psychosis-schizophrenia.html": "Psychosis and schizophrenia",
+      "addiction-substance-use.html": "Addiction and substance use",
+      "sleep-eating-disorders.html": "Sleep and eating disorders",
+      "trauma-grief-support.html": "Trauma and grief support",
+      "learning-disability-assessment.html": "Learning disability assessment"
     };
     const file = currentFile();
     const title = $("h1", main)?.textContent?.replace(/\s+/g, " ").trim();
     const slugLabel = (value) => value.replace(/\.html$/i, "").split("-").map((part) => part ? part[0].toUpperCase() + part.slice(1) : part).join(" ");
     const entries = [{ label: "Home", href: "/index.html" }];
     const path = window.location.pathname.replace(/\\/g, "/");
+    const carePages = new Set(["psychiatry.html", "psychology-counselling.html", "child-development.html", "assessments.html", "therapy.html", "teleconsultation.html", "specialized-consultations.html"]);
+    const conditionPages = new Set(["depression-anxiety.html", "bipolar-mood-disorders.html", "adhd-autism-assessment.html", "ocd-panic-ptsd.html", "psychosis-schizophrenia.html", "addiction-substance-use.html", "sleep-eating-disorders.html", "trauma-grief-support.html", "learning-disability-assessment.html"]);
+    const aboutPages = new Set(["doctors.html", "dr-anita-sharma.html", "mind-grace.html"]);
+    const visitPages = new Set(["book.html", "fees.html", "location.html", "process.html"]);
+    const resourcePages = new Set(["faq.html", "gallery.html", "testimonials.html", "approach.html"]);
+    const legalPages = new Set(["terms.html", "disclaimer.html", "consent.html"]);
     if (path.startsWith("/blog/")) {
       entries.push({ label: "Blog", href: "/blog/index.html" });
       if (path.includes("/adult/")) entries.push({ label: "Adult mental health", href: "/blog/adult.html" });
@@ -434,6 +484,20 @@
     } else if (path.startsWith("/tools/")) {
       entries.push({ label: "Resources", href: "/resources.html" });
       entries.push({ label: "Therapeutic tools", href: "/resources.html#tools" });
+    } else if (carePages.has(file)) {
+      entries.push({ label: "Care and services", href: "/services.html" });
+    } else if (conditionPages.has(file)) {
+      entries.push({ label: "Conditions and assessments", href: "/conditions.html" });
+    } else if (file === "psychiatrist-greater-noida.html" || file === "psychiatrist-in-noida.html") {
+      entries.push({ label: "Locations", href: "/location.html" });
+    } else if (aboutPages.has(file)) {
+      entries.push({ label: "About the clinic", href: "/about.html" });
+    } else if (visitPages.has(file)) {
+      entries.push({ label: "Visit and contact", href: "/contact.html" });
+    } else if (resourcePages.has(file)) {
+      entries.push({ label: "Explore and learn", href: "/resources.html" });
+    } else if (legalPages.has(file)) {
+      entries.push({ label: "Legal and privacy", href: "/privacy.html" });
     }
     entries.push({ label: title || labels[file] || slugLabel(file), href: null });
     let nav = $(".breadcrumbs", main) || $("nav[aria-label='Breadcrumb']", main);
@@ -448,6 +512,25 @@
       list.appendChild(item);
     });
     nav.replaceChildren(list);
+    const breadcrumbData = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: entries.map((entry, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: entry.label,
+        ...(entry.href ? { item: new URL(entry.href, window.location.origin).href } : {})
+      }))
+    };
+    let breadcrumbSchema = [...document.querySelectorAll('script[type="application/ld+json"]')].find((script) => {
+      try { return JSON.parse(script.textContent)?.["@type"] === "BreadcrumbList"; } catch (_) { return false; }
+    });
+    if (!breadcrumbSchema) {
+      breadcrumbSchema = document.createElement("script");
+      breadcrumbSchema.type = "application/ld+json";
+      document.head.appendChild(breadcrumbSchema);
+    }
+    breadcrumbSchema.textContent = JSON.stringify(breadcrumbData);
     ensureIcons();
   }
 
