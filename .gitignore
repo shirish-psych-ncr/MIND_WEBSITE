@@ -1,0 +1,6 @@
+# Local review artifacts are kept outside the Pages upload surface.
+output/
+.stitch/
+
+# Local tooling noise.
+*.log
