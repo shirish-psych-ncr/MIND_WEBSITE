@@ -242,7 +242,7 @@
       link.dataset[marker] = "true";
       document.head.appendChild(link);
     };
-    appendStylesheet("/assets/css/site-foundation.css?v=chrome15", "mindgraceFinalFoundation");
+    appendStylesheet("/assets/css/site-foundation.css?v=chrome16", "mindgraceFinalFoundation");
     if (window.location.pathname.replace(/\\/g, "/").includes("/tools/")) {
       appendStylesheet("/assets/css/tool-overrides.css?v=tools5", "mindgraceFinalToolOverrides");
       appendStylesheet("/assets/css/tools-shell.css?v=toolview6", "mindgraceFinalToolShell");

@@ -1463,6 +1463,55 @@ body .mobile-nav-panel .mobile-nav-appointment {
   body .desktop-nav a:not(.btn)::after { transition: none; }
 }
 
+/* Readability guardrails: keep display type confident without letting a
+   narrow phone turn the hero into a wall of oversized text. */
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+body main :where(p, li, dd, dt, figcaption) {
+  line-height: 1.7;
+}
+
+body main :where(.hero-subtitle, .hero-lead, .lead, .section-intro) {
+  max-inline-size: 68ch;
+}
+
+body main :where(.hero h1, .hero-section h1, .page-hero h1,
+  .home-hero .hero-copy h1) {
+  max-inline-size: 20ch;
+  font-size: clamp(2rem, 4.8vw, 4rem) !important;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+body main :where(.card p, .service-card p, .home-care-card p,
+  .home-path-card p, .home-step p) {
+  max-inline-size: 60ch;
+}
+
+body :where(input, select, textarea, button) {
+  font-size: max(1rem, 1em);
+}
+
+@media (max-width: 640px) {
+  body main :where(.hero h1, .hero-section h1, .page-hero h1,
+    .home-hero .hero-copy h1) {
+    max-inline-size: 22ch;
+    font-size: clamp(1.9rem, 7.5vw, 2.75rem) !important;
+  }
+
+  body main :where(.hero-subtitle, .hero-lead, .lead, .section-intro) {
+    font-size: 1rem;
+  }
+
+  body main :where(.section, .section-padded, .home-section) {
+    padding-block: clamp(2rem, 8vw, 3.5rem);
+  }
+}
+
 /* Curated design upgrade: soft structuralism, editorial hierarchy, and
    tactile controls inspired by the generated Clay/Figma/Linear/Stripe studies.
    The clinic palette and readable system font remain intentionally intact. */
