@@ -512,6 +512,7 @@
       list.appendChild(item);
     });
     nav.replaceChildren(list);
+    const canonicalUrl = document.querySelector('link[rel="canonical"]')?.href || window.location.href.split(/[?#]/)[0];
     const breadcrumbData = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -519,18 +520,32 @@
         "@type": "ListItem",
         position: index + 1,
         name: entry.label,
-        ...(entry.href ? { item: new URL(entry.href, window.location.origin).href } : {})
+        item: new URL(entry.href || canonicalUrl, canonicalUrl).href
       }))
     };
-    let breadcrumbSchema = [...document.querySelectorAll('script[type="application/ld+json"]')].find((script) => {
-      try { return JSON.parse(script.textContent)?.["@type"] === "BreadcrumbList"; } catch (_) { return false; }
+    let updatedBreadcrumb = false;
+    const replaceBreadcrumbs = (value) => {
+      if (Array.isArray(value)) return value.map(replaceBreadcrumbs);
+      if (!value || typeof value !== "object") return value;
+      if (value["@type"] === "BreadcrumbList") {
+        updatedBreadcrumb = true;
+        return { ...value, ...breadcrumbData };
+      }
+      return Object.fromEntries(Object.entries(value).map(([key, child]) => [key, replaceBreadcrumbs(child)]));
+    };
+    document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+      try {
+        const original = JSON.parse(script.textContent);
+        const updated = replaceBreadcrumbs(original);
+        if (JSON.stringify(original) !== JSON.stringify(updated)) script.textContent = JSON.stringify(updated);
+      } catch (_) { /* Leave unrelated malformed data for its owning component. */ }
     });
-    if (!breadcrumbSchema) {
-      breadcrumbSchema = document.createElement("script");
+    if (!updatedBreadcrumb) {
+      const breadcrumbSchema = document.createElement("script");
       breadcrumbSchema.type = "application/ld+json";
+      breadcrumbSchema.textContent = JSON.stringify(breadcrumbData);
       document.head.appendChild(breadcrumbSchema);
     }
-    breadcrumbSchema.textContent = JSON.stringify(breadcrumbData);
     ensureIcons();
   }
 
