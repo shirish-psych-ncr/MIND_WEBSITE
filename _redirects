@@ -14,3 +14,7 @@
 /psychotherapy /therapy.html 301
 /child-psychiatry /child-development.html 301
 /mental-health-assessment /assessments.html 301
+
+# Force HTTPS redirects
+http://mindgracencr.in/* https://mindgracencr.in/:splat 301!
+http://www.mindgracencr.in/* https://mindgracencr.in/:splat 301!
