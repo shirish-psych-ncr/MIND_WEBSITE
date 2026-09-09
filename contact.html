@@ -80,46 +80,58 @@
 </head><body data-design-system="rose-serenity">
   <div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status-message"></span></div>
 
-<script type="application/ld+json">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Mind Grace Neuropsychiatric Clinic",
+  "url": "https://mindgracencr.in/",
+  "logo": "/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
+  "description": "Expert neuropsychiatric care for children and adults in Greater Noida",
+  "telephone": "+91-9667863295",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "J123, Gamma II",
+    "addressLocality": "Greater Noida",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "201310",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.4910152,
+    "longitude": 77.5132324
+  },
+  "openingHoursSpecification": [
     {
-      "@context": "https://schema.org",
-      "@type": "MedicalClinic",
-      "name": "Mind Grace Neuropsychiatric Clinic",
-      "url": "contact.html",
-      "logo": "/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
-      "description": "Expert neuropsychiatric care for children and adults in Greater Noida",
-      "telephone": "+91-9667863295",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "J123, Gamma II",
-        "addressLocality": "Greater Noida",
-        "addressRegion": "Uttar Pradesh",
-        "postalCode": "201310",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 28.4910152,
-        "longitude": 77.5132324
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "10:00",
-            "closes": "16:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "17:30",
-            "closes": "19:30"
-        }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
       ],
-      "priceRange": "₹1000",
-      "paymentAccepted": "Cash, UPI, Card"
+      "opens": "10:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "17:30",
+      "closes": "19:30"
     }
-  </script>
+  ],
+  "paymentAccepted": "Cash, UPI, Card",
+  "@id": "https://mindgracencr.in/#organization"
+}</script>
   <a href="#main-content" class="skip-link">Skip to content</a>
   <!-- EMERGENCY BANNER WITH MARQUEE -->
   <div class="emergency-banner" role="alert" aria-label="Emergency crisis support information">

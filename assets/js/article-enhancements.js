@@ -63,7 +63,14 @@
     if (!h1 || article.querySelector(".article-meta-bar")) return;
     const bar = document.createElement("div");
     bar.className = "article-meta-bar";
-    bar.innerHTML = `<span>${meta("blog-date") || "Practical guide"}</span><span>${meta("blog-readtime") || "Read at your pace"}</span><span>By Dr Anita Sharma</span>`;
+    const details = [meta("blog-date") || "Practical guide", meta("blog-readtime") || "Read at your pace"];
+    const author = meta("blog-author");
+    if (author) details.push(`By ${author}`);
+    details.forEach((detail) => {
+      const item = document.createElement("span");
+      item.textContent = detail;
+      bar.appendChild(item);
+    });
     const lead = h1.parentElement?.querySelector(".lead");
     (lead || h1).after(bar);
   }

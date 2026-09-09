@@ -117,47 +117,65 @@
     </style>
 
     <!-- Structured Data (Location-specific) -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Mind Grace Neuropsychiatric Clinic",
+  "image": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
+  "url": "https://mindgracencr.in/",
+  "telephone": "+91-96678-63295",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "J123, Gamma II",
+    "addressLocality": "Greater Noida",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "201310",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.4910152,
+    "longitude": 77.5132324
+  },
+  "openingHoursSpecification": [
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Mind Grace Neuropsychiatric Clinic",
-      "image": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
-      "url": "https://mindgracencr.in/location.html",
-      "telephone": "+91-96678-63295",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "J123, Gamma II",
-        "addressLocality": "Greater Noida",
-        "addressRegion": "Uttar Pradesh",
-        "postalCode": "201310",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 28.4910152,
-        "longitude": 77.5132324
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "10:00",
-            "closes": "16:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "17:30",
-            "closes": "19:30"
-        }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
       ],
-      "priceRange": "₹1000",
-      "paymentAccepted": "Cash, UPI, Card",
-      "areaServed": ["Greater Noida", "Alpha-1", "Delta-1", "Pari Chowk", "Knowledge Park", "Surajpur"],
-      "availableLanguage": ["English", "Hindi", "Punjabi"]
+      "opens": "10:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "17:30",
+      "closes": "19:30"
     }
-    </script>
+  ],
+  "paymentAccepted": "Cash, UPI, Card",
+  "areaServed": [
+    "Greater Noida",
+    "Alpha-1",
+    "Delta-1",
+    "Pari Chowk",
+    "Knowledge Park",
+    "Surajpur"
+  ],
+  "@id": "https://mindgracencr.in/#organization"
+}</script>
 
     <script type="application/ld+json">
     {

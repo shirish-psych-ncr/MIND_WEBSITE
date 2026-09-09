@@ -111,20 +111,27 @@
     </style>
 
     <!-- Structured Data - Physician -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Physician",
-        "name": "Dr. Anita Sharma",
-        "medicalSpecialty": ["Psychiatry", "Child Development"],
-        "worksFor": {
-          "@type": "MedicalBusiness",
-          "name": "Mind Grace Neuropsychiatric Clinic"
-        },
-        "telephone": "+91-96678-63295",
-        "availableLanguage": ["English", "Hindi", "Punjabi"]
-      }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dr. Anita Sharma",
+  "worksFor": {
+    "@type": "MedicalBusiness",
+    "name": "Mind Grace Neuropsychiatric Clinic",
+    "@id": "https://mindgracencr.in/#organization",
+    "url": "https://mindgracencr.in/"
+  },
+  "telephone": "+91-96678-63295",
+  "knowsAbout": [
+    "Psychiatry",
+    "Child Development"
+  ],
+  "knowsLanguage": [
+    "English",
+    "Hindi",
+    "Punjabi"
+  ]
+}</script>
     <!-- Structured Data - Breadcrumb -->
     <script type="application/ld+json">
       {
@@ -147,60 +154,58 @@
       }
     </script>
     <!-- Structured Data - MedicalClinic -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MedicalClinic",
-        "name": "Mind Grace Neuropsychiatric Clinic",
-        "url": "https://mindgracencr.in/about.html",
-        "logo": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
-        "description": "Expert neuropsychiatric care for children and adults in Greater Noida",
-        "telephone": "+91-9667863295",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "J123, Gamma II",
-          "addressLocality": "Greater Noida",
-          "addressRegion": "Uttar Pradesh",
-          "postalCode": "201310",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 28.4910152,
-          "longitude": 77.5132324
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday"
-            ],
-            "opens": "10:00",
-            "closes": "16:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday"
-            ],
-            "opens": "17:30",
-            "closes": "19:30"
-          }
-        ],
-        "priceRange": "₹1000",
-        "paymentAccepted": "Cash, UPI, Card"
-      }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Mind Grace Neuropsychiatric Clinic",
+  "url": "https://mindgracencr.in/",
+  "logo": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
+  "description": "Expert neuropsychiatric care for children and adults in Greater Noida",
+  "telephone": "+91-9667863295",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "J123, Gamma II",
+    "addressLocality": "Greater Noida",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "201310",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.4910152,
+    "longitude": 77.5132324
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "17:30",
+      "closes": "19:30"
+    }
+  ],
+  "paymentAccepted": "Cash, UPI, Card",
+  "@id": "https://mindgracencr.in/#organization"
+}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="/assets/css/inspiration.css">
