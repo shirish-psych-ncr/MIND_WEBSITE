@@ -1,5 +1,21 @@
-# Cloudflare Pages project configuration.
-# Pages reads the output directory from this file when deploying with Wrangler.
-# Redirects and response headers live in the root _redirects and _headers files.
-name = "mind-grace-neuropsychiatric-clinic-website"
-pages_build_output_dir = "."
+# Cloudflare Workers & Pages configuration
+# This file configures both the security worker and site deployment
+
+# Security Worker Configuration
+name = "mind-grace-security-worker"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Site configuration for Cloudflare Pages
+[site]
+bucket = "."
+entry-point = "."
+
+# Environment variables (if needed)
+[vars]
+ENVIRONMENT = "production"
+
+# Routes - deploy worker to these paths
+[[routes]]
+pattern = "mindgracencr.in/*"
+zone_name = "mindgracencr.in"

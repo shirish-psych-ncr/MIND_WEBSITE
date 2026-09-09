@@ -479,7 +479,7 @@
 
   .btn--primary {
     background: var(--gradient-pink);
-    color: var(--color-text-inverse);
+    color: #ffffff;
     box-shadow: var(--shadow-md), 0 0 0 0 oklch(52% 0.22 340 / 0);
   }
 
