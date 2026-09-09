@@ -1059,7 +1059,7 @@ body .grid[style*="counter-reset: step"] > .step::before {
 @media (max-width: 760px) {
   body .header-inner { align-items: center; }
   body .header-actions { margin-inline-start: auto; }
-  body main { overflow: clip; }
+  body main { overflow: hidden; overflow: clip; }
   body .btn, body button, body .cta-button, body .jump-btn { max-width: 100%; white-space: normal; }
 }
 
@@ -1528,6 +1528,7 @@ body :where(input, select, textarea, button) {
     .article-card, .tool-card, .home-path-card, .home-care-card, .home-cta) {
     position: relative;
     isolation: isolate;
+    overflow: hidden;
     overflow: clip;
     box-shadow: 0 1px 0 rgb(255 255 255 / 72%) inset,
       0 18px 46px rgb(103 27 80 / 7%);
