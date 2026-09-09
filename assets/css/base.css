@@ -31,7 +31,6 @@
   :root {
     /* Color Scheme Support */
     color-scheme: light dark;
-    interpolate-size: allow-keywords;
 
     /* Pink Palette - HSL for dynamic theming */
     --pink-50: oklch(98% 0.02 340);
