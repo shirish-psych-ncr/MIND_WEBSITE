@@ -139,7 +139,7 @@
     notice.style.display = "block";
     notice.setAttribute("role", "note");
     notice.setAttribute("aria-labelledby", "emergency-notice-title");
-    notice.innerHTML = `<div class="emergency-banner__content"><strong id="emergency-notice-title">Emergency notice</strong><span>Mind Grace does not provide emergency or crisis services.</span><a href="/emergency.html">See emergency resources</a><span>If there is immediate danger, call <a href="tel:112">112</a> or go to the nearest hospital emergency department.</span></div>`;
+    notice.innerHTML = `<div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency.html">Emergency resources</a></div>`;
     document.body.prepend(notice);
   }
 
@@ -252,10 +252,10 @@
       link.dataset[marker] = "true";
       document.head.appendChild(link);
     };
-    appendStylesheet("/assets/css/site-foundation.css?v=chrome16", "mindgraceFinalFoundation");
+    appendStylesheet("/assets/css/site-foundation.css?v=quiet17", "mindgraceFinalFoundation");
     if (window.location.pathname.replace(/\\/g, "/").includes("/tools/")) {
       appendStylesheet("/assets/css/tool-overrides.css?v=tools5", "mindgraceFinalToolOverrides");
-      appendStylesheet("/assets/css/tools-shell.css?v=toolview6", "mindgraceFinalToolShell");
+      appendStylesheet("/assets/css/tools-shell.css?v=quiet7", "mindgraceFinalToolShell");
     }
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", placeLast, { once: true });
     else placeLast();
@@ -720,8 +720,8 @@
       actions.appendChild(link);
     });
     panel.append(heading, paragraph, actions);
-    const breadcrumbs = main.querySelector(".breadcrumbs");
-    if (breadcrumbs) breadcrumbs.after(panel); else main.prepend(panel);
+    // Related guidance belongs after the content the visitor came to read.
+    main.appendChild(panel);
   }
 
   function initializeRevealMotion() {
