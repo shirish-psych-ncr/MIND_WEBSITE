@@ -1,15 +1,9 @@
 # Cloudflare Workers & Pages configuration
 # This file configures both the security worker and site deployment
 
-# Security Worker Configuration
 name = "mind-grace-security-worker"
 main = "worker.js"
 compatibility_date = "2024-01-01"
-
-# Site configuration for Cloudflare Pages
-[site]
-bucket = "."
-entry-point = "."
 
 # Environment variables (if needed)
 [vars]
