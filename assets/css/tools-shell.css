@@ -139,3 +139,8 @@ body.tool-page .tool-card { width: min(calc(100% - (2 * var(--mg-page-gutter, 1r
   .tool-viewbar__action { border-color: ButtonText; color: ButtonText; }
   .tool-viewbar__action:focus-visible { outline: 3px solid Highlight; }
 }
+/* View controls are utilities, not a second page introduction. */
+body.tool-page .tool-viewbar { flex-wrap: nowrap; justify-content: flex-end; padding: .25rem 0; margin-bottom: .4rem; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+body.tool-page .tool-viewbar__title { display: none; }
+body.tool-page .tool-viewbar__status { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+body.tool-page .tool-viewbar__actions { flex-wrap: nowrap; }

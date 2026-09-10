@@ -1615,3 +1615,54 @@ body :where(input, select, textarea, button) {
     }
   }
 }
+
+/* Content-first layout: quiet chrome and compact introductions on every route. */
+body[data-chrome-normalized="true"] .site-header { padding-block: 0; box-shadow: none; }
+body[data-chrome-normalized="true"] .header-inner { min-height: 64px; padding-block: .4rem; }
+body[data-chrome-normalized="true"] .logo-img { height: 40px; max-height: 40px; }
+body[data-chrome-normalized="true"] .logo-tagline { display: none; }
+body .emergency-banner--static { padding-block: .3rem !important; border-width: 0 0 1px !important; }
+body .emergency-banner__content { gap: .15rem .7rem; font-size: .75rem; line-height: 1.4; }
+body .emergency-banner--static a { font-weight: 600; }
+body main > .breadcrumbs { padding-block: .4rem; margin-block: 0; }
+body .breadcrumbs ol { padding: 0; margin: 0; background: transparent; border: 0; box-shadow: none; border-radius: 0; font-size: .8rem; }
+body main > :is(.hero, .hero-section, .page-hero, .home-hero, .seo-hero) { min-height: 0 !important; padding-block: 1.25rem !important; margin-block: 0; gap: 1.5rem; background-image: none; }
+body main :is(.hero h1, .hero-section h1, .page-hero h1, .home-hero h1, .seo-hero h1) { font-size: clamp(1.75rem, 3vw, 2.65rem) !important; max-inline-size: 30ch; line-height: 1.18; margin-block: 0 .75rem; }
+body main :is(.hero-subtitle, .hero-lead, .hero .lead, .hero-section .lead) { font-size: 1rem; line-height: 1.6; margin-block: 0 1rem; }
+body main .hero-badge { background: transparent; border: 0; box-shadow: none; animation: none; padding: 0; margin-bottom: .6rem; font-size: .8rem; }
+body main .hero-trust { gap: .35rem 1rem; margin-top: .8rem; padding-top: .6rem; }
+body main .hero-contact { margin-top: .6rem; }
+body main .hero-portrait { max-height: 300px; width: auto; max-width: 100%; object-fit: cover; box-shadow: none; }
+body main .hero-note { position: static; transform: none; width: auto; margin-top: .5rem; padding: .6rem; box-shadow: none; }
+body main > .hero > .hero-content { display: block; }
+body main > :is(.main-section, .section, .section-padded, .home-section) { padding-block: 2rem; }
+body main .section-header { margin-bottom: 1.5rem; padding-bottom: 0; }
+body main .section-header::after { display: none; }
+body main .content-pathway { margin-block: 2rem 1rem; padding: 1rem 0; background: transparent; border: 0; border-top: 1px solid var(--mg-border-strong); border-radius: 0; box-shadow: none; }
+body main .content-pathway h2 { font-size: 1.2rem; }
+body main.section { padding-top: .5rem; }
+@media (max-width: 640px) {
+  body[data-chrome-normalized="true"] .header-inner { min-height: 58px; }
+  body main > :is(.hero, .hero-section, .page-hero, .home-hero, .seo-hero) { padding-block: 1rem !important; text-align: left; }
+  body main .hero-visual { display: none; }
+  body main :is(.hero-actions, .hero-trust, .hero-buttons) { justify-content: flex-start; gap: .5rem; }
+  body main .hero-actions { margin-top: .75rem !important; }
+}
+body main > .hero .hero-content { gap: 1rem; }
+body main .hero-actions > a:nth-child(n+2),
+body main .hero-buttons > a:nth-child(n+2) { background: transparent !important; color: var(--mg-link) !important; box-shadow: none; border: 0; text-decoration: underline; }
+body .breadcrumbs li { margin-block: 0; }
+body .breadcrumbs ol { gap: .25rem .5rem; }
+body main .hero-trust { font-size: .8rem; }
+body main .hero-trust span { display: inline-flex; }
+body main .hero-contact { font-size: .85rem; }
+body main > .shell > .panel:first-child { padding-block: 1rem; }
+body main > .shell > .panel:first-child h1 { font-size: clamp(1.6rem,3vw,2.4rem); margin-block: 0 .6rem; }
+body:has(.process-timeline) main > .hero-section .hero-content { align-self: start; }
+body:has(.process-timeline) main > .hero-section .hero-image img { min-height: 0; max-height: 320px; object-fit: cover; }
+body[data-chrome-normalized="true"] .emergency-banner--static { margin: 0 !important; min-height: 0 !important; }
+body main .home-quick-actions { margin-block: .5rem 2rem; }
+body main .home-quick-actions .card { padding: 1rem; box-shadow: none; }
+body main .home-quick-actions .card-icon { display: none; }
+body .desktop-nav a.btn--primary { color: #fff !important; min-height: 44px; padding-block: .6rem; box-shadow: none; }
+body .accessibility-toggle, body .theme-toggle { background: transparent; color: var(--mg-link); box-shadow: none; border: 1px solid var(--mg-border-strong); }

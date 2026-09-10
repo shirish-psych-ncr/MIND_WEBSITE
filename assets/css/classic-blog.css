@@ -28,3 +28,14 @@ ul,ol{padding-left:24px}li{margin:8px 0}li::marker{color:#75644f}.article-toc li
 @media(max-width:700px){body{font-size:17px;background:var(--paper)}.journal{margin:0;border:0;padding:0 22px;box-shadow:none}.masthead{padding-top:23px}.masthead .journal-title{font-size:34px}.masthead nav{gap:18px}article{padding-top:25px}h1{font-size:35px;letter-spacing:-.6px}h2{font-size:26px}h3{font-size:21px}.lead{font-size:19px}.article-next-step{padding:20px}.article-toc{padding:18px}.breadcrumbs{font-size:11px}.button-primary{max-width:100%;text-align:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{body{background:white;font-size:11pt}.journal{margin:0;border:0;padding:0;box-shadow:none}.masthead nav,.skip-link,.cta-row{display:none}h1{font-size:28pt}h2{font-size:18pt}a{color:inherit}.article-next-step{break-inside:avoid}}
+/* Keep the journal identity subordinate to the article being opened. */
+.journal{margin-block:12px}
+.masthead{padding:14px 0 12px;border-bottom:1px solid var(--line)}
+.masthead .edition,.masthead .tagline{display:none}
+.masthead .journal-title{font-size:26px;margin:0 0 10px}
+.masthead nav{gap:8px 20px}
+.breadcrumbs{padding:10px 0}
+article{padding-top:16px}
+h1{font-size:clamp(28px,4vw,38px);margin:8px 0 14px}
+.journal-intro{padding-top:16px}
+@media(max-width:700px){.journal{margin:0}.masthead{padding-top:12px}.masthead .journal-title{font-size:24px}article{padding-top:14px}}
