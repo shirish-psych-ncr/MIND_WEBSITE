@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const gate = document.querySelector("[data-booking-gate]");
   const iframe = document.querySelector("[data-booking-iframe]");
   const formWrapper = iframe?.closest(".form-wrapper");
+  
+  // Form loading timeout handling
+  let formLoadTimeout;
+  const FORM_LOAD_TIMEOUT = 15000; // 15 seconds
 
   const announce = (message) => {
     let region = document.getElementById("booking-live-region");
@@ -31,18 +35,34 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const markFormLoaded = () => {
+    clearTimeout(formLoadTimeout);
     formWrapper?.classList.add("is-loaded");
     formWrapper?.classList.remove("is-error");
     announce("Appointment form loaded. Share only the basic details needed for routine appointment coordination.");
   };
 
   const markFormError = () => {
+    clearTimeout(formLoadTimeout);
     formWrapper?.classList.add("is-error");
     announce("The appointment form could not be loaded. Please call or email the clinic for routine booking help.");
   };
 
+  // Set timeout for form loading
+  const setFormLoadTimeout = () => {
+    formLoadTimeout = setTimeout(() => {
+      if (!formWrapper?.classList.contains("is-loaded")) {
+        markFormError();
+      }
+    }, FORM_LOAD_TIMEOUT);
+  };
+
   iframe?.addEventListener("load", markFormLoaded);
   iframe?.addEventListener("error", markFormError);
+  
+  // Start timeout when form is opened
+  document.querySelector("[data-open-embedded-booking]")?.addEventListener("click", () => {
+    setFormLoadTimeout();
+  });
 
   const revealBooking = (event) => {
     event?.preventDefault();

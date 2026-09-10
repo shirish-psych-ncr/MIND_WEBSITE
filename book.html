@@ -367,8 +367,13 @@
             Use the form below to request an appointment. Your appointment is confirmed only after the clinic contacts you with an agreed date and time.
           </p>
           <div class="booking-consent notice-box" data-booking-consent>
-            <label><input type="checkbox" id="booking-consent" required> I understand that this form is for appointment coordination only. I will not include emergency details or a detailed medical history, and I have read the <a href="/privacy.html">Privacy Notice</a> and <a href="/consent.html">Consent Notice</a>.</label>
-            <p class="form-error" id="booking-consent-error" hidden>Please confirm this notice before opening the booking form.</p>
+            <div class="consent-checkbox">
+              <input type="checkbox" id="booking-consent" required aria-describedby="booking-consent-error">
+              <label for="booking-consent">
+                I understand that this form is for appointment coordination only. I will not include emergency details or a detailed medical history, and I have read the <a href="/privacy.html">Privacy Notice</a> and <a href="/consent.html">Consent Notice</a>.
+              </label>
+            </div>
+            <p class="form-error" id="booking-consent-error" hidden role="alert">Please confirm this notice before opening the booking form.</p>
           </div>
           <div class="form-wrapper">
             <div class="booking-embed-gate" data-booking-gate>
