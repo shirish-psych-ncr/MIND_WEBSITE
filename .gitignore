@@ -1,13 +1,14 @@
-```
+```gitignore
 # Compiled and build artifacts
 *.pyc
 __pycache__/
 *.o
 *.obj
+*.class
 *.exe
 *.dll
 *.so
-*.class
+*.a
 *.out
 
 # Dependencies
@@ -22,33 +23,32 @@ venv/
 dist/
 build/
 target/
+*.egg-info/
+
+# Caches
+.mypy_cache/
+.pytest_cache/
 .coverage
 coverage/
 htmlcov/
+.gradle/
+.julia/
 
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-*.swo
-
-# Editors and IDEs
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
+*.tmp
 
-# System files
+# Logs
+*.log
+
+# OS specific
 .DS_Store
 Thumbs.db
 
-# Testing and coverage
-.mypy_cache/
-.pytest_cache/
-.nyc_output/
-coverage/
-
-# Compression files
+# Compressed files
 *.zip
 *.gz
 *.tar
