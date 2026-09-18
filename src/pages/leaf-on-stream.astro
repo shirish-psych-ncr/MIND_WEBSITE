@@ -26,4 +26,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 
   <script is:inline src="/scripts/tools-leaf.js"></script>
+
+  <!-- SCHEMA MARKUP -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Leaf on Stream - Mindfulness Release Tool",
+    "description": "Interactive mindfulness exercise where you visualize placing worries on leaves floating down a stream. Helps practice cognitive defusion and letting go of difficult thoughts.",
+    "url": "https://mindgracencr.in/leaf-on-stream/",
+    "applicationCategory": "HealthApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    },
+    "featureList": "Visual mindfulness exercise, Cognitive defusion technique, Worry release practice, Animated stream visualization, Breathing guidance",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript enabled",
+    "provider": {
+      "@type": "MedicalOrganization",
+      "name": "Mind Grace Neuropsychiatric Clinic",
+      "url": "https://mindgracencr.in/"
+    }
+  }
+  </script>
 </BaseLayout>
