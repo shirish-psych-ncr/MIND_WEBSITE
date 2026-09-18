@@ -2,6 +2,533 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout>
-<h1>Conditions We Treat</h1><p>Content coming soon.</p>
+<BaseLayout title="Conditions We Treat | Mind Grace Clinic" description="Expert diagnosis and treatment for depression, anxiety, bipolar disorder, ADHD, psychosis, trauma, addiction, sleep disorders, and eating disorders at Mind Grace Clinic, Greater Noida.">
+
+<!-- HERO SECTION -->
+<section class="hero hero-small">
+  <div class="container">
+    <div class="hero-content">
+      <span class="section-badge">Conditions We Treat</span>
+      <h1 class="hero-title">Mental Health Conditions & Disorders</h1>
+      <p class="hero-subtitle">Comprehensive psychiatric care for a wide range of mental health conditions. If you're unsure about your symptoms, start with a consultation to get clarity on the next steps.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MOOD DISORDERS SECTION -->
+<section class="section">
+  <div class="container">
+    <h2 class="h2 mb-6">Mood Disorders</h2>
+    <div class="grid grid-2-col gap-6">
+      
+      <!-- Depression -->
+      <article id="depression" class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <h3 class="h3">Depression</h3>
+          </div>
+          <p class="text-muted mb-4">Persistent sadness, loss of interest, fatigue, changes in sleep or appetite, difficulty concentrating, and feelings of worthlessness that interfere with daily functioning.</p>
+          <ul class="check-list mb-4">
+            <li>Persistent low mood or emptiness</li>
+            <li>Loss of interest in activities once enjoyed</li>
+            <li>Fatigue and low energy</li>
+            <li>Sleep disturbances (insomnia or oversleeping)</li>
+            <li>Changes in appetite or weight</li>
+            <li>Difficulty concentrating or making decisions</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Book Consultation</a>
+            <a href="/services/#mood-support" class="btn btn-outline btn-sm">Learn About Treatment</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bipolar Disorder -->
+      <article id="bipolar-mood-disorders" class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3v18M3 12h18"/>
+            </svg>
+            <h3 class="h3">Bipolar Mood Disorders</h3>
+          </div>
+          <p class="text-muted mb-4">Characterized by extreme mood swings including emotional highs (mania or hypomania) and lows (depression). Requires specialized diagnosis and long-term management.</p>
+          <ul class="check-list mb-4">
+            <li>Periods of elevated or irritable mood</li>
+            <li>Increased energy and decreased need for sleep</li>
+            <li>Racing thoughts and rapid speech</li>
+            <li>Impulsive or risky behavior during manic phases</li>
+            <li>Deep depression during low phases</li>
+            <li>Cycles lasting days to weeks</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Book Assessment</a>
+            <a href="/services/" class="btn btn-outline btn-sm">View Services</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ANXIETY & STRESS SECTION -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="h2 mb-6">Anxiety & Stress-Related Disorders</h2>
+    <div class="grid grid-2-col gap-6">
+      
+      <!-- Anxiety Disorders -->
+      <article id="anxiety" class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <h3 class="h3">Anxiety Disorders</h3>
+          </div>
+          <p class="text-muted mb-4">Excessive worry, fear, or nervousness that interferes with daily life. Includes generalized anxiety, panic disorder, social anxiety, and specific phobias.</p>
+          <ul class="check-list mb-4">
+            <li>Constant worry or racing thoughts</li>
+            <li>Restlessness or feeling on edge</li>
+            <li>Physical symptoms (rapid heartbeat, sweating)</li>
+            <li>Panic attacks</li>
+            <li>Avoidance of certain situations</li>
+            <li>Difficulty sleeping due to worry</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/services/#anxiety-and-panic-care" class="btn btn-primary btn-sm">Get Help</a>
+            <a href="/blog/adult.html" class="btn btn-outline btn-sm">Read Articles</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- OCD -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2H4z"/>
+              <path d="M12 8v8m-4-4h8"/>
+            </svg>
+            <h3 class="h3">Obsessive-Compulsive Disorder (OCD)</h3>
+          </div>
+          <p class="text-muted mb-4">Unwanted recurring thoughts (obsessions) and repetitive behaviors or mental acts (compulsions) performed to reduce anxiety.</p>
+          <ul class="check-list mb-4">
+            <li>Intrusive unwanted thoughts</li>
+            <li>Repetitive checking or cleaning</li>
+            <li>Counting rituals</li>
+            <li>Need for symmetry or order</li>
+            <li>Fear of contamination</li>
+            <li>Time-consuming compulsions</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Book Consultation</a>
+            <a href="/process/" class="btn btn-outline btn-sm">Our Process</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PSYCHOTIC DISORDERS SECTION -->
+<section class="section">
+  <div class="container">
+    <h2 class="h2 mb-6">Psychotic Disorders</h2>
+    <div class="grid grid-2-col gap-6">
+      
+      <!-- Psychosis & Schizophrenia -->
+      <article id="psychosis-schizophrenia" class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4m0 4h.01"/>
+            </svg>
+            <h3 class="h3">Psychosis & Schizophrenia</h3>
+          </div>
+          <p class="text-muted mb-4">Conditions affecting perception and thinking, potentially including hallucinations, delusions, and disorganized thought patterns. Early intervention improves outcomes significantly.</p>
+          <ul class="check-list mb-4">
+            <li>Hearing voices or seeing things others don't</li>
+            <li>Fixed false beliefs (delusions)</li>
+            <li>Disorganized thinking or speech</li>
+            <li>Social withdrawal</li>
+            <li>Reduced emotional expression</li>
+            <li>Difficulty with daily functioning</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Urgent Assessment</a>
+            <a href="/emergency/" class="btn btn-outline btn-sm">Emergency Resources</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Severe Depression with Psychotic Features -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <h3 class="h3">Severe Depression with Psychotic Features</h3>
+          </div>
+          <p class="text-muted mb-4">Major depression accompanied by psychotic symptoms such as delusions or hallucinations, typically mood-congruent. Requires intensive treatment approach.</p>
+          <ul class="check-list mb-4">
+            <li>All symptoms of severe depression</li>
+            <li>Mood-congruent delusions</li>
+            <li>Voice hearing related to guilt or worthlessness</li>
+            <li>Significant functional impairment</li>
+            <li>May require hospitalization</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Book Urgent Visit</a>
+            <a href="/services/#medication-review" class="btn btn-outline btn-sm">Treatment Options</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRAUMA & GRIEF SECTION -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="h2 mb-6">Trauma & Grief Support</h2>
+    <div class="grid grid-2-col gap-6">
+      
+      <!-- Trauma & PTSD -->
+      <article id="trauma-grief-support" class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <h3 class="h3">Trauma & PTSD</h3>
+          </div>
+          <p class="text-muted mb-4">Emotional and psychological response to traumatic events. Symptoms may include flashbacks, nightmares, hypervigilance, and avoidance of trauma reminders.</p>
+          <ul class="check-list mb-4">
+            <li>Intrusive memories or flashbacks</li>
+            <li>Nightmares related to trauma</li>
+            <li>Avoidance of trauma reminders</li>
+            <li>Hypervigilance or being easily startled</li>
+            <li>Negative thoughts about self or world</li>
+            <li>Emotional numbness or detachment</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Start Healing</a>
+            <a href="/butterfly-tapper/" class="btn btn-outline btn-sm">Try Therapeutic Tool</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Grief & Loss -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <h3 class="h3">Grief & Loss</h3>
+          </div>
+          <p class="text-muted mb-4">Support for processing loss of loved ones, relationships, health, or major life changes. Complicated grief may require professional support.</p>
+          <ul class="check-list mb-4">
+            <li>Intense sorrow and pain</li>
+            <li>Difficulty accepting the loss</li>
+            <li>Guilt or self-blame</li>
+            <li>Withdrawal from normal activities</li>
+            <li>Physical symptoms (fatigue, illness)</li>
+            <li>Prolonged inability to function</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Book Support Session</a>
+            <a href="/leaf-on-stream/" class="btn btn-outline btn-sm">Mindfulness Exercise</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ADDICTION SECTION -->
+<section class="section">
+  <div class="container">
+    <h2 class="h2 mb-6">Addiction & Substance Use</h2>
+    <div class="grid grid-2-col gap-6">
+      
+      <!-- Substance Use Disorders -->
+      <article id="addiction-substance-use" class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18.36 6.64a9 9 0 11-12.73 0"/>
+              <line x1="12" y1="2" x2="12" y2="12"/>
+            </svg>
+            <h3 class="h3">Substance Use Disorders</h3>
+          </div>
+          <p class="text-muted mb-4">Problematic use of alcohol, drugs, or medications causing significant impairment. Includes assessment, harm reduction strategies, and treatment planning.</p>
+          <ul class="check-list mb-4">
+            <li>Inability to control substance use</li>
+            <li>Continued use despite negative consequences</li>
+            <li>Tolerance and withdrawal symptoms</li>
+            <li>Neglecting responsibilities</li>
+            <li>Spending excessive time obtaining or using</li>
+            <li>Failed attempts to quit</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Confidential Assessment</a>
+            <a href="/process/" class="btn btn-outline btn-sm">Treatment Approach</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Behavioral Addictions -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="5" y="2" width="14" height="20" rx="2"/>
+              <line x1="12" y1="18" x2="12" y2="18"/>
+            </svg>
+            <h3 class="h3">Behavioral Addictions</h3>
+          </div>
+          <p class="text-muted mb-4">Compulsive behaviors such as gambling, gaming, internet use, or shopping that interfere with daily life and well-being.</p>
+          <ul class="check-list mb-4">
+            <li>Loss of control over behavior</li>
+            <li>Preoccupation with the activity</li>
+            <li>Continued behavior despite problems</li>
+            <li>Using behavior to escape negative emotions</li>
+            <li>Restlessness when unable to engage</li>
+            <li>Impact on relationships or work</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Get Support</a>
+            <a href="/faq/" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SLEEP & EATING DISORDERS SECTION -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="h2 mb-6">Sleep & Eating Disorders</h2>
+    <div class="grid grid-2-col gap-6">
+      
+      <!-- Sleep Disorders -->
+      <article id="sleep-eating-disorders" class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+            </svg>
+            <h3 class="h3">Sleep Disorders</h3>
+          </div>
+          <p class="text-muted mb-4">Insomnia, irregular sleep patterns, nightmares, and sleep disturbances related to mental health conditions. Poor sleep often worsens other symptoms.</p>
+          <ul class="check-list mb-4">
+            <li>Difficulty falling or staying asleep</li>
+            <li>Waking too early</li>
+            <li>Non-restorative sleep</li>
+            <li>Daytime fatigue or sleepiness</li>
+            <li>Anxiety about sleep</li>
+            <li>Irregular sleep-wake cycles</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Book Sleep Consultation</a>
+            <a href="/guided-breathing/" class="btn btn-outline btn-sm">Try Relaxation Tool</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Eating Disorders -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8z"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+            <h3 class="h3">Eating Disorders</h3>
+          </div>
+          <p class="text-muted mb-4">Anorexia, bulimia, binge eating disorder, and other disordered eating patterns. Often co-occur with anxiety, depression, or trauma.</p>
+          <ul class="check-list mb-4">
+            <li>Restrictive eating or fasting</li>
+            <li>Binge eating episodes</li>
+            <li>Purging behaviors</li>
+            <li>Excessive exercise</li>
+            <li>Distorted body image</li>
+            <li>Preoccupation with food or weight</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Specialized Care</a>
+            <a href="/services/" class="btn btn-outline btn-sm">View All Services</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CHILD & ADOLESCENT CONDITIONS -->
+<section class="section">
+  <div class="container">
+    <h2 class="h2 mb-6">Child & Adolescent Conditions</h2>
+    <div class="grid grid-2-col gap-6">
+      
+      <!-- ADHD -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+            <h3 class="h3">ADHD (Attention-Deficit/Hyperactivity Disorder)</h3>
+          </div>
+          <p class="text-muted mb-4">Persistent patterns of inattention, hyperactivity, and impulsivity that interfere with functioning or development. Assessment available for children and adults.</p>
+          <ul class="check-list mb-4">
+            <li>Difficulty sustaining attention</li>
+            <li>Easily distracted</li>
+            <li>Forgetfulness in daily activities</li>
+            <li>Fidgeting or restlessness</li>
+            <li>Difficulty waiting turns</li>
+            <li>Interrupting others</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Book ADHD Assessment</a>
+            <a href="/blog/child.html" class="btn btn-outline btn-sm">Parent Resources</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Autism Spectrum -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+              <path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+            <h3 class="h3">Autism Spectrum Disorder</h3>
+          </div>
+          <p class="text-muted mb-4">Developmental condition affecting social communication and behavior. Early intervention through our Aasha program provides specialized support.</p>
+          <ul class="check-list mb-4">
+            <li>Challenges with social interaction</li>
+            <li>Difficulty with verbal and nonverbal communication</li>
+            <li>Repetitive behaviors or interests</li>
+            <li>Sensory sensitivities</li>
+            <li>Preference for routines</li>
+            <li>Unique strengths and abilities</li>
+          </ul>
+          <div class="flex gap-2 flex-wrap">
+            <a href="/book/" class="btn btn-primary btn-sm">Child Development Consult</a>
+            <a href="/aasha/" class="btn btn-outline btn-sm">Aasha Program</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- OTHER CONDITIONS -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="h2 mb-6">Other Conditions</h2>
+    <div class="grid grid-3-col gap-6">
+      
+      <article class="card">
+        <div class="card-body">
+          <h3 class="h4 mb-2">Personality Disorders</h3>
+          <p class="text-muted mb-3">Enduring patterns of thinking, feeling, and behaving that cause distress or impairment.</p>
+          <a href="/book/" class="btn btn-outline btn-sm">Assessment</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3 class="h4 mb-2">Stress Management</h3>
+          <p class="text-muted mb-3">Work stress, academic pressure, relationship difficulties, and life transitions.</p>
+          <a href="/book/" class="btn btn-outline btn-sm">Get Support</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3 class="h4 mb-2">Anger Management</h3>
+          <p class="text-muted mb-3">Difficulty controlling anger, frequent outbursts, or aggressive behavior patterns.</p>
+          <a href="/book/" class="btn btn-outline btn-sm">Learn Strategies</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section-cta-center">
+  <div class="container">
+    <h2>Not Sure Where to Start?</h2>
+    <p class="hero-subtitle mb-6">Many conditions share overlapping symptoms. A comprehensive psychiatric consultation can provide clarity and a personalized treatment plan.</p>
+    <div class="cta-group">
+      <a href="/book/" class="btn btn-primary btn-lg">Book Initial Consultation</a>
+      <a href="/emergency/" class="btn btn-outline-light btn-lg">Emergency Resources</a>
+      <a href="/faq/" class="btn btn-ghost btn-lg">Read FAQ</a>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEMA MARKUP -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Conditions We Treat - Mind Grace Clinic",
+  "description": "Comprehensive psychiatric care for depression, anxiety, bipolar disorder, ADHD, psychosis, trauma, addiction, sleep disorders, and eating disorders.",
+  "url": "https://mindgracencr.in/conditions/",
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patients seeking mental health care"
+  },
+  "about": [
+    {"@type": "MedicalCondition", "name": "Depression"},
+    {"@type": "MedicalCondition", "name": "Anxiety Disorders"},
+    {"@type": "MedicalCondition", "name": "Bipolar Disorder"},
+    {"@type": "MedicalCondition", "name": "ADHD"},
+    {"@type": "MedicalCondition", "name": "PTSD"},
+    {"@type": "MedicalCondition", "name": "Schizophrenia"},
+    {"@type": "MedicalCondition", "name": "Substance Use Disorders"},
+    {"@type": "MedicalCondition", "name": "Sleep Disorders"},
+    {"@type": "MedicalCondition", "name": "Eating Disorders"}
+  ],
+  "provider": {
+    "@type": "MedicalOrganization",
+    "name": "Mind Grace Neuropsychiatric Clinic",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "J-123, Gamma-2",
+      "addressLocality": "Greater Noida",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "201310",
+      "addressCountry": "IN"
+    }
+  }
+}
+</script>
+
 </BaseLayout>
