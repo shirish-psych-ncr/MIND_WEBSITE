@@ -1,4 +1,12 @@
 <!doctype html><html lang="en"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5RBGN42B');</script>
+<!-- End Google Tag Manager -->
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
 <script>
@@ -8,6 +16,26 @@
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
+<!-- Amplitude Analytics -->
+<script type="module">
+  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
+  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
+
+  if (!AMPLITUDE_API_KEY) {
+    console.warn('Amplitude API key missing — analytics disabled');
+  } else {
+    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
+      amplitude.initAll(AMPLITUDE_API_KEY, {
+        analytics: { autocapture: true },
+        sessionReplay: { sampleRate: 1 }
+      });
+      amplitude.track('Viewed Page', { prompt_version: 'BA400.4', page: window.location.pathname });
+    }).catch(err => {
+      console.warn('Amplitude SDK failed to load:', err);
+    });
+  }
+</script>
+
 <meta charset="utf-8"><title>IILM Psychology Internship | Mind Grace</title><meta http-equiv="refresh" content="0;url=/blog/iilm-psychology-internship.html"><link rel="canonical" href="https://mindgracencr.in/blog/iilm-psychology-internship.html"><meta name="robots" content="noindex">  <!-- Security.txt for vulnerability disclosure -->
   <link rel="security.txt" href="/.well-known/security.txt">
 
@@ -22,6 +50,11 @@
   <link rel="stylesheet" href="/assets/css/crisis-banner.css">
 
 </head><body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <main id="main-content">

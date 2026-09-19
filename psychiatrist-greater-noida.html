@@ -1,5 +1,13 @@
 <!doctype html>
 <html lang="en-IN"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5RBGN42B');</script>
+<!-- End Google Tag Manager -->
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
 <script>
@@ -9,6 +17,26 @@
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
+<!-- Amplitude Analytics -->
+<script type="module">
+  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
+  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
+
+  if (!AMPLITUDE_API_KEY) {
+    console.warn('Amplitude API key missing — analytics disabled');
+  } else {
+    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
+      amplitude.initAll(AMPLITUDE_API_KEY, {
+        analytics: { autocapture: true },
+        sessionReplay: { sampleRate: 1 }
+      });
+      amplitude.track('Viewed Page', { prompt_version: 'BA400.4', page: window.location.pathname });
+    }).catch(err => {
+      console.warn('Amplitude SDK failed to load:', err);
+    });
+  }
+</script>
+
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Psychiatrist in Greater Noida | Mind Grace</title>
 <meta name="description" content="Meet Mind Grace Neuropsychiatric Clinic in Gamma II, Greater Noida for adult psychiatry, child development, counselling, and assessments.">
@@ -38,6 +66,11 @@
 
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 <main class="seo-page"><section class="seo-hero"><p class="seo-kicker">Greater Noida clinic</p><h1>Psychiatric care in Greater Noida, with a clear next step</h1><p class="seo-lead">Mind Grace is a neuropsychiatric clinic at J123, Gamma II, Greater Noida. Start with a confidential conversation about adult mental health, child development, counselling, or an assessment.</p><div class="seo-actions"><a class="btn" href="/book.html">Request an appointment</a><a class="btn btn-outline" href="/location.html">See the clinic location</a></div></section><section class="seo-section"><h2>Ways we can help you begin</h2><div class="seo-grid"><article class="seo-card"><h3>Adult psychiatry</h3><p>Talk through anxiety, depression, mood changes, sleep concerns, attention difficulties, or other mental-health concerns.</p><a href="/psychiatry.html">Explore psychiatry</a></article><article class="seo-card"><h3>Child development</h3><p>Guidance for communication, behaviour, attention, learning, and developmental concerns with parents and caregivers.</p><a href="/child-development.html">Explore child development</a></article><article class="seo-card"><h3>Counselling and assessment</h3><p>Psychology, counselling, and assessment pathways are considered according to the person and concern.</p><a href="/psychology-counselling.html">Explore counselling</a></article></div><div class="seo-note"><strong>Location note:</strong> The confirmed clinic address is in Gamma II, Greater Noida. Clinic hours, directions, fees, and first-visit information are available before booking.</div></section><section class="seo-section"><h2>Plan your visit</h2><p>Read <a href="/process.html">what to expect</a>, review <a href="/fees.html">fees and payments</a>, or <a href="/contact.html">contact the clinic</a>. Mind Grace is not an emergency or crisis service.</p></section></main><script type="application/ld+json">{
