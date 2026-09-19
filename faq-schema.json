@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Mind Grace offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mind Grace offers comprehensive psychiatric care, psychological counseling, child development assessments, addiction treatment, and specialized therapies for depression, anxiety, bipolar disorder, and more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work with major insurance providers. Please contact our front desk to verify coverage for your specific plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book an appointment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can book an appointment online via our website, call us directly, or visit our clinic in Noida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are teleconsultations available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer secure video consultations for patients who cannot visit the clinic in person."
+      }
+    }
+  ]
+}

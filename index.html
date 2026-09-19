@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-IN" dir="ltr">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y5H1B930PQ');
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#ffffff">
@@ -177,6 +187,50 @@
       p { margin-inline: auto; }
     }
   </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Mind Grace Neuropsychiatry Clinic",
+      "image": "https://mindgracencr.in/assets/images/clinic-exterior.jpg",
+      "@id": "https://mindgracencr.in",
+      "url": "https://mindgracencr.in",
+      "telephone": "+919311116002",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 10, 1st Floor, Devansh Tower, Sector 50",
+        "addressLocality": "Noida",
+        "addressRegion": "UP",
+        "postalCode": "201301",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.5921,
+        "longitude": 77.3587
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/mindgracencr",
+        "https://www.instagram.com/mindgracencr"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -257,6 +311,8 @@
           alt="Dr. Anita Sharma, Lead Neuropsychiatrist at Mind Grace Clinic"
           width="450" height="562" 
           fetchpriority="high"
+          loading="eager"
+          decoding="async"
         >
         <div class="hero-note">
           <span class="hero-note-icon" aria-hidden="true">
@@ -434,7 +490,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
+    "@type": ["MedicalClinic", "MedicalBusiness"],
     "name": "Mind Grace Neuropsychiatric Clinic",
     "url": "https://mindgracencr.in/",
     "logo": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
@@ -464,8 +520,14 @@
       "addressRegion": "Uttar Pradesh",
       "addressCountry": "IN"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "28.4910152",
+      "longitude": "77.5132324"
+    },
     "areaServed": ["Greater Noida", "Noida", "Gautam Buddha Nagar", "Delhi NCR"],
     "medicalSpecialty": ["Psychiatry", "Child and Adolescent Psychiatry", "Clinical Psychology", "Counseling"],
+    "availableService": ["Psychiatric Consultation", "Psychological Counseling", "Mental Health Assessment", "Crisis Intervention", "Medication Management"],
     "provider": {
       "@type": "Physician",
       "name": "Dr. Anita Sharma",
@@ -479,6 +541,9 @@
        notice, contact normalization, and the clinic footer. -->
   <script src="/assets/js/visitor-friendly.js?v=quiet17" defer></script>
   <script src="/assets/js/icon-init.js" defer></script>
+  <!-- Crisis Banner for emergency support -->
+  <link rel="stylesheet" href="/assets/css/crisis-banner.css">
+  <script src="/assets/js/crisis-banner.js" defer></script>
   <!-- Simple script for the dynamic year in this legacy homepage shell. -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();

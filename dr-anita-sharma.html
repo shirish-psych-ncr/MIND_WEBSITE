@@ -1,5 +1,15 @@
 <!doctype html>
-<html lang="en-IN" dir="ltr"><head><meta charset="UTF-8">
+<html lang="en-IN" dir="ltr"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y5H1B930PQ');
+</script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +47,7 @@
   <script defer src="/assets/js/carousel-init.js"></script>
   <script src="/assets/js/main.js" type="module"></script>
   <script defer src="/assets/js/animations-auto.js"></script>
+  <script defer src="/assets/js/crisis-banner.js"></script>
   <!-- END LIBRARY STACK -->
 
   <!-- Network Status Toast -->
@@ -44,7 +55,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
+      "@type": ["Person", "Physician"],
       "name": "Dr. Anita Sharma",
       "jobTitle": "Consultant Psychiatrist",
       "medicalSpecialty": ["Psychiatry", "Mental Health"],
@@ -57,7 +68,14 @@
       "image": "https://mindgracencr.in/assets/images/Dr_Anita_Sharma_Personal_Photo.webp",
       "sameAs": [
         "https://www.linkedin.com/in/dr-anita-sharma-psychiatrist"
-      ]
+      ],
+      "availableService": ["Psychiatric Consultation", "Medication Management", "Mental Health Assessment", "Crisis Intervention"],
+      "award": "MBBS, MD Psychiatry",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Medical Degree",
+        "recognizedBy": "Medical Council of India"
+      }
     }
     </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,12 +85,17 @@
   <meta name="theme-color" content="#d81b60">
 <link rel="stylesheet" href="/assets/css/accessibility.css?v=theme4">
 <link rel="stylesheet" href="/assets/css/site-foundation.css?v=quiet17">
+<link rel="stylesheet" href="/assets/css/layout.css">
+<link rel="stylesheet" href="/assets/css/components.css">
 <link rel="manifest" href="/site.webmanifest">
       <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/icon-512.png">
   <!-- Security.txt for vulnerability disclosure -->
   <link rel="security.txt" href="/.well-known/security.txt">
+
+  <!-- Crisis Banner for emergency support -->
+  <link rel="stylesheet" href="/assets/css/crisis-banner.css">
 
 </head><body data-design-system="rose-serenity">
   <div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status-message"></span></div>

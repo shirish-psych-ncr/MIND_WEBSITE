@@ -1,12 +1,16 @@
 {
   "name": "Mind Grace Neuropsychiatric Clinic",
   "short_name": "Mind Grace",
-  "description": "Warm, evidence-informed neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.",
+  "description": "Compassionate neuropsychiatric care in Greater Noida - Mental health services, counseling, and therapeutic tools",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#fffaf9",
+  "orientation": "portrait-primary",
   "theme_color": "#d81b60",
+  "background_color": "#ffffff",
   "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["health", "medical", "lifestyle"],
   "icons": [
     {
       "src": "/assets/images/icon-192.png",
@@ -19,12 +23,55 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "short_name": "Book",
+      "description": "Schedule a consultation at Mind Grace",
+      "url": "/book.html",
+      "icons": [{ "src": "/assets/images/icon-192.png", "sizes": "192x192" }]
     },
     {
-      "src": "/assets/images/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any"
+      "name": "Emergency Help",
+      "short_name": "Emergency",
+      "description": "Get immediate crisis support resources",
+      "url": "/emergency.html",
+      "icons": [{ "src": "/assets/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Guided Breathing",
+      "short_name": "Breathe",
+      "description": "Calming breathing exercise tool",
+      "url": "/tools/guided-breathing.html",
+      "icons": [{ "src": "/assets/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Butterfly Tapper",
+      "short_name": "Tapper",
+      "description": "EMDR self-soothing tool",
+      "url": "/tools/butterfly-tapper.html",
+      "icons": [{ "src": "/assets/images/icon-192.png", "sizes": "192x192" }]
     }
-  ]
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "serviceworker": {
+    "src": "/sw.js",
+    "scope": "/",
+    "type": "module",
+    "update_via_cache": "none"
+  }
 }

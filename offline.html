@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y5H1B930PQ');
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Offline - Mind Grace Neuropsychiatric Clinic</title>
@@ -52,12 +62,15 @@
 
 </head>
 <body>
-  <div class="offline-container">
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content" class="offline-container">
     <div class="icon">📡</div>
     <h1>You're Offline</h1>
     <p>It looks like you've lost your internet connection. Some parts of the site may not be available right now.</p>
     <p>Please check your connection and try again.</p>
     <a href="/" class="btn" onclick="window.location.reload()">Try Again</a>
-  </div>
+  </main>
 </body>
 </html>
