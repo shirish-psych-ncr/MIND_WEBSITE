@@ -1,35 +1,76 @@
 ```
-# Build artifacts dist/ build/
-
+# Build artifacts
+dist/
+build/
 
 # Dependencies
 node_modules/
-
-# Logs and reports
-*.log
-audit-report.json
-audit.sarif
 
 # Environment
 .env
 .env.local
 *.env.*
 
-# Cache and temporary files
-.cache/
-.tmp/
-*.tmp
+# Logs
+*.log
 
-# IDE files
+# Editors
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# OS files
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+
+# System files
 .DS_Store
 Thumbs.db
 
-# Package lock files
-package-lock.json
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Compiled files
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
+
+# Caching
+.mypy_cache/
+.pytest_cache/
+.gradle/
+target/
 ```

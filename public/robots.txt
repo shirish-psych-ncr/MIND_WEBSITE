@@ -1,6 +1,16 @@
 User-agent: *
 Allow: /
 
+# Allow AI crawlers for better discovery in AI search overviews
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
 Disallow: /thank-you/
 
-Sitemap: https://mindgraceclinic.com/sitemap.xml
+Sitemap: https://mindgracencr.in/sitemap.xml

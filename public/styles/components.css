@@ -3,6 +3,206 @@
    Mind Grace Clinic - Modern Fluid Design
    ============================================ */
 
+/* =============================================
+   MODERN LAYOUT COMPONENTS
+   ============================================= */
+
+/* Shell - Main content wrapper */
+.shell {
+  width: var(--content);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+.shell.section {
+  padding-block: var(--space-2xl);
+}
+
+/* Surface - Card-like container */
+.surface {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(103, 27, 80, 0.08);
+}
+
+.surface.panel {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.surface-soft {
+  background: var(--soft-plum);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Stack - Vertical spacing utility */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Two column layout */
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-xl);
+}
+
+/* =============================================
+   TYPOGRAPHY UTILITIES
+   ============================================= */
+
+.eyebrow {
+  display: inline-block;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+}
+
+.lead {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  line-height: var(--lh-relaxed);
+  color: var(--text-body);
+  max-width: var(--measure);
+}
+
+.lead-mini {
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  color: var(--text-muted);
+}
+
+/* =============================================
+   BUTTON SYSTEM
+   ============================================= */
+
+.button-primary,
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: var(--accent);
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.button-primary:hover,
+.btn-primary:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.button-ghost,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  border: 2px solid var(--primary);
+  transition: all var(--transition-base);
+}
+
+.button-ghost:hover,
+.btn-secondary:hover {
+  background: var(--soft-plum);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+/* =============================================
+   CARD GRID SYSTEM
+   ============================================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-block: var(--space-xl);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(103, 27, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card h3 {
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--space-sm);
+}
+
+/* Icon list */
+.icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--text-body);
+}
+
+.icon-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.notice {
+  background: var(--soft-plum);
+  border-left: 4px solid var(--accent);
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-small);
+  color: var(--text-body);
+}
+
 /* Section Badge */
 .section-badge {
   display: inline-block;
@@ -1353,4 +1553,242 @@
 .involve-card p {
   opacity: 0.9;
   font-size: 0.95rem;
+}
+
+/* =============================================
+   ADDITIONAL SECTION VARIANTS
+   ============================================= */
+
+.section-alt {
+  background: linear-gradient(180deg, var(--white), var(--soft-plum));
+}
+
+.section-padded {
+  padding: clamp(2rem, 4vw, 4rem) var(--space-lg);
+}
+
+.bg-warm {
+  background: var(--cream);
+}
+
+.bg-warning {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
+  border-left: 4px solid var(--warning);
+}
+
+.bg-soft {
+  background: var(--blush);
+}
+
+.bg-dark {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.text-light {
+  color: var(--off-white);
+}
+
+/* Hero variants */
+.hero-small {
+  padding: var(--space-xl) 0;
+}
+
+.hero-section {
+  padding: var(--space-2xl) 0;
+}
+
+.about-hero,
+.services-hero {
+  padding: var(--space-2xl) 0;
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.emergency-hero {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+  border-left: 4px solid var(--error);
+}
+
+.emergency-badge {
+  background: linear-gradient(135deg, var(--error), rgba(220, 53, 69, 0.2));
+  color: var(--white);
+  border-color: var(--error);
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.grid-2-col {
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+
+.gap-6 {
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.mb-6 {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Card body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Check list */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-md) 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xs);
+  color: var(--text-body);
+  font-size: var(--fs-small);
+}
+
+.check-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: 700;
+}
+
+/* Flex utilities */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: var(--space-sm);
+}
+
+.gap-3 {
+  gap: var(--space-md);
+}
+
+/* Button small variant */
+.btn-sm {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--fs-tiny);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--soft-plum);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Outline button light variant for dark backgrounds */
+.btn-outline-light {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-outline-light:hover {
+  background: var(--white);
+  color: var(--primary);
+  border-color: var(--white);
+}
+
+/* Light button variant */
+.btn-light {
+  background: var(--white);
+  border: 2px solid var(--white);
+  color: var(--primary);
+}
+
+.btn-light:hover {
+  background: var(--soft-plum);
+  border-color: var(--white);
+  color: var(--accent);
+}
+
+/* Button large variant */
+.btn-large {
+  padding: var(--space-lg) var(--space-xl);
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+/* Button lg variant (alias) */
+.btn-lg {
+  padding: var(--space-lg) var(--space-xl);
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+/* Button block variant */
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Button accent variant */
+.btn-accent {
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  color: var(--white);
+}
+
+.btn-accent:hover {
+  background: var(--strawberry-dark);
+  border-color: var(--strawberry-dark);
+  color: var(--white);
+}
+
+/* Hover effects */
+.hover\:shadow-lg:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.transition-shadow {
+  transition: box-shadow var(--transition-base);
+}
+
+/* Text accent */
+.text-accent {
+  color: var(--accent);
+}
+
+/* Hidden utility */
+.hidden {
+  display: none !important;
+}
+
+/* Stack spacing */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
 }

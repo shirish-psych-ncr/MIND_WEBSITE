@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Mental Health Blog | Mind Grace Clinic Greater Noida" 
+  description="Expert articles on mental health conditions, treatments, and wellness tips from Mind Grace Clinic's psychiatric team in Greater Noida."
+  canonical="/blog/"
+>
+
+<!-- HERO SECTION -->
+<section class="hero hero-small">
+  <div class="container">
+    <div class="hero-content">
+      <span class="section-badge">Mind Grace Blog</span>
+      <h1 class="hero-title">Mental Health Resources & Articles</h1>
+      <p class="hero-subtitle">Expert insights on mental health conditions, treatments, and wellness strategies from our experienced psychiatric team.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG POSTS GRID -->
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      
+      <!-- Adult Mental Health Article -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <span class="section-badge mb-2">Adult Mental Health</span>
+          <h2 class="h3 mb-3">Adult Mental Health: A Comprehensive Guide</h2>
+          <p class="text-muted mb-4">Understanding depression, anxiety, bipolar disorder, and stress management in adults. Learn to recognize symptoms and find effective treatment options.</p>
+          <ul class="icon-list text-sm mb-4">
+            <li>Depression types and symptoms</li>
+            <li>Anxiety disorders explained</li>
+            <li>Bipolar disorder overview</li>
+            <li>Stress management techniques</li>
+          </ul>
+          <a href="/blog/adult.html" class="btn btn-primary btn-sm">Read Article</a>
+        </div>
+      </article>
+
+      <!-- Child & Adolescent Mental Health Article -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <div class="card-body">
+          <span class="section-badge mb-2">Child & Adolescent</span>
+          <h2 class="h3 mb-3">Child & Teen Mental Health Guide</h2>
+          <p class="text-muted mb-4">Expert guidance on ADHD, childhood anxiety, teen depression, behavioral issues, and autism spectrum disorders. Early intervention strategies for parents.</p>
+          <ul class="icon-list text-sm mb-4">
+            <li>ADHD signs and interventions</li>
+            <li>Childhood anxiety types</li>
+            <li>Teen depression warning signs</li>
+            <li>When to seek professional help</li>
+          </ul>
+          <a href="/blog/child.html" class="btn btn-primary btn-sm">Read Article</a>
+        </div>
+      </article>
+
+      <!-- Coming Soon Placeholder -->
+      <article class="card surface-soft">
+        <div class="card-body">
+          <span class="section-badge mb-2">Coming Soon</span>
+          <h2 class="h3 mb-3">More Articles on the Way</h2>
+          <p class="text-muted mb-4">We're working on new content covering therapy techniques, medication guides, family support strategies, and wellness tips.</p>
+          <ul class="icon-list text-sm mb-4">
+            <li>Therapy approaches explained</li>
+            <li>Medication information</li>
+            <li>Family support guides</li>
+            <li>Wellness and prevention</li>
+          </ul>
+          <a href="/contact/" class="btn btn-outline btn-sm">Suggest a Topic</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES SECTION -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="h2 mb-6">Browse by Category</h2>
+    <div class="grid grid-2-col gap-4">
+      
+      <a href="/conditions/#mood-disorders" class="surface p-6 rounded-lg hover:shadow-lg transition-shadow block">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <h3 class="h3">Mood Disorders</h3>
+        </div>
+        <p class="text-sm text-muted">Depression, bipolar disorder, and related conditions affecting emotional well-being.</p>
+      </a>
+
+      <a href="/conditions/#anxiety-disorders" class="surface p-6 rounded-lg hover:shadow-lg transition-shadow block">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          </svg>
+          <h3 class="h3">Anxiety & Stress</h3>
+        </div>
+        <p class="text-sm text-muted">Generalized anxiety, panic disorder, social anxiety, and stress management.</p>
+      </a>
+
+      <a href="/services/#child-adolescent-care" class="surface p-6 rounded-lg hover:shadow-lg transition-shadow block">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <h3 class="h3">Child & Teen Health</h3>
+        </div>
+        <p class="text-sm text-muted">ADHD, autism, behavioral issues, and developmental concerns in young people.</p>
+      </a>
+
+      <a href="/resources/" class="surface p-6 rounded-lg hover:shadow-lg transition-shadow block">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="icon icon-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+          <h3 class="h3">Wellness & Self-Care</h3>
+        </div>
+        <p class="text-sm text-muted">Mindfulness, relaxation techniques, and daily practices for mental wellness.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER CTA -->
+<section class="section bg-warm">
+  <div class="container">
+    <div class="surface p-8 rounded-lg text-center">
+      <h2 class="h2 mb-4">Stay Updated</h2>
+      <p class="lead mb-6">Subscribe to receive new articles, mental health tips, and clinic updates directly in your inbox.</p>
+      <div class="flex gap-2 max-w-md mx-auto flex-wrap justify-center">
+        <input type="email" placeholder="Your email address" class="input flex-1 min-w-[200px]" />
+        <button class="btn btn-primary">Subscribe</button>
+      </div>
+      <p class="text-sm text-muted mt-4">We respect your privacy. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- JSON-LD SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Mind Grace Clinic Blog",
+  "description": "Mental health articles and resources from Mind Grace Clinic, Greater Noida",
+  "url": "https://mindgracencr.in/blog/",
+  "publisher": {
+    "@type": "MedicalOrganization",
+    "name": "Mind Grace Clinic",
+    "url": "https://mindgracencr.in",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mindgracencr.in/logo.png"
+    }
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Adult Mental Health: A Comprehensive Guide",
+      "url": "https://mindgracencr.in/blog/adult.html",
+      "datePublished": "2025-01-15",
+      "dateModified": "2025-01-15"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Child & Adolescent Mental Health Guide",
+      "url": "https://mindgracencr.in/blog/child.html",
+      "datePublished": "2025-01-15",
+      "dateModified": "2025-01-15"
+    }
+  ]
+}
+</script>
+
+</BaseLayout>

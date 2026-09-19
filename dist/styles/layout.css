@@ -575,3 +575,25 @@
     width: 100%;
   }
 }
+
+/* ============================================
+   HERO SPLIT & DOCTOR PAGE LAYOUT ADDITIONS
+   Mind Grace Clinic
+   ============================================ */
+
+.hero-lead {
+  font-size: var(--fs-lead);
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  line-height: var(--lh-relaxed);
+}
+
+.hero-text {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .hero-split .hero-text {
+    margin-bottom: var(--space-lg);
+  }
+}
