@@ -16,7 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
-<!-- Amplitude Analytics - Browser SDK v2 -->
+<!-- Amplitude Analytics -->
 <script type="module">
   // Amplitude ingestion key — public by design; move to an env var when you set up environments.
   const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
@@ -24,111 +24,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   if (!AMPLITUDE_API_KEY) {
     console.warn('Amplitude API key missing — analytics disabled');
   } else {
-    import('https://cdn.amplitude.com/libs/analytics-browser@2/analytics-browser-min.js').then(({ init, track }) => {
-      // Initialize Amplitude ONCE with Browser SDK v2
-      init(AMPLITUDE_API_KEY, {
-        autocapture: {
-          pageViews: true,
-          elementInteractions: true,
-          formInteractions: true,
-          fileDownloads: true
-        },
-        defaultTracking: {
-          sessions: true,
-          pageViews: true,
-          formInteractions: true,
-          elementInteractions: true,
-          fileDownloads: true
-        },
-        ingestionMetadata: {
-          sourceName: 'mindgracencr.in',
-          sourceVersion: '2.0.0'
-        }
+    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
+      amplitude.initAll(AMPLITUDE_API_KEY, {
+        analytics: { autocapture: true },
+        sessionReplay: { sampleRate: 1 }
       });
-
-      console.log('✅ Amplitude Analytics v2 initialized');
-
-      // Track initial page view
-      track('Page Viewed', {
-        page_path: window.location.pathname,
-        page_title: document.title
-      });
-
-      // Auto-track phone clicks
-      document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-        link.addEventListener('click', () => {
-          track('Phone Clicked', {
-            page_path: window.location.pathname
-          });
-        });
-      });
-
-      // Auto-track WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach(link => {
-        link.addEventListener('click', () => {
-          track('WhatsApp Clicked', {
-            page_path: window.location.pathname
-          });
-        });
-      });
-
-      // Auto-track CTA buttons with data attribute
-      document.querySelectorAll('[data-amp-track-cta]').forEach(button => {
-        button.addEventListener('click', () => {
-          track('CTA Clicked', {
-            cta_name: button.dataset.ampTrackCta,
-            page_path: window.location.pathname
-          });
-        });
-      });
-
-      // Auto-track form interactions
-      const trackedForms = new Set();
-      document.querySelectorAll('#bookingForm, #contactForm, form[data-track="true"]').forEach(form => {
-        const formName = form.id || form.dataset.formName || 'unknown_form';
-        
-        form.querySelectorAll('input, textarea, select').forEach(field => {
-          field.addEventListener('focus', () => {
-            if (!trackedForms.has(formName)) {
-              trackedForms.add(formName);
-              track('Contact Form Started', {
-                form_name: formName,
-                page_path: window.location.pathname
-              });
-            }
-          }, { once: true });
-        });
-
-        form.addEventListener('submit', () => {
-          const serviceName = form.dataset.serviceName || 
-                             form.querySelector('[name="service"]')?.value || 
-                             'General Inquiry';
-          setTimeout(() => {
-            track('Contact Form Submitted', {
-              form_name: formName,
-              service_name: serviceName,
-              page_path: window.location.pathname
-            });
-          }, 100);
-        });
-      });
-
-      // Track service page views automatically
-      const h1 = document.querySelector('h1');
-      if (h1 && !window.location.pathname.includes('/blog/')) {
-        track('Service Viewed', {
-          service_name: h1.textContent.trim(),
-          page_path: window.location.pathname
-        });
-      }
-
+      amplitude.track('Viewed Page', { prompt_version: 'BA400.4', page: window.location.pathname });
     }).catch(err => {
       console.warn('Amplitude SDK failed to load:', err);
     });
   }
 </script>
-
-
 
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OCD, Panic and PTSD Support | Mind Grace</title><meta name="description" content="Understand conversations about OCD, panic attacks, trauma symptoms, PTSD, intrusive thoughts, and anxiety at Mind Grace in Greater Noida."><link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 	<link rel="canonical" href="https://mindgracencr.in/ocd-panic-ptsd.html"><meta property="og:title" content="OCD, Panic and PTSD Support | Mind Grace"><meta property="og:description" content="A careful assessment pathway for intrusive thoughts, panic, trauma symptoms, and related concerns."><meta property="og:url" content="https://mindgracencr.in/ocd-panic-ptsd.html"><meta property="og:type" content="website"><link rel="stylesheet" href="/assets/css/site-foundation.css?v=quiet17"><link rel="stylesheet" href="/assets/css/seo-pages.css"><script src="/assets/js/visitor-friendly.js?v=quiet17" defer></script><!-- Twitter -->
