@@ -1354,3 +1354,502 @@
   opacity: 0.9;
   font-size: 0.95rem;
 }
+
+/* ============================================
+   DOCTOR/TEAM PAGES - Missing Styles
+   Mind Grace Clinic
+   ============================================ */
+
+/* Team Intro Banner */
+.team-intro-banner {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  text-align: center;
+  color: white;
+}
+
+.team-intro-banner .container {
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.jump-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.jump-btn {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition-base);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.jump-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Service Comparison Cards */
+.service-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: var(--space-xl);
+}
+
+.comparison-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.comparison-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-card h3 {
+  font-size: var(--fs-h4);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-dark);
+}
+
+.comparison-card.common-services {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--soft-plum), rgba(103, 27, 80, 0.05));
+  border-color: var(--primary);
+}
+
+.service-tag {
+  display: inline-block;
+  background: var(--bg-surface);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.service-tag:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--soft-plum);
+}
+
+/* Doctor Profile Grid */
+.doctor-section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.doctor-section.alt-bg {
+  background: var(--bg-surface);
+}
+
+.doctor-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 400px) 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .doctor-profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.doctor-image-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--soft-plum), rgba(103, 27, 80, 0.1));
+  box-shadow: var(--shadow-md);
+}
+
+.doctor-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.doctor-image-frame:hover img {
+  transform: scale(1.05);
+}
+
+.doctor-credentials,
+.doctor-credentials.alt {
+  margin: var(--space-lg) 0;
+  padding: var(--space-md);
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+}
+
+.credential-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-sm) 0 0 0;
+}
+
+.credential-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: var(--fs-small);
+}
+
+.credential-list li:last-child {
+  border-bottom: none;
+}
+
+.hospital-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-sm) 0;
+}
+
+.hospital-list li {
+  padding: var(--space-xs) 0;
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.hospital-list li::before {
+  content: "🏥";
+  margin-right: var(--space-sm);
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.quote-box {
+  background: linear-gradient(135deg, var(--soft-plum), rgba(103, 27, 80, 0.05));
+  border-left: 4px solid var(--primary);
+  padding: var(--space-lg);
+  margin: var(--space-lg) 0;
+  border-radius: var(--radius-md);
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* Hero Split Layout */
+.hero-split {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: linear-gradient(135deg, var(--soft-plum), rgba(103, 27, 80, 0.05));
+}
+
+.hero-split .hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+@media (max-width: 900px) {
+  .hero-split .hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-split .hero-content {
+  max-width: 100%;
+}
+
+.hero-split .hero-image {
+  position: relative;
+}
+
+.hero-split .hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+/* CTA Group */
+.cta-group {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-lg);
+}
+
+.btn-large {
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+/* Section Title */
+.section-title {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: var(--content);
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--white);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-light);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-md);
+  background: linear-gradient(135deg, var(--soft-plum), rgba(103, 27, 80, 0.1));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.feature-icon .icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Section CTA */
+.section-cta {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  text-align: center;
+}
+
+.section-cta-center {
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section-cta h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-md);
+}
+
+.section-cta p {
+  font-size: var(--fs-lead);
+  opacity: 0.9;
+  margin-bottom: var(--space-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-cta .cta-group {
+  justify-content: center;
+}
+
+.section-cta .btn-outline {
+  border-color: white;
+  color: white;
+}
+
+.section-cta .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Content Narrow */
+.content-narrow {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: var(--space-xl) auto;
+  padding: var(--space-md) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-light);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: calc(var(--space-xl) + var(--space-md));
+  margin-bottom: var(--space-xl);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--space-xl);
+  height: var(--space-xl);
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--fs-small);
+  z-index: 1;
+}
+
+.timeline-content {
+  background: var(--white);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.timeline-content h3 {
+  font-size: var(--fs-h4);
+  margin-bottom: var(--space-xs);
+  color: var(--text-dark);
+}
+
+.timeline-meta {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  margin-bottom: var(--space-sm);
+}
+
+/* Expertise Tags Grid */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-md);
+  max-width: var(--content);
+  margin: 0 auto;
+}
+
+.expertise-tag {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.expertise-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.expertise-tag .icon {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.expertise-tag span {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-comparison {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-card.common-services {
+    grid-column: 1;
+  }
+  
+  .jump-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .jump-btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .cta-group .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Section Light Background */
+.section-light {
+  background: var(--bg-surface);
+}

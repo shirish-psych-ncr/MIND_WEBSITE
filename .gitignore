@@ -1,14 +1,12 @@
 ```
-# Dependencies
-node_modules/
-
 # Build artifacts
 dist/
 build/
-*.js.map
-*.css.map
 
-# Environment variables
+# Dependencies
+node_modules/
+
+# Environment
 .env
 .env.local
 .env.*
@@ -16,35 +14,17 @@ build/
 # Logs
 *.log
 
-# Coverage reports
-coverage/
-htmlcov/
-*.coverage
-
-# IDE files
+# Editors
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# Python artifacts (if any Python in project)
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.Python
-*.so
 
-# Temporary files
-*.tmp
-*.temp
-*.bak
-
-# Compression artifacts
+# Compressed files
 *.zip
 *.gz
 *.tar
@@ -63,8 +43,34 @@ __pycache__/
 *.Z
 *.lz
 *.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Compiled files
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
+
+# Caching
+.mypy_cache/
+.pytest_cache/
+.gradle/
+target/
 ```
