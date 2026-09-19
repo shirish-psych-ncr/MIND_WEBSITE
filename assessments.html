@@ -1,4 +1,12 @@
 <!doctype html><html lang="en-IN"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5RBGN42B');</script>
+<!-- End Google Tag Manager -->
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
 <script>
@@ -8,6 +16,120 @@
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
+<!-- Amplitude Analytics - Browser SDK v2 -->
+<script type="module">
+  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
+  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
+
+  if (!AMPLITUDE_API_KEY) {
+    console.warn('Amplitude API key missing — analytics disabled');
+  } else {
+    import('https://cdn.amplitude.com/libs/analytics-browser@2/analytics-browser-min.js').then(({ init, track }) => {
+      // Initialize Amplitude ONCE with Browser SDK v2
+      init(AMPLITUDE_API_KEY, {
+        autocapture: {
+          pageViews: true,
+          elementInteractions: true,
+          formInteractions: true,
+          fileDownloads: true
+        },
+        defaultTracking: {
+          sessions: true,
+          pageViews: true,
+          formInteractions: true,
+          elementInteractions: true,
+          fileDownloads: true
+        },
+        ingestionMetadata: {
+          sourceName: 'mindgracencr.in',
+          sourceVersion: '2.0.0'
+        }
+      });
+
+      console.log('✅ Amplitude Analytics v2 initialized');
+
+      // Track initial page view
+      track('Page Viewed', {
+        page_path: window.location.pathname,
+        page_title: document.title
+      });
+
+      // Auto-track phone clicks
+      document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', () => {
+          track('Phone Clicked', {
+            page_path: window.location.pathname
+          });
+        });
+      });
+
+      // Auto-track WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach(link => {
+        link.addEventListener('click', () => {
+          track('WhatsApp Clicked', {
+            page_path: window.location.pathname
+          });
+        });
+      });
+
+      // Auto-track CTA buttons with data attribute
+      document.querySelectorAll('[data-amp-track-cta]').forEach(button => {
+        button.addEventListener('click', () => {
+          track('CTA Clicked', {
+            cta_name: button.dataset.ampTrackCta,
+            page_path: window.location.pathname
+          });
+        });
+      });
+
+      // Auto-track form interactions
+      const trackedForms = new Set();
+      document.querySelectorAll('#bookingForm, #contactForm, form[data-track="true"]').forEach(form => {
+        const formName = form.id || form.dataset.formName || 'unknown_form';
+        
+        form.querySelectorAll('input, textarea, select').forEach(field => {
+          field.addEventListener('focus', () => {
+            if (!trackedForms.has(formName)) {
+              trackedForms.add(formName);
+              track('Contact Form Started', {
+                form_name: formName,
+                page_path: window.location.pathname
+              });
+            }
+          }, { once: true });
+        });
+
+        form.addEventListener('submit', () => {
+          const serviceName = form.dataset.serviceName || 
+                             form.querySelector('[name="service"]')?.value || 
+                             'General Inquiry';
+          setTimeout(() => {
+            track('Contact Form Submitted', {
+              form_name: formName,
+              service_name: serviceName,
+              page_path: window.location.pathname
+            });
+          }, 100);
+        });
+      });
+
+      // Track service page views automatically
+      const h1 = document.querySelector('h1');
+      if (h1 && !window.location.pathname.includes('/blog/')) {
+        track('Service Viewed', {
+          service_name: h1.textContent.trim(),
+          page_path: window.location.pathname
+        });
+      }
+
+    }).catch(err => {
+      console.warn('Amplitude SDK failed to load:', err);
+    });
+  }
+</script>
+
+
+
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mental Health Assessments | Mind Grace</title><meta name="description" content="Learn about psychiatric evaluation, psychological assessment, ADHD, autism, learning, and neuropsychological assessment pathways at Mind Grace."><link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 	<link rel="canonical" href="https://mindgracencr.in/assessments.html"><meta property="og:title" content="Mental Health Assessments | Mind Grace"><meta property="og:description" content="Assessment pathways for adults, children, and families, with clear preparation and follow-up information."><meta property="og:url" content="https://mindgracencr.in/assessments.html"><meta property="og:type" content="website"><meta property="og:image" content="/assets/images/mind-grace-consultation-room.webp"><link rel="stylesheet" href="/assets/css/site-foundation.css?v=quiet17"><link rel="stylesheet" href="/assets/css/seo-pages.css"><script src="/assets/js/visitor-friendly.js?v=quiet17" defer></script><!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -33,6 +155,11 @@
 
 
 </head><body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 <main class="seo-page"><section class="seo-hero"><p class="seo-kicker">Assessment and evaluation</p><h1>Assessment that answers a useful question</h1><p class="seo-lead">An assessment is most helpful when it begins with a clear concern and ends with understandable recommendations—not just a label or a score.</p><div class="seo-actions"><a class="btn" href="/book.html">Ask about an assessment</a><a class="btn btn-outline" href="/fees.html">Review assessment fees</a></div></section><section class="seo-section"><h2>Assessment pathways</h2><div class="seo-grid"><article class="seo-card"><h3>Psychiatric evaluation</h3><p>A clinician reviews symptoms, history, health, and functioning to guide diagnosis and next steps.</p></article><article class="seo-card"><h3>Psychological assessment</h3><p>Structured interviews or tests may help understand cognition, behaviour, emotions, or learning.</p></article><article class="seo-card"><h3>Child and learning assessment</h3><p>ADHD, autism, developmental, learning, and school concerns are considered in the child’s wider context.</p></article></div><div class="seo-note"><strong>Scope note:</strong> The assessment plan, tools, number of sessions, and report format depend on the referral question and clinical judgement.</div></section><section class="seo-section"><h2>Prepare with context</h2><p>Bring previous reports, school feedback, medication details, and your questions where available. Read <a href="/process.html">what to expect</a> before booking.</p></section></main><script type="application/ld+json">{

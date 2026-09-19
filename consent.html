@@ -1,5 +1,13 @@
 <!doctype html>
 <html lang="en-IN" dir="ltr"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5RBGN42B');</script>
+<!-- End Google Tag Manager -->
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
 <script>
@@ -9,6 +17,120 @@
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
+<!-- Amplitude Analytics - Browser SDK v2 -->
+<script type="module">
+  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
+  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
+
+  if (!AMPLITUDE_API_KEY) {
+    console.warn('Amplitude API key missing — analytics disabled');
+  } else {
+    import('https://cdn.amplitude.com/libs/analytics-browser@2/analytics-browser-min.js').then(({ init, track }) => {
+      // Initialize Amplitude ONCE with Browser SDK v2
+      init(AMPLITUDE_API_KEY, {
+        autocapture: {
+          pageViews: true,
+          elementInteractions: true,
+          formInteractions: true,
+          fileDownloads: true
+        },
+        defaultTracking: {
+          sessions: true,
+          pageViews: true,
+          formInteractions: true,
+          elementInteractions: true,
+          fileDownloads: true
+        },
+        ingestionMetadata: {
+          sourceName: 'mindgracencr.in',
+          sourceVersion: '2.0.0'
+        }
+      });
+
+      console.log('✅ Amplitude Analytics v2 initialized');
+
+      // Track initial page view
+      track('Page Viewed', {
+        page_path: window.location.pathname,
+        page_title: document.title
+      });
+
+      // Auto-track phone clicks
+      document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', () => {
+          track('Phone Clicked', {
+            page_path: window.location.pathname
+          });
+        });
+      });
+
+      // Auto-track WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach(link => {
+        link.addEventListener('click', () => {
+          track('WhatsApp Clicked', {
+            page_path: window.location.pathname
+          });
+        });
+      });
+
+      // Auto-track CTA buttons with data attribute
+      document.querySelectorAll('[data-amp-track-cta]').forEach(button => {
+        button.addEventListener('click', () => {
+          track('CTA Clicked', {
+            cta_name: button.dataset.ampTrackCta,
+            page_path: window.location.pathname
+          });
+        });
+      });
+
+      // Auto-track form interactions
+      const trackedForms = new Set();
+      document.querySelectorAll('#bookingForm, #contactForm, form[data-track="true"]').forEach(form => {
+        const formName = form.id || form.dataset.formName || 'unknown_form';
+        
+        form.querySelectorAll('input, textarea, select').forEach(field => {
+          field.addEventListener('focus', () => {
+            if (!trackedForms.has(formName)) {
+              trackedForms.add(formName);
+              track('Contact Form Started', {
+                form_name: formName,
+                page_path: window.location.pathname
+              });
+            }
+          }, { once: true });
+        });
+
+        form.addEventListener('submit', () => {
+          const serviceName = form.dataset.serviceName || 
+                             form.querySelector('[name="service"]')?.value || 
+                             'General Inquiry';
+          setTimeout(() => {
+            track('Contact Form Submitted', {
+              form_name: formName,
+              service_name: serviceName,
+              page_path: window.location.pathname
+            });
+          }, 100);
+        });
+      });
+
+      // Track service page views automatically
+      const h1 = document.querySelector('h1');
+      if (h1 && !window.location.pathname.includes('/blog/')) {
+        track('Service Viewed', {
+          service_name: h1.textContent.trim(),
+          page_path: window.location.pathname
+        });
+      }
+
+    }).catch(err => {
+      console.warn('Amplitude SDK failed to load:', err);
+    });
+  }
+</script>
+
+
+
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="canonical" href="https://mindgracencr.in/consent.html">
@@ -68,6 +190,11 @@
   <link rel="security.txt" href="/.well-known/security.txt">
 
 </head><body data-design-system="rose-serenity">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status-message"></span></div>
 
 <link rel="dns-prefetch" href="https://mindgracencr.in">
@@ -126,7 +253,7 @@
           <li><a href="/process.html">Process</a></li>
           <li><a href="/resources.html">Resources</a></li>
           <li><a href="/location.html">Location</a></li>
-          <li><a href="/book.html" class="cta-button">Book Now</a></li>
+          <li><a href="/book.html" data-amp-track-cta="Book Appointment">Book Now</a></li>
         </ul>
       </nav>
 
@@ -162,7 +289,7 @@
           <li><a href="/services.html">Our Services</a></li>
           <li><a href="/process.html">What to Expect</a></li>
           <li><a href="/location.html">Find Us</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/contact.html" data-amp-track-cta="Contact">Contact</a></li>
         </ul>
       </div>
 
@@ -190,7 +317,7 @@
       </div>
 
       <div class="mobile-nav-section">
-        <a href="/book.html" class="cta-button">Book Appointment</a>
+        <a href="/book.html" data-amp-track-cta="Book Appointment">Book Appointment</a>
       </div>
     </div>
   </nav>
@@ -284,7 +411,7 @@
     <div class="footer-column">
       <h3>Patient Care</h3>
       <ul>
-        <li><a href="/book.html">Book Appointment</a></li>
+        <li><a href="/book.html" data-amp-track-cta="Book Appointment">Book Appointment</a></li>
         <li><a href="/services.html">Our Services</a></li>
         <li><a href="/process.html">What to Expect</a></li>
       </ul>
@@ -295,7 +422,7 @@
       <ul>
         <li><a href="/about.html">Dr. Sharma</a></li>
         <li><a href="/location.html">Find Us</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/contact.html" data-amp-track-cta="Contact">Contact</a></li>
       </ul>
     </div>
 
