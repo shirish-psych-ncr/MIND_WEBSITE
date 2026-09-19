@@ -1,13 +1,104 @@
+# ==============================================================================
+# 1. GLOBAL DEFAULTS: Security, AI/LLM Indexing, and Modern Client Hints
+# ==============================================================================
 /*
+  # --- AI, LLM & CRAWLER OPTIMIZATION ---
+  # Explicitly allows AI bots (GPTBot, PerplexityBot, etc.) to index, 
+  # follow links, and use large snippets/images for rich AI search results.
+  X-Robots-Tag: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1
+
+  # --- MODERN CLIENT HINTS ---
+  # Proactively informs the server about client capabilities to serve 
+  # perfectly optimized, responsive assets (e.g., exact image sizes, AVIF/WebP).
+  Accept-CH: Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-Viewport-Width, DPR, Width, Viewport-Width
+  Critical-CH: Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform
+
+  # --- ZERO-TRUST SECURITY ---
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), microphone=(), camera=()
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; frame-src https://docs.google.com https://www.googletagmanager.com https://www.google.com https://*.google.com https://*.g.doubleclick.net https://ad.doubleclick.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com https://apis.google.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://www.google.com https://*.google.com https://pagead2.googlesyndication.com https://www.googleadservices.com https://www.gstatic.com https://tagmanager.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com https://tagmanager.google.com https://fonts.gstatic.com; img-src 'self' data: blob: https: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://www.google.com https://*.google.com https://*.g.doubleclick.net https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://ssl.gstatic.com https://www.gstatic.com https://*.merchant-center-analytics.goog https://ad.doubleclick.net https://ade.googlesyndication.com https://adservice.google.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com https://www.gstatic.com data:; connect-src 'self' https://*.tile.openstreetmap.org https://tile.openstreetmap.org https://www.google-analytics.com https://*.google-analytics.com https://www.google.com https://*.google.com https://*.g.doubleclick.net https://pagead2.googlesyndication.com https://www.googleadservices.com https://ad.doubleclick.net https://*.merchant-center-analytics.goog https://amplitude.com https://*.amplitude.com; worker-src 'self' blob: https://www.googletagmanager.com;
+  X-DNS-Prefetch-Control: on
 
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  # --- PERMISSIONS POLICY ---
+  # Disables unnecessary browser features to reduce attack surface and improve privacy.
+  # Note: 'interest-cohort' is deprecated; 'browsing-topics' is the modern replacement.
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), browsing-topics=()
 
+  # --- CROSS-ORIGIN POLICIES ---
+  # 'same-origin-allow-popups' is MUCH safer than 'same-origin'. 
+  # Strict 'same-origin' will break third-party embeds (YouTube, Maps, external images). 
+  # This allows popups (like OAuth or GTM debug windows) while keeping the main window isolated.
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Cross-Origin-Resource-Policy: same-site
+
+  # --- CONTENT SECURITY POLICY (CSP) ---
+  # Strict but GTM/GA4-friendly CSP. 
+  # NOTE: 'unsafe-inline' and 'unsafe-eval' are included because Google Tag Manager 
+  # requires them to function without complex server-side nonce generation. 
+  # For maximum security in the future, consider migrating to CSP nonces.
+  Content-Security-Policy: \
+    default-src 'self'; \
+    script-src 'self' 'unsafe-inline' 'unsafe-e', 'https://*.analytics.google.com', 'https://*.googletagmanager.com', 'https://region1.google-analytics.com'; \
+    frame-src 'https://*.googletagmanager.com', 'https://www.youtube.com', 'https://www.google.com'; \
+    object-src 'none'; \
+    base-uri 'self'; \
+    form-action 'self'; \
+    frame-ancestors 'none';
+
+# ==============================================================================
+# 2. HTML & DYNAMIC CONTENT: Freshness for Indexers + Speed for Users
+# ==============================================================================
+/
 /*.html
+  # Forces crawlers to check for fresh content, while serving cached versions 
+  # instantly to users (0ms TTFB) while revalidating in the background.
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+  Content-Type: text/html; charset=utf-8
+  X-Robots-Tag: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1
+
+/*.json
+  # Manifests, structured data, and config files should be cached but revalidated.
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/json; charset=utf-8
+
+# ==============================================================================
+# 3. STATIC ASSETS: Aggressive Caching for Performance & Crawl Budget
+# ==============================================================================
+/*.css
+/*.js
+/*.woff
+/*.woff2
+/*.ttf
+/*.otf
+/*.svg
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+/*.avif
+/*.ico
+  # 1-year immutable caching. Saves massive crawl budget and server load.
+  # CRITICAL: Ensure your build process appends hashes to filenames 
+  # (e.g., style.a1b2c3.css) so updates are fetched immediately despite the long cache time.
+  Cache-Control: public, max-age=31536000, immutable
+  # Only use '*' if these assets are intentionally served to other domains (e.g., as a CDN). 
+  # Otherwise, restrict to your own domain for better security.
+  Access-Control-Allow-Origin: *
+
+# ==============================================================================
+# 4. CRITICAL BOT & CONFIG FILES: Ensure they are always accessible and fresh
+# ==============================================================================
+/robots.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: all
+
+/sitemap.xml
   Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+  X-Robots-Tag: noindex
+
+/favicon.ico
+  Cache-Control: public, max-age=86400
+  Content-Type: image/x-icon
