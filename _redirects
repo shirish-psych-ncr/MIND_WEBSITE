@@ -6,6 +6,8 @@
 /blog /blog/index.html 200
 
 # Canonical SEO landing pages
+/high-functioning-depression /high-functioning-depression-guide/ 301
+/index.html / 301
 /psychiatrist-in-greater-noida /psychiatrist-greater-noida.html 301
 /psychiatrist-noida /psychiatrist-in-noida.html 301
 /mental-health-clinic-greater-noida /psychiatrist-greater-noida.html 301
@@ -15,6 +17,7 @@
 /child-psychiatry /child-development.html 301
 /mental-health-assessment /assessments.html 301
 
-# Force HTTPS redirects
+# Force HTTPS redirects (single hop, preserving link equity)
 http://mindgracencr.in/* https://mindgracencr.in/:splat 301!
 http://www.mindgracencr.in/* https://mindgracencr.in/:splat 301!
+https://www.mindgracencr.in/* https://mindgracencr.in/:splat 301!
