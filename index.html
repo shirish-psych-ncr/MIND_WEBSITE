@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-IN" dir="ltr">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5RBGN42B');</script>
+<!-- End Google Tag Manager -->
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
 <script>
@@ -9,6 +17,32 @@
   gtag('js', new Date());
 
   gtag('config', 'G-Y5H1B930PQ');
+</script>
+
+<!-- Amplitude Analytics -->
+<script type="module">
+  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
+  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
+
+  if (!AMPLITUDE_API_KEY) {
+    console.warn('Amplitude API key missing — analytics disabled');
+  } else {
+    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
+      // Initialize once
+      amplitude.initAll(AMPLITUDE_API_KEY, {
+        analytics: { autocapture: true },
+        sessionReplay: { sampleRate: 1 }
+      });
+
+      // Track initial event: Viewed Home Page
+      // This confirms the pipeline immediately on load
+      if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        amplitude.track('Viewed Home Page', { prompt_version: 'BA400.4' });
+      }
+    }).catch(err => {
+      console.warn('Amplitude SDK failed to load:', err);
+    });
+  }
 </script>
 
   <meta charset="UTF-8">
@@ -234,6 +268,11 @@
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <!-- Accessibility: Skip to main content -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
