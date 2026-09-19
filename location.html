@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en-IN" dir="ltr">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y5H1B930PQ');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#db2777">
@@ -77,6 +87,7 @@
     <link rel="stylesheet" href="/assets/css/layout.css">
     <link rel="stylesheet" href="/assets/css/utilities.css">
     <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/crisis-banner.css">
     <!-- Leaflet Map CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin>
 
@@ -121,7 +132,7 @@
     <!-- Structured Data (Location-specific) -->
     <script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "MedicalBusiness"],
   "name": "Mind Grace Neuropsychiatric Clinic",
   "image": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
   "url": "https://mindgracencr.in/",
@@ -168,6 +179,9 @@
     }
   ],
   "paymentAccepted": "Cash, UPI, Card",
+  "priceRange": "₹₹",
+  "medicalSpecialty": ["Psychiatry", "Psychology", "Child Development"],
+  "availableService": ["Psychiatric Consultation", "Psychological Counseling", "Mental Health Assessment", "Crisis Intervention"],
   "areaServed": [
     "Greater Noida",
     "Alpha-1",
