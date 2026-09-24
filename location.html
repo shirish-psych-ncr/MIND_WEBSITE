@@ -43,8 +43,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- SEO & Canonical -->
     <link rel="canonical" href="https://mindgracencr.in/location.html">
-    <link rel="alternate" hreflang="en-IN" href="https://mindgracencr.in/location.html">
-    <link rel="alternate" hreflang="x-default" href="https://mindgracencr.in/location.html">
+<link rel="alternate" hreflang="en-in" href="https://mindgracencr.in/location.html">
+<link rel="alternate" hreflang="x-default" href="https://mindgracencr.in/location.html">
     <link rel="sitemap" href="/sitemap.xml">
 
     <!-- Preconnect to External Origins -->
@@ -91,13 +91,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </noscript>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/base.css">
-    <link rel="stylesheet" href="/assets/css/components.css">
-    <link rel="stylesheet" href="/assets/css/breadcrumbs.css">
-    <link rel="stylesheet" href="/assets/css/layout.css">
-    <link rel="stylesheet" href="/assets/css/utilities.css">
-    <link rel="stylesheet" href="/assets/css/animations.css">
-  <link rel="stylesheet" href="/assets/css/crisis-banner.css">
+    <link rel="stylesheet" href="/assets/css/min/base.min.css">
+    <link rel="stylesheet" href="/assets/css/min/components.min.css">
+    <link rel="stylesheet" href="/assets/css/min/breadcrumbs.min.css">
+    <link rel="stylesheet" href="/assets/css/min/layout.min.css">
+    <link rel="stylesheet" href="/assets/css/min/utilities.min.css">
+    <link rel="stylesheet" href="/assets/css/min/animations.min.css">
+  <link rel="stylesheet" href="/assets/css/min/crisis-banner.min.css">
     <!-- Leaflet Map CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin>
 
@@ -142,7 +142,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Structured Data (Location-specific) -->
     <script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "MedicalBusiness"],
+  "@type": [
+    "LocalBusiness",
+    "MedicalBusiness"
+  ],
   "name": "Mind Grace Neuropsychiatric Clinic",
   "image": "assets/images/mind-grace-clinic-logo-pink.svg",
   "url": "",
@@ -190,8 +193,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ],
   "paymentAccepted": "Cash, UPI, Card",
   "priceRange": "₹₹",
-  "medicalSpecialty": ["Psychiatry", "Psychology", "Child Development"],
-  "availableService": ["Psychiatric Consultation", "Psychological Counseling", "Mental Health Assessment", "Crisis Intervention"],
+  "medicalSpecialty": [
+    "Psychiatry",
+    "Psychology",
+    "Child Development"
+  ],
+  "availableService": [
+    "Psychiatric Consultation",
+    "Psychological Counseling",
+    "Mental Health Assessment",
+    "Crisis Intervention"
+  ],
   "areaServed": [
     "Greater Noida",
     "Alpha-1",
@@ -203,53 +215,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@id": "#organization"
 }</script>
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": ""
-      }, {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Location",
-        "item": "location.html"
-      }]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mindgracencr.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Location",
+      "item": "https://mindgracencr.in/location.html"
     }
-    </script>
+  ]
+}</script>
 
     <!-- Preload Critical Assets -->
     <link rel="preload" as="image" href="/assets/images/location-street-view-near.webp" fetchpriority="high">
 
     <!-- JavaScript - Optimized Loading Strategy -->
     <!-- Core UI libraries (deferred) -->
-<script src="/assets/js/icon-init.js" defer></script>
+<script src="/assets/js/min/icon-init.min.js" defer></script>
     <!-- Main application logic (module type for modern browsers) -->
-    <script type="module" src="/assets/js/main.js" defer></script>
+    <script type="module" src="/assets/js/min/main.min.js" defer></script>
     <!-- Leaflet Map JS (deferred) -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin defer></script>
-    <script src="/assets/js/tools-map.js" defer></script>
+    <script src="/assets/js/min/tools-map.min.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;500;600;700&amp;display=swap">
-  <link rel="stylesheet" href="/assets/css/inspiration.css">
-  <script src="/assets/js/visitor-friendly.js?v=quiet17" defer></script>
+  <link rel="stylesheet" href="/assets/css/min/inspiration.min.css">
+  <script src="/assets/js/min/visitor-friendly.min.js?v=quiet17" defer></script>
   <meta name="theme-color" content="#d81b60">
-<link rel="stylesheet" href="/assets/css/accessibility.css?v=theme4">
-<link rel="stylesheet" href="/assets/css/site-foundation.css?v=quiet17">
+<link rel="stylesheet" href="/assets/css/min/accessibility.min.css?v=theme4">
+<link rel="stylesheet" href="/assets/css/min/site-foundation.min.css?v=quiet17">
 <link rel="manifest" href="/site.webmanifest">
   <!-- Security.txt for vulnerability disclosure -->
   <link rel="security.txt" href="/.well-known/security.txt">
 
-<script defer src="/assets/js/zaraz-tracking.js"></script>
+<script defer src="/assets/js/min/zaraz-tracking.min.js"></script>
 <!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
-<script defer src="/assets/vendor/amplitude-2.47.0.js"></script>
-<script defer src="/assets/js/amplitude-analytics.js"></script>
-<script defer src="/assets/js/amplitude-init.js"></script>
-<link rel="stylesheet" href="/assets/css/translate.css">
-<script defer src="/assets/js/translate.js"></script>
+<script defer src="/assets/vendor/min/amplitude-2.47.0.min.js"></script>
+<script defer src="/assets/js/min/amplitude-analytics.min.js"></script>
+<script defer src="/assets/js/min/amplitude-init.min.js"></script>
+<link rel="stylesheet" href="/assets/css/min/translate.min.css">
+<script defer src="/assets/js/min/translate.min.js"></script>
 <meta name="google" content="notranslate">
 </head>
 <body data-design-system="rose-serenity">
