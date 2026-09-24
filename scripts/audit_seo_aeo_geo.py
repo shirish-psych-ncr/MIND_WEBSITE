@@ -10,7 +10,7 @@ def schema_nodes(value):
     elif isinstance(value, list):
         for child in value: yield from schema_nodes(child)
 for p in root.rglob('*.html'):
- if any(x in p.parts for x in ['output','.git','node_modules']): continue
+ if any(x in p.parts for x in ['output','.git','node_modules','skills','.claude']): continue
  s=p.read_text(encoding='utf-8',errors='ignore')
  noindex=bool(re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex',s,re.I))
  title=re.search(r'<title[^>]*>(.*?)</title>',s,re.S|re.I)

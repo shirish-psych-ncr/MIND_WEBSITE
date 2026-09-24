@@ -9,3 +9,6 @@ __pycache__/
 # local agent skills mirror
 .claude/
 /skills/
+
+# node build tooling (esbuild for shared asset minification)
+node_modules/
