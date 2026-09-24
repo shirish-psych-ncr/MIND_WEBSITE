@@ -57,11 +57,27 @@
     'focusable="false"><path d="m6 9 6 6 6-6"/></svg>';
 
   function getStoredLang() {
-    try { return localStorage.getItem(STORAGE_KEY) || ''; } catch (e) { return ''; }
+    try {
+      var v = localStorage.getItem(STORAGE_KEY);
+      if (v !== null && v !== undefined) return v;
+    } catch (e) { /* private mode */ }
+    // Cookie fallback (mirrors storeLang).
+    try {
+      var m = document.cookie.match(/(?:^|;\s*)mg-lang=([^;]*)/);
+      if (m) return decodeURIComponent(m[1]);
+    } catch (e) { /* ignore */ }
+    return '';
   }
 
   function storeLang(code) {
     try { localStorage.setItem(STORAGE_KEY, code || ''); } catch (e) { /* private mode */ }
+    // Cookie fallback (7 days): survives even when localStorage is blocked
+    // (Safari private mode, some in-app browsers); also readable server-side later.
+    try {
+      var d = new Date(Date.now() + 7 * 864e5).toUTCString();
+      document.cookie = 'mg-lang=' + encodeURIComponent(code || '') +
+        '; path=/; expires=' + d + '; SameSite=Lax';
+    } catch (e) { /* cookies disabled too */ }
   }
 
   /* ------------------------------------------------------------------ *
@@ -113,9 +129,21 @@
   /* ------------------------------------------------------------------ *
    * Public entry used by both buttons.
    * ------------------------------------------------------------------ */
-  function translateTo(code) {
+  function trackEvent(name, props) {
+    try {
+      if (window.mgAnalytics && typeof window.mgAnalytics.track === 'function') {
+        window.mgAnalytics.track(name, props || {});
+      } else if (typeof window.gtag === 'function') {
+        window.gtag('event', name, props || {});
+      }
+    } catch (e) { /* analytics optional */ }
+  }
+
+  function translateTo(code, opts) {
     code = code || '';
+    var source = (opts && opts.source) || 'menu';
     storeLang(code);
+    trackEvent('Language Selected', { language: code || 'original', source: source });
     if (setGoogleLanguage(code)) {
       refreshUiState(code);
       return;
@@ -208,7 +236,7 @@
       e.preventDefault();
       e.stopPropagation();
       closePanel(wrap);
-      translateTo(DEFAULT_LANG);
+      translateTo(DEFAULT_LANG, { source: 'hindi_button' });
     });
 
     document.getElementById('mg-t-menu-btn').addEventListener('click', function (e) {
@@ -222,7 +250,7 @@
       if (!item) return;
       e.preventDefault();
       closePanel(wrap);
-      translateTo(item.getAttribute('data-lang') || '');
+      translateTo(item.getAttribute('data-lang') || '', { source: 'panel' });
     });
 
     // Keyboard: Escape closes panel; arrow keys move through options.
