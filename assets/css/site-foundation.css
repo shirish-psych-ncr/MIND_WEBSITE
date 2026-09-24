@@ -1852,6 +1852,8 @@ html[data-theme="dark"] body .button.button-primary { background: #7a1038 !impor
 html[data-theme="dark"] body .seo-answer strong, html[data-theme="dark"] body .seo-note strong { color: #ffd3df !important; }
 html[data-theme="dark"] body .article-toc a { color: #ffd3df !important; }
 html[data-theme="dark"] body .process-step .step-number { background: #ffd3df !important; color: #32121f !important; }
+html[data-theme="dark"] body .process-step .step-number,
+html[data-theme="dark"] body .step-number { background: #40232e !important; color: #ffd3df !important; border-color: #ffd3df !important; opacity: 1 !important; }
 html[data-theme="dark"] body .content-pathway, html[data-theme="dark"] body .article-next-step,
 html[data-theme="dark"] body .blog-answer { background: #40232e !important; color: #fff8fa !important; }
 body .blog-answer { background: var(--mg-surface-soft); color: var(--mg-ink-strong); }
@@ -1862,10 +1864,99 @@ body .button-outline { background: var(--mg-surface-strong) !important; color: v
 body .settings-box .label { color: #fff5f8 !important; }
 body .tool-link-bar { display: flex; flex-wrap: wrap; gap: .5rem; }
 body .tool-link-bar a { display: inline-flex; align-items: center; min-height: 44px; padding: .5rem .75rem; }
+body main .seo-answer, body main .blog-answer, body main .direct-answer {
+  max-inline-size: 100%;
+  overflow-wrap: anywhere;
+}
+body main .hero.hero-small,
+body main .hero.services-hero {
+  overflow: hidden;
+  isolation: isolate;
+}
+body main .hero.hero-small .hero-media img,
+body main .hero.services-hero img { max-inline-size: 100%; block-size: auto; }
+/* Shared therapeutic-tool controls: keep every tool usable and legible in both themes. */
+body main [class*="tool"] button,
+body main .tool-container button,
+body main .tool-shell button,
+body main #session button,
+body main .view button,
+body main .main-btn,
+body main .start-btn,
+body main .stop-btn,
+body main .text-btn,
+body main .chip {
+  min-block-size: 2.75rem;
+  min-inline-size: 2.75rem;
+  padding: .65rem 1rem;
+  border: 1px solid var(--mg-link) !important;
+  border-radius: 999px;
+  background: var(--mg-link) !important;
+  color: #fff !important;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  opacity: 1 !important;
+}
+body main .chip.active,
+body main .chip[aria-pressed="true"] { background: var(--mg-link-hover) !important; color: #fff !important; }
+html[data-theme="dark"] body main [class*="tool"] button,
+html[data-theme="dark"] body main .tool-container button,
+html[data-theme="dark"] body main .tool-shell button,
+html[data-theme="dark"] body main #session button,
+html[data-theme="dark"] body main .view button,
+html[data-theme="dark"] body main .main-btn,
+html[data-theme="dark"] body main .start-btn,
+html[data-theme="dark"] body main .stop-btn,
+html[data-theme="dark"] body main .text-btn,
+html[data-theme="dark"] body main .chip { background: #7a1038 !important; color: #fff8fa !important; border-color: #ffd3df !important; }
+body main [class*="tool"] button:focus-visible,
+body main .tool-container button:focus-visible,
+body main .tool-shell button:focus-visible { outline: 3px solid #ffd3df; outline-offset: 3px; }
+@media (max-width: 760px) {
+  body main .tool-container,
+  body main .tool-shell,
+  body main .tool-view,
+  body main .view { inline-size: min(100%, 42rem); margin-inline: auto; }
+  body main .tool-viewbar { position: sticky; top: 0; z-index: 4; flex-wrap: wrap; gap: .5rem; }
+body main .tool-viewbar__action { flex: 1 1 9rem; }
+}
+/* Butterfly tapper has a canvas layer; keep the semantic page content from
+   collapsing into the canvas grid on narrow screens. */
+body.butterfly-tool #main-content,
+body.butterfly-tool #main-content > * { box-sizing: border-box; }
+body.butterfly-tool #main-content { display: block !important; width: 100%; min-height: 100dvh; padding-top: 5rem; }
+body.butterfly-tool #main-content > .visually-hidden {
+  position: relative !important; width: min(100% - 2rem, 68rem) !important; height: auto !important;
+  margin: 1rem auto !important; clip: auto !important; clip-path: none !important;
+  overflow: visible !important; font-size: clamp(1.75rem, 5vw, 3rem) !important;
+  line-height: 1.1 !important; color: var(--mg-ink-strong) !important;
+}
+body.butterfly-tool #main-content > .tool-page-title {
+  position: relative; width: min(100% - 2rem, 68rem); height: auto; margin: 1rem auto;
+  font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.1; color: var(--mg-ink-strong);
+}
+body.butterfly-tool .seo-answer,
+body.butterfly-tool .breadcrumbs,
+body.butterfly-tool .content-pathway,
+body.butterfly-tool .tool-related-reading { width: min(100% - 2rem, 68rem) !important; margin-inline: auto !important; }
+body.butterfly-tool .tapper-container { position: relative; display: flex; min-height: min(70dvh, 38rem); width: min(100% - 2rem, 68rem); margin-inline: auto; }
+body.butterfly-tool .breadcrumbs { position: relative !important; inset: auto !important; z-index: 25 !important; }
+body.butterfly-tool .tapper-container { position: relative !important; z-index: 1 !important; }
+body.butterfly-tool #trail-canvas,
+body.butterfly-tool #ui-canvas { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+body.butterfly-tool #ui-canvas { pointer-events: auto; }
+body .process-step .step-number, body .step-number {
+  color: #7a1038 !important;
+  background: #fff !important;
+  border: 2px solid #be185d;
+  font-weight: 800;
+}
 body .mobile-nav-panel .mg-t-label-full { display: inline; }
 body .mobile-nav-panel .mg-t-panel { position: static; width: 100%; max-height: 16rem; margin-top: .5rem; }
 body .mobile-nav-panel .mg-translate { display: flex; flex-wrap: wrap; }
 body .mobile-nav-panel .mg-t-panel[hidden] { display: none; }
+body #mg-t-panel[hidden], body .mg-t-panel[hidden] { display: none !important; visibility: hidden !important; }
 html:not([data-theme]) body[data-chrome-normalized="true"] .desktop-nav { display: block !important; }
 html:not([data-theme]) body .header-actions { display: none; }
 body :is(.fade-in-up, .service-card, .feature-card, .condition-card, .testimonial-card, .article-card) { opacity: 1; }

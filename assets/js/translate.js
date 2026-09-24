@@ -361,3 +361,11 @@
     boot();
   }
 })();
+// Translation choices should never obscure page content on initial load.
+function closeTranslatePanelOnLoad() {
+  const panel = document.getElementById('mg-t-panel');
+  const toggle = document.getElementById('mg-t-menu-btn');
+  if (panel && toggle && toggle.getAttribute('aria-expanded') !== 'true') panel.hidden = true;
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', closeTranslatePanelOnLoad, { once: true });
+else closeTranslatePanelOnLoad();
