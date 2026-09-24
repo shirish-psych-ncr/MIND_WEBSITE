@@ -638,6 +638,34 @@ class TestSiteWideAeo(unittest.TestCase):
             self.assertIn(".blog-answer", read_bytes(css).decode("utf-8"),
                           f"{css} missing .blog-answer styling (sync check)")
 
+    def test_every_content_page_carries_extraction_callout(self):
+        """Site-wide inverted-pyramid guard: every HTML page except the
+        noindex shells (404, offline, thank-you) must contain exactly one
+        extraction callout (seo-answer or blog-answer div), and guide/blog
+        pages that use blog-answer must link a stylesheet defining it."""
+        import glob as _glob
+        shells = {"404.html", "offline.html", "thank-you.html"}
+        pages = [os.path.relpath(p, ROOT).replace(os.sep, "/")
+                 for p in _glob.glob(os.path.join(ROOT, "**/*.html"),
+                                     recursive=True)]
+        self.assertGreaterEqual(len(pages), 60)
+        for rel in pages:
+            if rel in shells:
+                continue
+            html = read_bytes(os.path.join(ROOT, rel)).decode("utf-8")
+            n = len(re.findall(r'class="(seo|blog)-answer"', html))
+            self.assertEqual(n, 1, f"{rel} has {n} extraction callouts")
+            # structural hygiene: balanced divs (open==close delta vs zero)
+            self.assertEqual(
+                len(re.findall(r"<div[ >]", html)),
+                len(re.findall(r"</div>", html)),
+                f"{rel} unbalanced <div> tags")
+        # tools pages must style their seo-answer via shared stylesheet
+        for rel in sorted(_glob.glob(os.path.join(ROOT, "tools/*.html"))):
+            html = read_bytes(rel).decode("utf-8")
+            self.assertIn("seo-pages.min.css", html,
+                          f"{rel} missing seo-pages stylesheet link")
+
 
 if __name__ == "__main__":
     unittest.main()
