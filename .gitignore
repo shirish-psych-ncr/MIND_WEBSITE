@@ -1,9 +1,9 @@
-# Output directory for generated audit reports
-output/
-
-# Local dependencies and build artifacts
+# Dependencies
 node_modules/
+
+# Compiled/Binary files
 __pycache__/
 *.pyc
-.claude/
-package-lock.json
+
+# Build artifacts
+dist/

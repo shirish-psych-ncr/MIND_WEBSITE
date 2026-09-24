@@ -2,7 +2,8 @@ const {chromium}=require('playwright');
 const fs=require('node:fs');
 const path=require('node:path');
 const out='output/responsive-audit';
-function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>['.git','node_modules','output'].includes(e.name)?[]:e.isDirectory()?files(path.join(dir,e.name)):e.name.endsWith('.html')?[path.join(dir,e.name).replaceAll('\\','/')]:[]);}
+const SKIP_DIRS=['.git','node_modules','output','skills','.claude','.agents','.codex','.opencode','.cursor'];
+function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>SKIP_DIRS.includes(e.name)?[]:e.isDirectory()?files(path.join(dir,e.name)):e.name.endsWith('.html')?[path.join(dir,e.name).replaceAll('\\','/')]:[]);}
 (async()=>{
  const browser=await chromium.launch({headless:true}); const results=[];
  for(const theme of ['light','dark']){

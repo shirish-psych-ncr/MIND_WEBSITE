@@ -242,6 +242,13 @@ body .meta-btn:hover, body .meta-btn:active { transform: none !important; transi
   --mg-focus: #6f0d31;
 }
 html[data-theme="light"] { color-scheme: only light; }
+/* Long-form guide pages hardcode their paper surface (#fffdf8); keep it dark-aware. */
+html[data-theme="dark"] { --mg-paper: #241619; }
+html[data-theme="dark"] body [style*="#fffdf8"], html[data-theme="dark"] body [style*="#FFFDF8"] { background-color: var(--mg-paper) !important; border-color: var(--mg-border-strong) !important; }
+html[data-theme="dark"] body [style*="background:#fff5f8"], html[data-theme="dark"] body [style*="background: #fff5f8"],
+html[data-theme="dark"] body [style*="background:#eff6ff"], html[data-theme="dark"] body [style*="background: #eff6ff"],
+html[data-theme="dark"] body [style*="background:#f0fdf4"], html[data-theme="dark"] body [style*="background: #f0fdf4"] { background-color: var(--mg-paper) !important; }
+
 html[data-theme="dark"] {
   color-scheme: dark;
   --mg-bg: #1d1217;
@@ -1846,7 +1853,8 @@ body .article-related-link { white-space: normal; }
 body .article-related-link span { min-width: 0; }
 body .article-related-link svg { flex: 0 0 1.25rem; }
 body .article-related-link { overflow-wrap: anywhere; }
-body .blog-answer strong { color: #ffd3df !important; }
+html[data-theme="dark"] body .blog-answer strong { color: var(--mg-link) !important; }
+html[data-theme="dark"] body .text-accent { color: var(--mg-accent) !important; }
 html[data-theme="dark"] body .button-primary,
 html[data-theme="dark"] body .button.button-primary { background: #7a1038 !important; color: #fff8fa !important; border-color: #ffd3df !important; }
 html[data-theme="dark"] body .seo-answer strong, html[data-theme="dark"] body .seo-note strong { color: #ffd3df !important; }
@@ -1919,7 +1927,8 @@ body main .tool-shell button:focus-visible { outline: 3px solid #ffd3df; outline
   body main .tool-view,
   body main .view { inline-size: min(100%, 42rem); margin-inline: auto; }
   body main .tool-viewbar { position: sticky; top: 0; z-index: 4; flex-wrap: wrap; gap: .5rem; }
-body main .tool-viewbar__action { flex: 1 1 9rem; }
+body main .tool-viewbar__action { flex: 1 1 9rem; min-height: 44px; }
+body main .tool-viewbar__actions { gap: .5rem; }
 }
 /* Butterfly tapper has a canvas layer; keep the semantic page content from
    collapsing into the canvas grid on narrow screens. */
