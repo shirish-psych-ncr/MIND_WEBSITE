@@ -76,3 +76,41 @@ This site provides mental-health services. The ingestion key is public by design
 (it can only write events, not read data), but avoid ever sending PII through
 `amplitude.track()`/`identify()` — keep custom events behavioural only
 (page, tool usage, CTA clicks), consistent with the existing Zaraz/GA4 policy.
+
+## Update (Browser SDK 2 foundation & initialization best practices)
+
+`assets/js/amplitude-analytics.js` now ONLY loads the SDK; a second script,
+`assets/js/amplitude-init.js`, performs initialization on `window.load` — per
+Amplitude guidance, init happens only after the app has full access to user ID,
+device context and the final page URL (prevents missing/incorrect properties).
+
+Init config implemented in `amplitude-init.js`:
+- `logLevel`: 'Warn' in production, 'Debug' only on localhost.
+- `serverZone: 'US'` — set to `'EU'` if your org requires EU data residency
+  (`api.eu.amplitude.com` is already allowed in CSP connect-src).
+- Autocapture: pageViews, sessions, formInteractions, fileDownloads,
+  elementInteractions (viewportContentUpdated, exposureDuration 150),
+  frustrationInteractions (rage/dead/error clicks, thrashed cursor),
+  networkTracking via `captureRules: [{ status: '400-599' }]` (verified against
+  the vendored SDK source — this build has no `captureCodes` option; default
+  range without rules is 500-599, so the rule is what restricts to 400-599),
+  webVitals (LCP/FCP/INP/CLS/TTFB).
+- Privacy: `maskTextSelector: '[data-amp-mask]'` — add `data-amp-mask` to any
+  sensitive title/block to redact its text from captured events. The SDK masks
+  emails/phones/card numbers by default.
+- Attribution: `excludeReferrers` + `excludeInternalReferrers` for our domains.
+- Transport: default fetch+keepalive covers pre-navigation events; use
+  `mgAnalytics.setTransport('beacon')` for payloads > 16 KB.
+
+Global helper `window.mgAnalytics` (all pages):
+- `track(eventType, props)` — custom events (event_type required).
+- `setUserId(id)` — warns if id < 5 chars (events may be rejected otherwise).
+- `identify([{op,key,value}])` — chains set/setOnce/add/append into ONE Identify.
+- `revenue(price, qty, productId)` — dedicated revenue interface for payments.
+- `flush()` — validation: await it and check Network tab for 200 OK from
+  api2.amplitude.com. `setOptOut(true)` for consent handling.
+
+Example usage added: `Booking Form Opened` event in assets/js/booking.js
+(no PII). Ad blockers can still drop ingestion requests; if that matters,
+route through a proxy via the `serverUrl` option. MCP note: never use the Amplitude
+MCP server for production ingestion — SDK/HTTP V2 API only.

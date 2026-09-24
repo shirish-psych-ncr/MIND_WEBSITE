@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v3'; // bumped from v1: forces old broken caches to be cleared on activation
+const CACHE_NAME = 'mindgrace-v4'; // bumped from v1: forces old broken caches to be cleared on activation
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
@@ -38,6 +38,7 @@ const TOOLS_ASSETS = [
 // network on repeat visits; ingestion itself is always network-only.
 const ANALYTICS_ASSETS = [
   '/assets/js/amplitude-analytics.js',
+  '/assets/js/amplitude-init.js',
   '/assets/vendor/amplitude-2.47.0.js'
 ];
 

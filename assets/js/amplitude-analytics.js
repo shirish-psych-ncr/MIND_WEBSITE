@@ -24,9 +24,8 @@
 (function () {
   'use strict';
 
-  // Amplitude ingestion key — public by design; move to an env var when you
-  // set up environments.
-  var AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
+  // NOTE: the API key lives in amplitude-init.js (single source of truth).
+  // This module only loads the SDK script itself.
 
   // Pinned version — must stay >= 2.39.0 for Zoning Insights support.
   // Keep in sync with /assets/vendor/amplitude-2.47.0.js.
@@ -36,11 +35,6 @@
     'https://cdn.jsdelivr.net/npm/@amplitude/analytics-browser@' + SDK_VERSION + '/lib/scripts/amplitude-min.umd.min.js',
     'https://cdn.amplitude.com/libs/analytics-browser-' + SDK_VERSION + '-min.js.gz'
   ];
-
-  if (!AMPLITUDE_API_KEY) {
-    console.warn('Amplitude API key missing — analytics disabled');
-    return;
-  }
 
   function loadScript(src) {
     return new Promise(function (resolve, reject) {
@@ -62,40 +56,27 @@
     });
   }
 
-  function initAmplitude() {
-    var amplitude = window.amplitude;
-    // The UMD build exposes either a ready instance or getInstance().
-    var instance = amplitude && typeof amplitude.init === 'function'
-      ? amplitude
-      : (amplitude && typeof amplitude.getInstance === 'function' ? amplitude.getInstance() : null);
-
-    if (!instance || typeof instance.init !== 'function') {
-      console.warn('Amplitude SDK loaded but global `amplitude` API not found.');
-      return;
-    }
-
-    instance.init(AMPLITUDE_API_KEY, undefined, {
-      autocapture: {
-        pageViews: true,          // required by Zoning Insights
-        elementInteractions: {    // click + exposure events
-          viewportContentUpdated: {
-            enabled: true,        // emits "[Amplitude] Viewport Content Updated"
-            exposureDuration: 150 // ms visible before an exposure counts (default)
-          }
-        },
-        frustrationInteractions: true // rage/dead clicks feed Zoning metrics
-      }
-    });
-
-    // Confirm the pipeline immediately on the home page (kept from old code).
-    var path = window.location.pathname;
-    if (path === '/' || path === '/index.html') {
-      instance.track('Viewed Home Page', { prompt_version: 'BA400.4' });
-    }
+  // NOTE: initialization is intentionally NOT done here.
+  // Per Amplitude's "Foundation and Initialization" guidance, the SDK must be
+  // initialized only after the application has full access to the user ID,
+  // device context and final page URL — that happens in
+  // /assets/js/amplitude-init.js on window.load (loaded right after this file
+  // on every page). This module's only job is to make window.amplitude exist
+  // as early as possible (local vendor copy first, CDN fallbacks).
+  function sdkReady() {
+    var g = window.amplitude;
+    return !!(g && (typeof g.init === 'function' || typeof g.getInstance === 'function'));
   }
 
+  if (sdkReady()) return; // already loaded (e.g. SW cache / duplicate include)
+
   tryLoad(0)
-    .then(initAmplitude)
+    .then(function () {
+      if (!sdkReady()) {
+        console.warn('Amplitude SDK loaded but global `amplitude` API not found.');
+      }
+      // amplitude-init.js (deferred, next script tag) performs init on load.
+    })
     .catch(function (err) {
       console.warn('Amplitude SDK failed to load:', err);
     });

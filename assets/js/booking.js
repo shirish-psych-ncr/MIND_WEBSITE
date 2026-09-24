@@ -89,6 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
     formWrapper?.classList.remove("is-error");
     iframe?.focus();
     announce("Appointment form opened. Share only the basic details needed for routine appointment coordination.");
+    // Custom analytics event (no PII) via Amplitude Browser SDK wrapper.
+    if (window.mgAnalytics) {
+      window.mgAnalytics.track('Booking Form Opened', {
+        page_path: window.location.pathname,
+        has_consent: Boolean(consent?.checked)
+      });
+    }
   });
   sticky?.addEventListener("click", (event) => {
     if (formSection?.classList.contains("hidden") || formSection?.hasAttribute("hidden")) {
