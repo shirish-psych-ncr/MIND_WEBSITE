@@ -62,9 +62,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="/assets/css/min/layout.min.css">
     <link rel="stylesheet" href="/assets/css/min/components.min.css">
     <link rel="stylesheet" href="/assets/css/min/breadcrumbs.min.css">
+    
     <link rel="stylesheet" href="/assets/css/min/utilities.min.css">
     <link rel="stylesheet" href="/assets/css/min/animations.min.css">
   <link rel="stylesheet" href="/assets/css/min/crisis-banner.min.css">
+  <link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">
     <!-- MIND GRACE LIBRARY STACK -->
     <script src="/assets/js/min/http-client.min.js" type="module"></script>
     <script defer src="/assets/js/min/icon-init.min.js"></script>
@@ -74,6 +76,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script defer src="/assets/js/min/animations-auto.min.js"></script>
   <script defer src="/assets/js/min/crisis-banner.min.js"></script>
     <!-- END LIBRARY STACK -->
+  <style>
+    .table-scroll { overflow-x: auto; margin-bottom: 3rem; border: 1px solid rgba(103, 27, 80, 0.15); border-radius: 12px; }
+    .fee-comparison-table { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 0.95rem; }
+    .fee-comparison-table caption { text-align: left; padding: 0.75rem 1rem; font-weight: 600; color: #671B50; }
+    .fee-comparison-table th, .fee-comparison-table td { padding: 0.75rem 1rem; text-align: left; vertical-align: top; border-top: 1px solid rgba(103, 27, 80, 0.12); }
+    .fee-comparison-table thead th { background: #671B50; color: #fff; border-top: none; }
+    .fee-comparison-table tbody th { font-weight: 600; }
+    .fee-comparison-table tbody tr:nth-child(even) { background: rgba(103, 27, 80, 0.04); }
+  </style>
+
 
     <!-- Network Status Toast -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
   "name": "Mind Grace Neuropsychiatric Clinic",
-  "url": "",
+  "url": "https://mindgracencr.in/",
   "logo": "/assets/images/mind-grace-clinic-logo-pink.svg",
   "description": "Expert neuropsychiatric care for children and adults in Greater Noida",
   "telephone": "+91-9667863295",
@@ -321,6 +333,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               You do not need to know the exact problem<br>
               <span class="highlight">before you begin</span>
             </h1>
+
+<div class="seo-answer"><strong>Direct answer:</strong> Mind Grace Neuropsychiatric Clinic in Greater Noida provides adult psychiatric consultations, child development and ADHD or autism guidance, counselling for individuals, couples, and families, and structured assessments. You do not need a diagnosis to begin &mdash; the first visit clarifies the concern and the next step.</div>
             <p class="hero-subtitle">
               Most people start because something feels harder than it should,
               not because they already have a diagnosis. These service areas are
@@ -341,6 +355,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </section>
 
       <!-- ADULT SERVICES SECTION -->
+      <section class="main-section" aria-labelledby="service-table-title">
+        <div class="section-header">
+          <h2 id="service-table-title">Service comparison at a glance</h2>
+          <p>The table below summarizes what each Mind Grace pathway involves, typical session length, and where to read more. Current fees for every line are listed on the <a href="/fees.html">fees page</a>.</p>
+        </div>
+        <div class="table-scroll" role="region" aria-label="Mind Grace service comparison table" tabindex="0">
+          <table class="fee-comparison-table">
+            <caption>Mind Grace Neuropsychiatric Clinic service pathways compared (Greater Noida)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Pathway</th>
+                <th scope="col">Who it is for</th>
+                <th scope="col">Typical format</th>
+                <th scope="col">More information</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Adult psychiatry consultation</th>
+                <td>Anxiety, depression, ADHD, sleep, and mood concerns</td>
+                <td>About 45 minutes initial, 30-minute follow-ups</td>
+                <td><a href="/psychiatry.html">Psychiatry consultations</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Child development support</th>
+                <td>Children and adolescents with learning, attention, or communication concerns</td>
+                <td>Family-inclusive assessment and guidance sessions</td>
+                <td><a href="/child-development.html">Child development</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Counselling and psychotherapy</th>
+                <td>Individuals, couples, families, and young people</td>
+                <td>Regular one-to-one or joint sessions</td>
+                <td><a href="/therapy.html">Therapy</a> and <a href="/psychology-counselling.html">counselling</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Structured assessments</th>
+                <td>ADHD, autism, learning, and psychological evaluation questions</td>
+                <td>Multi-session, tool-based, written report</td>
+                <td><a href="/assessments.html">Assessments</a> and <a href="/adhd-autism-assessment.html">ADHD and autism</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section class="main-section section-plum" aria-labelledby="adult-title">
         <div class="section-header">
           <span class="section-badge">Mind Grace Neuropsychiatric Clinic</span>
@@ -646,4 +706,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Psychiatry and Child Development Services in Greater Noida",
+  "url": "https://mindgracencr.in/services.html",
+  "about": {
+    "@type": "MedicalClinic",
+    "name": "Mind Grace Neuropsychiatric Clinic",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Greater Noida",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": ["Adults", "Children", "Adolescents", "Families"]
+  },
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Psychiatric consultation",
+      "description": "A focused clinical conversation that clarifies what a person is experiencing and which next steps may be appropriate.",
+      "inDefinedTermSet": "https://mindgracencr.in/services.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Child development assessment",
+      "description": "An evaluation of communication, learning, attention, behaviour, and sensory experiences in a child's wider family and school context.",
+      "inDefinedTermSet": "https://mindgracencr.in/services.html"
+    }
+  ]
+}
+</script>
 </body></html>

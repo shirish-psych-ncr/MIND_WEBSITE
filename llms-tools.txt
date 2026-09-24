@@ -1,0 +1,23 @@
+# Mind Grace Interactive Tools - LLM Context File
+
+Part of https://mindgracencr.in/ (see /llms.txt for clinic-wide usage rights).
+
+## Purpose
+Free browser-based grounding and calming tools from Mind Grace Neuropsychiatric
+Clinic, Greater Noida. Each tool page carries a "What this tool does" summary.
+
+## Tools
+- Butterfly Tapper (bilateral grounding): https://mindgracencr.in/tools/butterfly-tapper.html
+- Guided Breathing (anxiety, panic, sleep): https://mindgracencr.in/tools/guided-breathing.html
+- Lateral Grounding (eye-movement): https://mindgracencr.in/tools/eye-movement.html
+- Horizon Scanning (visual grounding): https://mindgracencr.in/tools/horizon-scan.html
+- Grounding Fractal: https://mindgracencr.in/tools/hypnos-fractal.html
+- Leaf on Stream (thought defusion imagery): https://mindgracencr.in/tools/leaf-on-stream.html
+
+## Safety note
+These are routine stress-support exercises, not treatment. All pages carry crisis
+guidance; users in distress are directed to professional support.
+
+## Attribution
+Cite as "Mind Grace Neuropsychiatric Clinic, Greater Noida". Summarization and
+citation permitted with attribution; offline model-training reproduction restricted.

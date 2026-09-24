@@ -7,6 +7,8 @@ Covers the operational framework's mandatory checks:
             llms.txt / X-Robots-Tag complementary layers.
 Run with: python -m unittest discover -s tests -v
 """
+import glob
+import json
 import os
 import re
 import unittest
@@ -431,5 +433,296 @@ class TestAeoContent(unittest.TestCase):
         self.assertGreater(checked, 20, "sanity: site should have many blocks")
 
 
+class TestSiteWideAeo(unittest.TestCase):
+    """Framework rollout across the website (September 2026 AEO decisions).
+
+    Decision Rule 1 (inverted pyramid), Rule 2/DefinedTerm schema,
+    Rule 5 (tabular extraction triggers), Rule 10 (entity consistency:
+    no empty "url" fields in organization-level JSON-LD).
+    """
+
+    CORE_PAGES = [
+        "services.html", "conditions.html", "approach.html", "process.html",
+        "assessments.html", "therapy.html", "psychiatry.html",
+        "psychology-counselling.html", "teleconsultation.html",
+        "child-development.html", "adhd-autism-assessment.html",
+        "psychiatrist-greater-noida.html",
+    ]
+
+    def test_core_pages_open_with_direct_answer(self):
+        for page in self.CORE_PAGES:
+            html = read_bytes(page).decode("utf-8")
+            m = re.search(
+                r'<div class="seo-answer"><strong>Direct answer:</strong>'
+                r'\s*(.*?)\s*</div>', html, re.S)
+            self.assertIsNotNone(m, f"{page} missing inverted-pyramid answer")
+            text = re.sub(r"<[^>]+>", "", m.group(1))
+            # Direct, standalone answer within roughly 50-80 words.
+            words = len(text.split())
+            self.assertGreaterEqual(words, 15, f"{page} answer too thin ({words}w)")
+            self.assertLessEqual(words, 90, f"{page} answer too long ({words}w)")
+
+    def test_answer_blocks_styled(self):
+        css = read_bytes("assets/css/min/seo-pages.min.css").decode("utf-8")
+        self.assertIn(".seo-answer", css,
+                      ".seo-answer styling must ship in the minified CSS")
+        src = read_bytes("assets/css/seo-pages.css").decode("utf-8")
+        self.assertIn(".seo-answer", src,
+                      "source CSS and minified CSS must stay in sync")
+
+    def test_two_core_comparison_tables_site_wide(self):
+        # Decision Rule 5: at least two clean HTML tables on core pages.
+        hits = []
+        for page in ("fees.html", "services.html"):
+            html = read_bytes(page).decode("utf-8")
+            self.assertIn("<caption>", html, f"{page} table needs a caption")
+            self.assertIn("<thead>", html)
+            hits.append(page)
+        self.assertEqual(len(hits), 2)
+
+    def test_defined_term_schema_on_services(self):
+        html = read_bytes("services.html").decode("utf-8")
+        found = False
+        for b in re.findall(
+                r'<script type="application/ld\+json">(.*?)</script>',
+                html, re.S):
+            data = json.loads(b)
+            if isinstance(data, dict) and any(
+                    t.get("@type") == "DefinedTerm"
+                    for t in data.get("hasDefinedTerm", [])):
+                found = True
+        self.assertTrue(found,
+                        "services.html must expose DefinedTerm schema")
+
+    def test_no_empty_urls_in_jsonld_site_wide(self):
+        # Entity-consistency guard: every "url" property in structured data
+        # must carry a real value (previously dozens of "url": "" defects).
+        offenders = []
+        for dirpath, dirnames, filenames in os.walk(ROOT):
+            dirnames[:] = [d for d in dirnames
+                           if d not in (".git", "__pycache__", "node_modules")]
+            for fn in filenames:
+                if not fn.endswith(".html"):
+                    continue
+                p = os.path.join(dirpath, fn)
+                with open(p, encoding="utf-8") as f:
+                    html = f.read()
+                for b in re.findall(
+                        r'<script type="application/ld\+json">(.*?)</script>',
+                        html, re.S):
+                    try:
+                        data = json.loads(b)
+                    except json.JSONDecodeError:
+                        continue  # covered by the validity test
+
+                    def walk(node, path):
+                        if isinstance(node, dict):
+                            for k, v in node.items():
+                                if k == "url" and v == "":
+                                    offenders.append(f"{fn}:{path}")
+                                else:
+                                    walk(v, f"{path}.{k}")
+                        elif isinstance(node, list):
+                            for i, v in enumerate(node):
+                                walk(v, f"{path}[{i}]")
+                    walk(data, "$")
+        self.assertEqual(offenders, [],
+                         f"empty url fields remain in JSON-LD: {offenders}")
+
+
+    def test_faq_and_fees_have_direct_answers(self):
+        """Inverted-pyramid rollout extended to faq.html and fees.html,
+        the two highest-value answer-engine pages."""
+        for fn in ("faq.html", "fees.html"):
+            html = read_bytes(fn).decode("utf-8")
+            self.assertIn('class="seo-answer"', html, f"{fn} missing direct-answer block")
+            m = re.search(r'class="seo-answer">.*?</div>', html, re.S)
+            words = len(re.sub(r"<[^>]+>", " ", m.group(0)).split())
+            self.assertTrue(15 <= words <= 90, f"{fn} answer word count {words}")
+
+    def test_faq_schema_questions_visible_on_page(self):
+        """Decision Rule 2: FAQPage schema must mirror visible content."""
+        html = read_bytes("faq.html").decode("utf-8")
+        blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
+        questions = []
+        for b in blocks:
+            data = json.loads(b)
+            if isinstance(data, dict) and data.get("@type") == "FAQPage":
+                questions = [q["name"] for q in data.get("mainEntity", [])]
+        self.assertGreaterEqual(len(questions), 4)
+        text = re.sub(r"<[^>]+>", " ", html)
+        for q in questions:
+            self.assertIn(q.strip("? "), text, f"schema question not visible: {q}")
+
+
+    def test_faq_schema_json_file_matches_inline(self):
+        """faq-schema.json must not drift from the visible FAQPage schema."""
+        html = read_bytes("faq.html").decode("utf-8")
+        m = re.search(r'<script type="application/ld\+json">(\{.*?"@type": "FAQPage".*?)</script>', html, re.S)
+        inline = json.loads(m.group(1))
+        standalone = json.loads(read_bytes("faq-schema.json").decode("utf-8"))
+        self.assertEqual(inline, standalone)
+
+    def test_telephone_entity_consistency(self):
+        """Decision Rule 10: one canonical phone across every JSON-LD block.
+
+        index.html previously carried a stale +919311116002 in its MedicalClinic
+        schema while every visible tel: link and all other pages use
+        +91-9667863295; about/book/location used a different dash grouping.
+        Conflicting facts degrade AI trust - assert a single normalized value.
+        """
+        canonical = "919667863295"
+        offenders = []
+        for name in sorted(f for f in os.listdir(ROOT) if f.endswith(".html")):
+            path = os.path.join(ROOT, name)
+            with open(path, encoding="utf-8") as fh:
+                html = fh.read()
+            for block in re.findall(
+                r'<script type="application/ld\+json">(.*?)</script>', html, re.S
+            ):
+                try:
+                    data = json.loads(block)
+                except json.JSONDecodeError:
+                    continue  # covered by the JSON-LD validity test
+                text = json.dumps(data)
+                for tel in re.findall(r'"telephone"\s*:\s*"([^"]+)"', text):
+                    if re.sub(r"[^0-9]", "", tel) != canonical:
+                        offenders.append(f"{name}: {tel}")
+        self.assertEqual(offenders, [], f"non-canonical telephone values: {offenders}")
+
+    def test_every_content_page_opens_with_direct_answer(self):
+        """Decision Rule 1 rollout completed site-wide: every indexable
+        content page must carry exactly one inverted-pyramid direct-answer
+        block of 15-90 words, and every such page must link the stylesheet
+        that styles it. Error/offline shells (404.html, offline.html) are
+        excluded: they are noindex utility pages with no query to answer."""
+        EXCLUDED = {"404.html", "offline.html"}
+        pages = sorted(f for f in os.listdir(ROOT)
+                       if f.endswith(".html") and f not in EXCLUDED)
+        self.assertGreaterEqual(len(pages), 40)
+        for name in pages:
+            with open(os.path.join(ROOT, name), encoding="utf-8") as fh:
+                html = fh.read()
+            self.assertEqual(
+                html.count('class="seo-answer"'), 1,
+                f"{name} must have exactly one direct-answer block")
+            m = re.search(
+                r'<div class="seo-answer"><strong>Direct answer:</strong>'
+                r'\s*(.*?)\s*</div>', html, re.S)
+            self.assertIsNotNone(m, f"{name} answer block malformed")
+            words = len(re.sub(r"<[^>]+>", " ", m.group(1)).split())
+            self.assertTrue(15 <= words <= 90,
+                            f"{name} answer word count {words}")
+            self.assertIn("seo-pages.min.css", html,
+                          f"{name} missing seo-pages stylesheet link")
+
+    def test_blog_articles_carry_in_short_summary(self):
+        """Decision Rule 1 extended to The Mind Grace Journal: every blog
+        article must open with an 'In short' extraction callout derived from
+        its own lead paragraph (no fabricated facts), styled by both the
+        source and minified classic-blog CSS."""
+        import glob as _glob
+        articles = sorted(_glob.glob(os.path.join(ROOT, "blog/pages/*/*.html")))
+        self.assertGreaterEqual(len(articles), 9)
+        for path in articles:
+            html = read_bytes(path).decode("utf-8")
+            self.assertEqual(html.count('class="blog-answer"'), 1,
+                             f"{path} needs exactly one In-short callout")
+            m = re.search(r'<div class="blog-answer"><strong>In short:</strong>'
+                          r'\s*(.*?)\s*</div>', html, re.S)
+            self.assertIsNotNone(m, f"{path} callout malformed")
+            words = len(re.sub(r"<[^>]+>", " ", m.group(1)).split())
+            self.assertTrue(15 <= words <= 90,
+                            f"{path} callout word count {words}")
+        for css in ("assets/css/classic-blog.css",
+                    "assets/css/min/classic-blog.min.css"):
+            self.assertIn(".blog-answer", read_bytes(css).decode("utf-8"),
+                          f"{css} missing .blog-answer styling (sync check)")
+
+    def test_every_content_page_carries_extraction_callout(self):
+        """Site-wide inverted-pyramid guard: every HTML page except the
+        noindex shells (404, offline, thank-you) must contain exactly one
+        extraction callout (seo-answer or blog-answer div), and guide/blog
+        pages that use blog-answer must link a stylesheet defining it."""
+        import glob as _glob
+        shells = {"404.html", "offline.html", "thank-you.html"}
+        pages = [os.path.relpath(p, ROOT).replace(os.sep, "/")
+                 for p in _glob.glob(os.path.join(ROOT, "**/*.html"),
+                                     recursive=True)]
+        self.assertGreaterEqual(len(pages), 60)
+        for rel in pages:
+            if rel in shells:
+                continue
+            html = read_bytes(os.path.join(ROOT, rel)).decode("utf-8")
+            n = len(re.findall(r'class="(seo|blog)-answer"', html))
+            self.assertEqual(n, 1, f"{rel} has {n} extraction callouts")
+            # structural hygiene: balanced divs (open==close delta vs zero)
+            self.assertEqual(
+                len(re.findall(r"<div[ >]", html)),
+                len(re.findall(r"</div>", html)),
+                f"{rel} unbalanced <div> tags")
+        # tools pages must style their seo-answer via shared stylesheet
+        for rel in sorted(_glob.glob(os.path.join(ROOT, "tools/*.html"))):
+            html = read_bytes(rel).decode("utf-8")
+            self.assertIn("seo-pages.min.css", html,
+                          f"{rel} missing seo-pages stylesheet link")
+
+
+    def test_llms_modular_ecosystem(self):
+        """Decision Rule 3/4: the llms.txt index must link module files that
+        exist on disk, each module repeats the usage-rights restriction, and
+        both Pages _headers and worker.js serve them as text/plain."""
+        index = read_bytes(os.path.join(ROOT, "llms.txt")).decode("utf-8")
+        modules = sorted(glob.glob(os.path.join(ROOT, "llms-*.txt")))
+        self.assertGreaterEqual(len(modules), 2)
+        headers = read_bytes(os.path.join(ROOT, "_headers")).decode("utf-8")
+        worker = read_bytes(os.path.join(ROOT, "worker.js")).decode("utf-8")
+        for m in modules:
+            name = os.path.basename(m)
+            self.assertIn(name, index, f"llms.txt index missing link to {name}")
+            body = read_bytes(m).decode("utf-8")
+            self.assertIn("restricted", body.lower(),
+                          f"{name} missing usage-rights restriction (Rule 4)")
+            self.assertIn("Attribution", body, f"{name} missing attribution section")
+            self.assertIn(f"/{name}", headers,
+                          f"_headers missing text/plain rule for {name}")
+        # worker regex must cover the llms-<topic>.txt naming pattern
+        self.assertIn(r"llms-", worker)
+        self.assertTrue(re.search(r"/\^\\/llms-", worker) or "llms-" in worker)
+
+    def test_sitemap_matches_indexable_pages(self):
+        """Phase 5 maintenance guard: every sitemap <loc> must resolve to a
+        real HTML file that is NOT noindex (ghost-indexing prevention), and
+        every indexable page on disk must appear in the sitemap."""
+        import glob as _glob
+        sm = read_bytes(os.path.join(ROOT, "sitemap.xml")).decode("utf-8")
+        locs = set(re.findall(r"<loc>(.*?)</loc>", sm))
+        self.assertGreaterEqual(len(locs), 60)
+        base = "https://mindgracencr.in/"
+        # 1. every loc -> existing, indexable file
+        for loc in locs:
+            rel = loc[len(base):] if loc.startswith(base) else loc
+            rel = rel.rstrip("/") or "index"
+            cand = rel if rel.endswith(".html") else os.path.join(rel, "index.html")
+            path = os.path.join(ROOT, cand.replace("/", os.sep))
+            self.assertTrue(os.path.exists(path), f"sitemap loc has no file: {loc}")
+            html = read_bytes(path).decode("utf-8")
+            m = re.search(r'<meta name="robots" content="([^"]+)"', html)
+            self.assertNotIn("noindex", (m.group(1) if m else "").lower(),
+                             f"noindex page listed in sitemap: {loc}")
+        # 2. every indexable file -> in sitemap
+        for f in _glob.glob(os.path.join(ROOT, "**/*.html"), recursive=True):
+            rel = os.path.relpath(f, ROOT).replace(os.sep, "/")
+            html = read_bytes(f).decode("utf-8")
+            m = re.search(r'<meta name="robots" content="([^"]+)"', html)
+            if m and "noindex" in m.group(1).lower():
+                continue
+            url = base + ("" if rel == "index.html"
+                          else rel[:-len("index.html")] if rel.endswith("/index.html")
+                          else rel)
+            self.assertIn(url, locs, f"indexable page missing from sitemap: {rel}")
+
+
 if __name__ == "__main__":
+
     unittest.main()
