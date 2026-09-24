@@ -346,5 +346,18 @@ class TestWorkerEdgeBlocking(unittest.TestCase):
         self.assertIn("/llms.txt", self.text)
 
 
+class TestRepositoryHygiene(unittest.TestCase):
+    """Keep build artifacts (e.g. __pycache__) out of the published site."""
+
+    def test_no_pycache_tracked(self):
+        # Verify against git's index rather than the working tree so local
+        # untracked caches don't fail the suite.
+        import subprocess
+        out = subprocess.run(["git", "ls-files"], cwd=ROOT,
+                             capture_output=True, text=True).stdout.splitlines()
+        hits = [f for f in out if "__pycache__" in f or f.endswith(".pyc")]
+        self.assertEqual(hits, [], f"Compiled artifacts tracked in git: {hits}")
+
+
 if __name__ == "__main__":
     unittest.main()
