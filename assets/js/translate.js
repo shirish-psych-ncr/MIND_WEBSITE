@@ -57,11 +57,27 @@
     'focusable="false"><path d="m6 9 6 6 6-6"/></svg>';
 
   function getStoredLang() {
-    try { return localStorage.getItem(STORAGE_KEY) || ''; } catch (e) { return ''; }
+    try {
+      var v = localStorage.getItem(STORAGE_KEY);
+      if (v !== null && v !== undefined) return v;
+    } catch (e) { /* private mode */ }
+    // Cookie fallback (mirrors storeLang).
+    try {
+      var m = document.cookie.match(/(?:^|;\s*)mg-lang=([^;]*)/);
+      if (m) return decodeURIComponent(m[1]);
+    } catch (e) { /* ignore */ }
+    return '';
   }
 
   function storeLang(code) {
     try { localStorage.setItem(STORAGE_KEY, code || ''); } catch (e) { /* private mode */ }
+    // Cookie fallback (7 days): survives even when localStorage is blocked
+    // (Safari private mode, some in-app browsers); also readable server-side later.
+    try {
+      var d = new Date(Date.now() + 7 * 864e5).toUTCString();
+      document.cookie = 'mg-lang=' + encodeURIComponent(code || '') +
+        '; path=/; expires=' + d + '; SameSite=Lax';
+    } catch (e) { /* cookies disabled too */ }
   }
 
   /* ------------------------------------------------------------------ *
