@@ -1,14 +1,9 @@
-# Python compiled files
+# Output directory for generated audit reports
+output/
+
+# Local dependencies and build artifacts
+node_modules/
 __pycache__/
 *.pyc
-
-# Environment and secrets
-.env
-.env.local
-.env.*.local
-# local agent skills mirror
 .claude/
-/skills/
-
-# node build tooling (esbuild for shared asset minification)
-node_modules/
+package-lock.json
