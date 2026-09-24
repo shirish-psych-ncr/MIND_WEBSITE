@@ -113,9 +113,21 @@
   /* ------------------------------------------------------------------ *
    * Public entry used by both buttons.
    * ------------------------------------------------------------------ */
-  function translateTo(code) {
+  function trackEvent(name, props) {
+    try {
+      if (window.mgAnalytics && typeof window.mgAnalytics.track === 'function') {
+        window.mgAnalytics.track(name, props || {});
+      } else if (typeof window.gtag === 'function') {
+        window.gtag('event', name, props || {});
+      }
+    } catch (e) { /* analytics optional */ }
+  }
+
+  function translateTo(code, opts) {
     code = code || '';
+    var source = (opts && opts.source) || 'menu';
     storeLang(code);
+    trackEvent('Language Selected', { language: code || 'original', source: source });
     if (setGoogleLanguage(code)) {
       refreshUiState(code);
       return;
@@ -208,7 +220,7 @@
       e.preventDefault();
       e.stopPropagation();
       closePanel(wrap);
-      translateTo(DEFAULT_LANG);
+      translateTo(DEFAULT_LANG, { source: 'hindi_button' });
     });
 
     document.getElementById('mg-t-menu-btn').addEventListener('click', function (e) {
@@ -222,7 +234,7 @@
       if (!item) return;
       e.preventDefault();
       closePanel(wrap);
-      translateTo(item.getAttribute('data-lang') || '');
+      translateTo(item.getAttribute('data-lang') || '', { source: 'panel' });
     });
 
     // Keyboard: Escape closes panel; arrow keys move through options.

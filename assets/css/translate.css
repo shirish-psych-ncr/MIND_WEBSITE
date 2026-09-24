@@ -145,12 +145,17 @@
 }
 
 /* --------------------------------------------------------------------------
-   Hide Google's injected UI (the real <select> lives inside an iframe we
-   drive programmatically; users only ever see our controls).
+   Hide Google's injected UI. The banner iframe and the gadget are hidden by
+   id/class rules scoped to Google's own markup only — we deliberately do NOT
+   use a blanket ".skiptranslate { display:none }" because Google's widget
+   wraps the whole page body in a font/span structure and our own mount uses
+   skiptranslate classes too; a blanket rule risks hiding site content.
    -------------------------------------------------------------------------- */
 .goog-te-banner-frame,
 .goog-logo-link,
-.skiptranslate {
+.goog-te-gadget,
+.goog-te-combo,
+#google_translate_element {
   display: none !important;
 }
 

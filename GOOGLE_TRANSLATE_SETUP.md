@@ -47,3 +47,18 @@ button target.
   used professionally. Consider adding a disclaimer line later.
 - If Google blocks the widget (rare, or regional restrictions), buttons stay
   visible but no-op with a console warning — layout unaffected.
+
+## Analytics events
+
+Every language change fires a `Language Selected` event (props: `language`,
+`source` = `hindi_button` | `panel`) through `window.mgAnalytics.track()`
+(Amplitude) with a `gtag` fallback, so you can measure Hindi vs. other-language
+adoption in both Amplitude and GA4.
+
+## CSS safety note
+
+`translate.css` hides Google's injected UI only via Google-specific selectors
+(`.goog-te-banner-frame`, `.goog-te-gadget`, `.goog-te-combo`,
+`#google_translate_element`). A blanket `.skiptranslate { display:none }` was
+removed on purpose — Google marks translated page wrappers with that class, so
+the blanket rule could hide real site content.

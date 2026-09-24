@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v7'; // bumped: added Google Translate widget CSS/JS to precache
+const CACHE_NAME = 'mindgrace-v8'; // bumped: translate widget CSS/JS fixes (analytics events, safer hide rules)
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
