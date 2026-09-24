@@ -77,15 +77,16 @@ emergency-helpline precedence).
 ### 4. Validation & maintenance cycle
 
 ```bash
-python -m unittest discover -s tests -v   # 33 checks, runs in CI on every push
+python -m unittest discover -s tests -v   # 34 checks, runs in CI on every push
 ```
 
 The suite re-implements RFC 9309 matching (longest path wins; equal length
 => Allow beats Disallow) and asserts: every framework agent is named with
 the correct verdict on real site paths, the Anthropic/OpenAI split holds,
 Google-Extended does not affect Googlebot, anchor precision, encoding
-hygiene, no leaked sensitive paths, llms.txt structure/usage-rights, and
-worker/header parity.
+hygiene, no leaked sensitive paths, llms.txt structure/usage-rights,
+worker/header parity, and repository hygiene (no compiled `__pycache__`
+artifacts tracked - they would otherwise ship into the published site).
 
 Operational cadence:
 
