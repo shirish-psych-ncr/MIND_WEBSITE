@@ -3,7 +3,7 @@
 window.galleryData = [
   {
     id: "ext-1",
-    src: "/assets/images/Location_street_view_distance.webp",
+    src: "/assets/images/location-street-view-distance.webp",
     alt: "Street view of Mind Grace Neuropsychiatric Clinic and AASHA Child Development Centre",
     caption: "Clinic Exterior",
     description: "Exterior view showing clinic building, entrance, parking, and signage.",
@@ -95,7 +95,7 @@ window.galleryData = [
   },
   {
     id: "ot-1",
-    src: "/assets/images/Mind_Grace_Clinic_waiting_area_2.webp",
+    src: "/assets/images/mind-grace-clinic-waiting-area-2.webp",
     alt: "Child in sensory motor circuit",
     caption: "Sensory Motor Circuit",
     description: "Proprioceptive input for attention and regulation.",
@@ -128,7 +128,7 @@ window.galleryData = [
   },
   {
     id: "team-1",
-    src: "/assets/images/Dr_Anita_Sharma_Personal_Photo.webp",
+    src: "/assets/images/dr-anita-sharma-personal-photo.webp",
     alt: "Dr. Anita Sharma, Lead Psychiatrist",
     caption: "Our Team",
     description: "Meet our dedicated professionals committed to your care.",
@@ -137,7 +137,7 @@ window.galleryData = [
   },
   {
     id: "team-2",
-    src: "/assets/images/Mind_Grace_Clinic_waiting_area.webp",
+    src: "/assets/images/mind-grace-clinic-waiting-area.webp",
     alt: "Clinic waiting area with comfortable seating",
     caption: "Patient-Centered Environment",
     description: "Comfortable spaces designed for patient well-being.",

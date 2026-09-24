@@ -16,27 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
-<!-- Amplitude Analytics -->
-<script type="module">
-  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
-  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
-
-  if (!AMPLITUDE_API_KEY) {
-    console.warn('Amplitude API key missing — analytics disabled');
-  } else {
-    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
-      amplitude.initAll(AMPLITUDE_API_KEY, {
-        analytics: { autocapture: true },
-        sessionReplay: { sampleRate: 1 }
-      });
-      amplitude.track('Viewed Page', { prompt_version: 'BA400.4', page: window.location.pathname });
-    }).catch(err => {
-      console.warn('Amplitude SDK failed to load:', err);
-    });
-  }
-</script>
-
-
   <meta charset="utf-8">
 
   <link rel="canonical" href="https://mindgracencr.in/tools/hypnos-fractal.html">
@@ -91,6 +70,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script defer src="/assets/js/crisis-banner.js"></script>
 <!-- Cloudflare Zaraz Tracking -->
 <script defer src="/assets/js/zaraz-tracking.js"></script>
+<!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
+<script defer src="/assets/vendor/amplitude-2.47.0.js"></script>
+<script defer src="/assets/js/amplitude-analytics.js"></script>
+<script defer src="/assets/js/amplitude-init.js"></script>
+<link rel="stylesheet" href="/assets/css/translate.css">
+<script defer src="/assets/js/translate.js"></script>
+<meta name="google" content="notranslate">
 </head>
   <body data-design-system="rose-serenity">
 <!-- Google Tag Manager (noscript) -->
@@ -108,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#main-content" class="skip-link">Skip to content</a>
     <div class="header-inner">
       <a href="/" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Where You Come First">
-        <img loading="eager" fetchpriority="high" decoding="async" src="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60">
+        <img loading="eager" fetchpriority="high" decoding="async" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60">
         <div>
           <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
           <div class="logo-tagline">Where You Come First</div>
@@ -280,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "publisher": {
         "@type": "MedicalOrganization",
         "name": "Mind Grace Clinic",
-        "url": "https://mindgracencr.in"
+        "url": ""
       }
     }
     </script>

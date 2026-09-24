@@ -16,26 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
-<!-- Amplitude Analytics -->
-<script type="module">
-  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
-  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
-
-  if (!AMPLITUDE_API_KEY) {
-    console.warn('Amplitude API key missing — analytics disabled');
-  } else {
-    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
-      amplitude.initAll(AMPLITUDE_API_KEY, {
-        analytics: { autocapture: true },
-        sessionReplay: { sampleRate: 1 }
-      });
-      amplitude.track('Viewed Page', { prompt_version: 'BA400.4', page: window.location.pathname });
-    }).catch(err => {
-      console.warn('Amplitude SDK failed to load:', err);
-    });
-  }
-</script>
-
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Therapy and Psychotherapy | Mind Grace</title><meta name="description" content="Understand therapy and psychotherapy options at Mind Grace, including individual, family, couples, CBT-informed, and supportive counselling pathways."><link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 	<link rel="canonical" href="https://mindgracencr.in/therapy.html"><meta property="og:title" content="Therapy and Psychotherapy | Mind Grace"><meta property="og:description" content="A clear introduction to therapy, psychotherapy, and counselling pathways at Mind Grace in Greater Noida."><meta property="og:url" content="https://mindgracencr.in/therapy.html"><meta property="og:type" content="website"><meta property="og:image" content="/assets/images/mind-grace-consultation-room.webp"><link rel="stylesheet" href="/assets/css/site-foundation.css?v=quiet17"><link rel="stylesheet" href="/assets/css/seo-pages.css"><script src="/assets/js/visitor-friendly.js?v=quiet17" defer></script><!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -61,6 +41,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <script defer src="/assets/js/zaraz-tracking.js"></script>
+<!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
+<script defer src="/assets/vendor/amplitude-2.47.0.js"></script>
+<script defer src="/assets/js/amplitude-analytics.js"></script>
+<script defer src="/assets/js/amplitude-init.js"></script>
+<link rel="stylesheet" href="/assets/css/translate.css">
+<script defer src="/assets/js/translate.js"></script>
+<meta name="google" content="notranslate">
 </head><body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"
@@ -73,7 +60,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
   "name": "Mind Grace Neuropsychiatric Clinic",
-  "url": "https://mindgracencr.in/",
+  "url": "",
   "telephone": "+91-9667863295",
   "email": "contact@mindgracencr.in",
   "address": {
@@ -84,5 +71,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     "postalCode": "201310",
     "addressCountry": "IN"
   },
-  "@id": "https://mindgracencr.in/#organization"
+  "@id": "#organization"
 }</script></body></html>

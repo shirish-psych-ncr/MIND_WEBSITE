@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v1';
+const CACHE_NAME = 'mindgrace-v7'; // bumped: added Google Translate widget CSS/JS to precache
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
@@ -30,19 +30,50 @@ const TOOLS_PAGES = [
 // Tool-specific CSS and JS
 const TOOLS_ASSETS = [
   '/assets/css/tools-shell.css',
-  '/assets/js/tools-shared.js'
+  '/assets/js/tools-shell.js'
 ];
+
+// Analytics bootstrap + vendored Amplitude Browser SDK (Zoning Insights
+// compatible, >= v2.39.0). Cached so tracking scripts never re-hit the
+// network on repeat visits; ingestion itself is always network-only.
+const ANALYTICS_ASSETS = [
+  '/assets/js/amplitude-analytics.js',
+  '/assets/js/amplitude-init.js',
+  '/assets/vendor/amplitude-2.47.0.js'
+];
+
+// Google Translate widget UI (site-wide header language picker). The
+// controls themselves are cached same-origin; the actual translation
+// engine (translate.google.com element.js + translated page fetches) is
+// always network-only and degrades gracefully when offline.
+const TRANSLATE_ASSETS = [
+  '/assets/css/translate.css',
+  '/assets/js/translate.js'
+];
+
+// All URLs to pre-cache on install
+const PRECACHE_URLS = [...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...ANALYTICS_ASSETS, ...TRANSLATE_ASSETS, '/offline.html'];
 
 /**
  * Install event - cache core assets and tools
+ *
+ * FIX: cache.addAll() fails atomically if ANY single request fails (e.g. a 404
+ * or a transient network error), which caused "[SW] Cache install failed:
+ * TypeError: Failed to execute 'addAll' on 'Cache': Request failed".
+ * We now cache each URL independently so one bad entry can never abort the
+ * whole install, and log any individual failures for debugging.
  */
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('[SW] Caching core assets and tools');
-      return cache.addAll([...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS]);
-    }).catch((err) => {
-      console.error('[SW] Cache install failed:', err);
+      return Promise.allSettled(
+        PRECACHE_URLS.map((url) =>
+          cache.add(new Request(url, { cache: 'reload' })).catch((err) => {
+            console.warn('[SW] Failed to cache asset:', url, err);
+          })
+        )
+      );
     })
   );
   self.skipWaiting();
@@ -146,10 +177,18 @@ self.addEventListener('message', (event) => {
   }
   
   if (event.data && event.data.type === 'CACHE_TOOLS') {
-    // Pre-cache specific tools on demand
+    // Pre-cache specific tools on demand.
+    // FIX: same atomic-addAll bug as the install handler — one failing URL
+    // rejected the whole batch. Cache each URL independently instead.
     event.waitUntil(
       caches.open(CACHE_NAME).then((cache) => {
-        return cache.addAll(event.data.urls || []);
+        return Promise.allSettled(
+          (event.data.urls || []).map((url) =>
+            cache.add(new Request(url, { cache: 'reload' })).catch((err) => {
+              console.warn('[SW] CACHE_TOOLS: failed to cache:', url, err);
+            })
+          )
+        );
       })
     );
   }

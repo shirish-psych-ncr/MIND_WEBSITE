@@ -16,27 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
-<!-- Amplitude Analytics -->
-<script type="module">
-  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
-  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
-
-  if (!AMPLITUDE_API_KEY) {
-    console.warn('Amplitude API key missing — analytics disabled');
-  } else {
-    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
-      amplitude.initAll(AMPLITUDE_API_KEY, {
-        analytics: { autocapture: true },
-        sessionReplay: { sampleRate: 1 }
-      });
-      amplitude.track('Viewed Page', { prompt_version: 'BA400.4', page: window.location.pathname });
-    }).catch(err => {
-      console.warn('Amplitude SDK failed to load:', err);
-    });
-  }
-</script>
-
-
     <meta charset="UTF-8">
     <link rel="canonical" href="https://mindgracencr.in/blog/pages/adult/scheduled-worry-time-technique.html">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="description" content="Learn how scheduled worry time helps stop overthinking and anxiety by training your brain to contain worry instead of letting it take over your day.">
     <meta property="og:title" content="How to Stop Overthinking Using Scheduled Worry Time">
     <meta property="og:description" content="A practical CBT method to control excessive worrying instead of fighting it.">
-    <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to stop worrying by scheduling it", "description": "A counterintuitive CBT technique that helps you stop overthinking by containing worry into a fixed daily time.", "author": {"@type": "Person", "name": "Dr Anita Sharma", "jobTitle": "Consultant Psychiatrist", "knowsAbout": "Psychiatry"}, "publisher": {"@type": "Organization", "name": "Mind Grace Neuropsychiatric Clinic", "url": "https://mindgracencr.in/", "logo": {"@type": "ImageObject", "url": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg"}}, "datePublished": "2026-03-23", "dateModified": "2026-03-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://mindgracencr.in/blog/pages/adult/scheduled-worry-time-technique.html"}, "url": "https://mindgracencr.in/blog/pages/adult/scheduled-worry-time-technique.html", "inLanguage": "en-IN", "articleSection": "Adult Mental Health", "keywords": "adult, anxiety, overthinking, cbt, rumination, most-searched", "image": {"@type": "ImageObject", "url": "https://mindgracencr.in/assets/images/og-image.webp", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "@id": "https://mindgracencr.in/blog/pages/adult/scheduled-worry-time-technique.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mindgracencr.in/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mindgracencr.in/blog/index.html"}, {"@type": "ListItem", "position": 3, "name": "Adult Mental Health", "item": "https://mindgracencr.in/blog/adult.html"}, {"@type": "ListItem", "position": 4, "name": "How to Stop Overthinking", "item": "https://mindgracencr.in/blog/pages/adult/scheduled-worry-time-technique.html"}], "@context": "https://schema.org"}]</script>
+    <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to stop worrying by scheduling it", "description": "A counterintuitive CBT technique that helps you stop overthinking by containing worry into a fixed daily time.", "author": {"@type": "Person", "name": "Dr Anita Sharma", "jobTitle": "Consultant Psychiatrist", "knowsAbout": "Psychiatry"}, "publisher": {"@type": "Organization", "name": "Mind Grace Neuropsychiatric Clinic", "url": "../../", "logo": {"@type": "ImageObject", "url": "../../assets/images/mind-grace-clinic-logo-pink.svg"}}, "datePublished": "2026-03-23", "dateModified": "2026-03-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "../../blog/pages/adult/scheduled-worry-time-technique.html"}, "url": "../../blog/pages/adult/scheduled-worry-time-technique.html", "inLanguage": "en-IN", "articleSection": "Adult Mental Health", "keywords": "adult, anxiety, overthinking, cbt, rumination, most-searched", "image": {"@type": "ImageObject", "url": "../../assets/images/og-image.webp", "width": 1200, "height": 630}}, {"@type": "BreadcrumbList", "@id": "../../blog/pages/adult/scheduled-worry-time-technique.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "../../"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "../../blog/index.html"}, {"@type": "ListItem", "position": 3, "name": "Adult Mental Health", "item": "../../blog/adult.html"}, {"@type": "ListItem", "position": 4, "name": "How to Stop Overthinking", "item": "../../blog/pages/adult/scheduled-worry-time-technique.html"}], "@context": "https://schema.org"}]</script>
         <meta property="og:title" content="Scheduled Worry Time Technique | Mind Grace Clinic">
     <meta property="og:description" content="Learn how to contain anxiety by scheduling dedicated worry time and reclaiming mental freedom.">
     <meta property="og:image" content="https://mindgracencr.in/assets/images/og-image.webp">
@@ -87,6 +66,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="/assets/css/crisis-banner.css">
 
 <script defer src="/assets/js/zaraz-tracking.js"></script>
+<!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
+<script defer src="/assets/vendor/amplitude-2.47.0.js"></script>
+<script defer src="/assets/js/amplitude-analytics.js"></script>
+<script defer src="/assets/js/amplitude-init.js"></script>
+<link rel="stylesheet" href="/assets/css/translate.css">
+<script defer src="/assets/js/translate.js"></script>
+<meta name="google" content="notranslate">
 </head><body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"

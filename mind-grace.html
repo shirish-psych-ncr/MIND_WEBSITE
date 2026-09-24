@@ -16,27 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
-<!-- Amplitude Analytics -->
-<script type="module">
-  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
-  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
-
-  if (!AMPLITUDE_API_KEY) {
-    console.warn('Amplitude API key missing — analytics disabled');
-  } else {
-    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
-      amplitude.initAll(AMPLITUDE_API_KEY, {
-        analytics: { autocapture: true },
-        sessionReplay: { sampleRate: 1 }
-      });
-      amplitude.track('Viewed Page', { prompt_version: 'BA400.4', page: window.location.pathname });
-    }).catch(err => {
-      console.warn('Amplitude SDK failed to load:', err);
-    });
-  }
-</script>
-
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50">
@@ -51,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <link rel="canonical" href="https://mindgracencr.in/mind-grace.html">
 
-  <link rel="preload" href="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="/assets/images/mind-grace-clinic-logo-pink.svg" as="image" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&#x26;family=Playfair+Display:wght@600;700&#x26;display=swap">
@@ -79,8 +58,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- OpenGraph / Social Sharing -->
   <meta property="og:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic">
   <meta property="og:description" content="Mental Health care in Greater Noida for anxiety, depression, ADHD, child development &#x26; more.">
-  <meta property="og:image" content="/assets/images/Dr_Anita_Sharma_Personal_Photo.webp">
-  <meta property="og:image:secure_url" content="/assets/images/Dr_Anita_Sharma_Personal_Photo.webp">
+  <meta property="og:image" content="/assets/images/dr-anita-sharma-personal-photo.webp">
+  <meta property="og:image:secure_url" content="/assets/images/dr-anita-sharma-personal-photo.webp">
   <meta property="og:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist at Mind Grace Neuropsychiatric Clinic">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="675">
@@ -94,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="You Deserve Care | Mind Grace Neuropsychiatric Clinic">
   <meta name="twitter:description" content="You matter. Expert psychiatric care in Greater Noida.">
-  <meta name="twitter:image" content="/assets/images/Dr_Anita_Sharma_Personal_Photo.webp">
+  <meta name="twitter:image" content="/assets/images/dr-anita-sharma-personal-photo.webp">
   <meta name="twitter:image:alt" content="Dr Anita Sharma, Consultant Psychiatrist">
 
   <!-- Robots &amp; Indexing -->
@@ -147,6 +126,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="security.txt" href="/.well-known/security.txt">
 
 <script defer src="/assets/js/zaraz-tracking.js"></script>
+<!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
+<script defer src="/assets/vendor/amplitude-2.47.0.js"></script>
+<script defer src="/assets/js/amplitude-analytics.js"></script>
+<script defer src="/assets/js/amplitude-init.js"></script>
+<link rel="stylesheet" href="/assets/css/translate.css">
+<script defer src="/assets/js/translate.js"></script>
+<meta name="google" content="notranslate">
 </head><body data-design-system="rose-serenity">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"
@@ -155,14 +141,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status-message"></span></div>
 
-<link rel="dns-prefetch" href="https://mindgracencr.in">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mindgracencr.in/"}, {"@type": "ListItem", "position": 2, "name": "Mind Grace", "item": "https://mindgracencr.in/mind-grace.html"}]}</script>
+<link rel="dns-prefetch" href="">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": ""}, {"@type": "ListItem", "position": 2, "name": "Mind Grace", "item": "mind-grace.html"}]}</script>
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
   "name": "Mind Grace Neuropsychiatric Clinic",
-  "url": "https://mindgracencr.in/",
-  "logo": "/assets/images/Mind_Grace_Clinic_Logo_Pink.svg",
+  "url": "",
+  "logo": "/assets/images/mind-grace-clinic-logo-pink.svg",
   "description": "Expert neuropsychiatric care for children and adults in Greater Noida",
   "telephone": "+91-9667863295",
   "address": {
@@ -215,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     "Knowledge Park",
     "Surajpur"
   ],
-  "@id": "https://mindgracencr.in/#organization"
+  "@id": "#organization"
 }</script>
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
@@ -253,7 +239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="site-header">
     <div class="header-inner">
       <a href="/" class="logo-link" aria-label="Mind Grace Neuropsychiatric Clinic Where You Come First">
-        <img loading="eager" decoding="async" src="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60" fetchpriority="high">
+        <img loading="eager" decoding="async" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic Logo" class="logo-img" width="180" height="60" fetchpriority="high">
         <div>
           <div class="logo-text">Mind Grace Neuropsychiatric Clinic</div>
           <div class="logo-tagline">Where You Come First</div>
@@ -519,6 +505,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       © <span id="year"></span> Mind Grace Neuropsychiatric Clinic, Greater Noida. All rights reserved.
     </p>
   </div>
-</footer>
-
-</script></script></body></html>
+</footer></body></html>

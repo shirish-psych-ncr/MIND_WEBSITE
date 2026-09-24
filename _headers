@@ -37,13 +37,35 @@
   # NOTE: 'unsafe-inline' and 'unsafe-eval' are included because Google Tag Manager 
   # requires them to function without complex server-side nonce generation. 
   # For maximum security in the future, consider migrating to CSP nonces.
+  # FIX: 'unsafe-eval' was misspelled as 'unsafe-e' (invalid token).
+  # FIX: CSP sources must be SPACE-separated; the old comma-separated list made
+  # every entry an invalid source expression, so all third-party scripts were blocked.
+  # Allow-list now covers every third-party origin actually referenced by the
+  # HTML pages: GTM/gtag + Google Analytics (incl. the <noscript> iframe),
+  # Cloudflare Zaraz (/cdn-cgi/zaraz/* served same-origin + its cloud endpoints),
+  # Cloudflare Insights beacon, Ahrefs analytics, unpkg (Leaflet on location.html),
+  # jsDelivr (Splide carousels + Amplitude SDK fallback), Google Fonts,
+  # OpenStreetMap tiles, and Amplitude: the Browser SDK (v2.47.0, Zoning
+  # Insights compatible) is vendored same-origin at /assets/vendor/, so only
+  # its ingestion endpoints (api2/api-sources/browser.amplitude.com) and the
+  # cdn.amplitude.com script fallback need allow-listing here.
+  # Google Translate widget (site-wide header language picker): element.js +
+  # CSS come from translate.google.com, translated page bodies are proxied by
+  # the widget (connect-src), flag/icon images from www.google.com (covered
+  # by img-src https:).
   Content-Security-Policy: \
     default-src 'self'; \
-    script-src 'self' 'unsafe-inline' 'unsafe-e', 'https://*.analytics.google.com', 'https://*.googletagmanager.com', 'https://region1.google-analytics.com'; \
-    frame-src 'https://*.googletagmanager.com', 'https://www.youtube.com', 'https://www.google.com'; \
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://*.ahrefs.com https://unpkg.com https://cdn.jsdelivr.net https://cdn.amplitude.com https://translate.google.com; \
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net https://translate.google.com; \
+    font-src 'self' data: https://fonts.gstatic.com; \
+    img-src 'self' data: blob: https:; \
+    connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.ahrefs.com https://*.zarazprojects.com https://*.cloudflare.com https://static.cloudflareinsights.com https://*.tile.openstreetmap.org https://openstreetmap.org https://api2.amplitude.com https://api.eu.amplitude.com https://api-sources.amplitude.com https://cdn.amplitude.com https://browser.amplitude.com https://translate.google.com https://translate.googleapis.com; \
+    frame-src 'self' https://*.googletagmanager.com https://www.google.com https://docs.google.com https://www.openstreetmap.org; \
+    worker-src 'self' blob:; \
+    manifest-src 'self'; \
     object-src 'none'; \
     base-uri 'self'; \
-    form-action 'self'; \
+    form-action 'self' https://docs.google.com; \
     frame-ancestors 'none';
 
 # ==============================================================================

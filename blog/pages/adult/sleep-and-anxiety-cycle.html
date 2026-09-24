@@ -16,27 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
-<!-- Amplitude Analytics -->
-<script type="module">
-  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
-  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
-
-  if (!AMPLITUDE_API_KEY) {
-    console.warn('Amplitude API key missing — analytics disabled');
-  } else {
-    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
-      amplitude.initAll(AMPLITUDE_API_KEY, {
-        analytics: { autocapture: true },
-        sessionReplay: { sampleRate: 1 }
-      });
-      amplitude.track('Viewed Page', { prompt_version: 'BA400.4', page: window.location.pathname });
-    }).catch(err => {
-      console.warn('Amplitude SDK failed to load:', err);
-    });
-  }
-</script>
-
-
     <meta charset="UTF-8">
     <link rel="canonical" href="https://mindgracencr.in/blog/pages/adult/sleep-and-anxiety-cycle.html">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,56 +41,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "publisher": {
       "@type": "Organization",
       "name": "Mind Grace Neuropsychiatric Clinic",
-      "url": "https://mindgracencr.in/",
+      "url": "../../",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mindgracencr.in/assets/images/Mind_Grace_Clinic_Logo_Pink.svg"
+        "url": "../../assets/images/mind-grace-clinic-logo-pink.svg"
       }
     },
     "datePublished": "2026-03-16",
     "dateModified": "2026-03-16",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://mindgracencr.in/blog/pages/adult/sleep-and-anxiety-cycle.html"
+      "@id": "../../blog/pages/adult/sleep-and-anxiety-cycle.html"
     },
-    "url": "https://mindgracencr.in/blog/pages/adult/sleep-and-anxiety-cycle.html",
+    "url": "../../blog/pages/adult/sleep-and-anxiety-cycle.html",
     "inLanguage": "en-IN",
     "articleSection": "Adult Mental Health",
     "keywords": "adult, sleep, anxiety, panic, most-searched",
     "image": {
       "@type": "ImageObject",
-      "url": "https://mindgracencr.in/assets/images/og-image.webp",
+      "url": "../../assets/images/og-image.webp",
       "width": 1200,
       "height": 630
     }
   },
   {
     "@type": "BreadcrumbList",
-    "@id": "https://mindgracencr.in/blog/pages/adult/sleep-and-anxiety-cycle.html#breadcrumb",
+    "@id": "../../blog/pages/adult/sleep-and-anxiety-cycle.html#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://mindgracencr.in/"
+        "item": "../../"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://mindgracencr.in/blog/index.html"
+        "item": "../../blog/index.html"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Adult Mental Health",
-        "item": "https://mindgracencr.in/blog/adult.html"
+        "item": "../../blog/adult.html"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "The Sleep and Anxiety Cycle",
-        "item": "https://mindgracencr.in/blog/pages/adult/sleep-and-anxiety-cycle.html"
+        "item": "../../blog/pages/adult/sleep-and-anxiety-cycle.html"
       }
     ],
     "@context": "https://schema.org"
@@ -154,6 +133,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="/assets/css/crisis-banner.css">
 
 <script defer src="/assets/js/zaraz-tracking.js"></script>
+<!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
+<script defer src="/assets/vendor/amplitude-2.47.0.js"></script>
+<script defer src="/assets/js/amplitude-analytics.js"></script>
+<script defer src="/assets/js/amplitude-init.js"></script>
+<link rel="stylesheet" href="/assets/css/translate.css">
+<script defer src="/assets/js/translate.js"></script>
+<meta name="google" content="notranslate">
 </head><body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"

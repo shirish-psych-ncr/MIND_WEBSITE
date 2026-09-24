@@ -1,0 +1,203 @@
+/* ==========================================================================
+   Mind Grace — Google Translate widget (site-wide header language picker)
+   Injected by /assets/js/translate.js on every page.
+
+   Layout in the header:
+     [हिन्दी icon button]  [Translate ▾ button] -> opens panel of languages
+   ========================================================================== */
+
+.mg-translate {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  font-family: inherit;
+}
+
+/* Shared button look (matches site buttons, but conservative defaults so it
+   works inside every header variant). */
+.mg-t-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mg-t-btn:hover {
+  background: #fdf2f8; /* soft pink tint matching clinic brand */
+  border-color: #db2777;
+}
+
+.mg-t-btn:focus-visible {
+  outline: 3px solid #f9a8d4;
+  outline-offset: 2px;
+}
+
+.mg-t-btn svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+/* Hindi quick button: distinct look (pink filled) so it reads as its own icon. */
+.mg-t-hindi {
+  background: #db2777;
+  border-color: #db2777;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mg-t-hindi:hover {
+  background: #be185d;
+  border-color: #be185d;
+}
+
+/* Active state when the page is currently translated to that language. */
+.mg-t-hindi[aria-pressed="true"] {
+  box-shadow: inset 0 0 0 2px #ffffff, 0 0 0 2px #be185d;
+}
+
+/* Chevron rotates when the panel is open. */
+.mg-t-chevron {
+  transition: transform 0.15s ease;
+}
+
+.mg-translate.is-open .mg-t-chevron {
+  transform: rotate(180deg);
+}
+
+/* --------------------------------------------------------------------------
+   Language panel
+   -------------------------------------------------------------------------- */
+.mg-t-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 9999;
+  min-width: 210px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 6px;
+  margin: 0;
+  list-style: none;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.mg-t-panel[hidden] {
+  display: none;
+}
+
+.mg-t-panel-title {
+  padding: 6px 10px 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.mg-t-lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #1f2937;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mg-t-lang:hover,
+.mg-t-lang:focus-visible {
+  background: #fdf2f8;
+  outline: none;
+}
+
+.mg-t-lang[aria-current="true"] {
+  background: #fce7f3;
+  font-weight: 700;
+}
+
+.mg-t-lang-native {
+  color: #6b7280;
+  font-size: 0.78rem;
+}
+
+/* --------------------------------------------------------------------------
+   Hide Google's injected UI (the real <select> lives inside an iframe we
+   drive programmatically; users only ever see our controls).
+   -------------------------------------------------------------------------- */
+.goog-te-banner-frame,
+.goog-logo-link,
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important; /* Google injects a 40px top offset for its banner */
+}
+
+iframe.goog-te-combo,
+.goog-te-gadget {
+  display: none !important;
+}
+
+/* While Google swaps text node-by-text node, avoid layout jitter on the
+   translate control itself. */
+.mg-translate img {
+  display: none !important; /* Google injects flag/gear images into the gadget */
+}
+
+/* --------------------------------------------------------------------------
+   Responsive: on narrow screens keep both buttons compact (icons only).
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .mg-t-label-full {
+    display: none;
+  }
+
+  .mg-t-btn {
+    padding: 0 9px;
+  }
+
+  .mg-t-panel {
+    right: -40px;
+  }
+}
+
+/* Respect reduced motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+  .mg-t-btn,
+  .mg-t-chevron {
+    transition: none;
+  }
+}
+
+/* High contrast / forced colors mode. */
+@media (forced-colors: active) {
+  .mg-t-btn,
+  .mg-t-panel {
+    border: 1px solid ButtonText;
+  }
+}
