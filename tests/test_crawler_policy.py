@@ -359,5 +359,77 @@ class TestRepositoryHygiene(unittest.TestCase):
         self.assertEqual(hits, [], f"Compiled artifacts tracked in git: {hits}")
 
 
+class TestAeoContent(unittest.TestCase):
+    """Phase 4 AEO: structured extraction triggers and machine-readable facts.
+
+    Decision Rule 5 (tabular data prioritization) and the FAQPage schema rule
+    (schema must mirror visible on-page content exactly - no hidden data).
+    """
+
+    def test_fees_page_has_comparison_table(self):
+        html = read_bytes("fees.html").decode("utf-8")
+        self.assertIn("<table", html,
+                      "fees.html needs a clean HTML table for AI extraction")
+        # Table must be semantically complete: caption, header row, body rows.
+        self.assertRegex(html, r"<table[^>]*>\s*<caption>",
+                         "comparison table requires a <caption>")
+        self.assertIn("<thead>", html)
+        self.assertGreaterEqual(html.count("<tr>"), 5,
+                                "expected header + at least 4 data rows")
+
+    def test_fees_table_numbers_match_visible_cards(self):
+        # The table is an alternate view of the same facts; it must not
+        # contradict the pricing cards (entity/data consistency rule).
+        html = read_bytes("fees.html").decode("utf-8")
+        for amount in ("900", "700", "500", "2,000", "8,000"):
+            self.assertIn(amount, html, f"fee figure {amount} missing")
+
+    def test_fees_page_faqschema_mirrors_visible_content(self):
+        import json
+        html = read_bytes("fees.html").decode("utf-8")
+        blocks = re.findall(
+            r'<script type="application/ld\+json">(.*?)</script>',
+            html, re.S)
+        faq = None
+        for b in blocks:
+            try:
+                data = json.loads(b)
+            except json.JSONDecodeError as e:
+                self.fail(f"invalid JSON-LD block in fees.html: {e}")
+            if isinstance(data, dict) and data.get("@type") == "FAQPage":
+                faq = data
+        self.assertIsNotNone(faq, "fees.html must carry FAQPage JSON-LD")
+        self.assertGreaterEqual(len(faq["mainEntity"]), 3)
+        visible = re.sub(r"<[^>]+>", " ", html)
+        for q in faq["mainEntity"]:
+            # Every answer's key fact must appear in visible page text too.
+            snippet = q["acceptedAnswer"]["text"][:40].strip()
+            self.assertIn(snippet.split()[0], visible,
+                          f"FAQ answer not mirrored in visible content: {snippet}")
+            self.assertEqual(q["@type"], "Question")
+
+    def test_all_jsonld_blocks_site_wide_are_valid(self):
+        import json
+        root = ROOT
+        checked = 0
+        for dirpath, dirnames, filenames in os.walk(root):
+            dirnames[:] = [d for d in dirnames
+                           if d not in (".git", "__pycache__", "node_modules")]
+            for fn in filenames:
+                if not fn.endswith(".html"):
+                    continue
+                with open(os.path.join(dirpath, fn), encoding="utf-8") as f:
+                    html = f.read()
+                for b in re.findall(
+                        r'<script type="application/ld\+json">(.*?)</script>',
+                        html, re.S):
+                    try:
+                        json.loads(b)
+                    except json.JSONDecodeError as e:
+                        self.fail(f"invalid JSON-LD in {fn}: {e}")
+                    checked += 1
+        self.assertGreater(checked, 20, "sanity: site should have many blocks")
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,9 +1,10 @@
 # Crawler Policy & AEO Operations Runbook (2026)
 
 This repository implements the **2026 AI Crawler Management & Answer Engine
-Optimization (AEO) operational framework** across four layers:
+Optimization (AEO) operational framework** across five layers:
 `robots.txt` (access), `llms.txt` (context + usage rights), `_headers` /
-`worker.js` (server-level enforcement), and `tests/test_crawler_policy.py`
+`worker.js` (server-level enforcement), on-page AEO content structure
+(tables + schema-mirrored FAQs), and `tests/test_crawler_policy.py`
 (mandatory post-edit validation, run automatically in CI).
 
 ## What is deployed
@@ -74,10 +75,28 @@ emergency-helpline precedence).
   OFF**: edge drops happen before origin rules and would silently void the
   Allow list in Sections 2-3.
 
-### 4. Validation & maintenance cycle
+### 4. AEO content layer (on-page extraction triggers)
+
+- **Tabular data prioritization:** `fees.html` carries a clean, semantic
+  comparison `<table>` (caption + thead + row headers) mirroring the pricing
+  cards - ₹900 initial psychiatric consultation, ₹700 follow-up, ₹500–₹700
+  Aasha therapy, ₹2,000–₹8,000 assessments. AI engines preferentially extract
+  well-formed tables into generated comparison answers.
+- **FAQPage schema that mirrors visible content:** `fees.html` now emits
+  FAQPage JSON-LD whose questions/answers restate only facts already visible
+  on the page (no hidden data, per Google's structured-data policy). The test
+  suite validates every JSON-LD block site-wide parses as strict JSON and
+  that each fees FAQ answer's key fact appears in visible text.
+- **Inverted pyramid:** homepage hero answers "what/where/who" inside the
+  first paragraph; fees page opens with a direct pricing statement. Keep this
+  rule when editing top pages: answer first, evidence after.
+- **Entity consistency:** canonical name "Mind Grace Neuropsychiatric Clinic"
+  across JSON-LD, llms.txt usage rights, and citing guidance.
+
+### 5. Validation & maintenance cycle
 
 ```bash
-python -m unittest discover -s tests -v   # 34 checks, runs in CI on every push
+python -m unittest discover -s tests -v   # 38 checks, runs in CI on every push
 ```
 
 The suite re-implements RFC 9309 matching (longest path wins; equal length
@@ -85,8 +104,10 @@ The suite re-implements RFC 9309 matching (longest path wins; equal length
 the correct verdict on real site paths, the Anthropic/OpenAI split holds,
 Google-Extended does not affect Googlebot, anchor precision, encoding
 hygiene, no leaked sensitive paths, llms.txt structure/usage-rights,
-worker/header parity, and repository hygiene (no compiled `__pycache__`
-artifacts tracked - they would otherwise ship into the published site).
+worker/header parity, repository hygiene (no compiled `__pycache__`
+artifacts tracked - they would otherwise ship into the published site),
+and the AEO content layer (fees table present and consistent, FAQPage
+schema mirrors visible content, all site-wide JSON-LD parses).
 
 Operational cadence:
 
