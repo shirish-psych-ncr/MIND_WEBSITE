@@ -615,6 +615,29 @@ class TestSiteWideAeo(unittest.TestCase):
             self.assertIn("seo-pages.min.css", html,
                           f"{name} missing seo-pages stylesheet link")
 
+    def test_blog_articles_carry_in_short_summary(self):
+        """Decision Rule 1 extended to The Mind Grace Journal: every blog
+        article must open with an 'In short' extraction callout derived from
+        its own lead paragraph (no fabricated facts), styled by both the
+        source and minified classic-blog CSS."""
+        import glob as _glob
+        articles = sorted(_glob.glob(os.path.join(ROOT, "blog/pages/*/*.html")))
+        self.assertGreaterEqual(len(articles), 9)
+        for path in articles:
+            html = read_bytes(path).decode("utf-8")
+            self.assertEqual(html.count('class="blog-answer"'), 1,
+                             f"{path} needs exactly one In-short callout")
+            m = re.search(r'<div class="blog-answer"><strong>In short:</strong>'
+                          r'\s*(.*?)\s*</div>', html, re.S)
+            self.assertIsNotNone(m, f"{path} callout malformed")
+            words = len(re.sub(r"<[^>]+>", " ", m.group(1)).split())
+            self.assertTrue(15 <= words <= 90,
+                            f"{path} callout word count {words}")
+        for css in ("assets/css/classic-blog.css",
+                    "assets/css/min/classic-blog.min.css"):
+            self.assertIn(".blog-answer", read_bytes(css).decode("utf-8"),
+                          f"{css} missing .blog-answer styling (sync check)")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -39,3 +39,6 @@ article{padding-top:16px}
 h1{font-size:clamp(28px,4vw,38px);margin:8px 0 14px}
 .journal-intro{padding-top:16px}
 @media(max-width:700px){.journal{margin:0}.masthead{padding-top:12px}.masthead .journal-title{font-size:24px}article{padding-top:14px}}
+
+.blog-answer{margin:0 0 1.5rem;padding:.9rem 1.1rem;border-left:4px solid #671B50;background:#faf3f8;border-radius:0 8px 8px 0;font-size:1rem;line-height:1.6}
+.blog-answer strong{color:#671B50}
