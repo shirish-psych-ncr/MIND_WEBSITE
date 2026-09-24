@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v1';
+const CACHE_NAME = 'mindgrace-v2'; // bumped from v1: forces old broken caches to be cleared on activation
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
@@ -30,19 +30,32 @@ const TOOLS_PAGES = [
 // Tool-specific CSS and JS
 const TOOLS_ASSETS = [
   '/assets/css/tools-shell.css',
-  '/assets/js/tools-shared.js'
+  '/assets/js/tools-shell.js'
 ];
+
+// All URLs to pre-cache on install
+const PRECACHE_URLS = [...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, '/offline.html'];
 
 /**
  * Install event - cache core assets and tools
+ *
+ * FIX: cache.addAll() fails atomically if ANY single request fails (e.g. a 404
+ * or a transient network error), which caused "[SW] Cache install failed:
+ * TypeError: Failed to execute 'addAll' on 'Cache': Request failed".
+ * We now cache each URL independently so one bad entry can never abort the
+ * whole install, and log any individual failures for debugging.
  */
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('[SW] Caching core assets and tools');
-      return cache.addAll([...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS]);
-    }).catch((err) => {
-      console.error('[SW] Cache install failed:', err);
+      return Promise.allSettled(
+        PRECACHE_URLS.map((url) =>
+          cache.add(new Request(url, { cache: 'reload' })).catch((err) => {
+            console.warn('[SW] Failed to cache asset:', url, err);
+          })
+        )
+      );
     })
   );
   self.skipWaiting();

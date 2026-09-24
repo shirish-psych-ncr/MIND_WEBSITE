@@ -16,26 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
-<!-- Amplitude Analytics -->
-<script type="module">
-  // Amplitude ingestion key — public by design; move to an env var when you set up environments.
-  const AMPLITUDE_API_KEY = 'bcd984f11210e7e9d3f74d505271cf04';
-
-  if (!AMPLITUDE_API_KEY) {
-    console.warn('Amplitude API key missing — analytics disabled');
-  } else {
-    import('https://cdn.amplitude.com/libs/unified@1.6.0/unified-min.js').then((amplitude) => {
-      amplitude.initAll(AMPLITUDE_API_KEY, {
-        analytics: { autocapture: true },
-        sessionReplay: { sampleRate: 1 }
-      });
-      amplitude.track('Viewed Page', { prompt_version: 'BA400.4', page: window.location.pathname });
-    }).catch(err => {
-      console.warn('Amplitude SDK failed to load:', err);
-    });
-  }
-</script>
-
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mental Health Assessments | Mind Grace</title><meta name="description" content="Learn about psychiatric evaluation, psychological assessment, ADHD, autism, learning, and neuropsychological assessment pathways at Mind Grace."><link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 	<link rel="canonical" href="https://mindgracencr.in/assessments.html"><meta property="og:title" content="Mental Health Assessments | Mind Grace"><meta property="og:description" content="Assessment pathways for adults, children, and families, with clear preparation and follow-up information."><meta property="og:url" content="https://mindgracencr.in/assessments.html"><meta property="og:type" content="website"><meta property="og:image" content="/assets/images/mind-grace-consultation-room.webp"><link rel="stylesheet" href="/assets/css/site-foundation.css?v=quiet17"><link rel="stylesheet" href="/assets/css/seo-pages.css"><script src="/assets/js/visitor-friendly.js?v=quiet17" defer></script><!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
