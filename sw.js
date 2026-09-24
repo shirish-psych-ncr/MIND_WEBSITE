@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v4'; // bumped from v1: forces old broken caches to be cleared on activation
+const CACHE_NAME = 'mindgrace-v6'; // bumped: forces old caches cleared on activation (includes renamed assets)
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately

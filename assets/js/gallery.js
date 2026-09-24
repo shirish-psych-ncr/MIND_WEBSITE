@@ -5,7 +5,7 @@
     ? window.galleryData
     : [{
       id: "fallback-exterior",
-      src: "/assets/images/Location_street_view_distance.webp",
+      src: "/assets/images/location-street-view-distance.webp",
       alt: "Street view of Mind Grace Neuropsychiatric Clinic and AASHA Child Development Centre",
       caption: "Clinic Exterior",
       description: "Exterior view showing clinic building, entrance, parking, and signage.",

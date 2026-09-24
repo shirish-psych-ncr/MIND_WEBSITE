@@ -266,7 +266,7 @@
     header.className = "site-header";
     header.innerHTML = `<div class="header-inner">
       <a class="logo-link" href="/index.html">
-        <img class="logo-img" src="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
+        <img class="logo-img" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
         <span class="logo-copy"><span class="logo-text" id="site-logo-name">Mind Grace</span><span class="logo-tagline">Neuropsychiatric Clinic | Where You Come First</span></span>
       </a>
       <nav class="desktop-nav" aria-label="Main navigation"><ul>${linkMarkup()}<li><a class="btn btn--primary" href="/book.html">Book an appointment</a></li></ul></nav>
@@ -284,7 +284,7 @@
     const footer = document.createElement("footer");
     footer.className = "site-footer";
     footer.innerHTML = `<div class="footer-container">
-      <div class="footer-brand"><img class="footer-logo" src="/assets/images/Mind_Grace_Clinic_Logo_Pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
+      <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
       <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book.html">Book an appointment</a></li><li><a href="/services.html">Our services</a></li><li><a href="/process.html">What to expect</a></li><li><a href="/location.html">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/faq.html#common-questions">Frequently asked questions</a></li><li><a href="/resources.html#tools">Self-help tools</a></li><li><a href="/gallery.html">Clinic gallery</a></li><li><a href="/emergency.html">Emergency help</a></li><li><a href="/contact.html">Contact</a></li></ul></div></nav>
       <address class="footer-contact"><h2>Visit or call</h2><p>Mind Grace Neuropsychiatric Clinic<br>J123, Gamma II, Greater Noida, 201310</p><p><a href="tel:+919667863295">+91 96678 63295</a><br><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
     </div><div class="footer-bottom"><p>&copy; <span id="year"></span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/disclaimer.html">Disclaimer</a><a href="/consent.html">Consent</a></div></div>`;

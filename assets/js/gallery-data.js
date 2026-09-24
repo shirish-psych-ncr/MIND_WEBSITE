@@ -3,7 +3,7 @@
 window.galleryData = [
   {
     id: "ext-1",
-    src: "/assets/images/Location_street_view_distance.webp",
+    src: "/assets/images/location-street-view-distance.webp",
     alt: "Street view of Mind Grace Neuropsychiatric Clinic and AASHA Child Development Centre",
     caption: "Clinic Exterior",
     description: "Exterior view showing clinic building, entrance, parking, and signage.",
@@ -128,7 +128,7 @@ window.galleryData = [
   },
   {
     id: "team-1",
-    src: "/assets/images/Dr_Anita_Sharma_Personal_Photo.webp",
+    src: "/assets/images/dr-anita-sharma-personal-photo.webp",
     alt: "Dr. Anita Sharma, Lead Psychiatrist",
     caption: "Our Team",
     description: "Meet our dedicated professionals committed to your care.",

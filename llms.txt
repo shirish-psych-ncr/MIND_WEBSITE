@@ -10,7 +10,7 @@
 - Location: https://mindgracencr.in/location.html
 - Appointments: https://mindgracencr.in/book.html
 - Mental health resources: https://mindgracencr.in/resources.html
-- Blog: https://mindgracencr.in/blog/index.html
+- Blog: https://mindgracencr.in/blog/
 
 ## Psychology student guides
 
@@ -33,3 +33,13 @@ The website includes guided breathing, eye movement, fractal grounding, Leaf on 
 ## Safety
 
 For immediate danger or a medical emergency in India, call 112 or visit the nearest hospital. Do not use the website as a substitute for urgent care.
+
+## Self-help tools & articles
+
+- Perceived burdensomeness article: https://mindgracencr.in/perceived-burdensomeness/
+- Butterfly Tapper tool: https://mindgracencr.in/tools/butterfly-tapper.html
+- Guided Breathing tool: https://mindgracencr.in/tools/guided-breathing.html
+- Eye Movement tool: https://mindgracencr.in/tools/eye-movement.html
+- Horizon Scan tool: https://mindgracencr.in/tools/horizon-scan.html
+- Hypnos Fractal tool: https://mindgracencr.in/tools/hypnos-fractal.html
+- Leaf on Stream tool: https://mindgracencr.in/tools/leaf-on-stream.html
