@@ -589,6 +589,32 @@ class TestSiteWideAeo(unittest.TestCase):
                         offenders.append(f"{name}: {tel}")
         self.assertEqual(offenders, [], f"non-canonical telephone values: {offenders}")
 
+    def test_every_content_page_opens_with_direct_answer(self):
+        """Decision Rule 1 rollout completed site-wide: every indexable
+        content page must carry exactly one inverted-pyramid direct-answer
+        block of 15-90 words, and every such page must link the stylesheet
+        that styles it. Error/offline shells (404.html, offline.html) are
+        excluded: they are noindex utility pages with no query to answer."""
+        EXCLUDED = {"404.html", "offline.html"}
+        pages = sorted(f for f in os.listdir(ROOT)
+                       if f.endswith(".html") and f not in EXCLUDED)
+        self.assertGreaterEqual(len(pages), 40)
+        for name in pages:
+            with open(os.path.join(ROOT, name), encoding="utf-8") as fh:
+                html = fh.read()
+            self.assertEqual(
+                html.count('class="seo-answer"'), 1,
+                f"{name} must have exactly one direct-answer block")
+            m = re.search(
+                r'<div class="seo-answer"><strong>Direct answer:</strong>'
+                r'\s*(.*?)\s*</div>', html, re.S)
+            self.assertIsNotNone(m, f"{name} answer block malformed")
+            words = len(re.sub(r"<[^>]+>", " ", m.group(1)).split())
+            self.assertTrue(15 <= words <= 90,
+                            f"{name} answer word count {words}")
+            self.assertIn("seo-pages.min.css", html,
+                          f"{name} missing seo-pages stylesheet link")
+
 
 if __name__ == "__main__":
     unittest.main()
