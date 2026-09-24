@@ -96,7 +96,7 @@ emergency-helpline precedence).
 ### 5. Validation & maintenance cycle
 
 ```bash
-python -m unittest discover -s tests -v   # 38 checks, runs in CI on every push
+python -m unittest discover -s tests -v   # 47 checks, runs in CI on every push
 ```
 
 The suite re-implements RFC 9309 matching (longest path wins; equal length

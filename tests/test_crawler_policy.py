@@ -529,5 +529,66 @@ class TestSiteWideAeo(unittest.TestCase):
                          f"empty url fields remain in JSON-LD: {offenders}")
 
 
+    def test_faq_and_fees_have_direct_answers(self):
+        """Inverted-pyramid rollout extended to faq.html and fees.html,
+        the two highest-value answer-engine pages."""
+        for fn in ("faq.html", "fees.html"):
+            html = read_bytes(fn).decode("utf-8")
+            self.assertIn('class="seo-answer"', html, f"{fn} missing direct-answer block")
+            m = re.search(r'class="seo-answer">.*?</div>', html, re.S)
+            words = len(re.sub(r"<[^>]+>", " ", m.group(0)).split())
+            self.assertTrue(15 <= words <= 90, f"{fn} answer word count {words}")
+
+    def test_faq_schema_questions_visible_on_page(self):
+        """Decision Rule 2: FAQPage schema must mirror visible content."""
+        html = read_bytes("faq.html").decode("utf-8")
+        blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
+        questions = []
+        for b in blocks:
+            data = json.loads(b)
+            if isinstance(data, dict) and data.get("@type") == "FAQPage":
+                questions = [q["name"] for q in data.get("mainEntity", [])]
+        self.assertGreaterEqual(len(questions), 4)
+        text = re.sub(r"<[^>]+>", " ", html)
+        for q in questions:
+            self.assertIn(q.strip("? "), text, f"schema question not visible: {q}")
+
+
+    def test_faq_schema_json_file_matches_inline(self):
+        """faq-schema.json must not drift from the visible FAQPage schema."""
+        html = read_bytes("faq.html").decode("utf-8")
+        m = re.search(r'<script type="application/ld\+json">(\{.*?"@type": "FAQPage".*?)</script>', html, re.S)
+        inline = json.loads(m.group(1))
+        standalone = json.loads(read_bytes("faq-schema.json").decode("utf-8"))
+        self.assertEqual(inline, standalone)
+
+    def test_telephone_entity_consistency(self):
+        """Decision Rule 10: one canonical phone across every JSON-LD block.
+
+        index.html previously carried a stale +919311116002 in its MedicalClinic
+        schema while every visible tel: link and all other pages use
+        +91-9667863295; about/book/location used a different dash grouping.
+        Conflicting facts degrade AI trust - assert a single normalized value.
+        """
+        canonical = "919667863295"
+        offenders = []
+        for name in sorted(f for f in os.listdir(ROOT) if f.endswith(".html")):
+            path = os.path.join(ROOT, name)
+            with open(path, encoding="utf-8") as fh:
+                html = fh.read()
+            for block in re.findall(
+                r'<script type="application/ld\+json">(.*?)</script>', html, re.S
+            ):
+                try:
+                    data = json.loads(block)
+                except json.JSONDecodeError:
+                    continue  # covered by the JSON-LD validity test
+                text = json.dumps(data)
+                for tel in re.findall(r'"telephone"\s*:\s*"([^"]+)"', text):
+                    if re.sub(r"[^0-9]", "", tel) != canonical:
+                        offenders.append(f"{name}: {tel}")
+        self.assertEqual(offenders, [], f"non-canonical telephone values: {offenders}")
+
+
 if __name__ == "__main__":
     unittest.main()
