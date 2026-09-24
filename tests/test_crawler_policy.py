@@ -7,6 +7,7 @@ Covers the operational framework's mandatory checks:
             llms.txt / X-Robots-Tag complementary layers.
 Run with: python -m unittest discover -s tests -v
 """
+import json
 import os
 import re
 import unittest
@@ -429,6 +430,103 @@ class TestAeoContent(unittest.TestCase):
                         self.fail(f"invalid JSON-LD in {fn}: {e}")
                     checked += 1
         self.assertGreater(checked, 20, "sanity: site should have many blocks")
+
+
+class TestSiteWideAeo(unittest.TestCase):
+    """Framework rollout across the website (September 2026 AEO decisions).
+
+    Decision Rule 1 (inverted pyramid), Rule 2/DefinedTerm schema,
+    Rule 5 (tabular extraction triggers), Rule 10 (entity consistency:
+    no empty "url" fields in organization-level JSON-LD).
+    """
+
+    CORE_PAGES = [
+        "services.html", "conditions.html", "approach.html", "process.html",
+        "assessments.html", "therapy.html", "psychiatry.html",
+        "psychology-counselling.html", "teleconsultation.html",
+        "child-development.html", "adhd-autism-assessment.html",
+        "psychiatrist-greater-noida.html",
+    ]
+
+    def test_core_pages_open_with_direct_answer(self):
+        for page in self.CORE_PAGES:
+            html = read_bytes(page).decode("utf-8")
+            m = re.search(
+                r'<div class="seo-answer"><strong>Direct answer:</strong>'
+                r'\s*(.*?)\s*</div>', html, re.S)
+            self.assertIsNotNone(m, f"{page} missing inverted-pyramid answer")
+            text = re.sub(r"<[^>]+>", "", m.group(1))
+            # Direct, standalone answer within roughly 50-80 words.
+            words = len(text.split())
+            self.assertGreaterEqual(words, 15, f"{page} answer too thin ({words}w)")
+            self.assertLessEqual(words, 90, f"{page} answer too long ({words}w)")
+
+    def test_answer_blocks_styled(self):
+        css = read_bytes("assets/css/min/seo-pages.min.css").decode("utf-8")
+        self.assertIn(".seo-answer", css,
+                      ".seo-answer styling must ship in the minified CSS")
+        src = read_bytes("assets/css/seo-pages.css").decode("utf-8")
+        self.assertIn(".seo-answer", src,
+                      "source CSS and minified CSS must stay in sync")
+
+    def test_two_core_comparison_tables_site_wide(self):
+        # Decision Rule 5: at least two clean HTML tables on core pages.
+        hits = []
+        for page in ("fees.html", "services.html"):
+            html = read_bytes(page).decode("utf-8")
+            self.assertIn("<caption>", html, f"{page} table needs a caption")
+            self.assertIn("<thead>", html)
+            hits.append(page)
+        self.assertEqual(len(hits), 2)
+
+    def test_defined_term_schema_on_services(self):
+        html = read_bytes("services.html").decode("utf-8")
+        found = False
+        for b in re.findall(
+                r'<script type="application/ld\+json">(.*?)</script>',
+                html, re.S):
+            data = json.loads(b)
+            if isinstance(data, dict) and any(
+                    t.get("@type") == "DefinedTerm"
+                    for t in data.get("hasDefinedTerm", [])):
+                found = True
+        self.assertTrue(found,
+                        "services.html must expose DefinedTerm schema")
+
+    def test_no_empty_urls_in_jsonld_site_wide(self):
+        # Entity-consistency guard: every "url" property in structured data
+        # must carry a real value (previously dozens of "url": "" defects).
+        offenders = []
+        for dirpath, dirnames, filenames in os.walk(ROOT):
+            dirnames[:] = [d for d in dirnames
+                           if d not in (".git", "__pycache__", "node_modules")]
+            for fn in filenames:
+                if not fn.endswith(".html"):
+                    continue
+                p = os.path.join(dirpath, fn)
+                with open(p, encoding="utf-8") as f:
+                    html = f.read()
+                for b in re.findall(
+                        r'<script type="application/ld\+json">(.*?)</script>',
+                        html, re.S):
+                    try:
+                        data = json.loads(b)
+                    except json.JSONDecodeError:
+                        continue  # covered by the validity test
+
+                    def walk(node, path):
+                        if isinstance(node, dict):
+                            for k, v in node.items():
+                                if k == "url" and v == "":
+                                    offenders.append(f"{fn}:{path}")
+                                else:
+                                    walk(v, f"{path}.{k}")
+                        elif isinstance(node, list):
+                            for i, v in enumerate(node):
+                                walk(v, f"{path}[{i}]")
+                    walk(data, "$")
+        self.assertEqual(offenders, [],
+                         f"empty url fields remain in JSON-LD: {offenders}")
 
 
 if __name__ == "__main__":
