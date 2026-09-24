@@ -690,6 +690,38 @@ class TestSiteWideAeo(unittest.TestCase):
         self.assertIn(r"llms-", worker)
         self.assertTrue(re.search(r"/\^\\/llms-", worker) or "llms-" in worker)
 
+    def test_sitemap_matches_indexable_pages(self):
+        """Phase 5 maintenance guard: every sitemap <loc> must resolve to a
+        real HTML file that is NOT noindex (ghost-indexing prevention), and
+        every indexable page on disk must appear in the sitemap."""
+        import glob as _glob
+        sm = read_bytes(os.path.join(ROOT, "sitemap.xml")).decode("utf-8")
+        locs = set(re.findall(r"<loc>(.*?)</loc>", sm))
+        self.assertGreaterEqual(len(locs), 60)
+        base = "https://mindgracencr.in/"
+        # 1. every loc -> existing, indexable file
+        for loc in locs:
+            rel = loc[len(base):] if loc.startswith(base) else loc
+            rel = rel.rstrip("/") or "index"
+            cand = rel if rel.endswith(".html") else os.path.join(rel, "index.html")
+            path = os.path.join(ROOT, cand.replace("/", os.sep))
+            self.assertTrue(os.path.exists(path), f"sitemap loc has no file: {loc}")
+            html = read_bytes(path).decode("utf-8")
+            m = re.search(r'<meta name="robots" content="([^"]+)"', html)
+            self.assertNotIn("noindex", (m.group(1) if m else "").lower(),
+                             f"noindex page listed in sitemap: {loc}")
+        # 2. every indexable file -> in sitemap
+        for f in _glob.glob(os.path.join(ROOT, "**/*.html"), recursive=True):
+            rel = os.path.relpath(f, ROOT).replace(os.sep, "/")
+            html = read_bytes(f).decode("utf-8")
+            m = re.search(r'<meta name="robots" content="([^"]+)"', html)
+            if m and "noindex" in m.group(1).lower():
+                continue
+            url = base + ("" if rel == "index.html"
+                          else rel[:-len("index.html")] if rel.endswith("/index.html")
+                          else rel)
+            self.assertIn(url, locs, f"indexable page missing from sitemap: {rel}")
+
 
 if __name__ == "__main__":
 
