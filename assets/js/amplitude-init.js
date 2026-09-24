@@ -49,6 +49,17 @@
       // Transport: SDK default is fetch with keepalive, which already covers
       // events fired right before navigation. For payloads > 16 KB call
       // mgAnalytics.setTransport('beacon').
+      //
+      // NOTE on option shape (verified against the vendored SDK build
+      // @amplitude/analytics-browser 2.47.0 — see assets/vendor/):
+      //   * The v2 config nests these flags under `autocapture` as individual
+      //     booleans (pageViews/sessions/formInteractions/fileDownloads), and
+      //     the SDK also accepts `defaultTracking: true` / object form.
+      //   * networkTracking rules parse `status` as comma-separated numbers or
+      //     ranges ("400-599"); there is NO `captureCodes` option in this SDK
+      //     version, so do not add one. Default without rules is "500-599".
+      //   * viewportContentUpdated accepts `{ enabled, exposureDuration }`
+      //     (exposureDuration defaults to 150 ms inside the SDK).
       autocapture: {
         pageViews: true,
         sessions: true,
@@ -57,13 +68,13 @@
         elementInteractions: {
           viewportContentUpdated: {
             enabled: true,        // "[Amplitude] Viewport Content Updated" -> Zoning Insights
-            exposureDuration: 150 // ms visible before an exposure counts (default)
+            exposureDuration: 150 // ms visible before an exposure counts (SDK default)
           }
         },
         frustrationInteractions: true, // rage clicks, dead clicks, error clicks, thrashed cursor
         networkTracking: {
           captureRules: [
-            { status: '400-599' } // only 4xx/5xx responses are tracked
+            { status: '400-599' } // track 4xx client errors + 5xx server errors only
           ]
         },
         webVitals: true           // LCP, FCP, INP, CLS, TTFB
