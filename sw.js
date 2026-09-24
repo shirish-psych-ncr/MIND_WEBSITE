@@ -4,17 +4,17 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v8'; // bumped: translate widget CSS/JS fixes (analytics events, safer hide rules)
+const CACHE_NAME = 'mindgrace-v9'; // bumped: switched pre-cached assets to minified /min/ builds
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
 const CORE_ASSETS = [
   '/',
   '/index.html',
-  '/assets/css/site-foundation.css',
-  '/assets/css/base.css',
-  '/assets/css/components.css',
-  '/assets/js/icon-init.js'
+  '/assets/css/min/site-foundation.min.css',
+  '/assets/css/min/base.min.css',
+  '/assets/css/min/components.min.css',
+  '/assets/js/min/icon-init.min.js'
 ];
 
 // Interactive tools pages - critical for offline access during crises
@@ -29,17 +29,17 @@ const TOOLS_PAGES = [
 
 // Tool-specific CSS and JS
 const TOOLS_ASSETS = [
-  '/assets/css/tools-shell.css',
-  '/assets/js/tools-shell.js'
+  '/assets/css/min/tools-shell.min.css',
+  '/assets/js/min/tools-shell.min.js'
 ];
 
 // Analytics bootstrap + vendored Amplitude Browser SDK (Zoning Insights
 // compatible, >= v2.39.0). Cached so tracking scripts never re-hit the
 // network on repeat visits; ingestion itself is always network-only.
 const ANALYTICS_ASSETS = [
-  '/assets/js/amplitude-analytics.js',
-  '/assets/js/amplitude-init.js',
-  '/assets/vendor/amplitude-2.47.0.js'
+  '/assets/js/min/amplitude-analytics.min.js',
+  '/assets/js/min/amplitude-init.min.js',
+  '/assets/vendor/min/amplitude-2.47.0.min.js'
 ];
 
 // Google Translate widget UI (site-wide header language picker). The
@@ -47,8 +47,8 @@ const ANALYTICS_ASSETS = [
 // engine (translate.google.com element.js + translated page fetches) is
 // always network-only and degrades gracefully when offline.
 const TRANSLATE_ASSETS = [
-  '/assets/css/translate.css',
-  '/assets/js/translate.js'
+  '/assets/css/min/translate.min.css',
+  '/assets/js/min/translate.min.js'
 ];
 
 // All URLs to pre-cache on install
