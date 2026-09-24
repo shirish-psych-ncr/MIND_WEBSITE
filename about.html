@@ -78,7 +78,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none';">
+    <!-- CSP is delivered via the Content-Security-Policy HTTP header in _headers.
+         This page loads GTM/gtag, Cloudflare Zaraz and Ahrefs scripts, which a
+         <meta> CSP could not allow-list on its own (no <noscript> iframe exemption
+         there), so the old restrictive meta tag was removed to avoid a second,
+         conflicting policy that blocked those scripts site-wide on this page. -->
 
     <!-- Critical Fonts (Preload) -->
     <noscript>
@@ -237,6 +241,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="security.txt" href="/.well-known/security.txt">
 
 <script defer src="/assets/js/zaraz-tracking.js"></script>
+<!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
+<script defer src="/assets/vendor/amplitude-2.47.0.js"></script>
+<script defer src="/assets/js/amplitude-analytics.js"></script>
 </head>
 <body data-design-system="rose-serenity">
 <!-- Google Tag Manager (noscript) -->

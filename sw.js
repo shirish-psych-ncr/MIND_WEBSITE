@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v2'; // bumped from v1: forces old broken caches to be cleared on activation
+const CACHE_NAME = 'mindgrace-v3'; // bumped from v1: forces old broken caches to be cleared on activation
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
@@ -33,8 +33,16 @@ const TOOLS_ASSETS = [
   '/assets/js/tools-shell.js'
 ];
 
+// Analytics bootstrap + vendored Amplitude Browser SDK (Zoning Insights
+// compatible, >= v2.39.0). Cached so tracking scripts never re-hit the
+// network on repeat visits; ingestion itself is always network-only.
+const ANALYTICS_ASSETS = [
+  '/assets/js/amplitude-analytics.js',
+  '/assets/vendor/amplitude-2.47.0.js'
+];
+
 // All URLs to pre-cache on install
-const PRECACHE_URLS = [...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, '/offline.html'];
+const PRECACHE_URLS = [...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...ANALYTICS_ASSETS, '/offline.html'];
 
 /**
  * Install event - cache core assets and tools
@@ -159,10 +167,18 @@ self.addEventListener('message', (event) => {
   }
   
   if (event.data && event.data.type === 'CACHE_TOOLS') {
-    // Pre-cache specific tools on demand
+    // Pre-cache specific tools on demand.
+    // FIX: same atomic-addAll bug as the install handler — one failing URL
+    // rejected the whole batch. Cache each URL independently instead.
     event.waitUntil(
       caches.open(CACHE_NAME).then((cache) => {
-        return cache.addAll(event.data.urls || []);
+        return Promise.allSettled(
+          (event.data.urls || []).map((url) =>
+            cache.add(new Request(url, { cache: 'reload' })).catch((err) => {
+              console.warn('[SW] CACHE_TOOLS: failed to cache:', url, err);
+            })
+          )
+        );
       })
     );
   }
