@@ -1,0 +1,344 @@
+- generic [ref=e1]:
+  - note "Not an emergency service." [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: Not an emergency service.
+      - generic [ref=e5]:
+        - text: Immediate danger? Call
+        - link "112" [ref=e6] [cursor=pointer]:
+          - /url: tel:112
+        - text: .
+      - link "Emergency resources" [ref=e7] [cursor=pointer]:
+        - /url: /emergency.html
+  - link "Skip to main content" [ref=e8] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e9]:
+    - generic [ref=e10]:
+      - link "Mind Grace Neuropsychiatric Clinic Mind Grace" [ref=e11] [cursor=pointer]:
+        - /url: /index.html
+        - img "Mind Grace Neuropsychiatric Clinic" [ref=e12]
+        - generic [ref=e13]: Mind Grace
+      - generic [ref=e39]:
+        - button "AaAccessibility" [ref=e198] [cursor=pointer]
+        - button "Use dark theme" [ref=e41] [cursor=pointer]:
+          - generic [ref=e42]: Dark theme
+        - button "Close navigation menu" [expanded] [ref=e200] [cursor=pointer]
+  - dialog "Mobile navigation" [ref=e202]:
+    - generic [ref=e203]:
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - paragraph [ref=e206]: Mind Grace
+          - heading "Find your next step" [level=2] [ref=e207]
+        - button "Close navigation menu" [active] [ref=e208] [cursor=pointer]
+      - paragraph [ref=e209]: Choose a section, then open a branch to see the pages inside it.
+      - list [ref=e210]:
+        - listitem [ref=e211]:
+          - button "Show Start here options" [ref=e213] [cursor=pointer]:
+            - generic [ref=e214]: Start here
+          - list [ref=e215]:
+            - listitem [ref=e216]:
+              - link "Home" [ref=e217] [cursor=pointer]:
+                - /url: /index.html
+            - listitem [ref=e218]:
+              - link "About the clinic" [ref=e219] [cursor=pointer]:
+                - /url: /about.html
+            - listitem [ref=e220]:
+              - link "Dr Anita Sharma" [ref=e221] [cursor=pointer]:
+                - /url: /dr-anita-sharma.html
+            - listitem [ref=e222]:
+              - link "Our care team" [ref=e223] [cursor=pointer]:
+                - /url: /doctors.html
+        - listitem [ref=e224]:
+          - button "Show Care and services options" [ref=e226] [cursor=pointer]:
+            - generic [ref=e227]: Care and services
+          - list [ref=e228]:
+            - listitem [ref=e229]:
+              - link "Services" [ref=e230] [cursor=pointer]:
+                - /url: /services.html
+            - listitem [ref=e231]:
+              - link "Psychiatry" [ref=e232] [cursor=pointer]:
+                - /url: /psychiatry.html
+            - listitem [ref=e233]:
+              - link "Psychology and counselling" [ref=e234] [cursor=pointer]:
+                - /url: /psychology-counselling.html
+            - listitem [ref=e235]:
+              - link "Child development" [ref=e236] [cursor=pointer]:
+                - /url: /child-development.html
+            - listitem [ref=e237]:
+              - link "Assessments" [ref=e238] [cursor=pointer]:
+                - /url: /assessments.html
+            - listitem [ref=e239]:
+              - link "Therapy and psychotherapy" [ref=e240] [cursor=pointer]:
+                - /url: /therapy.html
+            - listitem [ref=e241]:
+              - link "Teleconsultation" [ref=e242] [cursor=pointer]:
+                - /url: /teleconsultation.html
+            - listitem [ref=e243]:
+              - link "Specialized enquiries" [ref=e244] [cursor=pointer]:
+                - /url: /specialized-consultations.html
+            - listitem [ref=e245]:
+              - link "What to expect" [ref=e246] [cursor=pointer]:
+                - /url: /process.html
+            - listitem [ref=e247]:
+              - link "Fees and payments" [ref=e248] [cursor=pointer]:
+                - /url: /fees.html
+            - listitem [ref=e249]:
+              - button "Show Who we support options" [ref=e251] [cursor=pointer]:
+                - generic [ref=e252]: Who we support
+              - list [ref=e253]:
+                - listitem [ref=e254]:
+                  - link "Adult mental health" [ref=e255] [cursor=pointer]:
+                    - /url: /conditions.html
+                - listitem [ref=e256]:
+                  - link "Depression and anxiety" [ref=e257] [cursor=pointer]:
+                    - /url: /depression-anxiety.html
+                - listitem [ref=e258]:
+                  - link "ADHD and autism assessment" [ref=e259] [cursor=pointer]:
+                    - /url: /adhd-autism-assessment.html
+                - listitem [ref=e260]:
+                  - link "Child development" [ref=e261] [cursor=pointer]:
+                    - /url: /aasha.html
+                - listitem [ref=e262]:
+                  - link "Our care approach" [ref=e263] [cursor=pointer]:
+                    - /url: /approach.html
+        - listitem [ref=e264]:
+          - button "Show Explore and learn options" [ref=e266] [cursor=pointer]:
+            - generic [ref=e267]: Explore and learn
+          - list [ref=e268]:
+            - listitem [ref=e269]:
+              - link "Resources" [ref=e270] [cursor=pointer]:
+                - /url: /resources.html#tools
+            - listitem [ref=e271]:
+              - link "Clinic gallery" [ref=e272] [cursor=pointer]:
+                - /url: /gallery.html
+            - listitem [ref=e273]:
+              - link "Patient experiences" [ref=e274] [cursor=pointer]:
+                - /url: /testimonials.html
+            - listitem [ref=e275]:
+              - link "Blog" [ref=e276] [cursor=pointer]:
+                - /url: /blog/index.html
+            - listitem [ref=e277]:
+              - link "Frequently asked questions" [ref=e278] [cursor=pointer]:
+                - /url: /faq.html#common-questions
+        - listitem [ref=e279]:
+          - generic [ref=e280]:
+            - link "Self-help tools" [ref=e281] [cursor=pointer]:
+              - /url: /resources.html#tools
+            - button "Show Self-help tools options" [ref=e282] [cursor=pointer]
+          - list [ref=e283]:
+            - listitem [ref=e284]:
+              - link "All self-help tools" [ref=e285] [cursor=pointer]:
+                - /url: /resources.html#tools
+            - listitem [ref=e286]:
+              - link "Guided breathing" [ref=e287] [cursor=pointer]:
+                - /url: /tools/guided-breathing.html
+            - listitem [ref=e288]:
+              - link "Butterfly tapper" [ref=e289] [cursor=pointer]:
+                - /url: /tools/butterfly-tapper.html
+            - listitem [ref=e290]:
+              - link "Eye movement" [ref=e291] [cursor=pointer]:
+                - /url: /tools/eye-movement.html
+            - listitem [ref=e292]:
+              - link "Hypnotic fractal" [ref=e293] [cursor=pointer]:
+                - /url: /tools/hypnos-fractal.html
+            - listitem [ref=e294]:
+              - link "Horizon scan" [ref=e295] [cursor=pointer]:
+                - /url: /tools/horizon-scan.html
+            - listitem [ref=e296]:
+              - link "River of Release" [ref=e297] [cursor=pointer]:
+                - /url: /tools/leaf-on-stream.html
+        - listitem [ref=e298]:
+          - button "Show Visit and contact options" [ref=e300] [cursor=pointer]:
+            - generic [ref=e301]: Visit and contact
+          - list [ref=e302]:
+            - listitem [ref=e303]:
+              - link "Find the clinic" [ref=e304] [cursor=pointer]:
+                - /url: /location.html
+            - listitem [ref=e305]:
+              - link "Contact" [ref=e306] [cursor=pointer]:
+                - /url: /contact.html
+            - listitem [ref=e307]:
+              - link "Emergency help" [ref=e308] [cursor=pointer]:
+                - /url: /emergency.html
+      - link "Book an appointment" [ref=e309] [cursor=pointer]:
+        - /url: /book.html
+      - generic [ref=e34]:
+        - button "अ हिन्दी" [ref=e35] [cursor=pointer]:
+          - text: अ
+          - generic [ref=e36]: हिन्दी
+        - button "Choose a language to translate this page into" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: Translate
+  - main [ref=e43]:
+    - region [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]: Gamma II, Greater Noida
+        - heading "Psychiatric and child-development care in Greater Noida." [level=1] [ref=e47]
+        - paragraph [ref=e48]: Mind Grace provides confidential consultations for adults, children, adolescents, and families. Start with a structured conversation about what you are experiencing, then discuss practical next steps at J123, Gamma II.
+        - generic [ref=e49]:
+          - strong [ref=e50]: "Direct answer:"
+          - text: Mind Grace Neuropsychiatric Clinic is a psychiatric and child-development clinic at J123, Gamma II, Greater Noida, serving adults, adolescents, children, and families. Consultations cover mental-health concerns, ADHD and autism guidance, counselling, and structured assessments; teleconsultations are available.
+        - generic [ref=e51]:
+          - link "Book a Consultation" [ref=e52] [cursor=pointer]:
+            - /url: /book.html
+          - link "Explore services" [ref=e53] [cursor=pointer]:
+            - /url: /services.html
+        - list "Clinic commitments" [ref=e54]:
+          - listitem [ref=e55]: ✓ Led by Dr. Anita Sharma
+          - listitem [ref=e56]: ✓ Clear appointment process
+          - listitem [ref=e57]: ✓ Fees shared before care begins
+        - paragraph [ref=e58]:
+          - text: Prefer to ask first?
+          - link "Call +91 96678 63295" [ref=e59] [cursor=pointer]:
+            - /url: tel:+919667863295
+          - text: or
+          - link "WhatsApp the clinic (opens in a new window)" [ref=e60] [cursor=pointer]:
+            - /url: https://wa.me/919667863295
+            - text: WhatsApp the clinic
+          - emphasis [ref=e61]: (For routine appointment questions only; not for emergencies or detailed clinical histories.)
+          - text: .
+    - generic [ref=e71]:
+      - link [ref=e72] [cursor=pointer]:
+        - /url: /book.html
+        - generic [ref=e73]:
+          - heading "Book a Visit" [level=2] [ref=e74]
+          - paragraph [ref=e75]: Request a visit and share only basic appointment details.
+      - link [ref=e76] [cursor=pointer]:
+        - /url: /fees.html
+        - generic [ref=e77]:
+          - heading "Fees & Insurance" [level=2] [ref=e78]
+          - paragraph [ref=e79]: Review consultation fees, payment options, and policies.
+      - link [ref=e80] [cursor=pointer]:
+        - /url: /emergency.html
+        - generic [ref=e81]:
+          - heading "Emergency help" [level=2] [ref=e82]
+          - paragraph [ref=e83]: What to do if there is immediate danger or urgent risk.
+    - region [ref=e84]:
+      - generic [ref=e85]:
+        - text: Clinical Services
+        - heading "Choose the right place to begin." [level=2] [ref=e86]
+        - paragraph [ref=e87]: Explore the clinic’s adult psychiatry, child-development, and counselling pathways before you request an appointment.
+      - generic [ref=e88]:
+        - article [ref=e89]:
+          - heading "Adult Psychiatry" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Consultations for concerns such as anxiety, depression, mood changes, OCD, sleep difficulties, and related mental health needs.
+          - link "Explore adult care →" [ref=e95] [cursor=pointer]:
+            - /url: /psychiatry.html
+        - article [ref=e96]:
+          - heading "Child Development (Aasha Wing)" [level=3] [ref=e101]
+          - paragraph [ref=e102]: Developmental assessment, ADHD support, early-intervention guidance, and practical conversations with parents and caregivers.
+          - link "Explore child development →" [ref=e103] [cursor=pointer]:
+            - /url: /aasha.html
+        - article [ref=e104]:
+          - heading "Counselling & Therapy" [level=3] [ref=e111]
+          - paragraph [ref=e112]: Confidential counselling support for individuals, couples, and families working through emotional or relationship concerns.
+          - link "Discover therapy options →" [ref=e113] [cursor=pointer]:
+            - /url: /psychology-counselling.html
+    - region [ref=e114]:
+      - generic [ref=e115]:
+        - text: Your First Visit
+        - heading "Know what to expect before you visit." [level=2] [ref=e116]
+        - paragraph [ref=e117]: You do not need a prior diagnosis to request an appointment. We explain the next step, what to bring, and how follow-up is planned.
+      - generic [ref=e118]:
+        - article [ref=e119]:
+          - heading "Request an appointment" [level=3] [ref=e120]
+          - paragraph [ref=e121]: Use the form or contact the clinic by phone or WhatsApp. Share basic contact details and a short description of what you need help with.
+        - article [ref=e122]:
+          - heading "Have a focused first visit" [level=3] [ref=e123]
+          - paragraph [ref=e124]: Your first session is a structured conversation with Dr. Sharma about your history, current concerns, daily functioning, and goals.
+        - article [ref=e125]:
+          - heading "Discuss next steps" [level=3] [ref=e126]
+          - paragraph [ref=e127]: You will have time to discuss options, which may include treatment, counselling, a prescription, or further assessment where appropriate.
+      - link "Read the full new-patient guide" [ref=e129] [cursor=pointer]:
+        - /url: /process.html
+    - region [ref=e130]:
+      - heading "Ready to take the next step?" [level=2] [ref=e131]
+      - paragraph [ref=e132]: Appointments are available Monday to Saturday, 10:00 AM–4:00 PM and 5:30–7:30 PM. Review the process and request a consultation when you are ready.
+      - link "Book an Appointment" [ref=e133] [cursor=pointer]:
+        - /url: /book.html
+    - region [ref=e134]:
+      - heading "A calmer next step in Greater Noida" [level=2] [ref=e135]
+      - paragraph [ref=e136]: If anxiety, low mood, sleep changes, or a child’s development are making daily life harder, you can begin with the concern you notice. Mind Grace in Gamma II helps adults, children, adolescents, and families understand what support may fit.
+      - generic [ref=e137]:
+        - link "Explore mental health services ↗" [ref=e138] [cursor=pointer]:
+          - /url: /services.html
+        - link "Book a confidential consultation ↗" [ref=e139] [cursor=pointer]:
+          - /url: /book.html
+        - link "Find the clinic in Gamma II ↗" [ref=e140] [cursor=pointer]:
+          - /url: /location.html
+  - contentinfo [ref=e141]:
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - paragraph [ref=e144]: Where You Come First
+        - paragraph [ref=e145]: Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.
+        - link "Call +91 96678 63295" [ref=e146] [cursor=pointer]:
+          - /url: tel:+919667863295
+      - navigation "Footer navigation" [ref=e147]:
+        - generic [ref=e148]:
+          - heading "Patient care" [level=2] [ref=e149]
+          - list [ref=e150]:
+            - listitem [ref=e151]:
+              - link "Book an appointment" [ref=e152] [cursor=pointer]:
+                - /url: /book.html
+            - listitem [ref=e153]:
+              - link "Our services" [ref=e154] [cursor=pointer]:
+                - /url: /services.html
+            - listitem [ref=e155]:
+              - link "What to expect" [ref=e156] [cursor=pointer]:
+                - /url: /process.html
+            - listitem [ref=e157]:
+              - link "Find us" [ref=e158] [cursor=pointer]:
+                - /url: /location.html
+        - generic [ref=e159]:
+          - heading "Help and resources" [level=2] [ref=e160]
+          - list [ref=e161]:
+            - listitem [ref=e162]:
+              - link "Frequently asked questions" [ref=e163] [cursor=pointer]:
+                - /url: /faq.html#common-questions
+            - listitem [ref=e164]:
+              - link "Self-help tools" [ref=e165] [cursor=pointer]:
+                - /url: /resources.html#tools
+            - listitem [ref=e166]:
+              - link "Clinic gallery" [ref=e167] [cursor=pointer]:
+                - /url: /gallery.html
+            - listitem [ref=e168]:
+              - link "Emergency help" [ref=e169] [cursor=pointer]:
+                - /url: /emergency.html
+            - listitem [ref=e170]:
+              - link "Contact" [ref=e171] [cursor=pointer]:
+                - /url: /contact.html
+        - generic [ref=e172]:
+          - heading "Care guides" [level=2] [ref=e173]
+          - list [ref=e174]:
+            - listitem [ref=e175]:
+              - link "Psychiatry" [ref=e176] [cursor=pointer]:
+                - /url: /psychiatry.html
+            - listitem [ref=e177]:
+              - link "Psychology and counselling" [ref=e178] [cursor=pointer]:
+                - /url: /psychology-counselling.html
+            - listitem [ref=e179]:
+              - link "Child development" [ref=e180] [cursor=pointer]:
+                - /url: /child-development.html
+            - listitem [ref=e181]:
+              - link "Assessments" [ref=e182] [cursor=pointer]:
+                - /url: /assessments.html
+            - listitem [ref=e183]:
+              - link "Conditions" [ref=e184] [cursor=pointer]:
+                - /url: /conditions.html
+      - generic [ref=e185]:
+        - heading "Visit or call" [level=2] [ref=e186]
+        - paragraph [ref=e187]: Mind Grace Neuropsychiatric ClinicJ123, Gamma II, Greater Noida, 201310
+        - paragraph [ref=e188]:
+          - link "+91 96678 63295" [ref=e189] [cursor=pointer]:
+            - /url: tel:+919667863295
+          - link "contact@mindgracencr.in" [ref=e190] [cursor=pointer]:
+            - /url: mailto:contact@mindgracencr.in
+    - generic [ref=e191]:
+      - paragraph [ref=e192]: © 2026 Mind Grace Neuropsychiatric Clinic. Educational information only.
+      - generic [ref=e193]:
+        - link "Privacy" [ref=e194] [cursor=pointer]:
+          - /url: /privacy.html
+        - link "Terms" [ref=e195] [cursor=pointer]:
+          - /url: /terms.html
+        - link "Disclaimer" [ref=e196] [cursor=pointer]:
+          - /url: /disclaimer.html
+        - link "Consent" [ref=e197] [cursor=pointer]:
+          - /url: /consent.html

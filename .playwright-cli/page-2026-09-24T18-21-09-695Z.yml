@@ -1,0 +1,326 @@
+- generic [active] [ref=f1e1]:
+  - note "Not an emergency service." [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - generic [ref=f1e4]: Not an emergency service.
+      - generic [ref=f1e5]:
+        - text: Immediate danger? Call
+        - link "112" [ref=f1e6] [cursor=pointer]:
+          - /url: tel:112
+        - text: .
+      - link "Emergency resources" [ref=f1e7] [cursor=pointer]:
+        - /url: /emergency.html
+  - link "Skip to main content" [ref=f1e8] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e9]:
+    - generic [ref=f1e10]:
+      - link "Mind Grace Neuropsychiatric Clinic Mind Grace Neuropsychiatric Clinic | Where You Come First" [ref=f1e11] [cursor=pointer]:
+        - /url: /index.html
+        - img "Mind Grace Neuropsychiatric Clinic" [ref=f1e12]
+        - generic [ref=f1e13]:
+          - generic [ref=f1e14]: Mind Grace
+          - generic [ref=f1e15]: Neuropsychiatric Clinic | Where You Come First
+      - generic [ref=f1e16]:
+        - button "AaAccessibility" [ref=f1e17] [cursor=pointer]
+        - button "Use dark theme" [ref=f1e18] [cursor=pointer]:
+          - generic [ref=f1e19]: Dark theme
+        - button "Open navigation menu" [ref=f1e20] [cursor=pointer]
+  - link "Skip to main content" [ref=f1e21] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=f1e22]:
+    - navigation "Breadcrumb" [ref=f1e23]:
+      - list [ref=f1e24]:
+        - listitem [ref=f1e25]:
+          - link "Home" [ref=f1e26] [cursor=pointer]:
+            - /url: /index.html
+        - listitem [ref=f1e27]:
+          - generic [ref=f1e29]: You do not need to know the exact problem before you begin
+    - region [ref=f1e30]:
+      - generic [ref=f1e32]:
+        - generic [ref=f1e33]: Care options in Greater Noida
+        - heading "You do not need to know the exact problem before you begin" [level=1] [ref=f1e34]
+        - generic [ref=f1e35]:
+          - strong [ref=f1e36]: "Direct answer:"
+          - text: Mind Grace Neuropsychiatric Clinic in Greater Noida provides adult psychiatric consultations, child development and ADHD or autism guidance, counselling for individuals, couples, and families, and structured assessments. You do not need a diagnosis to begin — the first visit clarifies the concern and the next step.
+        - paragraph [ref=f1e37]: Most people start because something feels harder than it should, not because they already have a diagnosis. These service areas are here to make the next step clearer in Greater Noida.
+        - generic [ref=f1e38]:
+          - link "Book Consultation" [ref=f1e39] [cursor=pointer]:
+            - /url: /book.html
+          - link "How It Works" [ref=f1e40] [cursor=pointer]:
+            - /url: /process.html
+    - region [ref=f1e41]:
+      - generic [ref=f1e42]:
+        - heading "Service comparison at a glance" [level=2] [ref=f1e43]
+        - paragraph [ref=f1e44]:
+          - text: The table below summarizes what each Mind Grace pathway involves, typical session length, and where to read more. Current fees for every line are listed on the
+          - link "fees page" [ref=f1e45] [cursor=pointer]:
+            - /url: /fees.html
+          - text: .
+      - region "Mind Grace service comparison table" [ref=f1e46]:
+        - table [ref=f1e47]:
+          - caption [ref=f1e48]: Mind Grace Neuropsychiatric Clinic service pathways compared (Greater Noida)
+          - rowgroup [ref=f1e49]:
+            - row [ref=f1e50]:
+              - columnheader "Pathway" [ref=f1e51]
+              - columnheader "Who it is for" [ref=f1e52]
+              - columnheader "Typical format" [ref=f1e53]
+              - columnheader "More information" [ref=f1e54]
+          - rowgroup [ref=f1e55]:
+            - row [ref=f1e56]:
+              - rowheader "Adult psychiatry consultation" [ref=f1e57]
+              - cell "Anxiety, depression, ADHD, sleep, and mood concerns" [ref=f1e58]
+              - cell "About 45 minutes initial, 30-minute follow-ups" [ref=f1e59]
+              - cell [ref=f1e60]:
+                - link "Psychiatry consultations" [ref=f1e61] [cursor=pointer]:
+                  - /url: /psychiatry.html
+            - row [ref=f1e62]:
+              - rowheader "Child development support" [ref=f1e63]
+              - cell "Children and adolescents with learning, attention, or communication concerns" [ref=f1e64]
+              - cell "Family-inclusive assessment and guidance sessions" [ref=f1e65]
+              - cell [ref=f1e66]:
+                - link "Child development" [ref=f1e67] [cursor=pointer]:
+                  - /url: /child-development.html
+            - row [ref=f1e68]:
+              - rowheader "Counselling and psychotherapy" [ref=f1e69]
+              - cell "Individuals, couples, families, and young people" [ref=f1e70]
+              - cell "Regular one-to-one or joint sessions" [ref=f1e71]
+              - cell [ref=f1e72]:
+                - link "Therapy" [ref=f1e73] [cursor=pointer]:
+                  - /url: /therapy.html
+                - text: and
+                - link "counselling" [ref=f1e74] [cursor=pointer]:
+                  - /url: /psychology-counselling.html
+            - row [ref=f1e75]:
+              - rowheader "Structured assessments" [ref=f1e76]
+              - cell "ADHD, autism, learning, and psychological evaluation questions" [ref=f1e77]
+              - cell "Multi-session, tool-based, written report" [ref=f1e78]
+              - cell [ref=f1e79]:
+                - link "Assessments" [ref=f1e80] [cursor=pointer]:
+                  - /url: /assessments.html
+                - text: and
+                - link "ADHD and autism" [ref=f1e81] [cursor=pointer]:
+                  - /url: /adhd-autism-assessment.html
+    - region [ref=f1e82]:
+      - generic [ref=f1e83]:
+        - text: Mind Grace Neuropsychiatric Clinic
+        - heading "Adult Psychiatry Services" [level=2] [ref=f1e84]
+        - paragraph [ref=f1e85]: Consultations for anxiety, depression, ADHD, sleep concerns, mood changes, and related mental health needs.
+      - generic [ref=f1e86]:
+        - article [ref=f1e87]:
+          - heading "Psychiatric Consultation" [level=3] [ref=f1e89]
+          - paragraph [ref=f1e90]: You might start here if you are not fully sure what is going on but want a structured first conversation. Often useful for anxiety, mood changes, sleep concerns, attention problems, or overlapping symptoms.
+          - generic [ref=f1e91]:
+            - link "Book Consultation" [ref=f1e92] [cursor=pointer]:
+              - /url: /book.html
+            - link "See what to expect" [ref=f1e93] [cursor=pointer]:
+              - /url: /process.html
+        - article [ref=f1e94]:
+          - heading "Medication Review" [level=3] [ref=f1e96]
+          - paragraph [ref=f1e97]: Useful if you are already on medication, adjusting to treatment, or trying to understand whether the current plan still fits. Follow-up visits focus on response, side effects, daily functioning, and practical next steps.
+          - link "Book Follow-up" [ref=f1e99] [cursor=pointer]:
+            - /url: /book.html
+        - article [ref=f1e100]:
+          - heading "Anxiety and Panic Care" [level=3] [ref=f1e102]
+          - paragraph [ref=f1e103]: You might relate to this if there is constant worry, panic, overthinking, physical tension, or avoidance. Support may include explanation, coping strategy planning, therapy guidance, and medication when appropriate.
+          - generic [ref=f1e104]:
+            - link "Get Help" [ref=f1e105] [cursor=pointer]:
+              - /url: /book.html
+            - link "See Symptoms" [ref=f1e106] [cursor=pointer]:
+              - /url: /conditions.html#anxiety
+        - article [ref=f1e107]:
+          - heading "Mood Support" [level=3] [ref=f1e109]
+          - paragraph [ref=f1e110]: You might start here if there is loss of interest, heaviness, irritability, exhaustion, or difficulty functioning. The first step is understanding the pattern and daily impact before deciding what kind of treatment fits best.
+          - generic [ref=f1e111]:
+            - link "Get Help" [ref=f1e112] [cursor=pointer]:
+              - /url: /book.html
+            - link "See Symptoms" [ref=f1e113] [cursor=pointer]:
+              - /url: /conditions.html#depression
+            - link "Bipolar Resources" [ref=f1e114] [cursor=pointer]:
+              - /url: /bipolar-mood-disorders.html
+        - article [ref=f1e115]:
+          - heading "Psychosis & Schizophrenia Care" [level=3] [ref=f1e117]
+          - paragraph [ref=f1e118]: Specialized support for unusual perceptions, belief changes, or thought difficulties. Early intervention and consistent care can significantly improve outcomes.
+          - generic [ref=f1e119]:
+            - link "Book Consultation" [ref=f1e120] [cursor=pointer]:
+              - /url: /book.html
+            - link "Learn More" [ref=f1e121] [cursor=pointer]:
+              - /url: /psychosis-schizophrenia.html
+        - article [ref=f1e122]:
+          - heading "Trauma & Grief Support" [level=3] [ref=f1e124]
+          - paragraph [ref=f1e125]: Compassionate care for traumatic experiences, loss, and bereavement. Evidence-based therapies help process difficult memories and rebuild safety.
+          - generic [ref=f1e126]:
+            - link "Get Support" [ref=f1e127] [cursor=pointer]:
+              - /url: /book.html
+            - link "Resources" [ref=f1e128] [cursor=pointer]:
+              - /url: /trauma-grief-support.html
+        - article [ref=f1e129]:
+          - heading "Addiction & Substance Use" [level=3] [ref=f1e131]
+          - paragraph [ref=f1e132]: Non-judgmental support for alcohol, drug, or behavioral addictions. Treatment includes assessment, harm reduction, and recovery planning.
+          - generic [ref=f1e133]:
+            - link "Confidential Help" [ref=f1e134] [cursor=pointer]:
+              - /url: /book.html
+            - link "Learn More" [ref=f1e135] [cursor=pointer]:
+              - /url: /addiction-substance-use.html
+        - article [ref=f1e136]:
+          - heading "Sleep & Eating Disorders" [level=3] [ref=f1e138]
+          - paragraph [ref=f1e139]: Support for insomnia, irregular sleep patterns, and eating concerns. Integrated approaches address both physical and psychological factors.
+          - generic [ref=f1e140]:
+            - link "Book Assessment" [ref=f1e141] [cursor=pointer]:
+              - /url: /book.html
+            - link "View Guide" [ref=f1e142] [cursor=pointer]:
+              - /url: /sleep-eating-disorders.html
+        - article [ref=f1e143]:
+          - heading "Adult ADHD Assessment" [level=3] [ref=f1e145]
+          - paragraph [ref=f1e146]: You might relate to this if concentration, organisation, task-starting, forgetfulness, or overwhelm have been long-standing problems. Assessment can include pattern review, practical support, and discussion of treatment options.
+          - generic [ref=f1e147]:
+            - link "Book Assessment" [ref=f1e148] [cursor=pointer]:
+              - /url: /book.html
+            - link "Read Articles" [ref=f1e149] [cursor=pointer]:
+              - /url: /blog/index.html
+    - region [ref=f1e150]:
+      - generic [ref=f1e151]:
+        - text: Aasha Early Intervention
+        - heading "Child Development & Parent Support" [level=2] [ref=f1e152]
+        - paragraph [ref=f1e153]: Child-development assessment, parent guidance, and referrals or support for communication, learning, and daily participation concerns.
+      - generic [ref=f1e154]:
+        - article [ref=f1e155]:
+          - heading "Speech and Language Support" [level=3] [ref=f1e157]
+          - paragraph [ref=f1e158]: Useful when talking seems delayed, unclear, inconsistent, or harder than expected for age. Early support is often most helpful when communication is affecting learning, interaction, or confidence.
+          - link "Book Child Consultation" [ref=f1e160] [cursor=pointer]:
+            - /url: /book.html
+        - article [ref=f1e161]:
+          - heading "Occupational Therapy" [level=3] [ref=f1e163]
+          - paragraph [ref=f1e164]: Useful for sensory regulation, coordination, attention, self-help tasks, and daily participation concerns. Parents often notice these concerns in routines, play, school transitions, or behaviour.
+          - link "Book Child Consultation" [ref=f1e166] [cursor=pointer]:
+            - /url: /book.html
+        - article [ref=f1e167]:
+          - heading "Parent Guidance" [level=3] [ref=f1e169]
+          - paragraph [ref=f1e170]: Useful when families need practical ways to understand behaviour, routines, school demands, or communication patterns. This often works best when parents, caregivers, and therapists are aligned around one clear plan.
+          - generic [ref=f1e171]:
+            - link "Book Parent Session" [ref=f1e172] [cursor=pointer]:
+              - /url: /book.html
+            - link "Read Articles" [ref=f1e173] [cursor=pointer]:
+              - /url: /blog/index.html
+    - region [ref=f1e174]:
+      - generic [ref=f1e175]:
+        - heading "Explore care by concern" [level=2] [ref=f1e176]
+        - paragraph [ref=f1e177]: Use these focused guides to understand common pathways before you contact the clinic.
+        - generic [ref=f1e178]:
+          - link "Psychiatry" [ref=f1e179] [cursor=pointer]:
+            - /url: /psychiatry.html
+          - link "Psychiatrist in Noida" [ref=f1e180] [cursor=pointer]:
+            - /url: /psychiatrist-in-noida.html
+          - link "Psychiatrist in Greater Noida" [ref=f1e181] [cursor=pointer]:
+            - /url: /psychiatrist-greater-noida.html
+          - link "Psychology and counselling" [ref=f1e182] [cursor=pointer]:
+            - /url: /psychology-counselling.html
+          - link "Therapy" [ref=f1e183] [cursor=pointer]:
+            - /url: /therapy.html
+          - link "Assessments" [ref=f1e184] [cursor=pointer]:
+            - /url: /assessments.html
+          - link "Teleconsultation" [ref=f1e185] [cursor=pointer]:
+            - /url: /teleconsultation.html
+          - link "Specialized Consultations" [ref=f1e186] [cursor=pointer]:
+            - /url: /specialized-consultations.html
+          - link "About Mind Grace Clinic" [ref=f1e187] [cursor=pointer]:
+            - /url: /mind-grace.html
+          - link "Psychology Internship" [ref=f1e188] [cursor=pointer]:
+            - /url: /blog/iilm-psychology-internship.html
+    - region [ref=f1e189]:
+      - generic [ref=f1e190]:
+        - heading "Not sure which service fits?" [level=2] [ref=f1e191]
+        - paragraph [ref=f1e192]: If several concerns overlap, a first consultation can help clarify what to explore next. You can also contact the clinic with a routine question before booking.
+        - generic [ref=f1e193]:
+          - link "Start with Consultation" [ref=f1e194] [cursor=pointer]:
+            - /url: /book.html
+          - link "Read FAQ First" [ref=f1e195] [cursor=pointer]:
+            - /url: /faq.html
+    - region [ref=f1e196]:
+      - heading "Support matched to the concern you bring" [level=2] [ref=f1e197]
+      - paragraph [ref=f1e198]: You do not need a perfect label before you reach out. Start with the change affecting sleep, school, work, relationships, or family life, then use an assessment and conversation to decide the next step.
+      - generic [ref=f1e199]:
+        - link "See conditions we support ↗" [ref=f1e200] [cursor=pointer]:
+          - /url: /conditions.html
+        - link "Meet the care team ↗" [ref=f1e201] [cursor=pointer]:
+          - /url: /doctors.html
+        - link "Understand the first visit ↗" [ref=f1e202] [cursor=pointer]:
+          - /url: /process.html
+        - link "Book an appointment ↗" [ref=f1e203] [cursor=pointer]:
+          - /url: /book.html
+  - contentinfo [ref=f1e204]:
+    - generic [ref=f1e205]:
+      - generic [ref=f1e206]:
+        - paragraph [ref=f1e207]: Where You Come First
+        - paragraph [ref=f1e208]: Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.
+        - link "Call +91 96678 63295" [ref=f1e209] [cursor=pointer]:
+          - /url: tel:+919667863295
+      - navigation "Footer navigation" [ref=f1e210]:
+        - generic [ref=f1e211]:
+          - heading "Patient care" [level=2] [ref=f1e212]
+          - list [ref=f1e213]:
+            - listitem [ref=f1e214]:
+              - link "Book an appointment" [ref=f1e215] [cursor=pointer]:
+                - /url: /book.html
+            - listitem [ref=f1e216]:
+              - link "Our services" [ref=f1e217] [cursor=pointer]:
+                - /url: /services.html
+            - listitem [ref=f1e218]:
+              - link "What to expect" [ref=f1e219] [cursor=pointer]:
+                - /url: /process.html
+            - listitem [ref=f1e220]:
+              - link "Find us" [ref=f1e221] [cursor=pointer]:
+                - /url: /location.html
+        - generic [ref=f1e222]:
+          - heading "Help and resources" [level=2] [ref=f1e223]
+          - list [ref=f1e224]:
+            - listitem [ref=f1e225]:
+              - link "Frequently asked questions" [ref=f1e226] [cursor=pointer]:
+                - /url: /faq.html#common-questions
+            - listitem [ref=f1e227]:
+              - link "Self-help tools" [ref=f1e228] [cursor=pointer]:
+                - /url: /resources.html#tools
+            - listitem [ref=f1e229]:
+              - link "Clinic gallery" [ref=f1e230] [cursor=pointer]:
+                - /url: /gallery.html
+            - listitem [ref=f1e231]:
+              - link "Emergency help" [ref=f1e232] [cursor=pointer]:
+                - /url: /emergency.html
+            - listitem [ref=f1e233]:
+              - link "Contact" [ref=f1e234] [cursor=pointer]:
+                - /url: /contact.html
+        - generic [ref=f1e235]:
+          - heading "Care guides" [level=2] [ref=f1e236]
+          - list [ref=f1e237]:
+            - listitem [ref=f1e238]:
+              - link "Psychiatry" [ref=f1e239] [cursor=pointer]:
+                - /url: /psychiatry.html
+            - listitem [ref=f1e240]:
+              - link "Psychology and counselling" [ref=f1e241] [cursor=pointer]:
+                - /url: /psychology-counselling.html
+            - listitem [ref=f1e242]:
+              - link "Child development" [ref=f1e243] [cursor=pointer]:
+                - /url: /child-development.html
+            - listitem [ref=f1e244]:
+              - link "Assessments" [ref=f1e245] [cursor=pointer]:
+                - /url: /assessments.html
+            - listitem [ref=f1e246]:
+              - link "Conditions" [ref=f1e247] [cursor=pointer]:
+                - /url: /conditions.html
+      - generic [ref=f1e248]:
+        - heading "Visit or call" [level=2] [ref=f1e249]
+        - paragraph [ref=f1e250]: Mind Grace Neuropsychiatric ClinicJ123, Gamma II, Greater Noida, 201310
+        - paragraph [ref=f1e251]:
+          - link "+91 96678 63295" [ref=f1e252] [cursor=pointer]:
+            - /url: tel:+919667863295
+          - link "contact@mindgracencr.in" [ref=f1e253] [cursor=pointer]:
+            - /url: mailto:contact@mindgracencr.in
+    - generic [ref=f1e254]:
+      - paragraph [ref=f1e255]: © 2026 Mind Grace Neuropsychiatric Clinic. Educational information only.
+      - generic [ref=f1e256]:
+        - link "Privacy" [ref=f1e257] [cursor=pointer]:
+          - /url: /privacy.html
+        - link "Terms" [ref=f1e258] [cursor=pointer]:
+          - /url: /terms.html
+        - link "Disclaimer" [ref=f1e259] [cursor=pointer]:
+          - /url: /disclaimer.html
+        - link "Consent" [ref=f1e260] [cursor=pointer]:
+          - /url: /consent.html

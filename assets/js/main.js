@@ -251,6 +251,7 @@ function initSkipLink() {
 
 // Burger Menu with sleek dropdown - visible on ALL screens
 function initBurgerMenu() {
+  if (document.body.dataset.chromeNormalized === 'true') return;
   const burgerBtn = document.getElementById('burgerMenuBtn');
   const navDropdown = document.getElementById('navDropdown');
 

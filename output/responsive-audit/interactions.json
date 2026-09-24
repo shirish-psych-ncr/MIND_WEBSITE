@@ -1,0 +1,8 @@
+[
+  "index.html: menu focus, branch, Escape, resize, accessibility options",
+  "book.html: menu focus, branch, Escape, resize, accessibility options",
+  "blog/index.html: menu focus, branch, Escape, resize, accessibility options",
+  "tools/guided-breathing.html: menu focus, branch, Escape, resize, accessibility options",
+  "Theme preference persists and overrides system theme; light opts out of automatic darkening",
+  "Navigation and theme initialize with storage blocked"
+]

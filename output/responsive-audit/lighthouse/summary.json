@@ -1,0 +1,685 @@
+[
+  {
+    "route": "index.html",
+    "mode": "mobile",
+    "scores": {
+      "performance": 68,
+      "accessibility": 99,
+      "best-practices": 96,
+      "seo": 100
+    },
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "value": "2.1 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "value": "3.2 s"
+      },
+      {
+        "id": "speed-index",
+        "value": "2.1 s"
+      },
+      {
+        "id": "total-blocking-time",
+        "value": "1,150 ms"
+      },
+      {
+        "id": "max-potential-fid",
+        "value": "360 ms"
+      },
+      {
+        "id": "interactive",
+        "value": "10.2 s"
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "value": "5.5 s"
+      },
+      {
+        "id": "bootup-time",
+        "value": "2.0 s"
+      },
+      {
+        "id": "third-party-summary",
+        "value": "Third-party code blocked the main thread for 720 ms"
+      },
+      {
+        "id": "largest-contentful-paint-element",
+        "value": "3,180 ms"
+      },
+      {
+        "id": "heading-order"
+      },
+      {
+        "id": "uses-long-cache-ttl",
+        "value": "20 resources found"
+      },
+      {
+        "id": "render-blocking-resources",
+        "value": "Est savings of 410 ms"
+      },
+      {
+        "id": "unused-css-rules",
+        "value": "Est savings of 44 KiB"
+      },
+      {
+        "id": "unused-javascript",
+        "value": "Est savings of 307 KiB"
+      },
+      {
+        "id": "uses-text-compression",
+        "value": "Est savings of 677 KiB"
+      },
+      {
+        "id": "legacy-javascript",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "charset"
+      },
+      {
+        "id": "cache-insight",
+        "value": "Est savings of 948 KiB"
+      },
+      {
+        "id": "document-latency-insight",
+        "value": "Est savings of 21 KiB"
+      },
+      {
+        "id": "forced-reflow-insight"
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight"
+      },
+      {
+        "id": "render-blocking-insight",
+        "value": "Est savings of 1,310 ms"
+      }
+    ]
+  },
+  {
+    "route": "index.html",
+    "mode": "desktop",
+    "scores": {
+      "performance": 76,
+      "accessibility": 92,
+      "best-practices": 96,
+      "seo": 100
+    },
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "value": "0.8 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "value": "1.0 s"
+      },
+      {
+        "id": "speed-index",
+        "value": "0.8 s"
+      },
+      {
+        "id": "max-potential-fid",
+        "value": "70 ms"
+      },
+      {
+        "id": "cumulative-layout-shift",
+        "value": "0.572"
+      },
+      {
+        "id": "interactive",
+        "value": "1.6 s"
+      },
+      {
+        "id": "layout-shifts",
+        "value": "3 layout shifts found"
+      },
+      {
+        "id": "color-contrast"
+      },
+      {
+        "id": "heading-order"
+      },
+      {
+        "id": "target-size"
+      },
+      {
+        "id": "uses-long-cache-ttl",
+        "value": "20 resources found"
+      },
+      {
+        "id": "render-blocking-resources",
+        "value": "Est savings of 310 ms"
+      },
+      {
+        "id": "unused-css-rules",
+        "value": "Est savings of 43 KiB"
+      },
+      {
+        "id": "unused-javascript",
+        "value": "Est savings of 346 KiB"
+      },
+      {
+        "id": "uses-text-compression",
+        "value": "Est savings of 677 KiB"
+      },
+      {
+        "id": "uses-responsive-images",
+        "value": "Est savings of 17 KiB"
+      },
+      {
+        "id": "legacy-javascript",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "charset"
+      },
+      {
+        "id": "cache-insight",
+        "value": "Est savings of 920 KiB"
+      },
+      {
+        "id": "cls-culprits-insight"
+      },
+      {
+        "id": "document-latency-insight",
+        "value": "Est savings of 21 KiB"
+      },
+      {
+        "id": "forced-reflow-insight"
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight"
+      },
+      {
+        "id": "render-blocking-insight",
+        "value": "Est savings of 460 ms"
+      }
+    ]
+  },
+  {
+    "route": "services.html",
+    "mode": "mobile",
+    "scores": {
+      "performance": 45,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 92
+    },
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "value": "2.9 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "value": "3.6 s"
+      },
+      {
+        "id": "speed-index",
+        "value": "5.0 s"
+      },
+      {
+        "id": "total-blocking-time",
+        "value": "7,540 ms"
+      },
+      {
+        "id": "max-potential-fid",
+        "value": "1,820 ms"
+      },
+      {
+        "id": "cumulative-layout-shift",
+        "value": "0.158"
+      },
+      {
+        "id": "interactive",
+        "value": "11.8 s"
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "value": "16.9 s"
+      },
+      {
+        "id": "bootup-time",
+        "value": "3.4 s"
+      },
+      {
+        "id": "third-party-summary",
+        "value": "Third-party code blocked the main thread for 730 ms"
+      },
+      {
+        "id": "largest-contentful-paint-element",
+        "value": "3,550 ms"
+      },
+      {
+        "id": "layout-shifts",
+        "value": "2 layout shifts found"
+      },
+      {
+        "id": "uses-long-cache-ttl",
+        "value": "27 resources found"
+      },
+      {
+        "id": "render-blocking-resources",
+        "value": "Est savings of 470 ms"
+      },
+      {
+        "id": "unused-css-rules",
+        "value": "Est savings of 68 KiB"
+      },
+      {
+        "id": "unused-javascript",
+        "value": "Est savings of 234 KiB"
+      },
+      {
+        "id": "uses-text-compression",
+        "value": "Est savings of 726 KiB"
+      },
+      {
+        "id": "legacy-javascript",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "charset"
+      },
+      {
+        "id": "link-text",
+        "value": "2 links found"
+      },
+      {
+        "id": "cache-insight",
+        "value": "Est savings of 961 KiB"
+      },
+      {
+        "id": "cls-culprits-insight"
+      },
+      {
+        "id": "document-latency-insight",
+        "value": "Est savings of 23 KiB"
+      },
+      {
+        "id": "forced-reflow-insight"
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight"
+      },
+      {
+        "id": "render-blocking-insight",
+        "value": "Est savings of 1,430 ms"
+      }
+    ]
+  },
+  {
+    "route": "book.html",
+    "mode": "mobile",
+    "scores": {
+      "performance": 36,
+      "accessibility": 98,
+      "best-practices": 96,
+      "seo": 100
+    },
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "value": "2.6 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "value": "5.5 s"
+      },
+      {
+        "id": "speed-index",
+        "value": "4.6 s"
+      },
+      {
+        "id": "total-blocking-time",
+        "value": "6,680 ms"
+      },
+      {
+        "id": "max-potential-fid",
+        "value": "1,320 ms"
+      },
+      {
+        "id": "cumulative-layout-shift",
+        "value": "0.157"
+      },
+      {
+        "id": "interactive",
+        "value": "10.8 s"
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "value": "15.1 s"
+      },
+      {
+        "id": "bootup-time",
+        "value": "4.3 s"
+      },
+      {
+        "id": "third-party-summary",
+        "value": "Third-party code blocked the main thread for 1,750 ms"
+      },
+      {
+        "id": "largest-contentful-paint-element",
+        "value": "5,540 ms"
+      },
+      {
+        "id": "layout-shifts",
+        "value": "1 layout shift found"
+      },
+      {
+        "id": "heading-order"
+      },
+      {
+        "id": "label-content-name-mismatch"
+      },
+      {
+        "id": "uses-long-cache-ttl",
+        "value": "31 resources found"
+      },
+      {
+        "id": "render-blocking-resources",
+        "value": "Est savings of 410 ms"
+      },
+      {
+        "id": "unused-css-rules",
+        "value": "Est savings of 69 KiB"
+      },
+      {
+        "id": "unused-javascript",
+        "value": "Est savings of 230 KiB"
+      },
+      {
+        "id": "uses-text-compression",
+        "value": "Est savings of 719 KiB"
+      },
+      {
+        "id": "uses-responsive-images",
+        "value": "Est savings of 99 KiB"
+      },
+      {
+        "id": "legacy-javascript",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "charset"
+      },
+      {
+        "id": "cache-insight",
+        "value": "Est savings of 1,080 KiB"
+      },
+      {
+        "id": "cls-culprits-insight"
+      },
+      {
+        "id": "document-latency-insight",
+        "value": "Est savings of 16 KiB"
+      },
+      {
+        "id": "forced-reflow-insight"
+      },
+      {
+        "id": "image-delivery-insight",
+        "value": "Est savings of 109 KiB"
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight"
+      },
+      {
+        "id": "render-blocking-insight",
+        "value": "Est savings of 1,480 ms"
+      }
+    ]
+  },
+  {
+    "route": "blog/index.html",
+    "mode": "mobile",
+    "scores": {
+      "performance": 66,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 100
+    },
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "value": "2.2 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "value": "2.5 s"
+      },
+      {
+        "id": "speed-index",
+        "value": "2.4 s"
+      },
+      {
+        "id": "total-blocking-time",
+        "value": "2,480 ms"
+      },
+      {
+        "id": "max-potential-fid",
+        "value": "900 ms"
+      },
+      {
+        "id": "interactive",
+        "value": "10.2 s"
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "value": "7.8 s"
+      },
+      {
+        "id": "bootup-time",
+        "value": "3.1 s"
+      },
+      {
+        "id": "third-party-summary",
+        "value": "Third-party code blocked the main thread for 1,270 ms"
+      },
+      {
+        "id": "largest-contentful-paint-element",
+        "value": "2,530 ms"
+      },
+      {
+        "id": "unsized-images"
+      },
+      {
+        "id": "uses-long-cache-ttl",
+        "value": "17 resources found"
+      },
+      {
+        "id": "render-blocking-resources",
+        "value": "Est savings of 790 ms"
+      },
+      {
+        "id": "unused-css-rules",
+        "value": "Est savings of 47 KiB"
+      },
+      {
+        "id": "unused-javascript",
+        "value": "Est savings of 241 KiB"
+      },
+      {
+        "id": "modern-image-formats",
+        "value": "Est savings of 361 KiB"
+      },
+      {
+        "id": "uses-text-compression",
+        "value": "Est savings of 670 KiB"
+      },
+      {
+        "id": "uses-responsive-images",
+        "value": "Est savings of 354 KiB"
+      },
+      {
+        "id": "legacy-javascript",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "charset"
+      },
+      {
+        "id": "cache-insight",
+        "value": "Est savings of 893 KiB"
+      },
+      {
+        "id": "document-latency-insight",
+        "value": "Est savings of 13 KiB"
+      },
+      {
+        "id": "forced-reflow-insight"
+      },
+      {
+        "id": "image-delivery-insight",
+        "value": "Est savings of 402 KiB"
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight"
+      },
+      {
+        "id": "render-blocking-insight",
+        "value": "Est savings of 1,400 ms"
+      }
+    ]
+  },
+  {
+    "route": "tools/guided-breathing.html",
+    "mode": "mobile",
+    "scores": {
+      "performance": 38,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 92
+    },
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "value": "3.2 s"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "value": "3.6 s"
+      },
+      {
+        "id": "speed-index",
+        "value": "3.9 s"
+      },
+      {
+        "id": "total-blocking-time",
+        "value": "5,540 ms"
+      },
+      {
+        "id": "max-potential-fid",
+        "value": "630 ms"
+      },
+      {
+        "id": "cumulative-layout-shift",
+        "value": "0.292"
+      },
+      {
+        "id": "interactive",
+        "value": "10.0 s"
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "value": "14.9 s"
+      },
+      {
+        "id": "bootup-time",
+        "value": "3.1 s"
+      },
+      {
+        "id": "third-party-summary",
+        "value": "Third-party code blocked the main thread for 790 ms"
+      },
+      {
+        "id": "largest-contentful-paint-element",
+        "value": "3,640 ms"
+      },
+      {
+        "id": "layout-shifts",
+        "value": "2 layout shifts found"
+      },
+      {
+        "id": "uses-long-cache-ttl",
+        "value": "30 resources found"
+      },
+      {
+        "id": "render-blocking-resources",
+        "value": "Est savings of 1,040 ms"
+      },
+      {
+        "id": "unused-css-rules",
+        "value": "Est savings of 73 KiB"
+      },
+      {
+        "id": "unused-javascript",
+        "value": "Est savings of 206 KiB"
+      },
+      {
+        "id": "uses-text-compression",
+        "value": "Est savings of 712 KiB"
+      },
+      {
+        "id": "legacy-javascript",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "charset"
+      },
+      {
+        "id": "link-text",
+        "value": "1 link found"
+      },
+      {
+        "id": "cache-insight",
+        "value": "Est savings of 964 KiB"
+      },
+      {
+        "id": "cls-culprits-insight"
+      },
+      {
+        "id": "document-latency-insight",
+        "value": "Est savings of 10 KiB"
+      },
+      {
+        "id": "forced-reflow-insight"
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "value": "Est savings of 28 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight"
+      },
+      {
+        "id": "render-blocking-insight",
+        "value": "Est savings of 1,950 ms"
+      }
+    ]
+  }
+]

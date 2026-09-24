@@ -230,6 +230,16 @@
     } else {
       host.appendChild(wrap);
     }
+    // Keep the same control reachable when desktop navigation is collapsed.
+    var desktopHost = wrap.parentElement;
+    function placeControl() {
+      var mobileHost = document.querySelector('.mobile-nav-panel-inner');
+      if (mobileHost && window.matchMedia('(max-width: 1100px)').matches) mobileHost.appendChild(wrap);
+      else desktopHost.appendChild(wrap);
+    }
+    placeControl();
+    if (window.matchMedia) window.matchMedia('(max-width: 1100px)').addEventListener('change', placeControl);
+    document.addEventListener('mindgrace:chrome-ready', placeControl);
 
     // Wire events.
     document.getElementById('mg-t-hindi-btn').addEventListener('click', function (e) {
@@ -281,6 +291,9 @@
   var widgetLoading = false;
 
   window.googleTranslateElementInit = function () {
+    if (window.google && google.translate && google.translate.TranslateElement && !document.querySelector('.goog-te-combo')) {
+      new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element');
+    }
     // Widget DOM now exists; poll briefly for the inner <select>.
     var tries = 0;
     (function waitCombo() {
@@ -324,6 +337,7 @@
       s.onerror = function () {
         // Offline / blocked: degrade quietly — buttons remain but no-op warn.
         widgetLoading = false;
+        s.remove();
         console.warn('[MindGrace] Google Translate widget failed to load; language switching disabled.');
       };
       document.head.appendChild(s);
@@ -335,7 +349,9 @@
    * ------------------------------------------------------------------ */
   function boot() {
     buildControl();
-    loadGoogleWidget();
+    // Translation is optional; load its engine only for a saved language or
+    // a language selection. English readers should not pay its startup cost.
+    if (getStoredLang()) loadGoogleWidget();
     refreshUiState(getStoredLang());
   }
 

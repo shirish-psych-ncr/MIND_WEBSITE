@@ -1,0 +1,1099 @@
+[
+  {
+    "route": "404.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "aasha.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "about.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "addiction-substance-use.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "adhd-autism-assessment.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "approach.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "assessments.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "bipolar-mood-disorders.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/adult.html",
+    "theme": "light",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "article[aria-labelledby=\"article-heading-12\"] > p"
+            ],
+            "html": "<p>A practical guide to knowing when symptoms are persistent enough to benefit from psychiatric assessment.</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.16 (foreground color: #85767b, background color: #fffaf9, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "article[aria-labelledby=\"article-heading-12\"] > .button.button-primary"
+            ],
+            "html": "<a class=\"button button-primary\" href=\"http://127.0.0.1:8765/blog/pages/adult/when-to-see-a-psychiatrist.html\">Read this guide</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.29 (foreground color: #e3ccd4, background color: #a35873, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/children.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/iilm-psychology-internship.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/overthinking-vs-anxiety.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/scheduled-worry-time-technique.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/sleep-and-anxiety-cycle.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/stimulus-control-therapy.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/when-to-see-a-psychiatrist.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/early-signs-of-autism.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/school-concerns-and-adhd.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/sensory-overload-at-home.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/speech-delay-red-flags.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "book.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "child-development.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "conditions.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "consent.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "contact.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "depression-anxiety.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "disclaimer.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "doctors.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "dr-anita-sharma.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "emergency.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "faq.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "fees.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "gallery.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "high-functioning-depression/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "high-functioning-depression-guide/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learning-disability-assessment.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "location.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "mind-grace.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "ocd-panic-ptsd.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "offline.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "perceived-burdensomeness/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "privacy.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "process.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychiatrist-greater-noida.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychiatrist-in-noida.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychiatry.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychology-counselling.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychosis-schizophrenia.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "resources.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "services.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "sleep-and-autism-guide-indian-parents/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "sleep-eating-disorders.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "specialized-consultations.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "teleconsultation.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "terms.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "testimonials.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "thank-you.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "therapy.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/butterfly-tapper.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/eye-movement.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/guided-breathing.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/horizon-scan.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/hypnos-fractal.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/leaf-on-stream.html",
+    "theme": "light",
+    "violations": [
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href=\"/\"]"
+            ],
+            "html": "<a href=\"/\">Home</a>",
+            "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 68px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px."
+          },
+          {
+            "target": [
+              ".tool-link-bar > a[href$=\"resources.html\"]"
+            ],
+            "html": "<a href=\"/resources.html\">Resources</a>",
+            "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 97px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "trauma-grief-support.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "404.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "aasha.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "about.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "addiction-substance-use.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "adhd-autism-assessment.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "approach.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "assessments.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "bipolar-mood-disorders.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/adult.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".blog-answer > strong"
+            ],
+            "html": "<strong>In short:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.23 (foreground color: #671b50, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "article[aria-labelledby=\"article-heading-12\"] > .button.button-primary"
+            ],
+            "html": "<a class=\"button button-primary\" href=\"http://127.0.0.1:8765/blog/pages/adult/overthinking-vs-anxiety.html\">Read this guide</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.48 (foreground color: #58414a, background color: #b896a0, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/children.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".blog-answer > strong"
+            ],
+            "html": "<strong>In short:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.23 (foreground color: #671b50, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/iilm-psychology-internship.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/index.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/overthinking-vs-anxiety.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/scheduled-worry-time-technique.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/sleep-and-anxiety-cycle.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/stimulus-control-therapy.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/when-to-see-a-psychiatrist.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/early-signs-of-autism.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/school-concerns-and-adhd.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/sensory-overload-at-home.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/speech-delay-red-flags.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "book.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "child-development.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "conditions.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "consent.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "contact.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "depression-anxiety.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "disclaimer.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "doctors.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "dr-anita-sharma.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "emergency.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "faq.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "fees.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "gallery.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "high-functioning-depression/index.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "p:nth-child(5) > em"
+            ],
+            "html": "<em>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "em > a[href$=\"doctors.html\"]"
+            ],
+            "html": "<a href=\"/doctors.html\">reach out to a mental health professional</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:1-800-662-4357\"]"
+            ],
+            "html": "<a href=\"tel:1-800-662-4357\">1-800-662-HELP (4357)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:1800-599-0019\"]"
+            ],
+            "html": "<a href=\"tel:1800-599-0019\">Kiran Mental Health Helpline (1800-599-0019)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:9152987821\"]"
+            ],
+            "html": "<a href=\"tel:9152987821\">iCall (9152987821)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "high-functioning-depression-guide/index.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "#help-resources > h2"
+            ],
+            "html": "<h2>Help is Available</h2>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #fff8fa, background color: #fffdf8, font size: 19.5pt (26px), font weight: bold). Expected contrast ratio of 3:1"
+          },
+          {
+            "target": [
+              "p:nth-child(2) > strong"
+            ],
+            "html": "<strong>Speak with someone today</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "h3"
+            ],
+            "html": "<h3>Tele MANAS</h3>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #fff8fa, background color: #fffdf8, font size: 15.8pt (21px), font weight: bold). Expected contrast ratio of 3:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(4)"
+            ],
+            "html": "<p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(4) > strong:nth-child(1)"
+            ],
+            "html": "<strong>Languages:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(4) > strong:nth-child(3)"
+            ],
+            "html": "<strong>Hours:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(4) > strong:nth-child(5)"
+            ],
+            "html": "<strong>Call:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:14416\"]"
+            ],
+            "html": "<a href=\"tel:14416\">14416</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:1800-89-14416\"]"
+            ],
+            "html": "<a href=\"tel:1800-89-14416\">1800-89-14416</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[rel=\"noopener\"]"
+            ],
+            "html": "<a href=\"https://telemanas.mohfw.gov.in/\" rel=\"noopener\" target=\"_blank\">Official website</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(6)"
+            ],
+            "html": "<p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(6) > strong"
+            ],
+            "html": "<strong>Need professional support?</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(6) > a[href$=\"doctors.html\"]"
+            ],
+            "html": "<a href=\"/doctors.html\">Meet our team</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(6) > a[href$=\"book.html\"]"
+            ],
+            "html": "<a href=\"/book.html\">Book an appointment</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(6) > a[href$=\"contact.html\"]"
+            ],
+            "html": "<a href=\"/contact.html\">Contact us</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(7) > em"
+            ],
+            "html": "<em>If you are in immediate crisis or having thoughts of self-harm, please call Tele MANAS at 14416 or visit your nearest emergency room immediately.</em>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "index.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learning-disability-assessment.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "location.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-white\\/10.p-4.backdrop-blur:nth-child(1) > .block.mb-1"
+            ],
+            "html": "<strong class=\"block text-accent mb-1\">Address:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.32 (foreground color: #d81b60, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white\\/10.p-4.backdrop-blur:nth-child(2) > .block.mb-1"
+            ],
+            "html": "<strong class=\"block text-accent mb-1\">Parking:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.32 (foreground color: #d81b60, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white\\/10.p-4.backdrop-blur:nth-child(3) > .block.mb-1"
+            ],
+            "html": "<strong class=\"block text-accent mb-1\">Transport:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.32 (foreground color: #d81b60, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "mind-grace.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "ocd-panic-ptsd.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "offline.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "perceived-burdensomeness/index.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "#part-1 > p:nth-child(34)"
+            ],
+            "html": "<p style=\"text-align:center;margin:32px 0;padding:20px;background:#fff5f8;border-radius:8px\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#part-1 > p:nth-child(34) > strong"
+            ],
+            "html": "<strong>Ready to break free from the burden narrative?</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(34) > a[href$=\"book.html\"]"
+            ],
+            "html": "<a href=\"/book.html\" style=\"color:#be185d;text-decoration:underline\">Book an appointment today</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#part-2 > p:nth-child(34)"
+            ],
+            "html": "<p style=\"text-align:center;margin:32px 0;padding:20px;background:#f0fdf4;border-radius:8px\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.24 (foreground color: #f0dce3, background color: #f0fdf4, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#part-2 > p:nth-child(34) > strong"
+            ],
+            "html": "<strong>Struggling with chronic illness or neurodivergent masking?</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.24 (foreground color: #f0dce3, background color: #f0fdf4, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(34) > a[href$=\"assessments.html\"]"
+            ],
+            "html": "<a href=\"/assessments.html\" style=\"color:#16a34a;text-decoration:underline\">Learn more about our assessment services</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #ffb4ca, background color: #f0fdf4, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(36) > em"
+            ],
+            "html": "<em>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.2 (foreground color: #f0dce3, background color: #eff6ff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:1800-599-0019\"]"
+            ],
+            "html": "<a href=\"tel:1800-599-0019\" style=\"color:#2563eb\">Kiran Mental Health Helpline (1800-599-0019)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.52 (foreground color: #ffb4ca, background color: #eff6ff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:9152987821\"]"
+            ],
+            "html": "<a href=\"tel:9152987821\" style=\"color:#2563eb\">iCall (9152987821)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.52 (foreground color: #ffb4ca, background color: #eff6ff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "em > a[href$=\"emergency.html\"]"
+            ],
+            "html": "<a href=\"/emergency.html\" style=\"color:#2563eb\">visit our emergency resources page</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.52 (foreground color: #ffb4ca, background color: #eff6ff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(37)"
+            ],
+            "html": "<p style=\"text-align:center;margin:32px 0;padding:20px;background:#fff5f8;border-radius:8px\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(37) > strong"
+            ],
+            "html": "<strong>Ready to start your journey toward healing?</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(37) > a[href$=\"book.html\"]"
+            ],
+            "html": "<a href=\"/book.html\" style=\"color:#be185d;text-decoration:underline\">Schedule your consultation today</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "privacy.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "process.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".process-step:nth-child(1) > .step-number"
+            ],
+            "html": "<div class=\"step-number\">01</div>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.34 (foreground color: #ffffff, background color: #ffd3df, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".process-step:nth-child(2) > .step-number"
+            ],
+            "html": "<div class=\"step-number\">02</div>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.34 (foreground color: #ffffff, background color: #ffd3df, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".process-step:nth-child(3) > .step-number"
+            ],
+            "html": "<div class=\"step-number\">03</div>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.34 (foreground color: #ffffff, background color: #ffd3df, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".process-step:nth-child(4) > .step-number"
+            ],
+            "html": "<div class=\"step-number\">04</div>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.34 (foreground color: #ffffff, background color: #ffd3df, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".process-step:nth-child(5) > .step-number"
+            ],
+            "html": "<div class=\"step-number\">05</div>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.34 (foreground color: #ffffff, background color: #ffd3df, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "psychiatrist-greater-noida.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "psychiatrist-in-noida.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "psychiatry.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "psychology-counselling.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "psychosis-schizophrenia.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "resources.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "services.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "sleep-and-autism-guide-indian-parents/index.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "sleep-eating-disorders.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "specialized-consultations.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "teleconsultation.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "terms.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "testimonials.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "thank-you.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "therapy.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "tools/butterfly-tapper.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "tools/eye-movement.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "tools/guided-breathing.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "tools/horizon-scan.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "tools/hypnos-fractal.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "tools/leaf-on-stream.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href=\"/\"]"
+            ],
+            "html": "<a href=\"/\">Home</a>",
+            "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 68px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px."
+          },
+          {
+            "target": [
+              ".tool-link-bar > a[href$=\"resources.html\"]"
+            ],
+            "html": "<a href=\"/resources.html\">Resources</a>",
+            "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 97px by 14px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "trauma-grief-support.html",
+    "theme": "dark",
+    "violations": []
+  }
+]

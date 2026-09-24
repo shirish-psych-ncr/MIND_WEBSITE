@@ -241,7 +241,7 @@ body .meta-btn:hover, body .meta-btn:active { transform: none !important; transi
   --mg-border-strong: #b88e9c;
   --mg-focus: #6f0d31;
 }
-html[data-theme="light"] { color-scheme: light; }
+html[data-theme="light"] { color-scheme: only light; }
 html[data-theme="dark"] {
   color-scheme: dark;
   --mg-bg: #1d1217;
@@ -1805,4 +1805,169 @@ button.link-reset {
   text-decoration: underline;
   color: inherit;
   font: inherit;
+}
+
+/* Shared viewport and theme contract. Keep native forced-colors available;
+   only light opts out of Chromium's automatic darkening in the light theme. */
+html { scroll-padding-block-start: 6rem; }
+html[data-theme] {
+  --color-primary: var(--mg-link);
+  --color-primary-hover: var(--mg-link-hover);
+  --color-text: var(--mg-ink-strong);
+  --color-text-muted: var(--mg-ink-muted);
+  --color-bg: var(--mg-bg);
+  --color-bg-alt: var(--mg-surface-soft);
+  --color-border: var(--mg-border-strong);
+  --mg-surface: var(--mg-surface-strong);
+  --mg-ink: var(--mg-ink-strong);
+  --mg-muted: var(--mg-ink-muted);
+  --mg-soft: var(--mg-surface-soft);
+  --mg-lava-deep: var(--mg-link);
+}
+body.menu-open { overflow: hidden; }
+body .site-header:focus-within { translate: none; transform: none; }
+body .site-header .theme-toggle, body .site-header .accessibility-toggle {
+  background: var(--mg-surface-strong) !important; color: var(--mg-link) !important; border-color: var(--mg-border-strong) !important;
+}
+body .site-header .logo-text { display: block; }
+body .site-header .logo-link { gap: .5rem; }
+body .site-header .desktop-nav { position: static; width: auto; transform: none; }
+body[data-chrome-normalized="true"] .header-inner { grid-template-columns: minmax(0, 1fr) auto; }
+body .site-header .header-actions { grid-column: 2; grid-row: 1; }
+body .site-header .desktop-nav { grid-column: 1 / -1; grid-row: 2; }
+body[data-chrome-normalized="true"] .desktop-nav ul { justify-content: center; flex-wrap: wrap !important; }
+html[data-theme] body .site-header .desktop-nav .btn { background: var(--mg-link) !important; color: var(--mg-surface-strong) !important; }
+body .emergency-banner:not(.emergency-banner--static) { display: none !important; }
+body .article-related-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+body .article-related-link { min-width: 0; max-width: 100%; }
+body .tool-related-reading { width: min(100% - 2rem, 1120px); margin-inline: auto; }
+body .tool-related-reading .article-related-grid { width: 100%; }
+body .article-related-link { white-space: normal; }
+body .article-related-link span { min-width: 0; }
+body .article-related-link svg { flex: 0 0 1.25rem; }
+body .article-related-link { overflow-wrap: anywhere; }
+body .blog-answer strong { color: #ffd3df !important; }
+html[data-theme="dark"] body .button-primary,
+html[data-theme="dark"] body .button.button-primary { background: #7a1038 !important; color: #fff8fa !important; border-color: #ffd3df !important; }
+html[data-theme="dark"] body .seo-answer strong, html[data-theme="dark"] body .seo-note strong { color: #ffd3df !important; }
+html[data-theme="dark"] body .article-toc a { color: #ffd3df !important; }
+html[data-theme="dark"] body .process-step .step-number { background: #ffd3df !important; color: #32121f !important; }
+html[data-theme="dark"] body .content-pathway, html[data-theme="dark"] body .article-next-step,
+html[data-theme="dark"] body .blog-answer { background: #40232e !important; color: #fff8fa !important; }
+body .blog-answer { background: var(--mg-surface-soft); color: var(--mg-ink-strong); }
+body .seo-answer strong, body .seo-note strong, body .article-toc a { color: var(--mg-link) !important; }
+body .service-tag, body .expertise-tag { color: var(--mg-link) !important; background: var(--mg-surface-soft) !important; border-color: var(--mg-border-strong); }
+body .expertise-tag span { color: inherit; }
+body .button-outline { background: var(--mg-surface-strong) !important; color: var(--mg-link) !important; border-color: var(--mg-link) !important; }
+body .settings-box .label { color: #fff5f8 !important; }
+body .tool-link-bar { display: flex; flex-wrap: wrap; gap: .5rem; }
+body .tool-link-bar a { display: inline-flex; align-items: center; min-height: 44px; padding: .5rem .75rem; }
+body .mobile-nav-panel .mg-t-label-full { display: inline; }
+body .mobile-nav-panel .mg-t-panel { position: static; width: 100%; max-height: 16rem; margin-top: .5rem; }
+body .mobile-nav-panel .mg-translate { display: flex; flex-wrap: wrap; }
+body .mobile-nav-panel .mg-t-panel[hidden] { display: none; }
+html:not([data-theme]) body[data-chrome-normalized="true"] .desktop-nav { display: block !important; }
+html:not([data-theme]) body .header-actions { display: none; }
+body :is(.fade-in-up, .service-card, .feature-card, .condition-card, .testimonial-card, .article-card) { opacity: 1; }
+body .site-header, body .site-footer, body .mobile-nav-panel { font-family: Inter, system-ui, sans-serif; font-size: 1rem; line-height: 1.5; }
+body .site-header li, body .site-footer li, body .mobile-nav-panel li { margin: 0; }
+body .site-footer h2, body .mobile-nav-header h2 { border: 0; padding: 0; }
+body .mobile-nav-panel {
+  inset: max(.75rem, env(safe-area-inset-top)) max(.75rem, calc((100vw - 34rem) / 2)) auto;
+  max-height: calc(100vh - 1.5rem);
+  max-height: calc(100dvh - max(.75rem, env(safe-area-inset-top)) - max(.75rem, env(safe-area-inset-bottom)));
+  overscroll-behavior: contain;
+  background: var(--mg-surface-strong) !important;
+}
+body .accessibility-panel { max-height: calc(100dvh - 6rem); overflow-y: auto; overscroll-behavior: contain; }
+body .skip-link { position: fixed; top: 0; transform: translateY(-150%); z-index: 10000; }
+body .skip-link:focus { transform: translateY(0); }
+body :where(input, select, textarea) { font-size: max(1rem, 16px); }
+body :where(button, summary, .btn) { touch-action: manipulation; }
+body :where(h1, h2, h3, [id]) { scroll-margin-block-start: 6rem; }
+body .journal { margin-block: 1.5rem; background: var(--mg-surface-strong); border-color: var(--mg-border-strong); color: var(--mg-ink-strong); }
+body .journal .blog-answer { background: var(--mg-surface-soft); color: var(--mg-ink-strong); }
+body .journal .blog-answer strong { color: var(--mg-link); }
+body .journal .article-toc, body .journal .article-next-step { background: var(--mg-surface-soft); border-color: var(--mg-border-strong); }
+body.offline-page { display: block; }
+body.offline-page main { width: min(42rem, calc(100% - 2rem)); margin: 2rem auto; }
+html.a11y-larger { font-size: 112.5%; }
+html.a11y-contrast { --mg-bg: #fff; --mg-surface-strong: #fff; --mg-surface-soft: #fff; --mg-ink-strong: #111; --mg-ink-muted: #111; --mg-link: #5b0034; --mg-link-hover: #111; --mg-border-strong: #111; }
+html.a11y-contrast body .site-footer :is(p, li, a, h2, address) { color: #fff !important; }
+@media (max-width: 760px) {
+  body[data-chrome-normalized="true"] .site-footer .footer-container { grid-template-columns: minmax(0, 1fr); }
+  body .journal { padding-inline: 1rem; margin-block: 1rem; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  body .site-header { position: relative; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-iteration-count: 1 !important; }
+}
+@media (forced-colors: active) {
+  body .site-header, body .site-footer, body .mobile-nav-panel { background: Canvas !important; color: CanvasText !important; }
+  body .site-footer :is(p, h2, li, address) { color: CanvasText !important; }
+  body .site-footer a { color: LinkText !important; }
+  body .mobile-nav-overlay { background: Canvas; opacity: .8; }
+}
+
+/* Phone-first first-screen contract: the route purpose, answer, and next action
+   stay together before decorative or secondary content. */
+body[data-chrome-normalized="true"] main > .seo-answer:first-child,
+body[data-chrome-normalized="true"] main > .blog-answer:first-child {
+  width: min(100% - 2rem, 72rem);
+  margin: clamp(.75rem, 2vw, 1.5rem) auto 0;
+}
+body[data-chrome-normalized="true"] main > .hero,
+body[data-chrome-normalized="true"] main > .seo-hero,
+body[data-chrome-normalized="true"] main > .journal-hero,
+body[data-chrome-normalized="true"] main > article > .article-hero {
+  content-visibility: visible;
+  contain: layout paint;
+}
+body[data-chrome-normalized="true"] .hero h1,
+body[data-chrome-normalized="true"] .seo-hero h1,
+body[data-chrome-normalized="true"] .journal-hero h1,
+body[data-chrome-normalized="true"] .article-hero h1 {
+  text-wrap: balance;
+  max-inline-size: 18ch;
+}
+body[data-chrome-normalized="true"] .hero-subtitle,
+body[data-chrome-normalized="true"] .hero-lead,
+body[data-chrome-normalized="true"] .seo-lead,
+body[data-chrome-normalized="true"] .lead {
+  max-inline-size: 62ch;
+}
+body[data-chrome-normalized="true"] .hero-buttons,
+body[data-chrome-normalized="true"] .hero-actions,
+body[data-chrome-normalized="true"] .seo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+body[data-chrome-normalized="true"] .hero-buttons > *,
+body[data-chrome-normalized="true"] .hero-actions > *,
+body[data-chrome-normalized="true"] .seo-actions > * { min-height: 2.75rem; }
+@media (max-width: 760px) {
+  body[data-chrome-normalized="true"] main > .hero,
+  body[data-chrome-normalized="true"] main > .seo-hero,
+  body[data-chrome-normalized="true"] main > .journal-hero,
+  body[data-chrome-normalized="true"] main > article > .article-hero {
+    min-block-size: auto;
+    padding-block: clamp(1.25rem, 6vw, 2.5rem);
+  }
+  body[data-chrome-normalized="true"] .hero h1,
+  body[data-chrome-normalized="true"] .seo-hero h1,
+  body[data-chrome-normalized="true"] .journal-hero h1,
+  body[data-chrome-normalized="true"] .article-hero h1 {
+    font-size: clamp(2rem, 9vw, 3.25rem);
+    line-height: 1.08;
+  }
+  body[data-chrome-normalized="true"] .hero-media,
+  body[data-chrome-normalized="true"] .hero-visual { order: 2; max-block-size: 16rem; overflow: hidden; }
+  body[data-chrome-normalized="true"] .hero-media img,
+  body[data-chrome-normalized="true"] .hero-visual img { max-block-size: 16rem; object-fit: cover; }
+  body[data-chrome-normalized="true"] .hero-buttons > *,
+  body[data-chrome-normalized="true"] .hero-actions > *,
+  body[data-chrome-normalized="true"] .seo-actions > * { flex: 1 1 12rem; text-align: center; }
 }

@@ -85,6 +85,12 @@
     }
   ];
   const themeKey = "mindgrace-theme";
+  // Privacy settings and embedded browsers may deny storage access.
+  const preferences = {
+    get(key) { try { return localStorage.getItem(key); } catch { return null; } },
+    set(key, value) { try { localStorage.setItem(key, value); } catch {} },
+    remove(key) { try { localStorage.removeItem(key); } catch {} }
+  };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
@@ -119,20 +125,21 @@
   }
 
   function selectedTheme() {
-    const saved = window.localStorage?.getItem(themeKey);
+    const saved = preferences.get(themeKey);
     if (saved === "light" || saved === "dark") return saved;
     return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
 
   function refreshIcons() {
+    if (window.IconInit?.refresh) { window.IconInit.refresh(); return; }
     if (window.lucide?.createIcons) {
       try { window.lucide.createIcons(); } catch (_) { /* icon rendering is non-blocking */ }
     }
-    document.dispatchEvent(new Event("icons:refresh"));
   }
 
   function normalizeSafetyNotice() {
-    $$(".emergency-banner").forEach((banner) => banner.remove());
+    if ($(".emergency-banner--static")) { $$(".crisis-banner, .emergency-banner:not(.emergency-banner--static)").forEach((node) => node.remove()); return; }
+    $$(".emergency-banner, .crisis-banner").forEach((banner) => banner.remove());
     $$(".visually-hidden").filter((element) => /In a crisis\?|24\/7 Crisis Support Available|24\/7 crisis support resources/i.test(element.textContent || "")).forEach((element) => element.remove());
     const notice = document.createElement("aside");
     notice.className = "emergency-banner emergency-banner--static";
@@ -207,8 +214,9 @@
   function setTheme(theme, persist = true) {
     const value = theme === "dark" ? "dark" : "light";
     document.documentElement.dataset.theme = value;
-    document.documentElement.style.colorScheme = value;
-    if (persist) window.localStorage?.setItem(themeKey, value);
+    document.documentElement.style.colorScheme = value === "light" ? "only light" : "dark";
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", value === "dark" ? "#21151b" : "#fffaf9");
+    if (persist) preferences.set(themeKey, value);
     const toggle = $("#theme-toggle");
     if (toggle) {
       const dark = value === "dark";
@@ -252,7 +260,7 @@
       link.dataset[marker] = "true";
       document.head.appendChild(link);
     };
-    appendStylesheet("/assets/css/site-foundation.css?v=quiet17", "mindgraceFinalFoundation");
+    appendStylesheet("/assets/css/min/site-foundation.min.css?v=responsive18", "mindgraceFinalFoundation");
     if (window.location.pathname.replace(/\\/g, "/").includes("/tools/")) {
       appendStylesheet("/assets/css/tool-overrides.css?v=tools5", "mindgraceFinalToolOverrides");
       appendStylesheet("/assets/css/tools-shell.css?v=quiet7", "mindgraceFinalToolShell");
@@ -338,6 +346,7 @@
     const close = $(".close-mobile-menu", mobileNav);
     const branchButtons = $$(".mobile-nav-disclosure, .mobile-nav-tree-parent", mobileNav);
     let lastFocus = null;
+    const backgroundState = new Map();
     const setBranchOpen = (button, open) => {
       const panel = document.getElementById(button.getAttribute("aria-controls"));
       if (!panel) return;
@@ -360,6 +369,17 @@
       mobileNav.classList.toggle("is-open", open);
       overlay.classList.toggle("is-active", open);
       document.body.classList.toggle("menu-open", open);
+      if (open) {
+        [...document.body.children].filter((node) => node !== mobileNav && node !== overlay && !node.matches("script, link, style")).forEach((node) => {
+          backgroundState.set(node, node.inert);
+          node.inert = true;
+        });
+        const main = document.querySelector("main");
+        if (main && !backgroundState.has(main)) { backgroundState.set(main, main.inert); main.inert = true; }
+      } else {
+        backgroundState.forEach((inert, node) => { node.inert = inert; });
+        backgroundState.clear();
+      }
       if (!open) branchButtons.forEach((button) => setBranchOpen(button, false));
       refreshIcons();
       if (open) { lastFocus = document.activeElement; close.focus(); } else { lastFocus?.focus?.(); }
@@ -368,15 +388,27 @@
     close.addEventListener("click", () => setOpen(false));
     overlay.addEventListener("click", () => setOpen(false));
     mobileNav.addEventListener("click", (event) => { if (event.target.closest("a")) setOpen(false); });
-    document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !mobileNav.hidden) setOpen(false); });
+    document.addEventListener("keydown", (event) => {
+      if (mobileNav.hidden) return;
+      if (event.key === "Escape") { event.preventDefault(); setOpen(false); }
+      if (event.key === "Tab") {
+        const items = $$('a[href], button:not([disabled]), [tabindex="0"]', mobileNav).filter((node) => node.getClientRects().length);
+        const first = items[0], last = items.at(-1);
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+      }
+    });
+    window.matchMedia("(min-width: 1101px)").addEventListener("change", (event) => {
+      if (event.matches && !mobileNav.hidden) { setOpen(false); $(".desktop-nav a", header)?.focus(); }
+    });
   }
 
   function normalizeSiteChrome() {
-    if (!document.body || document.body.dataset.chromeNormalized === "true") return { main: $("main") };
+    if (!document.body || document.body.dataset.shellBound === "true") return { main: $("main") };
     const main = preserveMain();
     normalizeSkipLink();
-    $$("header, footer, .site-header, .mobile-nav-panel, .mobile-nav-overlay").forEach((node) => node.remove());
-    const header = buildHeader();
+    $$("body > header, body > footer, .masthead, .journal-footer, .site-header, .site-footer, .mobile-nav-panel, .mobile-nav-overlay").filter((node) => !node.hasAttribute("data-shared-shell")).forEach((node) => node.remove());
+    const header = $(".site-header[data-shared-shell]") || buildHeader();
     const skip = $(".skip-link");
     if (skip) skip.after(header); else document.body.prepend(header);
     const overlay = document.createElement("div");
@@ -387,6 +419,8 @@
     mobileNav.className = "mobile-nav-panel";
     mobileNav.id = "mobile-nav-panel";
     mobileNav.setAttribute("aria-label", "Mobile navigation");
+    mobileNav.setAttribute("role", "dialog");
+    mobileNav.setAttribute("aria-modal", "true");
     mobileNav.hidden = true;
     mobileNav.setAttribute("inert", "");
     mobileNav.innerHTML = `<div class="mobile-nav-panel-inner"><div class="mobile-nav-header"><div><p class="mobile-nav-kicker">Mind Grace</p><h2>Find your next step</h2></div><button type="button" class="close-mobile-menu" aria-label="Close navigation menu"><i data-lucide="x" aria-hidden="true"></i></button></div><p class="mobile-nav-intro">Choose a section, then open a branch to see the pages inside it.</p>${mobileTreeMarkup(mobileNavigation)}<a class="btn btn--primary mobile-nav-appointment" href="/book.html"><i data-lucide="calendar" aria-hidden="true"></i> Book an appointment</a></div>`;
@@ -401,10 +435,14 @@
     const accessibilityToggle = $("#accessibility-toggle", header);
     const setAccessibility = (mode, enabled) => {
       document.documentElement.classList.toggle(`a11y-${mode}`, enabled);
-      if (enabled) window.localStorage?.setItem(`mindgrace-a11y-${mode}`, "true");
-      else window.localStorage?.removeItem(`mindgrace-a11y-${mode}`);
+      if (enabled) preferences.set(`mindgrace-a11y-${mode}`, "true");
+      else preferences.remove(`mindgrace-a11y-${mode}`);
+      accessibilityPanel.querySelector(`[data-accessibility="${mode}"]`)?.setAttribute("aria-pressed", String(enabled));
     };
-    ["larger", "contrast", "motion"].forEach((mode) => setAccessibility(mode, window.localStorage?.getItem(`mindgrace-a11y-${mode}`) === "true"));
+    ["larger", "contrast", "motion"].forEach((mode) => setAccessibility(mode, preferences.get(`mindgrace-a11y-${mode}`) === "true"));
+    accessibilityPanel.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") { accessibilityPanel.hidden = true; accessibilityToggle.setAttribute("aria-expanded", "false"); accessibilityToggle.focus(); }
+    });
     accessibilityToggle.addEventListener("click", () => { const open = accessibilityPanel.hidden; accessibilityPanel.hidden = !open; accessibilityToggle.setAttribute("aria-expanded", String(open)); if (open) accessibilityPanel.querySelector("button")?.focus(); });
     $(".accessibility-close", accessibilityPanel).addEventListener("click", () => { accessibilityPanel.hidden = true; accessibilityToggle.setAttribute("aria-expanded", "false"); accessibilityToggle.focus(); });
     $$('[data-accessibility]', accessibilityPanel).forEach((button) => button.addEventListener("click", () => {
@@ -412,26 +450,31 @@
       if (mode === "reset") ["larger", "contrast", "motion"].forEach((name) => setAccessibility(name, false));
       else setAccessibility(mode, !document.documentElement.classList.contains(`a11y-${mode}`));
     }));
-    const footer = buildFooter();
+    const footer = $(".site-footer[data-shared-shell]") || buildFooter();
     document.body.appendChild(footer);
     enhanceFooterLinks(footer);
-    footer.querySelector("#year").textContent = String(new Date().getFullYear());
+    const year = footer.querySelector("#year");
+    if (year) year.textContent = String(new Date().getFullYear());
     bindMenu(header, mobileNav, overlay);
     $("#theme-toggle", header).addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
     setTheme(selectedTheme(), false);
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+      if (!preferences.get(themeKey)) setTheme(selectedTheme(), false);
+    });
     document.body.dataset.chromeNormalized = "true";
+    document.body.dataset.shellBound = "true";
     window.dispatchEvent(new Event("mindgrace:chrome-ready"));
     ensureIcons();
     return { main, header, footer };
   }
 
   function markCurrentNavigation() {
-    const file = currentFile();
+    const normalizePath = (value) => new URL(value, window.location.href).pathname.replace(/\/index\.html$/, "/");
+    const currentPath = normalizePath(window.location.href);
     $$(".desktop-nav a[href], .mobile-nav-panel a[href], .footer-links a[href]").forEach((link) => {
       const href = link.getAttribute("href");
       if (!isLocalLink(href)) return;
-      const target = href.split("#")[0].split("?")[0].replace(/\\/g, "/").split("/").filter(Boolean).at(-1) || "index.html";
-      const current = target === file;
+      const current = normalizePath(href) === currentPath;
       link.classList.toggle("is-current", current);
       if (current) link.setAttribute("aria-current", "page"); else link.removeAttribute("aria-current");
     });
@@ -749,3 +792,11 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initialize, { once: true });
   else initialize();
 })();
+/* Keep the shared accessibility entry point singular when legacy pages already
+   contain a skip link. */
+function dedupeSkipLinks() {
+  const links = [...document.querySelectorAll('a.skip-link, a[href="#main-content"]')];
+  links.slice(1).forEach(link => link.remove());
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', dedupeSkipLinks, { once: true });
+else dedupeSkipLinks();

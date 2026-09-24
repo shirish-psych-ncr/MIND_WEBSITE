@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v9'; // bumped: switched pre-cached assets to minified /min/ builds
+const CACHE_NAME = 'mindgrace-v10'; // shared responsive shell and early theme assets
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
@@ -12,6 +12,9 @@ const CORE_ASSETS = [
   '/',
   '/index.html',
   '/assets/css/min/site-foundation.min.css',
+  '/assets/css/min/site-foundation.min.css?v=responsive18',
+  '/assets/js/min/visitor-friendly.min.js?v=responsive18',
+  '/assets/js/lib/lucide.min.js',
   '/assets/css/min/base.min.css',
   '/assets/css/min/components.min.css',
   '/assets/js/min/icon-init.min.js'

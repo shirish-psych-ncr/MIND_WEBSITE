@@ -1,0 +1,2559 @@
+[
+  {
+    "route": "404.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "aasha.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "about.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "addiction-substance-use.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "adhd-autism-assessment.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "approach.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "assessments.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "bipolar-mood-disorders.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/adult.html",
+    "theme": "light",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "article[aria-labelledby=\"article-heading-12\"] > p"
+            ],
+            "html": "<p>A practical guide to knowing when symptoms are persistent enough to benefit from psychiatric assessment.</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #827379, background color: #fffaf9, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "article[aria-labelledby=\"article-heading-12\"] > .button.button-primary"
+            ],
+            "html": "<a class=\"button button-primary\" href=\"http://127.0.0.1:8765/blog/pages/adult/when-to-see-a-psychiatrist.html\">Read this guide</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.48 (foreground color: #e4cdd5, background color: #a15470, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/children.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/iilm-psychology-internship.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/overthinking-vs-anxiety.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/scheduled-worry-time-technique.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/sleep-and-anxiety-cycle.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/stimulus-control-therapy.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/when-to-see-a-psychiatrist.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/early-signs-of-autism.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/school-concerns-and-adhd.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/sensory-overload-at-home.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/speech-delay-red-flags.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "book.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "child-development.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "conditions.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "consent.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "contact.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "depression-anxiety.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "disclaimer.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "doctors.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "dr-anita-sharma.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "emergency.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "faq.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "fees.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "gallery.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "high-functioning-depression/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "high-functioning-depression-guide/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learning-disability-assessment.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "location.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "mind-grace.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "ocd-panic-ptsd.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "offline.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "perceived-burdensomeness/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "privacy.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "process.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychiatrist-greater-noida.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychiatrist-in-noida.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychiatry.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychology-counselling.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "psychosis-schizophrenia.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "resources.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "services.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "sleep-and-autism-guide-indian-parents/index.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "sleep-eating-disorders.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "specialized-consultations.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "teleconsultation.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "terms.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "testimonials.html",
+    "theme": "light",
+    "violations": [
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(1) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(2) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(3) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              "div[aria-label=\"4 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"4 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(5) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(6) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "thank-you.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "therapy.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/butterfly-tapper.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/eye-movement.html",
+    "theme": "light",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "label"
+            ],
+            "html": "<label class=\"label\" for=\"speed-selector\">Choose speed</label>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.6 (foreground color: #4b3640, background color: #111827, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "tools/guided-breathing.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/horizon-scan.html",
+    "theme": "light",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "label"
+            ],
+            "html": "<label class=\"label\" for=\"duration-selector\">Duration</label>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.6 (foreground color: #4b3640, background color: #111827, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "tools/hypnos-fractal.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "tools/leaf-on-stream.html",
+    "theme": "light",
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".emergency-banner__inner"
+            ],
+            "html": "<div class=\"emergency-banner__inner\" aria-hidden=\"true\">",
+            "summary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href=\"/\"]"
+            ],
+            "html": "<a href=\"/\">Home</a>",
+            "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 72px by 17.6px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
+          },
+          {
+            "target": [
+              ".tool-link-bar > a[href$=\"resources.html\"]"
+            ],
+            "html": "<a href=\"/resources.html\">Resources</a>",
+            "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 101px by 17.6px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "trauma-grief-support.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "404.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "aasha.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "about.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "addiction-substance-use.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Qualified availability:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "adhd-autism-assessment.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Important:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "approach.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "assessments.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Scope note:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "bipolar-mood-disorders.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Safety:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/adult.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".blog-answer"
+            ],
+            "html": "<div class=\"blog-answer\"><strong>In short:</strong> Mind Grace Greater Noida’s adult mental health guides cover anxiety, overthinking, sleep, focus, burnout and panic — you do not need a diagnosis first; start with the article closest to what feels familiar.</div>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #faf3f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/children.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".blog-answer"
+            ],
+            "html": "<div class=\"blog-answer\"><strong>In short:</strong> These child development guides from Mind Grace Greater Noida explain autism, ADHD, speech-delay and sensory signs in plain terms, plus practical next steps and when professional assessment helps.</div>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #faf3f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/iilm-psychology-internship.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"#classroom-to-clinic\"]"
+            ],
+            "html": "<a href=\"#classroom-to-clinic\">From classroom to clinic</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#delhi-ncr-options\"]"
+            ],
+            "html": "<a href=\"#delhi-ncr-options\">Delhi NCR internship options</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#choosing-an-internship\"]"
+            ],
+            "html": "<a href=\"#choosing-an-internship\">How to compare placements</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#mind-grace-mentorship\"]"
+            ],
+            "html": "<a href=\"#mind-grace-mentorship\">1-to-1 mentorship at Mind Grace</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#application-checklist\"]"
+            ],
+            "html": "<a href=\"#application-checklist\">Application checklist</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#questions\"]"
+            ],
+            "html": "<a href=\"#questions\">Frequently asked questions</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#apply\"]"
+            ],
+            "html": "<a href=\"#apply\">Apply to Mind Grace</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/index.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/overthinking-vs-anxiety.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/adult/scheduled-worry-time-technique.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"#the-idea-in-brief\"]"
+            ],
+            "html": "<a href=\"#the-idea-in-brief\">The idea in brief</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".article-toc > ol > li:nth-child(2) > a"
+            ],
+            "html": "<a href=\"#why-worrying-feels-uncontrollable\">Why worrying feels uncontrollable</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".article-toc > ol > li:nth-child(3) > a"
+            ],
+            "html": "<a href=\"#a-different-approach-don-t-stop-worry-contain-it\">A different approach: don’t stop worry — contain it</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#how-the-method-works\"]"
+            ],
+            "html": "<a href=\"#how-the-method-works\">How the method works</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#why-this-works\"]"
+            ],
+            "html": "<a href=\"#why-this-works\">Why this works</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#making-it-practical\"]"
+            ],
+            "html": "<a href=\"#making-it-practical\">Making it practical</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"#why-this-also-improves-sleep\"]"
+            ],
+            "html": "<a href=\"#why-this-also-improves-sleep\">Why this also improves sleep</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#what-to-expect\"]"
+            ],
+            "html": "<a href=\"#what-to-expect\">What to expect</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#need-structured-help\"]"
+            ],
+            "html": "<a href=\"#need-structured-help\">Need structured help?</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/pages/adult/sleep-and-anxiety-cycle.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"#how-the-loop-works\"]"
+            ],
+            "html": "<a href=\"#how-the-loop-works\">How the loop works</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#biological-layer\"]"
+            ],
+            "html": "<a href=\"#biological-layer\">Biological layer</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".article-toc > ol > li:nth-child(3) > a"
+            ],
+            "html": "<a href=\"#core-strategies-high-reliability\">Core strategies (high reliability)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#clinical-approach-cbt-i\"]"
+            ],
+            "html": "<a href=\"#clinical-approach-cbt-i\">Clinical approach (CBT-I)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#cognitive-loop-breakers\"]"
+            ],
+            "html": "<a href=\"#cognitive-loop-breakers\">Cognitive “loop breakers”</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#physiological-regulation\"]"
+            ],
+            "html": "<a href=\"#physiological-regulation\">Physiological regulation</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"#distress-tolerance-dbt-layer\"]"
+            ],
+            "html": "<a href=\"#distress-tolerance-dbt-layer\">Distress tolerance (DBT layer)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "ol > li:nth-child(8) > a"
+            ],
+            "html": "<a href=\"#additional-strategies-variable-effectiveness\">Additional strategies (variable effectiveness)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#when-to-seek-help\"]"
+            ],
+            "html": "<a href=\"#when-to-seek-help\">When to seek help</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/pages/adult/stimulus-control-therapy.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"#the-idea-in-brief\"]"
+            ],
+            "html": "<a href=\"#the-idea-in-brief\">The idea in brief</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".article-toc > ol > li:nth-child(2) > a"
+            ],
+            "html": "<a href=\"#how-insomnia-becomes-a-learned-pattern\">How insomnia becomes a learned pattern</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"#what-stimulus-control-changes\"]"
+            ],
+            "html": "<a href=\"#what-stimulus-control-changes\">What stimulus control changes</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#the-core-method\"]"
+            ],
+            "html": "<a href=\"#the-core-method\">The core method</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#why-this-works\"]"
+            ],
+            "html": "<a href=\"#why-this-works\">Why this works</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#what-to-expect-initially\"]"
+            ],
+            "html": "<a href=\"#what-to-expect-initially\">What to expect initially</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "ol > li:nth-child(7) > a"
+            ],
+            "html": "<a href=\"#why-sleep-hygiene-alone-isn-t-enough\">Why sleep hygiene alone isn’t enough</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#need-structured-help\"]"
+            ],
+            "html": "<a href=\"#need-structured-help\">Need structured help?</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "blog/pages/adult/when-to-see-a-psychiatrist.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/early-signs-of-autism.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/school-concerns-and-adhd.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/sensory-overload-at-home.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "blog/pages/child/speech-delay-red-flags.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "book.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "child-development.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Assessment note:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "conditions.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "consent.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "contact.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".button-outline.button-small[href$=\"book.html\"]"
+            ],
+            "html": "<a href=\"/book.html\" class=\"button-outline button-small\">Book Appointment</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.09 (foreground color: #ffb4ca, background color: #c4bfc1, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".button-outline.button-large[href=\"tel:+919667863295\"]"
+            ],
+            "html": "<a href=\"tel:+919667863295\" class=\"button-outline button-large\">Call&nbsp;+91&nbsp;96678&nbsp;63295</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #ffb4ca, background color: #c0bdbe, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "depression-anxiety.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Not a diagnosis:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "disclaimer.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "doctors.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".common-services > div > .service-tag:nth-child(1)"
+            ],
+            "html": "<span class=\"service-tag\">Anxiety &amp; Depression</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".common-services > div > .service-tag:nth-child(2)"
+            ],
+            "html": "<span class=\"service-tag\">Stress Management</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".common-services > div > .service-tag:nth-child(3)"
+            ],
+            "html": "<span class=\"service-tag\">ADHD Support</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".common-services > div > .service-tag:nth-child(4)"
+            ],
+            "html": "<span class=\"service-tag\">Sleep Issues</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".common-services > div > .service-tag:nth-child(5)"
+            ],
+            "html": "<span class=\"service-tag\">Trauma &amp; PTSD</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".common-services > div > .service-tag:nth-child(6)"
+            ],
+            "html": "<span class=\"service-tag\">Family Counseling</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".common-services > div > .service-tag:nth-child(7)"
+            ],
+            "html": "<span class=\"service-tag\">OCD Treatment</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".common-services > div > .service-tag:nth-child(8)"
+            ],
+            "html": "<span class=\"service-tag\">Grief &amp; Loss</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#psychiatrist > .container > .doctor-profile-grid > div > .service-tags > .service-tag:nth-child(1)"
+            ],
+            "html": "<span class=\"service-tag\">Depression &amp; Emotional Wellness</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#psychiatrist > .container > .doctor-profile-grid > div > .service-tags > .service-tag:nth-child(2)"
+            ],
+            "html": "<span class=\"service-tag\">Anxiety, Stress &amp; Panic</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#psychiatrist > .container > .doctor-profile-grid > div > .service-tags > .service-tag:nth-child(3)"
+            ],
+            "html": "<span class=\"service-tag\">Bipolar Disorder</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#psychiatrist > .container > .doctor-profile-grid > div > .service-tags > .service-tag:nth-child(4)"
+            ],
+            "html": "<span class=\"service-tag\">Schizophrenia Care</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#psychiatrist > .container > .doctor-profile-grid > div > .service-tags > .service-tag:nth-child(5)"
+            ],
+            "html": "<span class=\"service-tag\">Alcohol &amp; Substance Addiction</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#psychiatrist > .container > .doctor-profile-grid > div > .service-tags > .service-tag:nth-child(6)"
+            ],
+            "html": "<span class=\"service-tag\">Smartphone/Internet/Gaming Addiction</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#psychiatrist > .container > .doctor-profile-grid > div > .service-tags > .service-tag:nth-child(7)"
+            ],
+            "html": "<span class=\"service-tag\">Relationship &amp; Marriage Counseling</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#psychiatrist > .container > .doctor-profile-grid > div > .service-tags > .service-tag:nth-child(8)"
+            ],
+            "html": "<span class=\"service-tag\">Sleep Disorder Management</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".service-tag:nth-child(9)"
+            ],
+            "html": "<span class=\"service-tag\">ADHD &amp; PTSD Support</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#dr-sana-firdous > .container > .doctor-profile-grid > div:nth-child(2) > .service-tags > .service-tag:nth-child(1)"
+            ],
+            "html": "<span class=\"service-tag\" style=\"border-color: var(--secondary);\">Child Psychology</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#dr-sana-firdous > .container > .doctor-profile-grid > div:nth-child(2) > .service-tags > .service-tag:nth-child(2)"
+            ],
+            "html": "<span class=\"service-tag\" style=\"border-color: var(--secondary);\">Psychotherapy (CBT, DBT)</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#dr-sana-firdous > .container > .doctor-profile-grid > div:nth-child(2) > .service-tags > .service-tag:nth-child(3)"
+            ],
+            "html": "<span class=\"service-tag\" style=\"border-color: var(--secondary);\">Psychodiagnostic Testing</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#dr-sana-firdous > .container > .doctor-profile-grid > div:nth-child(2) > .service-tags > .service-tag:nth-child(4)"
+            ],
+            "html": "<span class=\"service-tag\" style=\"border-color: var(--secondary);\">Neurodevelopmental Disorders</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#dr-sana-firdous > .container > .doctor-profile-grid > div:nth-child(2) > .service-tags > .service-tag:nth-child(5)"
+            ],
+            "html": "<span class=\"service-tag\" style=\"border-color: var(--secondary);\">Behavioral Disorders</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#dr-sana-firdous > .container > .doctor-profile-grid > div:nth-child(2) > .service-tags > .service-tag:nth-child(6)"
+            ],
+            "html": "<span class=\"service-tag\" style=\"border-color: var(--secondary);\">Cognitive Evaluation</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#dr-sana-firdous > .container > .doctor-profile-grid > div:nth-child(2) > .service-tags > .service-tag:nth-child(7)"
+            ],
+            "html": "<span class=\"service-tag\" style=\"border-color: var(--secondary);\">Trauma Therapy</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#dr-sana-firdous > .container > .doctor-profile-grid > div:nth-child(2) > .service-tags > .service-tag:nth-child(8)"
+            ],
+            "html": "<span class=\"service-tag\" style=\"border-color: var(--secondary);\">Family Counseling</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "dr-anita-sharma.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".expertise-tag:nth-child(1) > span"
+            ],
+            "html": "<span>Mood Disorders</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".expertise-tag:nth-child(2) > span"
+            ],
+            "html": "<span>Anxiety &amp; Stress</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".expertise-tag:nth-child(3) > span"
+            ],
+            "html": "<span>Adult ADHD</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".expertise-tag:nth-child(4) > span"
+            ],
+            "html": "<span>Child Development</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".expertise-tag:nth-child(5) > span"
+            ],
+            "html": "<span>Sleep Disorders</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.2 (foreground color: #b0004a, background color: #321d24, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "emergency.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "faq.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "fees.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "gallery.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "high-functioning-depression/index.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"#why-most-dangerous\"]"
+            ],
+            "html": "<a href=\"#why-most-dangerous\">Why It Is the \"Most Dangerous\" Type</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#psychological-traps\"]"
+            ],
+            "html": "<a href=\"#psychological-traps\">The Psychological and Societal Traps</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#neurobiology\"]"
+            ],
+            "html": "<a href=\"#neurobiology\">The Neurobiology of the Mask</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#body-mind-axis\"]"
+            ],
+            "html": "<a href=\"#body-mind-axis\">The Body-Mind Axis: Systemic Connections</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#hidden-behaviors\"]"
+            ],
+            "html": "<a href=\"#hidden-behaviors\">Hidden Behavioral Manifestations</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#treatment-pathways\"]"
+            ],
+            "html": "<a href=\"#treatment-pathways\">Evidence-Based Treatment Pathways</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#conclusion\"]"
+            ],
+            "html": "<a href=\"#conclusion\">From Surviving to Thriving</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(5) > em"
+            ],
+            "html": "<em>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "em > a[href$=\"doctors.html\"]"
+            ],
+            "html": "<a href=\"/doctors.html\">reach out to a mental health professional</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:1-800-662-4357\"]"
+            ],
+            "html": "<a href=\"tel:1-800-662-4357\">1-800-662-HELP (4357)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:1800-599-0019\"]"
+            ],
+            "html": "<a href=\"tel:1800-599-0019\">Kiran Mental Health Helpline (1800-599-0019)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:9152987821\"]"
+            ],
+            "html": "<a href=\"tel:9152987821\">iCall (9152987821)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "high-functioning-depression-guide/index.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"#why-most-dangerous\"]"
+            ],
+            "html": "<a href=\"#why-most-dangerous\">Why it's the most dangerous type</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#psychological-traps\"]"
+            ],
+            "html": "<a href=\"#psychological-traps\">Psychological and societal traps</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#neurobiology\"]"
+            ],
+            "html": "<a href=\"#neurobiology\">The neurobiology of the mask</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#body-mind-axis\"]"
+            ],
+            "html": "<a href=\"#body-mind-axis\">Body-mind connections</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#behavioral-signs\"]"
+            ],
+            "html": "<a href=\"#behavioral-signs\">Hidden behavioral signs</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#treatment-pathways\"]"
+            ],
+            "html": "<a href=\"#treatment-pathways\">Evidence-based treatment pathways</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#conclusion\"]"
+            ],
+            "html": "<a href=\"#conclusion\">From surviving to thriving</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#help-resources\"]"
+            ],
+            "html": "<a href=\"#help-resources\">Help resources</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#help-resources > h2"
+            ],
+            "html": "<h2>Help is Available</h2>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #fff8fa, background color: #fffdf8, font size: 19.5pt (26px), font weight: bold). Expected contrast ratio of 3:1"
+          },
+          {
+            "target": [
+              "p:nth-child(2) > strong"
+            ],
+            "html": "<strong>Speak with someone today</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "h3"
+            ],
+            "html": "<h3>Tele MANAS</h3>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #fff8fa, background color: #fffdf8, font size: 15.8pt (21px), font weight: bold). Expected contrast ratio of 3:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(4)"
+            ],
+            "html": "<p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(4) > strong:nth-child(1)"
+            ],
+            "html": "<strong>Languages:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(4) > strong:nth-child(3)"
+            ],
+            "html": "<strong>Hours:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(4) > strong:nth-child(5)"
+            ],
+            "html": "<strong>Call:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:14416\"]"
+            ],
+            "html": "<a href=\"tel:14416\">14416</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:1800-89-14416\"]"
+            ],
+            "html": "<a href=\"tel:1800-89-14416\">1800-89-14416</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[rel=\"noopener\"]"
+            ],
+            "html": "<a href=\"https://telemanas.mohfw.gov.in/\" rel=\"noopener\" target=\"_blank\">Official website</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(6)"
+            ],
+            "html": "<p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#help-resources > p:nth-child(6) > strong"
+            ],
+            "html": "<strong>Need professional support?</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(6) > a[href$=\"doctors.html\"]"
+            ],
+            "html": "<a href=\"/doctors.html\">Meet our team</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(6) > a[href$=\"book.html\"]"
+            ],
+            "html": "<a href=\"/book.html\">Book an appointment</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(6) > a[href$=\"contact.html\"]"
+            ],
+            "html": "<a href=\"/contact.html\">Contact us</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.63 (foreground color: #ffb4ca, background color: #fffdf8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(7) > em"
+            ],
+            "html": "<em>If you are in immediate crisis or having thoughts of self-harm, please call Tele MANAS at 14416 or visit your nearest emergency room immediately.</em>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #f0dce3, background color: #fffdf8, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "index.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "learning-disability-assessment.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Assessment scope:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "location.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white\\/10.p-4.backdrop-blur:nth-child(1) > .block.mb-1"
+            ],
+            "html": "<strong class=\"block text-accent mb-1\">Address:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.32 (foreground color: #d81b60, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white\\/10.p-4.backdrop-blur:nth-child(2) > .block.mb-1"
+            ],
+            "html": "<strong class=\"block text-accent mb-1\">Parking:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.32 (foreground color: #d81b60, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white\\/10.p-4.backdrop-blur:nth-child(3) > .block.mb-1"
+            ],
+            "html": "<strong class=\"block text-accent mb-1\">Transport:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.32 (foreground color: #d81b60, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "mind-grace.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "ocd-panic-ptsd.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Immediate danger:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "offline.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "perceived-burdensomeness/index.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"#part-1\"]"
+            ],
+            "html": "<a href=\"#part-1\">Part 1: The Lie Your Brain Tells You</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#part-2\"]"
+            ],
+            "html": "<a href=\"#part-2\">Part 2: The Trap — How It Poisons Everything</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#part-3\"]"
+            ],
+            "html": "<a href=\"#part-3\">Part 3: The Way Out — Precision Tools</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#part-1 > p:nth-child(34)"
+            ],
+            "html": "<p style=\"text-align:center;margin:32px 0;padding:20px;background:#fff5f8;border-radius:8px\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#part-1 > p:nth-child(34) > strong"
+            ],
+            "html": "<strong>Ready to break free from the burden narrative?</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(34) > a[href$=\"book.html\"]"
+            ],
+            "html": "<a href=\"/book.html\" style=\"color:#be185d;text-decoration:underline\">Book an appointment today</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#part-2 > p:nth-child(34)"
+            ],
+            "html": "<p style=\"text-align:center;margin:32px 0;padding:20px;background:#f0fdf4;border-radius:8px\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.24 (foreground color: #f0dce3, background color: #f0fdf4, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#part-2 > p:nth-child(34) > strong"
+            ],
+            "html": "<strong>Struggling with chronic illness or neurodivergent masking?</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.24 (foreground color: #f0dce3, background color: #f0fdf4, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(34) > a[href$=\"assessments.html\"]"
+            ],
+            "html": "<a href=\"/assessments.html\" style=\"color:#16a34a;text-decoration:underline\">Learn more about our assessment services</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #ffb4ca, background color: #f0fdf4, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(36) > em"
+            ],
+            "html": "<em>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.2 (foreground color: #f0dce3, background color: #eff6ff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:1800-599-0019\"]"
+            ],
+            "html": "<a href=\"tel:1800-599-0019\" style=\"color:#2563eb\">Kiran Mental Health Helpline (1800-599-0019)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.52 (foreground color: #ffb4ca, background color: #eff6ff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href=\"tel:9152987821\"]"
+            ],
+            "html": "<a href=\"tel:9152987821\" style=\"color:#2563eb\">iCall (9152987821)</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.52 (foreground color: #ffb4ca, background color: #eff6ff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "em > a[href$=\"emergency.html\"]"
+            ],
+            "html": "<a href=\"/emergency.html\" style=\"color:#2563eb\">visit our emergency resources page</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.52 (foreground color: #ffb4ca, background color: #eff6ff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(37)"
+            ],
+            "html": "<p style=\"text-align:center;margin:32px 0;padding:20px;background:#fff5f8;border-radius:8px\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(37) > strong"
+            ],
+            "html": "<strong>Ready to start your journey toward healing?</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #f0dce3, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "p:nth-child(37) > a[href$=\"book.html\"]"
+            ],
+            "html": "<a href=\"/book.html\" style=\"color:#be185d;text-decoration:underline\">Schedule your consultation today</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.55 (foreground color: #ffb4ca, background color: #fff5f8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "privacy.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "process.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".button-outline.button-large[href$=\"contact.html\"]"
+            ],
+            "html": "<a href=\"/contact.html\" class=\"button-outline button-large\">Contact Us</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #ffb4ca, background color: #c0bdbe, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "psychiatrist-greater-noida.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Location note:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "psychiatrist-in-noida.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Be precise about location:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "psychiatry.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Important:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "psychology-counselling.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Availability note:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "psychosis-schizophrenia.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Urgent safety:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "resources.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "services.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "sleep-and-autism-guide-indian-parents/index.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"#why-sleep-is-hard\"]"
+            ],
+            "html": "<a href=\"#why-sleep-is-hard\">Why sleep can be difficult</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#sensory-environment\"]"
+            ],
+            "html": "<a href=\"#sensory-environment\">1. Adjust the sensory environment</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#bedtime-routine\"]"
+            ],
+            "html": "<a href=\"#bedtime-routine\">2. Create a predictable bedtime routine</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#daytime-habits\"]"
+            ],
+            "html": "<a href=\"#daytime-habits\">3. Support sleep during the day</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#co-sleeping\"]"
+            ],
+            "html": "<a href=\"#co-sleeping\">4. Work with your family's sleeping arrangements</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#medical-discomfort\"]"
+            ],
+            "html": "<a href=\"#medical-discomfort\">5. Look for physical discomfort</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#professional-help\"]"
+            ],
+            "html": "<a href=\"#professional-help\">When to seek help and ask about melatonin</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"#start-tonight\"]"
+            ],
+            "html": "<a href=\"#start-tonight\">A small plan for tonight</a>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "sleep-eating-disorders.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Qualified availability:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "specialized-consultations.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Qualified availability:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "teleconsultation.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Emergency warning:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "terms.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "testimonials.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(1) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(2) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(3) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              "div[aria-label=\"4 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"4 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(5) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "target": [
+              ".testimonial-card.is-visible:nth-child(6) > .testimonial-rating[aria-label=\"5 out of 5 stars\"]"
+            ],
+            "html": "<div class=\"testimonial-rating\" aria-label=\"5 out of 5 stars\">",
+            "summary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "thank-you.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "therapy.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Availability note:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "tools/butterfly-tapper.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "tools/eye-movement.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>What this tool does:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "tools/guided-breathing.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>What this tool does:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "tools/horizon-scan.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>What this tool does:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "tools/hypnos-fractal.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>What this tool does:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "tools/leaf-on-stream.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".emergency-banner__inner"
+            ],
+            "html": "<div class=\"emergency-banner__inner\" aria-hidden=\"true\">",
+            "summary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "a[href=\"/\"]"
+            ],
+            "html": "<a href=\"/\">Home</a>",
+            "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 72px by 17.6px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
+          },
+          {
+            "target": [
+              ".tool-link-bar > a[href$=\"resources.html\"]"
+            ],
+            "html": "<a href=\"/resources.html\">Resources</a>",
+            "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 101px by 17.6px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "trauma-grief-support.html",
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".seo-answer > strong"
+            ],
+            "html": "<strong>Direct answer:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.53 (foreground color: #7a1038, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".seo-note > strong"
+            ],
+            "html": "<strong>Your pace matters:</strong>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #7a1038, background color: #40232e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  }
+]
