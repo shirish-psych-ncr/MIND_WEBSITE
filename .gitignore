@@ -1,1 +1,9 @@
-(empty)
+# Dependencies
+node_modules/
+
+# Compiled/Binary files
+__pycache__/
+*.pyc
+
+# Build artifacts
+dist/

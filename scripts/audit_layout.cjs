@@ -6,8 +6,9 @@ const root = path.resolve(__dirname, '..');
 const base = process.env.AUDIT_URL || 'http://127.0.0.1:8765';
 const out = path.join(root, 'output', 'responsive-audit');
 fs.mkdirSync(out, { recursive: true });
+const SKIP_DIRS = ['.git', 'node_modules', 'output', 'skills', '.claude', '.agents', '.codex', '.opencode', '.cursor'];
 function files(dir) {
-  return fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => ['.git', 'node_modules', 'output'].includes(e.name) ? [] : e.isDirectory() ? files(path.join(dir, e.name)) : e.name.endsWith('.html') ? [path.relative(root, path.join(dir, e.name)).replaceAll('\\', '/')] : []);
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => SKIP_DIRS.includes(e.name) ? [] : e.isDirectory() ? files(path.join(dir, e.name)) : e.name.endsWith('.html') ? [path.relative(root, path.join(dir, e.name)).replaceAll('\\', '/')] : []);
 }
 (async () => {
   const browser = await chromium.launch({ headless: true });

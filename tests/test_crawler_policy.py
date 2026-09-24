@@ -16,6 +16,28 @@ from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Local tooling directories (agent-skill libraries, installed dependencies,
+# editor/agent mirrors) are not site content and are excluded from site-wide
+# HTML crawls/globs. Mirrors the skip logic in scripts/audit_seo_aeo_geo.py.
+NON_SITE_DIR_PREFIXES = ("skills/", ".claude/", "node_modules/", ".agents/",
+                         ".codex/", ".opencode/", ".cursor/")
+
+
+def _is_skill_file(rel):
+    """True if rel (root-relative posix path) belongs to local tooling, not the site."""
+    return rel.startswith(NON_SITE_DIR_PREFIXES) or "/node_modules/" in rel
+
+
+def _walk_html(root_dir):
+    """Yield (abs_path, root-relative posix path) for every .html under root_dir,
+    skipping local tooling directories."""
+    import glob as _glob
+    for p in _glob.glob(os.path.join(root_dir, "**/*.html"), recursive=True):
+        rel = os.path.relpath(p, ROOT).replace(os.sep, "/")
+        if _is_skill_file(rel):
+            continue
+        yield p, rel
+
 # User-agents that must be explicitly ALLOWED (traditional search + real-time
 # AI citation/retrieval agents) per the 2026 crawler-management framework.
 ALLOWED_AGENTS = [
@@ -646,9 +668,7 @@ class TestSiteWideAeo(unittest.TestCase):
         pages that use blog-answer must link a stylesheet defining it."""
         import glob as _glob
         shells = {"404.html", "offline.html", "thank-you.html"}
-        pages = [os.path.relpath(p, ROOT).replace(os.sep, "/")
-                 for p in _glob.glob(os.path.join(ROOT, "**/*.html"),
-                                     recursive=True)]
+        pages = [rel for _p, rel in _walk_html(ROOT)]
         self.assertGreaterEqual(len(pages), 60)
         for rel in pages:
             if rel in shells:
@@ -702,8 +722,9 @@ class TestSiteWideAeo(unittest.TestCase):
         # 1. every loc -> existing, indexable file
         for loc in locs:
             rel = loc[len(base):] if loc.startswith(base) else loc
-            rel = rel.rstrip("/") or "index"
-            cand = rel if rel.endswith(".html") else os.path.join(rel, "index.html")
+            # site root URL ("") maps to index.html
+            cand = "index.html" if not rel.strip("/") else (
+                rel if rel.endswith(".html") else os.path.join(rel, "index.html"))
             path = os.path.join(ROOT, cand.replace("/", os.sep))
             self.assertTrue(os.path.exists(path), f"sitemap loc has no file: {loc}")
             html = read_bytes(path).decode("utf-8")
@@ -711,8 +732,7 @@ class TestSiteWideAeo(unittest.TestCase):
             self.assertNotIn("noindex", (m.group(1) if m else "").lower(),
                              f"noindex page listed in sitemap: {loc}")
         # 2. every indexable file -> in sitemap
-        for f in _glob.glob(os.path.join(ROOT, "**/*.html"), recursive=True):
-            rel = os.path.relpath(f, ROOT).replace(os.sep, "/")
+        for f, rel in _walk_html(ROOT):
             html = read_bytes(f).decode("utf-8")
             m = re.search(r'<meta name="robots" content="([^"]+)"', html)
             if m and "noindex" in m.group(1).lower():
