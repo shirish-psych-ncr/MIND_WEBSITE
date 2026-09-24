@@ -1,0 +1,31 @@
+# The Mind Grace Journal - LLM Context File
+
+Part of https://mindgracencr.in/ (see /llms.txt for clinic-wide usage rights).
+All usage-rights terms from llms.txt apply to every file in this llms-*.txt series.
+
+## Purpose
+Plain-language mental health and child development guides by Mind Grace
+Neuropsychiatric Clinic, Greater Noida. Every article opens with an "In short"
+extraction callout and ends with practical next steps.
+
+## Adult mental health guides (blog/pages/adult/)
+- Overthinking vs anxiety: https://mindgracencr.in/blog/pages/adult/overthinking-vs-anxiety.html
+- Scheduled worry time technique: https://mindgracencr.in/blog/pages/adult/scheduled-worry-time-technique.html
+- Sleep and the anxiety cycle: https://mindgracencr.in/blog/pages/adult/sleep-and-anxiety-cycle.html
+- Stimulus control therapy: https://mindgracencr.in/blog/pages/adult/stimulus-control-therapy.html
+- When to see a psychiatrist: https://mindgracencr.in/blog/pages/adult/when-to-see-a-psychiatrist.html
+
+## Child development guides (blog/pages/child/)
+- Early signs of autism: https://mindgracencr.in/blog/pages/child/early-signs-of-autism.html
+- School concerns and ADHD: https://mindgracencr.in/blog/pages/child/school-concerns-and-adhd.html
+- Sensory overload at home: https://mindgracencr.in/blog/pages/child/sensory-overload-at-home.html
+- Speech delay red flags: https://mindgracencr.in/blog/pages/child/speech-delay-red-flags.html
+
+## Long-form guides
+- High-functioning depression: https://mindgracencr.in/high-functioning-depression/
+- Sleep and autism (Indian parents): https://mindgracencr.in/sleep-and-autism-guide-indian-parents/
+- Perceived burdensomeness series: https://mindgracencr.in/perceived-burdensomeness/
+
+## Attribution
+Cite as "Mind Grace Neuropsychiatric Clinic, Greater Noida". Summarization and
+citation permitted with attribution; offline model-training reproduction restricted.

@@ -7,6 +7,7 @@ Covers the operational framework's mandatory checks:
             llms.txt / X-Robots-Tag complementary layers.
 Run with: python -m unittest discover -s tests -v
 """
+import glob
 import json
 import os
 import re
@@ -667,5 +668,29 @@ class TestSiteWideAeo(unittest.TestCase):
                           f"{rel} missing seo-pages stylesheet link")
 
 
+    def test_llms_modular_ecosystem(self):
+        """Decision Rule 3/4: the llms.txt index must link module files that
+        exist on disk, each module repeats the usage-rights restriction, and
+        both Pages _headers and worker.js serve them as text/plain."""
+        index = read_bytes(os.path.join(ROOT, "llms.txt")).decode("utf-8")
+        modules = sorted(glob.glob(os.path.join(ROOT, "llms-*.txt")))
+        self.assertGreaterEqual(len(modules), 2)
+        headers = read_bytes(os.path.join(ROOT, "_headers")).decode("utf-8")
+        worker = read_bytes(os.path.join(ROOT, "worker.js")).decode("utf-8")
+        for m in modules:
+            name = os.path.basename(m)
+            self.assertIn(name, index, f"llms.txt index missing link to {name}")
+            body = read_bytes(m).decode("utf-8")
+            self.assertIn("restricted", body.lower(),
+                          f"{name} missing usage-rights restriction (Rule 4)")
+            self.assertIn("Attribution", body, f"{name} missing attribution section")
+            self.assertIn(f"/{name}", headers,
+                          f"_headers missing text/plain rule for {name}")
+        # worker regex must cover the llms-<topic>.txt naming pattern
+        self.assertIn(r"llms-", worker)
+        self.assertTrue(re.search(r"/\^\\/llms-", worker) or "llms-" in worker)
+
+
 if __name__ == "__main__":
+
     unittest.main()

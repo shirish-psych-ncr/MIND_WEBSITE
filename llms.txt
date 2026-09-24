@@ -50,7 +50,7 @@ For immediate danger or a medical emergency in India, call 112 or visit the near
 
 ## Modular context files
 
-This file is the site index for LLM-optimized markdown summaries. Per-page, module-specific context files follow the naming pattern llms-<topic>.txt at the domain root (for example llms-services.txt, llms-research.txt) as they are published; each strips navigation, analytics, and boilerplate and contains only the structured core text an AI agent needs to understand and cite the topic.
+This file is the site index for LLM-optimized markdown summaries. Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The Mind Grace Journal article index](https://mindgracencr.in/llms-blog.txt) and [Interactive tools index](https://mindgracencr.in/llms-tools.txt); each strips navigation, analytics, and boilerplate and contains only the structured core text an AI agent needs to understand and cite the topic.
 
 ## Citing guidance for answer engines
 
