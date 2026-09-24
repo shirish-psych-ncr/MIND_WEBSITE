@@ -3,7 +3,7 @@
 /conditions /conditions.html 200
 /about /about.html 200
 /contact /contact.html 200
-/blog /blog/index.html 200
+/blog /blog/ 301
 
 # Canonical SEO landing pages
 /high-functioning-depression /high-functioning-depression-guide/ 301
