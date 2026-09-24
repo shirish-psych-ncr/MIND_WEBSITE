@@ -16,19 +16,21 @@ from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Local agent-skill libraries (tooling, not site content) are excluded from
-# site-wide HTML crawls/globs. Mirrors the skip logic in scripts/audit_seo_aeo_geo.py.
-SKILL_DIR_PREFIXES = ("skills/", ".claude/")
+# Local tooling directories (agent-skill libraries, installed dependencies,
+# editor/agent mirrors) are not site content and are excluded from site-wide
+# HTML crawls/globs. Mirrors the skip logic in scripts/audit_seo_aeo_geo.py.
+NON_SITE_DIR_PREFIXES = ("skills/", ".claude/", "node_modules/", ".agents/",
+                         ".codex/", ".opencode/", ".cursor/")
 
 
 def _is_skill_file(rel):
-    """True if rel (root-relative posix path) belongs to a local skill library."""
-    return rel.startswith(SKILL_DIR_PREFIXES)
+    """True if rel (root-relative posix path) belongs to local tooling, not the site."""
+    return rel.startswith(NON_SITE_DIR_PREFIXES) or "/node_modules/" in rel
 
 
 def _walk_html(root_dir):
     """Yield (abs_path, root-relative posix path) for every .html under root_dir,
-    skipping local skill directories."""
+    skipping local tooling directories."""
     import glob as _glob
     for p in _glob.glob(os.path.join(root_dir, "**/*.html"), recursive=True):
         rel = os.path.relpath(p, ROOT).replace(os.sep, "/")
