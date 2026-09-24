@@ -49,13 +49,17 @@
   # Insights compatible) is vendored same-origin at /assets/vendor/, so only
   # its ingestion endpoints (api2/api-sources/browser.amplitude.com) and the
   # cdn.amplitude.com script fallback need allow-listing here.
+  # Google Translate widget (site-wide header language picker): element.js +
+  # CSS come from translate.google.com, translated page bodies are proxied by
+  # the widget (connect-src), flag/icon images from www.google.com (covered
+  # by img-src https:).
   Content-Security-Policy: \
     default-src 'self'; \
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://*.ahrefs.com https://unpkg.com https://cdn.jsdelivr.net https://cdn.amplitude.com; \
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net; \
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://*.ahrefs.com https://unpkg.com https://cdn.jsdelivr.net https://cdn.amplitude.com https://translate.google.com; \
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net https://translate.google.com; \
     font-src 'self' data: https://fonts.gstatic.com; \
     img-src 'self' data: blob: https:; \
-    connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.ahrefs.com https://*.zarazprojects.com https://*.cloudflare.com https://static.cloudflareinsights.com https://*.tile.openstreetmap.org https://openstreetmap.org https://api2.amplitude.com https://api.eu.amplitude.com https://api-sources.amplitude.com https://cdn.amplitude.com https://browser.amplitude.com; \
+    connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.ahrefs.com https://*.zarazprojects.com https://*.cloudflare.com https://static.cloudflareinsights.com https://*.tile.openstreetmap.org https://openstreetmap.org https://api2.amplitude.com https://api.eu.amplitude.com https://api-sources.amplitude.com https://cdn.amplitude.com https://browser.amplitude.com https://translate.google.com https://translate.googleapis.com; \
     frame-src 'self' https://*.googletagmanager.com https://www.google.com https://docs.google.com https://www.openstreetmap.org; \
     worker-src 'self' blob:; \
     manifest-src 'self'; \

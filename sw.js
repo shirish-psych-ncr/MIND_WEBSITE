@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v6'; // bumped: forces old caches cleared on activation (includes renamed assets)
+const CACHE_NAME = 'mindgrace-v7'; // bumped: added Google Translate widget CSS/JS to precache
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
@@ -42,8 +42,17 @@ const ANALYTICS_ASSETS = [
   '/assets/vendor/amplitude-2.47.0.js'
 ];
 
+// Google Translate widget UI (site-wide header language picker). The
+// controls themselves are cached same-origin; the actual translation
+// engine (translate.google.com element.js + translated page fetches) is
+// always network-only and degrades gracefully when offline.
+const TRANSLATE_ASSETS = [
+  '/assets/css/translate.css',
+  '/assets/js/translate.js'
+];
+
 // All URLs to pre-cache on install
-const PRECACHE_URLS = [...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...ANALYTICS_ASSETS, '/offline.html'];
+const PRECACHE_URLS = [...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...ANALYTICS_ASSETS, ...TRANSLATE_ASSETS, '/offline.html'];
 
 /**
  * Install event - cache core assets and tools
