@@ -93,6 +93,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <style>
     /* Font fallback during load */
     body { font-display: swap; }
+    /* Fee comparison table (AEO structured data) */
+    .table-scroll { overflow-x: auto; margin-bottom: 3rem; border: 1px solid rgba(103, 27, 80, 0.15); border-radius: 12px; }
+    .fee-comparison-table { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 0.95rem; }
+    .fee-comparison-table caption { text-align: left; padding: 0.75rem 1rem; font-weight: 600; color: #671B50; }
+    .fee-comparison-table th, .fee-comparison-table td { padding: 0.75rem 1rem; text-align: left; vertical-align: top; border-top: 1px solid rgba(103, 27, 80, 0.12); }
+    .fee-comparison-table thead th { background: #671B50; color: #fff; border-top: none; }
+    .fee-comparison-table tbody th { font-weight: 600; }
+    .fee-comparison-table tbody tr:nth-child(even) { background: rgba(103, 27, 80, 0.04); }
   </style>
 
   <!-- Network Status Toast -->
@@ -191,6 +199,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   ],
   "paymentAccepted": "Cash, UPI, Card",
   "@id": "#organization"
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a psychiatric consultation cost at Mind Grace in Greater Noida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An initial 45-minute psychiatric consultation with Dr. Anita Sharma costs ₹900 and includes a detailed evaluation and diagnosis, a personalized treatment plan, and medication management if needed. A 30-minute follow-up consultation costs ₹700."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do therapy sessions at Aasha cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Therapy sessions (Aasha) cost ₹500 to ₹700 for a 45 to 60 minute session. The fee varies by therapist and format, and a sliding scale is available for students."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do psychological assessments and testing cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Psychological assessment fees vary based on scope and are quoted after an initial screening to determine the appropriate assessment battery. Common assessments include IQ testing, ADHD evaluation, autism spectrum assessment, and personality inventories, with a typical range of ₹2,000 to ₹8,000 depending on complexity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods does Mind Grace Neuropsychiatric Clinic accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mind Grace accepts cash at the clinic, UPI payments via QR code or UPI ID with instant confirmation and digital receipt, and NEFT/IMPS bank transfers (transaction ID required for confirmation). Itemized invoices are provided for insurance reimbursement or tax documentation."
+      }
+    }
+  ]
 }</script>
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
@@ -350,7 +396,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="shell">
         <div class="section-header">
           <h2>Consultation &#x26; Session Fees</h2>
-          <p>Standard rates for all services as of 2025</p>
+          <p>Standard rates for all services as of 2026</p>
+        </div>
+
+        <!-- Machine-readable comparison table (AEO: structured data extraction) -->
+        <div class="table-scroll" role="region" aria-label="Fee comparison table" tabindex="0">
+          <table class="fee-comparison-table">
+            <caption>Mind Grace Neuropsychiatric Clinic - consultation, therapy, and assessment fees (INR)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Service</th>
+                <th scope="col">Fee (INR)</th>
+                <th scope="col">Duration</th>
+                <th scope="col">What is included</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Psychiatric Consultation (initial)</th>
+                <td>₹900</td>
+                <td>45 minutes</td>
+                <td>Detailed evaluation and diagnosis, personalized treatment plan, medication management if needed (Dr. Anita Sharma)</td>
+              </tr>
+              <tr>
+                <th scope="row">Follow-up Consultation</th>
+                <td>₹700</td>
+                <td>30 minutes</td>
+                <td>Medication adjustment and monitoring, progress evaluation, continued support and guidance</td>
+              </tr>
+              <tr>
+                <th scope="row">Therapy Sessions (Aasha)</th>
+                <td>₹500–₹700</td>
+                <td>45–60 minutes</td>
+                <td>CBT, supportive therapy, or counseling; fee varies by therapist and format; sliding scale available for students</td>
+              </tr>
+              <tr>
+                <th scope="row">Psychological Assessments &amp; Testing</th>
+                <td>₹2,000–₹8,000</td>
+                <td>Varies by battery</td>
+                <td>IQ testing, ADHD evaluation, autism spectrum assessment, personality inventories; quoted after initial screening based on complexity</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div class="pricing-grid">

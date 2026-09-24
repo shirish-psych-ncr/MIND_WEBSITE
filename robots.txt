@@ -1,8 +1,158 @@
-# Mind Grace NCR - robots.txt
-# Policy: ALL crawlers, search bots, and AI agents are allowed.
-# Updated 2026-09-24 per owner request: allow all, disallow none.
+# ==============================================================================
+# Mind Grace Neuropsychiatric Clinic - robots.txt
+# Origin: https://mindgracencr.in (rules apply ONLY to this exact scheme + host;
+# any subdomain or non-standard port requires its own independent file).
+# Format: strict UTF-8 WITHOUT Byte Order Mark, LF line endings, no null bytes.
+# Syntax: RFC 9309 compliant. Longest matching path wins; on equal length,
+# Allow overrides Disallow. Comments are always on their own lines - never
+# inline after a directive (trailing text can be parsed as part of the path).
+# Policy (2026 AI crawler framework): ALLOW traditional search + real-time AI
+# citation/retrieval agents; DISALLOW foundational LLM training scrapers and
+# aggressive/unverified harvesters. This is a public clinic website: there are
+# no private admin/API surfaces, so nothing sensitive is listed here (a
+# robots.txt is public and must never be used as a security map).
+# Note: Cloudflare "Bot Fight Mode" / managed AI-training block at the network
+# edge drops requests BEFORE they reach origin rules and would silently break
+# the Allow list in Section 2 - keep those edge features disabled.
+# Deployment note: served with Cache-Control max-age <= 48h (see _headers);
+# force an immediate refetch via Google Search Console "Test robots.txt" after
+# any emergency change because compliant crawlers cache this file up to 48h.
+# Cloudflare Content Signals (optional layer): Cloudflare's managed settings
+# can prepend machine-readable usage policies such as
+# "Content-signal: search=yes, ai-input=no, ai-train=no, use=reference".
+# Deliberately NOT emitted here as a robots.txt line - that syntax is not
+# part of RFC 9309 and risks breaking strict validators; enable it only via
+# the Cloudflare dashboard if adopted.
+# ==============================================================================
 
-User-agent: *
+# ==============================================================================
+# SECTION 1: GLOBAL DECLARATIONS
+# Field-independent directive; valid anywhere, kept at the top per convention.
+# ==============================================================================
+Sitemap: https://mindgracencr.in/sitemap.xml
+
+# ==============================================================================
+# SECTION 2: TRADITIONAL SEARCH ENGINES (ALLOW)
+# Baseline organic visibility. No query-string wildcard disallow: every URL on
+# this static site is clean, and /*?* would risk blocking functional URLs.
+# CSS/JS/image asset directories are intentionally NEVER disallowed - search
+# engines and AI retrieval bots need them to render and understand pages.
+# ==============================================================================
+User-agent: Googlebot
 Allow: /
 
-Sitemap: https://mindgracencr.in/sitemap.xml
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ==============================================================================
+# SECTION 3: AI SEARCH & REAL-TIME CITATION RETRIEVAL AGENTS (ALLOW)
+# These drive high-intent referral traffic from generative answers. Blocking
+# them destroys Answer Engine Optimization (AEO) visibility even if the
+# corresponding training bot below stays blocked (the Anthropic/OpenAI split:
+# ClaudeBot blocks training, but Claude-SearchBot/Claude-User must stay open).
+# ==============================================================================
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: GensparkBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: YepBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+# ==============================================================================
+# SECTION 4: AI MODEL TRAINING SCRAPERS (DISALLOW)
+# Mass ingestion for foundational LLM training with no traffic return.
+# Google-Extended affects only Gemini training - it does NOT affect standard
+# Google Search indexing (handled by Googlebot in Section 2).
+# ==============================================================================
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Cohere-AI
+Disallow: /
+
+# ==============================================================================
+# SECTION 5: AGGRESSIVE & UNVERIFIED HARVESTERS (DISALLOW)
+# Heavy, non-attributing scraping networks; protects bandwidth. For the most
+# abusive agents (e.g., Bytespider) this text-level request is backed by a
+# hard network-edge block (Cloudflare WAF / worker UA rule returning 403),
+# because robots.txt compliance is voluntary.
+# ==============================================================================
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: aiHitBot
+Disallow: /
+
+User-agent: BittorrentBot
+Disallow: /
+
+# ==============================================================================
+# SECTION 6: GLOBAL FALLBACK
+# Default posture for any crawler not explicitly named above: full access.
+# Rule inheritance warning: a bot that matches any specific User-agent group
+# above reads ONLY that group and ignores these fallback rules entirely.
+# End-of-string anchor ($) keeps the PDF rule precise: it blocks only paths
+# ending in ".pdf" and cannot overreach into routes like /downloads/pdf-guide/.
+# ==============================================================================
+User-agent: *
+Allow: /
+Disallow: /*.pdf$

@@ -124,3 +124,30 @@
 /favicon.ico
   Cache-Control: public, max-age=86400
   Content-Type: image/x-icon
+
+# ==============================================================================
+# 4b. NON-HTML ASSETS: X-Robots-Tag for true de-indexing control
+# The <meta name="robots"> tag only works inside HTML documents. To keep raw
+# PDFs and downloadable data files out of search/AI indexes while still
+# allowing them to be FETCHED (Disallow blocks fetching, not indexing - the
+# "ghost indexing" trap), return a noindex HTTP header at the server layer.
+# ==============================================================================
+/*.pdf
+  # Served with an explicit header so compliant engines drop them from
+  # results even though they remain directly accessible to users.
+  X-Robots-Tag: noindex
+  Content-Disposition: inline
+
+# ==============================================================================
+# 4c. llms.txt ECOSYSTEM: machine-readable context for allowed AI agents
+# robots.txt controls access; llms.txt controls context and usage rights.
+# Must be served as plain UTF-8 markdown text, instantly (30-second timeout
+# rule: slow responses make compliant bots pause crawling site-wide).
+# ==============================================================================
+/llms.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain; charset=utf-8
+
+/llms-*.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain; charset=utf-8

@@ -6,6 +6,24 @@ addEventListener('fetch', event => {
 })
 
 async function handleRequest(request) {
+  // --------------------------------------------------------------------------
+  // Server-level blocking for aggressive harvesters (2026 crawler framework,
+  // Phase 3). robots.txt is a voluntary request; Bytespider/Diffbot/PetalBot/
+  // Scrapy/aiHitBot/BittorrentBot are hard-blocked with 403 at the network
+  // edge so they never consume origin bandwidth. Keep this list in sync with
+  // SECTION 5 of ./robots.txt (tests/test_crawler_policy.py enforces it).
+  // NOTE: citation agents (OAI-SearchBot, Claude-SearchBot, PerplexityBot,
+  // ChatGPT-User, ...) must NEVER be added here - that would silently kill
+  // AEO visibility even though robots.txt allows them. Also verify Cloudflare
+  // "Bot Fight Mode" / managed AI-training block stays OFF for this zone:
+  // edge drops happen before origin rules and would break the Allow list.
+  // --------------------------------------------------------------------------
+  const BLOCKED_BOTS = ['bytespider', 'diffbot', 'petalbot', 'scrapy', 'aihitbot', 'bittorrentbot']
+  const userAgent = (request.headers.get('User-Agent') || '').toLowerCase()
+  if (BLOCKED_BOTS.some(bot => userAgent.includes(bot))) {
+    return new Response('Forbidden', { status: 403, headers: { 'Content-Type': 'text/plain' } })
+  }
+
   const response = await fetch(request)
   
   // Clone the response so we can modify headers
@@ -38,6 +56,20 @@ async function handleRequest(request) {
     "worker-src 'self' blob:;"
   )
   
+  const path = new URL(request.url).pathname
+
+  // Non-HTML assets cannot carry <meta name="robots">, so de-index raw PDFs
+  // via HTTP header (mirrors the /*.pdf rule in ./_headers).
+  if (path.toLowerCase().endsWith('.pdf')) {
+    newResponse.headers.set('X-Robots-Tag', 'noindex')
+  }
+
+  // Serve llms.txt context files as plain UTF-8 markdown text.
+  if (path === '/llms.txt' || /^\/llms-[^/]+\.txt$/.test(path)) {
+    newResponse.headers.set('Content-Type', 'text/plain; charset=utf-8')
+    newResponse.headers.set('Cache-Control', 'public, max-age=3600')
+  }
+
   // Add cache control for static assets
   const url = new URL(request.url)
   if (url.pathname.startsWith('/assets/')) {
