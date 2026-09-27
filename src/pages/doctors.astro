@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <style>
         .team-intro-banner {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #9d174d, #be185d); /* AA-safe deep pink (>=6:1 with white text) */
             color: white;
             padding: 4rem 1rem;
             text-align: center;
@@ -76,9 +76,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-top: 2rem;
         }
         .jump-btn {
-            background: rgba(255,255,255,0.2);
-            border: 2px solid white;
-            color: white;
+            background: rgba(0, 0, 0, 0.38); /* darkens pink banner to ~#4c0f27 → white text = 11.9:1 (WCAG AAA) */
+            border: 2px solid #ffffff;
+            color: #ffffff; /* 11.9:1 composited over the deep-pink banner — AA/AAA */
             padding: 1rem 2rem;
             border-radius: 50px;
             font-weight: 600;
@@ -87,8 +87,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             backdrop-filter: blur(5px);
         }
         .jump-btn:hover {
-            background: white;
-            color: var(--primary);
+            background: #ffffff;
+            color: #a61e63; /* solid AA-safe ink (7.03:1 on white) — var(--primary, #be185d) is undefined here */
             transform: translateY(-3px);
         }
         .service-comparison {
@@ -98,10 +98,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin: 3rem 0;
         }
         .comparison-card {
-            background: var(--bg-surface);
+            background: var(--bg-surface, #ffffff);
             padding: 2rem;
             border-radius: var(--radius-md);
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border-light, #f9a8d4);
             transition: transform 0.3s ease;
         }
         .comparison-card:hover {
@@ -109,7 +109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             box-shadow: var(--shadow-lg);
         }
         .comparison-card h3 {
-            color: var(--primary);
+            color: var(--primary, #be185d);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -117,13 +117,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         .doctor-section {
             padding: 5rem 0;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light, #f9a8d4);
         }
         .doctor-section:last-child {
             border-bottom: none;
         }
         .doctor-section.alt-bg {
-            background: var(--bg-soft);
+            background: var(--bg-soft, #fdf2f8);
         }
         .doctor-profile-grid {
             display: grid;
@@ -136,7 +136,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             aspect-ratio: 3/4;
             border-radius: var(--radius-md);
             overflow: hidden;
-            background: var(--bg-soft);
+            background: var(--bg-soft, #fdf2f8);
             box-shadow: var(--shadow-md);
         }
         .doctor-image-frame img,
@@ -148,13 +148,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .doctor-credentials {
             margin: 1.5rem 0;
             padding: 1.5rem;
-            background: var(--bg-surface);
+            background: var(--bg-surface, #ffffff);
             border-radius: var(--radius-sm);
-            border-left: 4px solid var(--primary);
+            border-left: 4px solid var(--primary, #be185d);
             box-shadow: var(--shadow-sm);
         }
         .doctor-credentials.alt {
-            border-left-color: var(--secondary);
+            border-left-color: var(--secondary, #9d174d);
         }
         .credential-list {
             list-style: none;
@@ -163,7 +163,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         .credential-list li {
             padding: 0.75rem 0;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light, #f9a8d4);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -172,7 +172,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border-bottom: none;
         }
         .credential-list strong {
-            color: var(--primary);
+            color: var(--primary, #be185d);
         }
         .service-tags {
             display: flex;
@@ -181,27 +181,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-top: 1rem;
         }
         .service-tag {
-            background: var(--bg-soft);
+            background: var(--bg-soft, #fdf2f8);
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.9rem;
-            color: var(--text-dark);
-            border: 1px solid var(--border-light);
+            color: var(--text-dark, #2b0d19);
+            border: 1px solid var(--border-light, #f9a8d4);
             transition: transform .2s ease, opacity .2s ease, background-color .2s ease, color .2s ease;
         }
         .service-tag:hover {
-            background: var(--primary);
+            background: var(--primary, #be185d);
             color: white;
-            border-color: var(--primary);
+            border-color: var(--primary, #be185d);
         }
         .quote-box {
-            background: linear-gradient(135deg, var(--bg-soft), white);
+            background: linear-gradient(135deg, var(--bg-soft, #fdf2f8), white);
             padding: 2rem;
             border-radius: var(--radius-md);
-            border-left: 4px solid var(--secondary);
+            border-left: 4px solid var(--secondary, #9d174d);
             margin: 2rem 0;
             font-style: italic;
-            color: var(--text-dark);
+            color: var(--text-dark, #2b0d19);
             box-shadow: var(--shadow-sm);
         }
         .hospital-list {
@@ -213,7 +213,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 0.75rem 0;
             padding-left: 2rem;
             position: relative;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light, #f9a8d4);
         }
         .hospital-list li:last-child {
             border-bottom: none;
@@ -229,8 +229,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         .common-services {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, var(--bg-soft), #f0f9ff);
-            border: 2px solid var(--primary);
+            background: linear-gradient(135deg, var(--bg-soft, #fdf2f8), #f0f9ff);
+            border: 2px solid var(--primary, #be185d);
             text-align: center;
         }
         @media (max-width: 900px) {
@@ -462,7 +462,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
                             <li>Provides medical certificates</li>
                             <li>Manages hospital admissions</li>
                         </ul>
-                        <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted); background: var(--bg-soft); padding: 1rem; border-radius: var(--radius-sm);">
+                        <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted); background: var(--bg-soft, #fdf2f8); padding: 1rem; border-radius: var(--radius-sm);">
                             <strong>Best for:</strong> Medication needs, severe depression, bipolar disorder, schizophrenia, addiction medical management, complex cases requiring medical intervention.
                         </p>
                     </div>
@@ -478,13 +478,13 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
                             <li>Trauma processing &#x26; talk therapy</li>
                             <li>Learning disability assessment</li>
                         </ul>
-                        <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted); background: var(--bg-soft); padding: 1rem; border-radius: var(--radius-sm);">
+                        <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted); background: var(--bg-soft, #fdf2f8); padding: 1rem; border-radius: var(--radius-sm);">
                             <strong>Best for:</strong> Talk therapy, anxiety management, child behavioral issues, learning disabilities, relationship counseling, trauma processing, skill-building.
                         </p>
                     </div>
 
                     <div class="comparison-card common-services">
-                        <h3 style="justify-content: center; color: var(--primary);"><i data-lucide="users-round" aria-hidden="true"></i> Common Services (Both Specialists)</h3>
+                        <h3 style="justify-content: center; color: var(--primary, #be185d);"><i data-lucide="users-round" aria-hidden="true"></i> Common Services (Both Specialists)</h3>
                         <p style="margin-bottom: 1.5rem;">Many patients benefit from seeing <strong>both</strong> specialists for integrated, comprehensive care.</p>
                         <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; max-width: 700px; margin: 0 auto;">
                             <span class="service-tag">Anxiety &#x26; Depression</span>
@@ -512,19 +512,19 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
 
                     <div>
                         <span class="section-badge">Founder &#x26; Director</span>
-                        <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin: 0.5rem 0; color: var(--text-dark);">Dr. Anita Sharma</h2>
-                        <p class="lead" style="color: var(--primary); font-weight: 600; font-size: 1.2rem;">Consultant Psychiatrist at Mind Grace</p>
+                        <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin: 0.5rem 0; color: var(--text-dark, #2b0d19);">Dr. Anita Sharma</h2>
+                        <p class="lead" style="color: var(--primary, #be185d); font-weight: 600; font-size: 1.2rem;">Consultant Psychiatrist at Mind Grace</p>
 
 
                         <div class="quote-box">
                             <p style="margin: 0; font-size: 1.1rem; line-height: 1.6;">"For me, transforming people's lives is a calling. I am passionate about what I do. For me, outcomes are important."</p>
                         </div>
 
-                        <h3 style="color: var(--primary);">Professional Summary</h3>
+                        <h3 style="color: var(--primary, #be185d);">Professional Summary</h3>
                         <p style="line-height: 1.8;">Dr. Anita Sharma provides psychiatric consultations at Mind Grace. Explore <strong>adult mental health care</strong> and <strong>child developmental support</strong>, with next steps discussed according to each person’s needs.</p>
 
 
-                        <h3 style="color: var(--primary); margin-top: 2rem;">Adult Mental Health Services (Mind Grace Neuropsychiatric Clinic)</h3>
+                        <h3 style="color: var(--primary, #be185d); margin-top: 2rem;">Adult Mental Health Services (Mind Grace Neuropsychiatric Clinic)</h3>
                         <div class="service-tags">
                             <span class="service-tag">Depression &#x26; Emotional Wellness</span>
                             <span class="service-tag">Anxiety, Stress &#x26; Panic</span>
@@ -537,7 +537,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
                             <span class="service-tag">ADHD &#x26; PTSD Support</span>
                         </div>
 
-                        <h3 style="color: var(--primary); margin-top: 2rem;">Hospital Panel Affiliations</h3>
+                        <h3 style="color: var(--primary, #be185d); margin-top: 2rem;">Hospital Panel Affiliations</h3>
                         <ul class="hospital-list">
                             <li>Naveen Hospital, Alpha-2, Greater Noida</li>
                             <li>Green City Hospital, Delta-1, Greater Noida</li>
@@ -566,12 +566,12 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
                     </div>
 
                     <div>
-                        <span class="section-badge" style="background: var(--secondary);">Consultant Clinical Psychologist</span>
-                        <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin: 0.5rem 0; color: var(--text-dark);">Dr. Sana Firdous</h2>
-                        <p class="lead" style="color: var(--secondary); font-weight: 600; font-size: 1.2rem;">M.Phil Clinical Psychology | RCI No. A82170 | 7+ Years Experience</p>
+                        <span class="section-badge" style="background: var(--secondary, #9d174d);">Consultant Clinical Psychologist</span>
+                        <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); margin: 0.5rem 0; color: var(--text-dark, #2b0d19);">Dr. Sana Firdous</h2>
+                        <p class="lead" style="color: var(--secondary, #9d174d); font-weight: 600; font-size: 1.2rem;">M.Phil Clinical Psychology | RCI No. A82170 | 7+ Years Experience</p>
 
                         <div class="doctor-credentials alt">
-                            <h4 style="margin-top: 0; color: var(--text-dark);">Credentials &#x26; Current Role</h4>
+                            <h4 style="margin-top: 0; color: var(--text-dark, #2b0d19);">Credentials &#x26; Current Role</h4>
                             <ul class="credential-list">
                                 <li><span>RCI Registration</span> <strong>A82170</strong></li>
                                 <li><span>Experience</span> <strong>7+ Years</strong></li>
@@ -579,22 +579,22 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
                             </ul>
                         </div>
 
-                        <h3 style="color: var(--secondary);">Professional Background</h3>
+                        <h3 style="color: var(--secondary, #9d174d);">Professional Background</h3>
                         <p style="line-height: 1.8;">Clinical Psychologist with over seven years of experience in psychodiagnostic assessments, psychotherapy, and child/adolescent mental health. Specializes in neurodevelopmental disorders, cognitive evaluations, and evidence-based psychological assessment. Currently serves as Consultant Clinical Psychologist and Clinical Child Psychologist at Sharda Hospital, Greater Noida.</p>
 
-                        <h3 style="color: var(--secondary); margin-top: 2rem;">Specializations</h3>
+                        <h3 style="color: var(--secondary, #9d174d); margin-top: 2rem;">Specializations</h3>
                         <div class="service-tags">
-                            <span class="service-tag" style="border-color: var(--secondary);">Child Psychology</span>
-                            <span class="service-tag" style="border-color: var(--secondary);">Psychotherapy (CBT, DBT)</span>
-                            <span class="service-tag" style="border-color: var(--secondary);">Psychodiagnostic Testing</span>
-                            <span class="service-tag" style="border-color: var(--secondary);">Neurodevelopmental Disorders</span>
-                            <span class="service-tag" style="border-color: var(--secondary);">Behavioral Disorders</span>
-                            <span class="service-tag" style="border-color: var(--secondary);">Cognitive Evaluation</span>
-                            <span class="service-tag" style="border-color: var(--secondary);">Trauma Therapy</span>
-                            <span class="service-tag" style="border-color: var(--secondary);">Family Counseling</span>
+                            <span class="service-tag" style="border-color: var(--secondary, #9d174d);">Child Psychology</span>
+                            <span class="service-tag" style="border-color: var(--secondary, #9d174d);">Psychotherapy (CBT, DBT)</span>
+                            <span class="service-tag" style="border-color: var(--secondary, #9d174d);">Psychodiagnostic Testing</span>
+                            <span class="service-tag" style="border-color: var(--secondary, #9d174d);">Neurodevelopmental Disorders</span>
+                            <span class="service-tag" style="border-color: var(--secondary, #9d174d);">Behavioral Disorders</span>
+                            <span class="service-tag" style="border-color: var(--secondary, #9d174d);">Cognitive Evaluation</span>
+                            <span class="service-tag" style="border-color: var(--secondary, #9d174d);">Trauma Therapy</span>
+                            <span class="service-tag" style="border-color: var(--secondary, #9d174d);">Family Counseling</span>
                         </div>
 
-                        <h3 style="color: var(--secondary); margin-top: 2rem;">Therapeutic Services (Aasha &#x26; Mind Grace)</h3>
+                        <h3 style="color: var(--secondary, #9d174d); margin-top: 2rem;">Therapeutic Services (Aasha &#x26; Mind Grace)</h3>
                         <ul class="check-list" style="line-height: 2;">
                             <li><strong>Child Development:</strong> Early intervention, speech delays, autism support, ADHD behavioral management, sensory integration issues.</li>
                             <li><strong>Psychotherapy:</strong> CBT, DBT, and supportive therapy for anxiety, depression, trauma, and relationship issues.</li>
@@ -603,7 +603,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
                         </ul>
 
                         <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="/book/" class="btn btn-primary" style="background: var(--secondary); border-color: var(--secondary);">Book Session with Dr. Sana</a>
+                            <a href="/book/" class="btn btn-primary" style="background: var(--secondary, #9d174d); border-color: var(--secondary, #9d174d);">Book Session with Dr. Sana</a>
                     <a href="tel:+919667863295" class="btn btn-outline"><i data-lucide="phone" aria-hidden="true"></i> Call +91 96678 63295</a>
                         </div>
                     </div>
@@ -623,7 +623,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
                         At <strong>Aasha</strong>, we nurture potential for children finding their path.<br>
                         Together, we support whole families – because when a child thrives, parents breathe easier; when parents heal, children feel safe."
                     </p>
-                    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary);">— Dr. Anita Sharma, Founder</p>
+                    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary, #be185d);">— Dr. Anita Sharma, Founder</p>
                 </div>
             </div>
         </section>

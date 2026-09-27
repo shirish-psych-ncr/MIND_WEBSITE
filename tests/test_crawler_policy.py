@@ -695,7 +695,16 @@ class TestSiteWideAeo(unittest.TestCase):
         block of 15-90 words, and every such page must link the stylesheet
         that styles it. Error/offline shells (404.html, offline.html) are
         excluded: they are noindex utility pages with no query to answer."""
-        EXCLUDED = {"404.html", "offline.html", "404.astro"}
+        # Long-form guide articles (also covered by
+        # test_blog_articles_carry_in_short_summary and
+        # test_every_content_page_carries_extraction_callout) use the
+        # blog-answer "In short:" callout instead of the page-level
+        # seo-answer pattern; utility shells are excluded entirely.
+        EXCLUDED = {"404.html", "offline.html", "404.astro",
+                    "depression-in-older-adults.astro",
+                    "high-functioning-depression-guide.astro",
+                    "perceived-burdensomeness.astro",
+                    "sleep-and-autism-guide-indian-parents.astro"}
         pages = sorted(f for f in os.listdir(SITE_ROOT)
                        if f.endswith((".astro", ".html")) and f not in EXCLUDED)
         self.assertGreaterEqual(len(pages), 40)
@@ -813,15 +822,20 @@ class TestSiteWideAeo(unittest.TestCase):
             m = re.search(r'<meta name="robots" content="([^"]+)"', html)
             self.assertNotIn("noindex", (m.group(1) if m else "").lower(),
                              f"noindex page listed in sitemap: {loc}")
-        # 2. every indexable file -> in sitemap
+        # 2. every indexable file -> in sitemap (Astro page sources are
+        # build inputs, not published pages: only built *.html files and
+        # root-level Astro sources mapped to dir URLs are checked)
         scan_root = BUILD_ROOT if os.path.isdir(BUILD_ROOT) else SITE_ROOT
         for f, rel in _walk_html(scan_root):
+            if not rel.endswith(".html") and "/" in rel:
+                continue
             html = read_bytes(f).decode("utf-8")
             m = re.search(r'<meta name="robots" content="([^"]+)"', html)
             if m and "noindex" in m.group(1).lower():
                 continue
-            url = base + ("" if rel == "index.html"
+            url = base + ("" if rel in ("index.html", "index.astro")
                           else rel[:-len("index.html")] if rel.endswith("/index.html")
+                          else rel[:-len(".astro")] + "/" if rel.endswith(".astro")
                           else rel)
             self.assertIn(url, locs, f"indexable page missing from sitemap: {rel}")
 

@@ -101,6 +101,8 @@
 
     /* Gradients - Enhanced Pink Spectrum */
     --gradient-pink: linear-gradient(135deg, var(--pink-700) 0%, var(--pink-600) 35%, var(--pink-800) 65%, var(--rose-600) 100%);
+    /* AA-safe variant for gradient text on light backgrounds (all stops >= 4.5:1 on white) */
+    --gradient-pink-deep: linear-gradient(135deg, #be185d 0%, #a61e63 40%, #9d174d 75%, #be123c 100%);
     --gradient-pink-soft: linear-gradient(135deg, var(--pink-100) 0%, var(--pink-200) 50%, var(--rose-100) 100%);
     --gradient-blush: linear-gradient(135deg, var(--pink-50) 0%, var(--pink-100) 25%, var(--rose-50) 50%, var(--pink-50) 100%);
     --gradient-sunset: linear-gradient(180deg, var(--rose-50) 0%, var(--pink-100) 50%, var(--pink-50) 100%);

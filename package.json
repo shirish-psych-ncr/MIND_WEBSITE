@@ -1,7 +1,19 @@
 {
+  "name": "mind-grace-ncr-site",
+  "private": true,
+  "scripts": {
+    "lint:a11y": "node scripts/a11y_lint/structure_lint.cjs && node scripts/a11y_lint/contrast_direction.cjs && node scripts/a11y_lint/prose_lint.cjs && node scripts/a11y_lint/a11y_css_inject.cjs",
+    "lint:html": "html-validate --config config/htmlvalidate.json offline.html",
+    "lint:readability": "python3 scripts/a11y_lint/readability_hyphenation.py",
+    "report": "python3 scripts/a11y_lint/summarize_report.py",
+    "test": "python3 -m unittest discover -s tests -v",
+    "build:min": "node scripts/rebuild_min_css.cjs",
+    "audit:responsive": "node scripts/audit_accessibility.cjs",
+    "audit:lighthouse": "node scripts/audit_lighthouse.cjs",
+    "clean": "rm -rf output/responsive-audit output/layout output/playwright tests/__pycache__ scripts/__pycache__"
+  },
   "dependencies": {
     "alex": "^11.0.1",
-    "astro": "^7.3.5",
     "color-blind": "^0.1.3",
     "direction": "^2.0.1",
     "esbuild": "^0.28.2",
