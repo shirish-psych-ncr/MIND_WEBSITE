@@ -1,10 +1,13 @@
 # Dependencies
 node_modules/
 
-# Build Output & Artifacts
+# Build artifacts
+dist/
 .astro/
-output/
 
-# Python Cache
+# Python cache
 __pycache__/
 *.pyc
+
+# Playwright CLI artifacts
+.playwright-cli/
