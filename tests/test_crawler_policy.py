@@ -15,6 +15,11 @@ import unittest
 from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Astro migration: pages live as .astro sources under src/pages/ and are
+# rendered into dist/ at build time. Content assertions below read the
+# sources directly so the suite runs without a build step.
+SITE_ROOT = os.path.join(ROOT, "src", "pages")
+PAGES_DIR = SITE_ROOT  # kept for readability of call sites
 
 # Local tooling directories (agent-skill libraries, installed dependencies,
 # editor/agent mirrors) are not site content and are excluded from site-wide
@@ -29,14 +34,19 @@ def _is_skill_file(rel):
 
 
 def _walk_html(root_dir):
-    """Yield (abs_path, root-relative posix path) for every .html under root_dir,
-    skipping local tooling directories."""
+    """Yield (abs_path, site-relative posix path) for every HTML page or
+    Astro page source under root_dir, skipping local tooling directories."""
     import glob as _glob
-    for p in _glob.glob(os.path.join(root_dir, "**/*.html"), recursive=True):
-        rel = os.path.relpath(p, ROOT).replace(os.sep, "/")
-        if _is_skill_file(rel):
-            continue
-        yield p, rel
+    seen = set()
+    out = []
+    for pat in ("**/*.html", "**/*.astro"):
+        for p in _glob.glob(os.path.join(root_dir, pat), recursive=True):
+            rel = os.path.relpath(p, root_dir).replace(os.sep, "/")
+            if _is_skill_file(rel) or rel.startswith("_astro/") or rel in seen:
+                continue
+            seen.add(rel)
+            out.append((p, rel))
+    return iter(out)
 
 # User-agents that must be explicitly ALLOWED (traditional search + real-time
 # AI citation/retrieval agents) per the 2026 crawler-management framework.
@@ -60,8 +70,85 @@ DISALLOWED_AGENTS = [
 MAX_ROBOTS_BYTES = 512_000
 
 
+
+def page_source(name):
+    """Resolve a public page name (e.g. "fees.html" or "blog/pages/adult/x/")
+    to its Astro source under src/pages/, falling back to any on-disk HTML."""
+    import glob as _glob
+    candidates = []
+    if name.endswith(".html"):
+        stem = name[:-5]
+        candidates.append(os.path.join(SITE_ROOT, stem + ".astro"))
+        candidates.append(os.path.join(SITE_ROOT, stem, "index.astro"))
+        candidates.append(os.path.join(ROOT, name))
+        candidates.append(os.path.join(SITE_ROOT, name))
+    else:
+        candidates.append(os.path.join(SITE_ROOT, name.strip("/"), "index.astro"))
+        candidates.append(os.path.join(SITE_ROOT, name.strip("/") + ".astro"))
+    for c in candidates:
+        if os.path.exists(c):
+            return c
+    raise FileNotFoundError(f"no source found for page: {name}")
+
+
+BUILD_ROOT = os.path.join(ROOT, "dist")
+
+
+def astro_body(text):
+    """Strip Astro frontmatter and String.raw template literals so structural
+    counts (callouts, tag balance) reflect only the rendered markup."""
+    text = re.sub(r'^---.*?\n---\n', "", text, flags=re.S)
+    text = RAW_BODY_RE.sub("", text)
+    return text
+
+
+def page_source_for_sitemap(cand):
+    """Map a sitemap-relative path (e.g. "faq/index.html" or "tools/x/index.html")
+    back to its Astro source under src/pages/."""
+    if cand == "index.html":
+        return os.path.join(SITE_ROOT, "index.astro")
+    stem = cand[:-len("/index.html")] if cand.endswith("/index.html") else cand
+    for c in (os.path.join(SITE_ROOT, stem + ".astro"),
+              os.path.join(SITE_ROOT, stem, "index.astro"),
+              os.path.join(SITE_ROOT, stem, "index.html"),
+              os.path.join(ROOT, cand)):
+        if os.path.exists(c):
+            return c
+    return os.path.join(SITE_ROOT, stem + ".astro")
+
+
+RAW_BODY_RE = re.compile(r"String\.raw`(?:[^`]|``)*`", re.S)
+LD_RE = re.compile(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
+RAW_RE = re.compile(r'String\.raw`(.*?)`', re.S)
+
+
+def ld_blocks(text):
+    """Yield JSON-LD payloads from rendered HTML and from Astro sources where
+    head markup is stored inside String.raw template literals."""
+    seen = set()
+    for source in (text, "\n".join(RAW_RE.findall(text))):
+        for block in LD_RE.findall(source):
+            if block in seen:
+                continue
+            seen.add(block)
+            yield block
+
+
 def read_bytes(name):
-    with open(os.path.join(ROOT, name), "rb") as fh:
+    if not os.path.isabs(name):
+        candidates = []
+        if name.endswith(".html"):
+            stem = name[:-5]
+            candidates += [os.path.join(SITE_ROOT, stem + ".astro"),
+                           os.path.join(SITE_ROOT, stem, "index.astro")]
+        candidates += [os.path.join(SITE_ROOT, name), os.path.join(ROOT, name)]
+        for candidate in candidates:
+            if os.path.exists(candidate):
+                name = candidate
+                break
+        else:
+            name = os.path.join(SITE_ROOT, name)
+    with open(name, "rb") as fh:
         return fh.read()
 
 
@@ -391,7 +478,7 @@ class TestAeoContent(unittest.TestCase):
     """
 
     def test_fees_page_has_comparison_table(self):
-        html = read_bytes("fees.html").decode("utf-8")
+        html = read_bytes(page_source("fees.html")).decode("utf-8")
         self.assertIn("<table", html,
                       "fees.html needs a clean HTML table for AI extraction")
         # Table must be semantically complete: caption, header row, body rows.
@@ -404,16 +491,14 @@ class TestAeoContent(unittest.TestCase):
     def test_fees_table_numbers_match_visible_cards(self):
         # The table is an alternate view of the same facts; it must not
         # contradict the pricing cards (entity/data consistency rule).
-        html = read_bytes("fees.html").decode("utf-8")
+        html = read_bytes(page_source("fees.html")).decode("utf-8")
         for amount in ("900", "700", "500", "2,000", "8,000"):
             self.assertIn(amount, html, f"fee figure {amount} missing")
 
     def test_fees_page_faqschema_mirrors_visible_content(self):
         import json
-        html = read_bytes("fees.html").decode("utf-8")
-        blocks = re.findall(
-            r'<script type="application/ld\+json">(.*?)</script>',
-            html, re.S)
+        html = read_bytes(page_source("fees.html")).decode("utf-8")
+        blocks = list(ld_blocks(html))
         faq = None
         for b in blocks:
             try:
@@ -434,19 +519,17 @@ class TestAeoContent(unittest.TestCase):
 
     def test_all_jsonld_blocks_site_wide_are_valid(self):
         import json
-        root = ROOT
+        root = SITE_ROOT
         checked = 0
         for dirpath, dirnames, filenames in os.walk(root):
             dirnames[:] = [d for d in dirnames
                            if d not in (".git", "__pycache__", "node_modules")]
             for fn in filenames:
-                if not fn.endswith(".html"):
+                if not fn.endswith((".html", ".astro")):
                     continue
                 with open(os.path.join(dirpath, fn), encoding="utf-8") as f:
                     html = f.read()
-                for b in re.findall(
-                        r'<script type="application/ld\+json">(.*?)</script>',
-                        html, re.S):
+                for b in ld_blocks(html):
                     try:
                         json.loads(b)
                     except json.JSONDecodeError as e:
@@ -503,11 +586,9 @@ class TestSiteWideAeo(unittest.TestCase):
         self.assertEqual(len(hits), 2)
 
     def test_defined_term_schema_on_services(self):
-        html = read_bytes("services.html").decode("utf-8")
+        html = read_bytes(page_source("services.html")).decode("utf-8")
         found = False
-        for b in re.findall(
-                r'<script type="application/ld\+json">(.*?)</script>',
-                html, re.S):
+        for b in ld_blocks(html):
             data = json.loads(b)
             if isinstance(data, dict) and any(
                     t.get("@type") == "DefinedTerm"
@@ -520,18 +601,16 @@ class TestSiteWideAeo(unittest.TestCase):
         # Entity-consistency guard: every "url" property in structured data
         # must carry a real value (previously dozens of "url": "" defects).
         offenders = []
-        for dirpath, dirnames, filenames in os.walk(ROOT):
+        for dirpath, dirnames, filenames in os.walk(SITE_ROOT):
             dirnames[:] = [d for d in dirnames
                            if d not in (".git", "__pycache__", "node_modules")]
             for fn in filenames:
-                if not fn.endswith(".html"):
+                if not fn.endswith((".html", ".astro")):
                     continue
                 p = os.path.join(dirpath, fn)
                 with open(p, encoding="utf-8") as f:
                     html = f.read()
-                for b in re.findall(
-                        r'<script type="application/ld\+json">(.*?)</script>',
-                        html, re.S):
+                for b in ld_blocks(html):
                     try:
                         data = json.loads(b)
                     except json.JSONDecodeError:
@@ -564,8 +643,8 @@ class TestSiteWideAeo(unittest.TestCase):
 
     def test_faq_schema_questions_visible_on_page(self):
         """Decision Rule 2: FAQPage schema must mirror visible content."""
-        html = read_bytes("faq.html").decode("utf-8")
-        blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
+        html = read_bytes(page_source("faq.html")).decode("utf-8")
+        blocks = list(ld_blocks(html))
         questions = []
         for b in blocks:
             data = json.loads(b)
@@ -579,8 +658,8 @@ class TestSiteWideAeo(unittest.TestCase):
 
     def test_faq_schema_json_file_matches_inline(self):
         """faq-schema.json must not drift from the visible FAQPage schema."""
-        html = read_bytes("faq.html").decode("utf-8")
-        m = re.search(r'<script type="application/ld\+json">(\{.*?"@type": "FAQPage".*?)</script>', html, re.S)
+        html = read_bytes(page_source("faq.html")).decode("utf-8")
+        m = re.search(r'<script[^>]*type="application/ld\+json"[^>]*>(\{.*?"@type": "FAQPage".*?)</script>', html, re.S)
         inline = json.loads(m.group(1))
         standalone = json.loads(read_bytes("faq-schema.json").decode("utf-8"))
         self.assertEqual(inline, standalone)
@@ -595,13 +674,11 @@ class TestSiteWideAeo(unittest.TestCase):
         """
         canonical = "919667863295"
         offenders = []
-        for name in sorted(f for f in os.listdir(ROOT) if f.endswith(".html")):
-            path = os.path.join(ROOT, name)
+        for name in sorted(f for f in os.listdir(SITE_ROOT) if f.endswith((".html", ".astro"))):
+            path = os.path.join(SITE_ROOT, name)
             with open(path, encoding="utf-8") as fh:
                 html = fh.read()
-            for block in re.findall(
-                r'<script type="application/ld\+json">(.*?)</script>', html, re.S
-            ):
+            for block in ld_blocks(html):
                 try:
                     data = json.loads(block)
                 except json.JSONDecodeError:
@@ -618,12 +695,12 @@ class TestSiteWideAeo(unittest.TestCase):
         block of 15-90 words, and every such page must link the stylesheet
         that styles it. Error/offline shells (404.html, offline.html) are
         excluded: they are noindex utility pages with no query to answer."""
-        EXCLUDED = {"404.html", "offline.html"}
-        pages = sorted(f for f in os.listdir(ROOT)
-                       if f.endswith(".html") and f not in EXCLUDED)
+        EXCLUDED = {"404.html", "offline.html", "404.astro"}
+        pages = sorted(f for f in os.listdir(SITE_ROOT)
+                       if f.endswith((".astro", ".html")) and f not in EXCLUDED)
         self.assertGreaterEqual(len(pages), 40)
         for name in pages:
-            with open(os.path.join(ROOT, name), encoding="utf-8") as fh:
+            with open(os.path.join(SITE_ROOT, name), encoding="utf-8") as fh:
                 html = fh.read()
             self.assertEqual(
                 html.count('class="seo-answer"'), 1,
@@ -644,7 +721,7 @@ class TestSiteWideAeo(unittest.TestCase):
         its own lead paragraph (no fabricated facts), styled by both the
         source and minified classic-blog CSS."""
         import glob as _glob
-        articles = sorted(set(_glob.glob(os.path.join(ROOT, "blog/pages/*/*.html")) + _glob.glob(os.path.join(ROOT, "blog/pages/*/index.html")) + _glob.glob(os.path.join(ROOT, "blog/pages/*/*/index.html"))))
+        articles = sorted(set(_glob.glob(os.path.join(SITE_ROOT, "blog/pages/*/*.astro")) + _glob.glob(os.path.join(SITE_ROOT, "blog/pages/*/*/*.astro")) + _glob.glob(os.path.join(SITE_ROOT, "blog/pages/*/*/*/*.astro")) + _glob.glob(os.path.join(SITE_ROOT, "blog/pages/*/*.html")) + _glob.glob(os.path.join(SITE_ROOT, "blog/pages/*/*/*.html")) + _glob.glob(os.path.join(SITE_ROOT, "blog/pages/*/*/*/*.html"))))
         self.assertGreaterEqual(len(articles), 9)
         for path in articles:
             html = read_bytes(path).decode("utf-8")
@@ -667,22 +744,25 @@ class TestSiteWideAeo(unittest.TestCase):
         extraction callout (seo-answer or blog-answer div), and guide/blog
         pages that use blog-answer must link a stylesheet defining it."""
         import glob as _glob
-        shells = {"404.html", "offline.html", "thank-you.html"}
-        pages = [rel for _p, rel in _walk_html(ROOT)]
+        shells = {"404.astro", "404.html", "offline.html", "offline.astro",
+                  "thank-you.astro", "thank-you.html"}
+        _p_by_rel = {rel: p for p, rel in _walk_html(SITE_ROOT)}
+        pages = sorted(_p_by_rel)
         self.assertGreaterEqual(len(pages), 60)
         for rel in pages:
             if rel in shells:
                 continue
-            html = read_bytes(os.path.join(ROOT, rel)).decode("utf-8")
-            n = len(re.findall(r'class="(seo|blog)-answer"', html))
+            html = read_bytes(_p_by_rel[rel]).decode("utf-8")
+            body = astro_body(html)
+            n = len(re.findall(r'class="(seo|blog)-answer"', body))
             self.assertEqual(n, 1, f"{rel} has {n} extraction callouts")
             # structural hygiene: balanced divs (open==close delta vs zero)
             self.assertEqual(
-                len(re.findall(r"<div[ >]", html)),
-                len(re.findall(r"</div>", html)),
+                len(re.findall(r"<div[ >]", body)),
+                len(re.findall(r"</div>", body)),
                 f"{rel} unbalanced <div> tags")
         # tools pages must style their seo-answer via shared stylesheet
-        for rel in sorted(_glob.glob(os.path.join(ROOT, "tools/*.html"))):
+        for rel in sorted(_glob.glob(os.path.join(SITE_ROOT, "tools/*.astro")) + _glob.glob(os.path.join(SITE_ROOT, "tools/*.html"))):
             html = read_bytes(rel).decode("utf-8")
             self.assertIn("seo-pages.min.css", html,
                           f"{rel} missing seo-pages stylesheet link")
@@ -725,14 +805,17 @@ class TestSiteWideAeo(unittest.TestCase):
             # site root URL ("") maps to index.html
             cand = "index.html" if not rel.strip("/") else (
                 rel if rel.endswith(".html") else os.path.join(rel, "index.html"))
-            path = os.path.join(ROOT, cand.replace("/", os.sep))
+            built = os.path.join(BUILD_ROOT, cand.replace("/", os.sep))
+            src = page_source_for_sitemap(cand)
+            path = built if os.path.exists(built) else src
             self.assertTrue(os.path.exists(path), f"sitemap loc has no file: {loc}")
-            html = read_bytes(path).decode("utf-8")
+            html = open(path, encoding="utf-8").read()
             m = re.search(r'<meta name="robots" content="([^"]+)"', html)
             self.assertNotIn("noindex", (m.group(1) if m else "").lower(),
                              f"noindex page listed in sitemap: {loc}")
         # 2. every indexable file -> in sitemap
-        for f, rel in _walk_html(ROOT):
+        scan_root = BUILD_ROOT if os.path.isdir(BUILD_ROOT) else SITE_ROOT
+        for f, rel in _walk_html(scan_root):
             html = read_bytes(f).decode("utf-8")
             m = re.search(r'<meta name="robots" content="([^"]+)"', html)
             if m and "noindex" in m.group(1).lower():

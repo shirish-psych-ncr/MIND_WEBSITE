@@ -1,5 +1,5 @@
 ---
-import Layout from './layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro';
 const headExtra = String.raw`<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -329,7 +329,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <!-- Street View Gallery -->
                         <div class="grid grid-2-col gap-4 mt-6">
-                            <imgloading="eager" fetchpriority="high" decoding="async" src="/assets/images/location-street-view-near.webp" alt="Street view close to the clinic entrance in Greater Noida" class="rounded-lg shadow-md w-full h-48 object-cover" width="600" height="192">
+                            <img loading="eager" fetchpriority="high" decoding="async" src="/assets/images/location-street-view-near.webp" alt="Street view close to the clinic entrance in Greater Noida" class="rounded-lg shadow-md w-full h-48 object-cover" width="600" height="192">
                             <img loading="lazy" decoding="async" src="/assets/images/location-street-view-distance.webp" alt="Street view from a short distance showing the route toward the clinic" class="rounded-lg shadow-md w-full h-48 object-cover" width="600" height="192">
                         </div>
                     </div>
