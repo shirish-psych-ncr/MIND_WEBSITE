@@ -6,22 +6,15 @@ write-good, alex, pyphen, eslint-plugin-jsx-a11y, html-validate, i18next-scanner
 
 ## 1. wcag-contrast — Color contrast (WCAG AA/AAA)
 
-93 unique fg/bg pairs checked; **11 fail WCAG AA**
+105 unique fg/bg pairs checked; **3 fail WCAG AA**
 
 Worst offenders:
 
 | Ratio | Selector | FG | BG | File |
 |---|---|---|---|---|
-| 1 | `.crisis-banner__phone` | #ffffff | #ffffff | assets/css/crisis-banner.css |
-| 1.02 | `body input, body select, body textarea` | #24131a | #24161c | assets/css/accessibility.css |
-| 1.028 | `body` | #24131a | #1d1217 | assets/css/accessibility.css |
-| 1.053 | `body:has(#riverCanvas) textarea` | #fff7fa | #ffffff | assets/css-tools/min/tools-leaf.min.css |
-| 1.514 | `body button:hover, body .btn:hover, body` | #2b0d19 | #6f0d31 | assets/css/inspiration.css |
-| 1.709 | `.nav-link:hover, .nav-link:focus-visible` | #7a1038 | #b20d8f | assets/css/layout.css |
-| 2.155 | `.btn--secondary:hover` | #5d0c2b | #b20d8f | assets/css/layout.css |
-| 2.638 | `.hero h1 .highlight` | #7a1038 | #cf48ab | assets/css/layout.css |
-| 3.527 | `.stage-nav-btn` | #ffffff | #ec4899 | assets/css/components.css |
-| 3.713 | `.skip-link:focus` | #eb32b5 | #ffffff | assets/css/animations.css |
+| 1 | `.tool-link-bar a` | #ffffff | #ffffff | assets/css-tools/min/tools-butterfly.min.css |
+| 1.263 | `.hero h1 .highlight` | #7a1038 | #920074 | assets/css/layout.css |
+| 3.001 | `body.tool-page:has(#L) .status-text` | #ffffff | #949596 | assets/css-tools/min/tools-butterfly.min.css |
 
 ## 10. direction — RTL/LTR adaptability
 
@@ -37,39 +30,39 @@ RTL content files: 0; lang/dir issues: 0
 
 ## 4. textstat — Readability (grade level)
 
-82 content files scored; **81 above grade 8.0**
+82 content files scored; **80 above grade 8.0**
 
-- `CRAWLER_POLICY.md` — Flesch-Kincaid grade 11.39, Gunning Fog 13.67
-- `llms.txt` — Flesch-Kincaid grade 15.08, Gunning Fog 14.75
-- `ZARAZ_TRACKING_GUIDE.md` — Flesch-Kincaid grade 12.82, Gunning Fog 14.35
-- `IMPLEMENTATION_SUMMARY.md` — Flesch-Kincaid grade 15.02, Gunning Fog 16.82
-- `DEPLOYMENT_GUIDE.md` — Flesch-Kincaid grade 12.3, Gunning Fog 12.96
-- `AMPLITUDE_ZONING_SETUP.md` — Flesch-Kincaid grade 11.49, Gunning Fog 12.63
-- `GOOGLE_TRANSLATE_SETUP.md` — Flesch-Kincaid grade 11.94, Gunning Fog 13.22
-- `CLOUDFLARE_AGENT_SETUP.md` — Flesch-Kincaid grade 16.8, Gunning Fog 17.38
-- `offline.html` — Flesch-Kincaid grade 12.05, Gunning Fog 15.45
-- `QUICK_START.md` — Flesch-Kincaid grade 8.69, Gunning Fog 9.36
-- `llms-tools.txt` — Flesch-Kincaid grade 15.66, Gunning Fog 14.06
-- `llms-blog.txt` — Flesch-Kincaid grade 19.49, Gunning Fog 14.5
-- `OPTIMIZATION_SUMMARY.md` — Flesch-Kincaid grade 13.33, Gunning Fog 15.17
-- `robots.txt` — Flesch-Kincaid grade 13.93, Gunning Fog 17.2
-- `scripts/BLOG-PUBLISHING.md` — Flesch-Kincaid grade 8.55, Gunning Fog 11.03
+- `CRAWLER_POLICY.md` — Flesch-Kincaid grade 12.49, Gunning Fog 14.98
+- `llms.txt` — Flesch-Kincaid grade 12.94, Gunning Fog 15.17
+- `ZARAZ_TRACKING_GUIDE.md` — Flesch-Kincaid grade 12.82, Gunning Fog 14.41
+- `IMPLEMENTATION_SUMMARY.md` — Flesch-Kincaid grade 19.38, Gunning Fog 21.92
+- `DEPLOYMENT_GUIDE.md` — Flesch-Kincaid grade 11.95, Gunning Fog 12.99
+- `AMPLITUDE_ZONING_SETUP.md` — Flesch-Kincaid grade 10.66, Gunning Fog 12.49
+- `GOOGLE_TRANSLATE_SETUP.md` — Flesch-Kincaid grade 11.49, Gunning Fog 13.18
+- `CLOUDFLARE_AGENT_SETUP.md` — Flesch-Kincaid grade 18.68, Gunning Fog 21.05
+- `offline.html` — Flesch-Kincaid grade 12.48, Gunning Fog 16.03
+- `llms-tools.txt` — Flesch-Kincaid grade 12.67, Gunning Fog 14.97
+- `llms-blog.txt` — Flesch-Kincaid grade 15.0, Gunning Fog 17.96
+- `OPTIMIZATION_SUMMARY.md` — Flesch-Kincaid grade 13.3, Gunning Fog 15.31
+- `robots.txt` — Flesch-Kincaid grade 12.05, Gunning Fog 14.28
+- `scripts/BLOG-PUBLISHING.md` — Flesch-Kincaid grade 8.66, Gunning Fog 11.07
+- `src/pages/depression-in-older-adults.astro` — Flesch-Kincaid grade 11.9, Gunning Fog 14.77
 
 ## 5. web-vitals — Performance adaptability (CLS/LCP/INP/FCP/TTFB)
 
 1 pages measured; 0 with poor metric(s)
 
-- `offline.html`: LCP=216 (good), FCP=216 (good), TTFB=12.7 (good), CLS=0.0 (good), INP=0 (good)
+- `offline.html`: LCP=332 (good), FCP=332 (good), TTFB=10.2 (good), CLS=0.0 (good), INP=16 (good)
 
 ## 6. a11y.css — CSS-injected visual warnings
 
-1 HTML files injected & parsed; **2 flags**
+1 HTML files injected & parsed; **0 flags**
 
-- `offline.html`: 2 flagged element(s)
+
 
 ## 7. write-good — Prose clarity (passive voice, weasel words…)
 
-16 files, **87 style suggestions**
+16 files, **86 style suggestions**
 
 - `CRAWLER_POLICY.md`: 13 suggestions ("is deployed" may be passive voice×1, "ONLY" can weaken meaning×1, "only" can weaken meaning×5, "is handled" may be passive voice×1)
 - `AMPLITUDE_ZONING_SETUP.md`: 11 suggestions ("minimum" is wordy or unneeded×2, "only" can weaken meaning×7, "ONLY" can weaken meaning×1, "be rejected" may be passive voice×1)
@@ -79,8 +72,8 @@ RTL content files: 0; lang/dir issues: 0
 - `CLOUDFLARE_AGENT_SETUP.md`: 6 suggestions ("Successfully" can weaken meaning×1, "assistance" is wordy or unneeded×1, "multiple" is wordy or unneeded×1, "be redirected" may be passive voice×1)
 - `DEPLOYMENT_GUIDE.md`: 5 suggestions ("additional" is wordy or unneeded×1, "be set" may be passive voice×1, "only" can weaken meaning×1, "be used" may be passive voice×1)
 - `GOOGLE_TRANSLATE_SETUP.md`: 5 suggestions ("only" can weaken meaning×2, "gracefully" can weaken meaning×1, "be reviewed" may be passive voice×1, "was removed" may be passive voice×1)
-- `llms.txt`: 5 suggestions ("is restricted" may be passive voice×1, "are disallowed" may be passive voice×1, "currently" can weaken meaning×1, "only" can weaken meaning×1)
 - `OPTIMIZATION_SUMMARY.md`: 4 suggestions ("Implement" is wordy or unneeded×2, "correctly" can weaken meaning×1, "Sufficient" is wordy or unneeded×1)
+- `llms.txt`: 4 suggestions ("are blocked" may be passive voice×1, "currently" can weaken meaning×1, "only" can weaken meaning×1, "exactly" can weaken meaning×1)
 - `scripts/BLOG-PUBLISHING.md`: 4 suggestions ("are added" may be passive voice×1, "is required" may be passive voice×1, "are excluded" may be passive voice×1, "is added" may be passive voice×1)
 - `llms-blog.txt`: 2 suggestions ("Early" can weaken meaning×1, "early" can weaken meaning×1)
 - `offline.html`: 2 suggestions ("Book" is repeated×1, "only" can weaken meaning×1)
@@ -88,93 +81,15 @@ RTL content files: 0; lang/dir issues: 0
 
 ## 8. alex — Inclusive language scan
 
-**45 findings across 12 files**
+**0 findings across 12 files**
 
-- `AMPLITUDE_ZONING_SETUP.md`: 3 flag(s) — e.g. “Be careful with `failed`, it’s profane in some cases”
-- `CRAWLER_POLICY.md`: 4 flag(s) — e.g. “`whitespace` may be insensitive, use `space`, `blank` instead”
-- `DEPLOYMENT_GUIDE.md`: 3 flag(s) — e.g. “`Simple` may be insensitive, try not to use it”
-- `GOOGLE_TRANSLATE_SETUP.md`: 1 flag(s) — e.g. “Be careful with `fires`, it’s profane in some cases”
-- `IMPLEMENTATION_SUMMARY.md`: 5 flag(s) — e.g. “`hero` may be insensitive, use `role-model`, `mentor` instead”
-- `OPTIMIZATION_SUMMARY.md`: 7 flag(s) — e.g. “Be careful with `failures`, it’s profane in some cases”
-- `ZARAZ_TRACKING_GUIDE.md`: 4 flag(s) — e.g. “`special` may be insensitive, use `has a disability`, `person with a disability`, `people with disabilities` instead”
-- `llms-blog.txt`: 10 flag(s) — e.g. “`mental` may be insensitive, use `rude`, `malicious`, `mean`, `disgusting`, `incredible`, `vile`, `person with symptoms of mental illness`, `person with mental illness`, `person with symptoms of a mental disorder`, `person with a mental disorder` instead”
-- `llms.txt`: 2 flag(s) — e.g. “Be careful with `adults`, it’s profane in some cases”
-- `offline.html`: 1 flag(s) — e.g. “Be careful with `adults`, it’s profane in some cases”
-- `robots.txt`: 4 flag(s) — e.g. “`host` may be insensitive, use `presenter`, `entertainer`, `emcee` instead”
-- `scripts/BLOG-PUBLISHING.md`: 1 flag(s) — e.g. “`host` may be insensitive, use `presenter`, `entertainer`, `emcee` instead”
+
 
 ## 10. eslint-plugin-jsx-a11y — Component-level a11y lint
 
-69 files linted (69 .astro templates converted to JSX for static a11y linting; 0 native .jsx/.tsx files); **68 errors**
+69 files linted (69 .astro templates converted to JSX for static a11y linting; 0 native .jsx/.tsx files; 2 file(s) unparseable even after strict transform); **0 errors**
 
-- `src/components/Head.astro`: 1 error(s) — 
-- `src/layouts/Layout.astro`: 1 error(s) — 
-- `src/pages/404.astro`: 1 error(s) — 
-- `src/pages/aasha.astro`: 1 error(s) — 
-- `src/pages/about.astro`: 1 error(s) — 
-- `src/pages/addiction-substance-use.astro`: 1 error(s) — 
-- `src/pages/adhd-autism-assessment.astro`: 1 error(s) — 
-- `src/pages/approach.astro`: 1 error(s) — 
-- `src/pages/assessments.astro`: 1 error(s) — 
-- `src/pages/bipolar-mood-disorders.astro`: 1 error(s) — 
-- `src/pages/blog/adult.astro`: 1 error(s) — 
-- `src/pages/blog/children.astro`: 1 error(s) — 
-- `src/pages/blog/iilm-psychology-internship.astro`: 1 error(s) — 
-- `src/pages/blog/index.astro`: 1 error(s) — 
-- `src/pages/blog/pages/adult/overthinking-vs-anxiety.astro`: 1 error(s) — 
-- `src/pages/blog/pages/adult/scheduled-worry-time-technique.astro`: 1 error(s) — 
-- `src/pages/blog/pages/adult/sleep-and-anxiety-cycle.astro`: 1 error(s) — 
-- `src/pages/blog/pages/adult/stimulus-control-therapy.astro`: 1 error(s) — 
-- `src/pages/blog/pages/adult/when-to-see-a-psychiatrist.astro`: 1 error(s) — 
-- `src/pages/blog/pages/child/early-signs-of-autism.astro`: 1 error(s) — 
-- `src/pages/blog/pages/child/school-concerns-and-adhd.astro`: 1 error(s) — 
-- `src/pages/blog/pages/child/sensory-overload-at-home.astro`: 1 error(s) — 
-- `src/pages/blog/pages/child/speech-delay-red-flags.astro`: 1 error(s) — 
-- `src/pages/book.astro`: 1 error(s) — 
-- `src/pages/child-development.astro`: 1 error(s) — 
-- `src/pages/conditions.astro`: 1 error(s) — 
-- `src/pages/consent.astro`: 1 error(s) — 
-- `src/pages/contact.astro`: 1 error(s) — 
-- `src/pages/depression-anxiety.astro`: 1 error(s) — 
-- `src/pages/depression-in-older-adults.astro`: 1 error(s) — 
-- `src/pages/disclaimer.astro`: 1 error(s) — 
-- `src/pages/doctors.astro`: 1 error(s) — 
-- `src/pages/dr-anita-sharma.astro`: 1 error(s) — 
-- `src/pages/emergency.astro`: 1 error(s) — 
-- `src/pages/faq.astro`: 1 error(s) — 
-- `src/pages/fees.astro`: 1 error(s) — 
-- `src/pages/gallery.astro`: 1 error(s) — 
-- `src/pages/high-functioning-depression-guide.astro`: 1 error(s) — 
-- `src/pages/index.astro`: 1 error(s) — 
-- `src/pages/learning-disability-assessment.astro`: 1 error(s) — 
-- `src/pages/location.astro`: 1 error(s) — 
-- `src/pages/mind-grace.astro`: 1 error(s) — 
-- `src/pages/ocd-panic-ptsd.astro`: 1 error(s) — 
-- `src/pages/perceived-burdensomeness.astro`: 1 error(s) — 
-- `src/pages/privacy.astro`: 1 error(s) — 
-- `src/pages/process.astro`: 1 error(s) — 
-- `src/pages/psychiatrist-greater-noida.astro`: 1 error(s) — 
-- `src/pages/psychiatrist-in-noida.astro`: 1 error(s) — 
-- `src/pages/psychiatry.astro`: 1 error(s) — 
-- `src/pages/psychology-counselling.astro`: 1 error(s) — 
-- `src/pages/psychosis-schizophrenia.astro`: 1 error(s) — 
-- `src/pages/resources.astro`: 1 error(s) — 
-- `src/pages/services.astro`: 1 error(s) — 
-- `src/pages/sleep-and-autism-guide-indian-parents.astro`: 1 error(s) — 
-- `src/pages/sleep-eating-disorders.astro`: 1 error(s) — 
-- `src/pages/specialized-consultations.astro`: 1 error(s) — 
-- `src/pages/teleconsultation.astro`: 1 error(s) — 
-- `src/pages/terms.astro`: 1 error(s) — 
-- `src/pages/testimonials.astro`: 1 error(s) — 
-- `src/pages/thank-you.astro`: 1 error(s) — 
-- `src/pages/therapy.astro`: 1 error(s) — 
-- `src/pages/tools/butterfly-tapper.astro`: 1 error(s) — 
-- `src/pages/tools/eye-movement.astro`: 1 error(s) — 
-- `src/pages/tools/guided-breathing.astro`: 1 error(s) — 
-- `src/pages/tools/horizon-scan.astro`: 1 error(s) — 
-- `src/pages/tools/hypnos-fractal.astro`: 1 error(s) — 
-- `src/pages/tools/leaf-on-stream.astro`: 1 error(s) — 
-- `src/pages/trauma-grief-support.astro`: 1 error(s) — 
+
 
 ## 11. html-validate — HTML validity & semantics
 
@@ -184,7 +99,7 @@ RTL content files: 0; lang/dir issues: 0
 
 ## 12. i18next-scanner — Hardcoded string / i18n coverage
 
-102 source files scanned; **74 files contain hardcoded UI strings** (1975 samples); translated keys discovered: 0
+102 source files scanned; **74 files contain hardcoded UI strings** (2042 samples); translated keys discovered: 0
 
 ## 9. pyphen — Hyphenation rules
 

@@ -132,6 +132,19 @@ function parseColor(value, tokens, depth = 0) {
   if (m) return hslToHex(parseFloat(m[1]) % 360, parseFloat(m[2]), parseFloat(m[3]));
   m = v.match(/oklch\(\s*([\d.]+)(%?)\s+([\d.]+)(%?)\s+(-?[\d.]+)/);
   if (m) return oklchToHex(parseFloat(m[1]), parseFloat(m[3]), parseFloat(m[5]));
+  // color-mix(in srgb, <A> P%, <B>) -> blend A/B by percentage
+  m = v.match(/color-mix\(\s*in\s+srgb\s*,\s*([^,]+?)\s+([\d.]+)%\s*,\s*(.+)\s*\)$/);
+  if (m && depth <= 8) {
+    const ca = parseColor(m[1], tokens, depth + 1);
+    const cb = parseColor(m[3], tokens, depth + 1);
+    if (ca && cb) {
+      const p = Math.min(1, Math.max(0, parseFloat(m[2]) / 100));
+      const ch = (hex, i) => parseInt(hex.slice(1 + i * 2, 3 + i * 2), 16);
+      const mix = (i) => Math.round(ch(ca, i) * p + ch(cb, i) * (1 - p)).toString(16).padStart(2, '0');
+      return '#' + [0, 1, 2].map(mix).join('');
+    }
+    if (ca) return ca;
+  }
   m = v.match(/var\(\s*(--[\w-]+)(?:\s*,([^)]*))?\)/);
   if (m && tokens) {
     const resolved = parseColor(tokens[m[1]], tokens, depth + 1);
@@ -177,35 +190,61 @@ const DARK_RE = /prefers-color-scheme:\s*dark|data-theme=["']?dark/i;
 
 // Split CSS text into (contextIsDark, segment) pairs: top-level code uses the
 // light token set; @media/@supports blocks whose prelude matches DARK_RE use
-// the dark token set.
+// the dark token set. Selectors containing [data-theme="dark"] are treated as
+// dark-context rules too (their bodies stay in the light segment so their
+// token declarations still get collected by collectTokens).
 function splitByDarkContext(text) {
   const segments = [];
-  let depth = 0, lastTopStart = 0, buf = '';
+  let depth = 0, lastTopStart = 0, buf = '', pendingPrelude = '';
   for (let i = 0; i < text.length; i++) {
     const ch = text[i];
     if (ch === '{') {
       if (depth === 0) {
-        // entering an at-rule block from top level
-        segments.push({ dark: false, start: lastTopStart, end: i });
-        buf = text.slice(lastTopStart, i);
+        // entering a block from top level; remember its prelude
+        pendingPrelude = text.slice(lastTopStart, i).trim();
+        buf = '';
+      } else {
+        buf += '{';
       }
       depth++;
     } else if (ch === '}') {
       depth--;
       if (depth === 0) {
-        const preludeStart = Math.max(0, text.lastIndexOf('}', i - buf.length - 1) + 1);
-        const prelude = text.slice(preludeStart, i - buf.length).trim();
-        const blockText = text.slice(i - buf.length, i);
-        if (/^@(media|supports|layer|container)/i.test(prelude)) {
-          segments.push({ dark: DARK_RE.test(prelude), text: blockText });
+        if (/^@(media|supports|layer|container)/i.test(pendingPrelude)) {
+          segments.push({ dark: DARK_RE.test(pendingPrelude), text: buf });
+        } else {
+          // plain rule at top level: keep it light unless selector is dark-scoped
+          segments.push({ dark: DARK_RE.test(pendingPrelude), text: pendingPrelude + '{' + buf + '}' });
         }
         lastTopStart = i + 1;
         buf = '';
+        pendingPrelude = '';
+      } else {
+        buf += '}';
       }
+    } else {
+      if (depth > 0) buf += ch;
     }
   }
-  if (depth === 0 && lastTopStart < text.length) segments.push({ dark: false, start: lastTopStart, end: text.length });
-  return segments.map((s) => ({ dark: s.dark, text: s.text !== undefined ? s.text : text.slice(s.start, s.end) }));
+  if (depth === 0 && lastTopStart < text.length) {
+    const tail = text.slice(lastTopStart);
+    if (tail.trim()) segments.push({ dark: false, text: tail });
+  }
+  return segments;
+}
+
+// Collect custom-property declarations that live inside dark contexts only.
+function collectDarkTokens(text) {
+  const tokens = {};
+  for (const seg of splitByDarkContext(text)) {
+    if (!seg.dark) continue;
+    const re = /(--[\w-]+)\s*:\s*([^;{}]+)[;}]/g;
+    let m;
+    while ((m = re.exec(seg.text))) {
+      if (!(m[1] in tokens)) tokens[m[1]] = m[2].trim();
+    }
+  }
+  return tokens;
 }
 
 function extractPairs(file, text, baseTokens, darkExtraTokens) {
@@ -273,10 +312,14 @@ for (const f of files) {
   let t;
   try { t = fs.readFileSync(f, 'utf8'); } catch { continue; }
   if (/\.(css|scss)$/.test(f)) {
-    allPairs.push(...extractPairs(f, t, { ...globalTokens, ...collectTokens(t) }));
+    const light = { ...globalTokens, ...collectTokens(t) };
+    const dark = collectDarkTokens(t);
+    allPairs.push(...extractPairs(f, t, light, dark));
   } else if (/\.(astro|html|htm)$/.test(f)) {
     for (const sm of t.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi)) {
-      allPairs.push(...extractPairs(f, sm[1], { ...globalTokens, ...collectTokens(sm[1]) }));
+      const light = { ...globalTokens, ...collectTokens(sm[1]) };
+      const dark = collectDarkTokens(sm[1]);
+      allPairs.push(...extractPairs(f, sm[1], light, dark));
     }
   } else if (/\.json$/.test(f)) {
     // design-token style JSON: {name: "#hex"} nested

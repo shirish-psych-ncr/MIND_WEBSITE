@@ -277,7 +277,7 @@
 }
 
 .meta-btn:hover {
-  background: var(--primary, #ec4899);
+  background: #a61e63;
   color: white;
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgb(236 72 153 / 0.3);
