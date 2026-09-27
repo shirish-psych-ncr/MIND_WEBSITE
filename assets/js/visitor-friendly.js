@@ -522,8 +522,8 @@
     const legalPages = new Set(["terms.html", "disclaimer.html", "consent.html"]);
     if (path.startsWith("/blog/")) {
       entries.push({ label: "Blog", href: "/blog/" });
-      if (path.includes("/adult/")) entries.push({ label: "Adult mental health", href: "/blog/adult/" });
-      else if (path.includes("/child/")) entries.push({ label: "Child development", href: "/blog/children/" });
+      if (path.includes("/adult/")) entries.push({ label: "Adult mental health", href: "/blog/adult.html" });
+      else if (path.includes("/child/")) entries.push({ label: "Child development", href: "/blog/children.html" });
     } else if (path.startsWith("/tools/")) {
       entries.push({ label: "Resources", href: "/resources.html" });
       entries.push({ label: "Therapeutic tools", href: "/resources.html#tools" });
@@ -668,7 +668,7 @@
       "aasha.html": {
         title: "Support for children starts with noticing",
         body: "Parents may notice differences in communication, learning, behaviour, or development and still feel unsure what they mean. AASHA connects families with child-development information and a route toward appropriate support in Greater Noida.",
-        links: [["Read child-development guides", "/blog/children/"], ["See child-development services", "/services.html"], ["Book a consultation", "/book.html"]]
+        links: [["Read child-development guides", "/blog/children.html"], ["See child-development services", "/services.html"], ["Book a consultation", "/book.html"]]
       },
       "gallery.html": {
         title: "See the space before you arrive",
@@ -688,7 +688,7 @@
       "blog/": {
         title: "Find language for what you are experiencing",
         body: "These guides explain common adult mental-health and child-development concerns in clear, practical language. Read at your own pace, then connect what you notice with a tool, service, or confidential conversation.",
-        links: [["Read adult mental health guides", "/blog/adult/"], ["Read child-development guides", "/blog/children/"], ["Explore self-help tools", "/resources.html#tools"], ["Book a consultation", "/book.html"]]
+        links: [["Read adult mental health guides", "/blog/adult.html"], ["Read child-development guides", "/blog/children.html"], ["Explore self-help tools", "/resources.html#tools"], ["Book a consultation", "/book.html"]]
       },
       "adult.html": {
         title: "Adult mental health guidance for real-life concerns",
@@ -718,7 +718,7 @@
       "resources.html": {
         title: "Small tools for difficult moments",
         body: "Breathing, grounding, focus, and calming exercises can help you pause and notice what is happening. They are educational supports, not a diagnosis or a replacement for professional care when distress continues.",
-        links: [["Read adult mental health guides", "/blog/adult/"], ["Read child development guides", "/blog/children/"], ["Book professional support", "/book.html"]]
+        links: [["Read adult mental health guides", "/blog/adult.html"], ["Read child development guides", "/blog/children.html"], ["Book professional support", "/book.html"]]
       }
     };
     let content = pathways[path] || pathways[file] || (path.endsWith("/") ? pathways[path.slice(0, -1)] : null);
