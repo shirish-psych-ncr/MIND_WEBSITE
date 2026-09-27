@@ -110,7 +110,7 @@ a { text-underline-offset: 0.22em; }
 .button-outline {
   border-radius: 999px;
   border-color: rgba(216, 27, 96, 0.3);
-  color: var(--rose-serenity-pink);
+  color: var(--rose-serenity-pink-dark); /* #b0004a = 5.5:1 over composited rgba(255,255,255,.72) — AA */
   background: rgba(255, 255, 255, 0.72);
 }
 

@@ -100,9 +100,10 @@ function normalizeHex(h) {
 // Extract the alpha channel from any color notation; returns 1 when unspecified.
 function getAlpha(raw) {
   const v = String(raw).toLowerCase();
-  let m = v.match(/#[0-9a-f]{8}$/);
-  if (m) return parseInt(v.slice(-2), 16) / 255;
-  m = v.match(/(?:rgba|hsla|oklch)\(([^)]*)\)/);
+  let m = v.match(/#[0-9a-f]{8}(?![0-9a-f])/);
+  if (m) return parseInt(m[0].slice(-2), 16) / 255;
+  // space syntax: rgb(r g b / a%) or rgba(...) — handled by the generic slash/comma logic below
+  m = v.match(/(?:rgba?|hsla?|oklch|lab|lch)\(([^)]*)\)/);
   if (!m) return 1;
   const inner = m[1];
   // slash syntax: ... / 0.05   or   ... / 5%
@@ -161,6 +162,44 @@ function compositeOverWhite(hex, alpha) {
   const b = parseInt(hex.slice(5, 7), 16);
   const mix = (c) => Math.round(c * alpha + 255 * (1 - alpha));
   return '#' + [mix(r), mix(g), mix(b)].map((x) => x.toString(16).padStart(2, '0')).join('');
+}
+
+// Composite fg hex over an arbitrary opaque bg hex with alpha (sRGB).
+function compositeOver(bgHex, fgHex, alpha) {
+  const p = (h, i) => parseInt(h.slice(i, i + 2), 16);
+  const mix = (a, b) => Math.round(a * alpha + b * (1 - alpha));
+  const r = mix(p(fgHex, 1), p(bgHex, 1));
+  const g = mix(p(fgHex, 3), p(bgHex, 3));
+  const b = mix(p(fgHex, 5), p(bgHex, 5));
+  return '#' + [r, g, b].map((x) => x.toString(16).padStart(2, '0')).join('');
+}
+
+// Find an opaque background declared in the same stylesheet to composite a
+// translucent element over. Strategy: if this file contains a gradient/solid
+// banner or hero-like block, use its first color stop as representative bg.
+// Returns hex or null (caller falls back to white).
+function findOpaqueAncestorBg(clean, selectors, tokens) {
+  const blockRe = /([^{}]+)\{([^{}]*)\}/g;
+  let m;
+  while ((m = blockRe.exec(clean))) {
+    const sel = m[1].trim();
+    if (sel.startsWith('@')) continue;
+    const body = m[2];
+    const bgDecl = (body.match(/(?:^|[;\s])background(?:-color)?\s*:\s*([^;]+)/i) || [])[1];
+    if (!bgDecl) continue;
+    // Only consider OPAQUE backgrounds (solid colors or gradients)
+    const alpha = getAlpha(resolveRaw(bgDecl, tokens));
+    if (alpha < 1) continue;
+    // Gradient banners / heroes are the common host for translucent chips.
+    if (/gradient/.test(bgDecl)) {
+      const inner = bgDecl.match(/#[0-9a-fA-F]{3,8}|hsla?\([^)]*\)|rgba?\([^)]*\)/);
+      if (inner) {
+        const parsed = parseColor(inner[0], tokens);
+        if (parsed) return parsed;
+      }
+    }
+  }
+  return null;
 }
 
 // Resolve a possibly var()-wrapped color declaration to its raw token value.
@@ -251,14 +290,22 @@ function extractPairs(file, text, baseTokens, darkExtraTokens) {
   const pairs = [];
   // strip comments
   const clean = text.replace(/\/\*[\s\S]*?\*\//g, ' ');
-  for (const seg of splitByDarkContext(clean)) {
+  const segs = splitByDarkContext(clean);
+  for (let i = 0; i < segs.length; i++) {
+    const seg = segs[i];
     const tokens = seg.dark ? { ...baseTokens, ...(darkExtraTokens || {}) } : baseTokens;
-    collectBlocks(seg.text, tokens, file, pairs);
+    // Provide the light-context segments with a view of ALL rules so that
+    // translucent backgrounds can be composited over their opaque ancestors
+    // (e.g. a chip inside a gradient banner declared in another block).
+    // Every segment gets a view of ALL rules so translucent backgrounds can
+    // be composited over their opaque ancestors (e.g. a chip inside a
+    // gradient banner declared in a different block).
+    collectBlocks(seg.text, tokens, file, pairs, clean);
   }
   return pairs;
 }
 
-function collectBlocks(clean, tokens, file, pairs) {
+function collectBlocks(clean, tokens, file, pairs, fullText) {
   const blockRe = /([^{}]+)\{([^{}]*)\}/g;
   let m;
   while ((m = blockRe.exec(clean))) {
@@ -288,9 +335,14 @@ function collectBlocks(clean, tokens, file, pairs) {
     const fgAlpha = getAlpha(resolveRaw(fgVal, tokens));
     if (fg !== null && fgAlpha < 0.7) continue;
     if (fg && bg) {
-      const bgInner = String(bgVal).match(COLOR_TOKEN_RE);
-      const bgAlpha = getAlpha(resolveRaw(bgInner ? bgInner[0] : bgVal, tokens));
-      if (bgAlpha < 1) bg = compositeOverWhite(bg, bgAlpha);
+      const bgAlpha = getAlpha(resolveRaw(bgVal, tokens));
+      if (bgAlpha < 1) {
+        // Composite over the nearest opaque ancestor background declared in
+        // the same stylesheet (e.g. translucent chip on a gradient banner),
+        // falling back to white when no ancestor is found.
+        const parentBg = findOpaqueAncestorBg(fullText || clean, selectors, tokens);
+        bg = parentBg ? compositeOver(parentBg, bg, bgAlpha) : compositeOverWhite(bg, bgAlpha);
+      }
       pairs.push({ file: path.relative(ROOT, file), selector: selectors.slice(0, 80), fg, bg, fgRaw: fgVal.slice(0, 60), bgRaw: bgVal.slice(0, 60), alphaComposited: bgAlpha < 1 });
     }
   }

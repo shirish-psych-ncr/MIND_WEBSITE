@@ -300,12 +300,19 @@ body.compact-nav .mobile-nav-trigger{display:flex}
 }
 
 .hero h1 .highlight{
-  color:var(--color-primary);
+  /* Solid deep pink guarantees >=AA contrast (7.03:1 on white) even when
+     background-clip:text is unsupported or the gradient renders poorly. */
+  color:#a61e63;
   position:relative;
-  background:var(--gradient-pink);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+}
+
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero h1 .highlight{
+    background:var(--gradient-pink-deep);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
 }
 
 /* Gradient text is decorative: guarantee a legible solid color whenever
