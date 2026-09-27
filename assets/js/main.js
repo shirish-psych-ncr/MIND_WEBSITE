@@ -135,14 +135,14 @@ function _initBreadcrumbs() {
   const main = document.querySelector('main');
   if (!main) return;
   const path = window.location.pathname.replace(/\\/g, '/');
-  const isHome = path === '/' || (path.endsWith('/index.html') && !path.includes('/blog/'));
+  const isHome = path === '/' || (path.endsWith('/') && !path.includes('/blog/'));
   let nav = main.querySelector(':scope > .breadcrumbs') || document.querySelector('nav.breadcrumbs');
 
   if (!nav && !isHome) {
     nav = document.createElement('nav');
     nav.className = 'breadcrumbs';
     nav.setAttribute('aria-label', 'Breadcrumb');
-    nav.innerHTML = '<ol><li><a href="/index.html">Home</a></li><li aria-current="page"></li></ol>';
+    nav.innerHTML = '<ol><li><a href="/">Home</a></li><li aria-current="page"></li></ol>';
     main.prepend(nav);
   }
   if (!nav) return;
@@ -154,12 +154,12 @@ function _initBreadcrumbs() {
   if (current && !current.hasAttribute('aria-current')) current.setAttribute('aria-current', 'page');
 
   nav.querySelectorAll('a').forEach((link) => {
-    if (link.textContent.trim().toLowerCase() === 'blog' && link.getAttribute('href') === '/index.html') {
+    if (link.textContent.trim().toLowerCase() === 'blog' && link.getAttribute('href') === '/') {
       link.setAttribute('href', '/blog/');
     }
   });
 
-  const category = path.match(/^\/blog\/(adult|children)\.html$/i);
+  const category = path.match(/^\/blog\/(adult|children)(?:\.html)?\/?$/i);
   if (category && current && !nav.querySelector('a[href="/blog/"]')) {
     const blogItem = document.createElement('li');
     blogItem.innerHTML = '<a href="/blog/">Blog</a>';

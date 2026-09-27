@@ -1,1 +1,13 @@
-(empty)
+# Dependencies
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs and temp files
+*.log
+measure-tmp.cjs
+
+# Build artifacts / Output directories
+output/

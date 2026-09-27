@@ -59,7 +59,7 @@
   function initCrisisBanner() {
     if (document.querySelector('.emergency-banner--static, .crisis-banner')) return;
     // Don't show on emergency page itself (already has prominent help)
-    if (window.location.pathname.includes('/emergency.html')) {
+    if (window.location.pathname.includes('/emergency/')) {
       return;
     }
 

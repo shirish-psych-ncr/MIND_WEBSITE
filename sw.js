@@ -10,7 +10,7 @@ const OFFLINE_CACHE = 'mindgrace-offline-v1';
 // Core assets to cache immediately
 const CORE_ASSETS = [
   '/',
-  '/index.html',
+  '/',
   '/assets/css/min/site-foundation.min.css',
   '/assets/css/min/site-foundation.min.css?v=responsive18',
   '/assets/js/min/visitor-friendly.min.js?v=responsive18',
@@ -22,12 +22,12 @@ const CORE_ASSETS = [
 
 // Interactive tools pages - critical for offline access during crises
 const TOOLS_PAGES = [
-  '/tools/guided-breathing.html',
-  '/tools/butterfly-tapper.html',
-  '/tools/eye-movement.html',
-  '/tools/hypnos-fractal.html',
-  '/tools/horizon-scan.html',
-  '/tools/leaf-on-stream.html'
+  '/tools/guided-breathing/',
+  '/tools/butterfly-tapper/',
+  '/tools/eye-movement/',
+  '/tools/hypnos-fractal/',
+  '/tools/horizon-scan/',
+  '/tools/leaf-on-stream/'
 ];
 
 // Tool-specific CSS and JS
@@ -55,7 +55,7 @@ const TRANSLATE_ASSETS = [
 ];
 
 // All URLs to pre-cache on install
-const PRECACHE_URLS = [...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...ANALYTICS_ASSETS, ...TRANSLATE_ASSETS, '/offline.html'];
+const PRECACHE_URLS = [...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...ANALYTICS_ASSETS, ...TRANSLATE_ASSETS, '/offline/'];
 
 /**
  * Install event - cache core assets and tools
@@ -140,7 +140,7 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         }).catch(() => {
           // Offline and not in cache - return offline fallback
-          return caches.match('/offline.html').then((fallback) => {
+          return caches.match('/offline/').then((fallback) => {
             return fallback || new Response('Offline', { status: 503 });
           });
         });
@@ -163,7 +163,7 @@ self.addEventListener('fetch', (event) => {
     }).catch(() => {
       // Network failed, try cache
       return caches.match(request).then((cachedResponse) => {
-        return cachedResponse || caches.match('/offline.html').then((fallback) => {
+        return cachedResponse || caches.match('/offline/').then((fallback) => {
           return fallback || new Response('Offline', { status: 503 });
         });
       });

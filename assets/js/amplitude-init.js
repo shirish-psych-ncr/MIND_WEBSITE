@@ -199,7 +199,7 @@
 
     // Pipeline confirmation event kept from the original bootstrap.
     var path = window.location.pathname;
-    if (path === '/' || path === '/index.html') {
+    if (path === '/' || path === '/') {
       api.track('Viewed Home Page', { prompt_version: 'BA400.4' });
     }
   }
