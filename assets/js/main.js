@@ -155,14 +155,14 @@ function _initBreadcrumbs() {
 
   nav.querySelectorAll('a').forEach((link) => {
     if (link.textContent.trim().toLowerCase() === 'blog' && link.getAttribute('href') === '/index.html') {
-      link.setAttribute('href', '/blog/index.html');
+      link.setAttribute('href', '/blog/');
     }
   });
 
   const category = path.match(/^\/blog\/(adult|children)\.html$/i);
-  if (category && current && !nav.querySelector('a[href="/blog/index.html"]')) {
+  if (category && current && !nav.querySelector('a[href="/blog/"]')) {
     const blogItem = document.createElement('li');
-    blogItem.innerHTML = '<a href="/blog/index.html">Blog</a>';
+    blogItem.innerHTML = '<a href="/blog/">Blog</a>';
     list.insertBefore(blogItem, current);
   }
 

@@ -79,3 +79,18 @@ https://www.mindgracencr.in/* https://mindgracencr.in/:splat 301!
 /therapy/ /therapy.html 301
 /trauma-grief-support/ /trauma-grief-support.html 301
 /blog/index.html /blog/ 301
+
+# Blog articles relocated to clean directory URLs (September 2026)
+/blog/pages/adult/overthinking-vs-anxiety.html /blog/pages/adult/overthinking-vs-anxiety/ 301
+/blog/pages/adult/scheduled-worry-time-technique.html /blog/pages/adult/scheduled-worry-time-technique/ 301
+/blog/pages/adult/sleep-and-anxiety-cycle.html /blog/pages/adult/sleep-and-anxiety-cycle/ 301
+/blog/pages/adult/stimulus-control-therapy.html /blog/pages/adult/stimulus-control-therapy/ 301
+/blog/pages/adult/when-to-see-a-psychiatrist.html /blog/pages/adult/when-to-see-a-psychiatrist/ 301
+/blog/pages/child/early-signs-of-autism.html /blog/pages/child/early-signs-of-autism/ 301
+/blog/pages/child/school-concerns-and-adhd.html /blog/pages/child/school-concerns-and-adhd/ 301
+/blog/pages/child/sensory-overload-at-home.html /blog/pages/child/sensory-overload-at-home/ 301
+/blog/pages/child/speech-delay-red-flags.html /blog/pages/child/speech-delay-red-flags/ 301
+/blog/adult.html /blog/adult/ 301
+/blog/children.html /blog/children/ 301
+/high-functioning-depression-guide/hfd-draft.html /high-functioning-depression-guide/ 301
+/high-functioning-depression/ /high-functioning-depression-guide/ 301

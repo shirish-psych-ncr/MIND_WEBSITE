@@ -61,6 +61,72 @@ def nodes(value):
         yield from nodes(value.get("@graph", []))
 
 
+def resolve_target(root, path):
+    """Map a public URL path back to the file that serves it."""
+    target = root / unquote(path).lstrip("/")
+    if path.endswith("/"):
+        return target / "index.html"
+    if target.suffix == ".html":
+        # A clean directory URL may be canonicalised with an explicit .html suffix.
+        alternate = target.with_suffix("") / "index.html"
+        if not target.exists() and alternate.exists():
+            return alternate
+        return target
+    return target / "index.html"
+
+
+def sitemap_paths(xml):
+    ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    return {urlsplit(e.text).path for e in ET.fromstring(xml).findall("s:url/s:loc", ns)}
+
+
+def sync_sitemap(sitemap, posts, root=ROOT):
+    """Keep the sitemap's article entries exactly in step with discovery.
+
+    Adds missing canonical URLs and removes retired ones — legacy ``*.html``
+    aliases of relocated articles and old paths of renamed files — so a
+    relocation never leaves stale entries behind. Non-article entries are
+    left untouched.
+    """
+    if not sitemap.exists():
+        return
+    xml = sitemap.read_text(encoding="utf-8")
+    wanted = {urlsplit(p["url"]).path for p in posts}
+    # For each HTML file, the URL it publishes under (clean directory form wins).
+    published = {}
+    for path in files(root):
+        relative = "/" + path.relative_to(root).as_posix()
+        default = relative[:-10] if relative.endswith("/index.html") else relative
+        if default.endswith(".html") and (root / default[:-5]).is_dir():
+            default = default[:-5]
+        published[path.resolve()] = default
+    removals = set()
+    for entry in sitemap_paths(xml):
+        if entry in wanted:
+            continue
+        candidate = resolve_target(root, entry)
+        if not candidate.exists():
+            continue  # service page or unknown route: leave it alone
+        # The file behind this URL is itself a published article…
+        source = published.get(candidate.resolve())
+        if source is None:
+            continue
+        # …and this stale entry is only an alias of its canonical URL (.html
+        # suffix on a clean directory route, or the pre-rename location).
+        if source.rstrip("/") == entry.rstrip("/"):
+            removals.add(entry)
+    additions = sorted(wanted - sitemap_paths(xml))
+    changed = xml
+    def _drop(match):
+        loc = re.search(r"<loc>([^<]*)</loc>", match.group(0))
+        return "" if loc and urlsplit(loc.group(1)).path in removals else match.group(0)
+    changed = re.sub(r"[ \t]*<url><loc>[^<]*</loc></url>\n?", _drop, changed)
+    for new_url in additions:
+        changed = changed.replace("</urlset>", f'  <url><loc>{escape(SITE + new_url)}</loc></url>\n</urlset>')
+    if changed != xml:
+        write_changed(sitemap, changed)
+
+
 def files(root):
     for folder, dirs, names in os.walk(root):
         dirs[:] = sorted(d for d in dirs if not d.startswith(".") and d not in SKIP)
@@ -81,13 +147,14 @@ def discover(root):
             continue
         relative = "/" + path.relative_to(root).as_posix()
         default = relative[:-10] if relative.endswith("/index.html") else relative
+        # Directory articles keep a clean directory URL; the file suffix is never public.
+        if default.endswith(".html") and (root / default[:-5]).is_dir():
+            default = default[:-5]
         url = urljoin(SITE + default, p.canonical or schema.get("url") or default)
         parts = urlsplit(url)
         if parts.scheme != "https" or parts.netloc != urlsplit(SITE).netloc or parts.query or parts.fragment:
             continue
-        target = root / unquote(parts.path).lstrip("/")
-        if parts.path.endswith("/"):
-            target /= "index.html"
+        target = resolve_target(root, parts.path)
         # Canonical aliases do not become duplicate cards or outrank their source.
         if target.resolve() != path.resolve():
             continue
@@ -143,15 +210,8 @@ def build(root=ROOT):
     if count != 1:
         raise ValueError("Missing generated article schema slot")
     write_changed(landing, html)
-    # Add new article URLs without removing unrelated service-page sitemap entries.
-    sitemap = root / "sitemap.xml"
-    if sitemap.exists():
-        xml = sitemap.read_text(encoding="utf-8")
-        ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-        existing = {e.text for e in ET.fromstring(xml).findall("s:url/s:loc", ns)}
-        additions = [f'  <url><loc>{escape(p["url"])}</loc></url>' for p in posts if p["url"] not in existing]
-        if additions:
-            write_changed(sitemap, xml.replace("</urlset>", "\n".join(additions) + "\n</urlset>"))
+    # Keep article URLs in the sitemap exactly in step with discovery.
+    sync_sitemap(root / "sitemap.xml", posts, root)
     return len(posts)
 
 

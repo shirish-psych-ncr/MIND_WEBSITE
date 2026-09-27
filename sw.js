@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v10'; // shared responsive shell and early theme assets
+const CACHE_NAME = 'mindgrace-v11'; // shared responsive shell and early theme assets
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately

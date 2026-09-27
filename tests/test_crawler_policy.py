@@ -243,7 +243,7 @@ class TestRobotsArchitecture(unittest.TestCase):
                                 f"{agent} blocked from {path}")
 
     def test_training_scrapers_disallowed(self):
-        paths = ["/", "/services.html", "/blog/pages/adult/overthinking-vs-anxiety.html"]
+        paths = ["/", "/services.html", "/blog/pages/adult/overthinking-vs-anxiety/"]
         for agent in DISALLOWED_AGENTS:
             for path in paths:
                 self.assertFalse(self.m.fetch_allowed(agent, path),
@@ -644,7 +644,7 @@ class TestSiteWideAeo(unittest.TestCase):
         its own lead paragraph (no fabricated facts), styled by both the
         source and minified classic-blog CSS."""
         import glob as _glob
-        articles = sorted(_glob.glob(os.path.join(ROOT, "blog/pages/*/*.html")))
+        articles = sorted(set(_glob.glob(os.path.join(ROOT, "blog/pages/*/*.html")) + _glob.glob(os.path.join(ROOT, "blog/pages/*/index.html")) + _glob.glob(os.path.join(ROOT, "blog/pages/*/*/index.html"))))
         self.assertGreaterEqual(len(articles), 9)
         for path in articles:
             html = read_bytes(path).decode("utf-8")

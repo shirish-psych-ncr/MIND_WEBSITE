@@ -25,28 +25,28 @@
 
   const relatedReading = {
     "guided-breathing.html": [
-      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique.html"],
-      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle.html"]
+      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique/"],
+      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle/"]
     ],
     "butterfly-tapper.html": [
-      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety.html"],
-      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist.html"]
+      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety/"],
+      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist/"]
     ],
     "eye-movement.html": [
-      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety.html"],
-      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist.html"]
+      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety/"],
+      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist/"]
     ],
     "hypnos-fractal.html": [
-      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety.html"],
-      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle.html"]
+      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety/"],
+      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle/"]
     ],
     "horizon-scan.html": [
-      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique.html"],
-      ["Managing sensory overload at home", "/blog/pages/child/sensory-overload-at-home.html"]
+      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique/"],
+      ["Managing sensory overload at home", "/blog/pages/child/sensory-overload-at-home/"]
     ],
     "leaf-on-stream.html": [
-      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique.html"],
-      ["Managing sensory overload at home", "/blog/pages/child/sensory-overload-at-home.html"]
+      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique/"],
+      ["Managing sensory overload at home", "/blog/pages/child/sensory-overload-at-home/"]
     ]
   };
 
@@ -58,7 +58,7 @@
     const aside = document.createElement("aside");
     aside.className = "article-related tool-related-reading surface panel";
     aside.setAttribute("aria-labelledby", "tool-related-reading-title");
-    aside.innerHTML = `<p class="eyebrow">Continue at your pace</p><h2 id="tool-related-reading-title">Guides that may help next</h2><div class="article-related-grid">${links.map(([label, href]) => `<a class="article-related-link" href="${href}"><span>${label}</span>${icon("arrow-right")}</a>`).join("")}</div><p class="tool-related-reading__footer"><a href="/blog/index.html">Browse all mental health guides</a> <span aria-hidden="true">·</span> <a href="/resources.html#tools">See all self-help tools</a></p>`;
+    aside.innerHTML = `<p class="eyebrow">Continue at your pace</p><h2 id="tool-related-reading-title">Guides that may help next</h2><div class="article-related-grid">${links.map(([label, href]) => `<a class="article-related-link" href="${href}"><span>${label}</span>${icon("arrow-right")}</a>`).join("")}</div><p class="tool-related-reading__footer"><a href="/blog/">Browse all mental health guides</a> <span aria-hidden="true">·</span> <a href="/resources.html#tools">See all self-help tools</a></p>`;
     main.appendChild(aside);
   }
 
