@@ -4,12 +4,12 @@
   "translatedKeysDiscovered": 0,
   "filesScanned": 102,
   "filesWithHardcodedStrings": 74,
-  "totalHardcodedSamples": 1975,
+  "totalHardcodedSamples": 2042,
   "note": "Hardcoded UI strings reduce linguistic adaptability; wrap them in t()/Trans for i18n.",
   "results": [
     {
       "file": "src/pages/perceived-burdensomeness.astro",
-      "count": 100,
+      "count": 101,
       "samples": [
         {
           "kind": "text-node",
@@ -115,7 +115,7 @@
     },
     {
       "file": "src/pages/depression-in-older-adults.astro",
-      "count": 95,
+      "count": 96,
       "samples": [
         {
           "kind": "text-node",
@@ -221,7 +221,7 @@
     },
     {
       "file": "src/pages/conditions.astro",
-      "count": 90,
+      "count": 91,
       "samples": [
         {
           "kind": "text-node",
@@ -327,7 +327,7 @@
     },
     {
       "file": "src/pages/services.astro",
-      "count": 71,
+      "count": 72,
       "samples": [
         {
           "kind": "text-node",
@@ -433,7 +433,7 @@
     },
     {
       "file": "src/pages/doctors.astro",
-      "count": 63,
+      "count": 64,
       "samples": [
         {
           "kind": "text-node",
@@ -539,7 +539,7 @@
     },
     {
       "file": "src/pages/blog/children.astro",
-      "count": 59,
+      "count": 60,
       "samples": [
         {
           "kind": "text-node",
@@ -645,7 +645,7 @@
     },
     {
       "file": "src/pages/high-functioning-depression-guide.astro",
-      "count": 58,
+      "count": 59,
       "samples": [
         {
           "kind": "text-node",
@@ -751,7 +751,7 @@
     },
     {
       "file": "src/pages/sleep-and-autism-guide-indian-parents.astro",
-      "count": 58,
+      "count": 59,
       "samples": [
         {
           "kind": "text-node",
@@ -857,7 +857,7 @@
     },
     {
       "file": "src/pages/blog/iilm-psychology-internship.astro",
-      "count": 57,
+      "count": 58,
       "samples": [
         {
           "kind": "text-node",
@@ -963,7 +963,7 @@
     },
     {
       "file": "src/pages/fees.astro",
-      "count": 51,
+      "count": 52,
       "samples": [
         {
           "kind": "text-node",
@@ -1069,7 +1069,7 @@
     },
     {
       "file": "src/pages/privacy.astro",
-      "count": 45,
+      "count": 46,
       "samples": [
         {
           "kind": "text-node",
@@ -1175,7 +1175,7 @@
     },
     {
       "file": "src/pages/location.astro",
-      "count": 42,
+      "count": 43,
       "samples": [
         {
           "kind": "text-node",
@@ -1281,7 +1281,7 @@
     },
     {
       "file": "src/pages/process.astro",
-      "count": 42,
+      "count": 43,
       "samples": [
         {
           "kind": "text-node",
@@ -1387,7 +1387,7 @@
     },
     {
       "file": "src/pages/blog/adult.astro",
-      "count": 40,
+      "count": 41,
       "samples": [
         {
           "kind": "text-node",
@@ -1493,7 +1493,7 @@
     },
     {
       "file": "src/pages/consent.astro",
-      "count": 40,
+      "count": 41,
       "samples": [
         {
           "kind": "text-node",
@@ -1599,7 +1599,7 @@
     },
     {
       "file": "src/pages/testimonials.astro",
-      "count": 40,
+      "count": 41,
       "samples": [
         {
           "kind": "text-node",
@@ -1705,7 +1705,7 @@
     },
     {
       "file": "src/pages/index.astro",
-      "count": 38,
+      "count": 40,
       "samples": [
         {
           "kind": "text-node",
@@ -1811,7 +1811,7 @@
     },
     {
       "file": "src/pages/resources.astro",
-      "count": 37,
+      "count": 38,
       "samples": [
         {
           "kind": "text-node",
@@ -1917,7 +1917,7 @@
     },
     {
       "file": "src/pages/emergency.astro",
-      "count": 36,
+      "count": 37,
       "samples": [
         {
           "kind": "text-node",
@@ -2023,7 +2023,7 @@
     },
     {
       "file": "src/pages/blog/index.astro",
-      "count": 34,
+      "count": 35,
       "samples": [
         {
           "kind": "text-node",
@@ -2129,7 +2129,7 @@
     },
     {
       "file": "src/pages/book.astro",
-      "count": 34,
+      "count": 35,
       "samples": [
         {
           "kind": "text-node",
@@ -2235,7 +2235,7 @@
     },
     {
       "file": "src/pages/gallery.astro",
-      "count": 34,
+      "count": 35,
       "samples": [
         {
           "kind": "text-node",
@@ -2322,6 +2322,10 @@
           "sample": "Welcome to the Mind Grace Neuropsychiatric Clinic gallery. These images showcase"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Emergency crisis support information"
         },
@@ -2332,10 +2336,112 @@
         {
           "kind": "aria-label",
           "sample": "Close menu"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/faq.astro",
+      "count": 29,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
         },
         {
-          "kind": "aria-label",
-          "sample": "Breadcrumb"
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently Asked Questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Questions people ask before a first visit"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Confidentiality"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Are sessions confidential?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Who will have access to my records?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Medication and Treatment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Will I definitely be prescribed medication?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Do you provide therapy or only medication management?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Booking and Logistics"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How do I book an appointment?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What is the consultation fee?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Do you accept insurance?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Still have questions?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "We're here to help clarify any concerns before your visit."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book an Appointment"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
@@ -2446,114 +2552,8 @@
       ]
     },
     {
-      "file": "src/pages/faq.astro",
-      "count": 28,
-      "samples": [
-        {
-          "kind": "text-node",
-          "sample": "Not an emergency service."
-        },
-        {
-          "kind": "text-node",
-          "sample": "Immediate danger? Call"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Emergency resources"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Frequently asked questions"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Therapeutic Tools"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Guided Breathing"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Butterfly Tapper"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Hypnotic Fractal"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Book Appointment"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Frequently Asked Questions"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Questions people ask before a first visit"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Confidentiality"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Are sessions confidential?"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Who will have access to my records?"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Medication and Treatment"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Will I definitely be prescribed medication?"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Do you provide therapy or only medication management?"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Booking and Logistics"
-        },
-        {
-          "kind": "text-node",
-          "sample": "How do I book an appointment?"
-        },
-        {
-          "kind": "text-node",
-          "sample": "What is the consultation fee?"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Do you accept insurance?"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Still have questions?"
-        },
-        {
-          "kind": "text-node",
-          "sample": "We're here to help clarify any concerns before your visit."
-        },
-        {
-          "kind": "text-node",
-          "sample": "Book an Appointment"
-        },
-        {
-          "kind": "aria-label",
-          "sample": "Mobile navigation"
-        }
-      ]
-    },
-    {
       "file": "src/pages/dr-anita-sharma.astro",
-      "count": 27,
+      "count": 28,
       "samples": [
         {
           "kind": "text-node",
@@ -2652,14 +2652,14 @@
           "sample": "Book Appointment"
         },
         {
-          "kind": "aria-label",
-          "sample": "Mobile navigation"
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/mind-grace.astro",
-      "count": 27,
+      "count": 28,
       "samples": [
         {
           "kind": "text-node",
@@ -2754,18 +2754,18 @@
           "sample": "Conveniently located in Greater Noida with easy parking and accessible facilitie"
         },
         {
-          "kind": "aria-label",
-          "sample": "Emergency crisis support information"
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         },
         {
           "kind": "aria-label",
-          "sample": "Mobile navigation"
+          "sample": "Emergency crisis support information"
         }
       ]
     },
     {
       "file": "src/pages/contact.astro",
-      "count": 25,
+      "count": 26,
       "samples": [
         {
           "kind": "text-node",
@@ -2852,6 +2852,10 @@
           "sample": "Request an appointment"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Emergency crisis support information"
         },
@@ -2862,16 +2866,12 @@
         {
           "kind": "aria-label",
           "sample": "Close menu"
-        },
-        {
-          "kind": "aria-label",
-          "sample": "Breadcrumb"
         }
       ]
     },
     {
       "file": "src/pages/about.astro",
-      "count": 24,
+      "count": 25,
       "samples": [
         {
           "kind": "text-node",
@@ -2962,6 +2962,10 @@
           "sample": "Research and Professional Interests"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Emergency crisis support information"
         },
@@ -2973,7 +2977,7 @@
     },
     {
       "file": "src/pages/terms.astro",
-      "count": 23,
+      "count": 24,
       "samples": [
         {
           "kind": "text-node",
@@ -3052,6 +3056,10 @@
           "sample": "Maintain confidentiality of other patients"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Emergency crisis support information"
         },
@@ -3071,7 +3079,7 @@
     },
     {
       "file": "src/pages/blog/pages/adult/sleep-and-anxiety-cycle.astro",
-      "count": 21,
+      "count": 22,
       "samples": [
         {
           "kind": "text-node",
@@ -3154,6 +3162,10 @@
           "sample": "Sleep feels effortful or unpredictable"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Breadcrumb"
         }
@@ -3161,7 +3173,7 @@
     },
     {
       "file": "src/pages/psychiatrist-greater-noida.astro",
-      "count": 21,
+      "count": 22,
       "samples": [
         {
           "kind": "text-node",
@@ -3246,12 +3258,16 @@
         {
           "kind": "text-node",
           "sample": "contact the clinic"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/psychiatrist-in-noida.astro",
-      "count": 21,
+      "count": 22,
       "samples": [
         {
           "kind": "text-node",
@@ -3336,12 +3352,16 @@
         {
           "kind": "text-node",
           "sample": "Mind Grace is not an emergency service"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/thank-you.astro",
-      "count": 21,
+      "count": 22,
       "samples": [
         {
           "kind": "text-node",
@@ -3416,6 +3436,10 @@
           "sample": "WhatsApp clinic"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Mobile navigation"
         },
@@ -3431,7 +3455,7 @@
     },
     {
       "file": "src/pages/tools/butterfly-tapper.astro",
-      "count": 21,
+      "count": 22,
       "samples": [
         {
           "kind": "text-node",
@@ -3490,6 +3514,10 @@
           "sample": "Butterfly Tapper"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Emergency crisis support information"
         },
@@ -3516,6 +3544,92 @@
         {
           "kind": "aria-label",
           "sample": "Tap right side"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/leaf-on-stream.astro",
+      "count": 20,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Use a guided imagery exercise to observe thoughts as they pass. Stop if the exer"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What would you like to release today?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Thought or feeling to release"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Toggle release panel"
+        },
+        {
+          "kind": "placeholder",
+          "sample": "Type a worry, thought, or feeling here…"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Thought or feeling to release"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
         }
       ]
     },
@@ -3602,90 +3716,8 @@
       ]
     },
     {
-      "file": "src/pages/tools/leaf-on-stream.astro",
-      "count": 19,
-      "samples": [
-        {
-          "kind": "text-node",
-          "sample": "Not an emergency service."
-        },
-        {
-          "kind": "text-node",
-          "sample": "Immediate danger? Call"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Emergency resources"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Therapeutic Tools"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Use a guided imagery exercise to observe thoughts as they pass. Stop if the exer"
-        },
-        {
-          "kind": "text-node",
-          "sample": "What would you like to release today?"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Thought or feeling to release"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Frequently asked questions"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Therapeutic Tools"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Guided Breathing"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Butterfly Tapper"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Hypnotic Fractal"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Book Appointment"
-        },
-        {
-          "kind": "aria-label",
-          "sample": "Breadcrumb"
-        },
-        {
-          "kind": "aria-label",
-          "sample": "Toggle release panel"
-        },
-        {
-          "kind": "placeholder",
-          "sample": "Type a worry, thought, or feeling here…"
-        },
-        {
-          "kind": "aria-label",
-          "sample": "Thought or feeling to release"
-        },
-        {
-          "kind": "aria-label",
-          "sample": "Mobile navigation"
-        },
-        {
-          "kind": "aria-label",
-          "sample": "Close menu"
-        }
-      ]
-    },
-    {
       "file": "src/pages/child-development.astro",
-      "count": 18,
+      "count": 19,
       "samples": [
         {
           "kind": "text-node",
@@ -3758,12 +3790,16 @@
         {
           "kind": "text-node",
           "sample": "common questions"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/psychiatry.astro",
-      "count": 18,
+      "count": 19,
       "samples": [
         {
           "kind": "text-node",
@@ -3836,12 +3872,16 @@
         {
           "kind": "text-node",
           "sample": "contact the clinic"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/psychology-counselling.astro",
-      "count": 18,
+      "count": 19,
       "samples": [
         {
           "kind": "text-node",
@@ -3914,12 +3954,16 @@
         {
           "kind": "text-node",
           "sample": "your first visit"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/specialized-consultations.astro",
-      "count": 18,
+      "count": 19,
       "samples": [
         {
           "kind": "text-node",
@@ -3992,12 +4036,16 @@
         {
           "kind": "text-node",
           "sample": "See emergency resources"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/therapy.astro",
-      "count": 18,
+      "count": 19,
       "samples": [
         {
           "kind": "text-node",
@@ -4070,12 +4118,16 @@
         {
           "kind": "text-node",
           "sample": "urgent-help information"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/tools/guided-breathing.astro",
-      "count": 18,
+      "count": 19,
       "samples": [
         {
           "kind": "text-node",
@@ -4138,6 +4190,10 @@
           "sample": "Your body has slowed down. Let it stay that way."
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Mobile navigation"
         },
@@ -4153,7 +4209,7 @@
     },
     {
       "file": "src/pages/404.astro",
-      "count": 17,
+      "count": 18,
       "samples": [
         {
           "kind": "text-node",
@@ -4208,6 +4264,10 @@
           "sample": "Clinic location"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Emergency crisis support information"
         },
@@ -4227,7 +4287,7 @@
     },
     {
       "file": "src/pages/aasha.astro",
-      "count": 17,
+      "count": 18,
       "samples": [
         {
           "kind": "text-node",
@@ -4282,6 +4342,10 @@
           "sample": "A practical pathway for families noticing communication, learning, behaviour, at"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Emergency crisis support information"
         },
@@ -4301,7 +4365,7 @@
     },
     {
       "file": "src/pages/blog/pages/adult/scheduled-worry-time-technique.astro",
-      "count": 17,
+      "count": 18,
       "samples": [
         {
           "kind": "text-node",
@@ -4368,6 +4432,10 @@
           "sample": "Read more articles"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Breadcrumb"
         }
@@ -4375,7 +4443,7 @@
     },
     {
       "file": "src/pages/approach.astro",
-      "count": 16,
+      "count": 17,
       "samples": [
         {
           "kind": "text-node",
@@ -4426,6 +4494,10 @@
           "sample": "We connect clinical assessment with everyday context, practical goals, and compa"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Emergency crisis support information"
         },
@@ -4445,7 +4517,7 @@
     },
     {
       "file": "src/pages/assessments.astro",
-      "count": 16,
+      "count": 17,
       "samples": [
         {
           "kind": "text-node",
@@ -4510,12 +4582,16 @@
         {
           "kind": "text-node",
           "sample": "Bring previous reports, school feedback, medication details, and your questions "
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/disclaimer.astro",
-      "count": 16,
+      "count": 17,
       "samples": [
         {
           "kind": "text-node",
@@ -4566,6 +4642,10 @@
           "sample": "Medical disclaimer"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Emergency crisis support information"
         },
@@ -4585,7 +4665,7 @@
     },
     {
       "file": "src/pages/tools/hypnos-fractal.astro",
-      "count": 16,
+      "count": 17,
       "samples": [
         {
           "kind": "text-node",
@@ -4636,6 +4716,10 @@
           "sample": "Grounding Fractal Tool"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Mobile navigation"
         },
@@ -4655,7 +4739,7 @@
     },
     {
       "file": "src/pages/addiction-substance-use.astro",
-      "count": 15,
+      "count": 16,
       "samples": [
         {
           "kind": "text-node",
@@ -4716,12 +4800,16 @@
         {
           "kind": "text-node",
           "sample": "Specialist addiction treatment, rehabilitation, medical care, or community suppo"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/depression-anxiety.astro",
-      "count": 15,
+      "count": 16,
       "samples": [
         {
           "kind": "text-node",
@@ -4782,12 +4870,16 @@
         {
           "kind": "text-node",
           "sample": "OCD, panic, and PTSD"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/ocd-panic-ptsd.astro",
-      "count": 15,
+      "count": 16,
       "samples": [
         {
           "kind": "text-node",
@@ -4848,12 +4940,16 @@
         {
           "kind": "text-node",
           "sample": "Care planning should respect readiness, privacy, culture, relationships, and cur"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/tools/eye-movement.astro",
-      "count": 15,
+      "count": 16,
       "samples": [
         {
           "kind": "text-node",
@@ -4904,6 +5000,10 @@
           "sample": "Keep your head still and follow the moving light with your eyes only. Stop if th"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Mobile navigation"
         },
@@ -4919,7 +5019,7 @@
     },
     {
       "file": "src/pages/tools/horizon-scan.astro",
-      "count": 15,
+      "count": 16,
       "samples": [
         {
           "kind": "text-node",
@@ -4970,6 +5070,10 @@
           "sample": "Follow the dot as it moves gently across the screen. Keep your head still and mo"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Mobile navigation"
         },
@@ -4985,7 +5089,7 @@
     },
     {
       "file": "src/pages/trauma-grief-support.astro",
-      "count": 15,
+      "count": 16,
       "samples": [
         {
           "kind": "text-node",
@@ -5046,12 +5150,16 @@
         {
           "kind": "text-node",
           "sample": "Severe symptoms, immediate danger, or specialist needs may require another servi"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/blog/pages/adult/stimulus-control-therapy.astro",
-      "count": 14,
+      "count": 15,
       "samples": [
         {
           "kind": "text-node",
@@ -5106,6 +5214,10 @@
           "sample": "Read more articles"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Breadcrumb"
         }
@@ -5113,7 +5225,7 @@
     },
     {
       "file": "src/pages/learning-disability-assessment.astro",
-      "count": 14,
+      "count": 15,
       "samples": [
         {
           "kind": "text-node",
@@ -5170,12 +5282,16 @@
         {
           "kind": "text-node",
           "sample": "Recommendations may support home, school, further assessment, or referral where "
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/psychosis-schizophrenia.astro",
-      "count": 14,
+      "count": 15,
       "samples": [
         {
           "kind": "text-node",
@@ -5232,12 +5348,16 @@
         {
           "kind": "text-node",
           "sample": "Some situations need urgent hospital assessment or coordinated specialist care b"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/sleep-eating-disorders.astro",
-      "count": 14,
+      "count": 15,
       "samples": [
         {
           "kind": "text-node",
@@ -5294,6 +5414,72 @@
         {
           "kind": "text-node",
           "sample": "Some eating or sleep concerns need a physician, dietitian, sleep service, or spe"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/adhd-autism-assessment.astro",
+      "count": 14,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Neurodevelopmental assessment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "ADHD and autism questions deserve context"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment considers development, communication, attention, behaviour, learning,"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What an assessment may include"
+        },
+        {
+          "kind": "text-node",
+          "sample": "History and observation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Structured tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Recommendations"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The outcome may include practical strategies, school guidance, follow-up, or ref"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
@@ -5356,66 +5542,8 @@
       ]
     },
     {
-      "file": "src/pages/adhd-autism-assessment.astro",
-      "count": 13,
-      "samples": [
-        {
-          "kind": "text-node",
-          "sample": "Not an emergency service."
-        },
-        {
-          "kind": "text-node",
-          "sample": "Immediate danger? Call"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Emergency resources"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Neurodevelopmental assessment"
-        },
-        {
-          "kind": "text-node",
-          "sample": "ADHD and autism questions deserve context"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Assessment considers development, communication, attention, behaviour, learning,"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Assessment information"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Child development"
-        },
-        {
-          "kind": "text-node",
-          "sample": "What an assessment may include"
-        },
-        {
-          "kind": "text-node",
-          "sample": "History and observation"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Structured tools"
-        },
-        {
-          "kind": "text-node",
-          "sample": "Recommendations"
-        },
-        {
-          "kind": "text-node",
-          "sample": "The outcome may include practical strategies, school guidance, follow-up, or ref"
-        }
-      ]
-    },
-    {
       "file": "src/pages/teleconsultation.astro",
-      "count": 12,
+      "count": 13,
       "samples": [
         {
           "kind": "text-node",
@@ -5464,12 +5592,16 @@
         {
           "kind": "text-node",
           "sample": "privacy information"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/bipolar-mood-disorders.astro",
-      "count": 11,
+      "count": 12,
       "samples": [
         {
           "kind": "text-node",
@@ -5514,12 +5646,16 @@
         {
           "kind": "text-node",
           "sample": "Care may include follow-up, medication discussion, therapy, practical support, o"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         }
       ]
     },
     {
       "file": "src/pages/blog/pages/adult/when-to-see-a-psychiatrist.astro",
-      "count": 11,
+      "count": 12,
       "samples": [
         {
           "kind": "text-node",
@@ -5562,6 +5698,10 @@
           "sample": "Do you need diagnostic clarity or medication guidance?"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Breadcrumb"
         }
@@ -5569,7 +5709,7 @@
     },
     {
       "file": "src/pages/blog/pages/child/speech-delay-red-flags.astro",
-      "count": 11,
+      "count": 12,
       "samples": [
         {
           "kind": "text-node",
@@ -5612,6 +5752,10 @@
           "sample": "Frustration because communication is hard"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Breadcrumb"
         }
@@ -5619,7 +5763,7 @@
     },
     {
       "file": "src/pages/blog/pages/child/school-concerns-and-adhd.astro",
-      "count": 10,
+      "count": 11,
       "samples": [
         {
           "kind": "text-node",
@@ -5658,6 +5802,10 @@
           "sample": "Is school confidence starting to drop?"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Breadcrumb"
         }
@@ -5665,7 +5813,7 @@
     },
     {
       "file": "src/pages/blog/pages/adult/overthinking-vs-anxiety.astro",
-      "count": 8,
+      "count": 9,
       "samples": [
         {
           "kind": "text-node",
@@ -5696,6 +5844,10 @@
           "sample": "A useful distinction"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Breadcrumb"
         }
@@ -5703,7 +5855,7 @@
     },
     {
       "file": "src/pages/blog/pages/child/early-signs-of-autism.astro",
-      "count": 8,
+      "count": 9,
       "samples": [
         {
           "kind": "text-node",
@@ -5734,6 +5886,10 @@
           "sample": "What to notice early"
         },
         {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
+        },
+        {
           "kind": "aria-label",
           "sample": "Breadcrumb"
         }
@@ -5741,7 +5897,7 @@
     },
     {
       "file": "src/pages/blog/pages/child/sensory-overload-at-home.astro",
-      "count": 7,
+      "count": 8,
       "samples": [
         {
           "kind": "text-node",
@@ -5766,6 +5922,10 @@
         {
           "kind": "text-node",
           "sample": "Why this matters"
+        },
+        {
+          "kind": "title",
+          "sample": "Google Tag Manager container"
         },
         {
           "kind": "aria-label",

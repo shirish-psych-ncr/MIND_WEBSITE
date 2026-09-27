@@ -97,6 +97,26 @@ function normalizeHex(h) {
   return /^[0-9a-fA-F]{6}$/.test(h) ? '#' + h.toLowerCase() : null;
 }
 
+// Extract the alpha channel from any color notation; returns 1 when unspecified.
+function getAlpha(raw) {
+  const v = String(raw).toLowerCase();
+  let m = v.match(/#[0-9a-f]{8}$/);
+  if (m) return parseInt(v.slice(-2), 16) / 255;
+  m = v.match(/(?:rgba|hsla|oklch)\(([^)]*)\)/);
+  if (!m) return 1;
+  const inner = m[1];
+  // slash syntax: ... / 0.05   or   ... / 5%
+  const slash = inner.match(/\/\s*([\d.]+)(%?)\s*$/);
+  if (slash) return slash[2] === '%' ? parseFloat(slash[1]) / 100 : parseFloat(slash[1]);
+  // legacy comma syntax: rgba(r,g,b,a) / hsla(h,s%,l%,a) — 4th numeric arg
+  const parts = inner.split(',').map((s) => s.trim());
+  if (parts.length >= 4) {
+    const a = parseFloat(parts[3]);
+    if (!Number.isNaN(a)) return Math.min(1, Math.max(0, a));
+  }
+  return 1;
+}
+
 function parseColor(value, tokens, depth = 0) {
   if (!value || depth > 8) return null;
   const v = String(value).trim().toLowerCase();
@@ -112,19 +132,94 @@ function parseColor(value, tokens, depth = 0) {
   if (m) return hslToHex(parseFloat(m[1]) % 360, parseFloat(m[2]), parseFloat(m[3]));
   m = v.match(/oklch\(\s*([\d.]+)(%?)\s+([\d.]+)(%?)\s+(-?[\d.]+)/);
   if (m) return oklchToHex(parseFloat(m[1]), parseFloat(m[3]), parseFloat(m[5]));
-  m = v.match(/var\(\s*(--[\w-]+)(?:,[^)]*)?\)/);
-  if (m && tokens) return parseColor(tokens[m[1]], tokens, depth + 1);
+  m = v.match(/var\(\s*(--[\w-]+)(?:\s*,([^)]*))?\)/);
+  if (m && tokens) {
+    const resolved = parseColor(tokens[m[1]], tokens, depth + 1);
+    if (resolved) return resolved;
+    if (m[2]) return parseColor(m[2], tokens, depth + 1); // fallback value inside var()
+  }
   return null;
 }
 
-// Collect fg/bg declarations per selector block from all CSS sources
+// Composite an RGB hex over white with the given alpha (sRGB, non-premultiplied).
+function compositeOverWhite(hex, alpha) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  const mix = (c) => Math.round(c * alpha + 255 * (1 - alpha));
+  return '#' + [mix(r), mix(g), mix(b)].map((x) => x.toString(16).padStart(2, '0')).join('');
+}
+
+// Resolve a possibly var()-wrapped color declaration to its raw token value.
+function resolveRaw(val, tokens) {
+  if (!tokens) return val;
+  let cur = String(val).trim(), depth = 0;
+  while (depth++ < 8) {
+    const m = cur.match(/var\(\s*(--[\w-]+)(?:\s*,([\s\S]*))?\)/);
+    if (!m) return cur;
+    const tok = tokens[m[1]];
+    if (tok !== undefined) { cur = tok; continue; }
+    if (m[2] !== undefined) { cur = m[2]; continue; }
+    return cur;
+  }
+  return cur;
+}
+
+// Collect fg/bg declarations per selector block from all CSS sources.
+// Theme-aware token resolution: tokens declared inside a dark-theme context
+// (prefers-color-scheme:dark / [data-theme="dark"]) are collected separately
+// and used for blocks that live in those same contexts, so light ink values
+// never get paired with dark backgrounds.
 const FG_PROPS = ['color', '-webkit-text-fill-color'];
 const BG_PROPS = ['background-color', 'background'];
 
-function extractPairs(file, text, tokens) {
+const DARK_RE = /prefers-color-scheme:\s*dark|data-theme=["']?dark/i;
+
+// Split CSS text into (contextIsDark, segment) pairs: top-level code uses the
+// light token set; @media/@supports blocks whose prelude matches DARK_RE use
+// the dark token set.
+function splitByDarkContext(text) {
+  const segments = [];
+  let depth = 0, lastTopStart = 0, buf = '';
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (ch === '{') {
+      if (depth === 0) {
+        // entering an at-rule block from top level
+        segments.push({ dark: false, start: lastTopStart, end: i });
+        buf = text.slice(lastTopStart, i);
+      }
+      depth++;
+    } else if (ch === '}') {
+      depth--;
+      if (depth === 0) {
+        const preludeStart = Math.max(0, text.lastIndexOf('}', i - buf.length - 1) + 1);
+        const prelude = text.slice(preludeStart, i - buf.length).trim();
+        const blockText = text.slice(i - buf.length, i);
+        if (/^@(media|supports|layer|container)/i.test(prelude)) {
+          segments.push({ dark: DARK_RE.test(prelude), text: blockText });
+        }
+        lastTopStart = i + 1;
+        buf = '';
+      }
+    }
+  }
+  if (depth === 0 && lastTopStart < text.length) segments.push({ dark: false, start: lastTopStart, end: text.length });
+  return segments.map((s) => ({ dark: s.dark, text: s.text !== undefined ? s.text : text.slice(s.start, s.end) }));
+}
+
+function extractPairs(file, text, baseTokens, darkExtraTokens) {
   const pairs = [];
   // strip comments
   const clean = text.replace(/\/\*[\s\S]*?\*\//g, ' ');
+  for (const seg of splitByDarkContext(clean)) {
+    const tokens = seg.dark ? { ...baseTokens, ...(darkExtraTokens || {}) } : baseTokens;
+    collectBlocks(seg.text, tokens, file, pairs);
+  }
+  return pairs;
+}
+
+function collectBlocks(clean, tokens, file, pairs) {
   const blockRe = /([^{}]+)\{([^{}]*)\}/g;
   let m;
   while ((m = blockRe.exec(clean))) {
@@ -140,14 +235,25 @@ function extractPairs(file, text, tokens) {
     const fgVal = decls['color'] || decls['-webkit-text-fill-color'];
     const bgVal = decls['background-color'] || decls['background'];
     if (!fgVal || !bgVal) continue;
-    const fg = parseColor(fgVal, tokens);
+    let fg = parseColor(fgVal, tokens);
     let bg = parseColor(bgVal, tokens);
     if (fg && !bg && bgVal) {
       // gradient or multi-value background: take first color-ish token inside
-      const inner = bgVal.match(/#[0-9a-fA-F]{3,8}|rgba?\([^)]*\)|hsla?\([^)]*\)|oklch\([^)]*\)|var\(--[\w-]+(?:,[^)]*)?\)/);
+      const inner = bgVal.match(/#[0-9a-fA-F]{3,8}|rgba?\([^)]*\)|hsla?\([^)]*\)|oklch\([^)]*\)|var\(--[\w-]+(?:\s*,[^)]*)?\)/);
       if (inner) bg = parseColor(inner[0], tokens);
     }
-    if (fg && bg) pairs.push({ file: path.relative(ROOT, file), selector: selectors.slice(0, 80), fg, bg, fgRaw: fgVal.slice(0, 60), bgRaw: bgVal.slice(0, 60) });
+    // Alpha handling: translucent text colors are unreliable to composite
+    // (parent bg unknown) -> skip. Translucent backgrounds are composited
+    // over white (light theme default), which is what browsers do on paper.
+    const COLOR_TOKEN_RE = /#[0-9a-fA-F]{3,8}|rgba?\([^)]*\)|hsla?\([^)]*\)|oklch\([^)]*\)|var\(--[\w-]+(?:\s*,[^)]*)?\)/;
+    const fgAlpha = getAlpha(resolveRaw(fgVal, tokens));
+    if (fg !== null && fgAlpha < 0.7) continue;
+    if (fg && bg) {
+      const bgInner = String(bgVal).match(COLOR_TOKEN_RE);
+      const bgAlpha = getAlpha(resolveRaw(bgInner ? bgInner[0] : bgVal, tokens));
+      if (bgAlpha < 1) bg = compositeOverWhite(bg, bgAlpha);
+      pairs.push({ file: path.relative(ROOT, file), selector: selectors.slice(0, 80), fg, bg, fgRaw: fgVal.slice(0, 60), bgRaw: bgVal.slice(0, 60), alphaComposited: bgAlpha < 1 });
+    }
   }
   return pairs;
 }

@@ -51,10 +51,7 @@
 }
 
 .crisis-banner__phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: #9e1a1a;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 50px;
@@ -67,9 +64,7 @@
   backdrop-filter: blur(4px);
 }
 
-.crisis-banner__phone:hover,
-.crisis-banner__phone:focus-visible {
-  background: rgba(255, 255, 255, 0.3);
+.crisis-banner__phone:hover,.crisis-banner__phone:focus-visible{background:#b81d1d;
   transform: translateY(-1px);
   outline: 2px solid #ffffff;
   outline-offset: 2px;

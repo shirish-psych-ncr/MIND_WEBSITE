@@ -1,2 +1,4 @@
-# Dependencies
-node_modules/
+# Build artifacts and generated files
+assets/css/min/
+assets/css-tools/min/
+output/
