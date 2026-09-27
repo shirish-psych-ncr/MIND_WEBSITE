@@ -2071,3 +2071,10 @@ body[data-chrome-normalized="true"] .seo-actions > * { min-height: 2.75rem; }
   body[data-chrome-normalized="true"] .hero-actions > *,
   body[data-chrome-normalized="true"] .seo-actions > * { flex: 1 1 12rem; text-align: center; }
 }
+
+/* Semantic fix: <h2> inside <address> is invalid HTML; title now uses strong.footer-contact__title */
+.site-footer .footer-contact__title { display:block; margin: 0 0 .65rem; font-size: 1rem; font-weight: 700; font-style: normal; }
+body[data-chrome-normalized="true"] .site-footer .footer-contact__title { color: var(--rose-serenity-ink); }
+@media (prefers-color-scheme: dark) {
+  body[data-chrome-normalized="true"] .site-footer .footer-contact__title { color: #fff8f7; }
+}

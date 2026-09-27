@@ -801,6 +801,7 @@ body[data-chrome-normalized="true"] .site-footer .footer-container { width: min(
 body[data-chrome-normalized="true"] .site-footer .footer-logo { width: 100px; height: auto; object-fit: contain; }
 body[data-chrome-normalized="true"] .site-footer .footer-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
 body[data-chrome-normalized="true"] .site-footer h2 { color: var(--rose-serenity-ink); font-size: 1rem; margin: 0 0 .75rem; }
+body[data-chrome-normalized="true"] .site-footer .footer-contact__title { color: var(--rose-serenity-ink); font-size: 1rem; margin: 0 0 .75rem; }
 body[data-chrome-normalized="true"] .site-footer ul { list-style: none; display: grid; gap: .45rem; margin: 0; padding: 0; }
 body[data-chrome-normalized="true"] .site-footer .footer-phone { display: inline-block; margin-top: 1rem; font-weight: 700; }
 body[data-chrome-normalized="true"] .site-footer .footer-bottom { width: min(1180px, calc(100% - 2rem)); margin-inline: auto; display: flex; justify-content: space-between; gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--rose-serenity-line); }
@@ -821,7 +822,7 @@ body[data-chrome-normalized="true"] .site-footer .footer-bottom div { display: f
 body[data-chrome-normalized="true"] { overflow-x: hidden; }
 @media (prefers-color-scheme: dark) {
   body[data-chrome-normalized="true"] .site-footer { background: linear-gradient(180deg, #3a242b, #24161a); color: #ead6db; border-top-color: rgba(255,178,191,.24); }
-  body[data-chrome-normalized="true"] .site-footer h2, body[data-chrome-normalized="true"] .site-footer p { color: #fff8f7; }
+  body[data-chrome-normalized="true"] .site-footer h2, body[data-chrome-normalized="true"] .site-footer .footer-contact__title, body[data-chrome-normalized="true"] .site-footer p { color: #fff8f7; }
   body[data-chrome-normalized="true"] .site-footer a { color: #ead6db; }
   body[data-chrome-normalized="true"] .site-footer a:hover, body[data-chrome-normalized="true"] .site-footer a:focus-visible { color: #ffb2c4; }
 }
@@ -834,6 +835,7 @@ body[data-chrome-normalized="true"] { overflow-x: hidden; }
   --a11y-line: #b88e9c;
   --a11y-primary: #8f123f;
   --a11y-primary-hover: #6f0d31;
+  --a11y-btn-hover-bg: #4c0722; /* AA-safe dark hover fill for primary buttons (white text = 9.8:1) */
   --a11y-on-primary: #ffffff;
 }
 html { color-scheme: light dark; }
@@ -845,7 +847,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--a11y-ink); }
 body button, body input, body select, body textarea { color: var(--a11y-ink); }
 body button, body .btn, body .button-primary, body .btn-primary, body .btn--primary, body .cta-button, body .mobile-book-btn { background: var(--a11y-primary); border-color: var(--a11y-primary); color: var(--a11y-on-primary); }
 body button, body .btn, body .button, body .button-primary, body .button-secondary, body .btn-primary, body .btn--primary, body .cta-button, body .mobile-book-btn { background-image: none !important; text-shadow: none; }
-body button:hover, body .btn:hover, body .button-primary:hover, body .btn-primary:hover, body .btn--primary:hover, body .cta-button:hover, body .mobile-book-btn:hover { background: var(--a11y-primary-hover); border-color: var(--a11y-primary-hover); color: #ffffff; }
+body button:hover, body .btn:hover, body .button-primary:hover, body .btn-primary:hover, body .btn--primary:hover, body .cta-button:hover, body .mobile-book-btn:hover { background: var(--a11y-btn-hover-bg); border-color: var(--a11y-btn-hover-bg); color: var(--a11y-on-primary); }
 body .card, body .service-card, body .feature-card, body .condition-card, body .price-card, body .contact-card, body .testimonial-card, body .resource-card, body .article-card, body .tool-card, body .notice, body .notice-box, body .panel, body .surface, body .surface-soft, body .legal-content, body .form-card, body .contact-form, body .accordion-item, body .link-preview-card { background: var(--a11y-surface); color: var(--a11y-ink); border-color: var(--a11y-line); }
 body .card p, body .service-card p, body .feature-card p, body .condition-card p, body .price-card p, body .contact-card p, body .testimonial-card p, body .resource-card p, body .article-card p, body .tool-card p, body .notice p, body .panel p, body .surface p, body .legal-content p { color: var(--a11y-muted); }
 body .section-blush, body .section-light, body .section-cream { color: var(--a11y-ink); }
@@ -1020,7 +1022,7 @@ footer nav {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root { --a11y-ink: #fff8fa; --a11y-muted: #f0dce3; --a11y-surface: #2c1a22; --a11y-surface-soft: #40232e; --a11y-line: #b77b8e; --a11y-primary: #ffb4ca; --a11y-primary-hover: #ffd3df; --a11y-on-primary: #2b0d19; }
+  :root { --a11y-ink: #fff8fa; --a11y-muted: #f0dce3; --a11y-surface: #2c1a22; --a11y-surface-soft: #40232e; --a11y-line: #b77b8e; --a11y-primary: #ffb4ca; --a11y-primary-hover: #ffd3df; --a11y-btn-hover-bg: #ffd3df; --a11y-on-primary: #2b0d19; }
   body { background: #1d1217; color: var(--a11y-ink); }
   body p, body li, body label, body small, body figcaption, body dt, body dd { color: var(--a11y-muted); }
   body a { color: #ffb4ca; }
@@ -1029,7 +1031,7 @@ footer nav {
   body button, body input, body select, body textarea { color: var(--a11y-ink); }
   body button, body .btn, body .button-primary, body .btn-primary, body .btn--primary, body .cta-button, body .mobile-book-btn { background: var(--a11y-primary); border-color: var(--a11y-primary); color: var(--a11y-on-primary); }
   body button, body .btn, body .button, body .button-primary, body .button-secondary, body .btn-primary, body .btn--primary, body .cta-button, body .mobile-book-btn { background-image: none !important; text-shadow: none; }
-  body button:hover, body .btn:hover, body .button-primary:hover, body .btn-primary:hover, body .btn--primary:hover, body .cta-button:hover, body .mobile-book-btn:hover { background: var(--a11y-primary-hover); border-color: var(--a11y-primary-hover); color: #2b0d19; }
+  body button:hover, body .btn:hover, body .button-primary:hover, body .btn-primary:hover, body .btn--primary:hover, body .cta-button:hover, body .mobile-book-btn:hover { background: var(--a11y-btn-hover-bg); border-color: var(--a11y-btn-hover-bg); color: var(--a11y-on-primary); }
   body .card, body .service-card, body .feature-card, body .condition-card, body .price-card, body .contact-card, body .testimonial-card, body .resource-card, body .article-card, body .tool-card, body .notice, body .notice-box, body .panel, body .surface, body .surface-soft, body .legal-content, body .form-card, body .contact-form, body .accordion-item, body .link-preview-card { background: var(--a11y-surface); color: var(--a11y-ink); border-color: var(--a11y-line); }
   body .card p, body .service-card p, body .feature-card p, body .condition-card p, body .price-card p, body .contact-card p, body .testimonial-card p, body .resource-card p, body .article-card p, body .tool-card p, body .notice p, body .panel p, body .surface p, body .legal-content p { color: var(--a11y-muted); }
   body input, body select, body textarea { background: #24161c; border-color: var(--a11y-line); color: var(--a11y-ink); }

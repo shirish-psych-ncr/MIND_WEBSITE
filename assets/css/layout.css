@@ -308,6 +308,21 @@ body.compact-nav .mobile-nav-trigger{display:flex}
   background-clip:text;
 }
 
+/* Gradient text is decorative: guarantee a legible solid color whenever
+   background-clip:text is unsupported or the user asks for no/background-image-off */
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero h1 .highlight{
+    -webkit-text-fill-color:currentColor;
+    background:none;
+  }
+}
+@media (prefers-contrast:more), (forced-colors:active){
+  .hero h1 .highlight{
+    -webkit-text-fill-color:currentColor;
+    background:none;
+  }
+}
+
 .hero-subtitle{
   font-size:clamp(1.125rem,2.5vw,1.375rem);
   color:var(--color-text-secondary);
@@ -676,9 +691,19 @@ body.compact-nav .mobile-nav-trigger{display:flex}
 }
 
 .btn--secondary:hover{
-  background:oklch(52% 0.22 340 / 0.05);
-  border-color:var(--color-primary-hover);
-  color:var(--color-primary-hover);
+  background:var(--color-primary);
+  border-color:var(--color-primary);
+  color:#ffffff;
+}
+
+/* Dark theme: light text on primary-filled hover */
+@media (prefers-color-scheme: dark){
+  html:not([data-theme="light"]) .btn--secondary:hover{
+    color:#2b0d19;
+  }
+}
+html[data-theme="dark"] .btn--secondary:hover{
+  color:#2b0d19;
 }
 
 @media (width <= 767px){
@@ -948,8 +973,23 @@ body.compact-nav .mobile-nav-trigger{display:flex}
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  color: var(--color-primary);
-  background: oklch(52% 0.22 340 / 0.08);
+  color: var(--color-primary-hover);
+  background:#fce7f3;
+}
+
+/* Dark theme: keep hover text light against the translucent header */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .nav-link:hover,
+  html:not([data-theme="light"]) .nav-link:focus-visible {
+    color: var(--pink-200);
+    background: oklch(30% 0.08 340 / 0.6);
+  }
+}
+
+html[data-theme="dark"] .nav-link:hover,
+html[data-theme="dark"] .nav-link:focus-visible {
+  color: var(--pink-200);
+  background: oklch(30% 0.08 340 / 0.6);
 }
 
 .nav-link:hover::before,
