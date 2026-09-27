@@ -1,0 +1,5859 @@
+{
+  "tool": "i18next-scanner",
+  "astParsedFiles": 102,
+  "translatedKeysDiscovered": 0,
+  "filesScanned": 102,
+  "filesWithHardcodedStrings": 74,
+  "totalHardcodedSamples": 1975,
+  "note": "Hardcoded UI strings reduce linguistic adaptability; wrap them in t()/Trans for i18n.",
+  "results": [
+    {
+      "file": "src/pages/perceived-burdensomeness.astro",
+      "count": 100,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Perceived Burdensomeness"
+        },
+        {
+          "kind": "text-node",
+          "sample": "It usually happens at 2 a.m. The house is quiet, the distractions of the day hav"
+        },
+        {
+          "kind": "text-node",
+          "sample": "By Mind Grace Neuropsychiatric Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When you finish the calculation, the conclusion feels less like an emotion and m"
+        },
+        {
+          "kind": "text-node",
+          "sample": "If I weren't here, they would have more money. They would have more energy. They"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What makes this thought so devastating is not just its cruelty, but its logic. I"
+        },
+        {
+          "kind": "text-node",
+          "sample": "To understand what is happening to you, we have to look to the"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Interpersonal Theory of Suicide"
+        },
+        {
+          "kind": "text-node",
+          "sample": "perceived burdensomeness"
+        },
+        {
+          "kind": "text-node",
+          "sample": "It is crucial to distinguish this from general guilt, shame, or low self-esteem."
+        },
+        {
+          "kind": "text-node",
+          "sample": "I did something bad."
+        },
+        {
+          "kind": "text-node",
+          "sample": "liability beliefs"
+        },
+        {
+          "kind": "text-node",
+          "sample": "seventy percent of the variance between depression and suicidal ideation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Yet, the most important word in the clinical term is"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The Default Mode Network and the Trap of Rumination"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Deep inside your brain is a network of interacting structures known as the"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Default Mode Network"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The Anterior Insula and the Physical Agony of Social Pain"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Perhaps the most validating discovery in modern social neuroscience is why feeli"
+        },
+        {
+          "kind": "text-node",
+          "sample": "dorsal anterior cingulate cortex"
+        },
+        {
+          "kind": "text-node",
+          "sample": "anterior insula"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Inflammatory Pathways and the \"Sickness Behavior\" Misfire"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/depression-in-older-adults.astro",
+      "count": 95,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Depression in Older Adults"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When \"just old age\" is actually depression"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A 74-year-old woman visits her doctor six times in four months — for burning fee"
+        },
+        {
+          "kind": "text-node",
+          "sample": "By Mind Grace Neuropsychiatric Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Depression in later life is one of the most missed diagnoses in medicine — not b"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How common is it, really?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What it actually sounds like"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why it gets missed"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Three rules that sort medical from mood"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Red flags that mean today, not next month"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How to ask — and what to use"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why the body hurts when the mind is low"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What actually helps"
+        },
+        {
+          "kind": "text-node",
+          "sample": "For families and caregivers"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Your questions, answered"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Getting help at Mind Grace"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How common is it, really?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A meta-analysis by Hegeman and colleagues confirmed what geriatric psychiatrists"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What it actually sounds like"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Forget the textbook picture — the weeping patient, the spoken despair, the class"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Pain that moves around."
+        },
+        {
+          "kind": "text-node",
+          "sample": "paon mein jalan"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/conditions.astro",
+      "count": 90,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Conditions We Treat"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mental health and developmental concerns we support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Anxiety Disorders"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Generalized Anxiety Disorder"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Excessive worry"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatry Care"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Try Breathing Tool"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Heart palpitations"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Fear of losing control"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatry Care"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Social Anxiety Disorder"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Fear of judgment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Social avoidance"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Physical symptoms in crowds"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/services.astro",
+      "count": 71,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Psychiatry and Child Development Services in Greater Noida"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Care options in Greater Noida"
+        },
+        {
+          "kind": "text-node",
+          "sample": "before you begin"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Service comparison at a glance"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The table below summarizes what each Mind Grace pathway involves, typical sessio"
+        },
+        {
+          "kind": "text-node",
+          "sample": "More information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult psychiatry consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Anxiety, depression, ADHD, sleep, and mood concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "About 45 minutes initial, 30-minute follow-ups"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatry consultations"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child development support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Children and adolescents with learning, attention, or communication concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Family-inclusive assessment and guidance sessions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child development"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/doctors.astro",
+      "count": 63,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Comprehensive Care Under One Roof"
+        },
+        {
+          "kind": "text-node",
+          "sample": "psychiatric medical care"
+        },
+        {
+          "kind": "text-node",
+          "sample": "psychological therapy services"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Understanding Our Roles"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Both professionals work together to provide integrated, holistic care."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Diagnoses medical conditions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Treats complex biological issues"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Handles severe mental illness"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Provides medical certificates"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Manages hospital admissions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Conducts psychological testing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Learning disability assessment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Many patients benefit from seeing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Stress Management"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Family Counseling"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Dr. Anita Sharma"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/children.astro",
+      "count": 59,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child Development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Start with what you're experiencing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "speech delay, social communication, sensory overload, attention, or school diffi"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Common starting points"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Constant thoughts, worry, panic, or restlessness"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Difficulty falling asleep, racing thoughts at night"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Procrastination, distraction, unfinished work"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child not speaking"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Speech delay or communication concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Autism concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Eye contact, social response, repetitive patterns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Complaints, attention issues, learning difficulty"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Browse the library"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child development guides for real family questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Search these guides"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/high-functioning-depression-guide.astro",
+      "count": 58,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "High-Functioning Depression"
+        },
+        {
+          "kind": "text-node",
+          "sample": "You're succeeding at work, managing your household, and smiling at friends. But "
+        },
+        {
+          "kind": "text-node",
+          "sample": "By Mind Grace Neuropsychiatric Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Imagine a duck gliding effortlessly across a serene lake. To the observer on the"
+        },
+        {
+          "kind": "text-node",
+          "sample": "This is the defining metaphor for"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Also referred to as \"smiling depression\" or \"functional depression,\" HFD is a de"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Statistically, this silent epidemic affects approximately"
+        },
+        {
+          "kind": "text-node",
+          "sample": "But this outward composure is precisely what makes high-functioning depression t"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why it's the most dangerous type"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychological and societal traps"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The neurobiology of the mask"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Body-mind connections"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hidden behavioral signs"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Evidence-based treatment pathways"
+        },
+        {
+          "kind": "text-node",
+          "sample": "From surviving to thriving"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why It Is the \"Most Dangerous\" Type"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The danger of HFD does not lie in the acute severity of its daily symptoms, but "
+        },
+        {
+          "kind": "text-node",
+          "sample": "The Psychological and Societal Traps"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The Perfectionism Paradox"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why do I feel so empty when I have everything I was supposed to want?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Intersectionality, Trauma, and the \"Mask\""
+        },
+        {
+          "kind": "text-node",
+          "sample": "The Neurobiology of the Mask"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/sleep-and-autism-guide-indian-parents.astro",
+      "count": 58,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child Development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sleep and Autism"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Long bedtimes, repeated night wakings and very early mornings can leave the whol"
+        },
+        {
+          "kind": "text-node",
+          "sample": "By Mind Grace Neuropsychiatric Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Illustrative image supplied for this article. It does not show an autism diagnos"
+        },
+        {
+          "kind": "text-node",
+          "sample": "age-specific safer-sleep guidance"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why sleep can be difficult"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When to seek help and ask about melatonin"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A small plan for tonight"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why do autistic children struggle with sleep?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Birmingham Community Healthcare NHS sleep guide"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Think about what feels restful"
+        },
+        {
+          "kind": "text-node",
+          "sample": "For more ideas on identifying triggers, read our guide to"
+        },
+        {
+          "kind": "text-node",
+          "sample": "sensory overload at home"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What about weighted blankets?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Weighted blankets are not an established treatment for autism-related insomnia. "
+        },
+        {
+          "kind": "text-node",
+          "sample": "American Academy of Neurology's guideline summary"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The Lullaby Trust advises against weighted bedding for babies"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A short, familiar sequence can make the transition to bed easier. Choose a routi"
+        },
+        {
+          "kind": "text-node",
+          "sample": "visual schedule"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A simple bedtime sequence"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Wash or bathe, if your child finds it calming."
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/iilm-psychology-internship.astro",
+      "count": 57,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Looking for a psychology internship in Greater Noida that connects your IILM cou"
+        },
+        {
+          "kind": "text-node",
+          "sample": "By Mind Grace Neuropsychiatric Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "From classroom to clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Delhi NCR internship options"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How to compare placements"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Application checklist"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Apply to Mind Grace"
+        },
+        {
+          "kind": "text-node",
+          "sample": "From the IILM classroom to clinical practice"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Your psychology degree builds a foundation in human behaviour, research and psyc"
+        },
+        {
+          "kind": "text-node",
+          "sample": "official undergraduate psychology programme page"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hospitals, specialist clinics, NGOs and research organisations offer different l"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Greater Noida and Greater Noida West"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Students exploring nearby hospital settings can enquire with Sharda Hospital, Sa"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Fortis, Max and Yatharth are names to investigate when comparing hospital-based "
+        },
+        {
+          "kind": "text-node",
+          "sample": "official observership and internship information page"
+        },
+        {
+          "kind": "text-node",
+          "sample": "For specialist and hospital settings, enquiries may include"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Start with your IILM internship coordinator too. Existing university placement r"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What to check before choosing a clinical internship"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A large hospital can provide valuable exposure to multidisciplinary care. A smal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Observation is a legitimate part of undergraduate clinical learning. Its value i"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A customized, 1-to-1 experience at Mind Grace"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/fees.astro",
+      "count": 51,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Transparent Pricing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Fees, payments, and what your visit includes"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Standard rates for all services as of 2026"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What is included"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Follow-up Consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Medication adjustment and monitoring, progress evaluation, continued support and"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Varies by battery"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatric Consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Initial assessment with Dr. Anita Sharma"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Follow-up Consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ongoing care and medication review"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Individual psychotherapy with trained therapists"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Comprehensive evaluations for accurate diagnosis"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/privacy.astro",
+      "count": 45,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "This notice explains how Mind Grace uses contact details shared through the webs"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Information we collect"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How we use your information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Scheduling and managing appointments"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Providing healthcare services and treatment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Communicating about your care plan"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sending appointment reminders and follow-ups"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Maintaining medical records as required by law"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace intends to handle personal information confidentially and according t"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Applicable data protection laws and regulations"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Information is handled using the clinic and booking systems in use at the time. "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Access limited to people who need the information for appointment coordination o"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Retention and deletion handled according to applicable clinical and legal requir"
+        },
+        {
+          "kind": "text-node",
+          "sample": "No promise that email, WhatsApp, or third-party forms are suitable for emergency"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Information Sharing"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/location.astro",
+      "count": 42,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Psychiatry Clinic Location in Gamma II, Greater Noida"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Clinic Location"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Plan your visit"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Clinic Location in Greater Noida"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace Neuropsychiatric Clinic is in Gamma II, Greater Noida, with practical"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Open Directions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Map and Visit Details"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Contact Information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Parking and drop-off are available nearby."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Auto-rickshaw and cab drop-offs are practical from metro and nearby sector route"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Metro and Bus Routes"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Transport options for reaching the clinic from nearby Greater Noida routes."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Alpha-1 Metro Station"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Delta-1 Metro Station"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Jagat Plaza Bus Stop"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Pari Chowk Bus Terminal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Universities, Schools, and Work Routes"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Useful route information for nearby schools, universities, and work areas."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sharda University"
+        },
+        {
+          "kind": "text-node",
+          "sample": "IILM University"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Wipro Knowledge Park IV"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/process.astro",
+      "count": 42,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Your Care Journey"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Before your first visit"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Know what to expect from your first visit"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Read common questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "From first contact to follow-up"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "No special preparation needed"
+        },
+        {
+          "kind": "text-node",
+          "sample": "We'll guide you through next steps"
+        },
+        {
+          "kind": "text-node",
+          "sample": "First consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Family context and past treatment history"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Clear explanation of what we've understood"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Time for your questions and concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Treatment Planning"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/adult.astro",
+      "count": 40,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult Mental Health"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Start with what you're experiencing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Articles available"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Updated regularly"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What feels closest to your situation?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Tap a topic to filter articles instantly"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Shortcuts based on common needs"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Search these guides"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Search by a concern, topic, or phrase."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Articles you can explore"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mix of essential guides and useful reads"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Start here if unsure"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Foundational reads"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Clear starting points for most people"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Problem clusters"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/consent.astro",
+      "count": 40,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "This notice explains what you agree to when you submit an enquiry or appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Information we collect"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Preferred appointment date and time"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Any specific doctor preference"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How we use your information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Scheduling and confirming appointments"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Communicating about your care"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sending appointment reminders"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Responding to your enquiries"
+        },
+        {
+          "kind": "text-node",
+          "sample": "By submitting your information through this website, you consent to the limited "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Dr. Anita Sharma and Mind Grace Clinic staff using your contact information for "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Receiving phone calls, SMS, or emails related to your appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Handling of the submitted details through the clinic and booking systems in use,"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Confidentiality Assurance"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/testimonials.astro",
+      "count": 40,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Patient Stories"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Patient Feedback"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Leave a review on Google"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What patients appreciate most"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Listens without rushing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Patients consistently mention feeling heard and understood, with adequate time g"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Minimal medication approach"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Many appreciate the balanced treatment philosophy that considers therapy and lif"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Patients value clear explanations of diagnoses and treatment options, reducing a"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Recent feedback"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Patient Feedback"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Patient Feedback"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Honest clarity about treatment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Feedback we're working on"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Some patients have mentioned longer-than-expected waits. We're implementing bett"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Communication between visits"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/index.astro",
+      "count": 38,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "WE ARE NOT A CRISIS CENTER."
+        },
+        {
+          "kind": "text-node",
+          "sample": "View external crisis resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatric and child-development care in"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace provides confidential consultations for adults, children, adolescents"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book a Consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Explore services"
+        },
+        {
+          "kind": "text-node",
+          "sample": "WhatsApp the clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Dr. Anita Sharma"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Consultant Psychiatrist"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request a visit and share only basic appointment details."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Fees & Insurance"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Review consultation fees, payment options, and policies."
+        },
+        {
+          "kind": "text-node",
+          "sample": "What to do if there is immediate danger or urgent risk."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Clinical Services"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Choose the right place to begin."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult Psychiatry"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Consultations for concerns such as anxiety, depression, mood changes, OCD, sleep"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Developmental assessment, ADHD support, early-intervention guidance, and practic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Counselling & Therapy"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Confidential counselling support for individuals, couples, and families working "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Your First Visit"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Know what to expect before you visit."
+        }
+      ]
+    },
+    {
+      "file": "src/pages/resources.astro",
+      "count": 37,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mental Health Resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Simple tools for difficult moments"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Choose a tool for the moment you are in"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A guided way to pause when anxiety, overthinking, or restlessness builds up. Fol"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Lateral Grounding"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Keep your head still and follow the moving light with your eyes only. Stop if th"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Fractal Grounding"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Tap to explore a fractal, then hold and move to swirl. Match your breathing to t"
+        },
+        {
+          "kind": "text-node",
+          "sample": "River of Release"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Type a worry, watch it drift away on a leaf. A cognitive defusion exercise to he"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Release a Worry"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Try a gentle alternating-tap visual exercise. Follow the comet at a comfortable "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Use smooth eye movements across the horizon as a visual focus exercise. Stop if "
+        },
+        {
+          "kind": "text-node",
+          "sample": "When to seek professional help"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/emergency.astro",
+      "count": 36,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency Resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "In Crisis? Read This First"
+        },
+        {
+          "kind": "text-node",
+          "sample": "please act now."
+        },
+        {
+          "kind": "text-node",
+          "sample": "If one line is busy, try another. Keep trying."
+        },
+        {
+          "kind": "text-node",
+          "sample": "These helplines are staffed by trained counselors who can provide immediate supp"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Nearby Hospitals with Emergency Services"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Greater Noida and NCR region emergency facilities"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sharda Hospital"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Yatharth Super Speciality Hospital"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Gamma-1, Greater Noida. Full-service emergency department with ICU."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Fortis Hospital"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Bishan Tower, Sector B, Pocket 1, Jasola, New Delhi. Advanced trauma care."
+        },
+        {
+          "kind": "text-node",
+          "sample": "This page is for urgent situations only"
+        },
+        {
+          "kind": "text-node",
+          "sample": "not an emergency"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/index.astro",
+      "count": 34,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The reading room"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Explore anxiety, overthinking, sleep, autism, ADHD and speech development with M"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult mental health"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Depression in older adults rarely announces itself as sadness. It arrives as une"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Struggling with sleep and autism? Discover practical, culturally relevant bedtim"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How to stop worrying by scheduling it"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A counterintuitive CBT technique that helps you stop overthinking by containing "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Early signs of autism parents often ask about"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A brief note on developmental observations to discuss with a qualified professio"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Overthinking vs anxiety"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Understand the overlap between overthinking and anxiety, and when one may be fee"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Speech delay red flags parents should notice"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A practical guide to noticing communication milestones and when a speech delay m"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When school concerns may point toward ADHD"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A practical look at school complaints, focus issues, and when they may need deve"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When to see a psychiatrist"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A practical guide to knowing when symptoms are persistent enough to benefit from"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A short guide to noticing sensory overload patterns and why regulation support c"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The sleep and anxiety cycle"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A detailed breakdown of how anxiety and sleep reinforce each other, and structur"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A little help finding your next step"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/book.astro",
+      "count": 34,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "In a crisis? Get immediate help now."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book an Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request a confidential mental health consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Is this the right place to start?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Prefer minimal paperwork and a clear intake process"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Not sure if this fits?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "appointment process"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request your appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Please confirm this notice before opening the booking form."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Open appointment form"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What happens next?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Prefer to connect directly?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Appointment guidance"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Message us anytime"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Replies during clinic hours"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/gallery.astro",
+      "count": 34,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Our Clinic Gallery"
+        },
+        {
+          "kind": "text-node",
+          "sample": "See the clinic setting before your visit, then use the location and process page"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Failed to load image"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Clinic Exterior"
+        },
+        {
+          "kind": "text-node",
+          "sample": "An exterior photograph showing the clinic building, entrance, parking area, road"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Welcome to Our Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Modern consultation rooms and waiting areas designed for comfort."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Specialized rooms for Speech, Occupational, and Behavioral therapy."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Meet our dedicated professionals committed to your care."
+        },
+        {
+          "kind": "text-node",
+          "sample": "A Glimpse Into Our Healing Space"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Welcome to the Mind Grace Neuropsychiatric Clinic gallery. These images showcase"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "assets/js/visitor-friendly.js",
+      "count": 28,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Where You Come First"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Compassionate neuropsychiatric care in Greater Noida for adults, children, adole"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Help and resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Self-help tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace Neuropsychiatric Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "J123, Gamma II, Greater Noida, 201310"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychology and counselling"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Find your next step"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Choose a section, then open a branch to see the pages inside it."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Accessibility options"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Show ${item.label} options"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Show ${item.label} options"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Main navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Use dark theme"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Open navigation menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Book an appointment"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Footer navigation"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/faq.astro",
+      "count": 28,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently Asked Questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Questions people ask before a first visit"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Confidentiality"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Are sessions confidential?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Who will have access to my records?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Medication and Treatment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Will I definitely be prescribed medication?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Do you provide therapy or only medication management?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Booking and Logistics"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How do I book an appointment?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What is the consultation fee?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Do you accept insurance?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Still have questions?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "We're here to help clarify any concerns before your visit."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book an Appointment"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/dr-anita-sharma.astro",
+      "count": 27,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Dr Anita Sharma"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Consultant Psychiatrist"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Dr. Anita Sharma"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Consultant Psychiatrist at Mind Grace"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "About Dr. Sharma"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Dr. Anita Sharma is a Consultant Psychiatrist at Mind Grace Neuropsychiatric Cli"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Areas of Expertise"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child Development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sleep Disorders"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Whole Person Care"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Treating the mind, body, and social context together for lasting wellness."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ready to Start Your Journey?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Take the first step towards better mental health with a confidential consultatio"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/mind-grace.astro",
+      "count": 27,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Care Designed Around You"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Personalized, evidence-based support for every stage of your journey"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatric Care"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Expert diagnosis and treatment for anxiety, depression, bipolar disorder, OCD, a"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child Development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Autism assessment, ADHD support, speech therapy, and special education tailored "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Individual, couple, and family therapy in a safe, non-judgmental space where you"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Free guided breathing, butterfly tapping, fractal hypnosis, and other self-care "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Clinic Experience"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A warm, private, and comfortable environment designed to make every visit feel l"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Conveniently located in Greater Noida with easy parking and accessible facilitie"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/contact.astro",
+      "count": 25,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Routine appointment questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Contact Mind Grace in Greater Noida"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Routine appointment questions only. Do not email emergency details."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Closed on Sundays"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "First-Visit Process"
+        },
+        {
+          "kind": "text-node",
+          "sample": "See what usually happens before, during, and after the first consultation."
+        },
+        {
+          "kind": "text-node",
+          "sample": "See the first-visit process"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ready to Begin?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request an appointment"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/about.astro",
+      "count": 24,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "About the Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "About Our Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Learn more about our patient-centered, evidence-based methodology."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Explore Our Approach"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace Neuropsychiatric Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Learn more about our clinic's mission, values, and commitment to patient-centere"
+        },
+        {
+          "kind": "text-node",
+          "sample": "About Our Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How Care Is Approached"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Treatment Explained Plainly"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Function Matters"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Training and Clinical Background"
+        },
+        {
+          "kind": "text-node",
+          "sample": "MBBS, Universal College of Medical Sciences"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Senior Residency at AIIMS Rishikesh and IHBAS Delhi"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Clinic Environment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Exterior and arrival area"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Front desk and waiting area"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Consultation room"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Research and Professional Interests"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/terms.astro",
+      "count": 23,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Terms of Service"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Terms of service"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Please provide at least 24 hours notice for cancellations"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Late arrivals may result in shortened session times"
+        },
+        {
+          "kind": "text-node",
+          "sample": "No-show appointments may be subject to fees"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Provide accurate and complete medical history"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Follow agreed-upon treatment plans"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Respect clinic staff and facilities"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Maintain confidentiality of other patients"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/sleep-and-anxiety-cycle.astro",
+      "count": 21,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult Mental Health"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sleep And Anxiety Cycle"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How the loop works"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Biological layer"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Structured journaling before bed"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Physiological regulation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Muscle tension and release cycles"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Cooling face or forehead"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Light physical movement to discharge arousal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Temperature change"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Intense activity"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Paced breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Radical acceptance"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Non-engaging reading"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When to seek help"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Night-time anxiety dominates"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sleep feels effortful or unpredictable"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychiatrist-greater-noida.astro",
+      "count": 21,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Greater Noida clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatric care in Greater Noida, with a clear next step"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Start with a confidential conversation about adult mental health, child developm"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "See the clinic location"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ways we can help you begin"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult psychiatry"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Talk through anxiety, depression, mood changes, sleep concerns, attention diffic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Explore psychiatry"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guidance for communication, behaviour, attention, learning, and developmental co"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Explore child development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Counselling and assessment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychology, counselling, and assessment pathways are considered according to the"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Explore counselling"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Plan your visit"
+        },
+        {
+          "kind": "text-node",
+          "sample": "fees and payments"
+        },
+        {
+          "kind": "text-node",
+          "sample": "contact the clinic"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychiatrist-in-noida.astro",
+      "count": 21,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Serving Noida and nearby areas"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Looking for a psychiatrist near Noida?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace provides a Greater Noida clinic option for people travelling from Noi"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Check directions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Choose the pathway that fits your concern"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatric consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A structured conversation about symptoms, context, treatment options, and follow"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatry information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychology and counselling"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Talk-based support for emotional, behavioural, relationship, or coping concerns."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Counselling information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Children and families"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Parent-guided support for development, learning, communication, behaviour, and a"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child-development care"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Before you contact us"
+        },
+        {
+          "kind": "text-node",
+          "sample": "the first visit"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace is not an emergency service"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/thank-you.astro",
+      "count": 21,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "If the concern becomes urgent, use emergency services or the nearest hospital in"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Booking Confirmation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Your appointment request is ready for follow-up"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request details"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Send on WhatsApp"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Call the clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "No booking summary was found"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Go back to booking"
+        },
+        {
+          "kind": "text-node",
+          "sample": "WhatsApp clinic"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/butterfly-tapper.astro",
+      "count": 21,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Tap Screen to Begin"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly tapping for a brief grounding pause"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Pause butterfly tapper"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Tap left side"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Tap right side"
+        }
+      ]
+    },
+    {
+      "file": "src/components/Shell.astro",
+      "count": 19,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Where You Come First"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Compassionate neuropsychiatric care in Greater Noida for adults, children, adole"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Help and resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Self-help tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace Neuropsychiatric Clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "J123, Gamma II, Greater Noida, 201310"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Main navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Use dark theme"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Open navigation menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Book an appointment"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Footer navigation"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/leaf-on-stream.astro",
+      "count": 19,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Use a guided imagery exercise to observe thoughts as they pass. Stop if the exer"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What would you like to release today?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Thought or feeling to release"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Toggle release panel"
+        },
+        {
+          "kind": "placeholder",
+          "sample": "Type a worry, thought, or feeling here…"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Thought or feeling to release"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/child-development.astro",
+      "count": 18,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Children, adolescents, and families"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child-development care that includes the family"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request a family appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Read about Aasha"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What families may explore"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Development and communication"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Concerns about speech, language, social communication, play, or early milestones"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Attention and learning"
+        },
+        {
+          "kind": "text-node",
+          "sample": "School concerns, ADHD questions, learning differences, and practical classroom o"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Behaviour and regulation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Families can talk about routines, emotional regulation, sensory needs, sleep, be"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Helpful next steps"
+        },
+        {
+          "kind": "text-node",
+          "sample": "ADHD and autism assessment information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "learning assessment information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "common questions"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychiatry.astro",
+      "count": 18,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult psychiatry"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatry consultations that start with listening"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A psychiatric consultation can help clarify what you are experiencing, what may "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request a consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "See what to expect"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What may be discussed"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Symptoms, history, sleep, physical health, medicines, substance use, relationshi"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Medication management"
+        },
+        {
+          "kind": "text-node",
+          "sample": "If medication is relevant, the clinician can discuss options, benefits, risks, m"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Practical care planning"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Recommendations may include counselling, lifestyle steps, further assessment, re"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Related pathways"
+        },
+        {
+          "kind": "text-node",
+          "sample": "conditions we support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "psychology and counselling"
+        },
+        {
+          "kind": "text-node",
+          "sample": "contact the clinic"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychology-counselling.astro",
+      "count": 18,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychology and counselling"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Talk-based support for the concerns you carry"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Counselling and psychotherapy offer a space to understand patterns, practise ski"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "See current services"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Possible areas of support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Individual work"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Support may focus on anxiety, low mood, stress, confidence, grief, trauma, sleep"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Relationships and family"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Family counselling, couples counselling, parenting support, and communication wo"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skills and approaches"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Depending on the clinician and concern, work may include CBT-informed, behaviour"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Find the right starting point"
+        },
+        {
+          "kind": "text-node",
+          "sample": "teleconsultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "your first visit"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/specialized-consultations.astro",
+      "count": 18,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Specialized topics"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Start with a careful assessment of the right service"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Some concerns need specialist teams, physical examination, structured rehabilita"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Describe the enquiry"
+        },
+        {
+          "kind": "text-node",
+          "sample": "See current services"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Topics that require individual confirmation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Addiction and rehabilitation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Addiction, substance use, dual-diagnosis, and rehabilitation needs may require a"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Eating and gender-related concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Eating-disorder or gender-related support should be approached respectfully and "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Forensic and legal matters"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Forensic assessment, court-ordered therapy, and legal reports have specific requ"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Urgent or immediate risk"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace is not an emergency, crisis-intervention, or suicide-prevention servi"
+        },
+        {
+          "kind": "text-node",
+          "sample": "See emergency resources"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/therapy.astro",
+      "count": 18,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapy and psychotherapy"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapy is a collaborative conversation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapy may help you notice patterns, build coping skills, work through relation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ask about therapy"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychology and counselling"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Formats and approaches"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Individual therapy"
+        },
+        {
+          "kind": "text-node",
+          "sample": "One-to-one work may address anxiety, depression, stress, grief, trauma, confiden"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Couples and family work"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Relationship, marriage, parenting, and family counselling may be considered when"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Evidence-informed skills"
+        },
+        {
+          "kind": "text-node",
+          "sample": "CBT-informed, behavioural, supportive, mindfulness, and other approaches may be "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Related information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "the first visit"
+        },
+        {
+          "kind": "text-node",
+          "sample": "urgent-help information"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/guided-breathing.astro",
+      "count": 18,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided breathing for anxiety and calm"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Notice the shift"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Your body has slowed down. Let it stay that way."
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/404.astro",
+      "count": 17,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The page you were looking for is not available. Continue to booking, clinic dire"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Clinic location"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/aasha.astro",
+      "count": 17,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Aasha Initiative"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Aasha child-development care for families"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A practical pathway for families noticing communication, learning, behaviour, at"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/scheduled-worry-time-technique.astro",
+      "count": 17,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult Mental Health"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Scheduled Worry Time Technique"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The idea in brief"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why worrying feels uncontrollable"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How the method works"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Problems you can act on"
+        },
+        {
+          "kind": "text-node",
+          "sample": "uncertainties you cannot control."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Making it practical"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why this also improves sleep"
+        },
+        {
+          "kind": "text-node",
+          "sample": "stimulus control therapy"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Need structured help?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book a consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Read more articles"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/approach.astro",
+      "count": 16,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A thoughtful, whole-person approach to mental health care"
+        },
+        {
+          "kind": "text-node",
+          "sample": "We connect clinical assessment with everyday context, practical goals, and compa"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/assessments.astro",
+      "count": 16,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment and evaluation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment that answers a useful question"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mind Grace Neuropsychiatric Clinic in Greater Noida provides psychiatric evaluat"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ask about an assessment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Review assessment fees"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment pathways"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatric evaluation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A clinician reviews symptoms, history, health, and functioning to guide diagnosi"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychological assessment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Structured interviews or tests may help understand cognition, behaviour, emotion"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child and learning assessment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Prepare with context"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Bring previous reports, school feedback, medication details, and your questions "
+        }
+      ]
+    },
+    {
+      "file": "src/pages/disclaimer.astro",
+      "count": 16,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Click here for emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Skip to main content"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Medical disclaimer"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Emergency crisis support information"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/hypnos-fractal.astro",
+      "count": 16,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Grounding Fractal Tool"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Toggle fractal controls"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/addiction-substance-use.astro",
+      "count": 15,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Addiction and Substance Use Enquiries"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Educational information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Addiction support starts with the right level of care"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Substance use, behavioural addiction, withdrawal risk, and dual-diagnosis concer"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Specialized enquiries"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Contact the clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What to clarify"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Safety and urgency"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Withdrawal, overdose risk, severe symptoms, or immediate danger may require emer"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment may consider substances, pattern, health, mental health, family suppo"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Referral options"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Specialist addiction treatment, rehabilitation, medical care, or community suppo"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/depression-anxiety.astro",
+      "count": 15,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Common mental-health concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Support for depression, anxiety, and panic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Persistent worry, low mood, panic, irritability, poor sleep, or loss of interest"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request a consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatry pathway"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What may be explored"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Onset, duration, triggers, physical symptoms, sleep, functioning, and previous s"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Treatment options"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Depending on the assessment, options may include therapy, practical strategies, "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ongoing support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Follow-up and adjustment are guided by response, preferences, safety, and clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "OCD, panic, and PTSD"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/ocd-panic-ptsd.astro",
+      "count": 15,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Anxiety and trauma-related concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When thoughts, fear, or memories take over"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Intrusive thoughts, compulsions, panic, avoidance, nightmares, or trauma-related"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Explore therapy"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Support is individual"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Understand the pattern"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The clinician may explore triggers, thoughts, behaviours, physical sensations, s"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Discuss options"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Options may include therapy, coping strategies, medication discussion, or referr"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Move at a safe pace"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Care planning should respect readiness, privacy, culture, relationships, and cur"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/eye-movement.astro",
+      "count": 15,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Lateral grounding"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Keep your head still and follow the moving light with your eyes only. Stop if th"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/horizon-scan.astro",
+      "count": 15,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frequently asked questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guided Breathing"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Butterfly Tapper"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Hypnotic Fractal"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book Appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Therapeutic Tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Horizon scanning"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Follow the dot as it moves gently across the screen. Keep your head still and mo"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Mobile navigation"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Close menu"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/trauma-grief-support.astro",
+      "count": 15,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emotional support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "There is room to talk about loss and difficult experiences"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Grief, trauma, and adjustment can affect sleep, mood, relationships, concentrati"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Explore therapy"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Possible areas of support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Making sense of change"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Talk through what happened, what has changed, and how it is affecting daily life"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Building steadiness"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Support may include grounding, routines, coping skills, sleep support, and relat"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Knowing when to refer"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Severe symptoms, immediate danger, or specialist needs may require another servi"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/stimulus-control-therapy.astro",
+      "count": 14,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult Mental Health"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Stimulus Control Therapy"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The idea in brief"
+        },
+        {
+          "kind": "text-node",
+          "sample": "How insomnia becomes a learned pattern"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What stimulus control changes"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The core method"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What to expect initially"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Need structured help?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book a consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Read more articles"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/learning-disability-assessment.astro",
+      "count": 14,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Learning and school concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Understand learning differences beyond a test score"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What may be reviewed"
+        },
+        {
+          "kind": "text-node",
+          "sample": "School experience"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Reading, writing, maths, attention, homework, classroom feedback, and learning h"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Wider development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Language, cognition, health, sleep, emotions, behaviour, and developmental histo"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Useful recommendations"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Recommendations may support home, school, further assessment, or referral where "
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychosis-schizophrenia.astro",
+      "count": 14,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatric assessment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Support when reality feels difficult to make sense of"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Changes in perception, beliefs, thinking, behaviour, sleep, or functioning need "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Contact the clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Urgent-help information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What may be considered"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Current symptoms"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The clinician may discuss what has changed, how quickly, sleep, health, medicine"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Family involvement"
+        },
+        {
+          "kind": "text-node",
+          "sample": "With consent and where appropriate, family observations can help build a clearer"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Some situations need urgent hospital assessment or coordinated specialist care b"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/sleep-eating-disorders.astro",
+      "count": 14,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Sleep and Eating Disorder Enquiries"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Specialized concerns"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sleep and eating concerns need careful context"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Insomnia, irregular sleep, appetite changes, restrictive eating, bingeing, or di"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ask about suitability"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Contact the clinic"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment may consider"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sleep timing, food patterns, distress, routines, work or school, and physical sy"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Medicines, medical conditions, substances, mood, anxiety, and energy levels can "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Specialist support"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Some eating or sleep concerns need a physician, dietitian, sleep service, or spe"
+        }
+      ]
+    },
+    {
+      "file": "assets/js/article-enhancements.js",
+      "count": 13,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "A practical next step"
+        },
+        {
+          "kind": "text-node",
+          "sample": "You do not need a perfect explanation before asking for help"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Use this guide to notice patterns, not to diagnose yourself or your child. If th"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Book a consultation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ask on WhatsApp"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Was this guide useful?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Yes, clearer now"
+        },
+        {
+          "kind": "text-node",
+          "sample": "I still have a question"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Try a gentle pause"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Self-help tools to explore"
+        },
+        {
+          "kind": "text-node",
+          "sample": "View all self-help tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Return to all guides"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Ask on WhatsApp (opens in a new tab)"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/adhd-autism-assessment.astro",
+      "count": 13,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Neurodevelopmental assessment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "ADHD and autism questions deserve context"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment considers development, communication, attention, behaviour, learning,"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Assessment information"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What an assessment may include"
+        },
+        {
+          "kind": "text-node",
+          "sample": "History and observation"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Structured tools"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Recommendations"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The outcome may include practical strategies, school guidance, follow-up, or ref"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/teleconsultation.astro",
+      "count": 12,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Remote care enquiry"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ask whether teleconsultation is suitable"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Some follow-up or counselling conversations may be possible remotely, but teleco"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Request an appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Before a remote appointment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "The clinic must confirm clinician availability, location, identity, consent, pri"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Remote care may require an in-person review, examination, testing, referral, or "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Consent and follow-up"
+        },
+        {
+          "kind": "text-node",
+          "sample": "privacy information"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/bipolar-mood-disorders.astro",
+      "count": 11,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A careful assessment for changing mood"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Mood shifts, periods of low mood, increased energy, reduced sleep, impulsivity, "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Ask about an assessment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Psychiatry consultations"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Questions a clinician may consider"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Changes in sleep, energy, activity, mood, concentration, and functioning over ti"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Health, medicines, substances, stressors, family history, and previous episodes "
+        },
+        {
+          "kind": "text-node",
+          "sample": "Care may include follow-up, medication discussion, therapy, practical support, o"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/when-to-see-a-psychiatrist.astro",
+      "count": 11,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult Mental Health"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When To See A Psychiatrist"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When to see a psychiatrist"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Useful threshold questions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Is sleep, work, or routine being disrupted?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Are you stuck in the same pattern despite trying to cope?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Do you need diagnostic clarity or medication guidance?"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/child/speech-delay-red-flags.astro",
+      "count": 11,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child Development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Speech Delay Red Flags"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Speech delay red flags parents should notice"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Look for patterns, not one isolated moment"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Limited words compared with age expectations"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Difficulty understanding simple instructions"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Frustration because communication is hard"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/child/school-concerns-and-adhd.astro",
+      "count": 10,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child Development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "School Concerns And Adhd"
+        },
+        {
+          "kind": "text-node",
+          "sample": "When school concerns may point toward ADHD"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Questions worth asking"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Is there restlessness, forgetfulness, or task avoidance?"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Is school confidence starting to drop?"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/overthinking-vs-anxiety.astro",
+      "count": 8,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Adult Mental Health"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Overthinking Vs Anxiety"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Overthinking vs anxiety"
+        },
+        {
+          "kind": "text-node",
+          "sample": "A useful distinction"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/child/early-signs-of-autism.astro",
+      "count": 8,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child Development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Early Signs Of Autism"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Early signs of autism parents often ask about"
+        },
+        {
+          "kind": "text-node",
+          "sample": "What to notice early"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/child/sensory-overload-at-home.astro",
+      "count": 7,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Not an emergency service."
+        },
+        {
+          "kind": "text-node",
+          "sample": "Immediate danger? Call"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Emergency resources"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Child Development"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Sensory Overload At Home"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Why this matters"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Breadcrumb"
+        }
+      ]
+    },
+    {
+      "file": "assets/js/tools-shell.js",
+      "count": 4,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Continue at your pace"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Guides that may help next"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Browse all mental health guides"
+        },
+        {
+          "kind": "text-node",
+          "sample": "See all self-help tools"
+        }
+      ]
+    },
+    {
+      "file": "assets/js/translate.js",
+      "count": 4,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Translate this page"
+        },
+        {
+          "kind": "title",
+          "sample": "इस पेज को हिन्दी में पढ़ें"
+        },
+        {
+          "kind": "title",
+          "sample": "Translate page / भाषा बदलें"
+        },
+        {
+          "kind": "aria-label",
+          "sample": "Page languages"
+        }
+      ]
+    },
+    {
+      "file": "assets/js/blog-discovery.js",
+      "count": 2,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "Read this guide"
+        },
+        {
+          "kind": "text-node",
+          "sample": "Not sure where to start?"
+        }
+      ]
+    },
+    {
+      "file": "assets/js/crisis-banner.js",
+      "count": 2,
+      "samples": [
+        {
+          "kind": "aria-label",
+          "sample": "Call ${helpline.label} at ${helpline.number}"
+        },
+        {
+          "kind": "title",
+          "sample": "${helpline.name}"
+        }
+      ]
+    },
+    {
+      "file": "assets/js/main.js",
+      "count": 1,
+      "samples": [
+        {
+          "kind": "text-node",
+          "sample": "You are offline. Some features may be unavailable."
+        }
+      ]
+    }
+  ]
+}
