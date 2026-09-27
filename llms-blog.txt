@@ -9,20 +9,20 @@ Neuropsychiatric Clinic, Greater Noida. Every article opens with an "In short"
 extraction callout and ends with practical next steps.
 
 ## Adult mental health guides (blog/pages/adult/)
-- Overthinking vs anxiety: https://mindgracencr.in/blog/pages/adult/overthinking-vs-anxiety.html
-- Scheduled worry time technique: https://mindgracencr.in/blog/pages/adult/scheduled-worry-time-technique.html
-- Sleep and the anxiety cycle: https://mindgracencr.in/blog/pages/adult/sleep-and-anxiety-cycle.html
-- Stimulus control therapy: https://mindgracencr.in/blog/pages/adult/stimulus-control-therapy.html
-- When to see a psychiatrist: https://mindgracencr.in/blog/pages/adult/when-to-see-a-psychiatrist.html
+- Overthinking vs anxiety: https://mindgracencr.in/blog/pages/adult/overthinking-vs-anxiety/
+- Scheduled worry time technique: https://mindgracencr.in/blog/pages/adult/scheduled-worry-time-technique/
+- Sleep and the anxiety cycle: https://mindgracencr.in/blog/pages/adult/sleep-and-anxiety-cycle/
+- Stimulus control therapy: https://mindgracencr.in/blog/pages/adult/stimulus-control-therapy/
+- When to see a psychiatrist: https://mindgracencr.in/blog/pages/adult/when-to-see-a-psychiatrist/
 
 ## Child development guides (blog/pages/child/)
-- Early signs of autism: https://mindgracencr.in/blog/pages/child/early-signs-of-autism.html
-- School concerns and ADHD: https://mindgracencr.in/blog/pages/child/school-concerns-and-adhd.html
-- Sensory overload at home: https://mindgracencr.in/blog/pages/child/sensory-overload-at-home.html
-- Speech delay red flags: https://mindgracencr.in/blog/pages/child/speech-delay-red-flags.html
+- Early signs of autism: https://mindgracencr.in/blog/pages/child/early-signs-of-autism/
+- School concerns and ADHD: https://mindgracencr.in/blog/pages/child/school-concerns-and-adhd/
+- Sensory overload at home: https://mindgracencr.in/blog/pages/child/sensory-overload-at-home/
+- Speech delay red flags: https://mindgracencr.in/blog/pages/child/speech-delay-red-flags/
 
 ## Long-form guides
-- High-functioning depression: https://mindgracencr.in/high-functioning-depression/
+- High-functioning depression: https://mindgracencr.in/high-functioning-depression-guide/
 - Sleep and autism (Indian parents): https://mindgracencr.in/sleep-and-autism-guide-indian-parents/
 - Perceived burdensomeness series: https://mindgracencr.in/perceived-burdensomeness/
 

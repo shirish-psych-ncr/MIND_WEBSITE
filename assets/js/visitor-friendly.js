@@ -56,7 +56,7 @@
         ["Resources", "/resources.html#tools"],
         ["Clinic gallery", "/gallery.html"],
         ["Patient experiences", "/testimonials.html"],
-        ["Blog", "/blog/index.html"],
+        ["Blog", "/blog/"],
         ["Frequently asked questions", "/faq.html#common-questions"]
       ]
     },
@@ -521,9 +521,9 @@
     const resourcePages = new Set(["faq.html", "gallery.html", "testimonials.html", "approach.html"]);
     const legalPages = new Set(["terms.html", "disclaimer.html", "consent.html"]);
     if (path.startsWith("/blog/")) {
-      entries.push({ label: "Blog", href: "/blog/index.html" });
-      if (path.includes("/adult/")) entries.push({ label: "Adult mental health", href: "/blog/adult.html" });
-      else if (path.includes("/child/")) entries.push({ label: "Child development", href: "/blog/children.html" });
+      entries.push({ label: "Blog", href: "/blog/" });
+      if (path.includes("/adult/")) entries.push({ label: "Adult mental health", href: "/blog/adult/" });
+      else if (path.includes("/child/")) entries.push({ label: "Child development", href: "/blog/children/" });
     } else if (path.startsWith("/tools/")) {
       entries.push({ label: "Resources", href: "/resources.html" });
       entries.push({ label: "Therapeutic tools", href: "/resources.html#tools" });
@@ -613,7 +613,7 @@
       "conditions.html": {
         title: "Start with the pattern you are noticing",
         body: "A symptom can have more than one explanation, and online information cannot replace an assessment. Use these condition guides to find language for your concern, then connect it with the right service or consultation in Greater Noida.",
-        links: [["See our care approach", "/approach.html"], ["Read mental health guides", "/blog/index.html"], ["Book an assessment", "/book.html"]]
+        links: [["See our care approach", "/approach.html"], ["Read mental health guides", "/blog/"], ["Book an assessment", "/book.html"]]
       },
       "about.html": {
         title: "Care that makes room for your context",
@@ -668,7 +668,7 @@
       "aasha.html": {
         title: "Support for children starts with noticing",
         body: "Parents may notice differences in communication, learning, behaviour, or development and still feel unsure what they mean. AASHA connects families with child-development information and a route toward appropriate support in Greater Noida.",
-        links: [["Read child-development guides", "/blog/children.html"], ["See child-development services", "/services.html"], ["Book a consultation", "/book.html"]]
+        links: [["Read child-development guides", "/blog/children/"], ["See child-development services", "/services.html"], ["Book a consultation", "/book.html"]]
       },
       "gallery.html": {
         title: "See the space before you arrive",
@@ -683,22 +683,22 @@
       "mind-grace.html": {
         title: "A connected route through Mind Grace",
         body: "Whether you are looking for psychiatric care, child-development support, practical information, or a place to begin, the site is designed to help you move at your own pace from concern to a clear next step in Greater Noida.",
-        links: [["Explore services", "/services.html"], ["Meet the care team", "/doctors.html"], ["Read mental health guides", "/blog/index.html"], ["Book an appointment", "/book.html"]]
+        links: [["Explore services", "/services.html"], ["Meet the care team", "/doctors.html"], ["Read mental health guides", "/blog/"], ["Book an appointment", "/book.html"]]
       },
-      "blog/index.html": {
+      "blog/": {
         title: "Find language for what you are experiencing",
         body: "These guides explain common adult mental-health and child-development concerns in clear, practical language. Read at your own pace, then connect what you notice with a tool, service, or confidential conversation.",
-        links: [["Read adult mental health guides", "/blog/adult.html"], ["Read child-development guides", "/blog/children.html"], ["Explore self-help tools", "/resources.html#tools"], ["Book a consultation", "/book.html"]]
+        links: [["Read adult mental health guides", "/blog/adult/"], ["Read child-development guides", "/blog/children/"], ["Explore self-help tools", "/resources.html#tools"], ["Book a consultation", "/book.html"]]
       },
       "adult.html": {
         title: "Adult mental health guidance for real-life concerns",
         body: "Worry, low mood, sleep changes, and difficulty coping can affect work, relationships, and daily routines. These guides help you recognise patterns without diagnosing yourself and show where professional support may fit.",
-        links: [["Browse all mental health guides", "/blog/index.html"], ["Try a self-help tool", "/resources.html#tools"], ["See adult services", "/services.html"], ["Book a consultation", "/book.html"]]
+        links: [["Browse all mental health guides", "/blog/"], ["Try a self-help tool", "/resources.html#tools"], ["See adult services", "/services.html"], ["Book a consultation", "/book.html"]]
       },
       "children.html": {
         title: "Child-development guidance for parents and caregivers",
         body: "Parents often notice a concern before they have the words to describe it. These guides cover communication, sensory experiences, school concerns, and early development, with practical routes toward support when a pattern continues.",
-        links: [["Browse all child guides", "/blog/index.html"], ["See child-development services", "/services.html"], ["Explore gentle tools", "/resources.html#tools"], ["Book a consultation", "/book.html"]]
+        links: [["Browse all child guides", "/blog/"], ["See child-development services", "/services.html"], ["Explore gentle tools", "/resources.html#tools"], ["Book a consultation", "/book.html"]]
       },
       "emergency.html": {
         title: "If this feels unsafe, act now",
@@ -718,10 +718,10 @@
       "resources.html": {
         title: "Small tools for difficult moments",
         body: "Breathing, grounding, focus, and calming exercises can help you pause and notice what is happening. They are educational supports, not a diagnosis or a replacement for professional care when distress continues.",
-        links: [["Read adult mental health guides", "/blog/adult.html"], ["Read child development guides", "/blog/children.html"], ["Book professional support", "/book.html"]]
+        links: [["Read adult mental health guides", "/blog/adult/"], ["Read child development guides", "/blog/children/"], ["Book professional support", "/book.html"]]
       }
     };
-    let content = pathways[path] || pathways[file];
+    let content = pathways[path] || pathways[file] || (path.endsWith("/") ? pathways[path.slice(0, -1)] : null);
     if (!content && file === "index.html" && !path.startsWith("/blog/")) content = pathways["/"];
     if (path.startsWith("/tools/")) {
       const toolCopy = {
@@ -732,7 +732,7 @@
         "horizon-scan.html": ["Orient your attention to the space around you", "Horizon scanning invites you to notice your surroundings in a slow, deliberate way. Use it as a brief grounding exercise, stop if it feels uncomfortable, and seek help when you need more than a self-guided pause."],
         "leaf-on-stream.html": ["Watch thoughts pass without chasing them", "Leaf on Stream offers an imagery-based pause for observing thoughts and feelings. It does not replace assessment or care, and you can stop whenever the exercise feels uncomfortable or unhelpful."]
       }[file] || ["Use this tool at your own pace", "This exercise offers a brief way to pause, focus, or ground yourself. Stop if it increases discomfort, and choose professional support when symptoms persist, interfere with daily life, or feel unsafe."];
-      content = { title: toolCopy[0], body: toolCopy[1], links: [["See all self-help tools", "/resources.html#tools"], ["Read practical mental health guides", "/blog/index.html"], ["Book a consultation", "/book.html"]] };
+      content = { title: toolCopy[0], body: toolCopy[1], links: [["See all self-help tools", "/resources.html#tools"], ["Read practical mental health guides", "/blog/"], ["Book a consultation", "/book.html"]] };
     }
     if (path.startsWith("/blog/pages/")) {
       const childArticle = path.includes("/child/");
@@ -741,7 +741,7 @@
         body: childArticle
           ? "This guide helps parents put words to a child’s communication, sensory, school, or developmental concerns. If the pattern affects daily life or keeps worrying your family, a child-development conversation can help you decide what support fits."
           : "This guide helps you put words to a pattern affecting mood, worry, sleep, or daily life. If the concern continues or feels difficult to manage, a confidential conversation can help you decide what support fits.",
-        links: [["Browse all guides", "/blog/index.html"], [childArticle ? "See child-development services" : "See adult mental health services", "/services.html"], ["Try a gentle self-help tool", "/resources.html#tools"], ["Book a consultation", "/book.html"]]
+        links: [["Browse all guides", "/blog/"], [childArticle ? "See child-development services" : "See adult mental health services", "/services.html"], ["Try a gentle self-help tool", "/resources.html#tools"], ["Book a consultation", "/book.html"]]
       };
     }
     if (!content || ["privacy.html", "terms.html", "consent.html", "disclaimer.html"].includes(file)) return;
