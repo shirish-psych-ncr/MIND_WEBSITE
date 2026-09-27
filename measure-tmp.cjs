@@ -1,17 +1,17 @@
-const {chromium}=require('playwright');
-(async()=>{
- const b=await chromium.launch({headless:true});
- const ctx=await b.newContext({viewport:{width:390,height:844},colorScheme:'light',serviceWorkers:'block'});
- await ctx.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:8765/')?r.continue():r.abort());
- const p=await ctx.newPage();
- for(const route of ['tools/leaf-on-stream.html','tools/guided-breathing.html']){
-  await p.goto('http://127.0.0.1:8765/'+route,{waitUntil:'load'});
-  const info=await p.evaluate(()=>{
-   const bar=document.querySelector('.tool-link-bar'); if(!bar) return null;
-   const cs=getComputedStyle(bar); const r=bar.getBoundingClientRect();
-   return {position:cs.position,top:cs.top,z:cs.zIndex,y:r.y,h:r.height,parent:bar.parentElement.tagName+'.'+bar.parentElement.className.split(' ')[0],parentPos:getComputedStyle(bar.parentElement).position};
-  });
-  console.log(route,JSON.stringify(info));
- }
- await b.close();
-})();
+/* eslint-disable no-console */
+const { astroToJsx } = require('./scripts/a11y_lint/structure_lint.cjs');
+const acorn = require('acorn');
+const jsx = require('acorn-jsx');
+const P = acorn.Parser.extend(jsx());
+const fs = require('node:fs');
+for (const f of ['src/components/Shell.astro','src/layouts/Layout.astro']) {
+  const src = astroToJsx(f, { strict: true });
+  try { P.parse(src, { ecmaVersion: 2022, sourceType: 'module', locations: true }); console.log(f, 'OK'); }
+  catch (e) {
+    console.log(f, 'FAIL:', e.message);
+    if (e.loc) {
+      const L = src.split('\n');
+      for (let i = Math.max(0, e.loc.line - 3); i < Math.min(L.length, e.loc.line + 1); i++) console.log(String(i+1).padStart(5), L[i].slice(0, 240));
+    }
+  }
+}

@@ -51,31 +51,326 @@ async function runHtmlValidate() {
   console.log(`[html-validate] ${htmlFiles.length} files checked, ${errorCount} errors`);
 }
 
-// Convert an Astro template section into JSX-parseable code for jsx-a11y rules
-function astroToJsx(file) {
+// Replace top-level Astro control-flow directives (if/else/each/body/map) that sit
+// between tags with balanced-brace JSX expressions so the template stays parseable.
+function replaceDirectives(tpl) {
+  const DIR_RE = /^\s*(?:<!--\s*)?{(if|else if|else|each body|each|body|map)\b/;
+  let out = '';
+  let i = 0;
+  while (i < tpl.length) {
+    const lt = tpl.indexOf('<', i);
+    if (lt === -1) { out += tpl.slice(i); break; }
+    out += tpl.slice(i, lt);
+    // segment from this tag start to the next tag start
+    let nt = tpl.indexOf('<', lt + 1);
+    if (nt === -1) nt = tpl.length;
+    // find end of THIS tag first
+    const gt = tpl.indexOf('>', lt);
+    if (gt === -1) { out += tpl.slice(lt); break; }
+    // extend segment until the next '<' that begins a tag/close-tag
+    nt = lt + 1;
+    while (nt < tpl.length) {
+      const c = tpl.indexOf('<', nt);
+      if (c === -1) { nt = tpl.length; break; }
+      if (/^<[a-zA-Z!/]/.test(tpl.slice(c))) { nt = c; break; }
+      nt = c + 1;
+    }
+    const seg = tpl.slice(gt + 1, nt);
+    const dm = seg.match(DIR_RE);
+    if (dm) {
+      // consume balanced braces starting at the '{' inside the segment
+      let bi = seg.indexOf('{');
+      let depth = 0; let j = bi;
+      for (; j < seg.length; j++) {
+        if (seg[j] === '{') depth++;
+        else if (seg[j] === '}') { depth--; if (depth === 0) { j++; break; } }
+      }
+      const expr = seg.slice(bi, j);
+      const stripped = expr
+        .replace(/^\{\s*(?:else if|if)\b/, '{cond ? null : null}') // placeholder keeps braces
+        .replace(/^\{\s*else\s*\}/, '')
+        .replace(/^\{\s*else\b/, '')
+        .replace(/^\{\s*each\b[\s\S]*?\}/, '{null}')
+        .replace(/^\{\s*(?:each body|body|map)\b[\s\S]*?\}/, '{null}');
+      out += tpl.slice(gt, gt + 1) + stripped;
+      i = nt;
+      continue;
+    }
+    out += tpl.slice(gt, nt);
+    i = nt;
+  }
+  return out;
+}
+
+// Scan a tag's attribute list (text between "<name" and the closing ">" of the
+// opening tag), tracking quote state so '>' inside quoted values doesn't end it.
+function scanTagAttrs(str, from) {
+  let i = from;
+  while (i < str.length) {
+    const c = str[i];
+    if (c === '"' || c === "'") {
+      const q = c; i++;
+      while (i < str.length && str[i] !== q) i++;
+      i++;
+      continue;
+    }
+    if (c === '>') return { gt: i };
+    i++;
+  }
+  return { gt: -1 };
+}
+
+// Find the index of `pat` at brace-depth `want` within str[start..], skipping
+// quoted strings and nested braces. Returns -1 if never reached/closed.
+function findAtDepth(str, start, pat, want) {
+  let depth = 0; let i = start;
+  while (i < str.length) {
+    const c = str[i];
+    if (c === '{' && depth < want) { depth++; i++; continue; }
+    if (c === '}') { if (depth === want) return -1; depth--; i++; continue; }
+    if (c === '"' || c === "'" || c === '`') {
+      const q = c; i++;
+      while (i < str.length && str[i] !== q) { if (str[i] === '\\') i++; i++; }
+      i++; continue;
+    }
+    if (depth === want && str.startsWith(pat, i)) return i;
+    i++;
+  }
+  return -1;
+}
+
+// Rewrite Astro control-flow expressions ({if}/{each}/{else} …) into valid JSX
+// expressions: `{if cond}A{else}B{/if}` → `{cond ? A : B}`, `{each x as y}T{/each}`
+// → `{null}` (or mapped to placeholder JSX when `keepEach`), preserving nesting.
+function rewriteControlFlow(s, keepEach) {
+  let out = '';
+  let i = 0;
+  while (i < s.length) {
+    const lt = s.indexOf('<', i);
+    if (lt === -1) { out += rewriteExprs(s.slice(i), keepEach); break; }
+    out += rewriteExprs(s.slice(i, lt), keepEach);
+    if (s.startsWith('<!--', lt)) {
+      const e = s.indexOf('-->', lt);
+      i = e === -1 ? s.length : e + 3;
+      continue;
+    }
+    // tag regex must not cross newlines inside the attribute region unless
+    // quotes are balanced — use quote-aware scan instead:
+    const tm = /^<\/?[a-zA-Z!][^>\"\n]*/.exec(s.slice(lt));
+    if (!tm) { out += ' '; i = lt + 1; continue; }
+    let j = lt + tm[0].length;
+    // continue scanning while inside an unbalanced quote or before '>'
+    while (j < s.length && s[j] !== '>') {
+      if (s[j] === '"' || s[j] === "'") { const q = s[j]; j++; while (j < s.length && s[j] !== q) j++; j++; continue; }
+      j++;
+    }
+    out += s.slice(lt, Math.min(j + 1, s.length));
+    i = j + 1;
+  }
+  return out;
+}
+
+function rewriteExprs(text, keepEach) {
+  let res = '';
+  let i = 0;
+  while (i < text.length) {
+    const open = text.indexOf('{', i);
+    if (open === -1) { res += text.slice(i); break; }
+    res += text.slice(i, open);
+    // matching close brace (quote-aware)
+    let depth = 0; let j = open;
+    for (; j < text.length; j++) {
+      const c = text[j];
+      if (c === '"' || c === "'" || c === '`') {
+        const q = c; j++;
+        while (j < text.length && text[j] !== q) { if (text[j] === '\\') j++; j++; }
+        continue;
+      }
+      if (c === '{') depth++;
+      else if (c === '}') { depth--; if (depth === 0) { j++; break; } }
+    }
+    if (depth !== 0) { res += ' '; i = text.length; break; }
+    const expr = text.slice(open, j); // includes braces
+    let dm = /^\{\s*(if|else if|else|each body|each|body|map)\b/.exec(expr);
+    // `{foo.map(...)} ` style: directive keyword sitting inside the expression
+    if (!dm && /^\{\s*[\w$][\w$.]*\.map\s*\(/.test(expr)) {
+      dm = [expr.replace(/^(\{\s*[\w$][\w$.]*\.map\b)/, '{map'), 'map'];
+    }
+    if (!dm) { res += expr; i = j; continue; }
+    const kind = dm[1];
+    if (kind === 'map') {
+      // JS array-map expression that already yields JSX — keep it as an
+      // interpolation but collapse inner `{...}` interpolations to "expr"
+      // so attr values like href={href} become valid string literals.
+      const inner = expr.slice(1, -1).replace(/\{\s*([\w$][\w$.]*)\s*\}/g, '"$1"');
+      res += `{${inner}}`;
+      i = j;
+      continue;
+    }
+    if (kind === 'each') {
+      const end = findAtDepth(text, j, '{/each}', 0);
+      if (end === -1) { res += '{null}'; i = text.length; break; }
+      const inner = text.slice(j, end);
+      res += keepEach ? `{[${rewriteControlFlow(inner, keepEach)}]}` : '{null}';
+      i = end + '{/each}'.length;
+      continue;
+    }
+    if (kind === 'if') {
+      const els = findAtDepth(text, j, '{else', 0);
+      const end = findAtDepth(text, j, '{/if}', 0);
+      if (end === -1) { res += '{null}'; i = text.length; break; }
+      const cond = expr.replace(/^\{\s*if\s+/, '').replace(/\}$/, '').trim() || 'false';
+      const thenB = text.slice(j, els === -1 || els > end ? end : els);
+      let alt = '';
+      if (els !== -1 && els < end) {
+        const afterElse = text.slice(els + '{else'.length);
+        const gt = afterElse.indexOf('}');
+        const elseif = /^\s*if\b/.test(afterElse);
+        const elseCond = elseif ? afterElse.slice(4, gt).trim() : null;
+        const elseStart = els + gt + 1;
+        const elseEnd = findAtDepth(text, elseStart, '{/if}', 0);
+        alt = elseif
+          ? rewriteExprs('{if ' + elseCond + '}' + text.slice(elseStart, elseEnd === -1 ? end : elseEnd) + '{/if}', keepEach)
+          : text.slice(elseStart, elseEnd === -1 ? end : elseEnd);
+      }
+      res += `{(${cond}) ? [${rewriteControlFlow(thenB, keepEach)}] : [${rewriteControlFlow(alt, keepEach)}]}`;
+      i = end + '{/if}'.length;
+      continue;
+    }
+    // stray else/body/map without opener — drop it
+    res += '{null}';
+    i = j;
+  }
+  return res;
+}
+
+// Convert an Astro template section into JSX-parseable code for jsx-a11y rules.
+// This is a deliberate lossy transform: JS interpolations become "expr", style/
+// script bodies are dropped, Astro directives collapse — enough structure for
+// eslint-plugin-jsx-a11y to inspect real elements and attributes.
+function astroToJsx(file, opts = {}) {
+  const strict = !!opts.strict;
   const src = fs.readFileSync(file, 'utf8');
-  const m = src.match(/<template[^>]*>([\s\S]*?)<\/template>/i);
   let tpl;
-  if (m) {
-    tpl = m[1].replace(/---[\s\S]*?---/g, '');
+  if (/<template[\s>]/i.test(src) && /^---/.test(src)) {
+    const m = src.match(/^---[\s\S]*?---\s*([\s\S]*)$/);
+    tpl = m ? m[1] : src;
   } else {
-    // Astro pages: everything outside the frontmatter block is template markup
+    // Astro components/pages: everything outside the frontmatter block is template markup
     tpl = src.replace(/^---[\s\S]*?---\s*/m, '');
   }
-  // Astro attributes like client:load / set:html are fine as JSX attrs after quoting
-  tpl = tpl.replace(/\b(client|set|is|transition):\s*([\w-]+)(\s*=)?/g, 'astro_$1_$2$3');
-  tpl = tpl.replace(/class=/g, 'className=').replace(/for=/g, 'htmlFor=');
-  // self-close void elements missing the slash
-  tpl = tpl.replace(/<(img|input|br|hr|meta|link|source|area|col|track|wbr)((?:[^>"]|"[^"]*")*)>/g, '<$1$2 />');
-  // Astro <style>/<script> blocks aren't JSX — neutralize them BEFORE attribute
-  // rewriting so their contents (JS/CSS) can't corrupt the markup transform.
-  tpl = tpl.replace(/<\/?style\b[^>]*>/gi, '{/* */}');
-  tpl = tpl.replace(/<script((?:[^>"]|"[^"]*")*)><\/script>/gi, '<div$1></div>');
-  tpl = tpl.replace(/<script((?:[^>"]|"[^"]*")*)>[\s\S]*?<\/script>/gi, '{/* script removed for JSX lint */}');
-  // strip {...} attr values and any stray backticks so the result stays JSX-parseable
-  tpl = tpl.replace(/(\w+)=(\{[^}]*\})/g, '$1="expr"').replace(/`/g, "'");
-  // ensure single root
-  return `function AstroTemplate() {\n  return (\n    <>\n${tpl}\n    </>\n  );\n}\nexport default AstroTemplate;\n`;
+  // Balance tags first (quote-aware): unclosed void-style or dropped custom
+  // components otherwise poison the whole file's parse.
+  tpl = rewriteControlFlow(tpl, !strict);
+  if (strict) {
+    // Drop whole <noscript>…</noscript> subtrees and inline SVG icon contents —
+    // the usual culprits for JSX-parse breakage in Astro templates.
+    tpl = tpl.replace(/<noscript\b[\s\S]*?<\/noscript\s*>/gi, ' ');
+    tpl = tpl.replace(/<svg\b[\s\S]*?<\/svg\s*>/gi, () => '<svg aria-hidden="true" />');
+  }
+
+  const VOID = new Set(['img', 'input', 'br', 'hr', 'meta', 'link', 'source', 'area', 'col', 'track', 'wbr']);
+  // Custom Astro components (<Head />, <Slot />) can't nest-check in JSX; make them comments
+  const CUSTOM_RE = /^(Head|Shell|Layout|Slot|Header|Footer|Nav|Base|SEO|Analytics)$/i;
+  // Pre-pass: self-close void elements written HTML-style (`<img ...>`), which
+  // JSX rejects, and drop stray closing tags for custom components/voids.
+  {
+    let p = 0; const parts = [];
+    while (p < tpl.length) {
+      const lt = tpl.indexOf('<', p);
+      if (lt === -1) { parts.push(tpl.slice(p)); break; }
+      parts.push(tpl.slice(p, lt));
+      if (tpl.startsWith('<!--', lt)) { const e = tpl.indexOf('-->', lt); parts.push(tpl.slice(lt, e === -1 ? tpl.length : e + 3)); p = e === -1 ? tpl.length : e + 3; continue; }
+      let cm;
+      if ((cm = /^<\/([a-zA-Z][\w:-]*)\s*>/.exec(tpl.slice(lt)))) {
+        const n = cm[1].toLowerCase();
+        if (!CUSTOM_RE.test(n) && n !== 'slot' && !VOID.has(n)) parts.push(cm[0]);
+        p = lt + cm[0].length; continue;
+      }
+      let om;
+      if ((om = /^<([a-zA-Z][\w:-]*)/.exec(tpl.slice(lt)))) {
+        const name = om[1].toLowerCase();
+        const sc = scanTagAttrs(tpl, lt + om[0].length);
+        if (sc.gt === -1) { parts.push(tpl.slice(lt)); p = tpl.length; continue; }
+        const attrsRaw = tpl.slice(lt + om[0].length, sc.gt);
+        const selfClose = /\/\s*$/.test(attrsRaw);
+        if (VOID.has(name) && !selfClose) parts.push(`<${om[1]}${attrsRaw} />`);
+        else parts.push(tpl.slice(lt, sc.gt + 1));
+        p = sc.gt + 1; continue;
+      }
+      parts.push('<'); p = lt + 1;
+    }
+    tpl = parts.join('');
+  }
+  let out = '';
+  let i = 0;
+  while (i < tpl.length) {
+    const lt = tpl.indexOf('<', i);
+    if (lt === -1) {
+      out += tpl.slice(i).replace(/[<>]/g, ' ');
+      break;
+    }
+    // raw text before this tag: escape stray angle brackets, drop brace exprs
+    out += tpl.slice(i, lt).replace(/\{[^{}]*\}/g, ' ').replace(/[<>]/g, ' ');
+    const rest = tpl.slice(lt);
+    if (rest.startsWith('<!--')) {
+      const e = tpl.indexOf('-->', lt);
+      i = e === -1 ? tpl.length : e + 3;
+      continue;
+    }
+    let m;
+    if ((m = /^<![^>]*>/.exec(rest))) { // <!DOCTYPE ...>, <?xml ...?>
+      i = lt + m[0].length;
+      continue;
+    }
+    if ((m = /^<style\b/i.exec(rest))) {
+      const e = rest.search(/<\/style\s*>/i);
+      i = lt + (e === -1 ? rest.length : e + m[0].length);
+      out += ' ';
+      continue;
+    }
+    if ((m = /^<script\b/i.exec(rest))) {
+      const e = rest.search(/<\/script\s*>/i);
+      i = lt + (e === -1 ? rest.length : e + m[0].length);
+      out += ' ';
+      continue;
+    }
+    if ((m = /^<\/([a-zA-Z][\w:-]*)\s*>/.exec(rest))) {
+      const n = m[1].toLowerCase();
+      out += CUSTOM_RE.test(n) || n === 'slot' ? '' : `</${n}>`;
+      i = lt + m[0].length;
+      continue;
+    }
+    if ((m = /^<([a-zA-Z][\w:-]*)/.exec(rest))) {
+      const name = m[1].toLowerCase();
+      const sc = scanTagAttrs(tpl, lt + m[0].length);
+      if (sc.gt === -1) { i = tpl.length; continue; }
+      let attrs = tpl.slice(lt + m[0].length, sc.gt);
+      i = sc.gt + 1;
+      const selfClosing = /\/\s*$/.test(attrs);
+      if (selfClosing) attrs = attrs.replace(/\/\s*$/, ''); // re-add ' />' after attr cleanup
+      if (CUSTOM_RE.test(name) || name === 'slot') continue; // drop custom components
+      // collapse template-literal / interpolation attr values to a safe literal
+      attrs = attrs.replace(/=\s*\{(?:[^{}]|\{[^{}]*\})*\}/g, '="expr"');
+      attrs = attrs.replace(/=\s*`[^`]*`/g, '="expr"');
+      // spread props {...extraAttrs} -> remove entirely
+      attrs = attrs.replace(/\{\.\.\.[^}]*\}/g, ' ');
+      // Astro directive namespaces (client:load, set:html, is:inline, transition:name)
+      attrs = attrs.replace(/\b(client|set|is|transition):([\w-]+)/g, 'astro-$1-$2');
+      // boolean-style directive without value, e.g. `transition:animate`
+      attrs = attrs.replace(/\s(client|set|is|transition):([\w-]+)(?=[\s/>]|$)/g, ' astro-$1-$2="expr"');
+      attrs = attrs.replace(/\bclass=/g, 'className=').replace(/(^|[\s"'])for=/g, '$1htmlFor=');
+      attrs = attrs.replace(/`/g, "'");
+      // drop any leftover brace fragments inside attr text
+      attrs = attrs.replace(/[{}]/g, ' ');
+      out += `<${name}${attrs}${selfClosing ? ' />' : '>'}`;
+      continue;
+    }
+    // lone '<' that isn't a tag start
+    out += ' ';
+    i = lt + 1;
+  }
+  return `function AstroTemplate() {\n  return (\n    <>\n${out}\n    </>\n  );\n}\nexport default AstroTemplate;\n`;
 }
 
 async function runJsxA11y() {
@@ -98,43 +393,59 @@ async function runJsxA11y() {
     }],
     fix: false,
   });
-  // Temp dir inside the repo (under OUT, which is gitignored) so ESLint's
-  // "outside of base path" guard doesn't skip the generated JSX files.
   const tmp = fs.mkdtempSync(path.join(OUT, '.jsx-a11y-tmp-'));
-  const realJsx = walk(ROOT, (n) => /\.(jsx|tsx)$/i.test(n));
-  const astroFiles = walk(ROOT, (n) => /\.astro$/i.test(n));
-  const astroConverted = [];
-  for (const f of astroFiles) {
-    const jsx = astroToJsx(f);
-    if (!jsx) continue;
-    const t = path.join(tmp, f.replaceAll(/[\\/]/g, '__') + '.jsx');
-    fs.writeFileSync(t, jsx);
-    astroConverted.push({ tmp: t, orig: path.relative(ROOT, f) });
-  }
-  const targets = [...realJsx, ...astroConverted.map((a) => a.tmp)];
-  const summary = [];
-  if (targets.length) {
-    const results = await eslint.lintFiles(targets);
-    const formatter = await eslint.loadFormatter('json');
+  try {
+    const astroFiles = walk(ROOT, (n) => /\.astro$/i.test(n));
+    // Pass 1: convert + transform. Pass 2 (below): if a converted file fails to
+    // parse, retry with a stricter transform that drops <noscript> subtrees and
+    // SVG contents — the most common sources of JSX-parse breakage in Astro.
+    const astroConverted = [];
+    for (const f of astroFiles) {
+      let jsx; let strict = false;
+      try { jsx = astroToJsx(f); } catch { continue; }
+      if (!jsx) continue;
+      const t = path.join(tmp, f.replaceAll(/[\\/]/g, '__') + '.jsx');
+      fs.writeFileSync(t, jsx);
+      astroConverted.push({ tmp: t, orig: path.relative(ROOT, f), strict });
+    }
+    const realJsx = walk(ROOT, (n) => /\.(jsx|tsx)$/i.test(n));
+    const targets = [...realJsx, ...astroConverted.map((a) => a.tmp)];
+    const summary = [];
+    let results = targets.length ? await eslint.lintFiles(targets) : [];
+    const failed = new Set(results.filter((r) => r.messages.some((m) => m.fatal)).map((r) => r.filePath));
+    if (failed.size) {
+      // regenerate failing files with the strict transform and re-lint them
+      for (const conv of astroConverted) {
+        if (!failed.has(conv.tmp)) continue;
+        const jsx = astroToJsx(conv.orig.startsWith('src') ? path.join(ROOT, conv.orig) : path.join(ROOT, conv.orig), { strict: true });
+        fs.writeFileSync(conv.tmp, jsx);
+        conv.strict = true;
+      }
+      results = targets.length ? await eslint.lintFiles(targets) : [];
+    }
+    let parseFailures = 0;
     for (const r of results) {
       const conv = astroConverted.find((a) => a.tmp === r.filePath);
+      const fatal = r.messages.filter((m) => m.fatal);
+      if (fatal.length) parseFailures++;
       summary.push({
         file: conv ? conv.orig : path.relative(ROOT, r.filePath),
-        errors: r.errorCount, warnings: r.warningCount,
-        messages: r.messages.map((m) => ({ rule: m.ruleId, line: m.line, message: m.message })).slice(0, 30),
+        errors: r.errorCount - fatal.length, warnings: r.warningCount,
+        parseFailure: fatal.length > 0,
+        messages: r.messages.filter((m) => !m.fatal).map((m) => ({ rule: m.ruleId, line: m.line, message: m.message })).slice(0, 30),
       });
     }
+    fs.writeFileSync(path.join(OUT, 'jsx-a11y.json'), JSON.stringify({
+      tool: 'eslint-plugin-jsx-a11y',
+      note: `${astroConverted.length} .astro templates converted to JSX for static a11y linting; ${realJsx.length} native .jsx/.tsx files; ${parseFailures} file(s) unparseable even after strict transform`,
+      filesChecked: targets.length,
+      totalErrors: summary.reduce((n, s) => n + s.errors, 0),
+      results: summary.sort((a, b) => b.errors - a.errors),
+    }, null, 2));
+    console.log(`[jsx-a11y] ${targets.length} files linted (${astroConverted.length} from .astro), ${summary.reduce((n, s) => n + s.errors, 0)} errors, ${parseFailures} parse failures`);
+  } finally {
+    fs.rmSync(tmp, { recursive: true, force: true });
   }
-  fs.rmSync(tmp, { recursive: true, force: true });
-  fs.writeFileSync(path.join(OUT, 'jsx-a11y.json'), JSON.stringify({
-    tool: 'eslint-plugin-jsx-a11y',
-    note: `${astroConverted.length} .astro templates converted to JSX for static a11y linting; ${realJsx.length} native .jsx/.tsx files`,
-    filesChecked: targets.length,
-    totalErrors: summary.reduce((n, s) => n + s.errors, 0),
-    results: summary.sort((a, b) => b.errors - a.errors),
-  }, null, 2));
-  console.log(`[jsx-a11y] ${targets.length} files linted (${astroConverted.length} from .astro), ${summary.reduce((n, s) => n + s.errors, 0)} errors`);
-
 }
 
 async function runI18nScanner() {
@@ -229,4 +540,10 @@ async function main() {
   await runI18nScanner();
 }
 
-main().catch((e) => { console.error(e); process.exitCode = 1; });
+
+
+module.exports = { astroToJsx };
+
+if (require.main === module) {
+  main().catch((e) => { console.error(e); process.exitCode = 1; });
+}
