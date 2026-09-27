@@ -1,0 +1,100 @@
+[
+  {
+    "file": "process.html",
+    "width": 390,
+    "title": 232.328125,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\butterfly-tapper.html",
+    "width": 390,
+    "title": 456.078125,
+    "overflow": false,
+    "pathwayLast": false
+  },
+  {
+    "file": "tools\\eye-movement.html",
+    "width": 390,
+    "title": 393.3125,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\guided-breathing.html",
+    "width": 390,
+    "title": 348.3125,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\horizon-scan.html",
+    "width": 390,
+    "title": 322.71875,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\hypnos-fractal.html",
+    "width": 390,
+    "title": 354.90625,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\leaf-on-stream.html",
+    "width": 390,
+    "title": 322.625,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "process.html",
+    "width": 1440,
+    "title": 210.859375,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\butterfly-tapper.html",
+    "width": 1440,
+    "title": 435.171875,
+    "overflow": false,
+    "pathwayLast": false
+  },
+  {
+    "file": "tools\\eye-movement.html",
+    "width": 1440,
+    "title": 371.21875,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\guided-breathing.html",
+    "width": 1440,
+    "title": 277.421875,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\horizon-scan.html",
+    "width": 1440,
+    "title": 259.421875,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\hypnos-fractal.html",
+    "width": 1440,
+    "title": 318.625,
+    "overflow": false,
+    "pathwayLast": true
+  },
+  {
+    "file": "tools\\leaf-on-stream.html",
+    "width": 1440,
+    "title": 295.921875,
+    "overflow": false,
+    "pathwayLast": true
+  }
+]

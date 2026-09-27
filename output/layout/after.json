@@ -1,0 +1,70 @@
+[
+  {
+    "width": 390,
+    "path": "index.html",
+    "h1": 154.421875,
+    "header": 61.78125,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "services.html",
+    "h1": 250.703125,
+    "header": 61.78125,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "about.html",
+    "h1": 250.703125,
+    "header": 61.78125,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "blog/pages/adult/overthinking-vs-anxiety.html",
+    "h1": 396.46875,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "tools/guided-breathing.html",
+    "h1": 443.328125,
+    "header": 61.78125,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "index.html",
+    "h1": 168.21875,
+    "header": 80.71875,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "services.html",
+    "h1": 217.109375,
+    "header": 80.71875,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "about.html",
+    "h1": 217.109375,
+    "header": 80.71875,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "blog/pages/adult/overthinking-vs-anxiety.html",
+    "h1": 372.46875,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "tools/guided-breathing.html",
+    "h1": 337.015625,
+    "header": 80.71875,
+    "overflow": false
+  }
+]
