@@ -4,7 +4,11 @@
 
 ## Usage Rights
 
-Mind Grace Neuropsychiatric Clinic permits AI search and citation agents (see robots.txt Sections 2-3: OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, GensparkBot, YouBot, YepBot, Amazonbot, DuckAssistBot) to retrieve, summarize, and cite this content with clear attribution to "Mind Grace Neuropsychiatric Clinic" (https://mindgracencr.in). Reproduction or ingestion of this site's proprietary text, imagery, and self-help tool code for offline foundation-model training is restricted; training scrapers (GPTBot, Google-Extended, ClaudeBot, Applebot-Extended, Meta-ExternalAgent, FacebookBot, CCBot, Cohere-AI) and unverified harvesters are disallowed at the crawl layer. This content is health information, not a substitute for professional assessment or treatment.
+AI search and citation agents may use this content under these terms:
+
+- Allowed: retrieval, summarization, and citation with clear attribution to "Mind Grace Neuropsychiatric Clinic" (https://mindgracencr.in). See robots.txt Sections 2-3 for the full allow-list (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, GensparkBot, YouBot, YepBot, Amazonbot, DuckAssistBot).
+- Restricted: copying this site's text, images, or self-help tool code to train offline foundation models. Training scrapers and unverified harvesters are blocked at the crawl layer (GPTBot, Google-Extended, ClaudeBot, Applebot-Extended, Meta-ExternalAgent, FacebookBot, CCBot, Cohere-AI). See robots.txt for details.
+- Note: this content is health information. It does not replace professional assessment or treatment.
 
 ## Primary pages
 

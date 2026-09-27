@@ -1,55 +1,16 @@
 {
   "tool": "wcag-contrast",
-  "checked": 98,
+  "checked": 105,
   "failures": [
     {
-      "file": "assets/css-tools/min/tools-leaf.min.css",
-      "selector": "input",
+      "file": "assets/css-tools/min/tools-butterfly.min.css",
+      "selector": ".tool-link-bar a",
       "fg": "#ffffff",
       "bg": "#ffffff",
       "fgRaw": "#fff",
-      "bgRaw": "hsla(0,0%,100%,.08)",
+      "bgRaw": "#ffffff1f",
       "alphaComposited": true,
       "ratio": 1,
-      "passesAA": false,
-      "passesAALargeText": false,
-      "passesAAA": false
-    },
-    {
-      "file": "assets/css/accessibility.css",
-      "selector": "body input, body select, body textarea",
-      "fg": "#24131a",
-      "bg": "#24161c",
-      "fgRaw": "var(--access-ink) !important",
-      "bgRaw": "#24161c !important",
-      "alphaComposited": false,
-      "ratio": 1.02,
-      "passesAA": false,
-      "passesAALargeText": false,
-      "passesAAA": false
-    },
-    {
-      "file": "assets/css/accessibility.css",
-      "selector": "body",
-      "fg": "#24131a",
-      "bg": "#1d1217",
-      "fgRaw": "var(--access-ink) !important",
-      "bgRaw": "#1d1217 !important",
-      "alphaComposited": false,
-      "ratio": 1.028,
-      "passesAA": false,
-      "passesAALargeText": false,
-      "passesAAA": false
-    },
-    {
-      "file": "assets/css/min/inspiration.min.css",
-      "selector": "body .btn--primary:hover,body .btn-primary:hover,body .btn:hover,body .button-pr",
-      "fg": "#2b0d19",
-      "bg": "#4c0722",
-      "fgRaw": "#2b0d19",
-      "bgRaw": "var(--a11y-btn-hover-bg)",
-      "alphaComposited": false,
-      "ratio": 1.159,
       "passesAA": false,
       "passesAALargeText": false,
       "passesAAA": false
@@ -68,27 +29,14 @@
       "passesAAA": false
     },
     {
-      "file": "assets/css/layout.css",
-      "selector": "html:not([data-theme=\"light\"]) .nav-link:hover, html:not([data-theme=\"light\"]) .",
-      "fg": "#ffcaef",
-      "bg": "#917689",
-      "fgRaw": "var(--pink-200)",
-      "bgRaw": "oklch(30% 0.08 340 / 0.6)",
-      "alphaComposited": true,
-      "ratio": 2.899,
-      "passesAA": false,
-      "passesAALargeText": false,
-      "passesAAA": false
-    },
-    {
-      "file": "assets/css/components.css",
-      "selector": ".meta-btn:hover",
+      "file": "assets/css-tools/min/tools-butterfly.min.css",
+      "selector": "body.tool-page:has(#L) .status-text",
       "fg": "#ffffff",
-      "bg": "#ec4899",
-      "fgRaw": "white",
-      "bgRaw": "var(--primary, #ec4899)",
-      "alphaComposited": false,
-      "ratio": 3.527,
+      "bg": "#949596",
+      "fgRaw": "#ffffffc7",
+      "bgRaw": "#0102046b",
+      "alphaComposited": true,
+      "ratio": 3.001,
       "passesAA": false,
       "passesAALargeText": true,
       "passesAAA": false
@@ -96,53 +44,14 @@
   ],
   "results": [
     {
-      "file": "assets/css-tools/min/tools-leaf.min.css",
-      "selector": "input",
+      "file": "assets/css-tools/min/tools-butterfly.min.css",
+      "selector": ".tool-link-bar a",
       "fg": "#ffffff",
       "bg": "#ffffff",
       "fgRaw": "#fff",
-      "bgRaw": "hsla(0,0%,100%,.08)",
+      "bgRaw": "#ffffff1f",
       "alphaComposited": true,
       "ratio": 1,
-      "passesAA": false,
-      "passesAALargeText": false,
-      "passesAAA": false
-    },
-    {
-      "file": "assets/css/accessibility.css",
-      "selector": "body input, body select, body textarea",
-      "fg": "#24131a",
-      "bg": "#24161c",
-      "fgRaw": "var(--access-ink) !important",
-      "bgRaw": "#24161c !important",
-      "alphaComposited": false,
-      "ratio": 1.02,
-      "passesAA": false,
-      "passesAALargeText": false,
-      "passesAAA": false
-    },
-    {
-      "file": "assets/css/accessibility.css",
-      "selector": "body",
-      "fg": "#24131a",
-      "bg": "#1d1217",
-      "fgRaw": "var(--access-ink) !important",
-      "bgRaw": "#1d1217 !important",
-      "alphaComposited": false,
-      "ratio": 1.028,
-      "passesAA": false,
-      "passesAALargeText": false,
-      "passesAAA": false
-    },
-    {
-      "file": "assets/css/min/inspiration.min.css",
-      "selector": "body .btn--primary:hover,body .btn-primary:hover,body .btn:hover,body .button-pr",
-      "fg": "#2b0d19",
-      "bg": "#4c0722",
-      "fgRaw": "#2b0d19",
-      "bgRaw": "var(--a11y-btn-hover-bg)",
-      "alphaComposited": false,
-      "ratio": 1.159,
       "passesAA": false,
       "passesAALargeText": false,
       "passesAAA": false
@@ -161,27 +70,14 @@
       "passesAAA": false
     },
     {
-      "file": "assets/css/layout.css",
-      "selector": "html:not([data-theme=\"light\"]) .nav-link:hover, html:not([data-theme=\"light\"]) .",
-      "fg": "#ffcaef",
-      "bg": "#917689",
-      "fgRaw": "var(--pink-200)",
-      "bgRaw": "oklch(30% 0.08 340 / 0.6)",
-      "alphaComposited": true,
-      "ratio": 2.899,
-      "passesAA": false,
-      "passesAALargeText": false,
-      "passesAAA": false
-    },
-    {
-      "file": "assets/css/components.css",
-      "selector": ".meta-btn:hover",
+      "file": "assets/css-tools/min/tools-butterfly.min.css",
+      "selector": "body.tool-page:has(#L) .status-text",
       "fg": "#ffffff",
-      "bg": "#ec4899",
-      "fgRaw": "white",
-      "bgRaw": "var(--primary, #ec4899)",
-      "alphaComposited": false,
-      "ratio": 3.527,
+      "bg": "#949596",
+      "fgRaw": "#ffffffc7",
+      "bgRaw": "#0102046b",
+      "alphaComposited": true,
+      "ratio": 3.001,
       "passesAA": false,
       "passesAALargeText": true,
       "passesAAA": false
@@ -247,6 +143,19 @@
       "bgRaw": "rgba(255, 255, 255, 0.72)",
       "alphaComposited": true,
       "ratio": 4.946,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": false
+    },
+    {
+      "file": "assets/css/layout.css",
+      "selector": ".nav-link:hover, .nav-link:focus-visible",
+      "fg": "#be185d",
+      "bg": "#fce7f3",
+      "fgRaw": "#be185d",
+      "bgRaw": "#fce7f3",
+      "alphaComposited": false,
+      "ratio": 5.136,
       "passesAA": true,
       "passesAALargeText": true,
       "passesAAA": false
@@ -525,19 +434,6 @@
       "passesAAA": true
     },
     {
-      "file": "assets/css/min/layout.min.css",
-      "selector": ".nav-link:focus-visible,.nav-link:hover",
-      "fg": "#7a1038",
-      "bg": "#fce7f3",
-      "fgRaw": "var(--color-primary)",
-      "bgRaw": "#fce7f3",
-      "alphaComposited": false,
-      "ratio": 9.12,
-      "passesAA": true,
-      "passesAALargeText": true,
-      "passesAAA": true
-    },
-    {
       "file": "assets/css-tools/min/tools-leaf.min.css",
       "selector": "#ui-trigger.active",
       "fg": "#010204",
@@ -578,7 +474,7 @@
     },
     {
       "file": "assets/css-tools/min/tools-breathing.min.css",
-      "selector": ".chip.active,.main-btn",
+      "selector": ".main-btn,.chip.active",
       "fg": "#2b1020",
       "bg": "#f5a8c4",
       "fgRaw": "#2b1020",
@@ -591,7 +487,7 @@
     },
     {
       "file": "assets/css/min/tools-shell.min.css",
-      "selector": ".tool-viewbar__action:focus-visible,.tool-viewbar__action:hover,.tool-viewbar__a",
+      "selector": ".tool-viewbar__action:hover,.tool-viewbar__action:focus-visible,.tool-viewbar__a",
       "fg": "#ffffff",
       "bg": "#86163f",
       "fgRaw": "#fff",
@@ -617,7 +513,7 @@
     },
     {
       "file": "assets/css/min/tool-overrides.min.css",
-      "selector": "body:has(#depth) button,body:has(#depth) select,body:has(#eye-start-btn) button,",
+      "selector": "body:has(#start-btn) select,body:has(#horizon-start-btn) select,body:has(#eye-st",
       "fg": "#111827",
       "bg": "#f9a8d4",
       "fgRaw": "#111827",
@@ -642,6 +538,19 @@
       "passesAAA": true
     },
     {
+      "file": "assets/css-tools/min/tools-leaf.min.css",
+      "selector": "input",
+      "fg": "#ffffff",
+      "bg": "#2f4557",
+      "fgRaw": "#fff",
+      "bgRaw": "#2f4557",
+      "alphaComposited": false,
+      "ratio": 9.954,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
       "file": "src/pages/index.astro",
       "selector": ".site-footer",
       "fg": "#d1d5db",
@@ -650,6 +559,19 @@
       "bgRaw": "var(--color-text)",
       "alphaComposited": false,
       "ratio": 9.962,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
+      "file": "assets/css-tools/min/tools-leaf.min.css",
+      "selector": "body:has(#riverCanvas) .tool-link-bar a",
+      "fg": "#fff7fa",
+      "bg": "#4a3945",
+      "fgRaw": "#fff7fa",
+      "bgRaw": "#220d1cd1",
+      "alphaComposited": true,
+      "ratio": 10.16,
       "passesAA": true,
       "passesAALargeText": true,
       "passesAAA": true
@@ -707,6 +629,19 @@
       "passesAAA": true
     },
     {
+      "file": "assets/css/layout.css",
+      "selector": "html:not([data-theme=\"light\"]) .nav-link:hover, html:not([data-theme=\"light\"]) .",
+      "fg": "#ffcaef",
+      "bg": "#3b1f35",
+      "fgRaw": "var(--pink-200)",
+      "bgRaw": "#3b1f35",
+      "alphaComposited": false,
+      "ratio": 10.428,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
       "file": "assets/css/min/site-foundation.min.css",
       "selector": "html[data-theme=dark] .doctor-avatar-fallback",
       "fg": "#ffd3df",
@@ -741,6 +676,19 @@
       "bgRaw": "var(--white)",
       "alphaComposited": false,
       "ratio": 10.721,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
+      "file": "assets/css/accessibility.css",
+      "selector": "body button, body .btn, body .button, body .button-primary, body .button-seconda",
+      "fg": "#2b0d19",
+      "bg": "#ffb4ca",
+      "fgRaw": "var(--access-on-primary) !important",
+      "bgRaw": "var(--access-primary) !important",
+      "alphaComposited": false,
+      "ratio": 10.758,
       "passesAA": true,
       "passesAALargeText": true,
       "passesAAA": true
@@ -785,6 +733,19 @@
       "passesAAA": true
     },
     {
+      "file": "assets/css/min/tools-shell.min.css",
+      "selector": "html:fullscreen body.tool-page .tool-viewbar",
+      "fg": "#fff7fa",
+      "bg": "#3e363b",
+      "fgRaw": "#fff7fa",
+      "bgRaw": "#140a10d1",
+      "alphaComposited": true,
+      "ratio": 11.103,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
       "file": "assets/css/components.css",
       "selector": ".gallery-caption-overlay",
       "fg": "#ffffff",
@@ -811,6 +772,19 @@
       "passesAAA": true
     },
     {
+      "file": "assets/css/min/components.min.css",
+      "selector": ".gallery-caption-overlay",
+      "fg": "#ffffff",
+      "bg": "#343a47",
+      "fgRaw": "#fff",
+      "bgRaw": "#111827d9",
+      "alphaComposited": true,
+      "ratio": 11.399,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
       "file": "assets/css/min/site-foundation.min.css",
       "selector": "::highlight(search)",
       "fg": "#28171d",
@@ -819,19 +793,6 @@
       "bgRaw": "color-mix(in srgb,var(--mg-baby) 70%,transparent)",
       "alphaComposited": false,
       "ratio": 11.483,
-      "passesAA": true,
-      "passesAALargeText": true,
-      "passesAAA": true
-    },
-    {
-      "file": "assets/css/layout.css",
-      "selector": ".nav-link:hover, .nav-link:focus-visible",
-      "fg": "#5d0c2b",
-      "bg": "#fce7f3",
-      "fgRaw": "var(--color-primary-hover)",
-      "bgRaw": "#fce7f3",
-      "alphaComposited": false,
-      "ratio": 11.503,
       "passesAA": true,
       "passesAALargeText": true,
       "passesAAA": true
@@ -889,6 +850,19 @@
       "passesAAA": true
     },
     {
+      "file": "assets/css-tools/min/tools-leaf.min.css",
+      "selector": "body:has(#riverCanvas) #ui-trigger",
+      "fg": "#fff7fa",
+      "bg": "#3d2a38",
+      "fgRaw": "#fff7fa",
+      "bgRaw": "#220d1ce0",
+      "alphaComposited": true,
+      "ratio": 12.565,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
       "file": "assets/css/classic-blog.css",
       "selector": "body",
       "fg": "#29251f",
@@ -916,13 +890,52 @@
     },
     {
       "file": "assets/css-tools/min/tools-leaf.min.css",
-      "selector": ".tool-link-bar a",
+      "selector": "#ui-trigger",
       "fg": "#ffffff",
       "bg": "#25323b",
       "fgRaw": "#fff",
-      "bgRaw": "rgba(18,32,42,.92)",
+      "bgRaw": "var(--ui-bg)",
       "alphaComposited": true,
       "ratio": 13.141,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
+      "file": "assets/css-tools/min/tools-leaf.min.css",
+      "selector": ".tool-link-bar a",
+      "fg": "#ffffff",
+      "bg": "#25313b",
+      "fgRaw": "#fff",
+      "bgRaw": "#12202aeb",
+      "alphaComposited": true,
+      "ratio": 13.282,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
+      "file": "assets/css-tools/min/tools-leaf.min.css",
+      "selector": "body:has(#riverCanvas) .input-modal",
+      "fg": "#fff7fa",
+      "bg": "#392633",
+      "fgRaw": "#fff7fa",
+      "bgRaw": "#220d1ce5",
+      "alphaComposited": true,
+      "ratio": 13.3,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
+      "file": "assets/css/inspiration.css",
+      "selector": "body button:hover, body .btn:hover, body .button-primary:hover, body .btn-primar",
+      "fg": "#2b0d19",
+      "bg": "#ffd3df",
+      "fgRaw": "var(--a11y-on-primary)",
+      "bgRaw": "var(--a11y-btn-hover-bg)",
+      "alphaComposited": false,
+      "ratio": 13.314,
       "passesAA": true,
       "passesAALargeText": true,
       "passesAAA": true
@@ -1058,12 +1071,12 @@
       "passesAAA": true
     },
     {
-      "file": "assets/css/min/site-foundation.min.css",
-      "selector": ".article-feedback",
+      "file": "assets/css/accessibility.css",
+      "selector": "body .card, body .service-card, body .feature-card, body .condition-card, body .",
       "fg": "#fff8fa",
       "bg": "#2c1a22",
-      "fgRaw": "#fff8fa",
-      "bgRaw": "#2c1a22",
+      "fgRaw": "var(--access-ink) !important",
+      "bgRaw": "var(--access-surface) !important",
       "alphaComposited": false,
       "ratio": 15.697,
       "passesAA": true,
@@ -1162,6 +1175,19 @@
       "passesAAA": true
     },
     {
+      "file": "assets/css/accessibility.css",
+      "selector": "body input, body select, body textarea",
+      "fg": "#fff8fa",
+      "bg": "#24161c",
+      "fgRaw": "var(--access-ink) !important",
+      "bgRaw": "#24161c !important",
+      "alphaComposited": false,
+      "ratio": 16.625,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
       "file": "assets/css/min/site-foundation.min.css",
       "selector": "body",
       "fg": "#fff5f8",
@@ -1170,6 +1196,19 @@
       "bgRaw": "#211319",
       "alphaComposited": false,
       "ratio": 16.784,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
+      "file": "assets/css/min/tools-shell.min.css",
+      "selector": ".tool-viewbar",
+      "fg": "#24121b",
+      "bg": "#fef7fa",
+      "fgRaw": "var(--tool-ink)",
+      "bgRaw": "color-mix(in srgb,var(--tool-surface) 94%,var(--tool-accent-",
+      "alphaComposited": false,
+      "ratio": 16.901,
       "passesAA": true,
       "passesAALargeText": true,
       "passesAAA": true
@@ -1214,20 +1253,20 @@
       "passesAAA": true
     },
     {
-      "file": "assets/css/min/tools-shell.min.css",
-      "selector": ".tool-viewbar",
-      "fg": "#24121b",
-      "bg": "#fffafc",
-      "fgRaw": "var(--tool-ink)",
-      "bgRaw": "color-mix(in srgb,var(--tool-surface) 94%,var(--tool-accent-",
+      "file": "assets/css/accessibility.css",
+      "selector": "body",
+      "fg": "#fff8fa",
+      "bg": "#1d1217",
+      "fgRaw": "var(--access-ink) !important",
+      "bgRaw": "#1d1217 !important",
       "alphaComposited": false,
-      "ratio": 17.269,
+      "ratio": 17.426,
       "passesAA": true,
       "passesAALargeText": true,
       "passesAAA": true
     },
     {
-      "file": "assets/css-tools/min/tools-leaf.min.css",
+      "file": "assets/css-tools/tools-leaf.css",
       "selector": "body:has(#riverCanvas) .tool-link-bar a",
       "fg": "#fff7fa",
       "bg": "#220d1c",
@@ -1292,7 +1331,7 @@
       "passesAAA": true
     },
     {
-      "file": "assets/css/min/tools-shell.min.css",
+      "file": "assets/css/tools-shell.css",
       "selector": "html:fullscreen body.tool-page .tool-viewbar",
       "fg": "#fff7fa",
       "bg": "#140a10",

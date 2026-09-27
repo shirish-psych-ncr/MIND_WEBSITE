@@ -8,23 +8,23 @@
       "route": "offline.html",
       "metrics": {
         "LCP": {
-          "value": 216,
+          "value": 332,
           "rating": "good"
         },
         "FCP": {
-          "value": 216,
+          "value": 332,
           "rating": "good"
         },
         "TTFB": {
-          "value": 12.699999999953434,
+          "value": 10.200000000186265,
           "rating": "good"
         },
         "CLS": {
-          "value": 0.02494293963263663,
+          "value": 0.0006992594678742789,
           "rating": "good"
         },
         "INP": {
-          "value": 0,
+          "value": 16,
           "rating": "good"
         }
       },

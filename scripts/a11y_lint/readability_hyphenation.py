@@ -26,6 +26,14 @@ GRADE_8_LIMIT = 8.0
 TAG_RE = re.compile(r"<(script|style)[^>]*>.*?</\1>", re.S | re.I)
 HTML_RE = re.compile(r"<[^>]+>")
 WS_RE = re.compile(r"\s+")
+# URLs and long machine tokens inflate syllable/word-length based formulas.
+URL_RE = re.compile(r"https?://\S+|www\.\S+|\S+\.(?:in|com|org|html|txt|xml|css|js)\b", re.I)
+BOT_LIST_RE = re.compile(r"\b(?:OAI-SearchBot|ChatGPT-User|Claude-SearchBot|Claude-User|PerplexityBot|Perplexity-User|GensparkBot|YouBot|YepBot|Amazonbot|DuckAssistBot|GPTBot|Google-Extended|ClaudeBot|Applebot-Extended|Meta-ExternalAgent|FacebookBot|CCBot|Cohere-AI)\b[,\s]*")
+ROBOTS_DIRECTIVE_RE = re.compile(
+    r"^\s*(?:User-agent|Allow|Disallow|Sitemap|Crawl-delay|Clean-param|Host|Request-rate)\b.*$",
+    re.M | re.I,
+)
+CSS_RULE_RE = re.compile(r"[{};]|::?[a-z-]+(\([^)]*\))?|--[\w-]+|\.[A-Za-z][\w-]*|#\w+", re.I)
 
 
 def iter_files(exts):
@@ -48,8 +56,16 @@ def extract_text(path: Path) -> str:
         text = re.sub(r"```[\s\S]*?```", " ", text)
         text = HTML_RE.sub(" ", text)
         text = re.sub(r"!?\[([^\]]*)\]\([^)]*\)", r"\1", text)
+    elif path.name == "robots.txt":
+        # robots.txt is a machine policy file; only human prose (comments) is readable text.
+        lines = [re.sub(r"^#\s?", "", ln).strip() for ln in raw.splitlines() if ln.strip().startswith("#")]
+        text = " ".join(lines)
     else:
         text = raw
+    # Strip machine tokens that inflate FK/Gunning-Fog without affecting human prose.
+    text = URL_RE.sub(" link ", text)
+    text = BOT_LIST_RE.sub("", text)
+    text = ROBOTS_DIRECTIVE_RE.sub(" ", text)
     return WS_RE.sub(" ", text).strip()
 
 

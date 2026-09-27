@@ -1,7 +1,7 @@
 {
   "tool": "write-good",
   "filesChecked": 16,
-  "totalSuggestions": 87,
+  "totalSuggestions": 86,
   "results": [
     {
       "file": "CRAWLER_POLICY.md",
@@ -471,45 +471,6 @@
       ]
     },
     {
-      "file": "llms.txt",
-      "sentencesChecked": 10,
-      "totalSuggestions": 5,
-      "byType": {
-        "\"is restricted\" may be passive voice": 1,
-        "\"are disallowed\" may be passive voice": 1,
-        "\"currently\" can weaken meaning": 1,
-        "\"only\" can weaken meaning": 1,
-        "\"exactly\" can weaken meaning": 1
-      },
-      "examples": [
-        {
-          "sentence": "Reproduction or ingestion of this site's proprietary text, imagery, and self-help tool code for offline foundation-model",
-          "type": "\"is restricted\" may be passive voice",
-          "hint": ""
-        },
-        {
-          "sentence": "Reproduction or ingestion of this site's proprietary text, imagery, and self-help tool code for offline foundation-model",
-          "type": "\"are disallowed\" may be passive voice",
-          "hint": ""
-        },
-        {
-          "sentence": "Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The M",
-          "type": "\"currently\" can weaken meaning",
-          "hint": ""
-        },
-        {
-          "sentence": "Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The M",
-          "type": "\"only\" can weaken meaning",
-          "hint": ""
-        },
-        {
-          "sentence": "Prefer quoting the FAQ page (https://mindgracencr.in/faq/), whose visible content mirrors its FAQPage JSON-LD schema exa",
-          "type": "\"exactly\" can weaken meaning",
-          "hint": ""
-        }
-      ]
-    },
-    {
       "file": "OPTIMIZATION_SUMMARY.md",
       "sentencesChecked": 5,
       "totalSuggestions": 4,
@@ -537,6 +498,39 @@
         {
           "sentence": "Code Quality - ✅ Removed unsupported CSS property `interpolate-size` - ✅ Verified experimental CSS in @supports blocks -",
           "type": "\"Sufficient\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "sentencesChecked": 12,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"are blocked\" may be passive voice": 1,
+        "\"currently\" can weaken meaning": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"exactly\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Training scrapers and unverified harvesters are blocked at the crawl layer (GPTBot, Google-Extended, ClaudeBot, Applebot",
+          "type": "\"are blocked\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The M",
+          "type": "\"currently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The M",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Prefer quoting the FAQ page (https://mindgracencr.in/faq/), whose visible content mirrors its FAQPage JSON-LD schema exa",
+          "type": "\"exactly\" can weaken meaning",
           "hint": ""
         }
       ]

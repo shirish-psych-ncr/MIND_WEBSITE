@@ -1,349 +1,55 @@
 {
   "tool": "alex",
   "filesWithFlags": 12,
-  "totalFindings": 45,
+  "totalFindings": 0,
   "results": [
     {
       "file": "AMPLITUDE_ZONING_SETUP.md",
-      "count": 3,
-      "messages": [
-        {
-          "line": 22,
-          "column": 67,
-          "reason": "Be careful with `failed`, it’s profane in some cases",
-          "actual": "failed"
-        },
-        {
-          "line": 59,
-          "column": 47,
-          "reason": "Be careful with `Failed`, it’s profane in some cases",
-          "actual": "Failed"
-        },
-        {
-          "line": 93,
-          "column": 29,
-          "reason": "Be careful with `dead`, it’s profane in some cases",
-          "actual": "dead"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "CRAWLER_POLICY.md",
-      "count": 4,
-      "messages": [
-        {
-          "line": 42,
-          "column": 49,
-          "reason": "`whitespace` may be insensitive, use `space`, `blank` instead",
-          "actual": "whitespace"
-        },
-        {
-          "line": 46,
-          "column": 44,
-          "reason": "Be careful with `failure`, it’s profane in some cases",
-          "actual": "failure"
-        },
-        {
-          "line": 74,
-          "column": 30,
-          "reason": "Be careful with `Fight`, it’s profane in some cases",
-          "actual": "Fight"
-        },
-        {
-          "line": 90,
-          "column": 34,
-          "reason": "`hero` may be insensitive, use `role-model`, `mentor` instead",
-          "actual": "hero"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "DEPLOYMENT_GUIDE.md",
-      "count": 3,
-      "messages": [
-        {
-          "line": 81,
-          "column": 15,
-          "reason": "`Simple` may be insensitive, try not to use it",
-          "actual": "Simple"
-        },
-        {
-          "line": 92,
-          "column": 3,
-          "reason": "`Easy` may be insensitive, try not to use it",
-          "actual": "Easy"
-        },
-        {
-          "line": 118,
-          "column": 37,
-          "reason": "Be careful with `attacks`, it’s profane in some cases",
-          "actual": "attacks"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "GOOGLE_TRANSLATE_SETUP.md",
-      "count": 1,
-      "messages": [
-        {
-          "line": 53,
-          "column": 23,
-          "reason": "Be careful with `fires`, it’s profane in some cases",
-          "actual": "fires"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "IMPLEMENTATION_SUMMARY.md",
-      "count": 5,
-      "messages": [
-        {
-          "line": 88,
-          "column": 62,
-          "reason": "`hero` may be insensitive, use `role-model`, `mentor` instead",
-          "actual": "hero"
-        },
-        {
-          "line": 146,
-          "column": 10,
-          "reason": "Reconsider using `black`, it may be profane",
-          "actual": "black"
-        },
-        {
-          "line": 146,
-          "column": 24,
-          "reason": "Reconsider using `white`, it may be profane",
-          "actual": "white"
-        },
-        {
-          "line": 212,
-          "column": 9,
-          "reason": "Be careful with `color`, it’s profane in some cases",
-          "actual": "color"
-        },
-        {
-          "line": 262,
-          "column": 25,
-          "reason": "`disabled` may be insensitive, use `turned off`, `has a disability`, `person with a disability`, `people with disabilities` instead",
-          "actual": "disabled"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "OPTIMIZATION_SUMMARY.md",
-      "count": 7,
-      "messages": [
-        {
-          "line": 6,
-          "column": 82,
-          "reason": "Be careful with `failures`, it’s profane in some cases",
-          "actual": "failures"
-        },
-        {
-          "line": 15,
-          "column": 59,
-          "reason": "Be careful with `attacks`, it’s profane in some cases",
-          "actual": "attacks"
-        },
-        {
-          "line": 25,
-          "column": 18,
-          "reason": "`Simple` may be insensitive, try not to use it",
-          "actual": "Simple"
-        },
-        {
-          "line": 33,
-          "column": 55,
-          "reason": "Be careful with `colors`, it’s profane in some cases",
-          "actual": "colors"
-        },
-        {
-          "line": 79,
-          "column": 24,
-          "reason": "Be careful with `color`, it’s profane in some cases",
-          "actual": "color"
-        },
-        {
-          "line": 131,
-          "column": 17,
-          "reason": "Be careful with `color`, it’s profane in some cases",
-          "actual": "color"
-        },
-        {
-          "line": 165,
-          "column": 24,
-          "reason": "`Easy` may be insensitive, try not to use it",
-          "actual": "Easy"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "ZARAZ_TRACKING_GUIDE.md",
-      "count": 4,
-      "messages": [
-        {
-          "line": 206,
-          "column": 25,
-          "reason": "`special` may be insensitive, use `has a disability`, `person with a disability`, `people with disabilities` instead",
-          "actual": "special"
-        },
-        {
-          "line": 265,
-          "column": 64,
-          "reason": "`disabled` may be insensitive, use `turned off`, `has a disability`, `person with a disability`, `people with disabilities` instead",
-          "actual": "disabled"
-        },
-        {
-          "line": 280,
-          "column": 22,
-          "reason": "`special` may be insensitive, use `has a disability`, `person with a disability`, `people with disabilities` instead",
-          "actual": "special"
-        },
-        {
-          "line": 298,
-          "column": 19,
-          "reason": "Be careful with `failed`, it’s profane in some cases",
-          "actual": "failed"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "llms-blog.txt",
-      "count": 10,
-      "messages": [
-        {
-          "line": 1,
-          "column": 234,
-          "reason": "`mental` may be insensitive, use `rude`, `malicious`, `mean`, `disgusting`, `incredible`, `vile`, `person with symptoms of mental illness`, `person with mental illness`, `person with symptoms of a mental disorder`, `person with a mental disorder` instead",
-          "actual": "mental"
-        },
-        {
-          "line": 1,
-          "column": 428,
-          "reason": "Be careful with `Adult`, it’s profane in some cases",
-          "actual": "Adult"
-        },
-        {
-          "line": 1,
-          "column": 434,
-          "reason": "`mental` may be insensitive, use `rude`, `malicious`, `mean`, `disgusting`, `incredible`, `vile`, `person with symptoms of mental illness`, `person with mental illness`, `person with symptoms of a mental disorder`, `person with a mental disorder` instead",
-          "actual": "mental"
-        },
-        {
-          "line": 1,
-          "column": 467,
-          "reason": "Be careful with `adult`, it’s profane in some cases",
-          "actual": "adult"
-        },
-        {
-          "line": 1,
-          "column": 537,
-          "reason": "Be careful with `adult`, it’s profane in some cases",
-          "actual": "adult"
-        },
-        {
-          "line": 1,
-          "column": 637,
-          "reason": "Be careful with `adult`, it’s profane in some cases",
-          "actual": "adult"
-        },
-        {
-          "line": 1,
-          "column": 741,
-          "reason": "Be careful with `adult`, it’s profane in some cases",
-          "actual": "adult"
-        },
-        {
-          "line": 1,
-          "column": 835,
-          "reason": "Be careful with `adult`, it’s profane in some cases",
-          "actual": "adult"
-        },
-        {
-          "line": 1,
-          "column": 932,
-          "reason": "Be careful with `adult`, it’s profane in some cases",
-          "actual": "adult"
-        },
-        {
-          "line": 1,
-          "column": 1125,
-          "reason": "`ADHD` may be insensitive, use `Disorganized`, `Distracted`, `Energetic`, `Hyperactive`, `Impetuous`, `Impulsive`, `Inattentive`, `Restless`, `Unfocused` instead",
-          "actual": "ADHD"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "llms.txt",
-      "count": 2,
-      "messages": [
-        {
-          "line": 1,
-          "column": 80,
-          "reason": "Be careful with `adults`, it’s profane in some cases",
-          "actual": "adults"
-        },
-        {
-          "line": 1,
-          "column": 1252,
-          "reason": "`Mental` may be insensitive, use `Rude`, `Malicious`, `Mean`, `Disgusting`, `Incredible`, `Vile`, `Person with symptoms of mental illness`, `Person with mental illness`, `Person with symptoms of a mental disorder`, `Person with a mental disorder` instead",
-          "actual": "Mental"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "offline.html",
-      "count": 1,
-      "messages": [
-        {
-          "line": 1,
-          "column": 589,
-          "reason": "Be careful with `adults`, it’s profane in some cases",
-          "actual": "adults"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "robots.txt",
-      "count": 4,
-      "messages": [
-        {
-          "line": 1,
-          "column": 207,
-          "reason": "`host` may be insensitive, use `presenter`, `entertainer`, `emcee` instead",
-          "actual": "host"
-        },
-        {
-          "line": 1,
-          "column": 990,
-          "reason": "Be careful with `Fight`, it’s profane in some cases",
-          "actual": "Fight"
-        },
-        {
-          "line": 1,
-          "column": 1180,
-          "reason": "`disabled` may be insensitive, use `turned off`, `has a disability`, `person with a disability`, `people with disabilities` instead",
-          "actual": "disabled"
-        },
-        {
-          "line": 1,
-          "column": 3088,
-          "reason": "Be careful with `destroys`, it’s profane in some cases",
-          "actual": "destroys"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     },
     {
       "file": "scripts/BLOG-PUBLISHING.md",
-      "count": 1,
-      "messages": [
-        {
-          "line": 29,
-          "column": 35,
-          "reason": "`host` may be insensitive, use `presenter`, `entertainer`, `emcee` instead",
-          "actual": "host"
-        }
-      ]
+      "error": "(m.actual || []).some is not a function"
     }
   ]
 }

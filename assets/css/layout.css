@@ -973,7 +973,7 @@ html[data-theme="dark"] .btn--secondary:hover{
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  color: var(--color-primary-hover);
+  color: #be185d; /* pink-700: 5.14:1 on the blush hover fill */
   background:#fce7f3;
 }
 
@@ -982,14 +982,14 @@ html[data-theme="dark"] .btn--secondary:hover{
   html:not([data-theme="light"]) .nav-link:hover,
   html:not([data-theme="light"]) .nav-link:focus-visible {
     color: var(--pink-200);
-    background: oklch(30% 0.08 340 / 0.6);
+    background: #3b1f35; /* opaque equivalent of oklch(30% .08 340 / .6): 8.1:1 with pink-200 */
   }
 }
 
 html[data-theme="dark"] .nav-link:hover,
 html[data-theme="dark"] .nav-link:focus-visible {
   color: var(--pink-200);
-  background: oklch(30% 0.08 340 / 0.6);
+  background: #3b1f35;
 }
 
 .nav-link:hover::before,
