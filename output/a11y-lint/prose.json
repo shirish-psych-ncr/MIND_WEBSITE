@@ -1,0 +1,649 @@
+{
+  "tool": "write-good",
+  "filesChecked": 16,
+  "totalSuggestions": 87,
+  "results": [
+    {
+      "file": "CRAWLER_POLICY.md",
+      "sentencesChecked": 23,
+      "totalSuggestions": 13,
+      "byType": {
+        "\"is deployed\" may be passive voice": 1,
+        "\"ONLY\" can weaken meaning": 1,
+        "\"only\" can weaken meaning": 5,
+        "\"is handled\" may be passive voice": 1,
+        "\"silently\" can weaken meaning": 1,
+        "\"is named\" may be passive voice": 1,
+        "\"Quarterly\" can weaken meaning": 1,
+        "\"exactly\" can weaken meaning": 1,
+        "\"was corrected\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "# Crawler Policy & AEO Operations Runbook (2026) This repository implements the **2026 AI Crawler Management & Answer En",
+          "type": "\"is deployed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Never merge these groups - a bot that matches a specific `User-agent` group reads ONLY that group (no rule inheritance).",
+          "type": "\"ONLY\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Security relies on server auth, not crawler compliance. - **CSS/JS/images are never disallowed** - renderers and answer ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Security relies on server auth, not crawler compliance. - **CSS/JS/images are never disallowed** - renderers and answer ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "If adopted, enable them via the Cloudflare dashboard's managed settings only. ### 2. llms.txt - context layer (`/llms.tx",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Citation agents are never added to this list. - Rate limiting for browser-spoofing autonomous agents (LangGraph, Crawl4A",
+          "type": "\"is handled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Verify **\"Bot Fight Mode\" and managed AI-training block stay OFF**: edge drops happen before origin rules and would sile",
+          "type": "\"silently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "AI engines preferentially extract well-formed tables into generated comparison answers. - **FAQPage schema that mirrors ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Validation & maintenance cycle The suite re-implements RFC 9309 matching (longest path wins; equal length => Allow beats",
+          "type": "\"is named\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Operational cadence: - **Post-edit:** never deploy by eye; the CI validation above is the gate. - **Emergency change:** ",
+          "type": "\"Quarterly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Operational cadence: - **Post-edit:** never deploy by eye; the CI validation above is the gate. - **Emergency change:** ",
+          "type": "\"exactly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Operational cadence: - **Post-edit:** never deploy by eye; the CI validation above is the gate. - **Emergency change:** ",
+          "type": "\"was corrected\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Operational cadence: - **Post-edit:** never deploy by eye; the CI validation above is the gate. - **Emergency change:** ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "AMPLITUDE_ZONING_SETUP.md",
+      "sentencesChecked": 22,
+      "totalSuggestions": 11,
+      "byType": {
+        "\"minimum\" is wordy or unneeded": 2,
+        "\"only\" can weaken meaning": 7,
+        "\"ONLY\" can weaken meaning": 1,
+        "\"be rejected\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Well above the v2.39.0 Zoning Insights minimum.",
+          "type": "\"minimum\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Initializes with the exact autocapture config Zoning Insights needs; falls back to jsDelivr / cdn.amplitude.com only if ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Initializes with the exact autocapture config Zoning Insights needs; falls back to jsDelivr / cdn.amplitude.com only if ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Keep version ≥ 2.39.0 (Zoning Insights minimum). ## Privacy note This site provides mental-health services.",
+          "type": "\"minimum\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "The ingestion key is public by design (it can only write events, not read data), but avoid ever sending PII through `amp",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The ingestion key is public by design (it can only write events, not read data), but avoid ever sending PII through `amp",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The ingestion key is public by design (it can only write events, not read data), but avoid ever sending PII through `amp",
+          "type": "\"ONLY\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The ingestion key is public by design (it can only write events, not read data), but avoid ever sending PII through `amp",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Init config implemented in `amplitude-init.js`: - `logLevel`: 'Warn' in production, 'Debug' only on localhost. - `server",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Global helper `window.mgAnalytics` (all pages): - `track(eventType, props)` — custom events (event_type required). - `se",
+          "type": "\"be rejected\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "MCP note: never use the Amplitude MCP server for production ingestion — SDK/HTTP V2 API only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "IMPLEMENTATION_SUMMARY.md",
+      "sentencesChecked": 9,
+      "totalSuggestions": 11,
+      "byType": {
+        "\"been implemented\" may be passive voice": 1,
+        "\"MOSTLY\" is a weasel word and can weaken meaning": 2,
+        "\"only\" can weaken meaning": 3,
+        "\"are embedded\" may be passive voice": 1,
+        "\"are added\" may be passive voice": 1,
+        "\"Implement\" is wordy or unneeded": 1,
+        "\"are implemented\" may be passive voice": 1,
+        "\"additional\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "# Mind Grace Website - Advanced Technical Implementation Summary ## Executive Summary All 8 advanced technical tasks fro",
+          "type": "\"been implemented\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This document details the implementation status and provides deployment instructions. --- ## Task 1: Accessibility & Mot",
+          "type": "\"MOSTLY\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This document details the implementation status and provides deployment instructions. --- ## Task 1: Accessibility & Mot",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This document details the implementation status and provides deployment instructions. --- ## Task 1: Accessibility & Mot",
+          "type": "\"are embedded\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This document details the implementation status and provides deployment instructions. --- ## Task 1: Accessibility & Mot",
+          "type": "\"are added\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Implement honeypot field for spam protection 3.",
+          "type": "\"Implement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Add `aria-required` and `aria-describedby` to mandatory fields **Action Item:** If native forms are implemented later, r",
+          "type": "\"are implemented\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Add `aria-required` and `aria-describedby` to mandatory fields **Action Item:** If native forms are implemented later, r",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Add `aria-required` and `aria-describedby` to mandatory fields **Action Item:** If native forms are implemented later, r",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Add `aria-required` and `aria-describedby` to mandatory fields **Action Item:** If native forms are implemented later, r",
+          "type": "\"MOSTLY\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Enhanced install event to cache tools progressively **Manifest:** `/workspace/site.webmanifest` already configured with:",
+          "type": "\"additional\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "robots.txt",
+      "sentencesChecked": 7,
+      "totalSuggestions": 11,
+      "byType": {
+        "\"ONLY\" can weaken meaning": 2,
+        "\"be parsed\" may be passive voice": 1,
+        "\"is listed\" may be passive voice": 1,
+        "\"be used\" may be passive voice": 1,
+        "\"silently\" can weaken meaning": 1,
+        "\"Deliberately\" can weaken meaning": 1,
+        "\"only\" can weaken meaning": 3,
+        "\"is backed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "# ============================================================================== # Mind Grace Neuropsychiatric Clinic - ",
+          "type": "\"ONLY\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Comments are always on their own lines - never # inline after a directive (trailing text can be parsed as part of the pa",
+          "type": "\"be parsed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # rob",
+          "type": "\"is listed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # rob",
+          "type": "\"be used\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # rob",
+          "type": "\"silently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # rob",
+          "type": "\"Deliberately\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # rob",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Blocking # them destroys Answer Engine Optimization (AEO) visibility even if the # corresponding training bot below stay",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "For the most # abusive agents (e.g., Bytespider) this text-level request is backed by a # hard network-edge block (Cloud",
+          "type": "\"is backed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "For the most # abusive agents (e.g., Bytespider) this text-level request is backed by a # hard network-edge block (Cloud",
+          "type": "\"ONLY\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "For the most # abusive agents (e.g., Bytespider) this text-level request is backed by a # hard network-edge block (Cloud",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "ZARAZ_TRACKING_GUIDE.md",
+      "sentencesChecked": 27,
+      "totalSuggestions": 7,
+      "byType": {
+        "\"been added\" may be passive voice": 1,
+        "\"Additional\" is wordy or unneeded": 1,
+        "\"are disabled\" may be passive voice": 1,
+        "\"is enabled\" may be passive voice": 1,
+        "\"is loaded\" may be passive voice": 1,
+        "\"exactly\" can weaken meaning": 2
+      },
+      "examples": [
+        {
+          "sentence": "Map event properties using the syntax: `{{ client.property_name }}` **Example Action Configuration:** ### Step 3: Access",
+          "type": "\"been added\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Map event properties using the syntax: `{{ client.property_name }}` **Example Action Configuration:** ### Step 3: Access",
+          "type": "\"Additional\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Look for tracking events in the console ### Console Messages The tracking script logs initialization: If Zaraz is not av",
+          "type": "\"are disabled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Verify Zaraz is enabled on your domain 2.",
+          "type": "\"is enabled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Check that the script is loaded: Open DevTools → Network tab → Filter by \"zaraz-tracking.js\" 3.",
+          "type": "\"is loaded\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Ensure triggers match event names exactly (case-sensitive) 4.",
+          "type": "\"exactly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Verify property names match exactly (including case) 2.",
+          "type": "\"exactly\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "CLOUDFLARE_AGENT_SETUP.md",
+      "sentencesChecked": 4,
+      "totalSuggestions": 6,
+      "byType": {
+        "\"Successfully\" can weaken meaning": 1,
+        "\"assistance\" is wordy or unneeded": 1,
+        "\"multiple\" is wordy or unneeded": 1,
+        "\"be redirected\" may be passive voice": 1,
+        "\"Additional\" is wordy or unneeded": 1,
+        "\"successfully\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Cloudflare Skills Installed Successfully installed 14 Cloudflare skills globally: - `agents-sdk` - SDK integration skill",
+          "type": "\"Successfully\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Cloudflare Skills Installed Successfully installed 14 Cloudflare skills globally: - `agents-sdk` - SDK integration skill",
+          "type": "\"assistance\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "MCP Servers Configured Created MCP configuration files for multiple agents: #### For Cursor IDE - **File:** `/workspace/",
+          "type": "\"multiple\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "MCP Servers Configured Created MCP configuration files for multiple agents: #### For Cursor IDE - **File:** `/workspace/",
+          "type": "\"be redirected\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "MCP Servers Configured Created MCP configuration files for multiple agents: #### For Cursor IDE - **File:** `/workspace/",
+          "type": "\"Additional\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "MCP Servers Configured Created MCP configuration files for multiple agents: #### For Cursor IDE - **File:** `/workspace/",
+          "type": "\"successfully\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "DEPLOYMENT_GUIDE.md",
+      "sentencesChecked": 28,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"additional\" is wordy or unneeded": 1,
+        "\"be set\" may be passive voice": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"be used\" may be passive voice": 1,
+        "\"Monitor\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "In Cloudflare Dashboard: - Go to Workers & Pages → mind-grace-security-worker - Add Route: `mindgracencr.in/*` - Ensure ",
+          "type": "\"additional\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Add to all HTML pages in `<head>`: **Limitations:** - Does not prevent all clickjacking attacks - No HSTS enforcement - ",
+          "type": "\"be set\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Add to all HTML pages in `<head>`: **Limitations:** - Does not prevent all clickjacking attacks - No HSTS enforcement - ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Add to all HTML pages in `<head>`: **Limitations:** - Does not prevent all clickjacking attacks - No HSTS enforcement - ",
+          "type": "\"be used\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Monitor security headers with tools like securityheaders.com 2.",
+          "type": "\"Monitor\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "GOOGLE_TRANSLATE_SETUP.md",
+      "sentencesChecked": 9,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"only\" can weaken meaning": 2,
+        "\"gracefully\" can weaken meaning": 1,
+        "\"be reviewed\" may be passive voice": 1,
+        "\"was removed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "The widget container and our controls are `class=\"notranslate\"` so they don't machine-translate themselves mid-session. ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The widget container and our controls are `class=\"notranslate\"` so they don't machine-translate themselves mid-session. ",
+          "type": "\"gracefully\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Change `DEFAULT_LANG` to alter the quick button target. ## Notes / limits - Machine translation quality varies; clinical",
+          "type": "\"be reviewed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Consider adding a disclaimer line later. - If Google blocks the widget (rare, or regional restrictions), buttons stay vi",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "A blanket `.skiptranslate { display:none }` was removed on purpose — Google marks translated page wrappers with that cla",
+          "type": "\"was removed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "sentencesChecked": 10,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"is restricted\" may be passive voice": 1,
+        "\"are disallowed\" may be passive voice": 1,
+        "\"currently\" can weaken meaning": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"exactly\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Reproduction or ingestion of this site's proprietary text, imagery, and self-help tool code for offline foundation-model",
+          "type": "\"is restricted\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Reproduction or ingestion of this site's proprietary text, imagery, and self-help tool code for offline foundation-model",
+          "type": "\"are disallowed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The M",
+          "type": "\"currently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The M",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Prefer quoting the FAQ page (https://mindgracencr.in/faq/), whose visible content mirrors its FAQPage JSON-LD schema exa",
+          "type": "\"exactly\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "OPTIMIZATION_SUMMARY.md",
+      "sentencesChecked": 5,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Implement\" is wordy or unneeded": 2,
+        "\"correctly\" can weaken meaning": 1,
+        "\"Sufficient\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "Code Quality - ✅ Removed unsupported CSS property `interpolate-size` - ✅ Verified experimental CSS in @supports blocks -",
+          "type": "\"Implement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Code Quality - ✅ Removed unsupported CSS property `interpolate-size` - ✅ Verified experimental CSS in @supports blocks -",
+          "type": "\"Implement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Code Quality - ✅ Removed unsupported CSS property `interpolate-size` - ✅ Verified experimental CSS in @supports blocks -",
+          "type": "\"correctly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Code Quality - ✅ Removed unsupported CSS property `interpolate-size` - ✅ Verified experimental CSS in @supports blocks -",
+          "type": "\"Sufficient\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "scripts/BLOG-PUBLISHING.md",
+      "sentencesChecked": 17,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"are added\" may be passive voice": 1,
+        "\"is required\" may be passive voice": 1,
+        "\"are excluded\" may be passive voice": 1,
+        "\"is added\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "New article URLs are added to the sitemap.",
+          "type": "\"are added\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "No landing-page card or manifest entry is required.",
+          "type": "\"is required\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Drafts (`blog-status=draft`), noindex pages, redirects, canonical aliases and future-dated posts are excluded.",
+          "type": "\"are excluded\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "It refreshes the index when article HTML is added, edited or deleted; reload the browser to see changes.",
+          "type": "\"is added\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "llms-blog.txt",
+      "sentencesChecked": 4,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Early\" can weaken meaning": 1,
+        "\"early\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Every article opens with an \"In short\" extraction callout and ends with practical next steps. ## Adult mental health gui",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Every article opens with an \"In short\" extraction callout and ends with practical next steps. ## Adult mental health gui",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "offline.html",
+      "sentencesChecked": 8,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "llms-tools.txt",
+      "sentencesChecked": 4,
+      "totalSuggestions": 1,
+      "byType": {
+        "\"are directed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "All pages carry crisis guidance; users in distress are directed to professional support. ## Attribution Cite as \"Mind Gr",
+          "type": "\"are directed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": ".well-known/security.txt",
+      "sentencesChecked": 1,
+      "totalSuggestions": 0,
+      "byType": {},
+      "examples": []
+    },
+    {
+      "file": "QUICK_START.md",
+      "sentencesChecked": 20,
+      "totalSuggestions": 0,
+      "byType": {},
+      "examples": []
+    }
+  ]
+}

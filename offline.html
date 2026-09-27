@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- web-vitals-instrumentation v1 (tool #5: web-vitals) -->
+<script type="module">
+  // Injected by scripts/a11y_lint/inject_web_vitals.cjs using the npm 'web-vitals' package.
+  const WV = (() => { try { return import('/node_modules/web-vitals/dist/modules/index.js'); } catch (e) { return null; } })();
+  let mod = null;
+  try { mod = await WV; } catch { /* fall through to CDN */ }
+  if (!mod) { try { mod = await import('https://unpkg.com/web-vitals@6/dist/web-vitals.js'); } catch { console.warn('web-vitals unavailable'); } }
+  if (mod) {
+    const store = (m) => {
+      (window.__webVitals ||= {})[m.name] = { value: m.value, rating: m.rating };
+      console.info('[web-vitals]', m.name, m.value.toFixed(2), m.rating);
+      try { navigator.sendBeacon && navigator.sendBeacon('/__metrics', JSON.stringify({ name: m.name, value: m.value, rating: m.rating, page: location.pathname })); } catch { /* offline-safe */ }
+    };
+    mod.onLCP(store); mod.onCLS(store); mod.onINP(store); mod.onFCP(store); mod.onTTFB(store);
+  }
+</script>
 <meta charset="UTF-8">
 <meta name="color-scheme" content="light dark">
 <script data-theme-init>try{const t=localStorage.getItem('mindgrace-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>

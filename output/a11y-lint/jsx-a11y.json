@@ -1,0 +1,830 @@
+{
+  "tool": "eslint-plugin-jsx-a11y",
+  "note": "69 .astro templates converted to JSX for static a11y linting; 0 native .jsx/.tsx files",
+  "filesChecked": 69,
+  "totalErrors": 68,
+  "results": [
+    {
+      "file": "src/components/Head.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 7,
+          "message": "Parsing error: Unexpected token '} defer></div>\n<link rel=\"stylesheet\" href=\"expr\"'"
+        }
+      ]
+    },
+    {
+      "file": "src/layouts/Layout.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 4,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/404.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/aasha.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/about.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/addiction-substance-use.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/adhd-autism-assessment.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/approach.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/assessments.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/bipolar-mood-disorders.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/adult.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/children.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/iilm-psychology-internship.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/index.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/overthinking-vs-anxiety.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/scheduled-worry-time-technique.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/sleep-and-anxiety-cycle.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/stimulus-control-therapy.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/adult/when-to-see-a-psychiatrist.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/child/early-signs-of-autism.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/child/school-concerns-and-adhd.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/child/sensory-overload-at-home.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog/pages/child/speech-delay-red-flags.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/book.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/child-development.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/conditions.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/consent.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/contact.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/depression-anxiety.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/depression-in-older-adults.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/disclaimer.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/doctors.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/dr-anita-sharma.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/emergency.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/faq.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/fees.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/gallery.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/high-functioning-depression-guide.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/index.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/learning-disability-assessment.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/location.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/mind-grace.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/ocd-panic-ptsd.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/perceived-burdensomeness.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/privacy.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/process.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychiatrist-greater-noida.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychiatrist-in-noida.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychiatry.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychology-counselling.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/psychosis-schizophrenia.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/resources.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/services.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/sleep-and-autism-guide-indian-parents.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/sleep-eating-disorders.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/specialized-consultations.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/teleconsultation.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/terms.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/testimonials.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/thank-you.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/therapy.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/butterfly-tapper.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/eye-movement.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/guided-breathing.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/horizon-scan.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/hypnos-fractal.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/tools/leaf-on-stream.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/pages/trauma-grief-support.astro",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": null,
+          "line": 5,
+          "message": "Parsing error: Unexpected token !"
+        }
+      ]
+    },
+    {
+      "file": "src/components/Shell.astro",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  ]
+}

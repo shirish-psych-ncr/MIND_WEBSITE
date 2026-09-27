@@ -1,0 +1,83 @@
+{
+  "tool": "html-validate",
+  "filesChecked": 1,
+  "totalErrors": 10,
+  "results": [
+    {
+      "file": "offline.html",
+      "errors": 10,
+      "warnings": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "ruleId": "wcag/h84",
+          "message": "Definition for rule 'wcag/h84' was not found"
+        },
+        {
+          "severity": 2,
+          "ruleId": "input-button-name",
+          "message": "Definition for rule 'input-button-name' was not found"
+        },
+        {
+          "severity": 2,
+          "ruleId": "select-name",
+          "message": "Definition for rule 'select-name' was not found"
+        },
+        {
+          "severity": 2,
+          "ruleId": "fieldset-legend",
+          "message": "Definition for rule 'fieldset-legend' was not found"
+        },
+        {
+          "line": 118,
+          "column": 12,
+          "severity": 2,
+          "ruleId": "element-required-attributes",
+          "message": "<iframe> is missing required \"title\" attribute"
+        },
+        {
+          "line": 131,
+          "column": 395,
+          "severity": 2,
+          "ruleId": "tel-non-breaking",
+          "message": "\" \" should be replaced with \"&nbsp;\" (non-breaking space) in telephone number"
+        },
+        {
+          "line": 131,
+          "column": 399,
+          "severity": 2,
+          "ruleId": "tel-non-breaking",
+          "message": "\" \" should be replaced with \"&nbsp;\" (non-breaking space) in telephone number"
+        },
+        {
+          "line": 131,
+          "column": 405,
+          "severity": 2,
+          "ruleId": "tel-non-breaking",
+          "message": "\" \" should be replaced with \"&nbsp;\" (non-breaking space) in telephone number"
+        },
+        {
+          "line": 133,
+          "column": 40,
+          "severity": 2,
+          "ruleId": "element-permitted-content",
+          "message": "<h2> element is not permitted as a descendant of <address>"
+        },
+        {
+          "line": 133,
+          "column": 177,
+          "severity": 2,
+          "ruleId": "tel-non-breaking",
+          "message": "\" \" should be replaced with \"&nbsp;\" (non-breaking space) in telephone number"
+        },
+        {
+          "line": 133,
+          "column": 183,
+          "severity": 2,
+          "ruleId": "tel-non-breaking",
+          "message": "\" \" should be replaced with \"&nbsp;\" (non-breaking space) in telephone number"
+        }
+      ]
+    }
+  ]
+}

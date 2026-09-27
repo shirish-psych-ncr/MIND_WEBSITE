@@ -1,0 +1,14 @@
+{
+  "tool": "direction",
+  "rtlContentFiles": [],
+  "rtlSnippets": 0,
+  "langDirIssues": [],
+  "details": [
+    {
+      "file": "src/layouts/Layout.astro",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    }
+  ]
+}
