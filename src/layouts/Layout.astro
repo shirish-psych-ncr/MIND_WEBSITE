@@ -1,0 +1,51 @@
+---
+/**
+ * Mind Grace document shell.
+ *
+ * Renders <head> (shared assets via Head.astro + page-specific extras passed
+ * verbatim through `headExtra`), the pre-rendered site chrome via Shell.astro,
+ * and the page's own body content/scripts through raw slots. This is the
+ * Astro-era replacement for what scripts/normalize_site_shell.py did to static
+ * files: one source of truth for the shell, per-page payload untouched.
+ */
+import Head from '../components/Head.astro';
+import Shell from '../components/Shell.astro';
+
+interface Props {
+  /** Raw inner HTML of the page's original <head> (minus shared shell assets). */
+  headExtra?: string;
+  /** Raw markup that belonged between <body ...> and the shared header. */
+  bodyStart?: string;
+  /** Raw markup that followed the shared footer (page scripts etc.). */
+  bodyEnd?: string;
+  /** <body class="..."> value. */
+  bodyClass?: string;
+  /** Extra raw attributes for the <body> tag (e.g. onload handlers). */
+  bodyAttrs?: string;
+}
+
+const {
+  headExtra = '',
+  bodyStart = '',
+  bodyEnd = '',
+  bodyClass = '',
+  bodyAttrs = '',
+} = Astro.props;
+
+// Merge passthrough body attributes onto the <body> element.
+const extraAttrs: Record<string, string> = {};
+for (const m of bodyAttrs.matchAll(/([\w-]+)="([^"]*)"/g)) extraAttrs[m[1]] = m[2];
+---
+<!DOCTYPE html>
+<html lang="en-IN" dir="ltr">
+<head>
+<Head />
+<style is:inline set:html={headExtra} />
+</head>
+<body class={bodyClass} data-chrome-normalized="true" {...extraAttrs}>
+<style is:inline set:html={bodyStart} />
+<Shell />
+<slot />
+<style is:inline set:html={bodyEnd} />
+</body>
+</html>
