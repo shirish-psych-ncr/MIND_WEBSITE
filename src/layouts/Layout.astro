@@ -35,17 +35,51 @@ const {
 // Merge passthrough body attributes onto the <body> element.
 const extraAttrs: Record<string, string> = {};
 for (const m of bodyAttrs.matchAll(/([\w-]+)="([^"]*)"/g)) extraAttrs[m[1]] = m[2];
+
+/* Raw passthrough payloads. Astro escapes template text and ignores set:html
+   on <Fragment>, so verbatim HTML strings must be injected through real
+   elements. Head payloads are unwrapped into plain head markup at build time
+   (crawlers read the raw HTML — meta/title/canonical/JSON-LD must not sit in a
+   <template>). Body payloads mount via invisible comment sentinels that the
+   parser sees as top-level nodes; a tiny inline script swaps each sentinel for
+   its content before first paint. */
+function unwrapHead(html: string): string {
+  // Pages hand us their original <head> inner HTML wrapped in one div; strip
+  // the wrapper only when it is the sole root element, then hoist any nested
+  // <script>/<noscript> blocks to the top level so they stay crawlable even if
+  // the parser's tree construction relocates them.
+  const roots = html.trim().match(/^<div[^>]*>([\s\S]*)<\/div>$/);
+  let out = roots ? roots[1] : html;
+  const hoisted: string[] = [];
+  out = out.replace(/[ \t]*(<(?:script|noscript)\b[\s\S]*?<\/(?:script|noscript)>)[ \t]*\n?/gi,
+    (_m, block) => { hoisted.push(block); return ''; });
+  return hoisted.join('\n') + out;
+}
 ---
 <!DOCTYPE html>
 <html lang="en-IN" dir="ltr">
 <head>
 <Head />
-<style is:inline set:html={headExtra} />
+{headExtra && <Fragment set:html={unwrapHead(headExtra)} />}
 </head>
 <body class={bodyClass} data-chrome-normalized="true" {...extraAttrs}>
-<style is:inline set:html={bodyStart} />
+{bodyStart && <Fragment set:html={'<!--mg-body-start-->'} />}
 <Shell />
 <slot />
-<style is:inline set:html={bodyEnd} />
+{bodyEnd && <Fragment set:html={'<!--mg-body-end-->'} />}
+<script id="mg-body-start-data" type="text/template">{bodyStart}</script>
+<script id="mg-body-end-data" type="text/template">{bodyEnd}</script>
+<script is:inline>
+(function(){
+  function mount(sentinel, id){
+    var c=document.createNodeIterator(document.body,8,function(n){return n.data===sentinel?1:2}).nextNode();
+    var d=document.getElementById(id); if(!c||!d) return;
+    var t=document.createElement('template'); t.innerHTML=d.textContent;
+    c.parentNode.replaceChild(t.content,c); d.remove();
+  }
+  mount('mg-body-start','mg-body-start-data');
+  mount('mg-body-end','mg-body-end-data');
+})();
+</script>
 </body>
 </html>

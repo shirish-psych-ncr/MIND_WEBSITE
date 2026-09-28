@@ -1,0 +1,1981 @@
+{
+  "tool": "textstat",
+  "filesScored": 83,
+  "gradeLimit": 8.0,
+  "flaggedAbove8thGrade": [
+    {
+      "file": "src/pages/depression-in-older-adults.astro",
+      "fkGrade": 10.51,
+      "gunningFog": 14.29
+    },
+    {
+      "file": "src/pages/teleconsultation.astro",
+      "fkGrade": 13.27,
+      "gunningFog": 20.1
+    },
+    {
+      "file": "src/pages/perceived-burdensomeness.astro",
+      "fkGrade": 10.77,
+      "gunningFog": 13.12
+    },
+    {
+      "file": "src/pages/sleep-eating-disorders.astro",
+      "fkGrade": 14.3,
+      "gunningFog": 24.0
+    },
+    {
+      "file": "src/pages/therapy.astro",
+      "fkGrade": 12.94,
+      "gunningFog": 20.28
+    },
+    {
+      "file": "src/pages/addiction-substance-use.astro",
+      "fkGrade": 14.36,
+      "gunningFog": 22.4
+    },
+    {
+      "file": "src/pages/privacy.astro",
+      "fkGrade": 10.65,
+      "gunningFog": 15.3
+    },
+    {
+      "file": "src/pages/psychosis-schizophrenia.astro",
+      "fkGrade": 14.68,
+      "gunningFog": 23.01
+    },
+    {
+      "file": "src/pages/doctors.astro",
+      "fkGrade": 12.22,
+      "gunningFog": 16.61
+    },
+    {
+      "file": "src/pages/ocd-panic-ptsd.astro",
+      "fkGrade": 13.55,
+      "gunningFog": 23.43
+    },
+    {
+      "file": "src/pages/psychiatrist-greater-noida.astro",
+      "fkGrade": 11.75,
+      "gunningFog": 19.0
+    },
+    {
+      "file": "src/pages/mind-grace.astro",
+      "fkGrade": 8.76,
+      "gunningFog": 16.99
+    },
+    {
+      "file": "src/pages/high-functioning-depression-guide.astro",
+      "fkGrade": 13.5,
+      "gunningFog": 18.29
+    },
+    {
+      "file": "src/pages/approach.astro",
+      "fkGrade": 8.34,
+      "gunningFog": 14.73
+    },
+    {
+      "file": "src/pages/psychology-counselling.astro",
+      "fkGrade": 12.71,
+      "gunningFog": 21.5
+    },
+    {
+      "file": "src/pages/terms.astro",
+      "fkGrade": 8.76,
+      "gunningFog": 16.22
+    },
+    {
+      "file": "src/pages/about.astro",
+      "fkGrade": 12.66,
+      "gunningFog": 20.21
+    },
+    {
+      "file": "src/pages/index.astro",
+      "fkGrade": 10.56,
+      "gunningFog": 17.54
+    },
+    {
+      "file": "src/pages/location.astro",
+      "fkGrade": 8.12,
+      "gunningFog": 11.55
+    },
+    {
+      "file": "src/pages/assessments.astro",
+      "fkGrade": 13.11,
+      "gunningFog": 20.09
+    },
+    {
+      "file": "src/pages/child-development.astro",
+      "fkGrade": 15.4,
+      "gunningFog": 20.12
+    },
+    {
+      "file": "src/pages/learning-disability-assessment.astro",
+      "fkGrade": 13.33,
+      "gunningFog": 21.27
+    },
+    {
+      "file": "src/pages/sleep-and-autism-guide-indian-parents.astro",
+      "fkGrade": 9.17,
+      "gunningFog": 14.51
+    },
+    {
+      "file": "src/pages/faq.astro",
+      "fkGrade": 9.65,
+      "gunningFog": 16.97
+    },
+    {
+      "file": "src/pages/gallery.astro",
+      "fkGrade": 9.31,
+      "gunningFog": 16.39
+    },
+    {
+      "file": "src/pages/emergency.astro",
+      "fkGrade": 8.16,
+      "gunningFog": 15.61
+    },
+    {
+      "file": "src/pages/services.astro",
+      "fkGrade": 9.98,
+      "gunningFog": 17.28
+    },
+    {
+      "file": "src/pages/consent.astro",
+      "fkGrade": 9.68,
+      "gunningFog": 16.48
+    },
+    {
+      "file": "src/pages/specialized-consultations.astro",
+      "fkGrade": 14.41,
+      "gunningFog": 21.54
+    },
+    {
+      "file": "src/pages/psychiatry.astro",
+      "fkGrade": 14.25,
+      "gunningFog": 21.24
+    },
+    {
+      "file": "src/pages/trauma-grief-support.astro",
+      "fkGrade": 11.56,
+      "gunningFog": 22.1
+    },
+    {
+      "file": "src/pages/depression-anxiety.astro",
+      "fkGrade": 12.53,
+      "gunningFog": 23.46
+    },
+    {
+      "file": "src/pages/testimonials.astro",
+      "fkGrade": 8.19,
+      "gunningFog": 15.38
+    },
+    {
+      "file": "src/pages/aasha.astro",
+      "fkGrade": 9.16,
+      "gunningFog": 19.21
+    },
+    {
+      "file": "src/pages/adhd-autism-assessment.astro",
+      "fkGrade": 15.14,
+      "gunningFog": 20.16
+    },
+    {
+      "file": "src/pages/fees.astro",
+      "fkGrade": 10.11,
+      "gunningFog": 14.2
+    },
+    {
+      "file": "src/pages/disclaimer.astro",
+      "fkGrade": 10.56,
+      "gunningFog": 14.91
+    },
+    {
+      "file": "src/pages/conditions.astro",
+      "fkGrade": 12.61,
+      "gunningFog": 20.27
+    },
+    {
+      "file": "src/pages/psychiatrist-in-noida.astro",
+      "fkGrade": 11.65,
+      "gunningFog": 20.46
+    },
+    {
+      "file": "src/pages/dr-anita-sharma.astro",
+      "fkGrade": 9.53,
+      "gunningFog": 17.98
+    },
+    {
+      "file": "src/pages/bipolar-mood-disorders.astro",
+      "fkGrade": 14.53,
+      "gunningFog": 22.38
+    },
+    {
+      "file": "src/components/Shell.astro",
+      "fkGrade": 9.36,
+      "gunningFog": 15.63
+    },
+    {
+      "file": "src/pages/blog/iilm-psychology-internship.astro",
+      "fkGrade": 12.58,
+      "gunningFog": 15.5
+    },
+    {
+      "file": "src/pages/blog/children.astro",
+      "fkGrade": 8.12,
+      "gunningFog": 15.22
+    },
+    {
+      "file": "src/pages/blog/index.astro",
+      "fkGrade": 9.47,
+      "gunningFog": 15.4
+    },
+    {
+      "file": "src/pages/blog/pages/adult/scheduled-worry-time-technique.astro",
+      "fkGrade": 8.08,
+      "gunningFog": 13.12
+    },
+    {
+      "file": "src/pages/blog/pages/adult/sleep-and-anxiety-cycle.astro",
+      "fkGrade": 10.31,
+      "gunningFog": 20.94
+    },
+    {
+      "file": "src/pages/blog/pages/child/speech-delay-red-flags.astro",
+      "fkGrade": 10.92,
+      "gunningFog": 16.16
+    },
+    {
+      "file": "src/pages/blog/pages/child/early-signs-of-autism.astro",
+      "fkGrade": 10.84,
+      "gunningFog": 17.94
+    }
+  ],
+  "advisoryAbove8thGrade": [
+    {
+      "file": "CRAWLER_POLICY.md",
+      "fkGrade": 11.73,
+      "gunningFog": 20.01
+    },
+    {
+      "file": "llms.txt",
+      "fkGrade": 12.91,
+      "gunningFog": 21.49
+    },
+    {
+      "file": "ZARAZ_TRACKING_GUIDE.md",
+      "fkGrade": 11.63,
+      "gunningFog": 16.89
+    },
+    {
+      "file": "IMPLEMENTATION_SUMMARY.md",
+      "fkGrade": 19.21,
+      "gunningFog": 25.33
+    },
+    {
+      "file": "DEPLOYMENT_GUIDE.md",
+      "fkGrade": 11.9,
+      "gunningFog": 17.87
+    },
+    {
+      "file": "AMPLITUDE_ZONING_SETUP.md",
+      "fkGrade": 9.55,
+      "gunningFog": 17.25
+    },
+    {
+      "file": "GOOGLE_TRANSLATE_SETUP.md",
+      "fkGrade": 8.35,
+      "gunningFog": 18.06
+    },
+    {
+      "file": "CLOUDFLARE_AGENT_SETUP.md",
+      "fkGrade": 14.89,
+      "gunningFog": 23.03
+    },
+    {
+      "file": "QUICK_START.md",
+      "fkGrade": 8.62,
+      "gunningFog": 16.27
+    },
+    {
+      "file": "llms-tools.txt",
+      "fkGrade": 12.01,
+      "gunningFog": 23.78
+    },
+    {
+      "file": "llms-blog.txt",
+      "fkGrade": 14.31,
+      "gunningFog": 24.22
+    },
+    {
+      "file": "OPTIMIZATION_SUMMARY.md",
+      "fkGrade": 13.05,
+      "gunningFog": 19.0
+    },
+    {
+      "file": "robots.txt",
+      "fkGrade": 11.25,
+      "gunningFog": 20.36
+    }
+  ],
+  "results": [
+    {
+      "file": "IMPLEMENTATION_SUMMARY.md",
+      "words": 865,
+      "sentences": 26,
+      "scores": {
+        "Flesch Reading Ease": 14.26,
+        "Flesch-Kincaid Grade": 19.21,
+        "SMOG Index": 3.15,
+        "Coleman-Liau Index": -702.5,
+        "Automated Readability Index": 27.11,
+        "Dale-Chall Score": 16.02,
+        "Difficult Words": 260,
+        "Linsear Write Formula": 48.12,
+        "Gunning Fog": 25.33,
+        "Text Standard (grade)": "18-34",
+        "Syllables": 1600,
+        "Sentences": 26
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/child-development.astro",
+      "words": 128,
+      "sentences": 10,
+      "scores": {
+        "Flesch Reading Ease": 4.7,
+        "Flesch-Kincaid Grade": 15.4,
+        "SMOG Index": 2.5,
+        "Coleman-Liau Index": -347.78,
+        "Automated Readability Index": 17.98,
+        "Dale-Chall Score": 13.66,
+        "Difficult Words": 48,
+        "Linsear Write Formula": 21.6,
+        "Gunning Fog": 20.12,
+        "Text Standard (grade)": "15-18",
+        "Syllables": 282,
+        "Sentences": 10
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/adhd-autism-assessment.astro",
+      "words": 110,
+      "sentences": 9,
+      "scores": {
+        "Flesch Reading Ease": 3.57,
+        "Flesch-Kincaid Grade": 15.14,
+        "SMOG Index": 2.54,
+        "Coleman-Liau Index": -331.51,
+        "Automated Readability Index": 17.87,
+        "Dale-Chall Score": 12.93,
+        "Difficult Words": 42,
+        "Linsear Write Formula": 21.33,
+        "Gunning Fog": 20.16,
+        "Text Standard (grade)": "14-18",
+        "Syllables": 242,
+        "Sentences": 8
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "CLOUDFLARE_AGENT_SETUP.md",
+      "words": 274,
+      "sentences": 13,
+      "scores": {
+        "Flesch Reading Ease": 5.3,
+        "Flesch-Kincaid Grade": 14.89,
+        "SMOG Index": 2.53,
+        "Coleman-Liau Index": -393.74,
+        "Automated Readability Index": 24.35,
+        "Dale-Chall Score": 16.71,
+        "Difficult Words": 100,
+        "Linsear Write Formula": 30.15,
+        "Gunning Fog": 23.03,
+        "Text Standard (grade)": "15-23",
+        "Syllables": 517,
+        "Sentences": 10
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/psychosis-schizophrenia.astro",
+      "words": 118,
+      "sentences": 7,
+      "scores": {
+        "Flesch Reading Ease": 15.67,
+        "Flesch-Kincaid Grade": 14.68,
+        "SMOG Index": 2.61,
+        "Coleman-Liau Index": -412.33,
+        "Automated Readability Index": 17.01,
+        "Dale-Chall Score": 12.03,
+        "Difficult Words": 48,
+        "Linsear Write Formula": 26.57,
+        "Gunning Fog": 23.01,
+        "Text Standard (grade)": "13-21",
+        "Syllables": 237,
+        "Sentences": 6
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/bipolar-mood-disorders.astro",
+      "words": 105,
+      "sentences": 7,
+      "scores": {
+        "Flesch Reading Ease": 12.0,
+        "Flesch-Kincaid Grade": 14.53,
+        "SMOG Index": 2.58,
+        "Coleman-Liau Index": -388.21,
+        "Automated Readability Index": 16.57,
+        "Dale-Chall Score": 13.38,
+        "Difficult Words": 43,
+        "Linsear Write Formula": 24.43,
+        "Gunning Fog": 22.38,
+        "Text Standard (grade)": "14-19",
+        "Syllables": 216,
+        "Sentences": 6
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/specialized-consultations.astro",
+      "words": 155,
+      "sentences": 13,
+      "scores": {
+        "Flesch Reading Ease": 4.01,
+        "Flesch-Kincaid Grade": 14.41,
+        "SMOG Index": 2.5,
+        "Coleman-Liau Index": -328.49,
+        "Automated Readability Index": 15.77,
+        "Dale-Chall Score": 13.21,
+        "Difficult Words": 65,
+        "Linsear Write Formula": 20.69,
+        "Gunning Fog": 21.54,
+        "Text Standard (grade)": "14-18",
+        "Syllables": 333,
+        "Sentences": 11
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/addiction-substance-use.astro",
+      "words": 116,
+      "sentences": 9,
+      "scores": {
+        "Flesch Reading Ease": 7.56,
+        "Flesch-Kincaid Grade": 14.36,
+        "SMOG Index": 2.54,
+        "Coleman-Liau Index": -316.55,
+        "Automated Readability Index": 17.7,
+        "Dale-Chall Score": 13.21,
+        "Difficult Words": 50,
+        "Linsear Write Formula": 22.0,
+        "Gunning Fog": 22.4,
+        "Text Standard (grade)": "14-18",
+        "Syllables": 245,
+        "Sentences": 8
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "llms-blog.txt",
+      "words": 157,
+      "sentences": 6,
+      "scores": {
+        "Flesch Reading Ease": 31.18,
+        "Flesch-Kincaid Grade": 14.31,
+        "SMOG Index": 2.65,
+        "Coleman-Liau Index": -454.75,
+        "Automated Readability Index": 19.85,
+        "Dale-Chall Score": 14.95,
+        "Difficult Words": 54,
+        "Linsear Write Formula": 36.17,
+        "Gunning Fog": 24.22,
+        "Text Standard (grade)": "14-26",
+        "Syllables": 262,
+        "Sentences": 6
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/sleep-eating-disorders.astro",
+      "words": 111,
+      "sentences": 7,
+      "scores": {
+        "Flesch Reading Ease": 15.32,
+        "Flesch-Kincaid Grade": 14.3,
+        "SMOG Index": 2.51,
+        "Coleman-Liau Index": -389.25,
+        "Automated Readability Index": 16.58,
+        "Dale-Chall Score": 12.79,
+        "Difficult Words": 49,
+        "Linsear Write Formula": 24.71,
+        "Gunning Fog": 24.0,
+        "Text Standard (grade)": "14-20",
+        "Syllables": 223,
+        "Sentences": 6
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/psychiatry.astro",
+      "words": 142,
+      "sentences": 9,
+      "scores": {
+        "Flesch Reading Ease": 17.95,
+        "Flesch-Kincaid Grade": 14.25,
+        "SMOG Index": 2.59,
+        "Coleman-Liau Index": -388.65,
+        "Automated Readability Index": 16.54,
+        "Dale-Chall Score": 12.57,
+        "Difficult Words": 53,
+        "Linsear Write Formula": 25.33,
+        "Gunning Fog": 21.24,
+        "Text Standard (grade)": "13-20",
+        "Syllables": 285,
+        "Sentences": 8
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/ocd-panic-ptsd.astro",
+      "words": 116,
+      "sentences": 9,
+      "scores": {
+        "Flesch Reading Ease": 18.1,
+        "Flesch-Kincaid Grade": 13.55,
+        "SMOG Index": 2.48,
+        "Coleman-Liau Index": -319.64,
+        "Automated Readability Index": 16.08,
+        "Dale-Chall Score": 13.54,
+        "Difficult Words": 53,
+        "Linsear Write Formula": 21.56,
+        "Gunning Fog": 23.43,
+        "Text Standard (grade)": "14-18",
+        "Syllables": 237,
+        "Sentences": 9
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/high-functioning-depression-guide.astro",
+      "words": 2936,
+      "sentences": 173,
+      "scores": {
+        "Flesch Reading Ease": 25.21,
+        "Flesch-Kincaid Grade": 13.5,
+        "SMOG Index": 2.53,
+        "Coleman-Liau Index": -404.33,
+        "Automated Readability Index": 15.19,
+        "Dale-Chall Score": 12.5,
+        "Difficult Words": 844,
+        "Linsear Write Formula": 26.0,
+        "Gunning Fog": 18.29,
+        "Text Standard (grade)": "13-20",
+        "Syllables": 5592,
+        "Sentences": 165
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/learning-disability-assessment.astro",
+      "words": 109,
+      "sentences": 7,
+      "scores": {
+        "Flesch Reading Ease": 23.06,
+        "Flesch-Kincaid Grade": 13.33,
+        "SMOG Index": 2.32,
+        "Coleman-Liau Index": -314.99,
+        "Automated Readability Index": 18.29,
+        "Dale-Chall Score": 12.13,
+        "Difficult Words": 41,
+        "Linsear Write Formula": 23.0,
+        "Gunning Fog": 21.27,
+        "Text Standard (grade)": "13-18",
+        "Syllables": 211,
+        "Sentences": 7
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/teleconsultation.astro",
+      "words": 164,
+      "sentences": 12,
+      "scores": {
+        "Flesch Reading Ease": 20.4,
+        "Flesch-Kincaid Grade": 13.27,
+        "SMOG Index": 2.29,
+        "Coleman-Liau Index": -358.86,
+        "Automated Readability Index": 14.12,
+        "Dale-Chall Score": 12.39,
+        "Difficult Words": 60,
+        "Linsear Write Formula": 20.83,
+        "Gunning Fog": 20.1,
+        "Text Standard (grade)": "13-17",
+        "Syllables": 327,
+        "Sentences": 12
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/assessments.astro",
+      "words": 167,
+      "sentences": 10,
+      "scores": {
+        "Flesch Reading Ease": 30.82,
+        "Flesch-Kincaid Grade": 13.11,
+        "SMOG Index": 2.35,
+        "Coleman-Liau Index": -358.42,
+        "Automated Readability Index": 16.45,
+        "Dale-Chall Score": 12.31,
+        "Difficult Words": 56,
+        "Linsear Write Formula": 24.3,
+        "Gunning Fog": 20.09,
+        "Text Standard (grade)": "13-19",
+        "Syllables": 314,
+        "Sentences": 10
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "OPTIMIZATION_SUMMARY.md",
+      "words": 516,
+      "sentences": 35,
+      "scores": {
+        "Flesch Reading Ease": 27.7,
+        "Flesch-Kincaid Grade": 13.05,
+        "SMOG Index": 2.22,
+        "Coleman-Liau Index": -352.65,
+        "Automated Readability Index": 20.83,
+        "Dale-Chall Score": 16.71,
+        "Difficult Words": 169,
+        "Linsear Write Formula": 21.43,
+        "Gunning Fog": 19.0,
+        "Text Standard (grade)": "13-19",
+        "Syllables": 1001,
+        "Sentences": 33
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/therapy.astro",
+      "words": 134,
+      "sentences": 9,
+      "scores": {
+        "Flesch Reading Ease": 23.09,
+        "Flesch-Kincaid Grade": 12.94,
+        "SMOG Index": 2.4,
+        "Coleman-Liau Index": -337.09,
+        "Automated Readability Index": 15.86,
+        "Dale-Chall Score": 12.18,
+        "Difficult Words": 48,
+        "Linsear Write Formula": 22.89,
+        "Gunning Fog": 20.28,
+        "Text Standard (grade)": "13-18",
+        "Syllables": 258,
+        "Sentences": 9
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "llms.txt",
+      "words": 386,
+      "sentences": 19,
+      "scores": {
+        "Flesch Reading Ease": 38.38,
+        "Flesch-Kincaid Grade": 12.91,
+        "SMOG Index": 2.4,
+        "Coleman-Liau Index": -403.23,
+        "Automated Readability Index": 16.98,
+        "Dale-Chall Score": 14.32,
+        "Difficult Words": 129,
+        "Linsear Write Formula": 28.32,
+        "Gunning Fog": 21.49,
+        "Text Standard (grade)": "13-21",
+        "Syllables": 673,
+        "Sentences": 19
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/psychology-counselling.astro",
+      "words": 138,
+      "sentences": 9,
+      "scores": {
+        "Flesch Reading Ease": 30.21,
+        "Flesch-Kincaid Grade": 12.71,
+        "SMOG Index": 2.22,
+        "Coleman-Liau Index": -328.67,
+        "Automated Readability Index": 16.13,
+        "Dale-Chall Score": 12.34,
+        "Difficult Words": 53,
+        "Linsear Write Formula": 22.0,
+        "Gunning Fog": 21.5,
+        "Text Standard (grade)": "13-17",
+        "Syllables": 261,
+        "Sentences": 9
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/about.astro",
+      "words": 266,
+      "sentences": 20,
+      "scores": {
+        "Flesch Reading Ease": 24.93,
+        "Flesch-Kincaid Grade": 12.66,
+        "SMOG Index": 2.24,
+        "Coleman-Liau Index": -328.23,
+        "Automated Readability Index": 13.82,
+        "Dale-Chall Score": 12.46,
+        "Difficult Words": 99,
+        "Linsear Write Formula": 20.1,
+        "Gunning Fog": 20.21,
+        "Text Standard (grade)": "13-16",
+        "Syllables": 520,
+        "Sentences": 19
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/conditions.astro",
+      "words": 384,
+      "sentences": 89,
+      "scores": {
+        "Flesch Reading Ease": 2.83,
+        "Flesch-Kincaid Grade": 12.61,
+        "SMOG Index": 1.66,
+        "Coleman-Liau Index": -126.95,
+        "Automated Readability Index": 14.97,
+        "Dale-Chall Score": 14.57,
+        "Difficult Words": 178,
+        "Linsear Write Formula": 7.66,
+        "Gunning Fog": 20.27,
+        "Text Standard (grade)": "10-14",
+        "Syllables": 863,
+        "Sentences": 37
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/blog/iilm-psychology-internship.astro",
+      "words": 1226,
+      "sentences": 103,
+      "scores": {
+        "Flesch Reading Ease": 25.11,
+        "Flesch-Kincaid Grade": 12.58,
+        "SMOG Index": 2.19,
+        "Coleman-Liau Index": -294.91,
+        "Automated Readability Index": 13.95,
+        "Dale-Chall Score": 12.89,
+        "Difficult Words": 329,
+        "Linsear Write Formula": 18.35,
+        "Gunning Fog": 15.5,
+        "Text Standard (grade)": "13-16",
+        "Syllables": 2444,
+        "Sentences": 98
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/depression-anxiety.astro",
+      "words": 132,
+      "sentences": 10,
+      "scores": {
+        "Flesch Reading Ease": 25.2,
+        "Flesch-Kincaid Grade": 12.53,
+        "SMOG Index": 2.32,
+        "Coleman-Liau Index": -318.47,
+        "Automated Readability Index": 14.36,
+        "Dale-Chall Score": 12.72,
+        "Difficult Words": 60,
+        "Linsear Write Formula": 20.6,
+        "Gunning Fog": 23.46,
+        "Text Standard (grade)": "13-17",
+        "Syllables": 257,
+        "Sentences": 10
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/doctors.astro",
+      "words": 497,
+      "sentences": 74,
+      "scores": {
+        "Flesch Reading Ease": 15.12,
+        "Flesch-Kincaid Grade": 12.22,
+        "SMOG Index": 1.9,
+        "Coleman-Liau Index": -186.33,
+        "Automated Readability Index": 14.12,
+        "Dale-Chall Score": 13.98,
+        "Difficult Words": 173,
+        "Linsear Write Formula": 11.36,
+        "Gunning Fog": 16.61,
+        "Text Standard (grade)": "12-13",
+        "Syllables": 1061,
+        "Sentences": 56
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "llms-tools.txt",
+      "words": 117,
+      "sentences": 7,
+      "scores": {
+        "Flesch Reading Ease": 32.73,
+        "Flesch-Kincaid Grade": 12.01,
+        "SMOG Index": 2.16,
+        "Coleman-Liau Index": -310.73,
+        "Automated Readability Index": 17.44,
+        "Dale-Chall Score": 14.86,
+        "Difficult Words": 50,
+        "Linsear Write Formula": 23.0,
+        "Gunning Fog": 23.78,
+        "Text Standard (grade)": "12-19",
+        "Syllables": 209,
+        "Sentences": 7
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "DEPLOYMENT_GUIDE.md",
+      "words": 428,
+      "sentences": 32,
+      "scores": {
+        "Flesch Reading Ease": 34.12,
+        "Flesch-Kincaid Grade": 11.9,
+        "SMOG Index": 1.94,
+        "Coleman-Liau Index": -301.44,
+        "Automated Readability Index": 16.99,
+        "Dale-Chall Score": 15.28,
+        "Difficult Words": 134,
+        "Linsear Write Formula": 18.25,
+        "Gunning Fog": 17.87,
+        "Text Standard (grade)": "12-17",
+        "Syllables": 808,
+        "Sentences": 31
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/psychiatrist-greater-noida.astro",
+      "words": 137,
+      "sentences": 11,
+      "scores": {
+        "Flesch Reading Ease": 28.45,
+        "Flesch-Kincaid Grade": 11.75,
+        "SMOG Index": 2.01,
+        "Coleman-Liau Index": -281.94,
+        "Automated Readability Index": 14.4,
+        "Dale-Chall Score": 13.26,
+        "Difficult Words": 48,
+        "Linsear Write Formula": 17.73,
+        "Gunning Fog": 19.0,
+        "Text Standard (grade)": "12-15",
+        "Syllables": 261,
+        "Sentences": 10
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "CRAWLER_POLICY.md",
+      "words": 900,
+      "sentences": 49,
+      "scores": {
+        "Flesch Reading Ease": 37.45,
+        "Flesch-Kincaid Grade": 11.73,
+        "SMOG Index": 2.2,
+        "Coleman-Liau Index": -354.11,
+        "Automated Readability Index": 17.12,
+        "Dale-Chall Score": 14.81,
+        "Difficult Words": 285,
+        "Linsear Write Formula": 24.94,
+        "Gunning Fog": 20.01,
+        "Text Standard (grade)": "12-20",
+        "Syllables": 1537,
+        "Sentences": 48
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/psychiatrist-in-noida.astro",
+      "words": 158,
+      "sentences": 12,
+      "scores": {
+        "Flesch Reading Ease": 30.22,
+        "Flesch-Kincaid Grade": 11.65,
+        "SMOG Index": 1.93,
+        "Coleman-Liau Index": -302.48,
+        "Automated Readability Index": 13.47,
+        "Dale-Chall Score": 13.25,
+        "Difficult Words": 60,
+        "Linsear Write Formula": 18.0,
+        "Gunning Fog": 20.46,
+        "Text Standard (grade)": "12-16",
+        "Syllables": 296,
+        "Sentences": 12
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "ZARAZ_TRACKING_GUIDE.md",
+      "words": 843,
+      "sentences": 49,
+      "scores": {
+        "Flesch Reading Ease": 34.09,
+        "Flesch-Kincaid Grade": 11.63,
+        "SMOG Index": 2.01,
+        "Coleman-Liau Index": -340.98,
+        "Automated Readability Index": 18.51,
+        "Dale-Chall Score": 15.43,
+        "Difficult Words": 211,
+        "Linsear Write Formula": 22.47,
+        "Gunning Fog": 16.89,
+        "Text Standard (grade)": "12-19",
+        "Syllables": 1465,
+        "Sentences": 46
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/trauma-grief-support.astro",
+      "words": 115,
+      "sentences": 8,
+      "scores": {
+        "Flesch Reading Ease": 35.67,
+        "Flesch-Kincaid Grade": 11.56,
+        "SMOG Index": 2.08,
+        "Coleman-Liau Index": -297.41,
+        "Automated Readability Index": 14.43,
+        "Dale-Chall Score": 12.69,
+        "Difficult Words": 47,
+        "Linsear Write Formula": 20.12,
+        "Gunning Fog": 22.1,
+        "Text Standard (grade)": "12-16",
+        "Syllables": 210,
+        "Sentences": 7
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "robots.txt",
+      "words": 499,
+      "sentences": 28,
+      "scores": {
+        "Flesch Reading Ease": 40.29,
+        "Flesch-Kincaid Grade": 11.25,
+        "SMOG Index": 2.09,
+        "Coleman-Liau Index": -340.8,
+        "Automated Readability Index": 24.94,
+        "Dale-Chall Score": 13.58,
+        "Difficult Words": 165,
+        "Linsear Write Formula": 23.61,
+        "Gunning Fog": 20.36,
+        "Text Standard (grade)": "11-19",
+        "Syllables": 841,
+        "Sentences": 27
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/blog/pages/child/speech-delay-red-flags.astro",
+      "words": 51,
+      "sentences": 10,
+      "scores": {
+        "Flesch Reading Ease": 19.02,
+        "Flesch-Kincaid Grade": 10.92,
+        "SMOG Index": 1.63,
+        "Coleman-Liau Index": -134.93,
+        "Automated Readability Index": 12.7,
+        "Dale-Chall Score": 11.0,
+        "Difficult Words": 18,
+        "Linsear Write Formula": 8.3,
+        "Gunning Fog": 16.16,
+        "Text Standard (grade)": "10-11",
+        "Syllables": 106,
+        "Sentences": 6
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/blog/pages/child/early-signs-of-autism.astro",
+      "words": 62,
+      "sentences": 8,
+      "scores": {
+        "Flesch Reading Ease": 23.27,
+        "Flesch-Kincaid Grade": 10.84,
+        "SMOG Index": 1.88,
+        "Coleman-Liau Index": -201.15,
+        "Automated Readability Index": 11.54,
+        "Dale-Chall Score": 11.54,
+        "Difficult Words": 23,
+        "Linsear Write Formula": 12.25,
+        "Gunning Fog": 17.94,
+        "Text Standard (grade)": "11-12",
+        "Syllables": 123,
+        "Sentences": 4
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/perceived-burdensomeness.astro",
+      "words": 5332,
+      "sentences": 361,
+      "scores": {
+        "Flesch Reading Ease": 41.86,
+        "Flesch-Kincaid Grade": 10.77,
+        "SMOG Index": 2.15,
+        "Coleman-Liau Index": -326.2,
+        "Automated Readability Index": 11.38,
+        "Dale-Chall Score": 10.63,
+        "Difficult Words": 962,
+        "Linsear Write Formula": 20.94,
+        "Gunning Fog": 13.12,
+        "Text Standard (grade)": "11-16",
+        "Syllables": 9309,
+        "Sentences": 350
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/privacy.astro",
+      "words": 626,
+      "sentences": 72,
+      "scores": {
+        "Flesch Reading Ease": 31.65,
+        "Flesch-Kincaid Grade": 10.65,
+        "SMOG Index": 1.89,
+        "Coleman-Liau Index": -218.84,
+        "Automated Readability Index": 11.15,
+        "Dale-Chall Score": 12.24,
+        "Difficult Words": 185,
+        "Linsear Write Formula": 13.28,
+        "Gunning Fog": 15.3,
+        "Text Standard (grade)": "11-13",
+        "Syllables": 1212,
+        "Sentences": 57
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/index.astro",
+      "words": 248,
+      "sentences": 20,
+      "scores": {
+        "Flesch Reading Ease": 41.99,
+        "Flesch-Kincaid Grade": 10.56,
+        "SMOG Index": 1.91,
+        "Coleman-Liau Index": -269.59,
+        "Automated Readability Index": 12.95,
+        "Dale-Chall Score": 11.86,
+        "Difficult Words": 78,
+        "Linsear Write Formula": 17.1,
+        "Gunning Fog": 17.54,
+        "Text Standard (grade)": "11-14",
+        "Syllables": 448,
+        "Sentences": 20
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/disclaimer.astro",
+      "words": 382,
+      "sentences": 39,
+      "scores": {
+        "Flesch Reading Ease": 29.42,
+        "Flesch-Kincaid Grade": 10.56,
+        "SMOG Index": 1.97,
+        "Coleman-Liau Index": -243.1,
+        "Automated Readability Index": 10.67,
+        "Dale-Chall Score": 11.38,
+        "Difficult Words": 105,
+        "Linsear Write Formula": 14.87,
+        "Gunning Fog": 14.91,
+        "Text Standard (grade)": "11-13",
+        "Syllables": 723,
+        "Sentences": 24
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/depression-in-older-adults.astro",
+      "words": 3830,
+      "sentences": 259,
+      "scores": {
+        "Flesch Reading Ease": 44.43,
+        "Flesch-Kincaid Grade": 10.51,
+        "SMOG Index": 2.09,
+        "Coleman-Liau Index": -315.01,
+        "Automated Readability Index": 12.18,
+        "Dale-Chall Score": 11.22,
+        "Difficult Words": 802,
+        "Linsear Write Formula": 20.58,
+        "Gunning Fog": 14.29,
+        "Text Standard (grade)": "11-16",
+        "Syllables": 6600,
+        "Sentences": 232
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/blog/pages/adult/sleep-and-anxiety-cycle.astro",
+      "words": 237,
+      "sentences": 43,
+      "scores": {
+        "Flesch Reading Ease": 24.16,
+        "Flesch-Kincaid Grade": 10.31,
+        "SMOG Index": 1.61,
+        "Coleman-Liau Index": -141.5,
+        "Automated Readability Index": 12.92,
+        "Dale-Chall Score": 13.54,
+        "Difficult Words": 111,
+        "Linsear Write Formula": 8.58,
+        "Gunning Fog": 20.94,
+        "Text Standard (grade)": "9-12",
+        "Syllables": 477,
+        "Sentences": 36
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/fees.astro",
+      "words": 480,
+      "sentences": 71,
+      "scores": {
+        "Flesch Reading Ease": 35.36,
+        "Flesch-Kincaid Grade": 10.11,
+        "SMOG Index": 1.73,
+        "Coleman-Liau Index": -172.65,
+        "Automated Readability Index": 11.31,
+        "Dale-Chall Score": 13.13,
+        "Difficult Words": 138,
+        "Linsear Write Formula": 10.45,
+        "Gunning Fog": 14.2,
+        "Text Standard (grade)": "10-12",
+        "Syllables": 938,
+        "Sentences": 54
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/services.astro",
+      "words": 475,
+      "sentences": 51,
+      "scores": {
+        "Flesch Reading Ease": 34.02,
+        "Flesch-Kincaid Grade": 9.98,
+        "SMOG Index": 1.82,
+        "Coleman-Liau Index": -206.73,
+        "Automated Readability Index": 12.11,
+        "Dale-Chall Score": 11.6,
+        "Difficult Words": 161,
+        "Linsear Write Formula": 13.51,
+        "Gunning Fog": 17.28,
+        "Text Standard (grade)": "10-13",
+        "Syllables": 883,
+        "Sentences": 36
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/consent.astro",
+      "words": 359,
+      "sentences": 54,
+      "scores": {
+        "Flesch Reading Ease": 34.22,
+        "Flesch-Kincaid Grade": 9.68,
+        "SMOG Index": 1.64,
+        "Coleman-Liau Index": -162.42,
+        "Automated Readability Index": 10.94,
+        "Dale-Chall Score": 12.13,
+        "Difficult Words": 124,
+        "Linsear Write Formula": 9.87,
+        "Gunning Fog": 16.48,
+        "Text Standard (grade)": "10-11",
+        "Syllables": 690,
+        "Sentences": 38
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/faq.astro",
+      "words": 280,
+      "sentences": 36,
+      "scores": {
+        "Flesch Reading Ease": 36.12,
+        "Flesch-Kincaid Grade": 9.65,
+        "SMOG Index": 1.74,
+        "Coleman-Liau Index": -189.74,
+        "Automated Readability Index": 10.38,
+        "Dale-Chall Score": 12.09,
+        "Difficult Words": 97,
+        "Linsear Write Formula": 11.5,
+        "Gunning Fog": 16.97,
+        "Text Standard (grade)": "10-12",
+        "Syllables": 527,
+        "Sentences": 21
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "AMPLITUDE_ZONING_SETUP.md",
+      "words": 730,
+      "sentences": 55,
+      "scores": {
+        "Flesch Reading Ease": 41.23,
+        "Flesch-Kincaid Grade": 9.55,
+        "SMOG Index": 1.85,
+        "Coleman-Liau Index": -264.79,
+        "Automated Readability Index": 14.1,
+        "Dale-Chall Score": 14.15,
+        "Difficult Words": 218,
+        "Linsear Write Formula": 17.6,
+        "Gunning Fog": 17.25,
+        "Text Standard (grade)": "10-16",
+        "Syllables": 1235,
+        "Sentences": 54
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/dr-anita-sharma.astro",
+      "words": 205,
+      "sentences": 32,
+      "scores": {
+        "Flesch Reading Ease": 29.43,
+        "Flesch-Kincaid Grade": 9.53,
+        "SMOG Index": 1.63,
+        "Coleman-Liau Index": -154.97,
+        "Automated Readability Index": 11.0,
+        "Dale-Chall Score": 13.1,
+        "Difficult Words": 79,
+        "Linsear Write Formula": 9.59,
+        "Gunning Fog": 17.98,
+        "Text Standard (grade)": "10-11",
+        "Syllables": 393,
+        "Sentences": 16
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/blog/index.astro",
+      "words": 366,
+      "sentences": 42,
+      "scores": {
+        "Flesch Reading Ease": 47.95,
+        "Flesch-Kincaid Grade": 9.47,
+        "SMOG Index": 1.81,
+        "Coleman-Liau Index": -212.48,
+        "Automated Readability Index": 11.52,
+        "Dale-Chall Score": 12.07,
+        "Difficult Words": 109,
+        "Linsear Write Formula": 12.86,
+        "Gunning Fog": 15.4,
+        "Text Standard (grade)": "9-12",
+        "Syllables": 672,
+        "Sentences": 40
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/components/Shell.astro",
+      "words": 59,
+      "sentences": 17,
+      "scores": {
+        "Flesch Reading Ease": 41.98,
+        "Flesch-Kincaid Grade": 9.36,
+        "SMOG Index": 1.26,
+        "Coleman-Liau Index": -97.78,
+        "Automated Readability Index": 13.12,
+        "Dale-Chall Score": 13.72,
+        "Difficult Words": 21,
+        "Linsear Write Formula": 5.12,
+        "Gunning Fog": 15.63,
+        "Text Standard (grade)": "7-12",
+        "Syllables": 118,
+        "Sentences": 10
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/gallery.astro",
+      "words": 245,
+      "sentences": 31,
+      "scores": {
+        "Flesch Reading Ease": 33.71,
+        "Flesch-Kincaid Grade": 9.31,
+        "SMOG Index": 1.74,
+        "Coleman-Liau Index": -187.91,
+        "Automated Readability Index": 9.9,
+        "Dale-Chall Score": 12.06,
+        "Difficult Words": 81,
+        "Linsear Write Formula": 11.65,
+        "Gunning Fog": 16.39,
+        "Text Standard (grade)": "9-12",
+        "Syllables": 453,
+        "Sentences": 16
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/sleep-and-autism-guide-indian-parents.astro",
+      "words": 1303,
+      "sentences": 109,
+      "scores": {
+        "Flesch Reading Ease": 49.35,
+        "Flesch-Kincaid Grade": 9.17,
+        "SMOG Index": 1.89,
+        "Coleman-Liau Index": -248.71,
+        "Automated Readability Index": 10.24,
+        "Dale-Chall Score": 10.19,
+        "Difficult Words": 317,
+        "Linsear Write Formula": 16.52,
+        "Gunning Fog": 14.51,
+        "Text Standard (grade)": "9-13",
+        "Syllables": 2219,
+        "Sentences": 105
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/aasha.astro",
+      "words": 87,
+      "sentences": 20,
+      "scores": {
+        "Flesch Reading Ease": 28.77,
+        "Flesch-Kincaid Grade": 9.16,
+        "SMOG Index": 1.36,
+        "Coleman-Liau Index": -115.4,
+        "Automated Readability Index": 10.85,
+        "Dale-Chall Score": 14.18,
+        "Difficult Words": 38,
+        "Linsear Write Formula": 6.35,
+        "Gunning Fog": 19.21,
+        "Text Standard (grade)": "8-12",
+        "Syllables": 170,
+        "Sentences": 5
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/mind-grace.astro",
+      "words": 210,
+      "sentences": 29,
+      "scores": {
+        "Flesch Reading Ease": 35.61,
+        "Flesch-Kincaid Grade": 8.76,
+        "SMOG Index": 1.61,
+        "Coleman-Liau Index": -168.08,
+        "Automated Readability Index": 9.91,
+        "Dale-Chall Score": 11.83,
+        "Difficult Words": 74,
+        "Linsear Write Formula": 10.34,
+        "Gunning Fog": 16.99,
+        "Text Standard (grade)": "9-11",
+        "Syllables": 383,
+        "Sentences": 15
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/terms.astro",
+      "words": 313,
+      "sentences": 41,
+      "scores": {
+        "Flesch Reading Ease": 41.36,
+        "Flesch-Kincaid Grade": 8.76,
+        "SMOG Index": 1.69,
+        "Coleman-Liau Index": -175.46,
+        "Automated Readability Index": 9.55,
+        "Dale-Chall Score": 11.5,
+        "Difficult Words": 103,
+        "Linsear Write Formula": 11.1,
+        "Gunning Fog": 16.22,
+        "Text Standard (grade)": "9-11",
+        "Syllables": 567,
+        "Sentences": 27
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "QUICK_START.md",
+      "words": 242,
+      "sentences": 25,
+      "scores": {
+        "Flesch Reading Ease": 57.47,
+        "Flesch-Kincaid Grade": 8.62,
+        "SMOG Index": 1.44,
+        "Coleman-Liau Index": -203.31,
+        "Automated Readability Index": 13.79,
+        "Dale-Chall Score": 13.06,
+        "Difficult Words": 75,
+        "Linsear Write Formula": 12.0,
+        "Gunning Fog": 16.27,
+        "Text Standard (grade)": "9-13",
+        "Syllables": 419,
+        "Sentences": 25
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "GOOGLE_TRANSLATE_SETUP.md",
+      "words": 436,
+      "sentences": 36,
+      "scores": {
+        "Flesch Reading Ease": 37.23,
+        "Flesch-Kincaid Grade": 8.35,
+        "SMOG Index": 1.68,
+        "Coleman-Liau Index": -218.19,
+        "Automated Readability Index": 13.27,
+        "Dale-Chall Score": 13.65,
+        "Difficult Words": 144,
+        "Linsear Write Formula": 15.56,
+        "Gunning Fog": 18.06,
+        "Text Standard (grade)": "8-15",
+        "Syllables": 710,
+        "Sentences": 28
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/approach.astro",
+      "words": 89,
+      "sentences": 21,
+      "scores": {
+        "Flesch Reading Ease": 32.08,
+        "Flesch-Kincaid Grade": 8.34,
+        "SMOG Index": 1.38,
+        "Coleman-Liau Index": -105.32,
+        "Automated Readability Index": 10.06,
+        "Dale-Chall Score": 12.18,
+        "Difficult Words": 29,
+        "Linsear Write Formula": 6.33,
+        "Gunning Fog": 14.73,
+        "Text Standard (grade)": "7-10",
+        "Syllables": 168,
+        "Sentences": 6
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/testimonials.astro",
+      "words": 431,
+      "sentences": 67,
+      "scores": {
+        "Flesch Reading Ease": 40.48,
+        "Flesch-Kincaid Grade": 8.19,
+        "SMOG Index": 1.54,
+        "Coleman-Liau Index": -146.95,
+        "Automated Readability Index": 9.63,
+        "Dale-Chall Score": 11.68,
+        "Difficult Words": 138,
+        "Linsear Write Formula": 9.18,
+        "Gunning Fog": 15.38,
+        "Text Standard (grade)": "8-10",
+        "Syllables": 777,
+        "Sentences": 38
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/emergency.astro",
+      "words": 198,
+      "sentences": 32,
+      "scores": {
+        "Flesch Reading Ease": 40.6,
+        "Flesch-Kincaid Grade": 8.16,
+        "SMOG Index": 1.43,
+        "Coleman-Liau Index": -149.79,
+        "Automated Readability Index": 8.88,
+        "Dale-Chall Score": 12.26,
+        "Difficult Words": 65,
+        "Linsear Write Formula": 8.5,
+        "Gunning Fog": 15.61,
+        "Text Standard (grade)": "8-10",
+        "Syllables": 358,
+        "Sentences": 16
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/location.astro",
+      "words": 173,
+      "sentences": 25,
+      "scores": {
+        "Flesch Reading Ease": 54.16,
+        "Flesch-Kincaid Grade": 8.12,
+        "SMOG Index": 1.17,
+        "Coleman-Liau Index": -173.26,
+        "Automated Readability Index": 8.22,
+        "Dale-Chall Score": 12.23,
+        "Difficult Words": 38,
+        "Linsear Write Formula": 8.28,
+        "Gunning Fog": 11.55,
+        "Text Standard (grade)": "8-10",
+        "Syllables": 308,
+        "Sentences": 15
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/blog/children.astro",
+      "words": 282,
+      "sentences": 52,
+      "scores": {
+        "Flesch Reading Ease": 43.34,
+        "Flesch-Kincaid Grade": 8.12,
+        "SMOG Index": 1.44,
+        "Coleman-Liau Index": -123.4,
+        "Automated Readability Index": 10.26,
+        "Dale-Chall Score": 11.68,
+        "Difficult Words": 92,
+        "Linsear Write Formula": 7.77,
+        "Gunning Fog": 15.22,
+        "Text Standard (grade)": "8-10",
+        "Syllables": 516,
+        "Sentences": 35
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/blog/pages/adult/scheduled-worry-time-technique.astro",
+      "words": 384,
+      "sentences": 36,
+      "scores": {
+        "Flesch Reading Ease": 55.46,
+        "Flesch-Kincaid Grade": 8.08,
+        "SMOG Index": 1.7,
+        "Coleman-Liau Index": -215.0,
+        "Automated Readability Index": 8.91,
+        "Dale-Chall Score": 9.26,
+        "Difficult Words": 85,
+        "Linsear Write Formula": 14.22,
+        "Gunning Fog": 13.12,
+        "Text Standard (grade)": "8-12",
+        "Syllables": 635,
+        "Sentences": 33
+      },
+      "readingLevel": "above 8th grade"
+    },
+    {
+      "file": "src/pages/book.astro",
+      "words": 280,
+      "sentences": 40,
+      "scores": {
+        "Flesch Reading Ease": 48.74,
+        "Flesch-Kincaid Grade": 7.87,
+        "SMOG Index": 1.37,
+        "Coleman-Liau Index": -156.59,
+        "Automated Readability Index": 9.17,
+        "Dale-Chall Score": 11.76,
+        "Difficult Words": 85,
+        "Linsear Write Formula": 9.05,
+        "Gunning Fog": 14.94,
+        "Text Standard (grade)": "8-10",
+        "Syllables": 492,
+        "Sentences": 25
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/process.astro",
+      "words": 437,
+      "sentences": 61,
+      "scores": {
+        "Flesch Reading Ease": 48.75,
+        "Flesch-Kincaid Grade": 7.67,
+        "SMOG Index": 1.59,
+        "Coleman-Liau Index": -149.48,
+        "Automated Readability Index": 9.56,
+        "Dale-Chall Score": 10.18,
+        "Difficult Words": 118,
+        "Linsear Write Formula": 10.15,
+        "Gunning Fog": 13.67,
+        "Text Standard (grade)": "8-10",
+        "Syllables": 758,
+        "Sentences": 44
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "scripts/BLOG-PUBLISHING.md",
+      "words": 246,
+      "sentences": 20,
+      "scores": {
+        "Flesch Reading Ease": 53.12,
+        "Flesch-Kincaid Grade": 7.43,
+        "SMOG Index": 1.73,
+        "Coleman-Liau Index": -218.05,
+        "Automated Readability Index": 10.07,
+        "Dale-Chall Score": 12.23,
+        "Difficult Words": 72,
+        "Linsear Write Formula": 16.0,
+        "Gunning Fog": 16.63,
+        "Text Standard (grade)": "7-14",
+        "Syllables": 380,
+        "Sentences": 20
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "offline.html",
+      "words": 93,
+      "sentences": 26,
+      "scores": {
+        "Flesch Reading Ease": 51.53,
+        "Flesch-Kincaid Grade": 7.37,
+        "SMOG Index": 1.25,
+        "Coleman-Liau Index": -90.38,
+        "Automated Readability Index": 10.14,
+        "Dale-Chall Score": 11.96,
+        "Difficult Words": 26,
+        "Linsear Write Formula": 5.19,
+        "Gunning Fog": 12.61,
+        "Text Standard (grade)": "6-10",
+        "Syllables": 170,
+        "Sentences": 14
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/resources.astro",
+      "words": 285,
+      "sentences": 41,
+      "scores": {
+        "Flesch Reading Ease": 49.13,
+        "Flesch-Kincaid Grade": 7.37,
+        "SMOG Index": 1.52,
+        "Coleman-Liau Index": -152.42,
+        "Automated Readability Index": 8.21,
+        "Dale-Chall Score": 10.89,
+        "Difficult Words": 85,
+        "Linsear Write Formula": 9.63,
+        "Gunning Fog": 14.71,
+        "Text Standard (grade)": "7-10",
+        "Syllables": 489,
+        "Sentences": 26
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/blog/pages/child/sensory-overload-at-home.astro",
+      "words": 56,
+      "sentences": 8,
+      "scores": {
+        "Flesch Reading Ease": 47.6,
+        "Flesch-Kincaid Grade": 7.37,
+        "SMOG Index": 1.64,
+        "Coleman-Liau Index": -143.15,
+        "Automated Readability Index": 9.15,
+        "Dale-Chall Score": 11.1,
+        "Difficult Words": 18,
+        "Linsear Write Formula": 10.25,
+        "Gunning Fog": 15.66,
+        "Text Standard (grade)": "7-11",
+        "Syllables": 96,
+        "Sentences": 4
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "README.md",
+      "words": 250,
+      "sentences": 24,
+      "scores": {
+        "Flesch Reading Ease": 27.63,
+        "Flesch-Kincaid Grade": 7.21,
+        "SMOG Index": 1.57,
+        "Coleman-Liau Index": -176.89,
+        "Automated Readability Index": 14.88,
+        "Dale-Chall Score": 16.5,
+        "Difficult Words": 92,
+        "Linsear Write Formula": 13.33,
+        "Gunning Fog": 18.89,
+        "Text Standard (grade)": "7-15",
+        "Syllables": 397,
+        "Sentences": 18
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/contact.astro",
+      "words": 154,
+      "sentences": 30,
+      "scores": {
+        "Flesch Reading Ease": 51.94,
+        "Flesch-Kincaid Grade": 7.18,
+        "SMOG Index": 1.19,
+        "Coleman-Liau Index": -122.27,
+        "Automated Readability Index": 8.72,
+        "Dale-Chall Score": 12.1,
+        "Difficult Words": 42,
+        "Linsear Write Formula": 6.53,
+        "Gunning Fog": 12.96,
+        "Text Standard (grade)": "7-10",
+        "Syllables": 271,
+        "Sentences": 14
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/blog/pages/adult/when-to-see-a-psychiatrist.astro",
+      "words": 69,
+      "sentences": 10,
+      "scores": {
+        "Flesch Reading Ease": 57.06,
+        "Flesch-Kincaid Grade": 6.6,
+        "SMOG Index": 1.41,
+        "Coleman-Liau Index": -157.44,
+        "Automated Readability Index": 5.84,
+        "Dale-Chall Score": 9.62,
+        "Difficult Words": 19,
+        "Linsear Write Formula": 9.1,
+        "Gunning Fog": 13.77,
+        "Text Standard (grade)": "7-9",
+        "Syllables": 114,
+        "Sentences": 7
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/blog/pages/adult/stimulus-control-therapy.astro",
+      "words": 322,
+      "sentences": 31,
+      "scores": {
+        "Flesch Reading Ease": 64.26,
+        "Flesch-Kincaid Grade": 6.45,
+        "SMOG Index": 1.5,
+        "Coleman-Liau Index": -192.9,
+        "Automated Readability Index": 6.96,
+        "Dale-Chall Score": 8.69,
+        "Difficult Words": 68,
+        "Linsear Write Formula": 12.97,
+        "Gunning Fog": 12.6,
+        "Text Standard (grade)": "6-11",
+        "Syllables": 491,
+        "Sentences": 27
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/tools/butterfly-tapper.astro",
+      "words": 73,
+      "sentences": 20,
+      "scores": {
+        "Flesch Reading Ease": 43.45,
+        "Flesch-Kincaid Grade": 6.04,
+        "SMOG Index": 1.19,
+        "Coleman-Liau Index": -82.02,
+        "Automated Readability Index": 7.88,
+        "Dale-Chall Score": 11.68,
+        "Difficult Words": 23,
+        "Linsear Write Formula": 5.05,
+        "Gunning Fog": 14.06,
+        "Text Standard (grade)": "6-9",
+        "Syllables": 125,
+        "Sentences": 4
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/tools/hypnos-fractal.astro",
+      "words": 82,
+      "sentences": 22,
+      "scores": {
+        "Flesch Reading Ease": 48.52,
+        "Flesch-Kincaid Grade": 6.01,
+        "SMOG Index": 1.17,
+        "Coleman-Liau Index": -84.16,
+        "Automated Readability Index": 7.66,
+        "Dale-Chall Score": 12.21,
+        "Difficult Words": 29,
+        "Linsear Write Formula": 5.09,
+        "Gunning Fog": 15.64,
+        "Text Standard (grade)": "6-9",
+        "Syllables": 140,
+        "Sentences": 6
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/blog/pages/child/school-concerns-and-adhd.astro",
+      "words": 63,
+      "sentences": 10,
+      "scores": {
+        "Flesch Reading Ease": 57.17,
+        "Flesch-Kincaid Grade": 5.97,
+        "SMOG Index": 1.41,
+        "Coleman-Liau Index": -117.21,
+        "Automated Readability Index": 8.26,
+        "Dale-Chall Score": 9.75,
+        "Difficult Words": 19,
+        "Linsear Write Formula": 8.5,
+        "Gunning Fog": 14.58,
+        "Text Standard (grade)": "6-9",
+        "Syllables": 102,
+        "Sentences": 6
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/blog/pages/adult/overthinking-vs-anxiety.astro",
+      "words": 66,
+      "sentences": 9,
+      "scores": {
+        "Flesch Reading Ease": 63.64,
+        "Flesch-Kincaid Grade": 5.69,
+        "SMOG Index": 1.3,
+        "Coleman-Liau Index": -150.06,
+        "Automated Readability Index": 5.57,
+        "Dale-Chall Score": 9.21,
+        "Difficult Words": 15,
+        "Linsear Write Formula": 9.11,
+        "Gunning Fog": 12.02,
+        "Text Standard (grade)": "6-9",
+        "Syllables": 103,
+        "Sentences": 6
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/tools/leaf-on-stream.astro",
+      "words": 106,
+      "sentences": 24,
+      "scores": {
+        "Flesch Reading Ease": 57.19,
+        "Flesch-Kincaid Grade": 5.5,
+        "SMOG Index": 1.24,
+        "Coleman-Liau Index": -92.46,
+        "Automated Readability Index": 7.35,
+        "Dale-Chall Score": 11.16,
+        "Difficult Words": 32,
+        "Linsear Write Formula": 6.0,
+        "Gunning Fog": 13.84,
+        "Text Standard (grade)": "6-9",
+        "Syllables": 174,
+        "Sentences": 9
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/tools/eye-movement.astro",
+      "words": 89,
+      "sentences": 22,
+      "scores": {
+        "Flesch Reading Ease": 53.0,
+        "Flesch-Kincaid Grade": 5.35,
+        "SMOG Index": 1.17,
+        "Coleman-Liau Index": -85.01,
+        "Automated Readability Index": 7.11,
+        "Dale-Chall Score": 10.76,
+        "Difficult Words": 24,
+        "Linsear Write Formula": 5.41,
+        "Gunning Fog": 12.4,
+        "Text Standard (grade)": "5-8",
+        "Syllables": 146,
+        "Sentences": 6
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/thank-you.astro",
+      "words": 117,
+      "sentences": 26,
+      "scores": {
+        "Flesch Reading Ease": 62.41,
+        "Flesch-Kincaid Grade": 5.23,
+        "SMOG Index": 1.08,
+        "Coleman-Liau Index": -98.22,
+        "Automated Readability Index": 7.11,
+        "Dale-Chall Score": 10.89,
+        "Difficult Words": 36,
+        "Linsear Write Formula": 5.58,
+        "Gunning Fog": 14.11,
+        "Text Standard (grade)": "5-8",
+        "Syllables": 189,
+        "Sentences": 10
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/blog/adult.astro",
+      "words": 161,
+      "sentences": 44,
+      "scores": {
+        "Flesch Reading Ease": 60.84,
+        "Flesch-Kincaid Grade": 5.11,
+        "SMOG Index": 1.11,
+        "Coleman-Liau Index": -79.54,
+        "Automated Readability Index": 6.93,
+        "Dale-Chall Score": 11.56,
+        "Difficult Words": 53,
+        "Linsear Write Formula": 4.84,
+        "Gunning Fog": 14.63,
+        "Text Standard (grade)": "5-8",
+        "Syllables": 263,
+        "Sentences": 19
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/404.astro",
+      "words": 60,
+      "sentences": 20,
+      "scores": {
+        "Flesch Reading Ease": 54.9,
+        "Flesch-Kincaid Grade": 5.05,
+        "SMOG Index": 1.09,
+        "Coleman-Liau Index": -69.71,
+        "Automated Readability Index": 6.68,
+        "Dale-Chall Score": 11.62,
+        "Difficult Words": 22,
+        "Linsear Write Formula": 4.1,
+        "Gunning Fog": 15.87,
+        "Text Standard (grade)": "5-8",
+        "Syllables": 99,
+        "Sentences": 6
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/tools/guided-breathing.astro",
+      "words": 79,
+      "sentences": 23,
+      "scores": {
+        "Flesch Reading Ease": 57.24,
+        "Flesch-Kincaid Grade": 5.02,
+        "SMOG Index": 1.1,
+        "Coleman-Liau Index": -75.47,
+        "Automated Readability Index": 6.7,
+        "Dale-Chall Score": 11.39,
+        "Difficult Words": 24,
+        "Linsear Write Formula": 4.57,
+        "Gunning Fog": 13.53,
+        "Text Standard (grade)": "5-8",
+        "Syllables": 129,
+        "Sentences": 7
+      },
+      "readingLevel": "ok"
+    },
+    {
+      "file": "src/pages/tools/horizon-scan.astro",
+      "words": 60,
+      "sentences": 22,
+      "scores": {
+        "Flesch Reading Ease": 58.51,
+        "Flesch-Kincaid Grade": 4.75,
+        "SMOG Index": 1.02,
+        "Coleman-Liau Index": -63.46,
+        "Automated Readability Index": 6.39,
+        "Dale-Chall Score": 10.97,
+        "Difficult Words": 17,
+        "Linsear Write Formula": 3.64,
+        "Gunning Fog": 12.42,
+        "Text Standard (grade)": "4-8",
+        "Syllables": 98,
+        "Sentences": 6
+      },
+      "readingLevel": "ok"
+    }
+  ]
+}

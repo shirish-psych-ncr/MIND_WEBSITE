@@ -16,8 +16,12 @@ from urllib.parse import unquote, urljoin, urlsplit
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
+# The site is built with Astro from src/pages/ into dist/. The index generator
+# scans the *rendered* HTML (article metadata lives in <head> markup that only
+# exists after the build), so it must run against dist/, not the source tree.
+DIST = ROOT / "dist"
 SITE = "https://mindgracencr.in"
-SKIP = {"assets", "node_modules", "scripts", "tests", "dist", "build", "_site", "venv", "env", "__pycache__"}
+SKIP = {"assets", "node_modules", "scripts", "tests", "build", "_site", "venv", "env", "__pycache__"}
 START = "<!-- GENERATED ARTICLES START -->"
 END = "<!-- GENERATED ARTICLES END -->"
 
@@ -195,10 +199,17 @@ def write_changed(path, content):
         path.write_text(content, encoding="utf-8")
 
 
-def build(root=ROOT):
+def site_root():
+    """Prefer the Astro build output (dist/); fall back to the repo root for
+    a legacy all-static checkout where pages are committed as rendered HTML."""
+    return DIST if (DIST / "blog" / "index.html").exists() else ROOT
+
+
+def build(root=None):
+    root = root or site_root()
     posts = discover(root)
     if not posts:
-        raise ValueError("No published articles found; refusing to erase the landing page")
+        raise ValueError(f"No published articles found under {root}; refusing to erase the landing page")
     landing = root / "blog/index.html"
     html = landing.read_text(encoding="utf-8")
     if html.count(START) != 1 or html.count(END) != 1:
@@ -210,8 +221,11 @@ def build(root=ROOT):
     if count != 1:
         raise ValueError("Missing generated article schema slot")
     write_changed(landing, html)
-    # Keep article URLs in the sitemap exactly in step with discovery.
-    sync_sitemap(root / "sitemap.xml", posts, root)
+    # Keep article URLs in the sitemap exactly in step with discovery. The
+    # repo-root sitemap is the source of truth; Astro copies it into dist/.
+    sync_sitemap(ROOT / "sitemap.xml", posts, root)
+    if root != ROOT and (root / "sitemap.xml").exists():
+        sync_sitemap(root / "sitemap.xml", posts, root)
     return len(posts)
 
 
@@ -221,7 +235,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     previous = None
     while True:
-        snapshot = [(str(p), p.stat().st_mtime_ns) for p in files(ROOT) if p != ROOT / "blog/index.html"]
+        root = site_root()
+        snapshot = [(str(p), p.stat().st_mtime_ns) for p in files(root) if p != root / "blog/index.html"]
         if snapshot != previous:
             print(f"Indexed {build()} published articles", flush=True)
             previous = snapshot

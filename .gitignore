@@ -1,18 +1,1 @@
-# Dependencies
-node_modules/
-
-# Build Outputs & Lint Artifacts
-output/
-dist/
-*.tmp
-*.log
-
-# OS / Editor cruft
-.DS_Store
-Thumbs.db
-*.swp
-
-# Python
-__pycache__/
-*.pyc
-.pytest_cache/
+(empty)
