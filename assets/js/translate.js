@@ -139,18 +139,49 @@
     } catch (e) { /* analytics optional */ }
   }
 
+  var engineLoading = false;
+  function ensureEngine(ready) {
+    if (window.mgTranslateEngine) { ready(); return; }
+    if (!engineLoading) {
+      engineLoading = true;
+      var s = document.createElement('script');
+      s.src = '/assets/js/min/translate-engine.min.js';
+      s.async = true;
+      s.onerror = function () { engineLoading = false; };
+      s.onload = function () { ready(); };
+      document.head.appendChild(s);
+    } else {
+      setTimeout(function () { ensureEngine(ready); }, 150);
+    }
+  }
+
   function translateTo(code, opts) {
     code = code || '';
     var source = (opts && opts.source) || 'menu';
     storeLang(code);
     trackEvent('Language Selected', { language: code || 'original', source: source });
-    if (setGoogleLanguage(code)) {
-      refreshUiState(code);
+    refreshUiState(code);
+    // Preferred path: our own translation engine (proxy mode + fallbacks),
+    // lazy-loaded on first click so English readers never pay its cost.
+    if (window.mgTranslateEngine && typeof window.mgTranslateEngine.setLanguage === 'function') {
+      window.mgTranslateEngine.setLanguage(code);
       return;
     }
-    // Widget not ready yet: remember intent; init callback will apply it.
+    ensureEngine(function () { window.mgTranslateEngine.setLanguage(code); });
+    // Engine script not loaded yet: try the legacy widget select directly,
+    // and remember intent so the engine/widget applies it on init.
+    if (setGoogleLanguage(code)) {
+      return;
+    }
     window.__mgPendingLang = code;
     loadGoogleWidget();
+    // If the engine script loads later, it will pick up __mgPendingLang too.
+    var eng = document.createElement('script');
+    eng.src = '/assets/js/min/translate-engine.min.js';
+    eng.onload = function () {
+      if (window.mgTranslateEngine) window.mgTranslateEngine.setLanguage(window.__mgPendingLang !== undefined ? window.__mgPendingLang : code);
+    };
+    document.head.appendChild(eng);
   }
   window.mgTranslateTo = translateTo;
 
@@ -349,9 +380,10 @@
    * ------------------------------------------------------------------ */
   function boot() {
     buildControl();
-    // Translation is optional; load its engine only for a saved language or
-    // a language selection. English readers should not pay its startup cost.
-    if (getStoredLang()) loadGoogleWidget();
+    // Translation is optional; load the engine only when a language was
+    // previously chosen. English readers never pay its startup cost. The
+    // lazy-loaded translate-engine.js restores the saved language itself.
+    if (getStoredLang()) ensureEngine(function () {});
     refreshUiState(getStoredLang());
   }
 

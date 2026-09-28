@@ -206,3 +206,37 @@ iframe.goog-te-combo,
     border: 1px solid ButtonText;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Translation status toast (rendered by translate-engine.js)
+   -------------------------------------------------------------------------- */
+.mg-t-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 16px);
+  z-index: 2147483646;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #1b1223;
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mg-t-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (forced-colors: active) {
+  .mg-t-toast {
+    border: 1px solid ButtonText;
+    background: Canvas;
+    color: CanvasText;
+  }
+}
