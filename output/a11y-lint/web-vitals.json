@@ -1,0 +1,35 @@
+{
+  "tool": "web-vitals",
+  "version": "6.2.2",
+  "pagesMeasured": 1,
+  "pagesWithPoorMetrics": 0,
+  "results": [
+    {
+      "route": "offline.html",
+      "metrics": {
+        "LCP": {
+          "value": 332,
+          "rating": "good"
+        },
+        "FCP": {
+          "value": 332,
+          "rating": "good"
+        },
+        "TTFB": {
+          "value": 10.200000000186265,
+          "rating": "good"
+        },
+        "CLS": {
+          "value": 0.0006992594678742789,
+          "rating": "good"
+        },
+        "INP": {
+          "value": 16,
+          "rating": "good"
+        }
+      },
+      "poorCount": 0,
+      "needsImprovementCount": 0
+    }
+  ]
+}
