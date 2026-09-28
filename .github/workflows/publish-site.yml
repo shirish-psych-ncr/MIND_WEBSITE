@@ -21,16 +21,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install site dependencies
+        run: npm ci
+      - name: Build Astro site into dist/
+        run: npx astro build
       - name: Test article discovery
         run: python -m unittest discover -s tests -v
       - name: Generate article cards and structured data
         run: python scripts/build_blog_index.py
       - name: Stage public site
-        run: |
-          python - <<'PY'
-          import shutil
-          shutil.copytree('.', '_site', ignore=shutil.ignore_patterns('.git', '.github', '_site', 'scripts', 'tests', '__pycache__', '*.pyc', 'node_modules', '.env*'))
-          PY
+        run: cp -r dist _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

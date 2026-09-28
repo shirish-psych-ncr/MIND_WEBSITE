@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v11'; // shared responsive shell and early theme assets
+const CACHE_NAME = 'mindgrace-v12'; // real translation engine (proxy mode) added
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
@@ -51,7 +51,8 @@ const ANALYTICS_ASSETS = [
 // always network-only and degrades gracefully when offline.
 const TRANSLATE_ASSETS = [
   '/assets/css/min/translate.min.css',
-  '/assets/js/min/translate.min.js'
+  '/assets/js/min/translate.min.js',
+  '/assets/js/min/translate-engine.min.js'
 ];
 
 // All URLs to pre-cache on install

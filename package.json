@@ -7,10 +7,12 @@
     "lint:readability": "python3 scripts/a11y_lint/readability_hyphenation.py",
     "report": "python3 scripts/a11y_lint/summarize_report.py",
     "test": "python3 -m unittest discover -s tests -v",
-    "build:min": "node scripts/rebuild_min_css.cjs",
+    "build:min": "node scripts/rebuild_min_css.cjs && node scripts/rebuild_min_js.cjs",
     "audit:responsive": "node scripts/audit_accessibility.cjs",
     "audit:lighthouse": "node scripts/audit_lighthouse.cjs",
-    "clean": "rm -rf output/responsive-audit output/layout output/playwright tests/__pycache__ scripts/__pycache__"
+    "clean": "rm -rf output/responsive-audit output/layout output/playwright tests/__pycache__ scripts/__pycache__",
+    "build:min:css": "node scripts/rebuild_min_css.cjs",
+    "build:min:js": "node scripts/rebuild_min_js.cjs"
   },
   "dependencies": {
     "alex": "^11.0.1",
