@@ -7,3 +7,4 @@ dist/
 # Python cache
 __pycache__/
 *.pyc
+output/responsive-audit/.tonfotos.ini
