@@ -30,6 +30,10 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "astro": "^6.0.5",
-    "playwright": "^1.57.0"
+    "playwright": "^1.57.0",
+    "wrangler": "^4.143.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

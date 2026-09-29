@@ -4,12 +4,11 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v12'; // real translation engine (proxy mode) added
+const CACHE_NAME = 'mindgrace-v13'; // v13: canonical no-trailing-slash URLs + deduped precache list
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
 const CORE_ASSETS = [
-  '/',
   '/',
   '/assets/css/min/site-foundation.min.css',
   '/assets/css/min/site-foundation.min.css?v=responsive18',
@@ -22,12 +21,12 @@ const CORE_ASSETS = [
 
 // Interactive tools pages - critical for offline access during crises
 const TOOLS_PAGES = [
-  '/tools/guided-breathing/',
-  '/tools/butterfly-tapper/',
-  '/tools/eye-movement/',
-  '/tools/hypnos-fractal/',
-  '/tools/horizon-scan/',
-  '/tools/leaf-on-stream/'
+  '/tools/guided-breathing',
+  '/tools/butterfly-tapper',
+  '/tools/eye-movement',
+  '/tools/hypnos-fractal',
+  '/tools/horizon-scan',
+  '/tools/leaf-on-stream'
 ];
 
 // Tool-specific CSS and JS
@@ -56,7 +55,7 @@ const TRANSLATE_ASSETS = [
 ];
 
 // All URLs to pre-cache on install
-const PRECACHE_URLS = [...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...ANALYTICS_ASSETS, ...TRANSLATE_ASSETS, '/offline/'];
+const PRECACHE_URLS = [...new Set([...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...ANALYTICS_ASSETS, ...TRANSLATE_ASSETS, '/offline'])];
 
 /**
  * Install event - cache core assets and tools
@@ -106,9 +105,21 @@ self.addEventListener('activate', (event) => {
  * Fetch event - Network first, fallback to cache
  * Critical for tools that need to work offline during panic attacks
  */
+// Normalize a pathname so '/page' and '/page' resolve to the same cache key
+// (the site now serves canonical links WITHOUT trailing slashes).
+function normalizePath(p) {
+  return p.length > 1 ? p.replace(/\/+$/, '') : p;
+}
+
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
+  const normPath = normalizePath(url.pathname);
+
+  // Build a normalized request so '/page' and '/page' share one cache entry.
+  const normUrl = new URL(request.url);
+  normUrl.pathname = normPath;
+  const normalizedRequest = new Request(normUrl.href, request);
 
   // Only handle same-origin requests
   if (url.origin !== location.origin) {
@@ -121,9 +132,9 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Tools pages - Cache first strategy for instant offline access
-  if (TOOLS_PAGES.some(tool => url.pathname === tool || url.pathname.startsWith('/tools/'))) {
+  if (TOOLS_PAGES.some(tool => normPath === tool || normPath.startsWith('/tools'))) {
     event.respondWith(
-      caches.match(request).then((cachedResponse) => {
+      caches.match(normalizedRequest).then((cachedResponse) => {
         if (cachedResponse) {
           console.log('[SW] Serving tool from cache:', request.url);
           return cachedResponse;
@@ -135,13 +146,13 @@ self.addEventListener('fetch', (event) => {
           if (networkResponse.ok) {
             const responseClone = networkResponse.clone();
             caches.open(CACHE_NAME).then((cache) => {
-              cache.put(request, responseClone);
+              cache.put(normalizedRequest, responseClone);
             });
           }
           return networkResponse;
         }).catch(() => {
           // Offline and not in cache - return offline fallback
-          return caches.match('/offline/').then((fallback) => {
+          return caches.match('/offline').then((fallback) => {
             return fallback || new Response('Offline', { status: 503 });
           });
         });
@@ -157,14 +168,14 @@ self.addEventListener('fetch', (event) => {
       if (networkResponse.ok) {
         const responseClone = networkResponse.clone();
         caches.open(CACHE_NAME).then((cache) => {
-          cache.put(request, responseClone);
+          cache.put(normalizedRequest, responseClone);
         });
       }
       return networkResponse;
     }).catch(() => {
       // Network failed, try cache
-      return caches.match(request).then((cachedResponse) => {
-        return cachedResponse || caches.match('/offline/').then((fallback) => {
+      return caches.match(normalizedRequest).then((cachedResponse) => {
+        return cachedResponse || caches.match('/offline').then((fallback) => {
           return fallback || new Response('Offline', { status: 503 });
         });
       });

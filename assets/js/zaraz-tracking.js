@@ -119,7 +119,7 @@
   function setupToolTracking() {
     waitForZaraz(() => {
       // Track when users access self-help tools
-      const toolLinks = document.querySelectorAll('a[href*="/tools/"]');
+      const toolLinks = document.querySelectorAll('a[href*="/tools"]');
       
       toolLinks.forEach(link => {
         link.addEventListener('click', function() {

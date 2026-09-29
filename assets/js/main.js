@@ -135,7 +135,7 @@ function _initBreadcrumbs() {
   const main = document.querySelector('main');
   if (!main) return;
   const path = window.location.pathname.replace(/\\/g, '/');
-  const isHome = path === '/' || (path.endsWith('/') && !path.includes('/blog/'));
+  const isHome = path === '/' || (path.endsWith('/') && !path.includes('/blog'));
   let nav = main.querySelector(':scope > .breadcrumbs') || document.querySelector('nav.breadcrumbs');
 
   if (!nav && !isHome) {
@@ -155,14 +155,14 @@ function _initBreadcrumbs() {
 
   nav.querySelectorAll('a').forEach((link) => {
     if (link.textContent.trim().toLowerCase() === 'blog' && link.getAttribute('href') === '/') {
-      link.setAttribute('href', '/blog/');
+      link.setAttribute('href', '/blog');
     }
   });
 
   const category = path.match(/^\/blog\/(adult|children)(?:\.html)?\/?$/i);
-  if (category && current && !nav.querySelector('a[href="/blog/"]')) {
+  if (category && current && !nav.querySelector('a[href="/blog"]')) {
     const blogItem = document.createElement('li');
-    blogItem.innerHTML = '<a href="/blog/">Blog</a>';
+    blogItem.innerHTML = '<a href="/blog">Blog</a>';
     list.insertBefore(blogItem, current);
   }
 

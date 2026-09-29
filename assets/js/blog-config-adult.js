@@ -16,7 +16,7 @@
       window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
     })
     .catch(() => {
-      const files = ["overthinking-vs-anxiety/", "scheduled-worry-time-technique/", "sleep-and-anxiety-cycle/", "stimulus-control-therapy/", "when-to-see-a-psychiatrist/"];
+      const files = ["overthinking-vs-anxiety", "scheduled-worry-time-technique", "sleep-and-anxiety-cycle", "stimulus-control-therapy", "when-to-see-a-psychiatrist"];
       window.BLOG_DISCOVERY_CONFIG = { sourceDir, posts: files.map(resolve), pinned: [], mostSearched: [], symptoms: [], clusters: [] };
       window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
     });
