@@ -456,7 +456,15 @@ for (const f of files) {
   if (/\.json$/.test(f)) {
     try { const o = JSON.parse(t); (function rec(v) { if (typeof v === 'string') texts.push(v); else if (v && typeof v === 'object') Object.values(v).forEach(rec); })(o); } catch { /* noop */ }
   } else if (/\.(html|htm|astro)$/.test(f)) {
-    texts = [...t.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').matchAll(/>([^<>{}]{4,})</g)].map((m) => m[1]);
+    // Text extraction only (RTL/LTR prose detection -> JSON report; nothing
+    // is rendered). Anchored EOF fallbacks ensure script/style content can
+    // never leak even in truncated input.
+    // codeql[js/bad-html-filtering-regexp]: ignore — false positive, lint
+    // tooling that strips tags for analysis, not for safe rendering.
+    const stripped = t
+      .replace(/<script\b[^>]*>[\s\S]*?(?:<\/script>|$)/gi, ' ')
+      .replace(/<style\b[^>]*>[\s\S]*?(?:<\/style>|$)/gi, ' ');
+    texts = [...stripped.matchAll(/>([^<>{}]{4,})</g)].map((m) => m[1]);
     // also flag explicit dir attributes
     for (const dm of t.matchAll(/<([a-z0-9-]+)[^>]*\bdir=["']([^"']+)["']/gi)) {
       dirResults.push({ file: path.relative(ROOT, f), element: dm[1], declaredDir: dm[2], kind: 'attr' });

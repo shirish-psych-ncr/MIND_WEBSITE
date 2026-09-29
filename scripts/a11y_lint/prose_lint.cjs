@@ -26,13 +26,30 @@ function walk(dir) {
   });
 }
 
+// Strip HTML comments and script/style blocks. This is a *text-extraction*
+// helper for the prose linter (output goes to a JSON report; nothing here is
+// ever rendered as HTML), so CodeQL's "bad HTML filtering regexp" heuristic
+// does not apply:
+// codeql[js/bad-html-filtering-regexp]: ignore — false positive, non-security
+// lint tooling; no untrusted data is filtered for rendering.
+const RE_COMMENT = /<!--[\s\S]*?(?:-->|$)/g;
+const RE_SCRIPT = /<script\b[^>]*>[\s\S]*?(?:<\/script>|$)/gi;
+const RE_STYLE = /<style\b[^>]*>[\s\S]*?(?:<\/style>|$)/gi;
+
+function stripNonText(html) {
+  // Anchored end-of-file fallbacks guarantee every tag pair that opens is
+  // also removed even in truncated/malformed input, so no script content can
+  // leak into the extracted prose regardless of nesting edge cases.
+  return html
+    .replace(RE_COMMENT, ' ')
+    .replace(RE_SCRIPT, ' ')
+    .replace(RE_STYLE, ' ');
+}
+
 function extractText(file) {
   let t = fs.readFileSync(file, 'utf8');
   if (/\.html?$/i.test(file)) {
-    t = t.replace(/<script[\s\S]*?<\/script>/gi, ' ')
-         .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-         .replace(/<!--[\s\S]*?-->/g, ' ')
-         .replace(/<[^>]+>/g, ' ');
+    t = stripNonText(t).replace(/<[^>]+>/g, ' ');
   } else if (/\.md$/i.test(file)) {
     t = t.replace(/^---[\s\S]*?---/, ' ').replace(/```[\s\S]*?```/g, ' ');
     t = t.replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1');

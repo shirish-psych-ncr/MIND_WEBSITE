@@ -1,6 +1,6 @@
 {
   "tool": "wcag-contrast",
-  "checked": 113,
+  "checked": 114,
   "failures": [],
   "results": [
     {
@@ -121,7 +121,7 @@
       "passesAAA": false
     },
     {
-      "file": "src/pages/index.astro",
+      "file": "dist/index.html",
       "selector": ".hero-badge",
       "fg": "#be185d",
       "bg": "#fdf2f8",
@@ -134,7 +134,7 @@
       "passesAAA": false
     },
     {
-      "file": "src/pages/doctors.astro",
+      "file": "dist/doctors/index.html",
       "selector": ".service-tag:hover",
       "fg": "#ffffff",
       "bg": "#be185d",
@@ -147,7 +147,7 @@
       "passesAAA": false
     },
     {
-      "file": "src/pages/index.astro",
+      "file": "dist/index.html",
       "selector": ".btn-secondary",
       "fg": "#be185d",
       "bg": "#ffffff",
@@ -277,7 +277,7 @@
       "passesAAA": true
     },
     {
-      "file": "src/pages/doctors.astro",
+      "file": "dist/doctors/index.html",
       "selector": ".jump-btn:hover",
       "fg": "#a61e63",
       "bg": "#ffffff",
@@ -329,7 +329,7 @@
       "passesAAA": true
     },
     {
-      "file": "src/pages/doctors.astro",
+      "file": "dist/doctors/index.html",
       "selector": ".team-intro-banner",
       "fg": "#ffffff",
       "bg": "#9d174d",
@@ -576,7 +576,7 @@
       "passesAAA": true
     },
     {
-      "file": "src/pages/index.astro",
+      "file": "dist/index.html",
       "selector": ".site-footer",
       "fg": "#d1d5db",
       "bg": "#1f2937",
@@ -771,7 +771,7 @@
       "passesAAA": true
     },
     {
-      "file": "src/pages/fees.astro",
+      "file": "dist/fees/index.html",
       "selector": ".fee-comparison-table thead th",
       "fg": "#ffffff",
       "bg": "#671b50",
@@ -927,7 +927,7 @@
       "passesAAA": true
     },
     {
-      "file": "src/pages/doctors.astro",
+      "file": "dist/doctors/index.html",
       "selector": ".jump-btn",
       "fg": "#ffffff",
       "bg": "#610e30",
@@ -1213,7 +1213,7 @@
       "passesAAA": true
     },
     {
-      "file": "src/pages/doctors.astro",
+      "file": "dist/doctors/index.html",
       "selector": ".service-tag",
       "fg": "#2b0d19",
       "bg": "#fdf2f8",
@@ -1403,6 +1403,19 @@
       "bgRaw": "var(--eye-text)",
       "alphaComposited": false,
       "ratio": 17.965,
+      "passesAA": true,
+      "passesAALargeText": true,
+      "passesAAA": true
+    },
+    {
+      "file": "assets/css/min/translate.min.css",
+      "selector": ".mg-t-toast",
+      "fg": "#ffffff",
+      "bg": "#1b1223",
+      "fgRaw": "#fff",
+      "bgRaw": "#1b1223",
+      "alphaComposited": false,
+      "ratio": 18.144,
       "passesAA": true,
       "passesAALargeText": true,
       "passesAAA": true

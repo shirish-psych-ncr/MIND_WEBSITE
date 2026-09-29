@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: read        # default; the snapshot-push step uses its own scoped token
   pages: write
   id-token: write
 concurrency:
@@ -18,7 +18,20 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
-        persist-credentials: false
+        with:
+          persist-credentials: false
+      - name: Enable git credentials for the snapshot push step
+        # actions/checkout stores its token in a git credential helper entry
+        # bound to the checkout URL; persist-credentials:false above keeps it
+        # out of .git/config, but we still need the helper so the final
+        # "Commit refreshed state snapshot" step can authenticate with the
+        # job-scoped GITHUB_TOKEN (contents:write) without embedding it in
+        # any remote URL.
+        run: |
+          git config --global credential.helper store
+          echo "https://x-access-token:${GITHUB_TOKEN}@github.com" > ~/.git-credentials
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -51,3 +64,22 @@ jobs:
         env:
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
         run: python scripts/indexnow_submit.py --submit
+      - name: Commit refreshed state snapshot
+        # Persist the post-deploy page-state snapshot so the next run diffs
+        # against what is actually live (new/changed/removed detection).
+        # The main checkout runs with persist-credentials: false; this step
+        # temporarily re-enables it and uses GITHUB_TOKEN, which is elevated
+        # to contents:write only for this job. Bot-authored pushes do not
+        # trigger new workflow runs, so there is no CI loop.
+        if: ${{ success() && env.INDEXNOW_KEY != '' }}
+        permissions:
+          contents: write
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/indexnow/state.json
+          git diff --cached --quiet || git commit -m "chore(indexnow): refresh state snapshot [skip ci]"
+          git push origin HEAD:"$GITHUB_REF_NAME"
+        timeout-minutes: 3

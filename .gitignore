@@ -1,11 +1,8 @@
 # Dependencies
 node_modules/
 
-# Build artifacts
+# Build output
 dist/
 
-# Python cache
-__pycache__/
-*.pyc
-output/layout/.tonfotos.ini
-output/responsive-audit/.tonfotos.ini
+# Generated artifacts
+output/

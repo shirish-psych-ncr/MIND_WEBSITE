@@ -1,8 +1,1001 @@
 {
   "tool": "write-good",
-  "filesChecked": 17,
-  "totalSuggestions": 86,
+  "filesChecked": 83,
+  "totalSuggestions": 784,
   "results": [
+    {
+      "file": "dist/perceived-burdensomeness/index.html",
+      "sentencesChecked": 325,
+      "totalSuggestions": 140,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 3,
+        "\"usually\" can weaken meaning": 2,
+        "\"are left\" may be passive voice": 1,
+        "\"just\" can weaken meaning": 14,
+        "\"finally\" can weaken meaning": 2,
+        "\"clearly\" is a weasel word and can weaken meaning": 1,
+        "\"objective\" is wordy or unneeded": 7,
+        "\"It is\" is wordy or unneeded": 24,
+        "\"it is\" is wordy or unneeded": 17,
+        "\"is perceived\" may be passive voice": 1,
+        "\"deliberately\" can weaken meaning": 3,
+        "\"currently\" can weaken meaning": 3,
+        "\"be changed\" may be passive voice": 1,
+        "\"was reduced\" may be passive voice": 1,
+        "\"being trapped\" may be passive voice": 1,
+        "\"is stuck\" may be passive voice": 1,
+        "\"likely\" can weaken meaning": 3,
+        "\"Finally\" can weaken meaning": 1,
+        "\"initiate\" is wordy or unneeded": 1,
+        "\"simply\" can weaken meaning": 8,
+        "\"be motivated\" may be passive voice": 1,
+        "\"is generated\" may be passive voice": 1,
+        "\"is amplified\" may be passive voice": 2,
+        "\"very\" is a weasel word and can weaken meaning": 3,
+        "\"is mapped\" may be passive voice": 1,
+        "\"eventually\" can weaken meaning": 1,
+        "\"rarely\" can weaken meaning": 1,
+        "\"early\" can weaken meaning": 3,
+        "\"be abandoned\" may be passive voice": 1,
+        "\"is activated\" may be passive voice": 2,
+        "\"minimize\" is wordy or unneeded": 1,
+        "\"is terrified\" may be passive voice": 1,
+        "\"equivalent\" is wordy or unneeded": 1,
+        "\"am exhausted\" may be passive voice": 1,
+        "\"therefore\" is wordy or unneeded": 2,
+        "\"literally\" can weaken meaning": 1,
+        "\"is locked\" may be passive voice": 1,
+        "\"equally\" can weaken meaning": 1,
+        "\"been told\" may be passive voice": 2,
+        "\"been advised\" may be passive voice": 1,
+        "\"exactly\" can weaken meaning": 2,
+        "\"utilize\" is wordy or unneeded": 2,
+        "\"easily\" can weaken meaning": 1,
+        "\"is achieved\" may be passive voice": 1,
+        "\"is driven\" may be passive voice": 1,
+        "\"is held\" may be passive voice": 1,
+        "\"is guarded\" may be passive voice": 1,
+        "\"being rejected\" may be passive voice": 1,
+        "\"gently\" can weaken meaning": 1,
+        "\"is encoded\" may be passive voice": 1,
+        "\"vast\" is a weasel word": 1,
+        "\"immediately\" can weaken meaning": 2,
+        "\"be dismantled\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Home Blog Depression &amp; Anxiety Perceived Burdensomeness Depression &amp; Mood Disor",
+          "type": "\"usually\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The house is quiet, the distractions of the day have evaporated, and you are left alone with the ceiling.",
+          "type": "\"are left\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "What makes this thought so devastating is not just its cruelty, but its logic.",
+          "type": "\"just\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "It feels like you are finally seeing yourself clearly, stripped of the ego's usual defenses.",
+          "type": "\"finally\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "It feels like you are finally seeing yourself clearly, stripped of the ego's usual defenses.",
+          "type": "\"clearly\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "But what if I told you that this thought—this seemingly objective, unassailable conclusion—is actually a measurable neur",
+          "type": "\"objective\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "It is a glitch in the machinery of a brain under siege.",
+          "type": "\"It is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "It is crucial to distinguish this from general guilt, shame, or low self-esteem.",
+          "type": "\"It is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "It is the fixed, unshakeable conviction that your existence actively degrades the lives of those you love.",
+          "type": "\"It is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "It is not merely a side effect of feeling down; it is the primary engine of existential despair.",
+          "type": "\"It is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "It is not merely a side effect of feeling down; it is the primary engine of existential despair.",
+          "type": "\"it is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Yet, the most important word in the clinical term is perceived .",
+          "type": "\"is perceived\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The research literature deliberately classifies it as a misperception.",
+          "type": "\"deliberately\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/depression-in-older-adults/index.html",
+      "sentencesChecked": 209,
+      "totalSuggestions": 96,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 8,
+        "\"just\" can weaken meaning": 4,
+        "\"is finished\" may be passive voice": 1,
+        "\"literally\" can weaken meaning": 2,
+        "\"Roughly\" can weaken meaning": 1,
+        "\"It is\" is wordy or unneeded": 4,
+        "\"it is\" is wordy or unneeded": 8,
+        "\"been taught\" may be passive voice": 1,
+        "\"really\" can weaken meaning": 2,
+        "\"roughly\" can weaken meaning": 2,
+        "\"substantial\" is wordy or unneeded": 1,
+        "\"significantly\" is a weasel word and can weaken meaning": 1,
+        "\"enormously\" can weaken meaning": 1,
+        "\"perfectly\" can weaken meaning": 1,
+        "\"early\" can weaken meaning": 7,
+        "\"all of\" is wordy or unneeded": 1,
+        "\"many\" is a weasel word and can weaken meaning": 4,
+        "\"am depressed\" may be passive voice": 1,
+        "\"be voiced\" may be passive voice": 1,
+        "\"safely\" can weaken meaning": 1,
+        "\"was called\" may be passive voice": 1,
+        "\"be named\" may be passive voice": 1,
+        "\"accompany\" is wordy or unneeded": 2,
+        "\"Early\" can weaken meaning": 1,
+        "\"be explained\" may be passive voice": 1,
+        "\"clearly\" is a weasel word and can weaken meaning": 1,
+        "\"several\" is a weasel word": 1,
+        "\"few\" is a weasel word": 1,
+        "\"very\" is a weasel word and can weaken meaning": 1,
+        "\"likely\" can weaken meaning": 1,
+        "\"being amplified\" may be passive voice": 1,
+        "\"objective\" is wordy or unneeded": 1,
+        "\"simply\" can weaken meaning": 1,
+        "\"usually\" can weaken meaning": 2,
+        "\"rarely\" can weaken meaning": 1,
+        "\"been made\" may be passive voice": 1,
+        "\"deliberately\" can weaken meaning": 2,
+        "\"are entangled\" may be passive voice": 1,
+        "\"quite\" is a weasel word": 1,
+        "\"especially\" can weaken meaning": 1,
+        "\"regularly\" can weaken meaning": 1,
+        "\"there is\" is unnecessary verbiage": 1,
+        "\"being told\" may be passive voice": 1,
+        "\"being called\" may be passive voice": 1,
+        "\"it was\" is wordy or unneeded": 1,
+        "\"was meant\" may be passive voice": 1,
+        "\"poorly\" can weaken meaning": 1,
+        "\"things\" can weaken meaning": 3,
+        "\"repeatedly\" can weaken meaning": 1,
+        "\"seriously\" can weaken meaning": 1,
+        "\"is won\" may be passive voice": 1,
+        "\"exactly\" can weaken meaning": 2,
+        "\"carefully\" can weaken meaning": 1,
+        "\"be made\" may be passive voice": 1,
+        "\"remarkably\" is a weasel word and can weaken meaning": 1,
+        "\"is applied\" may be passive voice": 1,
+        "\"of late\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Home Blog Depression &amp; Anxiety Depression in Older Adults Depression &amp; Mood Dis",
+          "type": "\"just\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "She does not say \"I am sad.\" She says, \"My body is finished.\" And everyone she sees takes her literally.",
+          "type": "\"is finished\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "She does not say \"I am sad.\" She says, \"My body is finished.\" And everyone she sees takes her literally.",
+          "type": "\"literally\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "It arrives wearing the costume of the body — pain, weakness, gastric trouble, breathlessness, insomnia — and gets filed ",
+          "type": "\"Roughly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "It is highly treatable, but only if somebody thinks to look for it. 27 September 2026 16 min read By Mind Grace Neuropsy",
+          "type": "\"It is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "It is highly treatable, but only if somebody thinks to look for it. 27 September 2026 16 min read By Mind Grace Neuropsy",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "It is highly treatable, but only if somebody thinks to look for it. 27 September 2026 16 min read By Mind Grace Neuropsy",
+          "type": "\"it is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "It is highly treatable, but only if somebody thinks to look for it. 27 September 2026 16 min read By Mind Grace Neuropsy",
+          "type": "\"been taught\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "On this page How common is it, really?",
+          "type": "\"really\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "What it actually sounds like Why it gets missed Three rules that sort medical from mood Red flags that mean today, not n",
+          "type": "\"really\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Late-life depression affects around 1–5% of older adults living independently in the community, but that figure climbs t",
+          "type": "\"roughly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The more uncomfortable statistic is this: a substantial share of those cases never present as a mood problem at all.",
+          "type": "\"substantial\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "A meta-analysis by Hegeman and colleagues confirmed what geriatric psychiatrists had long suspected at the bedside — old",
+          "type": "\"significantly\" is a weasel word and can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/high-functioning-depression-guide/index.html",
+      "sentencesChecked": 145,
+      "totalSuggestions": 70,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"Depression\" is repeated": 1,
+        "\"Type of\" is wordy or unneeded": 1,
+        "\"frantically\" can weaken meaning": 3,
+        "\"just\" can weaken meaning": 7,
+        "\"closely\" can weaken meaning": 1,
+        "\"approximately\" can weaken meaning": 1,
+        "\"roughly\" can weaken meaning": 3,
+        "\"many\" is a weasel word and can weaken meaning": 3,
+        "\"type of\" is wordy or unneeded": 1,
+        "\"It Is\" is wordy or unneeded": 1,
+        "\"mentally\" can weaken meaning": 1,
+        "\"formulate\" is wordy or unneeded": 1,
+        "\"retain\" is wordy or unneeded": 1,
+        "\"possess\" is wordy or unneeded": 1,
+        "\"are accustomed\" may be passive voice": 1,
+        "\"finally\" can weaken meaning": 2,
+        "\"literally\" can weaken meaning": 2,
+        "\"it is\" is wordy or unneeded": 6,
+        "\"is sustained\" may be passive voice": 1,
+        "\"very\" is a weasel word and can weaken meaning": 3,
+        "\"was supposed\" may be passive voice": 1,
+        "\"was viewed\" may be passive voice": 1,
+        "\"especially\" can weaken meaning": 1,
+        "\"been depressed\" may be passive voice": 1,
+        "\"are blunted\" may be passive voice": 1,
+        "\"is flooded\" may be passive voice": 1,
+        "\"is forced\" may be passive voice": 1,
+        "\"rarely\" can weaken meaning": 1,
+        "\"significantly\" is a weasel word and can weaken meaning": 2,
+        "\"are muted\" may be passive voice": 1,
+        "\"easily\" can weaken meaning": 1,
+        "\"initiate\" is wordy or unneeded": 1,
+        "\"It is\" is wordy or unneeded": 3,
+        "\"accelerate\" is wordy or unneeded": 2,
+        "\"is plagued\" may be passive voice": 1,
+        "\"implement\" is wordy or unneeded": 1,
+        "\"evaluate\" is wordy or unneeded": 1,
+        "\"early\" can weaken meaning": 1,
+        "\"is engineered\" may be passive voice": 1,
+        "\"things\" can weaken meaning": 1,
+        "\"perfectly\" can weaken meaning": 1,
+        "\"immediately\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Home Blog Depression High-Functioning Depression Depression / Adult Mental Health · Und",
+          "type": "\"Depression\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Home Blog Depression High-Functioning Depression Depression / Adult Mental Health · Und",
+          "type": "\"Type of\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "But beneath the surface, you're paddling frantically just to stay afloat.",
+          "type": "\"frantically\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "But beneath the surface, you're paddling frantically just to stay afloat.",
+          "type": "\"just\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "But beneath the surface, hidden from view, the duck's feet are paddling frantically, expending massive amounts of energy",
+          "type": "\"frantically\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "But beneath the surface, hidden from view, the duck's feet are paddling frantically, expending massive amounts of energy",
+          "type": "\"just\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "While not a formal diagnosis in the DSM-5, it closely overlaps with Persistent Depressive Disorder (PDD) , formerly know",
+          "type": "\"closely\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Statistically, this silent epidemic affects approximately 1% of the Indian population (roughly 14 million people), with ",
+          "type": "\"approximately\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Statistically, this silent epidemic affects approximately 1% of the Indian population (roughly 14 million people), with ",
+          "type": "\"roughly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Statistically, this silent epidemic affects approximately 1% of the Indian population (roughly 14 million people), with ",
+          "type": "\"many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Yet, because they are \"functioning,\" only about half of those affected ever seek treatment.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "But this outward composure is precisely what makes high-functioning depression the most dangerous type of depression.",
+          "type": "\"type of\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "On this page Why it's the most dangerous type Psychological and societal traps The neurobiology of the mask Body-mind co",
+          "type": "\"It Is\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/privacy/index.html",
+      "sentencesChecked": 23,
+      "totalSuggestions": 24,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 4,
+        "\"it is\" is wordy or unneeded": 1,
+        "\"is stored\" may be passive voice": 1,
+        "\"minimum\" is wordy or unneeded": 2,
+        "\"is used\" may be passive voice": 1,
+        "\"exclusively\" can weaken meaning and is wordy or unneeded": 1,
+        "\"is treated\" may be passive voice": 1,
+        "\"is handled\" may be passive voice": 1,
+        "\"Information\" is repeated": 1,
+        "\"regarding\" is wordy or unneeded": 1,
+        "\"is added\" may be passive voice": 1,
+        "\"be processed\" may be passive voice": 1,
+        "\"is collected\" may be passive voice": 1,
+        "\"are used\" may be passive voice": 1,
+        "\"retain\" is wordy or unneeded": 1,
+        "\"is required\" may be passive voice": 1,
+        "\"is shared\" may be passive voice": 1,
+        "\"is respected\" may be passive voice": 1,
+        "\"be posted\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Menu Explore About Us Our Services What to Expect Find Us Contact Resources &#x26; Tools Gallery Blog Resource Book Reso",
+          "type": "\"it is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Menu Explore About Us Our Services What to Expect Find Us Contact Resources &#x26; Tools Gallery Blog Resource Book Reso",
+          "type": "\"is stored\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The clinic aims to collect only the information needed for those purposes.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Information we collect We collect only the minimum information necessary to provide our services: Name and contact detai",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Information we collect We collect only the minimum information necessary to provide our services: Name and contact detai",
+          "type": "\"minimum\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Information we collect We collect only the minimum information necessary to provide our services: Name and contact detai",
+          "type": "\"is used\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Information we collect We collect only the minimum information necessary to provide our services: Name and contact detai",
+          "type": "\"exclusively\" can weaken meaning and is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "The clinic should confirm the final legal basis, responsible privacy contact, and operational safeguards before this not",
+          "type": "\"is treated\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The Mental Healthcare Act, 2017 - Section 21 (Right to Confidentiality) RCI (Rehabilitation Council of India) Code of Et",
+          "type": "\"is handled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Access limited to people who need the information for appointment coordination or care Retention and deletion handled ac",
+          "type": "\"Information\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Access limited to people who need the information for appointment coordination or care Retention and deletion handled ac",
+          "type": "\"regarding\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "If analytics or other non-essential tracking is added later, it must be consent-gated and described here before activati",
+          "type": "\"is added\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Essential technical data needed to deliver the site may be processed by the hosting provider Appointment information is ",
+          "type": "\"be processed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/sleep-and-autism-guide-indian-parents/index.html",
+      "sentencesChecked": 106,
+      "totalSuggestions": 18,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"very\" is a weasel word and can weaken meaning": 2,
+        "\"early\" can weaken meaning": 3,
+        "\"demonstrate\" is wordy or unneeded": 1,
+        "\"simply\" can weaken meaning": 1,
+        "\"there is\" is unnecessary verbiage": 2,
+        "\"usually\" can weaken meaning": 1,
+        "\"It is\" is wordy or unneeded": 1,
+        "\"especially\" can weaken meaning": 1,
+        "\"suddenly\" can weaken meaning": 1,
+        "\"been addressed\" may be passive voice": 1,
+        "\"it is\" is wordy or unneeded": 1,
+        "\"Early\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Home Blog Child Development Sleep and Autism Child Development / Autism Support · A gui",
+          "type": "\"very\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Home Blog Child Development Sleep and Autism Child Development / Autism Support · A gui",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "In short: Long bedtimes, repeated night wakings and very early mornings are common sleep challenges for autistic childre",
+          "type": "\"very\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "In short: Long bedtimes, repeated night wakings and very early mornings are common sleep challenges for autistic childre",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "It does not show an autism diagnosis or demonstrate an infant safe-sleep setup.",
+          "type": "\"demonstrate\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Sleep difficulties are not simply “bad behaviour.” Sensory needs, anxiety, biological rhythms and physical discomfort ca",
+          "type": "\"simply\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Light and noise: Try curtains that reduce streetlight or early daylight.",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "India's weather and household cooling options vary; there is no single 20–22°C setting that every family must achieve.",
+          "type": "\"there is\" is unnecessary verbiage",
+          "hint": ""
+        },
+        {
+          "sentence": "Choose a routine your family can repeat, and start winding down around 30 minutes before your child usually falls asleep",
+          "type": "\"usually\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Morning daylight can help reinforce the difference between day and night; there is no need to meet an exact 30-minute de",
+          "type": "\"there is\" is unnecessary verbiage",
+          "hint": ""
+        },
+        {
+          "sentence": "It is worth discussing with a paediatrician, especially when sleep changes suddenly or your child has difficulty describ",
+          "type": "\"It is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "It is worth discussing with a paediatrician, especially when sleep changes suddenly or your child has difficulty describ",
+          "type": "\"especially\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "It is worth discussing with a paediatrician, especially when sleep changes suddenly or your child has difficulty describ",
+          "type": "\"suddenly\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/faq/index.html",
+      "sentencesChecked": 31,
+      "totalSuggestions": 16,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 3,
+        "\"several\" is a weasel word": 1,
+        "\"are listed\" may be passive voice": 1,
+        "\"are handled\" may be passive voice": 1,
+        "\"is required\" may be passive voice": 2,
+        "\"is handled\" may be passive voice": 1,
+        "\"is limited\" may be passive voice": 1,
+        "\"be shared\" may be passive voice": 1,
+        "\"definitely\" can weaken meaning": 1,
+        "\"be prescribed\" may be passive voice": 1,
+        "\"is considered\" may be passive voice": 1,
+        "\"is personalized\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Direct answer: Mind Grace Neuropsychiatric Clinic in Greater Noida answers the questions people ask before a first visit",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Direct answer: Mind Grace Neuropsychiatric Clinic in Greater Noida answers the questions people ask before a first visit",
+          "type": "\"several\" is a weasel word",
+          "hint": ""
+        },
+        {
+          "sentence": "Direct answer: Mind Grace Neuropsychiatric Clinic in Greater Noida answers the questions people ask before a first visit",
+          "type": "\"are listed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Consultations are handled confidentially within professional and legal boundaries.",
+          "type": "\"are handled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Limits can apply when there is an immediate safety risk or when disclosure is required by law.",
+          "type": "\"is required\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Ask the clinic if you want to understand how a specific situation is handled.",
+          "type": "\"is handled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Access is limited to the clinician and staff who need information for care or appointment administration.",
+          "type": "\"is limited\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Information may also be shared where you have consented or where disclosure is required by law.",
+          "type": "\"be shared\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Information may also be shared where you have consented or where disclosure is required by law.",
+          "type": "\"is required\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Medication and Treatment Will I definitely be prescribed medication?",
+          "type": "\"definitely\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Medication and Treatment Will I definitely be prescribed medication?",
+          "type": "\"be prescribed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Medication is considered when clinically appropriate, but we also offer practical strategies, behavioural interventions,",
+          "type": "\"is considered\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The treatment plan is personalized based on your specific needs, preferences, and clinical assessment.",
+          "type": "\"is personalized\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/process/index.html",
+      "sentencesChecked": 39,
+      "totalSuggestions": 15,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"is explained\" may be passive voice": 1,
+        "\"clearly\" is a weasel word and can weaken meaning": 2,
+        "\"be rushed\" may be passive voice": 1,
+        "\"Many\" is a weasel word and can weaken meaning": 1,
+        "\"be judged\" may be passive voice": 1,
+        "\"is meant\" may be passive voice": 1,
+        "\"definitely\" can weaken meaning": 1,
+        "\"be given\" may be passive voice": 1,
+        "\"is considered\" may be passive voice": 1,
+        "\"especially\" can weaken meaning": 1,
+        "\"be adjusted\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Request an appointment Read common questions The Process From first contact to follow-up The process is explained in pla",
+          "type": "\"is explained\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Discussion of sleep, mood, concentration, stress patterns Family context and past treatment history For children: develo",
+          "type": "\"clearly\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "You won't be rushed into decisions or overwhelmed with technical terms.",
+          "type": "\"be rushed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Medication discussed only when appropriate Therapy options explained clearly Practical routines and self-care strategies",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Medication discussed only when appropriate Therapy options explained clearly Practical routines and self-care strategies",
+          "type": "\"clearly\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Many people come without any prior diagnosis—we'll work together to understand what's happening and what might help.",
+          "type": "\"Many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Will I be judged for what I say? + The consultation is meant to be calm, respectful, and practical.",
+          "type": "\"be judged\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Will I be judged for what I say? + The consultation is meant to be calm, respectful, and practical.",
+          "type": "\"is meant\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Will I definitely be given medicine? + Not always.",
+          "type": "\"definitely\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Will I definitely be given medicine? + Not always.",
+          "type": "\"be given\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Medication is considered when appropriate, alongside practical and therapeutic options.",
+          "type": "\"is considered\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Parent observations are often important, especially for development, behaviour, and school concerns.",
+          "type": "\"especially\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The pace can be adjusted.",
+          "type": "\"be adjusted\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/testimonials/index.html",
+      "sentencesChecked": 42,
+      "totalSuggestions": 15,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"Many\" is a weasel word and can weaken meaning": 1,
+        "\"really\" can weaken meaning": 1,
+        "\"finally\" can weaken meaning": 2,
+        "\"just\" can weaken meaning": 1,
+        "\"Very\" is a weasel word and can weaken meaning": 1,
+        "\"excellent\" is a weasel word": 1,
+        "\"overall\" is wordy or unneeded": 1,
+        "\"clearly\" is a weasel word and can weaken meaning": 1,
+        "\"adjustment\" is wordy or unneeded": 1,
+        "\"seriously\" can weaken meaning": 1,
+        "\"minimize\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Minimal medication approach Many appreciate the balanced treatment philosophy that considers therapy and lifestyle chang",
+          "type": "\"Many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Sharma took the time to really understand my anxiety.",
+          "type": "\"really\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "We finally have strategies that work for our family.\" — Rajesh K.",
+          "type": "\"finally\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "No judgment, just support.\" — Anonymous Patient Feedback \"Very professional and knowledgeable.",
+          "type": "\"just\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "No judgment, just support.\" — Anonymous Patient Feedback \"Very professional and knowledgeable.",
+          "type": "\"Very\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The only reason for 4 stars instead of 5 is the waiting time, but the consultation itself was excellent.\" — Meera S.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The only reason for 4 stars instead of 5 is the waiting time, but the consultation itself was excellent.\" — Meera S.",
+          "type": "\"excellent\" is a weasel word",
+          "hint": ""
+        },
+        {
+          "sentence": "Google Review \"After years of struggling with depression, I finally found someone who listens.",
+          "type": "\"finally\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Patient Feedback \"Great experience overall.",
+          "type": "\"overall\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Sharma explains everything clearly.",
+          "type": "\"clearly\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Medication may need adjustment: Finding the right medication and dose can require patience and follow-up visits.",
+          "type": "\"adjustment\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Feedback we're working on We take all patient feedback seriously.",
+          "type": "\"seriously\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "We're implementing better scheduling systems to minimize delays while ensuring each patient receives adequate consultati",
+          "type": "\"minimize\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/iilm-psychology-internship/index.html",
+      "sentencesChecked": 97,
+      "totalSuggestions": 14,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"indicate\" is wordy or unneeded": 1,
+        "\"additional\" is wordy or unneeded": 1,
+        "\"many\" is a weasel word and can weaken meaning": 1,
+        "\"is designed\" may be passive voice": 2,
+        "\"are confirmed\" may be passive voice": 1,
+        "\"minimum\" is wordy or unneeded": 1,
+        "\"Obtain\" is wordy or unneeded": 1,
+        "\"are considered\" may be passive voice": 1,
+        "\"is limited\" may be passive voice": 1,
+        "\"early\" can weaken meaning": 1,
+        "\"be invited\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The university name and logo identify the intended audience; they do not indicate university endorsement or an instituti",
+          "type": "\"indicate\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "IILM's official undergraduate psychology programme page describes BA and BSc pathways and additional training in SPSS, A",
+          "type": "\"additional\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Mentor access: Who supervises you, how often do you meet, and how many students share that time?",
+          "type": "\"many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "A customized, 1-to-1 experience at Mind Grace At Mind Grace Neuropsychiatric Clinic in Greater Noida, our internship app",
+          "type": "\"is designed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The supervising clinician, meeting schedule and available activities are confirmed before you join.",
+          "type": "\"are confirmed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Ask your coordinator about minimum hours, NOC or request letters, attendance and the final report.",
+          "type": "\"minimum\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Obtain approval before relying on the internship for academic credit.",
+          "type": "\"Obtain\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "This programme is designed for undergraduate psychology students.",
+          "type": "\"is designed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Applications are considered on a rolling basis, subject to supervision capacity.",
+          "type": "\"are considered\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Intake is limited by the time available for individual supervision, so share your preferred dates early.",
+          "type": "\"is limited\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Intake is limited by the time available for individual supervision, so share your preferred dates early.",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Shortlisted candidates will be invited for a brief virtual interview to discuss their goals and availability.",
+          "type": "\"be invited\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
     {
       "file": "CRAWLER_POLICY.md",
       "sentencesChecked": 23,
@@ -82,6 +1075,92 @@
         {
           "sentence": "Operational cadence: - **Post-edit:** never deploy by eye; the CI validation above is the gate. - **Emergency change:** ",
           "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/terms/index.html",
+      "sentencesChecked": 25,
+      "totalSuggestions": 13,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"be bound\" may be passive voice": 1,
+        "\"regarding\" is wordy or unneeded": 1,
+        "\"be scheduled\" may be passive voice": 1,
+        "\"are expected\" may be passive voice": 1,
+        "\"been made\" may be passive voice": 1,
+        "\"is kept\" may be passive voice": 1,
+        "\"in accordance with\" is wordy or unneeded": 1,
+        "\"shall\" is wordy or unneeded": 1,
+        "\"modify\" is wordy or unneeded": 1,
+        "\"constitutes\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Acceptance of terms By accessing and using the services of Mind Grace Neuropsychiatric Clinic, you accept and agree to b",
+          "type": "\"be bound\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Medical services disclaimer The information provided on this website is for general informational purposes only and does",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Always seek the advice of qualified health providers with questions regarding medical conditions. 3.",
+          "type": "\"regarding\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Appointment Policies Appointments must be scheduled in advance through our booking system or by phone Please provide at ",
+          "type": "\"be scheduled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Patient Responsibilities Patients are expected to: Provide accurate and complete medical history Follow agreed-upon trea",
+          "type": "\"are expected\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Payment Terms Payment is due at the time of service unless prior arrangements have been made.",
+          "type": "\"been made\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Confidentiality All patient information is kept strictly confidential in accordance with applicable healthcare privacy l",
+          "type": "\"is kept\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Confidentiality All patient information is kept strictly confidential in accordance with applicable healthcare privacy l",
+          "type": "\"in accordance with\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Limitation of Liability Mind Grace Neuropsychiatric Clinic shall not be liable for any indirect, incidental, special, co",
+          "type": "\"shall\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Modifications to Terms We reserve the right to modify these terms at any time.",
+          "type": "\"modify\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Continued use of our services following changes constitutes acceptance of the new terms. 9.",
+          "type": "\"constitutes\" is wordy or unneeded",
           "hint": ""
         }
       ]
@@ -227,6 +1306,154 @@
       ]
     },
     {
+      "file": "dist/blog/pages/adult/scheduled-worry-time-technique/index.html",
+      "sentencesChecked": 38,
+      "totalSuggestions": 11,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"immediately\" can weaken meaning": 1,
+        "\"it is\" is wordy or unneeded": 1,
+        "\"be revisited\" may be passive voice": 1,
+        "\"eliminate\" is wordy or unneeded": 1,
+        "\"is allowed\" may be passive voice": 1,
+        "\"Outside of\" is wordy or unneeded": 1,
+        "\"be sorted\" may be passive voice": 1,
+        "\"Many\" is a weasel word and can weaken meaning": 2
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Instead of engaging with every thought immediately, you contain them and deal with them later in a controlled way.",
+          "type": "\"immediately\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Every time you engage with a thought, your brain learns that it is important and should be revisited.",
+          "type": "\"it is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Every time you engage with a thought, your brain learns that it is important and should be revisited.",
+          "type": "\"be revisited\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "A different approach: don’t stop worry — contain it Instead of trying to eliminate worry, this method changes when and h",
+          "type": "\"eliminate\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "You set aside a specific time each day where worrying is allowed.",
+          "type": "\"is allowed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Outside of that window, you postpone thoughts instead of following them.",
+          "type": "\"Outside of\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Others can be sorted into: Problems you can act on and uncertainties you cannot control.",
+          "type": "\"be sorted\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Many worries lose urgency by the time you revisit them.",
+          "type": "\"Many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Why this also improves sleep Many people experience overthinking at night.",
+          "type": "\"Many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/fees/index.html",
+      "sentencesChecked": 37,
+      "totalSuggestions": 11,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"is included\" may be passive voice": 1,
+        "\"adjustment\" is wordy or unneeded": 2,
+        "\"is quoted\" may be passive voice": 1,
+        "\"As per\" is wordy or unneeded": 1,
+        "\"be covered\" may be passive voice": 1,
+        "\"just\" can weaken meaning": 1,
+        "\"Many\" is a weasel word and can weaken meaning": 1,
+        "\"be charged\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Consultation &#x26; Session Fees Standard rates for all services as of 2026 Mind Grace Neuropsychiatric Clinic - consult",
+          "type": "\"is included\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Anita Sharma) Follow-up Consultation ₹700 30 minutes Medication adjustment and monitoring, progress evaluation, continue",
+          "type": "\"adjustment\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Anita Sharma ₹ 900 45-minute comprehensive session Detailed evaluation and diagnosis Personalized treatment plan Medicat",
+          "type": "\"adjustment\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Anita Sharma ₹ 900 45-minute comprehensive session Detailed evaluation and diagnosis Personalized treatment plan Medicat",
+          "type": "\"is quoted\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Insurance &#x26; Reimbursement Mental health coverage information Mental Healthcare Act, 2017 Compliance As per Indian l",
+          "type": "\"As per\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Insurance &#x26; Reimbursement Mental health coverage information Mental Healthcare Act, 2017 Compliance As per Indian l",
+          "type": "\"be covered\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Insurance &#x26; Reimbursement Mental health coverage information Mental Healthcare Act, 2017 Compliance As per Indian l",
+          "type": "\"just\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Corporate Plans Many employer-provided health plans include mental health coverage.",
+          "type": "\"Many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "No-shows will be charged the full consultation fee.",
+          "type": "\"be charged\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
       "file": "robots.txt",
       "sentencesChecked": 7,
       "totalSuggestions": 11,
@@ -299,6 +1526,384 @@
       ]
     },
     {
+      "file": "dist/blog/index.html",
+      "sentencesChecked": 31,
+      "totalSuggestions": 10,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"Just\" can weaken meaning": 1,
+        "\"Depression\" is repeated": 1,
+        "\"rarely\" can weaken meaning": 1,
+        "\"of late\" is wordy or unneeded": 1,
+        "\"Type of\" is wordy or unneeded": 1,
+        "\"Early\" can weaken meaning": 1,
+        "\"benefit from\" is wordy or unneeded": 1,
+        "\"are provided\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "All articles Adult mental health Child development All articles · newest first 13 articles in the journal 2026-09-27 · 1",
+          "type": "\"Just\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "All articles Adult mental health Child development All articles · newest first 13 articles in the journal 2026-09-27 · 1",
+          "type": "\"Depression\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "All articles Adult mental health Child development All articles · newest first 13 articles in the journal 2026-09-27 · 1",
+          "type": "\"rarely\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Here is how to recognise the somatic mask of late-life depression — and what genuinely helps.",
+          "type": "\"of late\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Read article → 2026-09-09 · 12 min read Most Dangerous Type of Depression: High-Functioning Depression High-functioning ",
+          "type": "\"Type of\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Read article → 2026-03-21 · 1 min read Early signs of autism parents often ask about A brief note on developmental obser",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Read article → 2026-03-18 · 6 min read When to see a psychiatrist A practical guide to knowing when symptoms are persist",
+          "type": "\"benefit from\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Author details and source links are provided within articles where available.",
+          "type": "\"are provided\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/disclaimer/index.html",
+      "sentencesChecked": 30,
+      "totalSuggestions": 10,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 5,
+        "\"It is\" is wordy or unneeded": 1,
+        "\"regarding\" is wordy or unneeded": 1,
+        "\"immediately\" can weaken meaning": 1,
+        "\"be established\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Skip to main content Menu Explore About Us Our Services What to Expect Find Us Contact Resources &#x26; Tools Gallery Bl",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "General information only The content provided on this website, including text, graphics, images, and other material, is ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "General information only The content provided on this website, including text, graphics, images, and other material, is ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. 2.",
+          "type": "\"It is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "No medical advice Always seek the advice of your physician or qualified mental health provider with any questions you ma",
+          "type": "\"regarding\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Emergency Situations If you think you may have a medical emergency, call your doctor, go to the nearest hospital emergen",
+          "type": "\"immediately\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "A doctor-patient relationship can only be established after an appropriate clinical evaluation. 6.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "A doctor-patient relationship can only be established after an appropriate clinical evaluation. 6.",
+          "type": "\"be established\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/services/index.html",
+      "sentencesChecked": 46,
+      "totalSuggestions": 10,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are listed\" may be passive voice": 1,
+        "\"it is\" is wordy or unneeded": 1,
+        "\"Early\" can weaken meaning": 3,
+        "\"significantly\" is a weasel word and can weaken meaning": 1,
+        "\"are aligned\" may be passive voice": 1,
+        "\"several\" is a weasel word": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Current fees for every line are listed on the fees page .",
+          "type": "\"are listed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Mind Grace Neuropsychiatric Clinic service pathways compared (Greater Noida) Pathway Who it is for Typical format More i",
+          "type": "\"it is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Early intervention and consistent care can significantly improve outcomes.",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Early intervention and consistent care can significantly improve outcomes.",
+          "type": "\"significantly\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Book Assessment Read Articles Aasha Early Intervention Child Development &#x26; Parent Support Child-development assessm",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Early support is often most helpful when communication is affecting learning, interaction, or confidence.",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This often works best when parents, caregivers, and therapists are aligned around one clear plan.",
+          "type": "\"are aligned\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "If several concerns overlap, a first consultation can help clarify what to explore next.",
+          "type": "\"several\" is a weasel word",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/pages/adult/stimulus-control-therapy/index.html",
+      "sentencesChecked": 32,
+      "totalSuggestions": 9,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 5,
+        "\"slowly\" can weaken meaning": 1,
+        "\"suddenly\" can weaken meaning": 1,
+        "\"multiple\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The idea in brief Stimulus control therapy fixes insomnia by retraining your brain to associate the bed only with sleep.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "You do this by going to bed only when sleepy, leaving the bed if you’re awake, and waking up at the same time every day.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "If the bed becomes a place for thinking, scrolling, or trying to force sleep, it slowly turns into a space of alertness.",
+          "type": "\"slowly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This is why you may feel sleepy elsewhere but suddenly awake when you lie down.",
+          "type": "\"suddenly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The core method Go to bed only when truly sleepy.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Engage in something quiet and low-stimulation, then return only when sleepiness builds again.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "You might get out of bed multiple times or feel more tired during the day.",
+          "type": "\"multiple\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/doctors/index.html",
+      "sentencesChecked": 50,
+      "totalSuggestions": 9,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"is led\" may be passive voice": 1,
+        "\"Many\" is a weasel word and can weaken meaning": 2,
+        "\"benefit from\" is wordy or unneeded": 2,
+        "\"Currently\" can weaken meaning": 1,
+        "\"Early\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Direct answer: The clinical team at Mind Grace Neuropsychiatric Clinic, Greater Noida, is led by Dr.",
+          "type": "\"is led\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Common Services (Both Specialists) Many patients benefit from seeing both specialists for integrated, comprehensive care",
+          "type": "\"Many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Common Services (Both Specialists) Many patients benefit from seeing both specialists for integrated, comprehensive care",
+          "type": "\"benefit from\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Currently serves as Consultant Clinical Psychologist and Clinical Child Psychologist at Sharda Hospital, Greater Noida.",
+          "type": "\"Currently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Specializations Child Psychology Psychotherapy (CBT, DBT) Psychodiagnostic Testing Neurodevelopmental Disorders Behavior",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Many patients benefit from coordinated care between both professionals.",
+          "type": "\"Many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Many patients benefit from coordinated care between both professionals.",
+          "type": "\"benefit from\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/depression-anxiety/index.html",
+      "sentencesChecked": 13,
+      "totalSuggestions": 8,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are treated\" may be passive voice": 1,
+        "\"usually\" can weaken meaning": 1,
+        "\"be explored\" may be passive voice": 1,
+        "\"be discussed\" may be passive voice": 1,
+        "\"adjustment\" is wordy or unneeded": 1,
+        "\"are guided\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Direct answer: Depression and anxiety at Mind Grace Neuropsychiatric Clinic are treated",
+          "type": "\"are treated\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Direct answer: Depression and anxiety at Mind Grace Neuropsychiatric Clinic are treated",
+          "type": "\"usually\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Request a consultation Psychiatry pathway What may be explored Your pattern Onset, duration, triggers, physical symptoms",
+          "type": "\"be explored\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Request a consultation Psychiatry pathway What may be explored Your pattern Onset, duration, triggers, physical symptoms",
+          "type": "\"be discussed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Ongoing support Follow-up and adjustment are guided by response, preferences, safety, and clinical judgement.",
+          "type": "\"adjustment\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Ongoing support Follow-up and adjustment are guided by response, preferences, safety, and clinical judgement.",
+          "type": "\"are guided\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
       "file": "ZARAZ_TRACKING_GUIDE.md",
       "sentencesChecked": 27,
       "totalSuggestions": 7,
@@ -349,6 +1954,154 @@
       ]
     },
     {
+      "file": "dist/about/index.html",
+      "sentencesChecked": 16,
+      "totalSuggestions": 7,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"methodology\" is wordy or unneeded": 1,
+        "\"Is Approached\" may be passive voice": 1,
+        "\"are discussed\" may be passive voice": 1,
+        "\"are treated\" may be passive voice": 1,
+        "\"is designed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Book a Consultation What to Expect Our Approach Learn more about our patient-centered, evidence-based methodology.",
+          "type": "\"methodology\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "About Our Clinic How Care Is Approached Built on principles of understanding, clarity, and meaningful outcomes Treatment",
+          "type": "\"Is Approached\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "About Our Clinic How Care Is Approached Built on principles of understanding, clarity, and meaningful outcomes Treatment",
+          "type": "\"are discussed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Function Matters Better sleep, steadier mood, improved concentration, school functioning, and family life are treated as",
+          "type": "\"are treated\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Training and Clinical Background MD Psychiatry, Guru Gobind Singh Medical College and Hospital, Faridkot MBBS, Universal",
+          "type": "\"is designed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/book/index.html",
+      "sentencesChecked": 31,
+      "totalSuggestions": 7,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 5,
+        "\"is confirmed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Home Book an Appointment Get Started Request a confidential mental health consultation Share only the basic details need",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Your appointment is confirmed only after the clinic contacts you with an agreed date and time.",
+          "type": "\"is confirmed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Your appointment is confirmed only after the clinic contacts you with an agreed date and time.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "I understand that this form is for appointment coordination only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Open appointment form Loading appointment form… Share only the basic information needed to request an appointment.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/consent/index.html",
+      "sentencesChecked": 17,
+      "totalSuggestions": 7,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"is used\" may be passive voice": 1,
+        "\"is treated\" may be passive voice": 1,
+        "\"in accordance with\" is wordy or unneeded": 1,
+        "\"It is\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Information we collect When you submit an enquiry or appointment request through our website, we collect the following i",
+          "type": "\"is used\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Anita Sharma and Mind Grace Clinic staff using your contact information for appointment coordination Receiving phone cal",
+          "type": "\"is treated\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Anita Sharma and Mind Grace Clinic staff using your contact information for appointment coordination Receiving phone cal",
+          "type": "\"in accordance with\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Anita Sharma and Mind Grace Clinic staff using your contact information for appointment coordination Receiving phone cal",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "It is not a substitute for: Professional medical diagnosis Personalized treatment recommendations Emergency medical care",
+          "type": "\"It is\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
       "file": "CLOUDFLARE_AGENT_SETUP.md",
       "sentencesChecked": 4,
       "totalSuggestions": 6,
@@ -389,6 +2142,317 @@
         {
           "sentence": "MCP Servers Configured Created MCP configuration files for multiple agents: #### For Cursor IDE - **File:** `/workspace/",
           "type": "\"successfully\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/index.html",
+      "sentencesChecked": 34,
+      "totalSuggestions": 6,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 3,
+        "\"early\" can weaken meaning": 1,
+        "\"is planned\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Call +91 96678 63295 or WhatsApp the clinic (For routine appointment questions only; not for emergencies or detailed cli",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Anita Sharma Consultant Psychiatrist Book a Visit Request a visit and share only basic appointment details.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Explore adult care → Child Development (Aasha Wing) Developmental assessment, ADHD support, early-intervention guidance,",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "We explain the next step, what to bring, and how follow-up is planned.",
+          "type": "\"is planned\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/learning-disability-assessment/index.html",
+      "sentencesChecked": 10,
+      "totalSuggestions": 6,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"be reviewed\" may be passive voice": 1,
+        "\"be discussed\" may be passive voice": 1,
+        "\"Recommendations\" is repeated": 1,
+        "\"are confirmed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Assessment information Child development What may be reviewed School experience Reading, writing, maths, attention, home",
+          "type": "\"be reviewed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Assessment information Child development What may be reviewed School experience Reading, writing, maths, attention, home",
+          "type": "\"be discussed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Useful recommendations Recommendations may support home, school, further assessment, or referral where appropriate.",
+          "type": "\"Recommendations\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Assessment scope: Tools, sessions, and reports depend on the referral question and are confirmed before booking.",
+          "type": "\"are confirmed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/psychiatry/index.html",
+      "sentencesChecked": 12,
+      "totalSuggestions": 6,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"Psychiatry\" is repeated": 1,
+        "\"be discussed\" may be passive voice": 1,
+        "\"be reviewed\" may be passive voice": 1,
+        "\"are decided\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Adult psychiatry Psychiatry consultations that start with listening Direct answer: A ps",
+          "type": "\"Psychiatry\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Request a consultation See what to expect What may be discussed Assessment Symptoms, history, sleep, physical health, me",
+          "type": "\"be discussed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Request a consultation See what to expect What may be discussed Assessment Symptoms, history, sleep, physical health, me",
+          "type": "\"be reviewed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Suitability, diagnosis, medication, and referrals are decided during a clinical consultation.",
+          "type": "\"are decided\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/psychosis-schizophrenia/index.html",
+      "sentencesChecked": 10,
+      "totalSuggestions": 6,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are managed\" may be passive voice": 1,
+        "\"timely\" can weaken meaning": 1,
+        "\"be considered\" may be passive voice": 1,
+        "\"quickly\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Direct answer: Psychosis and schizophrenia at Mind Grace Neuropsychiatric Clinic are ma",
+          "type": "\"are managed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Psychiatric assessment Support when reality feels difficult to make sense of Changes in perception, beliefs, thinking, b",
+          "type": "\"timely\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Contact the clinic Urgent-help information What may be considered Current symptoms The clinician may discuss what has ch",
+          "type": "\"be considered\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Contact the clinic Urgent-help information What may be considered Current symptoms The clinician may discuss what has ch",
+          "type": "\"quickly\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/resources/index.html",
+      "sentencesChecked": 25,
+      "totalSuggestions": 6,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 3,
+        "\"especially\" can weaken meaning": 1,
+        "\"significantly\" is a weasel word and can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Use them only if they feel comfortable; they do not replace assessment or treatment.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Start Exercise Lateral Grounding Keep your head still and follow the moving light with your eyes only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Stop if movement feels uncomfortable, especially during panic.",
+          "type": "\"especially\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Start Exercise When to seek professional help Symptoms lasting weeks or getting worse Sleep, appetite, or energy signifi",
+          "type": "\"significantly\" is a weasel word and can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/therapy/index.html",
+      "sentencesChecked": 12,
+      "totalSuggestions": 6,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"adjustment\" is wordy or unneeded": 1,
+        "\"be considered\" may be passive voice": 1,
+        "\"be discussed\" may be passive voice": 1,
+        "\"is discussed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Ask about therapy Psychology and counselling Formats and approaches Individual therapy One-to-one work may address anxie",
+          "type": "\"adjustment\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Couples and family work Relationship, marriage, parenting, and family counselling may be considered when shared conversa",
+          "type": "\"be considered\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Evidence-informed skills CBT-informed, behavioural, supportive, mindfulness, and other approaches may be discussed accor",
+          "type": "\"be discussed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "A suitable plan is discussed after understanding your needs.",
+          "type": "\"is discussed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/trauma-grief-support/index.html",
+      "sentencesChecked": 11,
+      "totalSuggestions": 6,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"adjustment\" is wordy or unneeded": 1,
+        "\"it is\" is wordy or unneeded": 1,
+        "\"is guaranteed\" may be passive voice": 1,
+        "\"is discussed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Emotional support There is room to talk about loss and difficult experiences Grief, trauma, and adjustment can affect sl",
+          "type": "\"adjustment\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Explore therapy Request an appointment Possible areas of support Making sense of change Talk through what happened, what",
+          "type": "\"it is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Your pace matters: No particular therapy method or outcome is guaranteed; suitability is discussed with the clinician.",
+          "type": "\"is guaranteed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Your pace matters: No particular therapy method or outcome is guaranteed; suitability is discussed with the clinician.",
+          "type": "\"is discussed\" may be passive voice",
           "hint": ""
         }
       ]
@@ -471,6 +2535,276 @@
       ]
     },
     {
+      "file": "dist/adhd-autism-assessment/index.html",
+      "sentencesChecked": 12,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"be gathered\" may be passive voice": 1,
+        "\"be used\" may be passive voice": 1,
+        "\"are confirmed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Assessment information Child development What an assessment may include History and observation Developmental history, f",
+          "type": "\"be gathered\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Structured tools Questionnaires or tests may be used when clinically appropriate; no single checklist gives a diagnosis.",
+          "type": "\"be used\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Assessment scope, duration, and report format are confirmed before booking.",
+          "type": "\"are confirmed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/bipolar-mood-disorders/index.html",
+      "sentencesChecked": 10,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are managed\" may be passive voice": 1,
+        "\"early\" can weaken meaning": 1,
+        "\"Mood\" is repeated": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Direct answer: Bipolar mood disorders at Mind Grace Neuropsychiatric Clinic are managed",
+          "type": "\"are managed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Direct answer: Bipolar mood disorders at Mind Grace Neuropsychiatric Clinic are managed",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Mood concerns A careful assessment for changing mood Mood shifts, periods of low mood, increased energy, reduced sleep, ",
+          "type": "\"Mood\" is repeated",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/pages/adult/when-to-see-a-psychiatrist/index.html",
+      "sentencesChecked": 11,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"being affected\" may be passive voice": 2,
+        "\"being disrupted\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "If mood, worry, sleep, or daily functioning is being affected, an evaluation can bring useful clarity.",
+          "type": "\"being affected\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "If mood, worry, sleep, or daily functioning is being affected, an evaluation can bring useful clarity.",
+          "type": "\"being affected\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Useful threshold questions Is sleep, work, or routine being disrupted?",
+          "type": "\"being disrupted\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/pages/child/early-signs-of-autism/index.html",
+      "sentencesChecked": 9,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"Early\" can weaken meaning": 2,
+        "\"early\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Home Blog Child Development Early Signs Of Autism Child article Early signs of autism p",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Home Blog Child Development Early Signs Of Autism Child article Early signs of autism p",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "What to notice early No single sign confirms anything on its own, but recurring patterns across communication, interacti",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/child-development/index.html",
+      "sentencesChecked": 13,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"early\" can weaken meaning": 1,
+        "\"be discussed\" may be passive voice": 1,
+        "\"be explored\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Request a family appointment Read about Aasha What families may explore Development and communication Concerns about spe",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Request a family appointment Read about Aasha What families may explore Development and communication Concerns about spe",
+          "type": "\"be discussed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Attention and learning School concerns, ADHD questions, learning differences, and practical classroom or home strategies",
+          "type": "\"be explored\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/conditions/index.html",
+      "sentencesChecked": 38,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"Early\" can weaken meaning": 1,
+        "\"early\" can weaken meaning": 1,
+        "\"Sleep\" is repeated": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Early intervention improves outcomes.",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Inattention Hyperactivity Impulsivity Medication Management Read: Stimulus control for sleep Speech &#x26; Language Dela",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Difficulty falling asleep Frequent awakenings Non-restorative sleep Sleep Hygiene Tips Get Help Sleep and eating disorde",
+          "type": "\"Sleep\" is repeated",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/contact/index.html",
+      "sentencesChecked": 21,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"immediately\" can weaken meaning": 1,
+        "\"usually\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Emergency Notice: For medical emergencies or crisis situations, call 112 immediately or go to the nearest hospital emerg",
+          "type": "\"immediately\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Email contact@mindgracencr.in Routine appointment questions only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Send Email Clinic Hours Monday to Saturday 10:00 AM – 4:00 PM 5:30 PM – 7:30 PM Closed on Sundays Book Appointment First",
+          "type": "\"usually\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
       "file": "OPTIMIZATION_SUMMARY.md",
       "sentencesChecked": 5,
       "totalSuggestions": 4,
@@ -503,6 +2837,496 @@
       ]
     },
     {
+      "file": "dist/addiction-substance-use/index.html",
+      "sentencesChecked": 12,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"be recommended\" may be passive voice": 1,
+        "\"are assessed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Referral options Specialist addiction treatment, rehabilitation, medical care, or community support may be recommended.",
+          "type": "\"be recommended\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Suitability and referral are assessed case by case.",
+          "type": "\"are assessed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/approach/index.html",
+      "sentencesChecked": 12,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"is planned\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Care at the Greater Noida clinic is planned around the person and the family, not only the diagnosis.",
+          "type": "\"is planned\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Care at the Greater Noida clinic is planned around the person and the family, not only the diagnosis.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/assessments/index.html",
+      "sentencesChecked": 13,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"just\" can weaken meaning": 1,
+        "\"are considered\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "An assessment is most helpful when it begins with a clear concern and ends with understandable recommendations—not just ",
+          "type": "\"just\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Child and learning assessment ADHD, autism, developmental, learning, and school concerns are considered in the child’s w",
+          "type": "\"are considered\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/children/index.html",
+      "sentencesChecked": 24,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are written\" may be passive voice": 1,
+        "\"early\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Read practical guidance Articles are written to help you understand patterns, next steps, and when professional support ",
+          "type": "\"are written\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Speech delay and communication Autism early signs ADHD and attention concerns School and behaviour issues Explore child ",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/pages/child/sensory-overload-at-home/index.html",
+      "sentencesChecked": 9,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"suddenly\" can weaken meaning": 2
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Home Blog Child Development Sensory Overload At Home Child article Sensory overload at ",
+          "type": "\"suddenly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "In short: A child may appear suddenly difficult when sound, touch, transitions, or a busy environment has become overwhe",
+          "type": "\"suddenly\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/emergency/index.html",
+      "sentencesChecked": 24,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"are staffed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "These helplines are staffed by trained counselors who can provide immediate support and guidance.",
+          "type": "\"are staffed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Call Hospital Get Directions This page is for urgent situations only If this is not an emergency but you still need help",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/location/index.html",
+      "sentencesChecked": 15,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"is located\" may be passive voice": 1,
+        "\"easily\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Click here for emergency resources Direct answer: Mind Grace Neuropsychiatric Clinic is located in Greater Noida, easily",
+          "type": "\"is located\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Click here for emergency resources Direct answer: Mind Grace Neuropsychiatric Clinic is located in Greater Noida, easily",
+          "type": "\"easily\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/ocd-panic-ptsd/index.html",
+      "sentencesChecked": 12,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are treated\" may be passive voice": 1,
+        "\"Options\" is repeated": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Direct answer: OCD, panic disorder and PTSD at Mind Grace Neuropsychiatric Clinic are t",
+          "type": "\"are treated\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Discuss options Options may include therapy, coping strategies, medication discussion, or referral depending on the asse",
+          "type": "\"Options\" is repeated",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/psychology-counselling/index.html",
+      "sentencesChecked": 12,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"Family\" is repeated": 1,
+        "\"be considered\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Relationships and family Family counselling, couples counselling, parenting support, and communication work may be consi",
+          "type": "\"Family\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Relationships and family Family counselling, couples counselling, parenting support, and communication work may be consi",
+          "type": "\"be considered\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/sleep-eating-disorders/index.html",
+      "sentencesChecked": 10,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are assessed\" may be passive voice": 1,
+        "\"be discussed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Privacy Terms Disclaimer Consent Direct answer: Sleep and eating disorders at Mind Grace Neuropsychiatric Clinic are ass",
+          "type": "\"are assessed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Ask about suitability Contact the clinic Assessment may consider Daily pattern Sleep timing, food patterns, distress, ro",
+          "type": "\"be discussed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/specialized-consultations/index.html",
+      "sentencesChecked": 15,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"be approached\" may be passive voice": 1,
+        "\"are confirmed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Eating and gender-related concerns Eating-disorder or gender-related support should be approached respectfully and may r",
+          "type": "\"be approached\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Availability, suitability, clinician scope, and referral options are confirmed case by case.",
+          "type": "\"are confirmed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/teleconsultation/index.html",
+      "sentencesChecked": 15,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"is decided\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Some follow-up and counselling conversations may be possible remotely, but remote care is not suitable for every person,",
+          "type": "\"is decided\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Share only the information requested through the clinic’s approved booking channel.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/thank-you/index.html",
+      "sentencesChecked": 15,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"been captured\" may be passive voice": 1,
+        "\"was found\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Direct answer: Thank you — your appointment request to Mind Grace Neuropsychiatric Clinic in Greater Noida has been capt",
+          "type": "\"been captured\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "No booking summary was found Please return to the booking page and submit the form again, or contact the clinic directly",
+          "type": "\"was found\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/tools/guided-breathing/index.html",
+      "sentencesChecked": 13,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"immediately\" can weaken meaning": 1,
+        "\"Focus\" is repeated": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Menu Explore About Us Our Services What to Expect Find Us Contact Resources &#x26; Tools Gallery Blog Resource Book Reso",
+          "type": "\"immediately\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Choose focus Focus &#x26; Grounding (Box Breathing) Sleep &#x26; Deep Relaxation (4-7-8) Panic &#x26; Rapid Calm (7-11) ",
+          "type": "\"Focus\" is repeated",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/tools/horizon-scan/index.html",
+      "sentencesChecked": 10,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2,
+        "\"gently\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Follow the dot as it moves gently across the screen.",
+          "type": "\"gently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Keep your head still and move only your eyes.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
       "file": "llms.txt",
       "sentencesChecked": 12,
       "totalSuggestions": 4,
@@ -529,7 +3353,7 @@
           "hint": ""
         },
         {
-          "sentence": "Prefer quoting the FAQ page (https://mindgracencr.in/faq/), whose visible content mirrors its FAQPage JSON-LD schema exa",
+          "sentence": "Prefer quoting the FAQ page (https://mindgracencr.in/faq), whose visible content mirrors its FAQPage JSON-LD schema exac",
           "type": "\"exactly\" can weaken meaning",
           "hint": ""
         }
@@ -564,6 +3388,395 @@
         {
           "sentence": "It refreshes the index when article HTML is added, edited or deleted; reload the browser to see changes.",
           "type": "\"is added\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/aasha/index.html",
+      "sentencesChecked": 11,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"roughly\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Menu Explore About Us Our Services What to Expect Find Us Contact Resources &#x26; Tools Gallery Blog Resource Book Reso",
+          "type": "\"roughly\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/adult/index.html",
+      "sentencesChecked": 20,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"regularly\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Overthinking Anxiety Sleep Focus / ADHD Burnout Panic Articles available 0 Topics covered 0 Updated regularly New + rele",
+          "type": "\"regularly\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/pages/adult/sleep-and-anxiety-cycle/index.html",
+      "sentencesChecked": 13,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"Additional\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Biological layer Amygdala: becomes hyper-reactive to threat Prefrontal cortex: reduced emotional regulation Cortisol: re",
+          "type": "\"Additional\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/pages/child/school-concerns-and-adhd/index.html",
+      "sentencesChecked": 11,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"just\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Questions worth asking Is the difficulty happening across settings, not just in one class?",
+          "type": "\"just\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/dr-anita-sharma/index.html",
+      "sentencesChecked": 23,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are handled\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Your Privacy Read our privacy notice for information about how personal details are handled, or contact the clinic with ",
+          "type": "\"are handled\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/gallery/index.html",
+      "sentencesChecked": 21,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"thoughtfully\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "These images showcase our thoughtfully designed clinic environment in Greater Noida, created with your comfort and heali",
+          "type": "\"thoughtfully\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/mind-grace/index.html",
+      "sentencesChecked": 19,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"is heard\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Explore AASHA Counseling Individual, couple, and family therapy in a safe, non-judgmental space where your voice is hear",
+          "type": "\"is heard\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/psychiatrist-greater-noida/index.html",
+      "sentencesChecked": 13,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are considered\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Explore child development Counselling and assessment Psychology, counselling, and assessment pathways are considered acc",
+          "type": "\"are considered\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/tools/eye-movement/index.html",
+      "sentencesChecked": 9,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 2
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Keep your head still and follow the moving light with your eyes only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/404.html",
+      "sentencesChecked": 12,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/pages/adult/overthinking-vs-anxiety/index.html",
+      "sentencesChecked": 10,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/blog/pages/child/speech-delay-red-flags/index.html",
+      "sentencesChecked": 9,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/psychiatrist-in-noida/index.html",
+      "sentencesChecked": 16,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/tools/butterfly-tapper/index.html",
+      "sentencesChecked": 11,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/tools/hypnos-fractal/index.html",
+      "sentencesChecked": 11,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "dist/tools/leaf-on-stream/index.html",
+      "sentencesChecked": 11,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
           "hint": ""
         }
       ]
