@@ -26,6 +26,29 @@ async function handleRequest(request) {
     return new Response('Forbidden', { status: 403, headers: { 'Content-Type': 'text/plain' } })
   }
 
+  // GitHub Pages ignores _redirects. Canonicalize legacy page requests at
+  // the Cloudflare edge before fetching the GitHub origin; preserve queries.
+  const canonical = new URL(request.url)
+  if (['mindgracencr.in', 'www.mindgracencr.in'].includes(canonical.hostname)) {
+    canonical.protocol = 'https:'
+    canonical.hostname = 'mindgracencr.in'
+    if (!canonical.pathname.startsWith('/assets/') && !canonical.pathname.startsWith('/vendor/')) {
+      canonical.pathname = canonical.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/+$/, '') || '/'
+      const aliases = {
+        '/high-functioning-depression': '/high-functioning-depression-guide',
+        '/psychiatrist-in-greater-noida': '/psychiatrist-greater-noida',
+        '/psychiatrist-noida': '/psychiatrist-in-noida',
+        '/mental-health-clinic-greater-noida': '/psychiatrist-greater-noida',
+        '/mental-health-clinic-noida': '/psychiatrist-in-noida',
+        '/counselling': '/psychology-counselling', '/psychotherapy': '/therapy',
+        '/child-psychiatry': '/child-development', '/mental-health-assessment': '/assessments',
+        '/blog/iilm-psychology-internship-greater-noida': '/blog/iilm-psychology-internship'
+      }
+      canonical.pathname = aliases[canonical.pathname] || canonical.pathname
+    }
+    if (canonical.href !== request.url) return Response.redirect(canonical.href, 301)
+  }
+
   const response = await fetch(request)
   
   // Clone the response so we can modify headers
@@ -75,7 +98,7 @@ async function handleRequest(request) {
   // Add cache control for static assets
   const url = new URL(request.url)
   if (url.pathname.startsWith('/assets/')) {
-    newResponse.headers.set('Cache-Control', 'public, max-age=31536000, immutable')
+    newResponse.headers.set('Cache-Control', 'public, max-age=86400')
   } else if (url.pathname.endsWith('.html')) {
     newResponse.headers.set('Cache-Control', 'public, max-age=3600')
   }

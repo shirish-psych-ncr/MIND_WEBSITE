@@ -55,6 +55,15 @@ class ArticleDiscoveryTests(unittest.TestCase):
         self.assertEqual(index.build(self.root), 1)
         self.assertNotIn('New arrival', (self.root / 'blog/index.html').read_text())
 
+    def test_astro_file_output_and_isolated_sitemap(self):
+        source_sitemap = (index.ROOT / 'sitemap.xml').read_bytes()
+        self.put('new-guide.html', self.post(extra='<link rel="canonical" href="https://mindgracencr.in/new-guide">'))
+        self.put('blog.html', index.START + index.END + '<script id="generated-article-schema" type="application/ld+json">{}</script>')
+        self.put('sitemap.xml', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>')
+        self.assertEqual(index.build(self.root), 1)
+        self.assertIn('href="/new-guide"', (self.root / 'blog.html').read_text(encoding='utf-8'))
+        self.assertEqual((index.ROOT / 'sitemap.xml').read_bytes(), source_sitemap)
+
 
 if __name__ == '__main__':
     unittest.main()

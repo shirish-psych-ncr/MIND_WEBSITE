@@ -107,7 +107,8 @@ def page_source_for_sitemap(cand):
     back to its Astro source under src/pages/."""
     if cand == "index.html":
         return os.path.join(SITE_ROOT, "index.astro")
-    stem = cand[:-len("/index.html")] if cand.endswith("/index.html") else cand
+    cand = cand.replace(os.sep, "/")
+    stem = cand[:-len("/index.html")] if cand.endswith("/index.html") else cand.removesuffix(".html")
     for c in (os.path.join(SITE_ROOT, stem + ".astro"),
               os.path.join(SITE_ROOT, stem, "index.astro"),
               os.path.join(SITE_ROOT, stem, "index.html"),
@@ -813,12 +814,12 @@ class TestSiteWideAeo(unittest.TestCase):
             rel = loc[len(base):] if loc.startswith(base) else loc
             # site root URL ("") maps to index.html
             cand = "index.html" if not rel.strip("/") else (
-                rel if rel.endswith(".html") else os.path.join(rel, "index.html"))
+                rel if rel.endswith(".html") else rel.rstrip("/") + ".html")
             built = os.path.join(BUILD_ROOT, cand.replace("/", os.sep))
             src = page_source_for_sitemap(cand)
             path = built if os.path.exists(built) else src
             self.assertTrue(os.path.exists(path), f"sitemap loc has no file: {loc}")
-            html = open(path, encoding="utf-8").read()
+            html = read_bytes(path).decode("utf-8")
             m = re.search(r'<meta name="robots" content="([^"]+)"', html)
             self.assertNotIn("noindex", (m.group(1) if m else "").lower(),
                              f"noindex page listed in sitemap: {loc}")
@@ -835,8 +836,12 @@ class TestSiteWideAeo(unittest.TestCase):
                 continue
             url = base + ("" if rel in ("index.html", "index.astro")
                           else rel[:-len("index.html")] if rel.endswith("/index.html")
-                          else rel[:-len(".astro")] + "/" if rel.endswith(".astro")
-                          else rel)
+                          else rel[:-len(".astro")] if rel.endswith(".astro")
+                          else rel.removesuffix(".html"))
+            canonical = re.search(r'<link[^>]*rel="canonical"[^>]*href="([^"]+)"', html)
+            if canonical:
+                from urllib.parse import urljoin
+                url = urljoin(base, canonical.group(1))
             self.assertIn(url, locs, f"indexable page missing from sitemap: {rel}")
 
 

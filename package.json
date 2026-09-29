@@ -12,7 +12,13 @@
     "audit:lighthouse": "node scripts/audit_lighthouse.cjs",
     "clean": "rm -rf output/responsive-audit output/layout output/playwright tests/__pycache__ scripts/__pycache__",
     "build:min:css": "node scripts/rebuild_min_css.cjs",
-    "build:min:js": "node scripts/rebuild_min_js.cjs"
+    "build:min:js": "node scripts/rebuild_min_js.cjs",
+    "dev": "astro dev",
+    "build": "astro build && python scripts/build_blog_index.py && node scripts/validate-build.mjs",
+    "preview": "astro preview",
+    "validate": "node scripts/validate-build.mjs",
+    "deploy:cloudflare": "npm run build && wrangler deploy --config wrangler.site.toml",
+    "prebuild": "npm run build:min"
   },
   "dependencies": {
     "alex": "^11.0.1",
@@ -35,6 +41,6 @@
     "wrangler": "4.143.0"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.19.0"
   }
 }

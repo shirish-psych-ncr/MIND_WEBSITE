@@ -103,7 +103,7 @@
   # 1-year immutable caching. Saves massive crawl budget and server load.
   # CRITICAL: Ensure your build process appends hashes to filenames 
   # (e.g., style.a1b2c3.css) so updates are fetched immediately despite the long cache time.
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400
   # Only use '*' if these assets are intentionally served to other domains (e.g., as a CDN). 
   # Otherwise, restrict to your own domain for better security.
   Access-Control-Allow-Origin: *

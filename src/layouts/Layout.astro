@@ -1,96 +1,32 @@
 ---
-/**
- * Mind Grace document shell.
- *
- * Renders <head> (shared assets via Head.astro + page-specific extras passed
- * verbatim through `headExtra`), the pre-rendered site chrome via Shell.astro,
- * and the page's own body content/scripts through raw slots. This is the
- * Astro-era replacement for what scripts/normalize_site_shell.py did to static
- * files: one source of truth for the shell, per-page payload untouched.
- */
 import Head from '../components/Head.astro';
 import Shell from '../components/Shell.astro';
-
 interface Props {
-  /** Raw inner HTML of the page's original <head> (minus shared shell assets). */
   headExtra?: string;
-  /** Raw markup that belonged between <body ...> and the shared header. */
   bodyStart?: string;
-  /** Raw markup that followed the shared footer (page scripts etc.). */
   bodyEnd?: string;
-  /** <body class="..."> value. */
   bodyClass?: string;
-  /** Extra raw attributes for the <body> tag (e.g. onload handlers). */
   bodyAttrs?: string;
 }
-
-const {
-  headExtra = '',
-  bodyStart = '',
-  bodyEnd = '',
-  bodyClass = '',
-  bodyAttrs = '',
-} = Astro.props;
-
-// Merge passthrough body attributes onto the <body> element.
+const { headExtra = '', bodyStart = '', bodyEnd = '', bodyClass = '', bodyAttrs = '' } = Astro.props;
+// Astro escapes script closers inside String.raw source payloads. Decode only
+// those closers before inserting this trusted, repository-owned markup.
+const rawMarkup = (value: string) => value.replaceAll('<' + String.fromCharCode(92) + '/script>', '</script>');
 const extraAttrs: Record<string, string> = {};
 for (const m of bodyAttrs.matchAll(/([\w-]+)="([^"]*)"/g)) extraAttrs[m[1]] = m[2];
-
-/* Raw passthrough payloads. Astro escapes template text and ignores set:html
-   on <Fragment>, so verbatim HTML strings must be injected through real
-   elements. Head payloads are unwrapped into plain head markup at build time
-   (crawlers read the raw HTML — meta/title/canonical/JSON-LD must not sit in a
-   <template>). Body payloads mount via invisible comment sentinels that the
-   parser sees as top-level nodes; a tiny inline script swaps each sentinel for
-   its content before first paint. */
-function unwrapHead(html: string): string {
-  // Pages hand us their original <head> inner HTML wrapped in one div; strip
-  // the wrapper only when it is the sole root element, then hoist any nested
-  // <script>/<noscript> blocks to the top level so they stay crawlable even if
-  // the parser's tree construction relocates them.
-  const roots = html.trim().match(/^<div[^>]*>([\s\S]*)<\/div>$/);
-  let out = roots ? roots[1] : html;
-  const hoisted: string[] = [];
-  out = out.replace(/[ \t]*(<(?:script|noscript)\b[\s\S]*?<\/(?:script|noscript)>)[ \t]*\n?/gi,
-    (_m, block) => { hoisted.push(block); return ''; });
-  return hoisted.join('\n') + out;
-}
+// The shared shell owns the banner; discard the duplicate from legacy payloads.
+const startMarkup = bodyStart.replace(/<aside\b[^>]*class="[^"]*emergency-banner[^"]*"[\s\S]*?<\/aside>/gi, '');
 ---
 <!DOCTYPE html>
 <html lang="en-IN" dir="ltr">
 <head>
+<meta charset="UTF-8">
+{headExtra && <Fragment set:html={rawMarkup(headExtra)} />}
 <Head />
-{headExtra && <Fragment set:html={unwrapHead(headExtra)} />}
 </head>
 <body class={bodyClass} data-chrome-normalized="true" {...extraAttrs}>
-{/* Body payloads are STATIC first-party markup baked into the page at build
-    time from this repository's own source files (Layout props bodyStart /
-    bodyEnd) — never user, request, or network input. They sit inside inert
-    <script type="text/plain"> islands (opaque to the HTML parser) and are
-    mounted verbatim at an invisible comment sentinel before first paint.
-    Because the taint source is a build-time constant, CodeQL's
-    "DOM text reinterpreted as HTML" rule must not treat the template.innerHTML
-    assignment below as a data-driven sink. */}
-{bodyStart && <Fragment set:html={'<!--mg-body-start-->'} />}
-<Shell />
-<slot />
-{bodyEnd && <Fragment set:html={'<!--mg-body-end-->'} />}
-<script id="mg-body-start-data" type="text/plain">{bodyStart}</script>
-<script id="mg-body-end-data" type="text/plain">{bodyEnd}</script>
-<script is:inline>
-// codeql[js/html-injection]: false positive — payload below is a static
-// build-time string inlined from this repo (see <script type="text/plain">
-// islands above); no external input ever reaches innerHTML.
-(function(){
-  function mount(sentinel, id){
-    var c=document.createNodeIterator(document.body,8,function(n){return n.data===sentinel?1:2}).nextNode();
-    var d=document.getElementById(id); if(!c||!d) return;
-    var t=document.createElement('template'); t.innerHTML=d.textContent;
-    c.parentNode.replaceChild(t.content,c); d.remove();
-  }
-  mount('mg-body-start','mg-body-start-data');
-  mount('mg-body-end','mg-body-end-data');
-})();
-</script>
+{startMarkup && <Fragment set:html={rawMarkup(startMarkup)} />}
+<Shell><slot /></Shell>
+{bodyEnd && <Fragment set:html={rawMarkup(bodyEnd)} />}
 </body>
 </html>

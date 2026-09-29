@@ -58,7 +58,7 @@
     const aside = document.createElement("aside");
     aside.className = "article-related tool-related-reading surface panel";
     aside.setAttribute("aria-labelledby", "tool-related-reading-title");
-    aside.innerHTML = `<p class="eyebrow">Continue at your pace</p><h2 id="tool-related-reading-title">Guides that may help next</h2><div class="article-related-grid">${links.map(([label, href]) => `<a class="article-related-link" href="${href}"><span>${label}</span>${icon("arrow-right")}</a>`).join("")}</div><p class="tool-related-reading__footer"><a href="/blog">Browse all mental health guides</a> <span aria-hidden="true">·</span> <a href="/resources/#tools">See all self-help tools</a></p>`;
+    aside.innerHTML = `<p class="eyebrow">Continue at your pace</p><h2 id="tool-related-reading-title">Guides that may help next</h2><div class="article-related-grid">${links.map(([label, href]) => `<a class="article-related-link" href="${href}"><span>${label}</span>${icon("arrow-right")}</a>`).join("")}</div><p class="tool-related-reading__footer"><a href="/blog">Browse all mental health guides</a> <span aria-hidden="true">·</span> <a href="/resources#tools">See all self-help tools</a></p>`;
     main.appendChild(aside);
   }
 

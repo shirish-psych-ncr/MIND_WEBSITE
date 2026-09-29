@@ -3,6 +3,20 @@
 Static site for the Mind Grace psychiatric & psychology clinic (Delhi NCR).
 Plain HTML/CSS/JS shipped from `src/pages/` (Astro-format `.astro` shells), plus interactive tools under `/tools/`, a blog under `/blog/`, and Cloudflare edge code (`worker.js`, `sw.js`).
 
+## Astro build and deployment
+
+Use Node 22.22 (`.nvmrc`) and Python 3.12. Run `npm ci`, then `npm run build`.
+The build regenerates minified assets, renders 66 routes, copies the explicit
+public-asset allowlist, generates the article index, and validates local links.
+Only `dist/` is deployable. `npm run dev` starts Astro for editing; `npm run preview`
+serves a production build. Public page URLs omit trailing slashes and `.html`.
+
+GitHub Pages must use **GitHub Actions**, not the legacy branch/Jekyll source.
+The workflow publishes `dist/`. Cloudflare's existing security proxy is separate:
+`wrangler.toml` deploys `worker.js`; `wrangler.site.toml` is an optional static-site
+deployment and must not compete for the same production domain.
+See [ASTRO_REPAIR_NOTES.md](ASTRO_REPAIR_NOTES.md) for verification and routing details.
+
 ## Repository layout
 
 | Path | Purpose |

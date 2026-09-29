@@ -12,12 +12,15 @@ interface Props {
   version?: string;
 }
 
-const { version = 'responsive18' } = Astro.props;
+const { version = 'astro-repair1' } = Astro.props;
 
 const themeInit = `try{const t=localStorage.getItem('mindgrace-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}`;
 ---
-<meta charset="UTF-8">
+
 <meta name="color-scheme" content="light dark">
-<script data-theme-is:inline={themeInit}></script>
-<script src={`/assets/js/min/visitor-friendly.min.js?v=${version}`} defer></script>
+<script is:inline set:html={themeInit}></script>
+<script is:inline src={`/assets/js/min/visitor-friendly.min.js?v=${version}`} defer></script>
 <link rel="stylesheet" href={`/assets/css/min/site-foundation.min.css?v=${version}`} data-mindgrace-final-foundation>
+
+<link rel="stylesheet" href="/assets/css/min/translate.min.css?v=astro-repair1">
+<script is:inline src="/assets/js/min/translate.min.js?v=astro-repair1" defer></script>

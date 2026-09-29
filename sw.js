@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-v13'; // v13: canonical no-trailing-slash URLs + deduped precache list
+const CACHE_NAME = 'mindgrace-astro-v14'; // Astro migration: evict stale pages and bundles
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately
@@ -44,10 +44,7 @@ const ANALYTICS_ASSETS = [
   '/assets/vendor/min/amplitude-2.47.0.min.js'
 ];
 
-// Google Translate widget UI (site-wide header language picker). The
-// controls themselves are cached same-origin; the actual translation
-// engine (translate.google.com element.js + translated page fetches) is
-// always network-only and degrades gracefully when offline.
+// Translation controls are local; following a Google Translate link requires a network.
 const TRANSLATE_ASSETS = [
   '/assets/css/min/translate.min.css',
   '/assets/js/min/translate.min.js',
@@ -96,9 +93,8 @@ self.addEventListener('activate', (event) => {
             return caches.delete(name);
           })
       );
-    })
+    }).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
 /**
@@ -119,7 +115,9 @@ self.addEventListener('fetch', (event) => {
   // Build a normalized request so '/page' and '/page' share one cache entry.
   const normUrl = new URL(request.url);
   normUrl.pathname = normPath;
-  const normalizedRequest = new Request(normUrl.href, request);
+  // A navigation Request has mode=navigate, which cannot be passed as
+  // RequestInit. The normalized request is only a GET cache key.
+  const normalizedRequest = new Request(normUrl.href);
 
   // Only handle same-origin requests
   if (url.origin !== location.origin) {

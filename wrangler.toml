@@ -1,23 +1,11 @@
-# Cloudflare Workers & Pages configuration
-# This file configures both the security worker and site deployment
-
+# Security proxy for the existing Cloudflare zone. The site itself is built
+# by GitHub Actions and published to GitHub Pages from dist/.
 name = "mind-grace-security-worker"
 main = "worker.js"
 compatibility_date = "2026-09-29"
 compatibility_flags = ["nodejs_compat"]
-
-# Environment variables (if needed)
 workers_dev = true
-
 [vars]
 ENVIRONMENT = "production"
-
-# NOTE: Do NOT define [[routes]] here.
-# The apex domain mindgracencr.in is served by Cloudflare Pages (see
-# .github/workflows/publish-site.yml, which deploys dist/ via
-# actions/deploy-pages). Attaching a Worker route to the same zone/path
-# conflicts with the Pages custom domain and causes wrangler deploy /
-# Cloudflare Builds to fail with "route already in use" errors.
-# If this security worker must intercept traffic, attach it in the
-# dashboard as a *custom domain* (e.g. worker.mindgracencr.in) or run it
-# on workers.dev only (workers_dev = true above).
+# Existing dashboard routes remain managed there; do not recreate them here.
+# For a separate Workers Static Assets deployment use wrangler.site.toml.

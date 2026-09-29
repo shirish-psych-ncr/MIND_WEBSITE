@@ -14,6 +14,19 @@
   font-family: inherit;
 }
 
+/* Real translation links retain readable colors despite legacy link rules. */
+body .mg-translate a.mg-t-hindi { color: #fff !important; background: #86113e; border-color: #86113e; text-decoration: none; }
+body .mg-translate a.mg-t-hindi:hover { background: #650a2c; }
+body .mg-translate .mg-t-btn { min-height: 44px; }
+body .mg-translate .mg-t-panel[hidden] { display: none !important; }
+body .mg-translate .mg-t-panel { right: 0; width: min(320px, calc(100vw - 2rem)); max-height: min(65vh, 32rem); overflow-y: auto; background: #fff; color: #28171d; }
+body .mg-translate .mg-t-panel-title { color: #4f3b44; line-height: 1.5; white-space: normal; }
+body .mg-translate a.mg-t-lang { display: block; color: #721038 !important; text-decoration: none; min-height: 44px; line-height: 1.5; }
+body .mg-translate a.mg-t-lang:hover, body .mg-translate a.mg-t-lang:focus-visible { background: #fff1f4; color: #28171d !important; }
+@media (max-width: 640px) {
+  body .mg-translate .mg-t-panel { position: fixed; top: auto; left: 1rem; right: 1rem; margin-top: .5rem; }
+}
+
 /* Shared button look (matches site buttons, but conservative defaults so it
    works inside every header variant). */
 .mg-t-btn {

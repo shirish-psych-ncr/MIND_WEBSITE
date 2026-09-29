@@ -1,7 +1,7 @@
 (() => {
   const manifestUrl = "/blog/pages/adult/manifest.json";
   const sourceDir = "/blog/pages/adult";
-  const resolve = (file) => file.startsWith("/") ? file : `${sourceDir}${file}`;
+  const resolve = (file) => file.startsWith("/") ? file : `${sourceDir}/${file}`;
   fetch(manifestUrl, { cache: "no-store" })
     .then((response) => { if (!response.ok) throw new Error(`Adult blog manifest: ${response.status}`); return response.json(); })
     .then((manifest) => {

@@ -76,7 +76,7 @@ def resolve_target(root, path):
         if not target.exists() and alternate.exists():
             return alternate
         return target
-    return target / "index.html"
+    return target.with_suffix(".html") if target.with_suffix(".html").exists() else target / "index.html"
 
 
 def sitemap_paths(xml):
@@ -202,7 +202,7 @@ def write_changed(path, content):
 def site_root():
     """Prefer the Astro build output (dist/); fall back to the repo root for
     a legacy all-static checkout where pages are committed as rendered HTML."""
-    return DIST if (DIST / "blog" / "index.html").exists() else ROOT
+    return DIST if ((DIST / "blog.html").exists() or (DIST / "blog" / "index.html").exists()) else ROOT
 
 
 def build(root=None):
@@ -210,7 +210,7 @@ def build(root=None):
     posts = discover(root)
     if not posts:
         raise ValueError(f"No published articles found under {root}; refusing to erase the landing page")
-    landing = root / "blog/index.html"
+    landing = root / "blog.html" if (root / "blog.html").exists() else root / "blog/index.html"
     html = landing.read_text(encoding="utf-8")
     if html.count(START) != 1 or html.count(END) != 1:
         raise ValueError("Landing page needs exactly one generated article region")
@@ -223,7 +223,7 @@ def build(root=None):
     write_changed(landing, html)
     # Keep article URLs in the sitemap exactly in step with discovery. The
     # repo-root sitemap is the source of truth; Astro copies it into dist/.
-    sync_sitemap(ROOT / "sitemap.xml", posts, root)
+    sync_sitemap(root / "sitemap.xml", posts, root)
     if root != ROOT and (root / "sitemap.xml").exists():
         sync_sitemap(root / "sitemap.xml", posts, root)
     return len(posts)

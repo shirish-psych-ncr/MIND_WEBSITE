@@ -6,3 +6,8 @@ dist/
 
 # Generated artifacts
 output/
+.astro/
+.wrangler/
+__pycache__/
+*.pyc
+.playwright-cli/
