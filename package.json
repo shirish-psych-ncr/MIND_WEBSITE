@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
-    "astro": "^6.0.5",
+    "astro": "^7.2.8",
     "playwright": "^1.57.0",
     "wrangler": "^4.143.0"
   },
