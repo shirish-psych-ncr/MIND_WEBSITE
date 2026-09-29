@@ -18,6 +18,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
+        persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -41,3 +42,12 @@ jobs:
       - name: Publish
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Notify search engines via IndexNow
+        # Instantly tells Bing/Yandex/Seznam/Naver (and AI tools that read
+        # Bing's index) about changed, new, removed, or redirected pages.
+        # Requires the INDEXNOW_KEY secret; the key file must be reachable at
+        # https://mindgracencr.in/<key>.txt once the deploy above is live.
+        if: ${{ success() && env.INDEXNOW_KEY != '' }}
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: python scripts/indexnow_submit.py --submit

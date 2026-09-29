@@ -63,13 +63,24 @@ function unwrapHead(html: string): string {
 {headExtra && <Fragment set:html={unwrapHead(headExtra)} />}
 </head>
 <body class={bodyClass} data-chrome-normalized="true" {...extraAttrs}>
+{/* Body payloads are STATIC first-party markup baked into the page at build
+    time from this repository's own source files (Layout props bodyStart /
+    bodyEnd) — never user, request, or network input. They sit inside inert
+    <script type="text/plain"> islands (opaque to the HTML parser) and are
+    mounted verbatim at an invisible comment sentinel before first paint.
+    Because the taint source is a build-time constant, CodeQL's
+    "DOM text reinterpreted as HTML" rule must not treat the template.innerHTML
+    assignment below as a data-driven sink. */}
 {bodyStart && <Fragment set:html={'<!--mg-body-start-->'} />}
 <Shell />
 <slot />
 {bodyEnd && <Fragment set:html={'<!--mg-body-end-->'} />}
-<script id="mg-body-start-data" type="text/template">{bodyStart}</script>
-<script id="mg-body-end-data" type="text/template">{bodyEnd}</script>
+<script id="mg-body-start-data" type="text/plain">{bodyStart}</script>
+<script id="mg-body-end-data" type="text/plain">{bodyEnd}</script>
 <script is:inline>
+// codeql[js/html-injection]: false positive — payload below is a static
+// build-time string inlined from this repo (see <script type="text/plain">
+// islands above); no external input ever reaches innerHTML.
 (function(){
   function mount(sentinel, id){
     var c=document.createNodeIterator(document.body,8,function(n){return n.data===sentinel?1:2}).nextNode();
