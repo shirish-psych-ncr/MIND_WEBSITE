@@ -24,7 +24,7 @@ const startMarkup = bodyStart.replace(/<aside\b[^>]*class="[^"]*emergency-banner
 {headExtra && <Fragment set:html={rawMarkup(headExtra)} />}
 <Head />
 </head>
-<body class={bodyClass} data-chrome-normalized="true" {...extraAttrs}>
+<body class={bodyClass || undefined} data-chrome-normalized="true" {...extraAttrs}>
 {startMarkup && <Fragment set:html={rawMarkup(startMarkup)} />}
 <Shell><slot /></Shell>
 {bodyEnd && <Fragment set:html={rawMarkup(bodyEnd)} />}

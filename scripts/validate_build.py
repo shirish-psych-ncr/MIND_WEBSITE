@@ -12,7 +12,7 @@ class Page(HTMLParser):
         self.classes=Counter(); self.ids=[]; self.refs=[]; self.tags=Counter(); self.order=[]; self.canonical=[]; self.scripts=[]; self.in_json=False; self.buffer=''
         self.feed(path.read_text(encoding='utf-8'))
     def handle_starttag(self, tag, attrs):
-        a=dict(attrs); self.tags[tag]+=1; self.order.append(tag); self.classes.update(a.get('class','').split())
+        a=dict(attrs); self.tags[tag]+=1; self.order.append(tag); self.classes.update((a.get('class') or '').split())
         if a.get('id'): self.ids.append(a['id'])
         for key in ('href','src','poster','action'):
             if a.get(key): self.refs.append((tag,key,a[key]))
