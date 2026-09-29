@@ -12,6 +12,10 @@
   gap: 6px;
   position: relative;
   font-family: inherit;
+  /* FIX (CLS 0.315): the widget is injected late by translate.js after the
+     header has painted. Reserving its final height here means the header row
+     does not grow and push page content down when it appears. */
+  min-height: 44px;
 }
 
 /* Real translation links retain readable colors despite legacy link rules. */

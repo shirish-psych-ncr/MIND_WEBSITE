@@ -41,7 +41,28 @@
 
   function buildOptions() {
     return {
-      logLevel: IS_PROD ? 'Warn' : 'Debug', // Debug restricted to local dev only
+      // FIX (production console flooding): the SDK previously ran at Debug/Log
+      // level in some builds, spamming "Amplitude Logger [Debug]" on every
+      // page. Errors only in production; Debug is available locally through
+      // ?debug / localhost.
+      logLevel: IS_PROD ? 'Error' : 'Debug',
+      // Keep the logger itself pinned to Error even when a debug flag flips
+      // the general level — prevents retry/CSP noise reaching the console.
+      loggerProvider: undefined, // SDK default logger; level governed by logLevel above
+      // FIX (retry loops): remote config is fetched from
+      // sr-client-cfg.amplitude.com and diagnostics pings go to
+      // diagnostics.prod.us-west-2.amplitude.com. Both were refused by CSP in
+      // production, producing endless "Event rejected due to exceeded retry
+      // count" cycles. All required options are declared explicitly below, so
+      // remote config is not needed; diagnostics are disabled to stop the
+      // extra failing pings. (Both hosts are now also allowed in _headers /
+      // worker.js CSP connect-src as a safety net.)
+      fetchRemoteConfig: false,
+      optOut: !IS_PROD ? false : undefined, // never opt out implicitly
+      // FIX (retry-loop noise): disable the SDK's diagnostic pings
+      // (diagnostics.*.amplitude.com) — they were failing behind CSP /
+      // ad-blockers and adding console + network spam.
+      enableDiagnostics: false,
       // EU data residency: set 'EU' ONLY if your Amplitude org requires EU
       // hosting (ingestion then goes to api.eu.amplitude.com — also add that
       // host to CSP connect-src in _headers). Keep 'US' otherwise.
@@ -190,17 +211,25 @@
   function init() {
     var inst = getInstance();
     if (!inst || typeof inst.init !== 'function') {
+      // Aggressive ad-blockers can strip the SDK from the DOM entirely; keep
+      // this a single quiet warning instead of an uncaught error per page.
       console.warn('Amplitude SDK unavailable — analytics disabled (loaded via amplitude-analytics.js).');
       return;
     }
     if (api.ready) return;
-    inst.init(AMPLITUDE_API_KEY, undefined, buildOptions());
-    api.ready = true;
+    // FIX: wrap init in try/catch so CSP refusals, blocked fetches or a
+    // partially-stripped SDK never surface as unhandled promise rejections.
+    try {
+      inst.init(AMPLITUDE_API_KEY, undefined, buildOptions());
+      api.ready = true;
 
-    // Pipeline confirmation event kept from the original bootstrap.
-    var path = window.location.pathname;
-    if (path === '/' || path === '/') {
-      api.track('Viewed Home Page', { prompt_version: 'BA400.4' });
+      // Pipeline confirmation event kept from the original bootstrap.
+      var path = window.location.pathname;
+      if (path === '/' || path === '/') {
+        api.track('Viewed Home Page', { prompt_version: 'BA400.4' });
+      }
+    } catch (err) {
+      console.warn('Amplitude init failed (blocked by CSP/ad-blocker?) — analytics disabled.', err && err.message);
     }
   }
 

@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const headExtra = String.raw`<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -9,7 +9,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
+<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -17,7 +17,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-Y5H1B930PQ');
 </script>
-<link rel="preload" as="image" href="/assets/images/mind-grace-clinic-logo-pink.svg" fetchpriority="high">
+    <!-- FIX (unused-preload warning): removed <link rel="preload"> for the
+         clinic logo SVG. The Shell already renders it with
+         loading="eager"/decoding="async", so the preload was duplicated work
+         and triggered "preload ... not used within a few seconds" console
+         warnings. No JS/CSS preloads are emitted by this site; Astro's own
+         module preloads (/_astro/*.js) are generated with matching
+         crossorigin credentials by the compiler itself. -->
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4A1438">
@@ -98,11 +104,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Security.txt for vulnerability disclosure -->
   <link rel="security.txt" href="/.well-known/security.txt">
 
-<script defer src="/assets/js/min/zaraz-tracking.min.js"></script>
+<!-- TODO: Disable Cloudflare Zaraz in Dashboard > Speed > Optimization > Zaraz (or configure its triggers) to stop the infinite "Zaraz not available after waiting. Tracking events will be queued." loop. -->
+<script defer data-cfasync="false" src="/assets/js/min/zaraz-tracking.min.js"></script>
 <!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
-<script defer src="/assets/vendor/min/amplitude-2.47.0.min.js"></script>
-<script defer src="/assets/js/min/amplitude-analytics.min.js"></script>
-<script defer src="/assets/js/min/amplitude-init.min.js"></script>
+<script defer data-cfasync="false" src="/assets/vendor/min/amplitude-2.47.0.min.js"></script>
+<script defer data-cfasync="false" src="/assets/js/min/amplitude-analytics.min.js"></script>
+<script defer data-cfasync="false" src="/assets/js/min/amplitude-init.min.js"></script>
 
 
 

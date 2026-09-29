@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 const headExtra = String.raw`<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -9,7 +9,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
+<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -18,7 +18,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'G-Y5H1B930PQ');
 </script>
 <!-- Cloudflare Zaraz Tracking -->
-<script defer src="/assets/js/min/zaraz-tracking.min.js"></script>
+<!-- TODO: Disable Cloudflare Zaraz in Dashboard > Speed > Optimization > Zaraz (or configure its triggers) to stop the infinite "Zaraz not available after waiting. Tracking events will be queued." loop. -->
+<script defer data-cfasync="false" src="/assets/js/min/zaraz-tracking.min.js"></script>
 
   <link rel="security.txt" href="/.well-known/security.txt">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -65,9 +66,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="/assets/css/min/tools-shell.min.css?v=quiet7">
   <script src="/assets/js/min/tools-shell.min.js?v=toolview3" defer></script>
 <!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
-<script defer src="/assets/vendor/min/amplitude-2.47.0.min.js"></script>
-<script defer src="/assets/js/min/amplitude-analytics.min.js"></script>
-<script defer src="/assets/js/min/amplitude-init.min.js"></script>
+<script defer data-cfasync="false" src="/assets/vendor/min/amplitude-2.47.0.min.js"></script>
+<script defer data-cfasync="false" src="/assets/js/min/amplitude-analytics.min.js"></script>
+<script defer data-cfasync="false" src="/assets/js/min/amplitude-init.min.js"></script>
 
 
 

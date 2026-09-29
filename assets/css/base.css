@@ -1050,6 +1050,10 @@
    ========================================================================== */
 @layer components {
   .emergency-banner {
+    /* FIX (CLS 0.315): reserve a stable minimum height so the banner never
+       grows/shrinks when visitor-friendly.js enriches it or when text wraps
+       at odd breakpoints — content below stays put on load/reload. */
+    min-height: 2.75rem;
     background: linear-gradient(
       90deg,
       oklch(95% 0.04 340 / 0.95),

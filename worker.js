@@ -61,10 +61,18 @@ async function handleRequest(request) {
   newResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
   newResponse.headers.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=()')
   
-  // Content Security Policy (kept in sync with the CSP in ./_headers —
+  // Content Security Policy (kept IN SYNC with the CSP in ./_headers —
   // space-separated sources; allow-lists every third party actually used:
   // GTM/gtag + Google Analytics, Cloudflare Zaraz/Insights, Ahrefs,
-  // unpkg (Leaflet), jsDelivr (Splide), Google Fonts, OpenStreetMap tiles)
+  // unpkg (Leaflet), jsDelivr (Splide), Google Fonts, OpenStreetMap tiles).
+  // FIX (production logs): Amplitude's remote-config / diagnostics endpoints
+  // (sr-client-cfg.amplitude.com, diagnostics.prod.us-west-2.amplitude.com)
+  // were missing here, so every ingestion attempt was refused by connect-src
+  // and retried until "Event rejected due to exceeded retry count". The
+  // wildcard https://*.amplitude.com now covers all Amplitude subdomains.
+  // TODO: If a CSP is also set in the Cloudflare Dashboard (Security > WAF or
+  // a Transform Rule), update that copy manually too — this worker header and
+  // the dashboard rule must not fight each other.
   newResponse.headers.set(
     'Content-Security-Policy',
     "default-src 'self'; " +
@@ -72,11 +80,11 @@ async function handleRequest(request) {
     "object-src 'none'; " +
     "frame-ancestors 'none'; " +
     "form-action 'self' https://docs.google.com; " +
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://*.ahrefs.com https://unpkg.com https://cdn.jsdelivr.net; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://*.ahrefs.com https://unpkg.com https://cdn.jsdelivr.net https://*.amplitude.com https://cdn.amplitude.com https://www.googletagmanager.com; " +
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net; " +
     "img-src 'self' data: blob: https:; " +
     "font-src 'self' data: https://fonts.gstatic.com; " +
-    "connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.ahrefs.com https://*.zarazprojects.com https://*.cloudflare.com https://static.cloudflareinsights.com https://*.tile.openstreetmap.org https://openstreetmap.org; " +
+    "connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.ahrefs.com https://analytics.ahrefs.com https://*.zarazprojects.com https://*.cloudflare.com https://static.cloudflareinsights.com https://*.tile.openstreetmap.org https://openstreetmap.org https://*.amplitude.com https://api2.amplitude.com https://browser.amplitude.com https://sr-client-cfg.amplitude.com https://diagnostics.prod.us-west-2.amplitude.com https://www.googletagmanager.com; " +
     "frame-src 'self' https://*.googletagmanager.com https://www.google.com https://docs.google.com https://www.openstreetmap.org; " +
     "worker-src 'self' blob:;"
   )

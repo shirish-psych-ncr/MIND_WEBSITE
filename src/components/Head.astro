@@ -18,9 +18,21 @@ const themeInit = `try{const t=localStorage.getItem('mindgrace-theme');document.
 ---
 
 <meta name="color-scheme" content="light dark">
-<script is:inline set:html={themeInit}></script>
-<script is:inline src={`/assets/js/min/visitor-friendly.min.js?v=${version}`} defer></script>
+<!-- CSP NOTE: the Content-Security-Policy for this site is delivered via HTTP
+     headers from two places that must stay in sync: `/_headers` (Pages/CDN)
+     and `worker.js` (Cloudflare Worker). If a CSP is ALSO configured in the
+     Cloudflare Dashboard (Security > WAF / Transform Rules), update it there
+     manually too — no <meta> CSP is emitted from this layout.
+     TODO (Cloudflare Dashboard): verify connect-src/script-src allow
+     https://*.amplitude.com, https://api2.amplitude.com and
+     https://analytics.ahrefs.com; disable Zaraz if unused. -->
+<!-- FIX (Rocket Loader): data-cfasync="false" keeps these critical scripts in
+     their declared execution order and prevents Cloudflare Rocket Loader from
+     deferring/rewriting them (theme bootstrap runs before paint; translate +
+     visitor-friendly own the shell wiring). -->
+<script is:inline data-cfasync="false" set:html={themeInit}></script>
+<script is:inline data-cfasync="false" src={`/assets/js/min/visitor-friendly.min.js?v=${version}`} defer></script>
 <link rel="stylesheet" href={`/assets/css/min/site-foundation.min.css?v=${version}`} data-mindgrace-final-foundation>
 
 <link rel="stylesheet" href="/assets/css/min/translate.min.css?v=astro-repair1">
-<script is:inline src="/assets/js/min/translate.min.js?v=astro-repair1" defer></script>
+<script is:inline data-cfasync="false" src="/assets/js/min/translate.min.js?v=astro-repair1" defer></script>

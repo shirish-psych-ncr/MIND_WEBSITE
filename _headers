@@ -53,13 +53,27 @@
   # CSS come from translate.google.com, translated page bodies are proxied by
   # the widget (connect-src), flag/icon images from www.google.com (covered
   # by img-src https:).
+  # FIX (production console logs): Amplitude's remote-config / diagnostics /
+  # zoning endpoints (sr-client-cfg.amplitude.com,
+  # diagnostics.prod.us-west-2.amplitude.com, api-sources.amplitude.com) were
+  # being refused by connect-src, causing "Event rejected due to exceeded
+  # retry count" loops. The wildcard https://*.amplitude.com now covers every
+  # Amplitude subdomain (incl. api2., cdn., browser., sr-client-cfg. and the
+  # regional diagnostics hosts); the explicit api2./cdn./browser./api-sources./
+  # api.eu. hosts are kept as belt-and-braces in case a stricter parser is
+  # used upstream. analytics.ahrefs.com is covered by https://*.ahrefs.com.
+  # TODO: If a CSP is ALSO configured in the Cloudflare Dashboard
+  # (Security > WAF > Managed Rules / Content Security Policy or a Transform
+  # Rule that sets the CSP header), it overrides/duplicates this one — update
+  # the connect-src / script-src allow-list there manually as well, otherwise
+  # the dashboard copy will keep blocking Amplitude & Ahrefs requests.
   Content-Security-Policy: \
     default-src 'self'; \
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://*.ahrefs.com https://unpkg.com https://cdn.jsdelivr.net https://cdn.amplitude.com https://translate.google.com; \
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://*.ahrefs.com https://unpkg.com https://cdn.jsdelivr.net https://*.amplitude.com https://cdn.amplitude.com https://translate.google.com https://www.googletagmanager.com; \
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net https://translate.google.com; \
     font-src 'self' data: https://fonts.gstatic.com; \
     img-src 'self' data: blob: https:; \
-    connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.ahrefs.com https://*.zarazprojects.com https://*.cloudflare.com https://static.cloudflareinsights.com https://*.tile.openstreetmap.org https://openstreetmap.org https://api2.amplitude.com https://api.eu.amplitude.com https://api-sources.amplitude.com https://cdn.amplitude.com https://browser.amplitude.com https://translate.google.com https://translate.googleapis.com; \
+    connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.ahrefs.com https://analytics.ahrefs.com https://*.zarazprojects.com https://*.cloudflare.com https://static.cloudflareinsights.com https://*.tile.openstreetmap.org https://openstreetmap.org https://*.amplitude.com https://api2.amplitude.com https://api.eu.amplitude.com https://api-sources.amplitude.com https://cdn.amplitude.com https://browser.amplitude.com https://sr-client-cfg.amplitude.com https://diagnostics.prod.us-west-2.amplitude.com https://translate.google.com https://translate.googleapis.com https://www.googletagmanager.com; \
     frame-src 'self' https://*.googletagmanager.com https://www.google.com https://docs.google.com https://www.openstreetmap.org; \
     worker-src 'self' blob:; \
     manifest-src 'self'; \
