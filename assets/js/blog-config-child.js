@@ -1,6 +1,6 @@
 (() => {
   const manifestUrl = "/blog/pages/child/manifest.json";
-  const sourceDir = "/blog/pages/child/";
+  const sourceDir = "/blog/pages/child";
   const resolve = (file) => file.startsWith("/") ? file : `${sourceDir}${file}`;
   fetch(manifestUrl, { cache: "no-store" })
     .then((response) => { if (!response.ok) throw new Error(`Child blog manifest: ${response.status}`); return response.json(); })
