@@ -16,7 +16,7 @@
       window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
     })
     .catch(() => {
-      const files = ["/sleep-and-autism-guide-indian-parents/", "early-signs-of-autism/", "school-concerns-and-adhd/", "sensory-overload-at-home/", "speech-delay-red-flags/"];
+      const files = ["/sleep-and-autism-guide-indian-parents", "early-signs-of-autism", "school-concerns-and-adhd", "sensory-overload-at-home", "speech-delay-red-flags"];
       window.BLOG_DISCOVERY_CONFIG = { sourceDir, posts: files.map(resolve), pinned: [], mostSearched: [], symptoms: [], clusters: [] };
       window.dispatchEvent(new CustomEvent("blogConfigLoaded"));
     });

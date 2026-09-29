@@ -4,12 +4,12 @@
 
   const navigation = [
     ["Home", "/"],
-    ["About", "/about/"],
-    ["Services", "/services/"],
-    ["What to expect", "/process/"],
-    ["Resources", "/resources/"],
-    ["Location", "/location/"],
-    ["Contact", "/contact/"]
+    ["About", "/about"],
+    ["Services", "/services"],
+    ["What to expect", "/process"],
+    ["Resources", "/resources"],
+    ["Location", "/location"],
+    ["Contact", "/contact"]
   ];
   const mobileNavigation = [
     {
@@ -17,34 +17,34 @@
       icon: "compass",
       children: [
         ["Home", "/"],
-        ["About the clinic", "/about/"],
-        ["Dr Anita Sharma", "/dr-anita-sharma/"],
-        ["Our care team", "/doctors/"]
+        ["About the clinic", "/about"],
+        ["Dr Anita Sharma", "/dr-anita-sharma"],
+        ["Our care team", "/doctors"]
       ]
     },
     {
       label: "Care and services",
       icon: "heart-handshake",
       children: [
-        ["Services", "/services/"],
-        ["Psychiatry", "/psychiatry/"],
-        ["Psychology and counselling", "/psychology-counselling/"],
-        ["Child development", "/child-development/"],
-        ["Assessments", "/assessments/"],
-        ["Therapy and psychotherapy", "/therapy/"],
-        ["Teleconsultation", "/teleconsultation/"],
-        ["Specialized enquiries", "/specialized-consultations/"],
-        ["What to expect", "/process/"],
-        ["Fees and payments", "/fees/"],
+        ["Services", "/services"],
+        ["Psychiatry", "/psychiatry"],
+        ["Psychology and counselling", "/psychology-counselling"],
+        ["Child development", "/child-development"],
+        ["Assessments", "/assessments"],
+        ["Therapy and psychotherapy", "/therapy"],
+        ["Teleconsultation", "/teleconsultation"],
+        ["Specialized enquiries", "/specialized-consultations"],
+        ["What to expect", "/process"],
+        ["Fees and payments", "/fees"],
         {
           label: "Who we support",
           icon: "users-round",
           children: [
-            ["Adult mental health", "/conditions/"],
-            ["Depression and anxiety", "/depression-anxiety/"],
-            ["ADHD and autism assessment", "/adhd-autism-assessment/"],
-            ["Child development", "/aasha/"],
-            ["Our care approach", "/approach/"]
+            ["Adult mental health", "/conditions"],
+            ["Depression and anxiety", "/depression-anxiety"],
+            ["ADHD and autism assessment", "/adhd-autism-assessment"],
+            ["Child development", "/aasha"],
+            ["Our care approach", "/approach"]
           ]
         }
       ]
@@ -54,9 +54,9 @@
       icon: "book-open",
       children: [
         ["Resources", "/resources#tools"],
-        ["Clinic gallery", "/gallery/"],
-        ["Patient experiences", "/testimonials/"],
-        ["Blog", "/blog/"],
+        ["Clinic gallery", "/gallery"],
+        ["Patient experiences", "/testimonials"],
+        ["Blog", "/blog"],
         ["Frequently asked questions", "/faq#common-questions"]
       ]
     },
@@ -66,21 +66,21 @@
       href: "/resources#tools",
       children: [
         ["All self-help tools", "/resources#tools"],
-        ["Guided breathing", "/tools/guided-breathing/"],
-        ["Butterfly tapper", "/tools/butterfly-tapper/"],
-        ["Eye movement", "/tools/eye-movement/"],
-        ["Hypnotic fractal", "/tools/hypnos-fractal/"],
-        ["Horizon scan", "/tools/horizon-scan/"],
-        ["River of Release", "/tools/leaf-on-stream/"]
+        ["Guided breathing", "/tools/guided-breathing"],
+        ["Butterfly tapper", "/tools/butterfly-tapper"],
+        ["Eye movement", "/tools/eye-movement"],
+        ["Hypnotic fractal", "/tools/hypnos-fractal"],
+        ["Horizon scan", "/tools/horizon-scan"],
+        ["River of Release", "/tools/leaf-on-stream"]
       ]
     },
     {
       label: "Visit and contact",
       icon: "map-pin",
       children: [
-        ["Find the clinic", "/location/"],
-        ["Contact", "/contact/"],
-        ["Emergency help", "/emergency/"]
+        ["Find the clinic", "/location"],
+        ["Contact", "/contact"],
+        ["Emergency help", "/emergency"]
       ]
     }
   ];
@@ -151,7 +151,7 @@
     notice.style.display = "block";
     notice.setAttribute("role", "note");
     notice.setAttribute("aria-labelledby", "emergency-notice-title");
-    notice.innerHTML = `<div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency/">Emergency resources</a></div>`;
+    notice.innerHTML = `<div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div>`;
     document.body.prepend(notice);
   }
 
@@ -266,7 +266,7 @@
       document.head.appendChild(link);
     };
     appendStylesheet("/assets/css/min/site-foundation.min.css?v=responsive18", "mindgraceFinalFoundation");
-    if (window.location.pathname.replace(/\\/g, "/").includes("/tools/")) {
+    if (window.location.pathname.replace(/\\/g, "/").includes("/tools")) {
       appendStylesheet("/assets/css/tool-overrides.css?v=tools5", "mindgraceFinalToolOverrides");
       appendStylesheet("/assets/css/tools-shell.css?v=quiet7", "mindgraceFinalToolShell");
     }
@@ -282,12 +282,12 @@
         <img class="logo-img" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
         <span class="logo-copy"><span class="logo-text" id="site-logo-name">Mind Grace</span><span class="logo-tagline">Neuropsychiatric Clinic | Where You Come First</span></span>
       </a>
-      <nav class="desktop-nav" aria-label="Main navigation"><ul>${linkMarkup()}<li><a class="btn btn--primary" href="/book/">Book an appointment</a></li></ul></nav>
+      <nav class="desktop-nav" aria-label="Main navigation"><ul>${linkMarkup()}<li><a class="btn btn--primary" href="/book">Book an appointment</a></li></ul></nav>
       <div class="header-actions">
         <button type="button" class="accessibility-toggle" id="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-panel">Accessibility</button>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Use dark theme"><i data-lucide="moon" aria-hidden="true"></i><span class="visually-hidden">Dark theme</span></button>
         <button type="button" class="mobile-nav-trigger" id="burgerMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel"><i data-lucide="menu" aria-hidden="true"></i></button>
-        <a class="mobile-book-btn" href="/book/" aria-label="Book an appointment"><i data-lucide="calendar-days" aria-hidden="true"></i><span class="mobile-book-label">Book</span><span class="visually-hidden">Book an appointment</span></a>
+        <a class="mobile-book-btn" href="/book" aria-label="Book an appointment"><i data-lucide="calendar-days" aria-hidden="true"></i><span class="mobile-book-label">Book</span><span class="visually-hidden">Book an appointment</span></a>
       </div>
     </div>`;
     return header;
@@ -298,9 +298,9 @@
     footer.className = "site-footer";
     footer.innerHTML = `<div class="footer-container">
       <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
-      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book/">Book an appointment</a></li><li><a href="/services/">Our services</a></li><li><a href="/process/">What to expect</a></li><li><a href="/location/">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/faq/#common-questions">Frequently asked questions</a></li><li><a href="/resources/#tools">Self-help tools</a></li><li><a href="/gallery/">Clinic gallery</a></li><li><a href="/emergency/">Emergency help</a></li><li><a href="/contact/">Contact</a></li></ul></div></nav>
+      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/services">Our services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/faq/#common-questions">Frequently asked questions</a></li><li><a href="/resources/#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
       <address class="footer-contact"><h2>Visit or call</h2><p>Mind Grace Neuropsychiatric Clinic<br>J123, Gamma II, Greater Noida, 201310</p><p><a href="tel:+919667863295">+91 96678 63295</a><br><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
-    </div><div class="footer-bottom"><p>&copy; <span id="year"></span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a><a href="/consent/">Consent</a></div></div>`;
+    </div><div class="footer-bottom"><p>&copy; <span id="year"></span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/consent">Consent</a></div></div>`;
     return footer;
   }
 
@@ -310,11 +310,11 @@
     const group = document.createElement("div");
     group.dataset.seoFooterLinks = "true";
     group.innerHTML = `<h2>Care guides</h2><ul>
-      <li><a href="/psychiatry/">Psychiatry</a></li>
-      <li><a href="/psychology-counselling/">Psychology and counselling</a></li>
-      <li><a href="/child-development/">Child development</a></li>
-      <li><a href="/assessments/">Assessments</a></li>
-      <li><a href="/conditions/">Conditions</a></li>
+      <li><a href="/psychiatry">Psychiatry</a></li>
+      <li><a href="/psychology-counselling">Psychology and counselling</a></li>
+      <li><a href="/child-development">Child development</a></li>
+      <li><a href="/assessments">Assessments</a></li>
+      <li><a href="/conditions">Conditions</a></li>
     </ul>`;
     nav.appendChild(group);
   }
@@ -428,7 +428,7 @@
     mobileNav.setAttribute("aria-modal", "true");
     mobileNav.hidden = true;
     mobileNav.setAttribute("inert", "");
-    mobileNav.innerHTML = `<div class="mobile-nav-panel-inner"><div class="mobile-nav-header"><div><p class="mobile-nav-kicker">Mind Grace</p><h2>Find your next step</h2></div><button type="button" class="close-mobile-menu" aria-label="Close navigation menu"><i data-lucide="x" aria-hidden="true"></i></button></div><p class="mobile-nav-intro">Choose a section, then open a branch to see the pages inside it.</p>${mobileTreeMarkup(mobileNavigation)}<a class="btn btn--primary mobile-nav-appointment" href="/book/"><i data-lucide="calendar" aria-hidden="true"></i> Book an appointment</a></div>`;
+    mobileNav.innerHTML = `<div class="mobile-nav-panel-inner"><div class="mobile-nav-header"><div><p class="mobile-nav-kicker">Mind Grace</p><h2>Find your next step</h2></div><button type="button" class="close-mobile-menu" aria-label="Close navigation menu"><i data-lucide="x" aria-hidden="true"></i></button></div><p class="mobile-nav-intro">Choose a section, then open a branch to see the pages inside it.</p>${mobileTreeMarkup(mobileNavigation)}<a class="btn btn--primary mobile-nav-appointment" href="/book"><i data-lucide="calendar" aria-hidden="true"></i> Book an appointment</a></div>`;
     header.after(overlay, mobileNav);
     const accessibilityPanel = document.createElement("section");
     accessibilityPanel.id = "accessibility-panel";
@@ -525,27 +525,27 @@
     const visitPages = new Set(["book.html", "fees.html", "location.html", "process.html"]);
     const resourcePages = new Set(["faq.html", "gallery.html", "testimonials.html", "approach.html"]);
     const legalPages = new Set(["terms.html", "disclaimer.html", "consent.html"]);
-    if (path.startsWith("/blog/")) {
-      entries.push({ label: "Blog", href: "/blog/" });
-      if (path.includes("/adult/")) entries.push({ label: "Adult mental health", href: "/blog/adult/" });
-      else if (path.includes("/child/")) entries.push({ label: "Child development", href: "/blog/children/" });
-    } else if (path.startsWith("/tools/")) {
-      entries.push({ label: "Resources", href: "/resources/" });
+    if (path.startsWith("/blog")) {
+      entries.push({ label: "Blog", href: "/blog" });
+      if (path.includes("/adult")) entries.push({ label: "Adult mental health", href: "/blog/adult" });
+      else if (path.includes("/child")) entries.push({ label: "Child development", href: "/blog/children" });
+    } else if (path.startsWith("/tools")) {
+      entries.push({ label: "Resources", href: "/resources" });
       entries.push({ label: "Therapeutic tools", href: "/resources#tools" });
     } else if (carePages.has(pageKey(file))) {
-      entries.push({ label: "Care and services", href: "/services/" });
+      entries.push({ label: "Care and services", href: "/services" });
     } else if (conditionPages.has(pageKey(file))) {
-      entries.push({ label: "Conditions and assessments", href: "/conditions/" });
+      entries.push({ label: "Conditions and assessments", href: "/conditions" });
     } else if (pageKey(file) === "psychiatrist-greater-noida" || pageKey(file) === "psychiatrist-in-noida") {
-      entries.push({ label: "Locations", href: "/location/" });
+      entries.push({ label: "Locations", href: "/location" });
     } else if (aboutPages.has(pageKey(file))) {
-      entries.push({ label: "About the clinic", href: "/about/" });
+      entries.push({ label: "About the clinic", href: "/about" });
     } else if (visitPages.has(pageKey(file))) {
-      entries.push({ label: "Visit and contact", href: "/contact/" });
+      entries.push({ label: "Visit and contact", href: "/contact" });
     } else if (resourcePages.has(pageKey(file))) {
-      entries.push({ label: "Explore and learn", href: "/resources/" });
+      entries.push({ label: "Explore and learn", href: "/resources" });
     } else if (legalPages.has(pageKey(file))) {
-      entries.push({ label: "Legal and privacy", href: "/privacy/" });
+      entries.push({ label: "Legal and privacy", href: "/privacy" });
     }
     entries.push({ label: title || labels[pageKey(file)] || slugLabel(file), href: null });
     let nav = $(".breadcrumbs", main) || $("nav[aria-label='Breadcrumb']", main);
@@ -608,127 +608,127 @@
       "/": {
         title: "A calmer next step in Greater Noida",
         body: "If anxiety, low mood, sleep changes, or a child’s development are making daily life harder, you can begin with the concern you notice. Mind Grace in Gamma II helps adults, children, adolescents, and families understand what support may fit.",
-        links: [["Explore mental health services", "/services/"], ["Book a confidential consultation", "/book/"], ["Find the clinic in Gamma II", "/location/"]]
+        links: [["Explore mental health services", "/services"], ["Book a confidential consultation", "/book"], ["Find the clinic in Gamma II", "/location"]]
       },
       "services.html": {
         title: "Support matched to the concern you bring",
         body: "You do not need a perfect label before you reach out. Start with the change affecting sleep, school, work, relationships, or family life, then use an assessment and conversation to decide the next step.",
-        links: [["See conditions we support", "/conditions/"], ["Meet the care team", "/doctors/"], ["Understand the first visit", "/process/"], ["Book an appointment", "/book/"]]
+        links: [["See conditions we support", "/conditions"], ["Meet the care team", "/doctors"], ["Understand the first visit", "/process"], ["Book an appointment", "/book"]]
       },
       "conditions.html": {
         title: "Start with the pattern you are noticing",
         body: "A symptom can have more than one explanation, and online information cannot replace an assessment. Use these condition guides to find language for your concern, then connect it with the right service or consultation in Greater Noida.",
-        links: [["See our care approach", "/approach/"], ["Read mental health guides", "/blog/"], ["Book an assessment", "/book/"]]
+        links: [["See our care approach", "/approach"], ["Read mental health guides", "/blog"], ["Book an assessment", "/book"]]
       },
       "about.html": {
         title: "Care that makes room for your context",
         body: "Starting care can feel difficult when you have been carrying a concern alone. Mind Grace brings psychiatric and child-development support together in Gamma II, Greater Noida, with space to explain what has changed and what you need next.",
-        links: [["Meet Dr Anita Sharma", "/dr-anita-sharma/"], ["See the care team", "/doctors/"], ["Find the clinic", "/location/"], ["Book a consultation", "/book/"]]
+        links: [["Meet Dr Anita Sharma", "/dr-anita-sharma"], ["See the care team", "/doctors"], ["Find the clinic", "/location"], ["Book a consultation", "/book"]]
       },
       "approach.html": {
         title: "Understand first, then choose the next step",
         body: "Good care begins with listening to the full picture: symptoms, routines, relationships, development, and the pressures around you. A clear conversation can help you move from uncertainty toward a practical plan.",
-        links: [["What to expect", "/process/"], ["View services", "/services/"], ["Ask a question", "/contact/"]]
+        links: [["What to expect", "/process"], ["View services", "/services"], ["Ask a question", "/contact"]]
       },
       "location.html": {
         title: "Find Mind Grace in Gamma II",
         body: "The clinic is at J123, Gamma II, Greater Noida, 201310. This location serves people travelling from Alpha-1, Delta-1, Pari Chowk, Knowledge Park, Surajpur, and nearby Greater Noida routes.",
-        links: [["Get booking information", "/book/"], ["Contact the clinic", "/contact/"], ["See what to expect", "/process/"]]
+        links: [["Get booking information", "/book"], ["Contact the clinic", "/contact"], ["See what to expect", "/process"]]
       },
       "process.html": {
         title: "Know what happens after you reach out",
         body: "If the first step feels uncertain, you can begin by sharing the concern that brought you here. The visit can then focus on understanding the situation, discussing options, and identifying a manageable next step.",
-        links: [["Review appointment details", "/book/"], ["Read frequently asked questions", "/faq#common-questions"], ["View clinic location", "/location/"]]
+        links: [["Review appointment details", "/book"], ["Read frequently asked questions", "/faq#common-questions"], ["View clinic location", "/location"]]
       },
       "faq.html": {
         title: "Answers before your first conversation",
         body: "Questions about privacy, fees, children’s care, medication, or the first visit are normal. Use these answers to prepare, then contact the clinic if your situation needs a more specific response.",
-        links: [["See fees and payments", "/fees/"], ["Understand the care process", "/process/"], ["Contact Mind Grace", "/contact/"]]
+        links: [["See fees and payments", "/fees"], ["Understand the care process", "/process"], ["Contact Mind Grace", "/contact"]]
       },
       "contact.html": {
         title: "You can start with one clear question",
         body: "Tell Mind Grace what you are noticing and what kind of support you are trying to find. The clinic can help with routine appointment guidance, directions, and questions about psychiatric or child-development care in Gamma II.",
-        links: [["Book an appointment", "/book/"], ["Find the clinic", "/location/"], ["Read common questions", "/faq#common-questions"]]
+        links: [["Book an appointment", "/book"], ["Find the clinic", "/location"], ["Read common questions", "/faq#common-questions"]]
       },
       "book.html": {
         title: "A confidential first step for adults and families",
         body: "You can request a psychiatric or child-development consultation without having a final diagnosis. Share the basic details that feel relevant, and use the clinic’s contact options if you need help before booking.",
-        links: [["Learn what to expect", "/process/"], ["Check fees and payments", "/fees/"], ["Find the clinic", "/location/"]]
+        links: [["Learn what to expect", "/process"], ["Check fees and payments", "/fees"], ["Find the clinic", "/location"]]
       },
       "doctors.html": {
         title: "Meet the people who can help you begin",
         body: "Choosing care often starts with knowing who will listen. Review the Mind Grace care team, then use the service and booking pages to find a practical route for adult, child-development, or family support.",
-        links: [["Meet Dr Anita Sharma", "/dr-anita-sharma/"], ["Explore services", "/services/"], ["Understand your first visit", "/process/"], ["Book a consultation", "/book/"]]
+        links: [["Meet Dr Anita Sharma", "/dr-anita-sharma"], ["Explore services", "/services"], ["Understand your first visit", "/process"], ["Book a consultation", "/book"]]
       },
       "dr-anita-sharma.html": {
         title: "Bring the concern you can name",
         body: "You do not need to prepare a perfect explanation before seeking help. Learn about Dr Anita Sharma’s clinical focus, then choose the contact or booking route that feels manageable for you or your family in Greater Noida.",
-        links: [["View Mind Grace services", "/services/"], ["Meet the wider care team", "/doctors/"], ["Book a consultation", "/book/"]]
+        links: [["View Mind Grace services", "/services"], ["Meet the wider care team", "/doctors"], ["Book a consultation", "/book"]]
       },
       "fees.html": {
         title: "Know what to plan before your visit",
         body: "Questions about fees and payment can add stress when you are already deciding whether to seek help. Review the available information before booking, and contact the clinic if you need clarification about your appointment.",
-        links: [["Book an appointment", "/book/"], ["Read common questions", "/faq#common-questions"], ["Contact the clinic", "/contact/"]]
+        links: [["Book an appointment", "/book"], ["Read common questions", "/faq#common-questions"], ["Contact the clinic", "/contact"]]
       },
       "aasha.html": {
         title: "Support for children starts with noticing",
         body: "Parents may notice differences in communication, learning, behaviour, or development and still feel unsure what they mean. AASHA connects families with child-development information and a route toward appropriate support in Greater Noida.",
-        links: [["Read child-development guides", "/blog/children/"], ["See child-development services", "/services/"], ["Book a consultation", "/book/"]]
+        links: [["Read child-development guides", "/blog/children"], ["See child-development services", "/services"], ["Book a consultation", "/book"]]
       },
       "gallery.html": {
         title: "See the space before you arrive",
         body: "A first visit can feel less uncertain when you know what the clinic looks like. Use the gallery alongside the location and process pages to plan your route to Mind Grace in Gamma II.",
-        links: [["Find the clinic", "/location/"], ["See what to expect", "/process/"], ["Book an appointment", "/book/"]]
+        links: [["Find the clinic", "/location"], ["See what to expect", "/process"], ["Book an appointment", "/book"]]
       },
       "testimonials.html": {
         title: "Read experiences with care and context",
         body: "Patient feedback can help you understand how others experienced the care journey, but every person’s situation is different. Use these reflections alongside the services, process, and booking information.",
-        links: [["Explore services", "/services/"], ["Understand the care process", "/process/"], ["Book a consultation", "/book/"]]
+        links: [["Explore services", "/services"], ["Understand the care process", "/process"], ["Book a consultation", "/book"]]
       },
       "mind-grace.html": {
         title: "A connected route through Mind Grace",
         body: "Whether you are looking for psychiatric care, child-development support, practical information, or a place to begin, the site is designed to help you move at your own pace from concern to a clear next step in Greater Noida.",
-        links: [["Explore services", "/services/"], ["Meet the care team", "/doctors/"], ["Read mental health guides", "/blog/"], ["Book an appointment", "/book/"]]
+        links: [["Explore services", "/services"], ["Meet the care team", "/doctors"], ["Read mental health guides", "/blog"], ["Book an appointment", "/book"]]
       },
       "blog/": {
         title: "Find language for what you are experiencing",
         body: "These guides explain common adult mental-health and child-development concerns in clear, practical language. Read at your own pace, then connect what you notice with a tool, service, or confidential conversation.",
-        links: [["Read adult mental health guides", "/blog/adult/"], ["Read child-development guides", "/blog/children/"], ["Explore self-help tools", "/resources#tools"], ["Book a consultation", "/book/"]]
+        links: [["Read adult mental health guides", "/blog/adult"], ["Read child-development guides", "/blog/children"], ["Explore self-help tools", "/resources#tools"], ["Book a consultation", "/book"]]
       },
       "adult.html": {
         title: "Adult mental health guidance for real-life concerns",
         body: "Worry, low mood, sleep changes, and difficulty coping can affect work, relationships, and daily routines. These guides help you recognise patterns without diagnosing yourself and show where professional support may fit.",
-        links: [["Browse all mental health guides", "/blog/"], ["Try a self-help tool", "/resources#tools"], ["See adult services", "/services/"], ["Book a consultation", "/book/"]]
+        links: [["Browse all mental health guides", "/blog"], ["Try a self-help tool", "/resources#tools"], ["See adult services", "/services"], ["Book a consultation", "/book"]]
       },
       "children.html": {
         title: "Child-development guidance for parents and caregivers",
         body: "Parents often notice a concern before they have the words to describe it. These guides cover communication, sensory experiences, school concerns, and early development, with practical routes toward support when a pattern continues.",
-        links: [["Browse all child guides", "/blog/"], ["See child-development services", "/services/"], ["Explore gentle tools", "/resources#tools"], ["Book a consultation", "/book/"]]
+        links: [["Browse all child guides", "/blog"], ["See child-development services", "/services"], ["Explore gentle tools", "/resources#tools"], ["Book a consultation", "/book"]]
       },
       "emergency.html": {
         title: "If this feels unsafe, act now",
         body: "Mind Grace does not provide emergency services. If someone may harm themselves or another person, call 112 or go to the nearest hospital emergency department. Routine clinic information can wait until immediate safety is addressed.",
-        links: [["Call 112 for emergency help", "tel:112"], ["Find the clinic for routine care", "/location/"], ["Contact the clinic for routine care", "/contact/"]]
+        links: [["Call 112 for emergency help", "tel:112"], ["Find the clinic for routine care", "/location"], ["Contact the clinic for routine care", "/contact"]]
       },
       "thank-you.html": {
         title: "Your next steps after sending a request",
         body: "Keep your phone available for appointment follow-up and note any questions you want to discuss. You can review the visit process, fees, and clinic directions while you wait.",
-        links: [["Review what to expect", "/process/"], ["Check fees and payments", "/fees/"], ["Find the clinic", "/location/"], ["Return to the homepage", "/"]]
+        links: [["Review what to expect", "/process"], ["Check fees and payments", "/fees"], ["Find the clinic", "/location"], ["Return to the homepage", "/"]]
       },
       "404.html": {
         title: "Let’s get you back to useful information",
         body: "The page address may have changed, but you can continue from the main care pathways. Choose services, location, self-help resources, or booking based on what you need now.",
-        links: [["Explore mental health services", "/services/"], ["Find the clinic", "/location/"], ["Explore self-help tools", "/resources#tools"], ["Book an appointment", "/book/"]]
+        links: [["Explore mental health services", "/services"], ["Find the clinic", "/location"], ["Explore self-help tools", "/resources#tools"], ["Book an appointment", "/book"]]
       },
       "resources.html": {
         title: "Small tools for difficult moments",
         body: "Breathing, grounding, focus, and calming exercises can help you pause and notice what is happening. They are educational supports, not a diagnosis or a replacement for professional care when distress continues.",
-        links: [["Read adult mental health guides", "/blog/adult/"], ["Read child development guides", "/blog/children/"], ["Book professional support", "/book/"]]
+        links: [["Read adult mental health guides", "/blog/adult"], ["Read child development guides", "/blog/children"], ["Book professional support", "/book"]]
       }
     };
     let content = pathways[path] || pathways[file] || pathways[pageKey(file)] || (path.endsWith("/") ? pathways[path.slice(0, -1)] : null);
-    if (!content && file === "index.html" && !path.startsWith("/blog/")) content = pathways["/"];
-    if (path.startsWith("/tools/")) {
+    if (!content && file === "index.html" && !path.startsWith("/blog")) content = pathways["/"];
+    if (path.startsWith("/tools")) {
       const toolCopy = {
         "guided-breathing.html": ["Create a brief pause with guided breathing", "Use paced breathing when you want to slow down and notice how you feel. Stop if it increases discomfort, and choose professional support when symptoms persist, interfere with daily life, or feel unsafe."],
         "butterfly-tapper.html": ["Try a gentle grounding rhythm", "Butterfly tapping gives you a short, structured way to focus on touch and the present moment. Keep the movement comfortable, stop if it feels unsettling, and seek professional support for ongoing distress."],
@@ -737,16 +737,16 @@
         "horizon-scan.html": ["Orient your attention to the space around you", "Horizon scanning invites you to notice your surroundings in a slow, deliberate way. Use it as a brief grounding exercise, stop if it feels uncomfortable, and seek help when you need more than a self-guided pause."],
         "leaf-on-stream.html": ["Watch thoughts pass without chasing them", "Leaf on Stream offers an imagery-based pause for observing thoughts and feelings. It does not replace assessment or care, and you can stop whenever the exercise feels uncomfortable or unhelpful."]
       }[file] || ["Use this tool at your own pace", "This exercise offers a brief way to pause, focus, or ground yourself. Stop if it increases discomfort, and choose professional support when symptoms persist, interfere with daily life, or feel unsafe."];
-      content = { title: toolCopy[0], body: toolCopy[1], links: [["See all self-help tools", "/resources#tools"], ["Read practical mental health guides", "/blog/"], ["Book a consultation", "/book/"]] };
+      content = { title: toolCopy[0], body: toolCopy[1], links: [["See all self-help tools", "/resources#tools"], ["Read practical mental health guides", "/blog"], ["Book a consultation", "/book"]] };
     }
-    if (path.startsWith("/blog/pages/")) {
-      const childArticle = path.includes("/child/");
+    if (path.startsWith("/blog/pages")) {
+      const childArticle = path.includes("/child");
       content = {
         title: childArticle ? "For parents, a clearer way to notice what is changing" : "Information is a starting point, not a diagnosis",
         body: childArticle
           ? "This guide helps parents put words to a child’s communication, sensory, school, or developmental concerns. If the pattern affects daily life or keeps worrying your family, a child-development conversation can help you decide what support fits."
           : "This guide helps you put words to a pattern affecting mood, worry, sleep, or daily life. If the concern continues or feels difficult to manage, a confidential conversation can help you decide what support fits.",
-        links: [["Browse all guides", "/blog/"], [childArticle ? "See child-development services" : "See adult mental health services", "/services/"], ["Try a gentle self-help tool", "/resources#tools"], ["Book a consultation", "/book/"]]
+        links: [["Browse all guides", "/blog"], [childArticle ? "See child-development services" : "See adult mental health services", "/services"], ["Try a gentle self-help tool", "/resources#tools"], ["Book a consultation", "/book"]]
       };
     }
     if (!content || ["privacy.html", "terms.html", "consent.html", "disclaimer.html"].includes(file)) return;

@@ -23,7 +23,7 @@ jobs:
           python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22.12.0'
       - name: Install site dependencies
         run: npm ci
       - name: Build Astro site into dist/

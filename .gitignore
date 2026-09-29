@@ -1,5 +1,5 @@
-# Compiled/Binary files
-*.pyc
+# Dependencies
+node_modules/
 
-# Dependency directories
-__pycache__/
+# Build artifacts (Minified JS)
+assets/js/min/

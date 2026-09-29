@@ -4,53 +4,53 @@
 (() => {
   const related = {
     "overthinking-vs-anxiety.html": [
-      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique/"],
-      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist/"]
+      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique"],
+      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist"]
     ],
     "scheduled-worry-time-technique.html": [
-      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety/"],
-      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle/"]
+      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety"],
+      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle"]
     ],
     "sleep-and-anxiety-cycle.html": [
-      ["Stimulus control for sleep", "/blog/pages/adult/stimulus-control-therapy/"],
-      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist/"]
+      ["Stimulus control for sleep", "/blog/pages/adult/stimulus-control-therapy"],
+      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist"]
     ],
     "stimulus-control-therapy.html": [
-      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle/"],
-      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique/"]
+      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle"],
+      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique"]
     ],
     "when-to-see-a-psychiatrist.html": [
-      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety/"],
-      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle/"]
+      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety"],
+      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle"]
     ],
     "early-signs-of-autism.html": [
-      ["Speech delay red flags", "/blog/pages/child/speech-delay-red-flags/"],
-      ["Sensory overload at home", "/blog/pages/child/sensory-overload-at-home/"]
+      ["Speech delay red flags", "/blog/pages/child/speech-delay-red-flags"],
+      ["Sensory overload at home", "/blog/pages/child/sensory-overload-at-home"]
     ],
     "school-concerns-and-adhd.html": [
-      ["Early signs of autism", "/blog/pages/child/early-signs-of-autism/"],
-      ["Sensory overload at home", "/blog/pages/child/sensory-overload-at-home/"]
+      ["Early signs of autism", "/blog/pages/child/early-signs-of-autism"],
+      ["Sensory overload at home", "/blog/pages/child/sensory-overload-at-home"]
     ],
     "sensory-overload-at-home.html": [
-      ["Early signs of autism", "/blog/pages/child/early-signs-of-autism/"],
-      ["School concerns and ADHD", "/blog/pages/child/school-concerns-and-adhd/"]
+      ["Early signs of autism", "/blog/pages/child/early-signs-of-autism"],
+      ["School concerns and ADHD", "/blog/pages/child/school-concerns-and-adhd"]
     ],
     "speech-delay-red-flags.html": [
-      ["Early signs of autism", "/blog/pages/child/early-signs-of-autism/"],
-      ["School concerns and ADHD", "/blog/pages/child/school-concerns-and-adhd/"]
+      ["Early signs of autism", "/blog/pages/child/early-signs-of-autism"],
+      ["School concerns and ADHD", "/blog/pages/child/school-concerns-and-adhd"]
     ]
   };
 
   const relatedTools = {
     adult: [
-      ["Guided breathing", "/tools/guided-breathing/"],
-      ["Horizon scan", "/tools/horizon-scan/"],
-      ["Butterfly tapper", "/tools/butterfly-tapper/"]
+      ["Guided breathing", "/tools/guided-breathing"],
+      ["Horizon scan", "/tools/horizon-scan"],
+      ["Butterfly tapper", "/tools/butterfly-tapper"]
     ],
     child: [
-      ["Guided breathing", "/tools/guided-breathing/"],
-      ["Horizon scan", "/tools/horizon-scan/"],
-      ["Leaf on stream", "/tools/leaf-on-stream/"]
+      ["Guided breathing", "/tools/guided-breathing"],
+      ["Horizon scan", "/tools/horizon-scan"],
+      ["Leaf on stream", "/tools/leaf-on-stream"]
     ]
   };
 
@@ -104,7 +104,7 @@
     const panel = document.createElement("section");
     panel.className = "article-next-step surface-soft panel";
     panel.setAttribute("aria-labelledby", "article-next-step-title");
-    panel.innerHTML = `<p class="eyebrow">A practical next step</p><h2 id="article-next-step-title">You do not need a perfect explanation before asking for help</h2><p>Use this guide to notice patterns, not to diagnose yourself or your child. If the concern is persistent, distressing, or affecting daily life, a confidential first conversation can help you decide what to do next.</p><div class="cta-row"><a class="button-primary" href="/book/">Book a consultation</a><a class="button-ghost" href="https://wa.me/919667863295" target="_blank" rel="noopener" aria-label="Ask on WhatsApp (opens in a new tab)">Ask on WhatsApp</a><a class="button-ghost" href="/emergency/">Urgent help</a></div>`;
+    panel.innerHTML = `<p class="eyebrow">A practical next step</p><h2 id="article-next-step-title">You do not need a perfect explanation before asking for help</h2><p>Use this guide to notice patterns, not to diagnose yourself or your child. If the concern is persistent, distressing, or affecting daily life, a confidential first conversation can help you decide what to do next.</p><div class="cta-row"><a class="button-primary" href="/book">Book a consultation</a><a class="button-ghost" href="https://wa.me/919667863295" target="_blank" rel="noopener" aria-label="Ask on WhatsApp (opens in a new tab)">Ask on WhatsApp</a><a class="button-ghost" href="/emergency">Urgent help</a></div>`;
     article.appendChild(panel);
 
     const choices = document.createElement("div");
@@ -132,12 +132,12 @@
   }
 
   function addRelatedTools(article, file) {
-    const family = window.location.pathname.includes("/child/") ? "child" : "adult";
+    const family = window.location.pathname.includes("/child") ? "child" : "adult";
     if (article.querySelector(".article-related-tools")) return;
     const aside = document.createElement("aside");
     aside.className = "article-related article-related-tools surface panel";
     aside.setAttribute("aria-labelledby", "article-related-tools-title");
-    aside.innerHTML = `<p class="eyebrow">Try a gentle pause</p><h2 id="article-related-tools-title">Self-help tools to explore</h2><div class="article-related-grid">${relatedTools[family].map(([label, href]) => `<a class="article-related-link" href="${href}"><span>${label}</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>`).join("")}</div><p class="tool-related-reading__footer"><a href="/resources/#tools">View all self-help tools</a> <span aria-hidden="true">·</span> <a href="/blog/">Return to all guides</a></p>`;
+    aside.innerHTML = `<p class="eyebrow">Try a gentle pause</p><h2 id="article-related-tools-title">Self-help tools to explore</h2><div class="article-related-grid">${relatedTools[family].map(([label, href]) => `<a class="article-related-link" href="${href}"><span>${label}</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>`).join("")}</div><p class="tool-related-reading__footer"><a href="/resources/#tools">View all self-help tools</a> <span aria-hidden="true">·</span> <a href="/blog">Return to all guides</a></p>`;
     article.appendChild(aside);
   }
 
