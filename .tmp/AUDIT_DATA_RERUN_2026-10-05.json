@@ -1,0 +1,164 @@
+{
+ "generated": "2026-10-05",
+ "counts": {
+  "sitemap_locs": 64,
+  "sitemap_unique": 64,
+  "global_xrobots_index": true,
+  "robots_max_age": "86400",
+  "redirect_rules": 103,
+  "faq_questions": 11
+ },
+ "nap": {
+  "phones": {
+   "+91-96678-63295": 64
+  },
+  "streets": {},
+  "geos": {}
+ },
+ "findings": {
+  "no_speakable": [
+   "src/pages/404.astro",
+   "src/pages/thank-you.astro"
+  ],
+  "no_answer_block": [
+   "src/pages/404.astro"
+  ],
+  "noindex_pages": [
+   "src/pages/404.astro",
+   "src/pages/thank-you.astro"
+  ],
+  "missing_ogimage": [
+   "src/pages/addiction-substance-use.astro",
+   "src/pages/adhd-autism-assessment.astro",
+   "src/pages/bipolar-mood-disorders.astro",
+   "src/pages/depression-anxiety.astro",
+   "src/pages/learning-disability-assessment.astro",
+   "src/pages/ocd-panic-ptsd.astro",
+   "src/pages/psychosis-schizophrenia.astro",
+   "src/pages/sleep-eating-disorders.astro",
+   "src/pages/trauma-grief-support.astro"
+  ],
+  "relative_twitter_image": [
+   "src/pages/addiction-substance-use.astro",
+   "src/pages/adhd-autism-assessment.astro",
+   "src/pages/assessments.astro",
+   "src/pages/bipolar-mood-disorders.astro",
+   "src/pages/child-development.astro",
+   "src/pages/depression-anxiety.astro",
+   "src/pages/emergency.astro",
+   "src/pages/fees.astro",
+   "src/pages/learning-disability-assessment.astro",
+   "src/pages/mind-grace.astro",
+   "src/pages/ocd-panic-ptsd.astro",
+   "src/pages/psychiatrist-greater-noida.astro",
+   "src/pages/psychiatrist-in-noida.astro",
+   "src/pages/psychiatry.astro",
+   "src/pages/psychology-counselling.astro",
+   "src/pages/psychosis-schizophrenia.astro",
+   "src/pages/sleep-eating-disorders.astro",
+   "src/pages/specialized-consultations.astro",
+   "src/pages/teleconsultation.astro",
+   "src/pages/therapy.astro",
+   "src/pages/trauma-grief-support.astro"
+  ],
+  "relative_ogimage": [
+   [
+    "src/pages/assessments.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ],
+   [
+    "src/pages/child-development.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ],
+   [
+    "src/pages/emergency.astro",
+    "/assets/images/dr-anita-sharma-personal-photo.webp"
+   ],
+   [
+    "src/pages/fees.astro",
+    "/assets/images/dr-anita-sharma-personal-photo.webp"
+   ],
+   [
+    "src/pages/mind-grace.astro",
+    "/assets/images/dr-anita-sharma-personal-photo.webp"
+   ],
+   [
+    "src/pages/process.astro",
+    "/assets/images/mind-grace-entry-n-reception.webp"
+   ],
+   [
+    "src/pages/psychiatrist-greater-noida.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ],
+   [
+    "src/pages/psychiatrist-in-noida.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ],
+   [
+    "src/pages/psychiatry.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ],
+   [
+    "src/pages/psychology-counselling.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ],
+   [
+    "src/pages/services.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ],
+   [
+    "src/pages/specialized-consultations.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ],
+   [
+    "src/pages/teleconsultation.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ],
+   [
+    "src/pages/therapy.astro",
+    "/assets/images/mind-grace-consultation-room.webp"
+   ]
+  ],
+  "orphan_clinic_ref_body": [
+   "src/pages/assessments.astro",
+   "src/pages/child-development.astro",
+   "src/pages/contact.astro",
+   "src/pages/disclaimer.astro",
+   "src/pages/emergency.astro",
+   "src/pages/fees.astro",
+   "src/pages/mind-grace.astro",
+   "src/pages/privacy.astro",
+   "src/pages/psychiatrist-greater-noida.astro",
+   "src/pages/psychiatrist-in-noida.astro",
+   "src/pages/psychiatry.astro",
+   "src/pages/psychology-counselling.astro",
+   "src/pages/services.astro",
+   "src/pages/specialized-consultations.astro",
+   "src/pages/teleconsultation.astro",
+   "src/pages/terms.astro",
+   "src/pages/therapy.astro"
+  ],
+  "title_gt60": [
+   [
+    "src/pages/index.astro",
+    88
+   ]
+  ],
+  "headers_noindex_paths": [
+   "/thank-you",
+   "/404",
+   "/404.html"
+  ],
+  "llms.txt_broken_urls": [
+   "/blog/iilm-psychology-internship.html",
+   "/https://mindgracencr.in",
+   "/resources.html"
+  ],
+  "llms.txt_double_scheme": [
+   "- Services: https://mindgracencr.in/https://mindgracencr.in",
+   "- Doctors: https://mindgracencr.in/https://mindgracencr.in",
+   "- Location: https://mindgracencr.in/https://mindgracencr.in",
+   "- Appointments: https://mindgracencr.in/https://mindgracencr.in"
+  ]
+ }
+}

@@ -45,12 +45,12 @@ For immediate danger or a medical emergency in India, call 112 or visit the near
 ## Self-help tools & articles
 
 - Perceived burdensomeness article: https://mindgracencr.in/perceived-burdensomeness
-- Butterfly Tapper tool: https://mindgracencr.in/toolsbutterfly-tapper
-- Guided Breathing tool: https://mindgracencr.in/toolsguided-breathing
-- Eye Movement tool: https://mindgracencr.in/toolseye-movement
-- Horizon Scan tool: https://mindgracencr.in/toolshorizon-scan
-- Hypnos Fractal tool: https://mindgracencr.in/toolshypnos-fractal
-- Leaf on Stream tool: https://mindgracencr.in/toolsleaf-on-stream
+- Butterfly Tapper tool: https://mindgracencr.in/tools/butterfly-tapper
+- Guided Breathing tool: https://mindgracencr.in/tools/guided-breathing
+- Eye Movement tool: https://mindgracencr.in/tools/eye-movement
+- Horizon Scan tool: https://mindgracencr.in/tools/horizon-scan
+- Hypnos Fractal tool: https://mindgracencr.in/tools/hypnos-fractal
+- Leaf on Stream tool: https://mindgracencr.in/tools/leaf-on-stream
 
 ## Modular context files
 

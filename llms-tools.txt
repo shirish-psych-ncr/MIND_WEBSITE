@@ -7,12 +7,12 @@ Free browser-based grounding and calming tools from Mind Grace Neuropsychiatric
 Clinic, Greater Noida. Each tool page carries a "What this tool does" summary.
 
 ## Tools
-- Butterfly Tapper (bilateral grounding): https://mindgracencr.in/toolsbutterfly-tapper
-- Guided Breathing (anxiety, panic, sleep): https://mindgracencr.in/toolsguided-breathing
-- Lateral Grounding (eye-movement): https://mindgracencr.in/toolseye-movement
-- Horizon Scanning (visual grounding): https://mindgracencr.in/toolshorizon-scan
-- Grounding Fractal: https://mindgracencr.in/toolshypnos-fractal
-- Leaf on Stream (thought defusion imagery): https://mindgracencr.in/toolsleaf-on-stream
+- Butterfly Tapper (bilateral grounding): https://mindgracencr.in/tools/butterfly-tapper
+- Guided Breathing (anxiety, panic, sleep): https://mindgracencr.in/tools/guided-breathing
+- Lateral Grounding (eye-movement): https://mindgracencr.in/tools/eye-movement
+- Horizon Scanning (visual grounding): https://mindgracencr.in/tools/horizon-scan
+- Grounding Fractal: https://mindgracencr.in/tools/hypnos-fractal
+- Leaf on Stream (thought defusion imagery): https://mindgracencr.in/tools/leaf-on-stream
 
 ## Safety note
 These are routine stress-support exercises, not treatment. All pages carry crisis
