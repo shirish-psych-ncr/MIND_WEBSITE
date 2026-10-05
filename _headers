@@ -126,7 +126,7 @@
 # 4. CRITICAL BOT & CONFIG FILES: Ensure they are always accessible and fresh
 # ==============================================================================
 /robots.txt
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=172800
   Content-Type: text/plain; charset=utf-8
   X-Robots-Tag: all
 
@@ -171,3 +171,10 @@
 /llms-*.txt
   Cache-Control: public, max-age=3600
   Content-Type: text/plain; charset=utf-8
+
+/thank-you
+  X-Robots-Tag: noindex, follow
+/404
+  X-Robots-Tag: noindex, follow
+/404.html
+  X-Robots-Tag: noindex, follow
