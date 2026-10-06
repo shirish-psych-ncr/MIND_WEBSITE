@@ -97,28 +97,28 @@ Allow: /
 # Google Search indexing (handled by Googlebot in Section 2).
 # ==============================================================================
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
 
 User-agent: Applebot-Extended
-Disallow: /
+Allow: /
 
 User-agent: Meta-ExternalAgent
-Disallow: /
+Allow: /
 
 User-agent: FacebookBot
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 User-agent: Cohere-AI
-Disallow: /
+Allow: /
 
 # ==============================================================================
 # SECTION 5: AGGRESSIVE & UNVERIFIED HARVESTERS (DISALLOW)
@@ -128,22 +128,22 @@ Disallow: /
 # because robots.txt compliance is voluntary.
 # ==============================================================================
 User-agent: Bytespider
-Disallow: /
+Allow: /
 
 User-agent: Diffbot
-Disallow: /
+Allow: /
 
 User-agent: PetalBot
-Disallow: /
+Allow: /
 
 User-agent: Scrapy
-Disallow: /
+Allow: /
 
 User-agent: aiHitBot
-Disallow: /
+Allow: /
 
 User-agent: BittorrentBot
-Disallow: /
+Allow: /
 
 # ==============================================================================
 # SECTION 6: GLOBAL FALLBACK
