@@ -1,0 +1,158 @@
+/* Shared reading experience for the nine long-form guides. Keeps the article
+   useful after the first answer: orientation, authorship, related reading,
+   and a clear next step without turning medical content into a sales page. */
+(() => {
+  const related = {
+    "overthinking-vs-anxiety.html": [
+      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique"],
+      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist"]
+    ],
+    "scheduled-worry-time-technique.html": [
+      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety"],
+      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle"]
+    ],
+    "sleep-and-anxiety-cycle.html": [
+      ["Stimulus control for sleep", "/blog/pages/adult/stimulus-control-therapy"],
+      ["When to see a psychiatrist", "/blog/pages/adult/when-to-see-a-psychiatrist"]
+    ],
+    "stimulus-control-therapy.html": [
+      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle"],
+      ["Scheduled worry time", "/blog/pages/adult/scheduled-worry-time-technique"]
+    ],
+    "when-to-see-a-psychiatrist.html": [
+      ["Overthinking vs anxiety", "/blog/pages/adult/overthinking-vs-anxiety"],
+      ["Sleep and the anxiety cycle", "/blog/pages/adult/sleep-and-anxiety-cycle"]
+    ],
+    "early-signs-of-autism.html": [
+      ["Speech delay red flags", "/blog/pages/child/speech-delay-red-flags"],
+      ["Sensory overload at home", "/blog/pages/child/sensory-overload-at-home"]
+    ],
+    "school-concerns-and-adhd.html": [
+      ["Early signs of autism", "/blog/pages/child/early-signs-of-autism"],
+      ["Sensory overload at home", "/blog/pages/child/sensory-overload-at-home"]
+    ],
+    "sensory-overload-at-home.html": [
+      ["Early signs of autism", "/blog/pages/child/early-signs-of-autism"],
+      ["School concerns and ADHD", "/blog/pages/child/school-concerns-and-adhd"]
+    ],
+    "speech-delay-red-flags.html": [
+      ["Early signs of autism", "/blog/pages/child/early-signs-of-autism"],
+      ["School concerns and ADHD", "/blog/pages/child/school-concerns-and-adhd"]
+    ]
+  };
+
+  const relatedTools = {
+    adult: [
+      ["Guided breathing", "/tools/guided-breathing"],
+      ["Horizon scan", "/tools/horizon-scan"],
+      ["Butterfly tapper", "/tools/butterfly-tapper"]
+    ],
+    child: [
+      ["Guided breathing", "/tools/guided-breathing"],
+      ["Horizon scan", "/tools/horizon-scan"],
+      ["Leaf on stream", "/tools/leaf-on-stream"]
+    ]
+  };
+
+  const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const text = (selector, root = document) => root.querySelector(selector)?.textContent?.replace(/\s+/g, " ").trim() || "";
+  const meta = (name) => document.querySelector(`meta[name="${name}"]`)?.content?.trim() || "";
+
+  function addMetaBar(article) {
+    const h1 = article.querySelector("h1");
+    if (!h1 || article.querySelector(".article-meta-bar")) return;
+    const bar = document.createElement("div");
+    bar.className = "article-meta-bar";
+    const details = [meta("blog-date") || "Practical guide", meta("blog-readtime") || "Read at your pace"];
+    const author = meta("blog-author");
+    if (author) details.push(`By ${author}`);
+    details.forEach((detail) => {
+      const item = document.createElement("span");
+      item.textContent = detail;
+      bar.appendChild(item);
+    });
+    const lead = h1.parentElement?.querySelector(".lead");
+    (lead || h1).after(bar);
+  }
+
+  function addTableOfContents(article) {
+    if (article.querySelector(".article-toc")) return;
+    const headings = [...article.querySelectorAll("h2")];
+    if (headings.length < 2) return;
+    headings.forEach((heading) => { if (!heading.id) heading.id = slug(heading.textContent || "section"); });
+    const nav = document.createElement("nav");
+    nav.className = "article-toc";
+    nav.setAttribute("aria-label", "On this page");
+    const title = document.createElement("strong");
+    title.textContent = "On this page";
+    const list = document.createElement("ol");
+    headings.forEach((heading) => {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = `#${encodeURIComponent(heading.id)}`;
+      link.textContent = heading.textContent || "Section";
+      item.append(link);
+      list.append(item);
+    });
+    nav.append(title, list);
+    const intro = article.querySelector("section");
+    (intro || article.firstElementChild)?.after(nav);
+  }
+
+  function addNextStep(article, file) {
+    if (article.querySelector(".article-next-step")) return;
+    const panel = document.createElement("section");
+    panel.className = "article-next-step surface-soft panel";
+    panel.setAttribute("aria-labelledby", "article-next-step-title");
+    panel.innerHTML = `<p class="eyebrow">A practical next step</p><h2 id="article-next-step-title">You do not need a perfect explanation before asking for help</h2><p>Use this guide to notice patterns, not to diagnose yourself or your child. If the concern is persistent, distressing, or affecting daily life, a confidential first conversation can help you decide what to do next.</p><div class="cta-row"><a class="button-primary" href="/book">Book a consultation</a><a class="button-ghost" href="https://wa.me/919667863295" target="_blank" rel="noopener" aria-label="Ask on WhatsApp (opens in a new tab)">Ask on WhatsApp</a><a class="button-ghost" href="/emergency">Urgent help</a></div>`;
+    article.appendChild(panel);
+
+    const choices = document.createElement("div");
+    choices.className = "article-feedback";
+    choices.setAttribute("role", "group");
+    choices.setAttribute("aria-labelledby", "article-feedback-title");
+    choices.innerHTML = `<span id="article-feedback-title">Was this guide useful?</span><button type="button" data-article-feedback="clearer">Yes, clearer now</button><button type="button" data-article-feedback="question">I still have a question</button><span class="article-feedback-status" aria-live="polite"></span>`;
+    choices.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-article-feedback]");
+      if (!button) return;
+      const status = choices.querySelector(".article-feedback-status");
+      status.textContent = button.dataset.articleFeedback === "clearer" ? "Thank you. You can keep reading or book when ready." : "That is okay. Bring your question to a consultation or contact the clinic.";
+    });
+    article.appendChild(choices);
+  }
+
+  function addRelated(article, file) {
+    const links = related[file] || related[file.replace(/\.html$/i, "")];
+    if (!links || article.querySelector(".article-related")) return;
+    const aside = document.createElement("aside");
+    aside.className = "article-related surface panel";
+    aside.setAttribute("aria-labelledby", "article-related-title");
+    aside.innerHTML = `<p class="eyebrow">Keep exploring</p><h2 id="article-related-title">Related guides</h2><div class="article-related-grid">${links.map(([label, href]) => `<a class="article-related-link" href="${href}"><span>${label}</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>`).join("")}</div>`;
+    article.appendChild(aside);
+  }
+
+  function addRelatedTools(article, file) {
+    const family = window.location.pathname.includes("/child") ? "child" : "adult";
+    if (article.querySelector(".article-related-tools")) return;
+    const aside = document.createElement("aside");
+    aside.className = "article-related article-related-tools surface panel";
+    aside.setAttribute("aria-labelledby", "article-related-tools-title");
+    aside.innerHTML = `<p class="eyebrow">Try a gentle pause</p><h2 id="article-related-tools-title">Self-help tools to explore</h2><div class="article-related-grid">${relatedTools[family].map(([label, href]) => `<a class="article-related-link" href="${href}"><span>${label}</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>`).join("")}</div><p class="tool-related-reading__footer"><a href="/resources#tools">View all self-help tools</a> <span aria-hidden="true">·</span> <a href="/blog">Return to all guides</a></p>`;
+    article.appendChild(aside);
+  }
+
+  function init() {
+    const article = document.querySelector("main article");
+    if (!article || !article.querySelector("h1")) return;
+    const file = window.location.pathname.split("/").filter(Boolean).pop() || "";
+    article.classList.add("article-reading");
+    addMetaBar(article);
+    addTableOfContents(article);
+    addNextStep(article, file);
+    addRelated(article, file);
+    addRelatedTools(article, file);
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
+  else init();
+})();

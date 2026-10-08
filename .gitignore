@@ -89,13 +89,12 @@ lerna-debug.log*
 .pnpm-debug.log*
 
 # Framework / Build Outputs
-dist/
-build/
+
+
 out/
 .next/
 .nuxt/
 .svelte-kit/
-.astro/
 .vuepress/dist
 .cache/
 .parcel-cache/
