@@ -1,0 +1,141 @@
+
+> prebuild
+> npm run build:min
+
+
+> build:min
+> node scripts/rebuild_min_css.cjs && node scripts/rebuild_min_js.cjs
+
+rebuilt 25 minified css files
+Rebuilt 31 minified JS files
+
+> build
+> astro build && python scripts/build_blog_index.py && node scripts/validate-build.mjs
+
+23:21:06 [types] Generated 667ms
+23:21:06 [build] output: "static"
+23:21:06 [build] mode: "static"
+23:21:06 [build] directory: C:\Users\lenovo\Documents\mind_grace\Website\preview\dist\
+23:21:06 [build] Collecting build info...
+23:21:06 [build] ✓ Completed in 7.61s.
+23:21:06 [build] Building static entrypoints...
+23:21:15 [vite] ✓ built in 7.97s
+23:21:15 [vite] ✓ built in 321ms
+23:21:15 [build] Rearranging server assets...
+
+ generating static routes 
+23:21:15   ├─ /404.html (+187ms) 
+23:21:16   ├─ /aasha.html (+56ms) 
+23:21:16   ├─ /about.html (+92ms) 
+23:21:16   ├─ /addiction-substance-use.html (+56ms) 
+23:21:16   ├─ /adhd-autism-assessment.html (+60ms) 
+23:21:16   ├─ /approach.html (+186ms) 
+23:21:16   ├─ /assessments.html (+208ms) 
+23:21:16   ├─ /bipolar-mood-disorders.html (+94ms) 
+23:21:16   ├─ /blog/adult.html (+83ms) 
+23:21:17   ├─ /blog/children.html (+179ms) 
+23:21:17   ├─ /blog/iilm-psychology-internship.html (+136ms) 
+23:21:17   ├─ /blog/pages/adult/overthinking-vs-anxiety.html (+90ms) 
+23:21:17   ├─ /blog/pages/adult/scheduled-worry-time-technique.html (+210ms) 
+23:21:17   ├─ /blog/pages/adult/sleep-and-anxiety-cycle.html (+215ms) 
+23:21:17   ├─ /blog/pages/adult/stimulus-control-therapy.html (+64ms) 
+23:21:17   ├─ /blog/pages/adult/when-to-see-a-psychiatrist.html (+50ms) 
+23:21:17   ├─ /blog/pages/child/early-signs-of-autism.html (+100ms) 
+23:21:18   ├─ /blog/pages/child/school-concerns-and-adhd.html (+97ms) 
+23:21:18   ├─ /blog/pages/child/sensory-overload-at-home.html (+260ms) 
+23:21:18   ├─ /blog/pages/child/speech-delay-red-flags.html (+89ms) 
+23:21:18   ├─ /blog.html (+99ms) 
+23:21:18   ├─ /book.html (+221ms) 
+23:21:18   ├─ /child-development.html (+101ms) 
+23:21:18   ├─ /conditions.html (+40ms) 
+23:21:18   ├─ /consent.html (+81ms) 
+23:21:19   ├─ /contact.html (+71ms) 
+23:21:19   ├─ /depression-anxiety.html (+173ms) 
+23:21:19   ├─ /depression-in-older-adults.html (+124ms) 
+23:21:19   ├─ /disclaimer.html (+117ms) 
+23:21:19   ├─ /doctors.html (+78ms) 
+23:21:19   ├─ /dr-anita-sharma.html (+36ms) 
+23:21:19   ├─ /emergency.html (+208ms) 
+23:21:19   ├─ /faq.html (+172ms) 
+23:21:20   ├─ /fees.html (+89ms) 
+23:21:20   ├─ /gallery.html (+145ms) 
+23:21:20   ├─ /high-functioning-depression-guide.html (+144ms) 
+23:21:20   ├─ /learning-disability-assessment.html (+410ms) 
+23:21:20   ├─ /location.html (+149ms) 
+23:21:21   ├─ /mind-grace.html (+121ms) 
+23:21:21   ├─ /ocd-panic-ptsd.html (+102ms) 
+23:21:21   ├─ /perceived-burdensomeness.html (+209ms) 
+23:21:21   ├─ /privacy.html (+237ms) 
+23:21:21   ├─ /process.html (+47ms) 
+23:21:21   ├─ /psychiatrist-greater-noida.html (+199ms) 
+23:21:21   ├─ /psychiatrist-in-noida.html (+84ms) 
+23:21:22   ├─ /psychiatry.html (+115ms) 
+23:21:22   ├─ /psychology-counselling.html (+40ms) 
+23:21:22   ├─ /psychosis-schizophrenia.html (+151ms) 
+23:21:22   ├─ /resources.html (+169ms) 
+23:21:22   ├─ /services.html (+244ms) 
+23:21:22   ├─ /sleep-and-autism-guide-indian-parents.html (+62ms) 
+23:21:22   ├─ /sleep-eating-disorders.html (+41ms) 
+23:21:22   ├─ /specialized-consultations.html (+66ms) 
+23:21:22   ├─ /teleconsultation.html (+195ms) 
+23:21:23   ├─ /terms.html (+157ms) 
+23:21:23   ├─ /testimonials.html (+33ms) 
+23:21:23   ├─ /thank-you.html (+123ms) 
+23:21:23   ├─ /therapy.html (+47ms) 
+23:21:23   ├─ /tools/butterfly-tapper.html (+269ms) 
+23:21:23   ├─ /tools/eye-movement.html (+51ms) 
+23:21:23   ├─ /tools/guided-breathing.html (+59ms) 
+23:21:23   ├─ /tools/horizon-scan.html (+74ms) 
+23:21:23   ├─ /tools/hypnos-fractal.html (+228ms) 
+23:21:24   ├─ /tools/leaf-on-stream.html (+68ms) 
+23:21:24   ├─ /trauma-grief-support.html (+31ms) 
+23:21:24   ├─ /index.html (+50ms) 
+23:21:24 ✓ Completed in 8.82s.
+
+23:21:24 [build] ✓ Completed in 17.81s.
+23:21:27 [build] Waiting for integration "mindgrace-public-assets", hook "astro:build:done"...
+23:21:36 [build] 66 page(s) built in 37.49s
+23:21:36 [build] Complete!
+Indexed 14 published articles
+Traceback (most recent call last):
+  File "C:\Users\lenovo\Documents\mind_grace\Website\preview\scripts\validate_build.py", line 77, in <module>
+    if __name__=='__main__': sys.exit(main())
+                                      ^^^^^^
+  File "C:\Users\lenovo\Documents\mind_grace\Website\preview\scripts\validate_build.py", line 32, in main
+    pages={r:Page(p) for r,p in routefiles.items()}
+             ^^^^^^^
+  File "C:\Users\lenovo\Documents\mind_grace\Website\preview\scripts\validate_build.py", line 13, in __init__
+    self.feed(path.read_text(encoding='utf-8'))
+  File "C:\Python\Python312\Lib\html\parser.py", line 150, in feed
+    self.goahead(0)
+  File "C:\Python\Python312\Lib\html\parser.py", line 232, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Python312\Lib\html\parser.py", line 447, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "C:\Users\lenovo\Documents\mind_grace\Website\preview\scripts\validate_build.py", line 15, in handle_starttag
+    a=dict(attrs); self.tags[tag]+=1; self.order.append(tag); self.classes.update(a.get('class','').split())
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
+node:internal/errors:983
+  const err = new Error(message);
+              ^
+
+Error: Command failed: python scripts/validate_build.py
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at checkExecSyncError (node:child_process:882:11)
+    at execFileSync (node:child_process:918:15)
+    at file:///C:/Users/lenovo/Documents/mind_grace/Website/preview/scripts/validate-build.mjs:2:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:271:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:578:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5) {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 19900,
+  stdout: null,
+  stderr: null
+}
+
+Node.js v22.14.0
