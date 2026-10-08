@@ -1,0 +1,410 @@
+{
+  "tool": "direction",
+  "rtlContentFiles": [],
+  "rtlSnippets": 0,
+  "langDirIssues": [],
+  "details": [
+    {
+      "file": "dist/404.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/aasha/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/about/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/addiction-substance-use/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/adhd-autism-assessment/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/approach/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/assessments/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/bipolar-mood-disorders/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/adult/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/children/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/iilm-psychology-internship/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/pages/adult/overthinking-vs-anxiety/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/pages/adult/scheduled-worry-time-technique/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/pages/adult/sleep-and-anxiety-cycle/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/pages/adult/stimulus-control-therapy/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/pages/adult/when-to-see-a-psychiatrist/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/pages/child/early-signs-of-autism/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/pages/child/school-concerns-and-adhd/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/pages/child/sensory-overload-at-home/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/blog/pages/child/speech-delay-red-flags/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/book/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/child-development/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/conditions/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/consent/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/contact/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/depression-anxiety/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/depression-in-older-adults/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/disclaimer/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/doctors/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/dr-anita-sharma/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/emergency/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/faq/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/fees/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/gallery/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/high-functioning-depression-guide/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/learning-disability-assessment/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/location/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/mind-grace/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/ocd-panic-ptsd/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/perceived-burdensomeness/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/privacy/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/process/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/psychiatrist-greater-noida/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/psychiatrist-in-noida/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/psychiatry/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/psychology-counselling/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/psychosis-schizophrenia/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/resources/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/services/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/sleep-and-autism-guide-indian-parents/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/sleep-eating-disorders/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/specialized-consultations/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/teleconsultation/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/terms/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/testimonials/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/thank-you/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/therapy/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/tools/butterfly-tapper/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/tools/eye-movement/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/tools/guided-breathing/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/tools/horizon-scan/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/tools/hypnos-fractal/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/tools/leaf-on-stream/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "dist/trauma-grief-support/index.html",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    },
+    {
+      "file": "src/layouts/Layout.astro",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "tool": "a11y.css",
+  "version": "5.3.0 (vendored in vendor/a11y.css)",
+  "filesChecked": 1,
+  "totalFlagged": 0,
+  "results": [
+    {
+      "file": "offline.html",
+      "flaggedElements": 0,
+      "findings": []
+    }
+  ]
+}

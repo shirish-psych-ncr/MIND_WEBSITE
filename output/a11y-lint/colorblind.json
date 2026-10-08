@@ -1,0 +1,103 @@
+{
+  "tool": "color-blind",
+  "stateTokensChecked": 3,
+  "confusions": [],
+  "results": [
+    {
+      "pair": "--color-error (#d73146) vs --color-success (#3aa85b)",
+      "type": "protanopia",
+      "simA": "#79725d",
+      "simB": "#a29355",
+      "distance": 53,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-error (#d73146) vs --color-success (#3aa85b)",
+      "type": "deuteranopia",
+      "simA": "#8d6d3d",
+      "simB": "#b18c64",
+      "distance": 61,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-error (#d73146) vs --color-success (#3aa85b)",
+      "type": "tritanopia",
+      "simA": "#d53739",
+      "simB": "#589daa",
+      "distance": 197,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-error (#d73146) vs --color-success (#3aa85b)",
+      "type": "achromatopsia",
+      "simA": "#565656",
+      "simB": "#8b8b8b",
+      "distance": 92,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-error (#d73146) vs --color-warning (#ecaa0b)",
+      "type": "protanopia",
+      "simA": "#79725d",
+      "simB": "#ccb517",
+      "distance": 128,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-error (#d73146) vs --color-warning (#ecaa0b)",
+      "type": "deuteranopia",
+      "simA": "#8d6d3d",
+      "simB": "#e6ab10",
+      "distance": 117,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-error (#d73146) vs --color-warning (#ecaa0b)",
+      "type": "tritanopia",
+      "simA": "#d53739",
+      "simB": "#f49ca8",
+      "distance": 153,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-error (#d73146) vs --color-warning (#ecaa0b)",
+      "type": "achromatopsia",
+      "simA": "#565656",
+      "simB": "#adadad",
+      "distance": 151,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-success (#3aa85b) vs --color-warning (#ecaa0b)",
+      "type": "protanopia",
+      "simA": "#a29355",
+      "simB": "#ccb517",
+      "distance": 82,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-success (#3aa85b) vs --color-warning (#ecaa0b)",
+      "type": "deuteranopia",
+      "simA": "#b18c64",
+      "simB": "#e6ab10",
+      "distance": 104,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-success (#3aa85b) vs --color-warning (#ecaa0b)",
+      "type": "tritanopia",
+      "simA": "#589daa",
+      "simB": "#f49ca8",
+      "distance": 156,
+      "indistinguishable": false
+    },
+    {
+      "pair": "--color-success (#3aa85b) vs --color-warning (#ecaa0b)",
+      "type": "achromatopsia",
+      "simA": "#8b8b8b",
+      "simB": "#adadad",
+      "distance": 59,
+      "indistinguishable": false
+    }
+  ]
+}

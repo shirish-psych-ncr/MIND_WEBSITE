@@ -1,0 +1,118 @@
+# Clean public routes (Cloudflare Pages proxy rules)
+
+# Canonical SEO landing pages
+/high-functioning-depression /high-functioning-depression-guide 301
+/index.html / 301
+/psychiatrist-in-greater-noida /psychiatrist-greater-noida 301
+/psychiatrist-noida /psychiatrist-in-noida 301
+/mental-health-clinic-greater-noida /psychiatrist-greater-noida 301
+/mental-health-clinic-noida /psychiatrist-in-noida 301
+/counselling /psychology-counselling 301
+/psychotherapy /therapy 301
+/child-psychiatry /child-development 301
+/mental-health-assessment /assessments 301
+
+# Force HTTPS redirects (single hop, preserving link equity)
+http://mindgracencr.in/* https://mindgracencr.in/:splat 301!
+http://www.mindgracencr.in/* https://mindgracencr.in/:splat 301!
+https://www.mindgracencr.in/* https://mindgracencr.in/:splat 301!
+
+# FIX: replaced <meta http-equiv="refresh"> stub pages with real 301 redirects
+# (meta refresh is ignored by Google and leaks duplicate/indexable pages).
+/child-psychiatry/ /child-development 301
+/counselling/ /psychology-counselling 301
+/mental-health-assessment/ /assessments 301
+/mental-health-clinic-greater-noida/ /psychiatrist-greater-noida 301
+/mental-health-clinic-noida/ /psychiatrist-in-noida 301
+/psychiatrist-in-greater-noida/ /psychiatrist-greater-noida 301
+/psychiatrist-noida/ /psychiatrist-in-noida 301
+/psychotherapy/ /therapy 301
+/blog/iilm-psychology-internship-greater-noida.html /blog/iilm-psychology-internship 301
+# Clean trailing slash (avoids duplicate URL variants)
+/services/ /services 301
+/about/ /about 301
+/contact/ /contact 301
+
+# Trailing-slash canonicalization for all top-level pages
+/aasha/ /aasha 301
+/addiction-substance-use/ /addiction-substance-use 301
+/adhd-autism-assessment/ /adhd-autism-assessment 301
+/approach/ /approach 301
+/assessments/ /assessments 301
+/bipolar-mood-disorders/ /bipolar-mood-disorders 301
+/book/ /book 301
+/child-development/ /child-development 301
+/conditions/ /conditions 301
+/consent/ /consent 301
+/depression-anxiety/ /depression-anxiety 301
+/disclaimer/ /disclaimer 301
+/doctors/ /doctors 301
+/dr-anita-sharma/ /dr-anita-sharma 301
+/emergency/ /emergency 301
+/faq/ /faq 301
+/fees/ /fees 301
+/gallery/ /gallery 301
+/learning-disability-assessment/ /learning-disability-assessment 301
+/location/ /location 301
+/mind-grace/ /mind-grace 301
+/ocd-panic-ptsd/ /ocd-panic-ptsd 301
+/offline /offline.html 200
+/offline/ /offline.html 200
+/privacy/ /privacy 301
+/process/ /process 301
+/psychiatrist-greater-noida/ /psychiatrist-greater-noida 301
+/psychiatrist-in-noida/ /psychiatrist-in-noida 301
+/psychiatry/ /psychiatry 301
+/psychology-counselling/ /psychology-counselling 301
+/psychosis-schizophrenia/ /psychosis-schizophrenia 301
+/resources/ /resources 301
+/sleep-eating-disorders/ /sleep-eating-disorders 301
+/specialized-consultations/ /specialized-consultations 301
+/teleconsultation/ /teleconsultation 301
+/terms/ /terms 301
+/testimonials/ /testimonials 301
+/thank-you/ /thank-you 301
+/therapy/ /therapy 301
+/trauma-grief-support/ /trauma-grief-support 301
+/blog/index.html /blog 301
+
+# Blog articles relocated to clean directory URLs (September 2026)
+/blog/pages/adult/overthinking-vs-anxiety.html /blog/pages/adult/overthinking-vs-anxiety 301
+/blog/pages/adult/scheduled-worry-time-technique.html /blog/pages/adult/scheduled-worry-time-technique 301
+/blog/pages/adult/sleep-and-anxiety-cycle.html /blog/pages/adult/sleep-and-anxiety-cycle 301
+/blog/pages/adult/stimulus-control-therapy.html /blog/pages/adult/stimulus-control-therapy 301
+/blog/pages/adult/when-to-see-a-psychiatrist.html /blog/pages/adult/when-to-see-a-psychiatrist 301
+/blog/pages/child/early-signs-of-autism.html /blog/pages/child/early-signs-of-autism 301
+/blog/pages/child/school-concerns-and-adhd.html /blog/pages/child/school-concerns-and-adhd 301
+/blog/pages/child/sensory-overload-at-home.html /blog/pages/child/sensory-overload-at-home 301
+/blog/pages/child/speech-delay-red-flags.html /blog/pages/child/speech-delay-red-flags 301
+/blog/adult.html /blog/adult 301
+/blog/children.html /blog/children 301
+/high-functioning-depression-guide/hfd-draft.html /high-functioning-depression-guide 301
+/high-functioning-depression/ /high-functioning-depression-guide 301
+
+# Trailing-slash cleanup: legacy /page/ URLs 301 to working /page
+/404/ /404 301
+/blog/adult/ /blog/adult 301
+/blog/children/ /blog/children 301
+/blog/iilm-psychology-internship/ /blog/iilm-psychology-internship 301
+/blog/ /blog 301
+/blog/pages/adult/overthinking-vs-anxiety/ /blog/pages/adult/overthinking-vs-anxiety 301
+/blog/pages/adult/scheduled-worry-time-technique/ /blog/pages/adult/scheduled-worry-time-technique 301
+/blog/pages/adult/sleep-and-anxiety-cycle/ /blog/pages/adult/sleep-and-anxiety-cycle 301
+/blog/pages/adult/stimulus-control-therapy/ /blog/pages/adult/stimulus-control-therapy 301
+/blog/pages/adult/when-to-see-a-psychiatrist/ /blog/pages/adult/when-to-see-a-psychiatrist 301
+/blog/pages/child/early-signs-of-autism/ /blog/pages/child/early-signs-of-autism 301
+/blog/pages/child/school-concerns-and-adhd/ /blog/pages/child/school-concerns-and-adhd 301
+/blog/pages/child/sensory-overload-at-home/ /blog/pages/child/sensory-overload-at-home 301
+/blog/pages/child/speech-delay-red-flags/ /blog/pages/child/speech-delay-red-flags 301
+/depression-in-older-adults/ /depression-in-older-adults 301
+/high-functioning-depression-guide/ /high-functioning-depression-guide 301
+/perceived-burdensomeness/ /perceived-burdensomeness 301
+/sleep-and-autism-guide-indian-parents/ /sleep-and-autism-guide-indian-parents 301
+/tools/butterfly-tapper/ /tools/butterfly-tapper 301
+/tools/eye-movement/ /tools/eye-movement 301
+/tools/guided-breathing/ /tools/guided-breathing 301
+/tools/horizon-scan/ /tools/horizon-scan 301
+/tools/hypnos-fractal/ /tools/hypnos-fractal 301
+/tools/leaf-on-stream/ /tools/leaf-on-stream 301

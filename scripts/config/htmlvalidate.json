@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "html-validate:recommended"
+  ],
+  "rules": {
+    "void-style": "off",
+    "element-no-unused-closing-tag": "off",
+    "wcag/h30": "error",
+    "wcag/h32": "error",
+    "wcag/h36": "error",
+    "wcag/h37": "error",
+    "wcag/h63": "error",
+    "wcag/h67": "error",
+    "wcag/h71": "error",
+    "element-required-attributes": "error",
+    "attribute-allowed-values": "error",
+    "element-permitted-content": "error",
+    "no-implicit-button-type": "error",
+    "require-sri-for": "off",
+    "no-inline-style": "off",
+    "attribute-boolean-style": "off"
+  }
+}

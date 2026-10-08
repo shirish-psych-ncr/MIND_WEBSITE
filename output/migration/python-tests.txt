@@ -1,0 +1,67 @@
+test_astro_file_output_and_isolated_sitemap (test_blog_index.ArticleDiscoveryTests.test_astro_file_output_and_isolated_sitemap) ... ok
+test_finds_articles_anywhere_and_sorts_newest_first (test_blog_index.ArticleDiscoveryTests.test_finds_articles_anywhere_and_sorts_newest_first) ... ok
+test_ignores_unpublished_redirects_and_canonical_aliases (test_blog_index.ArticleDiscoveryTests.test_ignores_unpublished_redirects_and_canonical_aliases) ... ok
+test_schema_only_post_and_complete_build_updates (test_blog_index.ArticleDiscoveryTests.test_schema_only_post_and_complete_build_updates) ... ok
+test_all_jsonld_blocks_site_wide_are_valid (test_crawler_policy.TestAeoContent.test_all_jsonld_blocks_site_wide_are_valid) ... ok
+test_fees_page_faqschema_mirrors_visible_content (test_crawler_policy.TestAeoContent.test_fees_page_faqschema_mirrors_visible_content) ... ok
+test_fees_page_has_comparison_table (test_crawler_policy.TestAeoContent.test_fees_page_has_comparison_table) ... ok
+test_fees_table_numbers_match_visible_cards (test_crawler_policy.TestAeoContent.test_fees_table_numbers_match_visible_cards) ... ok
+test_html_stays_indexable (test_crawler_policy.TestHeadersLayer.test_html_stays_indexable) ... ok
+test_llms_txt_content_type (test_crawler_policy.TestHeadersLayer.test_llms_txt_content_type) ... ok
+test_pdf_noindex_header (test_crawler_policy.TestHeadersLayer.test_pdf_noindex_header) ... ok
+test_robots_cache_within_48h (test_crawler_policy.TestHeadersLayer.test_robots_cache_within_48h) ... ok
+test_links_are_https_canonical (test_crawler_policy.TestLlmsTxt.test_links_are_https_canonical) ... ok
+test_markdown_structure (test_crawler_policy.TestLlmsTxt.test_markdown_structure) ... ok
+test_modular_context_convention_documented (test_crawler_policy.TestLlmsTxt.test_modular_context_convention_documented) ... ok
+test_no_bom_or_nulls (test_crawler_policy.TestLlmsTxt.test_no_bom_or_nulls) ... ok
+test_usage_rights_section (test_crawler_policy.TestLlmsTxt.test_usage_rights_section) ... ok
+test_no_pycache_tracked (test_crawler_policy.TestRepositoryHygiene.test_no_pycache_tracked) ... ok
+test_anthropic_openai_split (test_crawler_policy.TestRobotsArchitecture.test_anthropic_openai_split) ... ok
+test_citation_agents_allowed (test_crawler_policy.TestRobotsArchitecture.test_citation_agents_allowed) ... ok
+test_every_framework_agent_named (test_crawler_policy.TestRobotsArchitecture.test_every_framework_agent_named) ... ok
+test_global_fallback_exists (test_crawler_policy.TestRobotsArchitecture.test_global_fallback_exists) ... ok
+test_google_extended_vs_googlebot (test_crawler_policy.TestRobotsArchitecture.test_google_extended_vs_googlebot) ... ok
+test_longest_match_specificity (test_crawler_policy.TestRobotsArchitecture.test_longest_match_specificity) ... ok
+test_training_scrapers_disallowed (test_crawler_policy.TestRobotsArchitecture.test_training_scrapers_disallowed) ... ok
+test_wildcard_anchor_precision (test_crawler_policy.TestRobotsArchitecture.test_wildcard_anchor_precision) ... ok
+test_assets_never_disallowed (test_crawler_policy.TestRobotsInfrastructure.test_assets_never_disallowed) ... ok
+test_no_bom (test_crawler_policy.TestRobotsInfrastructure.test_no_bom) ... ok
+test_no_inline_comments (test_crawler_policy.TestRobotsInfrastructure.test_no_inline_comments) ... ok
+test_no_null_bytes (test_crawler_policy.TestRobotsInfrastructure.test_no_null_bytes) ... ok
+test_no_sensitive_paths_leaked (test_crawler_policy.TestRobotsInfrastructure.test_no_sensitive_paths_leaked) ... ok
+test_no_trailing_whitespace_on_directives (test_crawler_policy.TestRobotsInfrastructure.test_no_trailing_whitespace_on_directives) ... ok
+test_sitemap_present_https (test_crawler_policy.TestRobotsInfrastructure.test_sitemap_present_https) ... ok
+test_strict_utf8_and_lf (test_crawler_policy.TestRobotsInfrastructure.test_strict_utf8_and_lf) ... ok
+test_under_500kib (test_crawler_policy.TestRobotsInfrastructure.test_under_500kib) ... ok
+test_valid_line_syntax (test_crawler_policy.TestRobotsInfrastructure.test_valid_line_syntax) ... ok
+test_answer_blocks_styled (test_crawler_policy.TestSiteWideAeo.test_answer_blocks_styled) ... ok
+test_blog_articles_carry_in_short_summary (test_crawler_policy.TestSiteWideAeo.test_blog_articles_carry_in_short_summary)
+Decision Rule 1 extended to The Mind Grace Journal: every blog ... ok
+test_core_pages_open_with_direct_answer (test_crawler_policy.TestSiteWideAeo.test_core_pages_open_with_direct_answer) ... ok
+test_defined_term_schema_on_services (test_crawler_policy.TestSiteWideAeo.test_defined_term_schema_on_services) ... ok
+test_every_content_page_carries_extraction_callout (test_crawler_policy.TestSiteWideAeo.test_every_content_page_carries_extraction_callout)
+Site-wide inverted-pyramid guard: every HTML page except the ... ok
+test_every_content_page_opens_with_direct_answer (test_crawler_policy.TestSiteWideAeo.test_every_content_page_opens_with_direct_answer)
+Decision Rule 1 rollout completed site-wide: every indexable ... ok
+test_faq_and_fees_have_direct_answers (test_crawler_policy.TestSiteWideAeo.test_faq_and_fees_have_direct_answers)
+Inverted-pyramid rollout extended to faq.html and fees.html, ... ok
+test_faq_schema_json_file_matches_inline (test_crawler_policy.TestSiteWideAeo.test_faq_schema_json_file_matches_inline)
+faq-schema.json must not drift from the visible FAQPage schema. ... ok
+test_faq_schema_questions_visible_on_page (test_crawler_policy.TestSiteWideAeo.test_faq_schema_questions_visible_on_page)
+Decision Rule 2: FAQPage schema must mirror visible content. ... ok
+test_llms_modular_ecosystem (test_crawler_policy.TestSiteWideAeo.test_llms_modular_ecosystem)
+Decision Rule 3/4: the llms.txt index must link module files that ... ok
+test_no_empty_urls_in_jsonld_site_wide (test_crawler_policy.TestSiteWideAeo.test_no_empty_urls_in_jsonld_site_wide) ... ok
+test_sitemap_matches_indexable_pages (test_crawler_policy.TestSiteWideAeo.test_sitemap_matches_indexable_pages)
+Phase 5 maintenance guard: every sitemap <loc> must resolve to a ... ok
+test_telephone_entity_consistency (test_crawler_policy.TestSiteWideAeo.test_telephone_entity_consistency)
+Decision Rule 10: one canonical phone across every JSON-LD block. ... ok
+test_two_core_comparison_tables_site_wide (test_crawler_policy.TestSiteWideAeo.test_two_core_comparison_tables_site_wide) ... ok
+test_blocked_list_matches_robots_section5 (test_crawler_policy.TestWorkerEdgeBlocking.test_blocked_list_matches_robots_section5) ... ok
+test_citation_agents_never_hard_blocked (test_crawler_policy.TestWorkerEdgeBlocking.test_citation_agents_never_hard_blocked) ... ok
+test_pdf_noindex_and_llms_serving_in_worker (test_crawler_policy.TestWorkerEdgeBlocking.test_pdf_noindex_and_llms_serving_in_worker) ... ok
+
+----------------------------------------------------------------------
+Ran 53 tests in 2.164s
+
+OK

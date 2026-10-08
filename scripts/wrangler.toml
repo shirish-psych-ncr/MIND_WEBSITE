@@ -1,0 +1,11 @@
+# Security proxy for the existing Cloudflare zone. The site itself is built
+# by GitHub Actions and published to GitHub Pages from dist/.
+name = "mind-grace-security-worker"
+main = "worker.js"
+compatibility_date = "2026-09-29"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+[vars]
+ENVIRONMENT = "production"
+# Existing dashboard routes remain managed there; do not recreate them here.
+# For a separate Workers Static Assets deployment use wrangler.site.toml.
