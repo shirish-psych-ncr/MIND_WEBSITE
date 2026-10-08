@@ -18,12 +18,12 @@
       children: [
         ["Home", "/"],
         ["About the clinic", "/about"],
-        ["Dr Anita Sharma", "/dr-anita-sharma"],
-        ["Our care team", "/doctors"]
+        ["Our care team", "/doctors"],
+        ["What to expect", "/process"]
       ]
     },
     {
-      label: "Care and services",
+      label: "Patient care",
       icon: "heart-handshake",
       children: [
         ["Services", "/services"],
@@ -33,8 +33,6 @@
         ["Assessments", "/assessments"],
         ["Therapy and psychotherapy", "/therapy"],
         ["Teleconsultation", "/teleconsultation"],
-        ["Specialized enquiries", "/specialized-consultations"],
-        ["What to expect", "/process"],
         ["Fees and payments", "/fees"],
         {
           label: "Who we support",
@@ -50,14 +48,12 @@
       ]
     },
     {
-      label: "Explore and learn",
+      label: "Academic training",
       icon: "book-open",
       children: [
-        ["Resources", "/resources#tools"],
-        ["Clinic gallery", "/gallery"],
-        ["Patient experiences", "/testimonials"],
-        ["Blog", "/blog"],
-        ["Frequently asked questions", "/faq#common-questions"]
+        ["Psychology internships", "/clinical-psychology-internship"],
+        ["Student resources", "/resources"],
+        ["Research and learning", "/blog"]
       ]
     },
     {
@@ -65,21 +61,15 @@
       icon: "sparkles",
       href: "/resources#tools",
       children: [
-        ["All self-help tools", "/resources#tools"],
-        ["Guided breathing", "/tools/guided-breathing"],
-        ["Butterfly tapper", "/tools/butterfly-tapper"],
-        ["Eye movement", "/tools/eye-movement"],
-        ["Hypnotic fractal", "/tools/hypnos-fractal"],
-        ["Horizon scan", "/tools/horizon-scan"],
-        ["River of Release", "/tools/leaf-on-stream"]
+        ["All self-help tools", "/resources#tools"]
       ]
     },
     {
-      label: "Visit and contact",
+      label: "Contact and safety",
       icon: "map-pin",
       children: [
-        ["Find the clinic", "/location"],
         ["Contact", "/contact"],
+        ["Find the clinic", "/location"],
         ["Emergency help", "/emergency"]
       ]
     }

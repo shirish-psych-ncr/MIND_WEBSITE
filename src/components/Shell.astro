@@ -52,8 +52,8 @@ const academicLinks = [
   <style is:inline>.header-actions { display: none !important; } .no-script-nav { padding: 1rem; display: flex; flex-wrap: wrap; gap: 1rem; background: #fff1f4; } .no-script-nav a { color: #721038; font-weight: 700; }</style>
   <nav class="no-script-nav" aria-label="Navigation without JavaScript">
     {navigation.map(([label, href]) => <a href={href}>{label}</a>)}
-    <strong>Patient care</strong>{patientLinks.map(([label, href]) => <a href={href}>{label}</a>)}<strong>Academic training</strong>{academicLinks.map(([label, href]) => <a href={href}>{label}</a>)}
-    <a href="/teleconsultation">Online consultations</a><a href="/book">Book an appointment</a>
+    <strong>Patient care</strong><a href="/services">Care overview</a><a href="/psychiatry">Psychiatry</a><a href="/therapy">Therapy and counselling</a><a href="/conditions">Conditions</a><a href="/teleconsultation">Teleconsultation</a><strong>Academic training</strong><a href="/clinical-psychology-internship">Psychology internships</a><a href="/resources">Student resources</a><a href="/blog">Research and learning</a>
+    <a href="/book">Book an appointment</a>
     <a href="/emergency">Emergency help</a>
   </nav>
 </noscript>
