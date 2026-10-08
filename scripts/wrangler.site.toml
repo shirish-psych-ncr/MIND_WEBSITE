@@ -1,9 +1,0 @@
-# Optional static-site deployment. The default wrangler.toml is the existing
-# security proxy; do not attach both deployments to the same production route.
-name = "mind-grace-site"
-compatibility_date = "2026-09-29"
-
-[assets]
-directory = "./dist"
-html_handling = "drop-trailing-slash"
-not_found_handling = "404-page"

@@ -11,6 +11,8 @@
     "check:syntax": "node scripts/check-js-syntax.mjs",
     "check:docs": "node scripts/check-markdown.mjs",
     "check": "npm run typecheck && npm run check:syntax && npm run check:docs && npm test && npm run lint:html && npm run build",
+    "check:full": "npm run check",
+    "build:ci": "npm run build",
     "build:min": "node scripts/rebuild_min_css.cjs && node scripts/rebuild_min_js.cjs",
     "audit:responsive": "node scripts/audit_accessibility.cjs",
     "audit:lighthouse": "node scripts/audit_lighthouse.cjs",

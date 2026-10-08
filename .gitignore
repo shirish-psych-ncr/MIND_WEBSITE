@@ -139,6 +139,9 @@ htmlcov/
 # ==========================================
 *.log
 logs/
+.playwright-cli/
+.tmp/
+output/
 *.tmp
 *.temp
 *.swp

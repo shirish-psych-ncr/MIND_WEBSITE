@@ -49,6 +49,8 @@ npm run build:min          # regenerate minified CSS twins (esbuild)
 npm test                   # python unittest suite
 npm run typecheck          # Astro and TypeScript diagnostics
 npm run check              # full type, syntax, test, lint, build, and schema gate
+npm run build:ci           # shipping path: build, generated indexes, and build validation
+npm run check:full         # optional exhaustive pre-release quality suite
 npm run audit:console      # browser smoke test; requires dist served on port 8765
 npm run clean              # delete generated audit dirs & __pycache__
 ```
@@ -58,9 +60,9 @@ npm run clean              # delete generated audit dirs & __pycache__
 - Static host: GitHub Pages behind Cloudflare. GitHub Pages ignores repository
   `_headers` and `_redirects`; the Worker and Pages Actions workflow own the
   production behavior.
-- Security headers via Cloudflare Worker: see `DEPLOYMENT_GUIDE.md`, `QUICK_START` steps inside `CLOUDFLARE_AGENT_SETUP.md`.
+- Security headers via Cloudflare Worker: see `DEPLOYMENT_GUIDE.md`; historical setup notes are in `docs/archive/CLOUDFLARE_AGENT_SETUP.md`.
 - Analytics: GA4/GTM remain in page templates. Amplitude and Zaraz are retired;
-  their guides are retained only as historical rollback records.
+  their guides are retained in `docs/archive/` only as historical rollback records.
 - Translation widget setup: `GOOGLE_TRANSLATE_SETUP.md`; crawler policy: `CRAWLER_POLICY.md`.
 
 ## Conventions
