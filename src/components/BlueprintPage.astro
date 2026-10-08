@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+interface Section { title: string; paragraphs: string[]; bullets?: string[] }
+interface LinkItem { label: string; href: string }
+interface Props { title: string; description: string; canonical: string; kicker: string; answer: string; sections: Section[]; links: LinkItem[]; faq?: { question: string; answer: string }[] }
+const { title, description, canonical, kicker, answer, sections, links, faq = [] } = Astro.props;
+const faqJson = faq.length ? `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })}</script>` : '';
+const headExtra = String.raw`<link rel="canonical" href="${canonical}"><title>${title}</title><meta name="description" content="${description}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:type" content="website"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">${faqJson}`;
+---
+<Layout headExtra={headExtra}>
+  <main id="main-content" class="seo-page blueprint-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{kicker}</span></nav>
+    <section class="seo-hero"><p class="seo-kicker">{kicker}</p><h1>{title}</h1><div class="seo-answer"><strong>Direct answer:</strong> {answer}</div><p class="seo-lead">Mind Grace provides information to help you decide what to ask about next. Diagnosis, suitability, treatment, and follow-up are discussed individually.</p></section>
+    {sections.map((section) => <section class="seo-section"><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}{section.bullets && <ul>{section.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}</section>)}
+    {faq.length > 0 && <section class="seo-section" aria-labelledby="faq-title"><h2 id="faq-title">Common questions</h2>{faq.map((item) => <article class="seo-card"><h3>{item.question}</h3><p>{item.answer}</p></article>)}</section>}
+    <section class="seo-section"><h2>Related pathways</h2><div class="seo-actions">{links.map((link) => <a class="btn btn-outline" href={link.href}>{link.label}</a>)}</div></section>
+  </main>
+</Layout>

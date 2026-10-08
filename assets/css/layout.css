@@ -149,6 +149,12 @@ body.compact-nav .mobile-nav-trigger{display:flex}
   color:var(--color-primary);
 }
 
+.desktop-nav .nav-funnel{position:relative;display:flex;align-items:center;height:100%;}
+.desktop-nav .nav-funnel>span{color:var(--color-text-secondary);font-weight:600;font-size:var(--font-size-sm);padding:var(--space-2) var(--space-4);cursor:default;}
+.desktop-nav .nav-funnel-menu{position:absolute;top:calc(100% - 2px);left:0;display:none;min-width:220px;padding:var(--space-2);background:var(--color-bg-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);z-index:20;flex-direction:column;align-items:stretch;gap:0;}
+.desktop-nav .nav-funnel:hover .nav-funnel-menu,.desktop-nav .nav-funnel:focus-within .nav-funnel-menu{display:flex;}
+.desktop-nav .nav-funnel-menu a{display:flex;width:100%;white-space:nowrap;}
+
 .desktop-nav .btn{
   background:var(--gradient-pink);
   color:var(--color-text-inverse);

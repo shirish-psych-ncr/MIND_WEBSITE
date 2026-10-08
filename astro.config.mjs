@@ -15,5 +15,8 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   devToolbar: { enabled: false },
-  prefetch: { prefetchAll: false },
+  // The site does not opt into Astro view transitions or link prefetching.
+  // Disabling the integration avoids shipping an unused module on every page
+  // and prevents browser preload/credentials warnings.
+  prefetch: false,
 });

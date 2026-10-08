@@ -58,7 +58,6 @@ const PRECACHE_URLS = [...new Set([...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSE
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Caching core assets and tools');
       return Promise.allSettled(
         PRECACHE_URLS.map((url) =>
           cache.add(new Request(url, { cache: 'reload' })).catch((err) => {

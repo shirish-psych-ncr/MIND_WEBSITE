@@ -13,11 +13,22 @@
 const navigation = [
   ['Home', '/'],
   ['About', '/about'],
-  ['Services', '/services'],
-  ['What to expect', '/process'],
-  ['Resources', '/resources'],
-  ['Location', '/location'],
+  ['Patient care', '/services'],
+  ['Academic training', '/clinical-psychology-internship'],
+  ['Online consultations', '/teleconsultation'],
   ['Contact', '/contact'],
+];
+const patientLinks = [
+  ['Psychiatry', '/psychiatry'],
+  ['Therapy and counselling', '/therapy'],
+  ['Conditions', '/conditions'],
+  ['Assessments', '/assessments'],
+  ['Teleconsultation', '/teleconsultation'],
+];
+const academicLinks = [
+  ['Psychology internship', '/clinical-psychology-internship'],
+  ['Student resources', '/resources'],
+  ['Research and learning', '/blog'],
 ];
 ---
 <aside class="emergency-banner emergency-banner--static" role="note" aria-labelledby="emergency-notice-title"><div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div></aside>
@@ -28,7 +39,7 @@ const navigation = [
       <img class="logo-img" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
       <span class="logo-copy"><span class="logo-text" id="site-logo-name">Mind Grace</span><span class="logo-tagline">Neuropsychiatric Clinic | Where You Come First</span></span>
     </a>
-    <nav class="desktop-nav" aria-label="Main navigation"><ul>{navigation.map(([label, href]) => <li><a href={href}>{label}</a></li>)}<li><a class="btn btn--primary" href="/book">Book an appointment</a></li></ul></nav>
+    <nav class="desktop-nav" aria-label="Main navigation"><ul>{navigation.slice(0, 2).map(([label, href]) => <li><a href={href}>{label}</a></li>)}<li class="nav-funnel"><span>Patient care</span><ul class="nav-funnel-menu">{patientLinks.map(([label, href]) => <li><a href={href}>{label}</a></li>)}</ul></li><li class="nav-funnel"><span>Academic training</span><ul class="nav-funnel-menu">{academicLinks.map(([label, href]) => <li><a href={href}>{label}</a></li>)}</ul></li><li><a href="/teleconsultation">Online consultations</a></li><li><a href="/contact">Contact</a></li><li><a class="btn btn--primary" href="/book">Book an appointment</a></li></ul></nav>
     <div class="header-actions">
       <button type="button" class="accessibility-toggle" id="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-panel">Accessibility</button>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Use dark theme"><i data-lucide="moon" aria-hidden="true"></i><span class="visually-hidden">Dark theme</span></button>
@@ -41,7 +52,8 @@ const navigation = [
   <style is:inline>.header-actions { display: none !important; } .no-script-nav { padding: 1rem; display: flex; flex-wrap: wrap; gap: 1rem; background: #fff1f4; } .no-script-nav a { color: #721038; font-weight: 700; }</style>
   <nav class="no-script-nav" aria-label="Navigation without JavaScript">
     {navigation.map(([label, href]) => <a href={href}>{label}</a>)}
-    <a href="/book">Book an appointment</a>
+    <strong>Patient care</strong>{patientLinks.map(([label, href]) => <a href={href}>{label}</a>)}<strong>Academic training</strong>{academicLinks.map(([label, href]) => <a href={href}>{label}</a>)}
+    <a href="/teleconsultation">Online consultations</a><a href="/book">Book an appointment</a>
     <a href="/emergency">Emergency help</a>
   </nav>
 </noscript>
