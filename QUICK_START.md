@@ -1,91 +1,57 @@
-# 🚀 Quick Start: Deploy Security Headers in 5 Minutes
+# Quick start
 
-## Prerequisites
-- Node.js installed (v16 or higher)
-- Cloudflare account (free at https://cloudflare.com/signup)
-- Access to mindgracencr.in domain settings
+## Requirements
 
-## Step-by-Step Deployment
+- Node.js version from `.nvmrc`
+- Python 3.12
+- Git
 
-### 1. Install Wrangler CLI
+## Install and verify
+
 ```bash
-npm install -g wrangler
+npm ci
+npm run check
 ```
 
-### 2. Login to Cloudflare
+`npm run check` is the required local and CI gate. It runs Astro typechecking, JavaScript syntax checks, Python and Worker tests, HTML linting, the production build, structured-data validation, and generated-route validation.
+
+## Develop
+
 ```bash
-wrangler login
+npm run dev
 ```
-This opens a browser window. Click "Allow" when prompted.
 
-### 3. Deploy the Security Worker
+For a production-style preview:
+
 ```bash
-cd /workspace
-wrangler deploy worker.js --name mind-grace-security-worker
+npm run build
+npm run preview
 ```
 
-### 4. Add Route in Cloudflare Dashboard
-1. Go to https://dash.cloudflare.com
-2. Navigate to **Workers & Pages** → **mind-grace-security-worker**
-3. Click **Add route**
-4. Enter: `mindgracencr.in/*`
-5. Select your zone: `mindgracencr.in`
-6. Click **Add route**
+Public URLs are slash-free and extension-free. The build itself uses file output, such as `dist/fees.html`; the production edge maps `/fees` to that file.
 
-### 5. Verify Headers Are Working
+## Browser console smoke test
+
+Serve the completed build on port 8765:
+
 ```bash
-curl -I https://mindgracencr.in/
+python -m http.server 8765 --bind 127.0.0.1 --directory dist
 ```
 
-You should see:
-```
-HTTP/2 200 
-strict-transport-security: max-age=63072000; includeSubDomains; preload
-x-frame-options: DENY
-x-content-type-options: nosniff
-content-security-policy: default-src 'self'; ...
-referrer-policy: strict-origin-when-cross-origin
-permissions-policy: geolocation=(), microphone=(), camera=()
+In a second terminal, run:
+
+```bash
+npm run audit:console
 ```
 
-## ✅ Done! Your site now has enterprise-grade security headers.
+## Deploy
 
-## Next Steps (Optional but Recommended)
+Pushes to `main` are built and published by `.github/workflows/publish-site.yml`. Only `dist/` is deployable. GitHub Pages must use GitHub Actions rather than legacy branch publishing.
 
-### Migrate to Cloudflare Pages for Better Performance
-1. Go to **Workers & Pages** → **Create application** → **Pages**
-2. Connect your GitHub repository
-3. Build settings:
-   - **Build command**: Leave blank
-   - **Build output directory**: `/`
-4. Click **Deploy**
-5. In **Settings** → **Functions** → Upload `_headers` file content
+Cloudflare security routing is a separate deployment:
 
-### Set Up Automatic Deploys
-The worker will update automatically when you push to GitHub if you:
-1. Connect your repo to Cloudflare Pages
-2. Enable automatic deployments in Settings
+```bash
+npx wrangler deploy --config wrangler.toml
+```
 
-## Troubleshooting
-
-**Error: "Zone not found"**
-- Make sure you've added your domain to Cloudflare first
-- Go to **Websites** → **Add site** → Enter `mindgracencr.in`
-- Update your nameservers at your domain registrar
-
-**Headers not appearing?**
-- Wait 2-3 minutes for propagation
-- Clear your browser cache
-- Try incognito mode
-- Check that the route is active in Workers dashboard
-
-**Need help?**
-- Full guide: See `DEPLOYMENT_GUIDE.md`
-- Cloudflare support: https://support.cloudflare.com
-- Worker docs: https://developers.cloudflare.com/workers/
-
----
-
-**Cost**: FREE (Cloudflare free tier includes 100,000 requests/day)  
-**Time**: 5-10 minutes  
-**Impact**: Fixes ALL security header issues reported in audits
+Authentication and production deployment are explicit operator actions. A local build does not prove that GitHub Pages or Cloudflare is current. See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md).

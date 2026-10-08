@@ -39,3 +39,23 @@ test('www and HTTP requests share the HTTPS canonical host', async () => {
   const response = await worker.fetch(new Request('http://www.mindgracencr.in/services/'));
   assert.equal(response.headers.get('location'), 'https://mindgracencr.in/services');
 });
+
+test('CSP permits every Google Analytics connection endpoint used in production', async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => new Response('origin');
+  try {
+    const response = await worker.fetch(new Request('https://mindgracencr.in/'));
+    const policy = response.headers.get('Content-Security-Policy') ?? '';
+    const connectSource = policy.split(';').find((directive) => directive.trim().startsWith('connect-src')) ?? '';
+    for (const origin of [
+      'https://*.google-analytics.com',
+      'https://*.analytics.google.com',
+      'https://stats.g.doubleclick.net',
+      'https://www.google.com',
+    ]) {
+      assert.match(connectSource, new RegExp(origin.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+    }
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});

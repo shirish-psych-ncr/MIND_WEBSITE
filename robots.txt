@@ -6,9 +6,9 @@
 # Syntax: RFC 9309 compliant. Longest matching path wins; on equal length,
 # Allow overrides Disallow. Comments are always on their own lines - never
 # inline after a directive (trailing text can be parsed as part of the path).
-# Policy (2026 AI crawler framework): ALLOW traditional search + real-time AI
-# citation/retrieval agents; DISALLOW foundational LLM training scrapers and
-# aggressive/unverified harvesters. This is a public clinic website: there are
+# Policy (2026 AI crawler framework): ALLOW traditional search, real-time AI
+# citation/retrieval agents, training crawlers, and named harvesters. This is a
+# public clinic website: there are
 # no private admin/API surfaces, so nothing sensitive is listed here (a
 # robots.txt is public and must never be used as a security map).
 # Note: Cloudflare "Bot Fight Mode" / managed AI-training block at the network
@@ -91,59 +91,57 @@ User-agent: DuckAssistBot
 Allow: /
 
 # ==============================================================================
-# SECTION 4: AI MODEL TRAINING SCRAPERS (DISALLOW)
-# Mass ingestion for foundational LLM training with no traffic return.
+# SECTION 4: AI MODEL TRAINING SCRAPERS (ALLOW)
+# These agents are explicitly allowed under the site's current open policy.
 # Google-Extended affects only Gemini training - it does NOT affect standard
 # Google Search indexing (handled by Googlebot in Section 2).
 # ==============================================================================
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
 
 User-agent: Applebot-Extended
-Disallow: /
+Allow: /
 
 User-agent: Meta-ExternalAgent
-Disallow: /
+Allow: /
 
 User-agent: FacebookBot
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 User-agent: Cohere-AI
-Disallow: /
+Allow: /
 
 # ==============================================================================
-# SECTION 5: AGGRESSIVE & UNVERIFIED HARVESTERS (DISALLOW)
-# Heavy, non-attributing scraping networks; protects bandwidth. For the most
-# abusive agents (e.g., Bytespider) this text-level request is backed by a
-# hard network-edge block (Cloudflare WAF / worker UA rule returning 403),
-# because robots.txt compliance is voluntary.
+# SECTION 5: NAMED HARVESTERS (ALLOW)
+# These agents are explicitly allowed at the robots.txt layer. Separate edge
+# controls may still rate-limit or reject abusive traffic operationally.
 # ==============================================================================
 User-agent: Bytespider
-Disallow: /
+Allow: /
 
 User-agent: Diffbot
-Disallow: /
+Allow: /
 
 User-agent: PetalBot
-Disallow: /
+Allow: /
 
 User-agent: Scrapy
-Disallow: /
+Allow: /
 
 User-agent: aiHitBot
-Disallow: /
+Allow: /
 
 User-agent: BittorrentBot
-Disallow: /
+Allow: /
 
 # ==============================================================================
 # SECTION 6: GLOBAL FALLBACK

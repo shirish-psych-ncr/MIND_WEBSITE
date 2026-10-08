@@ -36,14 +36,6 @@ const TOOLS_ASSETS = [
 ];
 
 // Analytics bootstrap + vendored Amplitude Browser SDK (Zoning Insights
-// compatible, >= v2.39.0). Cached so tracking scripts never re-hit the
-// network on repeat visits; ingestion itself is always network-only.
-const ANALYTICS_ASSETS = [
-  '/assets/js/min/amplitude-analytics.min.js',
-  '/assets/js/min/amplitude-init.min.js',
-  '/assets/vendor/min/amplitude-2.47.0.min.js'
-];
-
 // Translation controls are local; following a Google Translate link requires a network.
 const TRANSLATE_ASSETS = [
   '/assets/css/min/translate.min.css',
@@ -52,7 +44,7 @@ const TRANSLATE_ASSETS = [
 ];
 
 // All URLs to pre-cache on install
-const PRECACHE_URLS = [...new Set([...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...ANALYTICS_ASSETS, ...TRANSLATE_ASSETS, '/offline'])];
+const PRECACHE_URLS = [...new Set([...CORE_ASSETS, ...TOOLS_PAGES, ...TOOLS_ASSETS, ...TRANSLATE_ASSETS, '/offline'])];
 
 /**
  * Install event - cache core assets and tools

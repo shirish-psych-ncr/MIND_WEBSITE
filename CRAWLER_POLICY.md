@@ -77,12 +77,12 @@ emergency-helpline precedence).
 
 ### 4. AEO content layer (on-page extraction triggers)
 
-- **Tabular data prioritization:** `fees.html` carries a clean, semantic
+- **Tabular data prioritization:** `/fees` carries a clean, semantic
   comparison `<table>` (caption + thead + row headers) mirroring the pricing
-  cards - ₹900 initial psychiatric consultation, ₹700 follow-up, ₹500–₹700
-  Aasha therapy, ₹2,000–₹8,000 assessments. AI engines preferentially extract
+  cards: ₹900 psychiatric consultation, ₹1,000 therapy and counselling, ₹700
+  Aasha sessions, and ₹1,500 to ₹8,000 assessments. AI engines preferentially extract
   well-formed tables into generated comparison answers.
-- **FAQPage schema that mirrors visible content:** `fees.html` now emits
+- **FAQPage schema that mirrors visible content:** `/fees` emits
   FAQPage JSON-LD whose questions/answers restate only facts already visible
   on the page (no hidden data, per Google's structured-data policy). The test
   suite validates every JSON-LD block site-wide parses as strict JSON and
@@ -96,7 +96,7 @@ emergency-helpline precedence).
 ### 5. Validation & maintenance cycle
 
 ```bash
-python -m unittest discover -s tests -v   # 51 checks, runs in CI on every push
+npm test   # 53 Python checks plus 3 Worker routing checks
 ```
 
 The suite re-implements RFC 9309 matching (longest path wins; equal length

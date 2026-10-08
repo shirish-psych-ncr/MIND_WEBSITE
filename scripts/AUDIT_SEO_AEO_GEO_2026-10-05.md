@@ -1,5 +1,11 @@
 # SEO / AEO / GEO Audit — mindgracencr.in (Mind Grace Neuropsychiatric Clinic)
 
+> Historical audit snapshot from 5 October 2026. Its findings are not a current
+> defect list. The clinic entity duplication, incomplete physician data,
+> Amplitude errors, Zaraz runtime, crawler-policy inconsistencies, and build
+> validation issues described below were remediated by 9 October 2026. Use
+> `npm run check` and `docs/STRUCTURED_DATA.md` for current verification.
+
 **Date:** 2026-10-05 · **Scope:** Astro source (`src/pages/**`, 66 routes), `public/` assets (`robots.txt`, `sitemap.xml`, `llms*.txt`, `faq-schema.json`, `_headers`, `_redirects`, `worker.js`, `sw.js`) · **Method:** static analysis with Python stdlib only (no Node modules installed). All findings verified against actual file contents, not assumptions.
 
 Legend: 🔴 critical · 🟠 high · 🟡 medium · 🟢 low/polish · ✅ strength

@@ -14,7 +14,7 @@ metadata:
 
 Analyse the HTML page for heading structure, keyword usage, and link health.
 
-> **Note**: This skill owns **internal link analysis**. For external/outbound link strategy (dofollow/nofollow, anchor text quality, domain diversity), see the [backlink-monitoring](../backlink-monitoring/SKILL.md) skill.
+> **Note**: This skill owns **internal link analysis**. The previously referenced backlink-monitoring skill is not installed in this repository; handle external-link strategy separately.
 
 ## 1. Heading validation
 

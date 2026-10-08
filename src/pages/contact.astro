@@ -91,17 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/icon-512.png">
   <!-- Security.txt for vulnerability disclosure -->
-  <link rel="security.txt" href="/.well-known/security.txt">
-
-<!-- Zaraz disabled: queue-loop perf issue (see audit 6.7) -->
-<!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
-<script defer data-cfasync="false" src="/assets/vendor/min/amplitude-2.47.0.min.js"></script>
-<script defer data-cfasync="false" src="/assets/js/min/amplitude-analytics.min.js"></script>
-<script defer data-cfasync="false" src="/assets/js/min/amplitude-init.min.js"></script>
-
-
-
-<script id="mindgrace-static-clinic-schema" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": ["MedicalClinic", "LocalBusiness"], "@id": "https://mindgracencr.in/#clinic", "name": "Mind Grace Neuropsychiatric Clinic", "url": "https://mindgracencr.in/", "telephone": "+91-96678-63295", "priceRange": "₹₹", "image": "https://mindgracencr.in/assets/images/og-image.webp", "address": {"@type": "PostalAddress", "streetAddress": "J123, Gamma II", "addressLocality": "Greater Noida", "addressRegion": "Uttar Pradesh", "postalCode": "201310", "addressCountry": "IN"}, "geo": {"@type": "GeoCoordinates", "latitude": 28.4910152, "longitude": 77.5132324}, "areaServed": ["Greater Noida", "Noida", "Delhi NCR", "Uttar Pradesh", "India"], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "16:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "17:30", "closes": "19:30"}], "hasMap": "https://www.google.com/maps/search/?api=1&query=Mind+Grace+Neuropsychiatric+Clinic+Greater+Noida", "logo": "/assets/images/mind-grace-clinic-logo-pink.svg", "description": "Expert neuropsychiatric care for children and adults in Greater Noida", "paymentAccepted": "Cash, UPI, Card"}, {"@context": "https://schema.org", "@type": "WebPage", "@id": "https://mindgracencr.in/contact#webpage", "url": "https://mindgracencr.in/contact", "name": "Contact a Psychiatrist in Greater Noida | Mind Grace Clinic", "description": "Contact Mind Grace Neuropsychiatric Clinic in Gamma II, Greater Noida. Find phone numbers, WhatsApp, clinic hours, and directions for your visit.", "isPartOf": {"@id": "https://mindgracencr.in/#website"}, "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".seo-answer", ".blog-answer", ".lead"]}, "about": {"@id": "https://mindgracencr.in/#clinic"}},{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://mindgracencr.in/#website", "url": "https://mindgracencr.in/", "name": "Mind Grace Neuropsychiatric Clinic", "inLanguage": "en-IN", "publisher": {"@id": "https://mindgracencr.in/#clinic"}}]}</script>`;
+  <link rel="security.txt" href="/.well-known/security.txt">`;
 const bodyStart = String.raw`<aside class="emergency-banner emergency-banner--static" role="note" aria-labelledby="emergency-notice-title"><div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div></aside>`;
 ---
 
@@ -112,8 +102,6 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
 <!-- End Google Tag Manager (noscript) -->
 
   <div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status-message"></span></div>
-
-<script type="application/ld+json">{"@id": "https://mindgracencr.in/#clinic"}</script>
   <!-- EMERGENCY BANNER WITH MARQUEE -->
   
 
@@ -127,7 +115,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
     <div class="mobile-nav-header">
       <h2>Menu</h2>
       <button type="button" class="close-mobile-menu" aria-label="Close menu">
-        <i data-lucide="x" width="24" height="24" aria-hidden="true"></i>
+        <i data-lucide="x" style="width:24px;height:24px" aria-hidden="true"></i>
       </button>
     </div>
     <div class="mobile-nav-content">
@@ -206,7 +194,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
     <section class="section-padded bg-warning">
       <div class="container-narrow">
         <div class="alert alert-warning">
-          <i data-lucide="alert-triangle" class="alert-icon" width="24" height="24" aria-hidden="true"></i>
+          <i data-lucide="alert-triangle" class="alert-icon" style="width:24px;height:24px" aria-hidden="true"></i>
           <div>
             <strong>Emergency Notice:</strong> For medical emergencies or crisis situations, call 112 immediately or go to the nearest hospital emergency room. This clinic does not provide emergency services.
           </div>
@@ -222,7 +210,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
           <!-- Phone Card -->
           <div class="contact-card">
             <div class="contact-icon">
-              <i data-lucide="mail" width="32" height="32" aria-hidden="true"></i>
+              <i data-lucide="mail" style="width:32px;height:32px" aria-hidden="true"></i>
             </div>
             <h3>Email</h3>
             <p class="contact-detail">
@@ -235,7 +223,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
           <!-- Address Card -->
           <div class="contact-card">
             <div class="contact-icon">
-              <i data-lucide="clock" width="32" height="32" aria-hidden="true"></i>
+              <i data-lucide="clock" style="width:32px;height:32px" aria-hidden="true"></i>
             </div>
             <h3>Clinic Hours</h3>
             <p class="contact-detail">
@@ -250,7 +238,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
           <!-- Emergency Card -->
           <div class="contact-card contact-card-emergency">
             <div class="contact-icon">
-              <i data-lucide="clipboard-check" width="32" height="32" aria-hidden="true"></i>
+              <i data-lucide="clipboard-check" style="width:32px;height:32px" aria-hidden="true"></i>
             </div>
             <h3>First-Visit Process</h3>
             <p>See what usually happens before, during, and after the first consultation.</p>
@@ -283,16 +271,16 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
     // Year update
     const yearEl = document.getElementById('year');
     if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
+      yearEl.textContent = String(new Date().getFullYear());
     }
 
     // Form validation hook
     const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
+    if (contactForm instanceof HTMLFormElement) {
+      contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         // Basic validation
-        const requiredFields = this.querySelectorAll('[required]');
+        const requiredFields = contactForm.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[required]');
         let isValid = true;
 
         requiredFields.forEach(field => {
@@ -306,7 +294,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
 
         if (isValid) {
           alert('Thank you for your message! We will respond within 24-48 hours.');
-          this.reset();
+          contactForm.reset();
         } else {
           alert('Please fill in all required fields.');
         }

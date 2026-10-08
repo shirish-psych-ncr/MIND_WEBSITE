@@ -1,5 +1,10 @@
 # 🎯 Website Optimization Summary - mindgracencr.in
 
+> Historical optimization snapshot. Checklist items below are retained as an
+> audit trail and must not be read as current open work. As of 9 October 2026,
+> shared structured data is centralized and the full `npm run check` pipeline
+> passes. See `docs/README.md` for current guidance.
+
 ## ✅ COMPLETED TASKS
 
 ### 1. Security Headers Solution (CRITICAL)

@@ -1,2 +1,5 @@
 import { execFileSync } from 'node:child_process';
-execFileSync(process.env.PYTHON || 'python', ['scripts/validate_build.py'], {stdio:'inherit'});
+
+execFileSync(process.execPath, ['scripts/run-python.mjs', 'scripts/validate_build.py'], {
+  stdio: 'inherit',
+});

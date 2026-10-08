@@ -18,14 +18,8 @@ const themeInit = `try{const t=localStorage.getItem('mindgrace-theme');document.
 ---
 
 <meta name="color-scheme" content="light dark">
-<!-- CSP NOTE: the Content-Security-Policy for this site is delivered via HTTP
-     headers from two places that must stay in sync: `/_headers` (Pages/CDN)
-     and `worker.js` (Cloudflare Worker). If a CSP is ALSO configured in the
-     Cloudflare Dashboard (Security > WAF / Transform Rules), update it there
-     manually too — no <meta> CSP is emitted from this layout.
-     TODO (Cloudflare Dashboard): verify connect-src/script-src allow
-     https://*.amplitude.com, https://api2.amplitude.com and
-     https://analytics.ahrefs.com; disable Zaraz if unused. -->
+<!-- The HTTP CSP is maintained in `/_headers` and `worker.js`. No meta CSP is
+     emitted here. Keep any Cloudflare Dashboard header rule in sync. -->
 <!-- FIX (Rocket Loader): data-cfasync="false" keeps these critical scripts in
      their declared execution order and prevents Cloudflare Rocket Loader from
      deferring/rewriting them (theme bootstrap runs before paint; translate +

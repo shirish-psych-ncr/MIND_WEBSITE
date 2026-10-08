@@ -195,16 +195,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
     
 
-<!-- Cloudflare Zaraz Tracking -->
-<!-- Zaraz disabled: queue-loop perf issue (see audit 6.7) -->
-<!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
-<script defer data-cfasync="false" src="/assets/vendor/min/amplitude-2.47.0.min.js"></script>
-<script defer data-cfasync="false" src="/assets/js/min/amplitude-analytics.min.js"></script>
-<script defer data-cfasync="false" src="/assets/js/min/amplitude-init.min.js"></script>
-
-
-
-<script id="mindgrace-static-clinic-schema" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": ["MedicalClinic", "LocalBusiness"], "@id": "https://mindgracencr.in/#clinic", "name": "Mind Grace Neuropsychiatric Clinic", "url": "https://mindgracencr.in/", "telephone": "+91-96678-63295", "priceRange": "₹₹", "image": "https://mindgracencr.in/assets/images/og-image.webp", "address": {"@type": "PostalAddress", "streetAddress": "J123, Gamma II", "addressLocality": "Greater Noida", "addressRegion": "Uttar Pradesh", "postalCode": "201310", "addressCountry": "IN"}, "geo": {"@type": "GeoCoordinates", "latitude": 28.4910152, "longitude": 77.5132324}, "areaServed": ["Greater Noida", "Noida", "Delhi NCR", "Uttar Pradesh", "India"], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "16:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "17:30", "closes": "19:30"}], "hasMap": "https://www.google.com/maps/search/?api=1&query=Mind+Grace+Neuropsychiatric+Clinic+Greater+Noida", "sameAs": ["https://www.facebook.com/mindgracencr", "https://www.instagram.com/mindgracencr"], "logo": "https://mindgracencr.in/assets/images/mind-grace-clinic-logo-pink.svg", "description": "Neuropsychiatric and child-development consultations in Greater Noida for adults, children, adolescents, and families.", "isAcceptingNewPatients": true, "medicalSpecialty": ["Psychiatry", "Child and Adolescent Psychiatry", "Clinical Psychology", "Counseling"], "availableService": ["Psychiatric Consultation", "Psychological Counseling", "Mental Health Assessment", "Crisis Intervention", "Medication Management"], "provider": {"@type": "Physician", "name": "Dr. Anita Sharma", "medicalSpecialty": "Psychiatry", "knowsLanguage": ["English", "Hindi"]}}, {"@context": "https://schema.org", "@type": "WebPage", "@id": "https://mindgracencr.in#webpage", "url": "https://mindgracencr.in/", "name": "Psychiatrist in Greater Noida | Mind Grace Clinic", "description": "Mind Grace offers psychiatric, child-development, and counselling consultations in Gamma II, Greater Noida. Clear fees and straightforward first-visit process.", "isPartOf": {"@id": "https://mindgracencr.in/#website"}, "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".seo-answer", ".blog-answer", ".lead"]}, "about": {"@id": "https://mindgracencr.in/#clinic"}}, {"@type": "WebSite", "@id": "https://mindgracencr.in/#website", "url": "https://mindgracencr.in/", "name": "Mind Grace Neuropsychiatric Clinic", "inLanguage": "en-IN", "publisher": {"@id": "https://mindgracencr.in/#clinic"}}]}</script>`;
+<!-- Cloudflare Zaraz Tracking -->`;
 const bodyStart = String.raw`<aside class="emergency-banner emergency-banner--static" role="note" aria-labelledby="emergency-notice-title"><div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div></aside>`;
 ---
 
@@ -401,7 +392,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
   <script src="/assets/js/min/crisis-banner.min.js" defer></script>
   <!-- Simple script for the dynamic year in this legacy homepage shell. -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => { const year = document.getElementById('year'); if (year) year.textContent = new Date().getFullYear(); });
+    document.addEventListener('DOMContentLoaded', () => { const year = document.getElementById('year'); if (year) year.textContent = String(new Date().getFullYear()); });
     // Mobile nav toggle logic should be implemented in /assets/js/main.js
   </script>
 </Layout>

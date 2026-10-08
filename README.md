@@ -1,6 +1,6 @@
-# Mind Grace NCR — Website
+# Mind Grace NCR website
 
-Static site for the Mind Grace psychiatric & psychology clinic (Delhi NCR).
+Static site for the Mind Grace psychiatry and psychology clinic in Delhi NCR.
 Plain HTML/CSS/JS shipped from `src/pages/` (Astro-format `.astro` shells), plus interactive tools under `/tools/`, a blog under `/blog/`, and Cloudflare edge code (`worker.js`, `sw.js`).
 
 ## Astro build and deployment
@@ -15,7 +15,7 @@ GitHub Pages must use **GitHub Actions**, not the legacy branch/Jekyll source.
 The workflow publishes `dist/`. Cloudflare's existing security proxy is separate:
 `wrangler.toml` deploys `worker.js`; `wrangler.site.toml` is an optional static-site
 deployment and must not compete for the same production domain.
-See [ASTRO_REPAIR_NOTES.md](ASTRO_REPAIR_NOTES.md) for verification and routing details.
+See [the documentation index](docs/README.md) for current operational guidance.
 
 ## Repository layout
 
@@ -47,14 +47,20 @@ npm run report             # aggregate all JSON outputs -> output/a11y-lint/REPO
 npm run lint:html          # html-validate on offline.html
 npm run build:min          # regenerate minified CSS twins (esbuild)
 npm test                   # python unittest suite
+npm run typecheck          # Astro and TypeScript diagnostics
+npm run check              # full type, syntax, test, lint, build, and schema gate
+npm run audit:console      # browser smoke test; requires dist served on port 8765
 npm run clean              # delete generated audit dirs & __pycache__
 ```
 
 ## Deployment notes
 
-- Static host: GitHub Pages / Netlify (`_headers`, `_redirects` apply there).
+- Static host: GitHub Pages behind Cloudflare. GitHub Pages ignores repository
+  `_headers` and `_redirects`; the Worker and Pages Actions workflow own the
+  production behavior.
 - Security headers via Cloudflare Worker: see `DEPLOYMENT_GUIDE.md`, `QUICK_START` steps inside `CLOUDFLARE_AGENT_SETUP.md`.
-- Analytics: Zaraz (see `ZARAZ_TRACKING_GUIDE.md`); Amplitude init in `assets/js/amplitude-*.js`.
+- Analytics: GA4/GTM remain in page templates. Amplitude and Zaraz are retired;
+  their guides are retained only as historical rollback records.
 - Translation widget setup: `GOOGLE_TRANSLATE_SETUP.md`; crawler policy: `CRAWLER_POLICY.md`.
 
 ## Conventions
@@ -62,3 +68,5 @@ npm run clean              # delete generated audit dirs & __pycache__
 - Never edit `assets/**/min/*.min.css` by hand — edit the source and run `npm run build:min`.
 - After changing colors/tokens, re-run `npm run lint:a11y && npm run report` to confirm zero WCAG AA contrast failures.
 - `output/` is disposable; do not commit files from it.
+- Shared clinic facts and structured data live in `src/config/business.ts` and
+  `src/components/StructuredData.astro`. Do not duplicate clinic JSON-LD in pages.

@@ -67,12 +67,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/icon-512.png">
   <!-- Security.txt for vulnerability disclosure -->
   <link rel="security.txt" href="/.well-known/security.txt">
-
-<!-- Zaraz disabled: queue-loop perf issue (see audit 6.7) -->
-<!-- Amplitude Analytics (Browser SDK v3.19.0 — Zoning Insights ready) -->
-<script defer data-cfasync="false" src="/assets/vendor/min/amplitude-2.47.0.min.js"></script>
-<script defer data-cfasync="false" src="/assets/js/min/amplitude-analytics.min.js"></script>
-<script defer data-cfasync="false" src="/assets/js/min/amplitude-init.min.js"></script>
 `;
 const bodyStart = String.raw`<aside class="emergency-banner emergency-banner--static" role="note" aria-labelledby="emergency-notice-title"><div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div></aside>`;
 ---
@@ -120,7 +114,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
     <div class="mobile-nav-header">
       <h2>Menu</h2>
       <button type="button" class="close-mobile-menu" aria-label="Close menu">
-        <i data-lucide="x" width="24" height="24" aria-hidden="true"></i>
+        <i data-lucide="x" style="width:24px;height:24px" aria-hidden="true"></i>
       </button>
     </div>
     <div class="mobile-nav-content">

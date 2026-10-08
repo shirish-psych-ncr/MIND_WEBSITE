@@ -1,5 +1,10 @@
 # Mind Grace Website - Advanced Technical Implementation Summary
 
+> Historical implementation record. Paths, counts, and recommendations below
+> describe the repository when this report was written. As of 9 October 2026,
+> the authoritative gate is `npm run check`; current operating documentation is
+> indexed in `docs/README.md`.
+
 ## Executive Summary
 All 8 advanced technical tasks from the framework have been implemented or verified as already complete. This document details the implementation status and provides deployment instructions.
 
@@ -283,5 +288,5 @@ Ensure all tool pages register the service worker (verify in page JavaScript).
 
 For implementation questions or additional enhancements, refer to the original framework documentation or consult with the development team.
 
-**Last Updated:** $(date +%Y-%m-%d)
+**Historical report reviewed:** 9 October 2026
 **Implementation Status:** 7/8 Tasks Complete, 1 Partial (Forms - by design)

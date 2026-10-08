@@ -50,10 +50,9 @@ button target.
 
 ## Analytics events
 
-Every language change fires a `Language Selected` event (props: `language`,
-`source` = `hindi_button` | `panel`) through `window.mgAnalytics.track()`
-(Amplitude) with a `gtag` fallback, so you can measure Hindi vs. other-language
-adoption in both Amplitude and GA4.
+Language changes may be measured through the existing `gtag` integration.
+Amplitude is retired and must not be used as a fallback. Never attach translated
+clinical text, form values, or other sensitive content to analytics events.
 
 ## CSS safety note
 

@@ -170,52 +170,6 @@
     });
   }
 
-  function normalizeClinicStructuredData() {
-    const hours = [{
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "10:00",
-      closes: "16:00"
-    }, {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "17:30",
-      closes: "19:30"
-    }];
-    let clinicSchemaFound = false;
-    $$('script[type="application/ld+json"]').forEach((script) => {
-      try {
-        const data = JSON.parse(script.textContent);
-        const items = Array.isArray(data) ? data : [data];
-        let changed = false;
-        items.forEach((item) => {
-          if (!item || !["MedicalClinic", "MedicalBusiness", "Physician"].includes(item["@type"])) return;
-          clinicSchemaFound = true;
-          item.telephone = "+91-9667863295";
-          item.address ||= { "@type": "PostalAddress", streetAddress: "J123, Gamma II", addressLocality: "Greater Noida", addressRegion: "Uttar Pradesh", postalCode: "201310", addressCountry: "IN" };
-          if (item["@type"] !== "Physician") item.openingHoursSpecification = hours;
-          changed = true;
-        });
-        if (changed) script.textContent = JSON.stringify(Array.isArray(data) ? items : items[0]);
-      } catch (_) { /* Invalid third-party JSON-LD should not stop the page shell. */ }
-    });
-    if (!clinicSchemaFound) {
-      const script = document.createElement("script");
-      script.type = "application/ld+json";
-      script.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "MedicalClinic",
-        name: "Mind Grace Neuropsychiatric Clinic",
-        url: window.location.href.split("#")[0],
-        telephone: "+91-9667863295",
-        address: { "@type": "PostalAddress", streetAddress: "J123, Gamma II", addressLocality: "Greater Noida", addressRegion: "Uttar Pradesh", postalCode: "201310", addressCountry: "IN" },
-        geo: { "@type": "GeoCoordinates", latitude: 28.4910152, longitude: 77.5132324 },
-        openingHoursSpecification: hours
-      });
-      document.head.appendChild(script);
-    }
-  }
-
   function setTheme(theme, persist = true) {
     const value = theme === "dark" ? "dark" : "light";
     document.documentElement.dataset.theme = value;
@@ -785,7 +739,6 @@
     const shell = normalizeSiteChrome();
     normalizeSafetyNotice();
     normalizePublicContactDetails();
-    normalizeClinicStructuredData();
     enhanceBreadcrumbs(shell?.main || $("main"));
     addContentPathway(shell?.main || $("main"));
     markCurrentNavigation();

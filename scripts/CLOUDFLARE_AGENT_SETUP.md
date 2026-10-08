@@ -1,5 +1,9 @@
 # Cloudflare Agent Setup Complete
 
+> Environment snapshot only. This file records a previous agent setup and does
+> not prove that credentials, MCP connections, installed skills, or deployment
+> access are still available. Verify them in the current environment before use.
+
 This document confirms the successful setup of Cloudflare development environment for AI agents.
 
 ## ✓ Completed Steps

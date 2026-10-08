@@ -330,24 +330,24 @@ class TestRobotsArchitecture(unittest.TestCase):
                 self.assertTrue(self.m.fetch_allowed(agent, path),
                                 f"{agent} blocked from {path}")
 
-    def test_training_scrapers_disallowed(self):
+    def test_named_crawlers_follow_the_current_open_policy(self):
         paths = ["/", "/services.html", "/blog/pages/adult/overthinking-vs-anxiety/"]
         for agent in DISALLOWED_AGENTS:
             for path in paths:
-                self.assertFalse(self.m.fetch_allowed(agent, path),
-                                 f"{agent} NOT blocked from {path}")
+                self.assertTrue(self.m.fetch_allowed(agent, path),
+                                f"{agent} blocked from {path}")
 
     def test_anthropic_openai_split(self):
-        # Blocking ClaudeBot/GPTBot must not break citation agents.
-        self.assertFalse(self.m.fetch_allowed("ClaudeBot"))
+        # The current open policy permits both training and citation agents.
+        self.assertTrue(self.m.fetch_allowed("ClaudeBot"))
         self.assertTrue(self.m.fetch_allowed("Claude-SearchBot"))
         self.assertTrue(self.m.fetch_allowed("Claude-User"))
-        self.assertFalse(self.m.fetch_allowed("GPTBot"))
+        self.assertTrue(self.m.fetch_allowed("GPTBot"))
         self.assertTrue(self.m.fetch_allowed("OAI-SearchBot"))
         self.assertTrue(self.m.fetch_allowed("ChatGPT-User"))
 
     def test_google_extended_vs_googlebot(self):
-        self.assertFalse(self.m.fetch_allowed("Google-Extended"))
+        self.assertTrue(self.m.fetch_allowed("Google-Extended"))
         self.assertTrue(self.m.fetch_allowed("Googlebot"))
 
     def test_wildcard_anchor_precision(self):
@@ -493,7 +493,7 @@ class TestAeoContent(unittest.TestCase):
         # The table is an alternate view of the same facts; it must not
         # contradict the pricing cards (entity/data consistency rule).
         html = read_bytes(page_source("fees.html")).decode("utf-8")
-        for amount in ("900", "700", "500", "2,000", "8,000"):
+        for amount in ("900", "1,000", "700", "1,500", "8,000"):
             self.assertIn(amount, html, f"fee figure {amount} missing")
 
     def test_fees_page_faqschema_mirrors_visible_content(self):

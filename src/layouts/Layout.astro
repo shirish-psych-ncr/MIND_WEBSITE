@@ -1,6 +1,7 @@
 ---
 import Head from '../components/Head.astro';
 import Shell from '../components/Shell.astro';
+import StructuredData from '../components/StructuredData.astro';
 interface Props {
   headExtra?: string;
   bodyStart?: string;
@@ -12,6 +13,9 @@ const { headExtra = '', bodyStart = '', bodyEnd = '', bodyClass = '', bodyAttrs 
 // Astro escapes script closers inside String.raw source payloads. Decode only
 // those closers before inserting this trusted, repository-owned markup.
 const rawMarkup = (value: string) => value.replaceAll('<' + String.fromCharCode(92) + '/script>', '</script>');
+const canonical = headExtra.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1] ?? `https://mindgracencr.in${Astro.url.pathname}`;
+const title = headExtra.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() ?? 'Mind Grace Neuropsychiatric Clinic';
+const description = headExtra.match(/<meta\s+name="description"\s+content="([^"]*)"/i)?.[1] ?? '';
 const extraAttrs: Record<string, string> = {};
 for (const m of bodyAttrs.matchAll(/([\w-]+)="([^"]*)"/g)) extraAttrs[m[1]] = m[2];
 // The shared shell owns the banner; discard the duplicate from legacy payloads.
@@ -23,6 +27,7 @@ const startMarkup = bodyStart.replace(/<aside\b[^>]*class="[^"]*emergency-banner
 <meta charset="UTF-8">
 {headExtra && <Fragment set:html={rawMarkup(headExtra)} />}
 <Head />
+<StructuredData canonical={canonical} title={title} description={description} />
 </head>
 <body class={bodyClass || undefined} data-chrome-normalized="true" {...extraAttrs}>
 {startMarkup && <Fragment set:html={rawMarkup(startMarkup)} />}

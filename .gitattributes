@@ -1,0 +1,17 @@
+# Keep crawler directives byte-stable across Windows and Linux. Some crawlers
+# and the repository policy tests require strict UTF-8 with LF line endings.
+robots.txt text eol=lf
+
+# Source and configuration files should not churn solely because an AI edit ran
+# on a different operating system.
+*.astro text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf

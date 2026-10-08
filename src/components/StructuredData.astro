@@ -1,0 +1,73 @@
+---
+import {
+  CLINIC_ID,
+  PERSON_ID,
+  PHYSICIAN_ID,
+  SITE_URL,
+  WEBSITE_ID,
+  clinic,
+  clinicAddress,
+} from '../config/business';
+
+interface Props {
+  canonical: string;
+  title: string;
+  description: string;
+}
+
+const { canonical, title, description } = Astro.props;
+const pageUrl = canonical || `${SITE_URL}${Astro.url.pathname}`;
+const isPhysicianPage = pageUrl === `${SITE_URL}/dr-anita-sharma`;
+const graph: Record<string, unknown>[] = [
+  clinic,
+  {
+    '@type': 'WebSite',
+    '@id': WEBSITE_ID,
+    url: `${SITE_URL}/`,
+    name: 'Mind Grace Neuropsychiatric Clinic',
+    inLanguage: 'en-IN',
+    publisher: { '@id': CLINIC_ID },
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: title,
+    description,
+    inLanguage: 'en-IN',
+    isPartOf: { '@id': WEBSITE_ID },
+    about: { '@id': isPhysicianPage ? PERSON_ID : CLINIC_ID },
+  },
+];
+
+if (isPhysicianPage) {
+  graph.push(
+    {
+      '@type': 'Person',
+      '@id': PERSON_ID,
+      name: 'Dr Anita Sharma',
+      jobTitle: 'Consultant Psychiatrist',
+      url: pageUrl,
+      image: `${SITE_URL}/assets/images/dr-anita-sharma-personal-photo.webp`,
+      knowsLanguage: ['English', 'Hindi'],
+      worksFor: { '@id': CLINIC_ID },
+    },
+    {
+      '@type': 'Physician',
+      '@id': PHYSICIAN_ID,
+      name: 'Dr Anita Sharma',
+      url: pageUrl,
+      image: `${SITE_URL}/assets/images/dr-anita-sharma-personal-photo.webp`,
+      telephone: '+91-9667863295',
+      priceRange: '₹₹',
+      address: clinicAddress,
+      medicalSpecialty: 'Psychiatric',
+      knowsLanguage: ['English', 'Hindi'],
+      parentOrganization: { '@id': CLINIC_ID },
+    },
+  );
+}
+
+const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replaceAll('<', '\\u003c');
+---
+<script id="mindgrace-entity-graph" type="application/ld+json" set:html={json}></script>
