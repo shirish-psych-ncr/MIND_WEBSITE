@@ -1,0 +1,45 @@
+---
+/**
+ * Shared breadcrumb trail for the two blog reader routes:
+ *   - patient articles  -> Home / Blog / Adult Mental Health / <article>
+ *   - student guides    -> Home / Blog / Student Internship Guides / <guide>
+ *
+ * Renders BOTH a visible nav (styled by assets/css/breadcrumbs.css, which is
+ * already loaded site-wide via the foundation bundle) and matching
+ * BreadcrumbList JSON-LD so search engines see the same trail users do.
+ * Works on phone and desktop: the CSS wraps the list and truncates long
+ * current-page labels gracefully below 600px.
+ */
+interface Crumb { name: string; href?: string }
+interface Props {
+  /** Full trail from Home to the current page (last item = current). */
+  items: Crumb[];
+  /** Absolute canonical URL of the current page (for JSON-LD `item`). */
+  canonical: string;
+}
+const { items, canonical } = Astro.props;
+const base = 'https://mindgracencr.in';
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((crumb, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: crumb.name,
+    ...(index === items.length - 1 || !crumb.href ? {} : { item: `${base}${crumb.href}` }),
+  })),
+};
+---
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    {items.map((crumb, index) => (
+      <li>
+        {index > 0 && <span class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span>}
+        {index === items.length - 1
+          ? <span aria-current="page">{crumb.name}</span>
+          : <a href={crumb.href ?? '/'}>{crumb.name}</a>}
+      </li>
+    ))}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />

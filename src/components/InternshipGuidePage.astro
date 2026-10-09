@@ -1,11 +1,79 @@
 ---
 import Layout from '../layouts/Layout.astro';
-interface Props { institution: string; location: string; slug: string; focus: string; guidance: string; }
-const { institution, location, slug, focus, guidance } = Astro.props;
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { getInstituteProfile, type InstituteProfile } from '../data/instituteInternships';
+
+interface Props { institution: string; location: string; slug: string; focus?: string; guidance?: string; }
+const { institution, location, slug } = Astro.props;
+const profile: InstituteProfile | undefined = getInstituteProfile(slug);
+const fallbackFocus = profile ? profile.short : 'Its psychology offerings may include clinical, behavioural, and evidence-informed components.';
+const fallbackGuidance = profile ? profile.angle : 'Confirm the exact degree, recognition status, required hours, and whether fieldwork is hospital, clinic, laboratory, school, corporate, or community based.';
 const title = `${institution} Psychology Internship Guide | Mind Grace`;
-const description = `Questions for ${institution} psychology students comparing internships, supervision, and practicum requirements in ${location}.`;
+const description = profile
+  ? `${institution} (${location}) internship guide: programmes, syllabus, practicum requirements, RCI context, and how Mind Grace Neuropsychiatric Clinic in Greater Noida fits east-of-NCR training.`
+  : `Questions for ${institution} psychology students comparing internships, supervision, and practicum requirements in ${location}.`;
 const canonical = `https://mindgracencr.in/blog/pages/adult/${slug}`;
 const mark = institution.split(/\s+/).filter(Boolean).map((word) => word.replace(/[^A-Za-z]/g, '')[0]).filter(Boolean).slice(0, 3).join('').toUpperCase();
-const headExtra = String.raw`<link rel="canonical" href="${canonical}"><title>${title}</title><meta name="description" content="${description}"><meta name="blog-title" content="${institution}: psychology internship guide"><meta name="blog-description" content="${description}"><meta name="blog-date" content="2026-10-09"><meta name="blog-tags" content="students, psychology, internship, ${location}">`;
+const logoSrc = profile?.logo ? `/assets/images/institute_logos/${profile.logo}` : '';
+// The FAQ extraction callout is authored as literal markup (never inside a
+// String.raw payload) so structural validators can count it statically.
+const answerText = profile
+  ? `Students at ${institution} in ${location} should match mandated practicum hours and documentation to a supervised mental-health setting that their department approves in writing; near Greater Noida, Mind Grace Neuropsychiatric Clinic is one east-of-NCR option worth asking about early.`
+  : `Students at ${institution} should compare the current programme handbook, internship credit rules, supervision, permitted activities, documentation, and placement setting before accepting an opportunity.`;
+// Head metadata is assembled from fragments so no backtick ever appears
+// inside the String.raw template below (the raw delimiter cannot contain one).
+const headExtra = String.raw`<link rel="canonical" href="${canonical}"><title>${title}</title><meta name="description" content="${description}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:type" content="article"><meta name="blog-title" content="${institution}: psychology internship guide"><meta name="blog-description" content="${description}"><meta name="blog-date" content="2026-10-09"><meta name="blog-tags" content="students, psychology, internship, ${location}">`;
+const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: (profile?.faqs ?? []).map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) };
 ---
-<Layout headExtra={headExtra}><main id="main-content" class="seo-page classic-blog-reading"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/clinical-psychology-internship">Academic training</a></li><li><a href="/blog">Student articles</a></li><li aria-current="page">{institution} internship guide</li></ol></nav><article><div class="institution-identity"><span class="institution-mark" aria-hidden="true">{mark}</span><div><p class="seo-kicker">Student internship guide · {location}</p><h1>{institution}: psychology internship questions for students</h1></div></div><div class="blog-answer"><strong>In short:</strong> Students at {institution} should compare the current programme handbook, internship credit rules, supervision, permitted activities, documentation, and placement setting before accepting an opportunity.</div><p class="lead">If you are studying psychology at {institution}, the best internship is the one that fits your course requirements and your learning goals. {focus}</p><h2>What to verify before applying</h2><p>{guidance}</p><p>Ask whether the placement is clinical, counselling, educational, organisational, research, or forensic. Confirm the supervisor’s role, the hours that count, privacy and safeguarding expectations, and whether students observe, assist with research, or have any other clearly defined responsibility.</p><h2>Questions about your university requirements</h2><p>Check whether your department requires an internship letter, attendance record, case or project report, reflective notebook, supervisor evaluation, or a particular number of hours. A hospital or clinic name alone does not establish that a placement is available or that it satisfies your course.</p><h2>Mind Grace as a starting option</h2><p>Mind Grace can be a starting option for students who want to ask about psychology learning opportunities in Greater Noida. Read the <a href="/clinical-psychology-internship">Mind Grace internship enquiry guide</a> and use the <a href="/contact">contact page</a> to ask about current availability. Any opportunity, supervision, schedule, and documentation must be confirmed directly; students must not independently diagnose, interpret tests for patients, or provide therapy.</p><p>For a general regional comparison, see <a href="/blog/pages/adult/psychology-institutions-delhi-ncr">the Delhi NCR institutions guide</a>.</p></article></main></Layout>
+<Layout headExtra={headExtra}>
+<main id="main-content" class="seo-page classic-blog-reading">
+  <Breadcrumbs canonical={canonical} items={[
+    { name: 'Home', href: '/' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Student Internship Guides', href: '/clinical-psychology-internship' },
+    { name: `Internship for ${institution} students` },
+  ]} />
+  <article>
+    <div class="institution-identity">
+      {logoSrc
+        ? <img width="72" height="72" loading="lazy" alt={profile?.alt ?? `${institution} logo`} decoding="async" class="institution-logo" src={logoSrc} />
+        : <span class="institution-mark" aria-hidden="true">{mark}</span>}
+      <div><p class="seo-kicker">Student internship guide · {location}{profile?.rciPathway ? ' · RCI licensing pathway' : ''}</p><h1>{institution}: psychology internship guide</h1></div>
+    </div>
+    <div class="blog-answer"><strong>In short:</strong> {answerText}</div>
+    <p class="lead">{fallbackFocus}</p>
+    {profile && (
+      <>
+        <h2>Programmes offered</h2>
+        <ul>{profile.programs.map((program) => <li>{program}</li>)}</ul>
+        <h2>Syllabus highlights</h2>
+        <ul>{profile.syllabus.map((line) => <li>{line}</li>)}</ul>
+        <h2>Internship and practicum requirements</h2>
+        <ul>{profile.practicum.map((line) => <li>{line}</li>)}</ul>
+        <h2>Special features</h2>
+        <ul>{profile.features.map((line) => <li>{line}</li>)}</ul>
+        <h2>Where Mind Grace fits, east of NCR</h2>
+        <p>{profile.angle}</p>
+      </>
+    )}
+    {!profile && (
+      <>
+        <h2>What to verify before applying</h2>
+        <p>{fallbackGuidance}</p>
+        <p>Ask whether the placement is clinical, counselling, educational, organisational, research, or forensic. Confirm the supervisor’s role, the hours that count, privacy and safeguarding expectations, and whether students observe, assist with research, or have any other clearly defined responsibility.</p>
+      </>
+    )}
+    <h2>Questions about your university requirements</h2>
+    <p>Check whether your department requires an internship letter, attendance record, case or project report, reflective notebook, supervisor evaluation, or a particular number of hours. A hospital or clinic name alone does not establish that a placement is available or that it satisfies your course.</p>
+    <h2>Mind Grace as a starting option</h2>
+    <p>Mind Grace Neuropsychiatric Clinic in Sector 128, Greater Noida West, can be a starting option for students who want to ask about supervised psychology learning opportunities east of the Yamuna — outpatient neurosis, neuropsychiatric rehabilitation, de-addiction, family counselling, and teleconsultation work. Read the <a href="/clinical-psychology-internship">Mind Grace internship enquiry guide</a> and use the <a href="/contact">contact page</a> to ask about current availability. Any opportunity, supervision, schedule, and documentation must be confirmed directly; students must not independently diagnose, interpret tests for patients, or provide therapy.</p>
+    {profile && profile.faqs.length > 0 && (
+      <>
+        <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+        <h2>Frequently asked questions</h2>
+        {profile.faqs.map((item) => <div class="internship-faq"><h3>{item.question}</h3><p>{item.answer}</p></div>)}
+      </>
+    )}
+    <p>For a general regional comparison, see <a href="/blog/pages/adult/psychology-institutions-delhi-ncr">the Delhi NCR institutions guide</a>.</p>
+  </article>
+</main></Layout>

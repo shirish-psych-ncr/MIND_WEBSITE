@@ -1,0 +1,146 @@
+
+> build:ci
+> npm run build
+
+
+> prebuild
+> npm run build:min
+
+
+> build:min
+> node scripts/rebuild_min_css.cjs && node scripts/rebuild_min_js.cjs
+
+rebuilt 25 minified css files
+Rebuilt 31 minified JS files
+
+> build
+> astro build && node scripts/run-python.mjs scripts/build_blog_index.py && node scripts/validate-structured-data.mjs && node scripts/validate-build.mjs
+
+02:31:30 [types] Generated 297ms
+02:31:30 [build] output: "static"
+02:31:30 [build] mode: "static"
+02:31:30 [build] directory: C:\Users\lenovo\Documents\mind_grace\Website\preview\dist\
+02:31:30 [build] Collecting build info...
+02:31:30 [build] ✓ Completed in 532ms.
+02:31:31 [build] Building static entrypoints...
+02:31:38 [vite] ✓ built in 7.26s
+02:31:38 [vite] ✓ built in 147ms
+02:31:38 [build] Rearranging server assets...
+
+ generating static routes 
+02:31:39   ├─ /404.html (+117ms) 
+02:31:39   ├─ /aasha.html (+30ms) 
+02:31:39   ├─ /about.html (+32ms) 
+02:31:39   ├─ /addiction-substance-use.html (+27ms) 
+02:31:39   ├─ /adhd-autism-assessment.html (+33ms) 
+02:31:39   ├─ /anxiety-therapy-near-me.html (+81ms) 
+02:31:39   ├─ /approach.html (+50ms) 
+02:31:39   ├─ /assessments.html (+110ms) 
+02:31:39   ├─ /awareness-and-patient-rights.html (+98ms) 
+02:31:39   ├─ /bipolar-mood-disorders.html (+31ms) 
+02:31:39   ├─ /blog/adult.html (+56ms) 
+02:31:39   ├─ /blog/children.html (+28ms) 
+02:31:39   ├─ /blog/iilm-psychology-internship.html (+48ms) 
+02:31:39   ├─ /blog/pages/adult/amity-aips-noida-psychology-internship.html (+54ms) 
+02:31:40   ├─ /blog/pages/adult/amity-greater-noida-psychology-internship.html (+103ms) 
+02:31:40   ├─ /blog/pages/adult/apeejay-stya-psychology-internship.html (+96ms) 
+02:31:40   ├─ /blog/pages/adult/aud-psychology-internship.html (+75ms) 
+02:31:40   ├─ /blog/pages/adult/central-university-haryana-psychology-internship.html (+27ms) 
+02:31:40   ├─ /blog/pages/adult/christ-delhi-ncr-psychology-internship.html (+53ms) 
+02:31:40   ├─ /blog/pages/adult/du-jamia-psychology-internship.html (+24ms) 
+02:31:40   ├─ /blog/pages/adult/galgotias-university-psychology-internship.html (+16ms) 
+02:31:40   ├─ /blog/pages/adult/gautam-buddha-university-psychology-internship.html (+33ms) 
+02:31:40   ├─ /blog/pages/adult/gd-goenka-psychology-internship.html (+130ms) 
+02:31:40   ├─ /blog/pages/adult/government-colleges-noida-faridabad-psychology-internship.html (+43ms) 
+02:31:40   ├─ /blog/pages/adult/hrit-ghaziabad-psychology-internship.html (+25ms) 
+02:31:40   ├─ /blog/pages/adult/ibhas-psychology-internship.html (+27ms) 
+02:31:40   ├─ /blog/pages/adult/ignou-psychology-internship.html (+18ms) 
+02:31:40   ├─ /blog/pages/adult/iilm-gurugram-psychology-internship.html (+53ms) 
+02:31:40   ├─ /blog/pages/adult/iilm-university-psychology-internship.html (+88ms) 
+02:31:40   ├─ /blog/pages/adult/jamia-hamdard-psychology-internship.html (+46ms) 
+02:31:40   ├─ /blog/pages/adult/jgu-sonipat-psychology-internship.html (+30ms) 
+02:31:40   ├─ /blog/pages/adult/jiit-psychology-internship.html (+32ms) 
+02:31:40   ├─ /blog/pages/adult/kr-mangalam-psychology-internship.html (+59ms) 
+02:31:40   ├─ /blog/pages/adult/lingayas-faridabad-psychology-internship.html (+93ms) 
+02:31:41   ├─ /blog/pages/adult/mindfulness-performance-exam-anxiety.html (+49ms) 
+02:31:41   ├─ /blog/pages/adult/mriirs-psychology-internship.html (+36ms) 
+02:31:41   ├─ /blog/pages/adult/nfsu-delhi-psychology-internship.html (+28ms) 
+02:31:41   ├─ /blog/pages/adult/nicfs-rohini-psychology-internship.html (+38ms) 
+02:31:41   ├─ /blog/pages/adult/niu-greater-noida-psychology-internship.html (+94ms) 
+02:31:41   ├─ /blog/pages/adult/overthinking-vs-anxiety.html (+117ms) 
+02:31:41   ├─ /blog/pages/adult/psychiatrist-vs-psychologist-depression.html (+61ms) 
+02:31:41   ├─ /blog/pages/adult/psychology-institutions-delhi-ncr.html (+49ms) 
+02:31:41   ├─ /blog/pages/adult/santosh-university-psychology-internship.html (+31ms) 
+02:31:41   ├─ /blog/pages/adult/scheduled-worry-time-technique.html (+40ms) 
+02:31:41   ├─ /blog/pages/adult/sgt-university-psychology-internship.html (+62ms) 
+02:31:41   ├─ /blog/pages/adult/sharda-university-psychology-internship.html (+64ms) 
+02:31:41   ├─ /blog/pages/adult/sleep-and-anxiety-cycle.html (+45ms) 
+02:31:41   ├─ /blog/pages/adult/stimulus-control-therapy.html (+24ms) 
+02:31:41   ├─ /blog/pages/adult/understanding-anxiety-clinical-treatment.html (+76ms) 
+02:31:41   ├─ /blog/pages/adult/when-to-see-a-psychiatrist.html (+327ms) 
+02:31:42   ├─ /blog/pages/child/early-signs-of-autism.html (+80ms) 
+02:31:42   ├─ /blog/pages/child/school-concerns-and-adhd.html (+94ms) 
+02:31:42   ├─ /blog/pages/child/sensory-overload-at-home.html (+66ms) 
+02:31:42   ├─ /blog/pages/child/speech-delay-red-flags.html (+47ms) 
+02:31:42   ├─ /blog.html (+27ms) 
+02:31:42   ├─ /book.html (+41ms) 
+02:31:42   ├─ /child-development.html (+180ms) 
+02:31:42   ├─ /child-student-mental-health.html (+163ms) 
+02:31:42   ├─ /clinical-psychology-internship.html (+110ms) 
+02:31:43   ├─ /conditions.html (+63ms) 
+02:31:43   ├─ /consent.html (+23ms) 
+02:31:43   ├─ /contact.html (+29ms) 
+02:31:43   ├─ /depression-anxiety.html (+22ms) 
+02:31:43   ├─ /depression-in-older-adults.html (+29ms) 
+02:31:43   ├─ /depression-treatment-ncr.html (+65ms) 
+02:31:43   ├─ /disclaimer.html (+105ms) 
+02:31:43   ├─ /doctors.html (+142ms) 
+02:31:43   ├─ /dr-anita-sharma.html (+179ms) 
+02:31:43   ├─ /emergency.html (+72ms) 
+02:31:43   ├─ /evidence-based-therapies.html (+66ms) 
+02:31:43   ├─ /faq.html (+33ms) 
+02:31:43   ├─ /fees.html (+39ms) 
+02:31:43   ├─ /gallery.html (+120ms) 
+02:31:44   ├─ /high-functioning-depression-guide.html (+97ms) 
+02:31:44   ├─ /learning-disability-assessment.html (+102ms) 
+02:31:44   ├─ /location.html (+70ms) 
+02:31:44   ├─ /mind-grace.html (+62ms) 
+02:31:44   ├─ /ocd-panic-ptsd.html (+30ms) 
+02:31:44   ├─ /online-therapy-india.html (+48ms) 
+02:31:44   ├─ /perceived-burdensomeness.html (+118ms) 
+02:31:44   ├─ /privacy.html (+137ms) 
+02:31:44   ├─ /process.html (+38ms) 
+02:31:44   ├─ /psychiatrist-greater-noida.html (+30ms) 
+02:31:44   ├─ /psychiatrist-in-noida.html (+20ms) 
+02:31:44   ├─ /psychiatrist-vs-psychologist.html (+81ms) 
+02:31:44   ├─ /psychiatry.html (+100ms) 
+02:31:44   ├─ /psychology-counselling.html (+96ms) 
+02:31:45   ├─ /psychosis-schizophrenia.html (+33ms) 
+02:31:45   ├─ /resources.html (+38ms) 
+02:31:45   ├─ /schizophrenia-bipolar-care.html (+52ms) 
+02:31:45   ├─ /services.html (+69ms) 
+02:31:45   ├─ /sleep-and-autism-guide-indian-parents.html (+51ms) 
+02:31:45   ├─ /sleep-eating-disorders.html (+65ms) 
+02:31:45   ├─ /specialized-consultations.html (+136ms) 
+02:31:45   ├─ /teleconsultation.html (+78ms) 
+02:31:45   ├─ /terms.html (+80ms) 
+02:31:45   ├─ /testimonials.html (+34ms) 
+02:31:45   ├─ /thank-you.html (+62ms) 
+02:31:45   ├─ /therapy.html (+40ms) 
+02:31:45   ├─ /tools/butterfly-tapper.html (+229ms) 
+02:31:46   ├─ /tools/eye-movement.html (+44ms) 
+02:31:46   ├─ /tools/guided-breathing.html (+79ms) 
+02:31:46   ├─ /tools/horizon-scan.html (+42ms) 
+02:31:46   ├─ /tools/hypnos-fractal.html (+19ms) 
+02:31:46   ├─ /tools/leaf-on-stream.html (+44ms) 
+02:31:46   ├─ /trauma-grief-support.html (+44ms) 
+02:31:46   ├─ /index.html (+44ms) 
+02:31:46 ✓ Completed in 7.63s.
+
+02:31:46 [build] ✓ Completed in 15.69s.
+02:31:49 [build] Waiting for integration "mindgrace-public-assets", hook "astro:build:done"...
+02:32:08 [build] 107 page(s) built in 38.07s
+02:32:08 [build] Complete!
+Indexed 46 published articles
+Validated structured data in 108 generated pages: stable clinic, website, person, and physician identities; no Amplitude or Zaraz runtime.
+Validated 107 routes and 8200 local references; 0 failures.

@@ -778,6 +778,49 @@ class TestSiteWideAeo(unittest.TestCase):
                           f"{rel} missing seo-pages stylesheet link")
 
 
+    def test_internship_guide_pages_carry_institute_logos(self):
+        """The regional internship guide pages (blog/pages/adult/*internship*)
+        must render an institute logo image (or a documented letter-mark
+        fallback) sourced from assets/images/institute_logos/, sized, lazy,
+        and alt-bearing. The shared InternshipGuidePage component is the
+        single place that decides; per-page sources stay thin wrappers."""
+        import glob as _glob
+        comp = os.path.join(ROOT, "src/components/InternshipGuidePage.astro")
+        source = read_bytes(comp).decode("utf-8")
+        self.assertIn("institution-logo", source,
+                      "InternshipGuidePage lost its logo markup")
+        self.assertIn("institute_logos", source,
+                      "InternshipGuidePage no longer references the logo directory")
+        img = re.search(r"<img[^>]*/>", source)
+        self.assertIsNotNone(img, "logo <img> element missing")
+        tag = img.group(0)
+        for attr in ("width=", "height=", "loading=", "alt="):
+            self.assertLess(tag.index(attr), tag.index("src="),
+                            f"logo img attributes out of order: {attr}")
+        # every page sharing the hub's slug family resolves through the data file
+        data = os.path.join(ROOT, "src/data/instituteInternships.ts")
+        self.assertTrue(os.path.exists(data),
+                        "instituteInternships.ts data module missing")
+        payload = read_bytes(data).decode("utf-8")
+        logos_dir = os.path.join(ROOT, "assets/images/institute_logos")
+        for name in re.findall(r"logo: '([^']*)'", payload):
+            if not name:
+                continue  # empty logo => documented letter-mark fallback
+            self.assertTrue(
+                os.path.exists(os.path.join(logos_dir, name)),
+                f"data references missing logo file: {name}")
+        pages = sorted(_glob.glob(os.path.join(
+            SITE_ROOT, "blog/pages/adult/*internship*.astro")))
+        self.assertGreaterEqual(len(pages), 25)
+        for path in pages:
+            html = read_bytes(path).decode("utf-8")
+            self.assertIn("InternshipGuidePage", html,
+                          f"{path} bypasses the shared guide component")
+            m = re.search(r'slug="([^"]+)"', html)
+            self.assertIsNotNone(m, f"{path} lacks a slug prop")
+            self.assertIn(f"'{m.group(1)}'", payload,
+                          f"{path}: slug {m.group(1)} has no institute profile row")
+
     def test_llms_modular_ecosystem(self):
         """Decision Rule 3/4: the llms.txt index must link module files that
         exist on disk, each module repeats the usage-rights restriction, and
