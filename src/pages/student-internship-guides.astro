@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { INSTITUTE_PROFILES } from '../data/instituteInternships';
+
+// Academic-section hub for every institute internship guide in the blog.
+// Keeps the internship posts properly arranged: Blog → Student Internship
+// Guides → <institute guide>, with matching visible breadcrumbs and
+// BreadcrumbList + ItemList JSON-LD.
+const canonical = 'https://mindgracencr.in/student-internship-guides';
+const title = 'Student &amp; Psychology Internship Guides by Institute | Mind Grace';
+const description = 'Every Mind Grace institute-wise psychology and psychiatry internship guide for Delhi NCR universities, colleges, and hospitals — arranged by city with links to programmes, practicum rules, and FAQs.';
+
+// Group profiles by the location string so the hub reads as an academic directory.
+const groups = new Map<string, typeof INSTITUTE_PROFILES>();
+for (const profile of INSTITUTE_PROFILES) {
+  const key = profile.location;
+  if (!groups.has(key)) groups.set(key, []);
+  groups.get(key)!.push(profile);
+}
+const orderedGroups = [...groups.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+
+const headExtra = String.raw`<link rel="canonical" href="${canonical}"><title>${title}</title><meta name="description" content="${description}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:type" content="website"><meta name="blog-title" content="Student internship guides by institute"><meta name="blog-description" content="${description}"><meta name="blog-date" content="2026-10-12"><meta name="blog-tags" content="students, psychology, internship, institutes"><link rel="stylesheet" href="/assets/css/min/base.min.css"><link rel="stylesheet" href="/assets/css/min/layout.min.css"><link rel="stylesheet" href="/assets/css/min/components.min.css"><link rel="stylesheet" href="/assets/css/min/breadcrumbs.min.css"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">`;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': `${canonical}#breadcrumb`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mindgracencr.in/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://mindgracencr.in/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Student Internship Guides', item: `https://mindgracencr.in${Astro.url.pathname}` },
+  ],
+};
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `${canonical}#guides`,
+  name: 'Mind Grace institute internship guides',
+  numberOfItems: INSTITUTE_PROFILES.length,
+  itemListElement: INSTITUTE_PROFILES.map((profile, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: `${profile.institution}: psychology internship guide`,
+    url: `https://mindgracencr.in/blog/pages/adult/${profile.slug}`,
+  })),
+};
+---
+<Layout headExtra={headExtra}>
+<main id="main-content" class="seo-page classic-blog-reading">
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
+    <li><a href="/">Home</a></li>
+    <li><span class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span><a href="/blog">Blog</a></li>
+    <li><span class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span><span aria-current="page">Student Internship Guides</span></li>
+  </ol></nav>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+  <article>
+    <p class="seo-kicker">Academic training · blog series</p>
+    <h1>Student internship guides by institute</h1>
+    <div class="blog-answer"><strong>In short:</strong> These Mind Grace blog guides are written for students of specific Delhi NCR universities, colleges, and hospitals. Each one covers programmes, syllabus highlights, mandated practicum hours, documentation, and how a supervised clinic placement east of the Yamuna can fit your course requirements.</div>
+    <p class="lead">Start with the <a href="/clinical-psychology-internship">internship enquiry guide</a> for how supervision and documentation work at Mind Grace, then open the page for your own institute below. For a wider comparison, read <a href="/blog/pages/adult/psychology-institutions-delhi-ncr">Psychology institutions in Delhi NCR</a>.</p>
+    {orderedGroups.map(([location, profiles]) => (
+      <section class="seo-section">
+        <h2>{location}</h2>
+        <ul>
+          {profiles.map((profile) => (
+            <li>
+              <a href={`/blog/pages/adult/${profile.slug}`}>{profile.institution}</a>
+              {' '}— internship and practicum guide{profile.rciPathway ? ', RCI licensing pathway' : ''}.
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+    <section class="seo-section">
+      <h2>Also in this series</h2>
+      <ul>
+        <li><a href="/blog/iilm-psychology-internship">Internship guide for IILM BA &amp; BSc Psychology students</a></li>
+        <li><a href="/blog/pages/adult/psychology-institutions-delhi-ncr">Psychology institutions in Delhi NCR: programmes, syllabi, and internships</a></li>
+        <li><a href="/clinical-psychology-internship">Clinical psychology internship enquiries at Mind Grace</a></li>
+        <li><a href="/blog">Back to the full blog index</a></li>
+      </ul>
+      <p>Availability, supervision, hours, and documentation must always be confirmed directly with the clinic and your department before you log any hours.</p>
+    </section>
+  </article>
+</main>
+</Layout>

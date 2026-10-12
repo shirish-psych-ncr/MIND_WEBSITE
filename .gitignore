@@ -1,7 +1,2 @@
-# Dependencies
 node_modules/
-
-# Build artifacts and caches
-__pycache__/
-*.pyc
 output/
