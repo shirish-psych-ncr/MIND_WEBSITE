@@ -812,8 +812,17 @@ class TestSiteWideAeo(unittest.TestCase):
         pages = sorted(_glob.glob(os.path.join(
             SITE_ROOT, "blog/pages/adult/*internship*.astro")))
         self.assertGreaterEqual(len(pages), 25)
+        # Pages that hand-author their own long-form article instead of
+        # rendering the shared InternshipGuidePage component must be listed
+        # here; they still have to carry their institution logo locally.
+        HANDAUTHORED = {"sharda-university-psychology-internship"}
         for path in pages:
             html = read_bytes(path).decode("utf-8")
+            slug = os.path.basename(path)[:-len(".astro")]
+            if slug in HANDAUTHORED:
+                self.assertIn("institute_logos/", html,
+                              f"{path} hand-authored guide page missing its institute logo")
+                continue
             self.assertIn("InternshipGuidePage", html,
                           f"{path} bypasses the shared guide component")
             m = re.search(r'slug="([^"]+)"', html)
