@@ -7,6 +7,7 @@
     ["Clinic & training hub", "/landing"],
     ["About", "/about"],
     ["Services", "/services"],
+    ["Academic training", "/academic-training"],
     ["What to expect", "/process"],
     ["Resources", "/resources"],
     ["Location", "/location"],
@@ -53,8 +54,10 @@
       label: "Academic training",
       icon: "book-open",
       children: [
-        ["Psychology internships", "/clinical-psychology-internship"],
-        ["Student programs overview", "/landing#academic-stream"],
+        ["Academic training hub", "/academic-training"],
+        ["Student programs & workshops", "/landing#academic-stream"],
+        ["Internship enquiries", "/clinical-psychology-internship"],
+        ["Internship guides by institute", "/student-internship-guides"],
         ["Student resources", "/resources"],
         ["Research and learning", "/blog"]
       ]
@@ -245,7 +248,7 @@
     footer.className = "site-footer";
     footer.innerHTML = `<div class="footer-container">
       <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
-      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/landing#patient-stream">Clinic &amp; training hub</a></li><li><a href="/services">Our services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/landing#academic-stream">Student programs overview</a></li><li><a href="/faq#common-questions">Frequently asked questions</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
+      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/landing#patient-stream">Clinic &amp; training hub</a></li><li><a href="/services">Our services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/academic-training">Academic training hub</a></li><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/student-internship-guides">Internship guides by institute</a></li><li><a href="/landing#academic-stream">Student programs &amp; workshops</a></li><li><a href="/faq#common-questions">Frequently asked questions</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
       <address class="footer-contact"><h2>Visit or call</h2><p>Mind Grace Neuropsychiatric Clinic<br>J123, Gamma II, Greater Noida, 201310</p><p><a href="tel:+919667863295">+91 96678 63295</a><br><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
     </div><div class="footer-bottom"><p>&copy; <span id="year"></span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/consent">Consent</a></div></div>`;
     return footer;
