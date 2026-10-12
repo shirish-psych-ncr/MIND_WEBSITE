@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { INSTITUTE_PROFILES } from '../data/instituteInternships';
+
+// Academic training hub: the single "web" that ties internships, workshops,
+// and institute-wise student guides together. Every academic page links here,
+// and this page links to every academic destination, so students never land
+// on an orphaned article.
+const canonical = 'https://mindgracencr.in/academic-training';
+const title = 'Academic Training: Internships, Workshops &amp; Practicums | Mind Grace';
+const description = 'One hub for psychology and psychiatry students at Mind Grace Neuropsychiatric Clinic, Greater Noida: supervised internship enquiries, skill workshops, diagnostic practicum sessions, and institute-wise internship guides for Delhi NCR universities.';
+
+const headExtra = String.raw`<link rel="canonical" href="${canonical}"><title>${title}</title><meta name="description" content="${description}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:type" content="website"><link rel="stylesheet" href="/assets/css/min/base.min.css"><link rel="stylesheet" href="/assets/css/min/layout.min.css"><link rel="stylesheet" href="/assets/css/min/components.min.css"><link rel="stylesheet" href="/assets/css/min/breadcrumbs.min.css"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">`;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': `${canonical}#breadcrumb`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mindgracencr.in/' },
+    { '@type': 'ListItem', position: 2, name: 'Academic Training', item: canonical },
+  ],
+};
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `${canonical}#programs`,
+  name: 'Mind Grace academic training pathways',
+  numberOfItems: INSTITUTE_PROFILES.length,
+  itemListElement: INSTITUTE_PROFILES.map((profile, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: `${profile.institution}: psychology internship guide`,
+    url: `https://mindgracencr.in/blog/pages/adult/${profile.slug}`,
+  })),
+};
+
+// Group the 40+ institute guides by city so the directory reads as a map, not a list.
+const groups = new Map<string, typeof INSTITUTE_PROFILES>();
+for (const profile of INSTITUTE_PROFILES) {
+  const key = profile.location;
+  if (!groups.has(key)) groups.set(key, []);
+  groups.get(key)!.push(profile);
+}
+const orderedGroups = [...groups.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+
+const programs = [
+  {
+    name: 'Clinical psychology internship',
+    kind: 'Cohort program · rolling intakes',
+    where: '/landing#academic-stream',
+    whereLabel: 'See the internship program on the clinic hub',
+    summary: 'Supervised outpatient exposure for undergraduate and postgraduate psychology students: MSE orientation, observed OPD sessions under confidentiality protocols, and case discussions.',
+    enquiry: '/clinical-psychology-internship',
+  },
+  {
+    name: 'Psychometric assessment orientation',
+    kind: 'Skill workshop · weekend sessions',
+    where: '/resources#tools',
+    whereLabel: 'Browse student resources and practice tools',
+    summary: 'Demonstration-led sessions on the purpose, ethics, and interpretation basics of common assessment batteries, with report-writing and case-formulation practice tasks.',
+    enquiry: '/contact',
+  },
+  {
+    name: 'Diagnostic interviewing practicum',
+    kind: 'Brief course · small groups',
+    where: '/faq',
+    whereLabel: 'Read training FAQs before applying',
+    summary: 'Role-play and observed-practice sessions for history-taking, MSE documentation, and referral etiquette, with feedback from supervising clinicians.',
+    enquiry: '/contact',
+  },
+];
+---
+<Layout headExtra={headExtra}>
+<main id="main-content" class="seo-page classic-blog-reading">
+  <Breadcrumbs canonical={canonical} items={[
+    { name: 'Home', href: '/' },
+    { name: 'Academic Training' },
+  ]} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+  <article>
+    <p class="seo-kicker">Academic training · one connected hub</p>
+    <h1>Internships, workshops, and practicums at Mind Grace</h1>
+    <div class="blog-answer"><strong>In short:</strong> This is the single starting point for psychology and psychiatry students. It connects the clinic's supervised internship enquiry route, its workshop and practicum offerings on the clinic hub, and every institute-wise internship guide written for Delhi NCR universities — so you can find the right page in one click instead of searching the blog.</div>
+    <p class="lead">Start with a program below, open the guide written for your own university or college, then use the <a href="/contact">academic enquiry route</a> to confirm availability, supervision, hours, and documentation before you log any hours.</p>
+
+    <section class="seo-section">
+      <h2>Choose your path</h2>
+      <ul>
+        <li><strong>I am a patient or family member</strong> — leave this section and go to <a href="/services">patient care services</a>.</li>
+        <li><strong>I want a supervised placement near Greater Noida</strong> — read the <a href="/clinical-psychology-internship">internship enquiry guide</a>, then check the <a href="/student-internship-guides">institute-wise guides</a> for what your department requires.</li>
+        <li><strong>I am comparing universities and programs</strong> — start with <a href="/blog/pages/adult/psychology-institutions-delhi-ncr">Psychology institutions in Delhi NCR</a>.</li>
+        <li><strong>I want self-help and practice tools first</strong> — see <a href="/resources">student resources and self-help tools</a>.</li>
+      </ul>
+    </section>
+
+    <section class="seo-section">
+      <h2>Training programs</h2>
+      {programs.map((program) => (
+        <article class="seo-card">
+          <h3>{program.name}</h3>
+          <p><em>{program.kind}</em></p>
+          <p>{program.summary}</p>
+          <p><a href={program.where}>{program.whereLabel}</a> · <a href={program.enquiry}>Ask about current availability</a></p>
+        </article>
+      ))}
+      <p>All programs run under the clinic's academic stream on the <a href="/landing">clinic &amp; training hub</a>. Training involves observation and supervised learning only; it does not confer licensure, prescription rights, or independent clinical practice.</p>
+    </section>
+
+    <section class="seo-section">
+      <h2>Internship guides by institute</h2>
+      <p>{INSTITUTE_PROFILES.length} guides cover specific Delhi NCR universities, colleges, and hospitals — programmes, syllabus highlights, mandated practicum hours, and RCI context. The full arranged directory also lives at <a href="/student-internship-guides">Student internship guides by institute</a>.</p>
+      {orderedGroups.map(([location, profiles]) => (
+        <>
+          <h3>{location}</h3>
+          <ul>
+            {profiles.map((profile) => (
+              <li><a href={`/blog/pages/adult/${profile.slug}`}>{profile.institution}</a> — internship and practicum guide{profile.rciPathway ? ', RCI licensing pathway' : ''}.</li>
+            ))}
+          </ul>
+        </>
+      ))}
+    </section>
+
+    <section class="seo-section">
+      <h2>How these pages fit together</h2>
+      <ul>
+        <li><a href="/landing#academic-stream">Student &amp; academic hub</a> — what each program looks like week to week.</li>
+        <li><a href="/clinical-psychology-internship">Clinical psychology internship enquiries</a> — how supervision, boundaries, and documentation work at Mind Grace.</li>
+        <li><a href="/student-internship-guides">Institute-wise internship guides</a> — the same information matched to your university's rules.</li>
+        <li><a href="/blog/iilm-psychology-internship">IILM BA &amp; BSc Psychology internship article</a> — the original case study in the blog series.</li>
+        <li><a href="/blog">Research and learning blog</a> — clinical articles for broader study.</li>
+        <li><a href="/faq">FAQs</a> and <a href="/contact">contact the academic desk</a> — eligibility questions and enquiries.</li>
+      </ul>
+    </section>
+  </article>
+</main>
+</Layout>
