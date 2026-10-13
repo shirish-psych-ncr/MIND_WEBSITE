@@ -12,7 +12,7 @@ interface Props {
   version?: string;
 }
 
-const { version = 'astro-repair1' } = Astro.props;
+const { version = 'sharda-optimize1' } = Astro.props;
 
 const themeInit = `try{const t=localStorage.getItem('mindgrace-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}`;
 ---
@@ -22,11 +22,10 @@ const themeInit = `try{const t=localStorage.getItem('mindgrace-theme');document.
      emitted here. Keep any Cloudflare Dashboard header rule in sync. -->
 <!-- FIX (Rocket Loader): data-cfasync="false" keeps these critical scripts in
      their declared execution order and prevents Cloudflare Rocket Loader from
-     deferring/rewriting them (theme bootstrap runs before paint; translate +
-     visitor-friendly own the shell wiring). -->
+     deferring/rewriting them (theme bootstrap runs before paint;
+     visitor-friendly owns the shell wiring). The translation widget was
+     retired site-wide: no translate script or stylesheet is loaded anymore. -->
 <script is:inline data-cfasync="false" set:html={themeInit}></script>
 <script is:inline data-cfasync="false" src={`/assets/js/min/visitor-friendly.min.js?v=${version}`} defer></script>
 <link rel="stylesheet" href={`/assets/css/min/site-foundation.min.css?v=${version}`} data-mindgrace-final-foundation>
 
-<link rel="stylesheet" href="/assets/css/min/translate.min.css?v=astro-repair1">
-<script is:inline data-cfasync="false" src="/assets/js/min/translate.min.js?v=astro-repair1" defer></script>
