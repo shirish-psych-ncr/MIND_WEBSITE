@@ -19,7 +19,50 @@ const description = headExtra.match(/<meta\s+name="description"\s+content="([^"]
 const extraAttrs: Record<string, string> = {};
 for (const m of bodyAttrs.matchAll(/([\w-]+)="([^"]*)"/g)) extraAttrs[m[1]] = m[2];
 // The shared shell owns the banner; discard the duplicate from legacy payloads.
-const startMarkup = bodyStart.replace(/<aside\b[^>]*class="[^"]*emergency-banner[^"]*"[\s\S]*?<\/aside>/gi, '');
+let startMarkup = bodyStart.replace(/<aside\b[^>]*class="[^"]*emergency-banner[^"]*"[\s\S]*?<\/aside>/gi, '');
+// Recursive chrome cleanup: Shell.astro already ships the canonical header,
+// footer and mobile navigation (the runtime enhancer in
+// assets/js/visitor-friendly.js also removes any un-tagged duplicates it finds
+// at load time, but pages must be correct without JavaScript too). Strip the
+// stale per-page copies — mobile nav overlays/panels with their section lists,
+// legacy burger dropdowns, orphaned burger buttons, leftover chrome comments
+// and progress bars — from every page that renders through this layout, so no
+// route can ship a second, un-styled (distorted, "un-collapsed") menu.
+const stripChrome = (markup: string) => markup
+  // HTML comment markers left behind by the old hand-authored chrome.
+  .replace(/<!--\s*(?:MOBILE NAV(?: OVERLAY| PANEL[^-]*)?|Simplified)[^>]*-->\s*/gi, '')
+  .replace(/<!--\s*(?:EMERGENCY BANNER[^>]*|Header|Network Status Toast|Scroll Progress Bar|Ambient Background|Library Stack)[^>]*-->\s*/gi, '')
+  // Legacy mobile nav overlay + panel (with its full section lists).
+  .replace(/<div\b[^>]*class="[^"]*\bmobile-nav-overlay\b[^"]*"(?:[^>]*>[^<]*<\/div>)?\s*/gi, '')
+  .replace(/<nav\b[^>]*class="[^"]*\bmobile-nav-panel\b[^"]*"[\s\S]*?<\/nav>\s*/gi, '')
+  // Legacy burger dropdown menus and the burger buttons that opened them.
+  .replace(/<div\b[^>]*class="[^"]*\bnav-dropdown\b[^"]*"[\s\S]*?<\/div>\s*/gi, '')
+  .replace(/<button\b[^>]*class="[^"]*\bburger-btn\b[^"]*"[\s\S]*?<\/button>\s*/gi, '')
+  // Duplicated scroll-progress bars (the shared shell owns scroll UI).
+  .replace(/<div\b[^>]*class="[^"]*\b(?:scroll-progress|progress-bar)\b[^"]*"[^>]*>\s*<\/div>\s*/gi, '');
+startMarkup = stripChrome(startMarkup);
+// Pages whose entire document was captured as a bodyStart payload (legacy
+// migration artifacts) can carry a complete duplicate <head>, doctype or even
+// a nested <html> — drop everything before <body> and keep only the document
+// body content, which the Shell re-wraps with the canonical chrome.
+if (/<(!doctype\s+html|html\b)/i.test(startMarkup)) {
+  const bodyOpen = startMarkup.match(/<body\b[^>]*>/i);
+  if (bodyOpen && bodyOpen.index !== undefined) {
+    const tail = startMarkup.slice(bodyOpen.index + bodyOpen[0].length);
+    const bodyClose = tail.search(/<\/body>/i);
+    startMarkup = stripChrome(bodyClose === -1 ? tail : tail.slice(0, bodyClose));
+  } else {
+    // No <body> marker at all: an unclosed/duplicate head block is dead
+    // weight — remove everything up to the first real element after it.
+    startMarkup = stripChrome(startMarkup.replace(/^[\s\S]*?(?=<main\b|<div\b|<section\b|<p\b|<h1\b)/i, ''));
+  }
+}
+// The captured payload may still hold a second copy of the shared header or
+// footer; keep only occurrences tagged data-shared-shell (there should be
+// none — Shell.astro renders exactly one of each).
+startMarkup = startMarkup
+  .replace(/<(header|footer)\b[^>]*>(?:(?!<\/\1>)[\s\S])*?<\/\1>/gi, (m) => (m.includes('data-shared-shell') ? m : ''))
+  .trim();
 ---
 <!DOCTYPE html>
 <html lang="en-IN" dir="ltr">

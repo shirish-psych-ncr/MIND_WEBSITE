@@ -360,6 +360,11 @@
 
   function normalizeSiteChrome() {
     if (!document.body || document.body.dataset.shellBound === "true") return { main: $("main") };
+    // Retired per-page chrome (legacy burger dropdowns, hand-authored mobile
+    // nav panels/overlays, orphaned burger buttons). The shared shell owns the
+    // only menu; anything left from older page payloads is removed before the
+    // panel is built so a second, un-styled menu can never appear.
+    $$(".nav-dropdown, .mobile-nav-panel:not([data-shared-shell]), .mobile-nav-overlay:not([data-shared-shell]), .burger-btn:not(#burgerMenuBtn), .scroll-progress").forEach((node) => node.remove());
     const main = preserveMain();
     normalizeSkipLink();
     $$("body > header, body > footer, .masthead, .journal-footer, .site-header, .site-footer, .mobile-nav-panel, .mobile-nav-overlay").filter((node) => !node.hasAttribute("data-shared-shell")).forEach((node) => node.remove());
@@ -373,6 +378,7 @@
     const mobileNav = document.createElement("nav");
     mobileNav.className = "mobile-nav-panel";
     mobileNav.id = "mobile-nav-panel";
+    mobileNav.setAttribute("data-shared-shell", "");
     mobileNav.setAttribute("aria-label", "Mobile navigation");
     mobileNav.setAttribute("role", "dialog");
     mobileNav.setAttribute("aria-modal", "true");
