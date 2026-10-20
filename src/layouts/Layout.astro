@@ -38,6 +38,15 @@ const stripChrome = (markup: string) => markup
   // Legacy burger dropdown menus and the burger buttons that opened them.
   .replace(/<div\b[^>]*class="[^"]*\bnav-dropdown\b[^"]*"[\s\S]*?<\/div>\s*/gi, '')
   .replace(/<button\b[^>]*class="[^"]*\bburger-btn\b[^"]*"[\s\S]*?<\/button>\s*/gi, '')
+  // FIX (dropdown menu bar): also strip whole legacy dropdown wrappers whose
+  // *inner* div carries nav-dropdown (older payloads nest it inside a wrapper)
+  // and any orphaned desktop-nav / funnel fragments — the shared Shell renders
+  // exactly one canonical menu, so a second copy is what made headers look
+  // "distorted / un-collapsed" on pages like /book before visitor-friendly.js
+  // could de-duplicate them at runtime.
+  .replace(/<div\b(?![^>]*class)[^>]*>\s*<div\b[^>]*class="[^"]*\bnav-dropdown\b[^"]*"[\s\S]*?<\/div>\s*<\/div>\s*/gi, '')
+  .replace(/<nav\b[^>]*class="[^"]*\bdesktop-nav\b[^"]*"[\s\S]*?<\/nav>\s*/gi, '')
+  .replace(/<li\b[^>]*class="[^"]*\bnav-funnel\b[^"]*"[\s\S]*?<\/li>\s*/gi, '')
   // Duplicated scroll-progress bars (the shared shell owns scroll UI).
   .replace(/<div\b[^>]*class="[^"]*\b(?:scroll-progress|progress-bar)\b[^"]*"[^>]*>\s*<\/div>\s*/gi, '');
 startMarkup = stripChrome(startMarkup);
