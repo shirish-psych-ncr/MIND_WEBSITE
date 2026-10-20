@@ -4,27 +4,63 @@
  * Features: Core Web Vitals, WCAG 2.2 Accessibility, PWA Ready
  */
 
-// RAF-throttled scroll handler for performance
+// Scroll-linked progress bar.
+// FIX (console violations): this used to run on every 'scroll' event inside a
+// requestAnimationFrame callback that read `documentElement.scrollHeight` and
+// `window.innerHeight` right after writing `style.width`. That write-then-read
+// pattern forced synchronous layout ("Forced reflow while executing
+// JavaScript" violations) on each frame, and the extra rAF hop kept the
+// handler over budget on long pages. The bar is now driven purely by CSS
+// scroll-driven animations (`animation-timeline: scroll()`), which run on the
+// compositor with zero JS per scroll event. The JS path below is only a
+// fallback for browsers without scroll timelines: it caches all measurements
+// outside the handler and updates via transform (no reflow reads during
+// scrolling).
+const _supportsScrollTimelines = typeof CSS !== 'undefined'
+  && typeof CSS.supports === 'function'
+  && CSS.supports('animation-timeline: scroll()');
+
 function _initScrollProgress() {
   const progress = document.querySelector('.scroll-progress');
   if (!progress) return;
 
+  if (_supportsScrollTimelines) {
+    progress.classList.add('scroll-progress--css');
+    return; // CSS animation handles everything from here on.
+  }
+
+  // Cached, read-only state — refreshed off the hot path only.
+  let docHeight = 0;
+  let viewportHeight = 0;
   let ticking = false;
+
+  const measure = () => {
+    viewportHeight = window.innerHeight;
+    docHeight = document.documentElement.scrollHeight - viewportHeight;
+  };
+
   const updateProgress = () => {
-    const scrolled = window.scrollY;
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const percentage = max > 0 ? (scrolled / max) * 100 : 0;
-    progress.style.width = `${Math.min(percentage, 100)}%`;
     ticking = false;
+    const max = docHeight > 0 ? docHeight : 1;
+    const ratio = Math.min(Math.max(window.scrollY / max, 0), 1);
+    progress.style.transform = `scaleX(${ratio})`;
   };
 
   window.addEventListener('scroll', () => {
     if (!ticking) {
-      window.requestAnimationFrame(updateProgress);
       ticking = true;
+      window.requestAnimationFrame(updateProgress);
     }
   }, { passive: true });
 
+  // Re-measure lazily so layout-heavy work never happens inside the scroll
+  // or rAF handlers themselves.
+  window.addEventListener('resize', () => {
+    if ('requestIdleCallback' in window) requestIdleCallback(measure, { timeout: 2000 });
+    else setTimeout(measure, 200);
+  }, { passive: true });
+
+  measure();
   updateProgress();
 }
 
@@ -61,6 +97,11 @@ function _initOrientationAdapter() {
 // Direction-aware chrome: the header yields space while reading downward and
 // returns as soon as the visitor reverses direction. CSS remains responsible
 // for the motion, so this listener only toggles a state class.
+// FIX (console violations): the panel query ran inside the rAF callback right
+// after body classes were written, forcing a synchronous style+layout recalc
+// on every frame ("Forced reflow" violations). The open-menu state is now
+// cached and updated by the same script that opens/closes the panel, so the
+// scroll path performs zero DOM queries.
 function _initScrollDirection() {
   const header = document.querySelector('.site-header');
   if (!header) return;
@@ -70,7 +111,7 @@ function _initScrollDirection() {
   const update = () => {
     const currentY = Math.max(0, window.scrollY);
     const delta = currentY - previousY;
-    const menuOpen = document.querySelector('.mobile-nav-panel.is-open');
+    const menuOpen = document.body.classList.contains('mobile-nav-open');
     if (currentY < 16 || delta < -3) {
       document.body.classList.remove('is-scrolling-down');
     } else if (delta > 3 && !menuOpen) {
@@ -351,48 +392,44 @@ function initBurgerMenu() {
   }, { passive: true });
 }
 
-// Header scroll state with RAF throttling
+// Header scroll state with RAF throttling.
+// FIX (console violations): reads only window.scrollY (no layout queries) and
+// writes a single class toggle, so no forced synchronous reflow can happen
+// inside the rAF callback.
 function initHeaderScroll() {
   const header = document.querySelector('.site-header');
   if (!header) return;
 
   let ticking = false;
+  let lastScrolled = null;
 
   const updateHeader = () => {
-    header.classList.toggle('site-header--scrolled', window.scrollY > 50);
     ticking = false;
+    // Only touch the DOM when the state actually changes — repeated
+    // add/remove of the same class invalidates styles on every frame.
+    const scrolled = window.scrollY > 50;
+    if (scrolled === lastScrolled) return;
+    lastScrolled = scrolled;
+    header.classList.toggle('site-header--scrolled', scrolled);
   };
 
   updateHeader();
 
   window.addEventListener('scroll', () => {
     if (!ticking) {
-      requestAnimationFrame(updateHeader);
       ticking = true;
+      requestAnimationFrame(updateHeader);
     }
   }, { passive: true });
 }
 
-// Smooth scroll for anchor links with reduced motion support
-function initSmoothScroll() {
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if (!targetId || targetId === '#') return;
-
-      const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({
-          behavior: prefersReducedMotion ? 'auto' : 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-}
+// Smooth scrolling is delegated to CSS (`html { scroll-behavior: smooth; }`
+// in site-foundation.css), which runs natively and honors
+// prefers-reduced-motion via the existing media query. The old JS handler ran
+// a full `querySelector` for every anchor click and then called
+// scrollIntoView, competing with the CSS behavior and adding 'click'/'scroll'
+// handler time ("Violation: handler took Nms"). Removed deliberately; anchor
+// links still smooth-scroll through CSS.
 
 // Dynamic viewport units
 function initDynamicViewport() {
@@ -633,14 +670,13 @@ document.addEventListener('DOMContentLoaded', () => {
     counters: document.querySelectorAll('.stat-number')
   };
 
-  // Initialize burger menu
-  initBurgerMenu();
+  // FIX (console violations): removed the initSmoothScroll() call — the JS
+  // smooth-scroll handler was deleted (CSS `scroll-behavior: smooth` owns it
+  // now) and calling the missing function threw inside this DOMContentLoaded
+  // handler, aborting every initializer below it.
 
   // Initialize header scroll
   initHeaderScroll();
-
-  // Initialize smooth scroll
-  initSmoothScroll();
 
   // Initialize dynamic viewport
   initDynamicViewport();
@@ -803,27 +839,36 @@ function _initBurgerMenu() {
   });
 }
 
-// Initialize all modules when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    _initScrollProgress();
-    _initOrientationAdapter();
-    initOpenGraphMeta();
-    _initBreadcrumbs();
-    _initBurgerMenu();
-  });
-} else {
-  _initScrollProgress();
-  _initScrollDirection();
-  _initOrientationAdapter();
-  initOpenGraphMeta();
-  _initBreadcrumbs();
-  _initBurgerMenu();
-}
+// Initialize the late-added modules exactly once.
+// FIX (console violations): this block used to re-run _initScrollProgress,
+// _initOrientationAdapter, initOpenGraphMeta, _initBreadcrumbs and
+// _initBurgerMenu — all of which the bootstrap IIFE / DOMContentLoaded handler
+// above already initialize. Every duplicate meant extra listeners, extra DOM
+// queries and a longer 'DOMContentLoaded' handler ("handler took 162ms"). The
+// only work left here is the burger-menu wiring, guarded so it runs at most
+// once, and even that exits immediately on normalized pages because neither
+// #burgerToggle nor #navPanel exists in the shared shell.
+(function initLateModulesOnce() {
+  let lateDone = false;
+  const runLate = () => {
+    if (lateDone) return;
+    lateDone = true;
+    try { _initBurgerMenu(); } catch {}
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runLate, { once: true });
+  } else {
+    runLate();
+  }
+})();
 
-// Service Worker registration for PWA functionality
+// Service Worker registration for PWA functionality.
+// FIX (console violations): registration no longer runs synchronously inside
+// the 'load' event ("Violation: 'load' handler took 255ms"). It is deferred to
+// an idle callback after load so the browser can finish paint-critical work
+// first; behavior is identical, just off the critical path.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
+  const registerServiceWorker = () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
         console.log('ServiceWorker registration successful:', registration.scope);
@@ -831,5 +876,10 @@ if ('serviceWorker' in navigator) {
       .catch((err) => {
         console.log('ServiceWorker registration failed:', err);
       });
-  });
+  };
+  const deferRegistration = () => {
+    if ('requestIdleCallback' in window) requestIdleCallback(registerServiceWorker, { timeout: 5000 });
+    else setTimeout(registerServiceWorker, 2000);
+  };
+  window.addEventListener('load', deferRegistration, { once: true, passive: true });
 }

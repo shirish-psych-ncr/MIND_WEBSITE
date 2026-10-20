@@ -4,7 +4,7 @@ import re
 import json
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = 'responsive18'
+VERSION = 'dropdown-fix2'
 THEME = '''<script data-theme-init>try{const t=localStorage.getItem('mindgrace-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script>'''
 
 def shell_markup():
