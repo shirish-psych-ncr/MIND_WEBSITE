@@ -1,110 +1,141 @@
-// Cloudflare Worker to add security headers
+// Cloudflare Worker to add security headers, canonicalize URLs, and block aggressive harvesters.
 // Deploy with: wrangler deploy worker.js
 
 export default {
   async fetch(request, env, ctx) {
-    return handleRequest(request)
-  }
-}
+    // 1. Parse URL once for performance (avoids multiple instantiations)
+    const url = new URL(request.url);
+    const userAgent = (request.headers.get('User-Agent') || '').toLowerCase();
 
-async function handleRequest(request) {
-  // --------------------------------------------------------------------------
-  // Server-level blocking for aggressive harvesters (2026 crawler framework,
-  // Phase 3). robots.txt is a voluntary request; Bytespider/Diffbot/PetalBot/
-  // Scrapy/aiHitBot/BittorrentBot are hard-blocked with 403 at the network
-  // edge so they never consume origin bandwidth. Keep this list in sync with
-  // SECTION 5 of ./robots.txt (tests/test_crawler_policy.py enforces it).
-  // NOTE: citation agents (OAI-SearchBot, Claude-SearchBot, PerplexityBot,
-  // ChatGPT-User, ...) must NEVER be added here - that would silently kill
-  // AEO visibility even though robots.txt allows them. Also verify Cloudflare
-  // "Bot Fight Mode" / managed AI-training block stays OFF for this zone:
-  // edge drops happen before origin rules and would break the Allow list.
-  // --------------------------------------------------------------------------
-  const BLOCKED_BOTS = ['bytespider', 'diffbot', 'petalbot', 'scrapy', 'aihitbot', 'bittorrentbot']
-  const userAgent = (request.headers.get('User-Agent') || '').toLowerCase()
-  if (BLOCKED_BOTS.some(bot => userAgent.includes(bot))) {
-    return new Response('Forbidden', { status: 403, headers: { 'Content-Type': 'text/plain' } })
-  }
+    // --------------------------------------------------------------------------
+    // SERVER-LEVEL BOT BLOCKING (2026 Crawler Framework, Phase 3)
+    // robots.txt is voluntary. These are hard-blocked at the network edge (403)
+    // to save origin bandwidth. Keep in sync with SECTION 5 of ./robots.txt.
+    // NOTE: Citation agents (OAI-SearchBot, PerplexityBot, etc.) must NEVER be
+    // added here. Verify Cloudflare "Bot Fight Mode" / AI-training block is OFF
+    // for this zone so it doesn't override our Allow list.
+    // --------------------------------------------------------------------------
+    const BLOCKED_BOTS = ['bytespider', 'diffbot', 'petalbot', 'scrapy', 'aihitbot', 'bittorrentbot'];
+    if (BLOCKED_BOTS.some(bot => userAgent.includes(bot))) {
+      return new Response('Forbidden', { 
+        status: 403, 
+        headers: { 'Content-Type': 'text/plain', 'Cache-Control': 'no-store' } 
+      });
+    }
 
-  // GitHub Pages ignores _redirects. Canonicalize legacy page requests at
-  // the Cloudflare edge before fetching the GitHub origin; preserve queries.
-  const canonical = new URL(request.url)
-  if (['mindgracencr.in', 'www.mindgracencr.in'].includes(canonical.hostname)) {
-    canonical.protocol = 'https:'
-    canonical.hostname = 'mindgracencr.in'
-    if (!canonical.pathname.startsWith('/assets/') && !canonical.pathname.startsWith('/vendor/')) {
-      canonical.pathname = canonical.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/+$/, '') || '/'
+    // --------------------------------------------------------------------------
+    // CANONICALIZATION & REDIRECTS
+    // GitHub Pages ignores _redirects. We handle legacy page requests at the 
+    // Cloudflare edge before fetching the origin. Preserves query strings.
+    // --------------------------------------------------------------------------
+    let needsRedirect = false;
+
+    // Enforce HTTPS and non-www
+    if (url.hostname === 'www.mindgracencr.in') {
+      url.hostname = 'mindgracencr.in';
+      needsRedirect = true;
+    }
+    if (url.protocol === 'http:') {
+      url.protocol = 'https:';
+      needsRedirect = true;
+    }
+
+    // Path cleanup and aliases (skip static asset directories)
+    if (!url.pathname.startsWith('/assets/') && !url.pathname.startsWith('/vendor/')) {
+      const originalPath = url.pathname;
+      
+      // Strip .html and normalize trailing slashes (root '/' remains '/')
+      url.pathname = url.pathname
+        .replace(/\/index\.html$/, '/')
+        .replace(/\.html$/, '')
+        .replace(/\/+$/, '') || '/';
+
       const aliases = {
         '/high-functioning-depression': '/high-functioning-depression-guide',
         '/psychiatrist-in-greater-noida': '/psychiatrist-greater-noida',
         '/psychiatrist-noida': '/psychiatrist-in-noida',
         '/mental-health-clinic-greater-noida': '/psychiatrist-greater-noida',
         '/mental-health-clinic-noida': '/psychiatrist-in-noida',
-        '/counselling': '/psychology-counselling', '/psychotherapy': '/therapy',
-        '/child-psychiatry': '/child-development', '/mental-health-assessment': '/assessments',
+        '/counselling': '/psychology-counselling',
+        '/psychotherapy': '/therapy',
+        '/child-psychiatry': '/child-development',
+        '/mental-health-assessment': '/assessments',
         '/blog/iilm-psychology-internship-greater-noida': '/blog/iilm-psychology-internship'
+      };
+
+      if (aliases[url.pathname]) {
+        url.pathname = aliases[url.pathname];
+        needsRedirect = true;
+      } else if (originalPath !== url.pathname) {
+        needsRedirect = true;
       }
-      canonical.pathname = aliases[canonical.pathname] || canonical.pathname
     }
-    if (canonical.href !== request.url) return Response.redirect(canonical.href, 301)
-  }
 
-  const response = await fetch(request)
-  
-  // Clone the response so we can modify headers
-  const newResponse = new Response(response.body, response)
-  
-  // Add security headers
-  newResponse.headers.set('X-Frame-Options', 'DENY')
-  newResponse.headers.set('X-Content-Type-Options', 'nosniff')
-  newResponse.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload')
-  newResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
-  newResponse.headers.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=()')
-  
-  // Content Security Policy (kept IN SYNC with the CSP in ./_headers —
-  // space-separated sources; allow-lists every third party actually used:
-  // GTM/gtag + Google Analytics, Cloudflare Zaraz/Insights, Ahrefs,
-  // unpkg (Leaflet), jsDelivr (Splide), Google Fonts, OpenStreetMap tiles).
-  // TODO: If a CSP is also set in the Cloudflare Dashboard (Security > WAF or
-  // a Transform Rule), update that copy manually too — this worker header and
-  // the dashboard rule must not fight each other.
-  newResponse.headers.set(
-    'Content-Security-Policy',
-    "default-src 'self'; " +
-    "base-uri 'self'; " +
-    "object-src 'none'; " +
-    "frame-ancestors 'none'; " +
-    "form-action 'self' https://docs.google.com; " +
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://*.ahrefs.com https://unpkg.com https://cdn.jsdelivr.net https://www.googletagmanager.com; " +
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net; " +
-    "img-src 'self' data: blob: https:; " +
-    "font-src 'self' data: https://fonts.gstatic.com; " +
-    "connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.google.com https://*.ahrefs.com https://analytics.ahrefs.com https://*.zarazprojects.com https://*.cloudflare.com https://static.cloudflareinsights.com https://*.tile.openstreetmap.org https://openstreetmap.org https://www.googletagmanager.com; " +
-    "frame-src 'self' https://*.googletagmanager.com https://www.google.com https://docs.google.com https://www.openstreetmap.org; " +
-    "worker-src 'self' blob:;"
-  )
-  
-  const path = new URL(request.url).pathname
+    if (needsRedirect) {
+      return Response.redirect(url.href, 301);
+    }
 
-  // Non-HTML assets cannot carry <meta name="robots">, so de-index raw PDFs
-  // via HTTP header (mirrors the /*.pdf rule in ./_headers).
-  if (path.toLowerCase().endsWith('.pdf')) {
-    newResponse.headers.set('X-Robots-Tag', 'noindex')
-  }
+    // --------------------------------------------------------------------------
+    // FETCH ORIGIN & APPLY HEADERS
+    // --------------------------------------------------------------------------
+    const response = await fetch(request);
+    
+    // Clone response to safely mutate headers without affecting the original stream
+    const newResponse = new Response(response.body, response);
+    const headers = newResponse.headers;
 
-  // Serve llms.txt context files as plain UTF-8 markdown text.
-  if (path === '/llms.txt' || /^\/llms-[^/]+\.txt$/.test(path)) {
-    newResponse.headers.set('Content-Type', 'text/plain; charset=utf-8')
-    newResponse.headers.set('Cache-Control', 'public, max-age=3600')
-  }
+    // Core Security Headers
+    headers.set('X-Frame-Options', 'DENY');
+    headers.set('X-Content-Type-Options', 'nosniff');
+    headers.set('X-DNS-Prefetch-Control', 'off'); // Privacy enhancement
+    headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
+    headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    headers.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
 
-  // Add cache control for static assets
-  const url = new URL(request.url)
-  if (url.pathname.startsWith('/assets/')) {
-    newResponse.headers.set('Cache-Control', 'public, max-age=86400')
-  } else if (url.pathname.endsWith('.html')) {
-    newResponse.headers.set('Cache-Control', 'public, max-age=3600')
+    // Content Security Policy
+    // NOTE: Kept IN SYNC with ./_headers. If a CSP is also set in the Cloudflare 
+    // Dashboard (WAF/Transform Rules), update it manually to prevent conflicts.
+    headers.set(
+      'Content-Security-Policy',
+      "default-src 'self'; " +
+      "base-uri 'self'; " +
+      "object-src 'none'; " +
+      "frame-ancestors 'none'; " +
+      "form-action 'self' https://docs.google.com; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://*.ahrefs.com https://unpkg.com https://cdn.jsdelivr.net https://www.googletagmanager.com; " +
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net; " +
+      "img-src 'self' data: blob: https:; " +
+      "font-src 'self' data: https://fonts.gstatic.com; " +
+      "connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.google.com https://*.ahrefs.com https://analytics.ahrefs.com https://*.zarazprojects.com https://*.cloudflare.com https://static.cloudflareinsights.com https://*.tile.openstreetmap.org https://openstreetmap.org https://www.googletagmanager.com; " +
+      "frame-src 'self' https://*.googletagmanager.com https://www.google.com https://docs.google.com https://www.openstreetmap.org; " +
+      "worker-src 'self' blob:;"
+    );
+
+    // --------------------------------------------------------------------------
+    // PATH-SPECIFIC HEADER RULES
+    // --------------------------------------------------------------------------
+    const path = url.pathname.toLowerCase();
+
+    // 1. PDFs: Prevent search engines from indexing raw PDF files
+    if (path.endsWith('.pdf')) {
+      headers.set('X-Robots-Tag', 'noindex, nofollow');
+    }
+
+    // 2. LLMs.txt: Serve as plain UTF-8 text with short cache for easy updates
+    if (path === '/llms.txt' || /^\/llms-[^/]+\.txt$/.test(path)) {
+      headers.set('Content-Type', 'text/plain; charset=utf-8');
+      headers.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    }
+
+    // 3. Caching Strategy Optimization
+    if (path.startsWith('/assets/') || path.startsWith('/vendor/')) {
+      // Immutable assets (JS, CSS, images, fonts) should be cached for 1 year
+      headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+    } else if (path.endsWith('.html') || path === '/') {
+      // HTML pages: Short cache + stale-while-revalidate for instant loads + fresh updates
+      headers.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    }
+
+    return newResponse;
   }
-  
-  return newResponse
 }
