@@ -28,7 +28,7 @@ const patientLinks = [
 ];
 const academicLinks = [
   ['Academic training hub', '/academic-training'],
-  ['Academic programs &amp; workshops', '/landing#academic-stream'],
+  ['Academic programs & workshops', '/landing#academic-stream'],
   ['Internship enquiries', '/clinical-psychology-internship'],
   ['Internship guides by institute', '/student-internship-guides'],
   ['Student resources', '/resources'],
@@ -43,7 +43,7 @@ const academicLinks = [
       <img class="logo-img" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
       <span class="logo-copy"><span class="logo-text" id="site-logo-name">Mind Grace</span><span class="logo-tagline">Neuropsychiatric Clinic | Where You Come First</span></span>
     </a>
-    <nav class="desktop-nav" aria-label="Main navigation"><ul>{navigation.slice(0, 2).map(([label, href]) => <li><a href={href}>{label}</a></li>)}<li class="nav-funnel"><span>Patient care</span><ul class="nav-funnel-menu">{patientLinks.map(([label, href]) => <li><a href={href}>{label}</a></li>)}</ul></li><li class="nav-funnel"><span>Academic training</span><ul class="nav-funnel-menu">{academicLinks.map(([label, href]) => <li><a href={href}>{label}</a></li>)}</ul></li><li><a href="/teleconsultation">Online consultations</a></li><li><a href="/contact">Contact</a></li><li><a class="btn btn--primary" href="/book">Book an appointment</a></li></ul></nav>
+    <nav class="desktop-nav" aria-label="Main navigation"><ul>{navigation.slice(0, 2).map(([label, href]) => <li><a href={href}>{label}</a></li>)}<li class="nav-funnel"><a href="/services">Patient care</a><ul class="nav-funnel-menu">{patientLinks.map(([label, href]) => <li><a href={href}>{label}</a></li>)}</ul></li><li class="nav-funnel"><a href="/academic-training">Academic training</a><ul class="nav-funnel-menu">{academicLinks.map(([label, href]) => <li><a href={href}>{label}</a></li>)}</ul></li><li><a href="/teleconsultation">Online consultations</a></li><li><a href="/contact">Contact</a></li><li><a class="btn btn--primary" href="/book">Book an appointment</a></li></ul></nav>
     <div class="header-actions">
       <button type="button" class="accessibility-toggle" id="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-panel">Accessibility</button>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Use dark theme"><i data-lucide="moon" aria-hidden="true"></i><span class="visually-hidden">Dark theme</span></button>

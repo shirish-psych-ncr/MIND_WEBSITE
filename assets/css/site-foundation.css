@@ -46,7 +46,7 @@ body:not(.is-scrolling-down) .site-header { transition: translate .24s ease; }
 .logo-text { color: var(--mg-lava-deep); font: 800 clamp(1rem, 2vw, 1.35rem)/1.05 "Sora", "Inter", system-ui, sans-serif; letter-spacing: -.03em; }
 .logo-tagline { color: var(--mg-muted); font: 700 .68rem/1.2 "Inter", system-ui, sans-serif; letter-spacing: .045em; text-transform: uppercase; }
 .desktop-nav ul, .mobile-nav-panel ul, .footer-links ul { margin: 0; padding: 0; list-style: none; }
-.desktop-nav ul { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; }
+.desktop-nav > ul { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; }
 .desktop-nav a, .mobile-nav-panel a, .footer-links a { color: var(--mg-ink); text-decoration: none; }
 .desktop-nav a:not(.btn), .mobile-nav-panel a:not(.btn) { min-height: 44px; display: inline-flex; align-items: center; padding: .65rem .75rem; border-radius: .7rem; font-weight: 700; }
 .desktop-nav a:not(.btn):hover, .desktop-nav a:not(.btn):focus-visible, .mobile-nav-panel a:not(.btn):hover, .mobile-nav-panel a:not(.btn):focus-visible, .desktop-nav a.is-current, .mobile-nav-panel a.is-current { color: var(--mg-lava-deep); background: var(--mg-soft); }
@@ -772,7 +772,7 @@ body[data-chrome-normalized="true"] .logo-tagline { white-space: normal !importa
 body[data-chrome-normalized="true"] .logo-text { font-size: clamp(.95rem, 1.2vw, 1.25rem) !important; }
 body[data-chrome-normalized="true"] .logo-tagline { font-size: clamp(.56rem, .68vw, .7rem) !important; }
 body[data-chrome-normalized="true"] .desktop-nav { min-width: 0; }
-body[data-chrome-normalized="true"] .desktop-nav ul {
+body[data-chrome-normalized="true"] .desktop-nav > ul {
   justify-content: flex-end;
   flex-wrap: nowrap !important;
   gap: clamp(.1rem, .45vw, .55rem) !important;
@@ -1842,7 +1842,7 @@ body .site-header .desktop-nav { position: static; width: auto; transform: none;
 body[data-chrome-normalized="true"] .header-inner { grid-template-columns: minmax(0, 1fr) auto; }
 body .site-header .header-actions { grid-column: 2; grid-row: 1; }
 body .site-header .desktop-nav { grid-column: 1 / -1; grid-row: 2; }
-body[data-chrome-normalized="true"] .desktop-nav ul { justify-content: center; flex-wrap: wrap !important; }
+body[data-chrome-normalized="true"] .desktop-nav > ul { justify-content: center; flex-wrap: wrap !important; }
 html[data-theme] body .site-header .desktop-nav .btn { background: var(--mg-link) !important; color: var(--mg-surface-strong) !important; }
 body .emergency-banner:not(.emergency-banner--static) { display: none !important; }
 body .article-related-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
@@ -2070,6 +2070,131 @@ body[data-chrome-normalized="true"] .seo-actions > * { min-height: 2.75rem; }
   body[data-chrome-normalized="true"] .hero-buttons > *,
   body[data-chrome-normalized="true"] .hero-actions > *,
   body[data-chrome-normalized="true"] .seo-actions > * { flex: 1 1 12rem; text-align: center; }
+}
+
+/* Shared shell contract. Scope every structural rule to the server-rendered
+   shell: legacy page styles must not change its tracks, lists or spacing. */
+body[data-chrome-normalized="true"] .site-header[data-shared-shell] {
+  height: auto; min-height: 0; padding: 0; overflow: visible;
+}
+body[data-chrome-normalized="true"] .site-header .header-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto;
+  width: min(calc(100% - 2 * var(--mg-page-gutter)), var(--mg-wide-max)) !important;
+  margin: 0 auto; padding: .75rem 0; gap: .5rem 1rem;
+}
+body .site-header[data-shared-shell] .logo-link {
+  grid-column: 1; grid-row: 1; min-width: 0; max-width: 20rem;
+  padding: 0; margin: 0; text-decoration: none;
+}
+body .site-header[data-shared-shell] .logo-tagline { display: none !important; }
+body .site-header[data-shared-shell] .header-actions {
+  grid-column: 2; grid-row: 1; display: flex; flex-wrap: nowrap;
+  align-items: center; gap: .5rem; margin: 0;
+}
+body .site-header[data-shared-shell] .desktop-nav {
+  grid-column: 1 / -1; grid-row: 2; display: block;
+  margin: 0; padding: 0; height: auto;
+}
+body .site-header[data-shared-shell] .desktop-nav > ul {
+  display: flex; justify-content: center; align-items: center;
+  flex-wrap: wrap; list-style: none; margin: 0; padding: 0; gap: .25rem .5rem;
+}
+body .site-header[data-shared-shell] .nav-funnel { position: relative; display: block; height: auto; }
+body .site-header[data-shared-shell] .nav-funnel > a {
+  display: flex; align-items: center; min-height: 44px;
+}
+body .site-header[data-shared-shell] .nav-funnel > .nav-funnel-menu {
+  position: absolute; inset: 100% auto auto 0;
+  display: none; flex-direction: column; align-items: stretch;
+  width: max-content; min-width: 15rem; max-width: min(24rem, 90vw);
+  margin: 0; padding: .75rem; gap: .25rem; list-style: none;
+  border: 1px solid var(--mg-border-strong); border-radius: .75rem;
+  background: var(--mg-surface-strong); box-shadow: 0 12px 30px rgb(40 23 29 / 18%);
+  z-index: 20;
+}
+body .site-header[data-shared-shell] .nav-funnel:is(:hover, :focus-within) > .nav-funnel-menu { display: flex; }
+body .site-header[data-shared-shell] .nav-funnel-menu a { white-space: normal; width: 100%; }
+body .site-header[data-shared-shell] :is(.mobile-nav-trigger, .mobile-book-btn) { display: none !important; }
+body .site-header[data-shared-shell] :is(.theme-toggle, .accessibility-toggle, .mobile-nav-trigger) { min-height: 44px; min-width: 44px; }
+
+body[data-chrome-normalized="true"] .site-footer[data-shared-shell] {
+  position: relative; width: 100%; height: auto; text-align: left;
+  padding: clamp(2rem, 4vw, 4rem) var(--mg-page-gutter) !important;
+}
+body[data-chrome-normalized="true"] .site-footer .footer-container {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 3rem); padding: 0;
+}
+body[data-chrome-normalized="true"] .site-footer .footer-links {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem;
+  margin: 0; padding: 0;
+}
+body .site-footer[data-shared-shell] :is(.footer-brand, .footer-links, .footer-contact, .footer-links > div) {
+  min-width: 0; width: auto; max-width: none;
+}
+body .site-footer[data-shared-shell] :is(p, address) { margin: .75rem 0; font-size: 1rem; line-height: 1.65; font-style: normal; }
+body .site-footer[data-shared-shell] .footer-links ul { display: grid; gap: .25rem; margin: 0; padding: 0; list-style: none; }
+body .site-footer[data-shared-shell] a {
+  max-width: 100%; overflow-wrap: anywhere; white-space: normal;
+  margin: 0; padding: .5rem 0; min-height: 44px;
+}
+body .site-footer[data-shared-shell] .footer-bottom {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem;
+  margin-top: 2rem; padding-top: 1.25rem;
+}
+body .site-footer[data-shared-shell] .footer-bottom > div { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+body .site-footer[data-shared-shell] .footer-contact__title { color: #fff5f8 !important; }
+
+/* Text-bearing surfaces share a fluid inset; media wrappers and interactive
+   canvases retain their own geometry. */
+body[data-chrome-normalized="true"] main :is(
+  .card, .service-card, .feature-card, .condition-card, .price-card,
+  .contact-card, .testimonial-card, .resource-card, .article-card, .tool-card,
+  .comparison-card, .info-card, .mg-card, .notice-box, .quote-box, .settings-box,
+  .seo-card, .seo-answer, .seo-note, .blog-answer, .direct-answer,
+  .panel, .callout, .info-box, .article-next-step, .article-feedback
+) {
+  min-width: 0;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  overflow-wrap: break-word;
+}
+body[data-chrome-normalized="true"] main :is(.card, .seo-card, .panel, .callout, .info-box) > :first-child { margin-top: 0; }
+body[data-chrome-normalized="true"] main :is(.card, .seo-card, .panel, .callout, .info-box) > :last-child { margin-bottom: 0; }
+/* These wrappers already subtract the page gutter from their width. */
+body[data-chrome-normalized="true"] main div.container:not(.legal-content) { padding-inline: 0; }
+body[data-chrome-normalized="true"] main .container > .contact-grid { width: 100%; }
+body[data-chrome-normalized="true"] main .container:has(.card.step) { padding-inline: clamp(1.25rem, 2.5vw, 2rem); }
+body[data-chrome-normalized="true"] main .card.step { padding: clamp(1.25rem, 2.5vw, 2rem) !important; }
+body[data-chrome-normalized="true"] main .card.step::before { position: static; display: block; margin-bottom: .75rem; }
+@media (min-width: 1250px) {
+  body[data-chrome-normalized="true"] .site-footer .footer-container { grid-template-columns: minmax(0, .85fr) minmax(0, 2.2fr) minmax(0, 1fr); }
+  body[data-chrome-normalized="true"] .site-footer .footer-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 1100px) {
+  body .site-header[data-shared-shell] .desktop-nav { display: none !important; }
+  body .site-header[data-shared-shell] .mobile-nav-trigger,
+  body .site-header[data-shared-shell] .mobile-book-btn { display: inline-flex !important; align-items: center; justify-content: center; }
+  body[data-chrome-normalized="true"] .site-footer .footer-container { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }
+  body .site-footer[data-shared-shell] .footer-contact { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  body[data-chrome-normalized="true"] .site-header .header-inner { gap: .5rem; }
+  body .site-header[data-shared-shell] .header-actions { gap: .25rem; }
+  body .site-header[data-shared-shell] .mobile-book-btn { display: none !important; }
+  body .site-header[data-shared-shell] .logo-img { width: 40px; }
+  body .site-header[data-shared-shell] .logo-text { overflow-wrap: normal; }
+  body .site-header[data-shared-shell] .mg-t-hindi { display: none; }
+  body .site-header[data-shared-shell] #mg-t-menu-btn { width: 44px; padding: 0; font-size: 0; }
+  body .site-header[data-shared-shell] #mg-t-menu-btn::before { content: "अ/A"; font-size: .9rem; }
+  body[data-chrome-normalized="true"] .site-footer .footer-container,
+  body[data-chrome-normalized="true"] .site-footer .footer-links { grid-template-columns: minmax(0, 1fr) !important; }
+  body .site-footer[data-shared-shell] .footer-contact { grid-column: auto; }
+}
+@media (max-width: 380px) {
+  body .site-header[data-shared-shell] .logo-img { width: 30px; }
+  body .site-header[data-shared-shell] .logo-link { gap: .25rem; }
+  body .site-header[data-shared-shell] .logo-text { font-size: .85rem !important; }
 }
 
 /* Semantic fix: <h2> inside <address> is invalid HTML; title now uses strong.footer-contact__title */

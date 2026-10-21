@@ -1,5 +1,5 @@
 import { cp, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 
@@ -44,7 +44,7 @@ export function publicAssets() {
       await mkdir(target, { recursive: true });
       await cp(path.join(root, 'public'), target, { recursive: true });
       for (const name of PUBLIC_FILES) await cp(path.join(root, name), path.join(target, name), { recursive: true });
-      updateConfig({ publicDir: target });
+      updateConfig({ publicDir: pathToFileURL(target + path.sep) });
     },
     'astro:build:done': async ({ dir }) => {
       const out = fileURLToPath(dir);
