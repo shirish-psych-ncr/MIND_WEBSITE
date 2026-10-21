@@ -44,14 +44,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">
     <link rel="stylesheet" href="/assets/css-tools/min/tools-book.min.css">
     <!-- MIND GRACE LIBRARY STACK -->
-    <script defer src="/assets/js/min/icon-init.min.js"></script>
-    <script defer src="/assets/js/min/carousel-init.min.js"></script>
-    <script defer src="/assets/js/min/main.min.js"></script>
-    <script defer src="/assets/js/min/ui-popovers.min.js"></script>
+    <!-- FIX (Rocket Loader / preload warnings): every page-owned script now
+         carries data-cfasync="false". Cloudflare Rocket Loader rewrites these
+         tags into its own loader and re-inserts them at runtime, which is what
+         produced the long "Node.insertBefore @ ... t.activateScript @
+         rocket-loader.min.js" stacks plus the "'load' handler took Nms" and
+         "Forced reflow" violations on /book. Opting out keeps the declared
+         defer order intact and lets the browser use preloaded bytes directly. -->
+    <script data-cfasync="false" defer src="/assets/js/min/icon-init.min.js"></script>
+    <script data-cfasync="false" defer src="/assets/js/min/carousel-init.min.js"></script>
+    <script data-cfasync="false" defer src="/assets/js/min/main.min.js"></script>
+    <script data-cfasync="false" defer src="/assets/js/min/ui-popovers.min.js"></script>
     <!-- HTTP Client (Ky Library) -->
-    <script defer src="/assets/js/min/http-client.min.js"></script>
-    <script defer src="/assets/js/min/animations-auto.min.js"></script>
-  <script defer src="/assets/js/min/crisis-banner.min.js"></script>
+    <script data-cfasync="false" defer src="/assets/js/min/http-client.min.js"></script>
+    <script data-cfasync="false" defer src="/assets/js/min/animations-auto.min.js"></script>
+  <script data-cfasync="false" defer src="/assets/js/min/crisis-banner.min.js"></script>
     <!-- END LIBRARY STACK -->
 
     <!-- Network Status Toast -->
@@ -378,11 +385,19 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
     </div>
     <!-- FOOTER -->
 
-    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script data-cfasync="false" defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
 
-    <script src="/assets/js/min/tools-book.min.js" type="module"></script>
-    <script src="/assets/js/min/booking.min.js" type="module"></script>
+    <!-- FIX (unused-preload / credentials-mode warnings): the empty legacy
+         shim tools-book.min.js was deleted — booking behavior lives entirely
+         in booking.js, and loading a no-op module wasted bytes and produced
+         "preloaded but not used" console noise. The real module is opted out of
+         Rocket Loader with data-cfasync="false": RocketLoader re-inserts the
+         script at runtime as a classic (same-origin-credentials) request, which
+         never matches the anonymous CORS mode of the browser's automatic ES-
+         module preload, hence "A preload ... found, but not used because the
+         request credentials mode does not match". -->
+    <script data-cfasync="false" src="/assets/js/min/booking.min.js" type="module"></script>
     
     <!-- NETWORK STATUS TOAST -->
 </Layout>

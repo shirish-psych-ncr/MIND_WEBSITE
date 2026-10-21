@@ -81,6 +81,23 @@
     }
   ];
   const themeKey = "mindgrace-theme";
+  // Desktop header dropdown groups (mirror Shell.astro's patientLinks /
+  // academicLinks so runtime-built headers match the pre-rendered shell).
+  const patientLinks = [
+    ["Psychiatry", "/psychiatry"],
+    ["Therapy and counselling", "/therapy"],
+    ["Conditions", "/conditions"],
+    ["Assessments", "/assessments"],
+    ["Teleconsultation", "/teleconsultation"]
+  ];
+  const academicLinks = [
+    ["Academic training hub", "/academic-training"],
+    ["Academic programs & workshops", "/landing#academic-stream"],
+    ["Internship enquiries", "/clinical-psychology-internship"],
+    ["Internship guides by institute", "/student-internship-guides"],
+    ["Student resources", "/resources"],
+    ["Research and learning", "/blog"]
+  ];
   // Privacy settings and embedded browsers may deny storage access.
   const preferences = {
     get(key) { try { return localStorage.getItem(key); } catch { return null; } },
@@ -106,6 +123,88 @@
 
   function linkMarkup(items = navigation) {
     return items.map(([label, href]) => `<li><a href="${href}">${label}</a></li>`).join("");
+  }
+
+  const CHEVRON_SVG = '<svg class="nav-funnel-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+
+  // FIX (dropdown menu bar): desktop group headers used to be plain <span>s —
+  // not focusable or clickable, so touch devices and keyboard users could never
+  // open the "Patient care" / "Academic training" submenus on any page
+  // (including /book). Upgrade every funnel trigger to a real <button> (legacy
+  // markup is converted in place), then wire click-to-toggle with
+  // Escape/outside-click closing and aria-expanded state. Hover still works
+  // via CSS; this makes the dropdowns usable everywhere.
+  function funnelMenuMarkup(id, label, links) {
+    return `<li class="nav-funnel"><button type="button" class="nav-funnel-trigger" id="${id}-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="${id}">${label}${CHEVRON_SVG}</button><ul class="nav-funnel-menu" id="${id}" hidden>${links.map(([linkLabel, href]) => `<li><a href="${href}">${linkLabel}</a></li>`).join("")}</ul></li>`;
+  }
+
+  function desktopNavMarkup() {
+    return `${navigation.slice(0, 2).map(([label, href]) => `<li><a href="${href}">${label}</a></li>`).join("")}`
+      + funnelMenuMarkup("nav-patient-care", "Patient care", patientLinks)
+      + funnelMenuMarkup("nav-academic-training", "Academic training", academicLinks)
+      + `<li><a href="/teleconsultation">Online consultations</a></li><li><a href="/contact">Contact</a></li><li><a class="btn btn--primary" href="/book">Book an appointment</a></li>`;
+  }
+
+  function upgradeFunnelTriggers(root) {
+    $$(".nav-funnel > span:not(.visually-hidden)", root).forEach((span) => {
+      const funnel = span.parentElement;
+      const menu = funnel.querySelector(".nav-funnel-menu");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "nav-funnel-trigger";
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-haspopup", "true");
+      if (!menu.id) menu.id = `nav-funnel-${pageKey(currentFile()).replace(/[^a-z0-9]+/gi, "-") || "menu"}`;
+      button.setAttribute("aria-controls", menu.id);
+      button.textContent = span.textContent;
+      button.insertAdjacentHTML("beforeend", CHEVRON_SVG);
+      span.replaceWith(button);
+      menu.hidden = true;
+    });
+  }
+
+  function bindDesktopDropdowns(header) {
+    if (header.dataset.funnelsBound === "true") return;
+    header.dataset.funnelsBound = "true";
+    upgradeFunnelTriggers(header);
+    const funnels = $$(".nav-funnel", header);
+    const setOpen = (funnel, open) => {
+      const trigger = funnel.querySelector(".nav-funnel-trigger");
+      const menu = funnel.querySelector(".nav-funnel-menu");
+      if (!trigger || !menu) return;
+      trigger.setAttribute("aria-expanded", String(open));
+      menu.hidden = !open;
+      funnel.classList.toggle("is-open", open);
+    };
+    funnels.forEach((funnel) => {
+      const trigger = funnel.querySelector(".nav-funnel-trigger");
+      if (!trigger) return;
+      trigger.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const willOpen = trigger.getAttribute("aria-expanded") !== "true";
+        funnels.forEach((other) => { if (other !== funnel) setOpen(other, false); });
+        setOpen(funnel, willOpen);
+      });
+    });
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest(".nav-funnel")) funnels.forEach((funnel) => setOpen(funnel, false));
+    });
+    header.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      const funnel = event.target.closest(".nav-funnel");
+      if (!funnel) return;
+      setOpen(funnel, false);
+      funnel.querySelector(".nav-funnel-trigger")?.focus();
+    });
+    // Close an open dropdown when its branch loses focus entirely (keyboard).
+    funnels.forEach((funnel) => {
+      funnel.addEventListener("focusout", () => {
+        requestAnimationFrame(() => {
+          if (!funnel.contains(document.activeElement)) setOpen(funnel, false);
+        });
+      });
+    });
   }
 
   function mobileTreeMarkup(items, level = 0, parentId = "mobile-nav") {
@@ -232,7 +331,7 @@
         <img class="logo-img" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
         <span class="logo-copy"><span class="logo-text" id="site-logo-name">Mind Grace</span><span class="logo-tagline">Neuropsychiatric Clinic | Where You Come First</span></span>
       </a>
-      <nav class="desktop-nav" aria-label="Main navigation"><ul>${linkMarkup()}<li><a class="btn btn--primary" href="/book">Book an appointment</a></li></ul></nav>
+      <nav class="desktop-nav" aria-label="Main navigation"><ul>${desktopNavMarkup()}</ul></nav>
       <div class="header-actions">
         <button type="button" class="accessibility-toggle" id="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-panel">Accessibility</button>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Use dark theme"><i data-lucide="moon" aria-hidden="true"></i><span class="visually-hidden">Dark theme</span></button>
@@ -324,6 +423,11 @@
       mobileNav.classList.toggle("is-open", open);
       overlay.classList.toggle("is-active", open);
       document.body.classList.toggle("menu-open", open);
+      // Mirrors the panel state on <body> so scroll listeners in main.js can
+      // check `document.body.classList` (a cached, no-query read) instead of
+      // running a selector query inside their rAF callback, which forced a
+      // synchronous style recalculation ("Forced reflow" console violations).
+      document.body.classList.toggle("mobile-nav-open", open);
       if (open) {
         [...document.body.children].filter((node) => node !== mobileNav && node !== overlay && !node.matches("script, link, style")).forEach((node) => {
           backgroundState.set(node, node.inert);
@@ -360,6 +464,11 @@
 
   function normalizeSiteChrome() {
     if (!document.body || document.body.dataset.shellBound === "true") return { main: $("main") };
+    // Retired per-page chrome (legacy burger dropdowns, hand-authored mobile
+    // nav panels/overlays, orphaned burger buttons). The shared shell owns the
+    // only menu; anything left from older page payloads is removed before the
+    // panel is built so a second, un-styled menu can never appear.
+    $$(".nav-dropdown, .mobile-nav-panel:not([data-shared-shell]), .mobile-nav-overlay:not([data-shared-shell]), .burger-btn:not(#burgerMenuBtn), .scroll-progress").forEach((node) => node.remove());
     const main = preserveMain();
     normalizeSkipLink();
     $$("body > header, body > footer, .masthead, .journal-footer, .site-header, .site-footer, .mobile-nav-panel, .mobile-nav-overlay").filter((node) => !node.hasAttribute("data-shared-shell")).forEach((node) => node.remove());
@@ -373,6 +482,7 @@
     const mobileNav = document.createElement("nav");
     mobileNav.className = "mobile-nav-panel";
     mobileNav.id = "mobile-nav-panel";
+    mobileNav.setAttribute("data-shared-shell", "");
     mobileNav.setAttribute("aria-label", "Mobile navigation");
     mobileNav.setAttribute("role", "dialog");
     mobileNav.setAttribute("aria-modal", "true");
@@ -411,6 +521,11 @@
     const year = footer.querySelector("#year");
     if (year) year.textContent = String(new Date().getFullYear());
     bindMenu(header, mobileNav, overlay);
+    // FIX (dropdown menu bar): wire the desktop "Patient care" / "Academic
+    // training" submenus on every page — including pre-rendered shells that
+    // still carry legacy <span> triggers, which upgradeFunnelTriggers converts
+    // to buttons in place.
+    bindDesktopDropdowns(header);
     $("#theme-toggle", header).addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
     setTheme(selectedTheme(), false);
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {

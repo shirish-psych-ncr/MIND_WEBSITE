@@ -1514,6 +1514,62 @@ body .mobile-nav-panel .mobile-nav-appointment {
   body .desktop-nav a.btn--primary { padding-inline: 1.15rem; }
 }
 
+/* FIX (dropdown headers/menu bar): canonical styling for the desktop header
+   dropdowns ("Patient care", "Academic training"). The group headers are real
+   <button>s wired by visitor-friendly.js (bindDesktopDropdowns); panels open
+   on click (JS toggles [hidden] + .is-open), on hover/focus-within for mouse
+   and keyboard users, and close on Escape/outside-click. Declared at the end
+   of the foundation bundle so legacy rules in layout.min.css / inspiration.css
+   can never leave a submenu stuck closed or un-styled on any page
+   (including /book). */
+body .desktop-nav .nav-funnel { position: relative; display: flex; align-items: center; }
+body .desktop-nav .nav-funnel-trigger {
+  display: inline-flex; align-items: center; gap: .4rem;
+  min-height: 44px; padding: .65rem .75rem; border: 0; border-radius: .7rem;
+  background: transparent; color: var(--mg-ink); font: inherit; font-weight: 700;
+  cursor: pointer; text-align: start;
+}
+body .desktop-nav .nav-funnel-trigger:hover,
+body .desktop-nav .nav-funnel-trigger:focus-visible,
+body .desktop-nav .nav-funnel.is-open .nav-funnel-trigger {
+  color: var(--mg-lava-deep); background: var(--mg-soft); outline-offset: 2px;
+}
+body .desktop-nav .nav-funnel-chevron { flex: 0 0 auto; transition: transform .18s ease; }
+body .desktop-nav .nav-funnel.is-open .nav-funnel-chevron,
+body .desktop-nav .nav-funnel-trigger[aria-expanded="true"] .nav-funnel-chevron { transform: rotate(180deg); }
+/* `body body`/`body[data-chrome-normalized] body` prefixes raise specificity
+   above the legacy rules in inspiration.css and layout.min.css (which are
+   loaded after this stylesheet on many pages) without needing !important. */
+body body .desktop-nav .nav-funnel-menu,
+body[data-chrome-normalized="true"] body .desktop-nav .nav-funnel-menu {
+  position: absolute; top: calc(100% + 2px); left: 0; z-index: 1000;
+  display: flex; flex-direction: column; align-items: stretch; gap: .15rem;
+  min-width: 240px; margin: 0; padding: .5rem; list-style: none;
+  background: #fffaf9; border: 1px solid var(--mg-line); border-radius: .8rem;
+  box-shadow: 0 18px 44px rgb(40 23 29 / 24%);
+}
+body body .desktop-nav .nav-funnel-menu[hidden],
+body[data-chrome-normalized="true"] body .desktop-nav .nav-funnel-menu[hidden] { display: none; }
+body .desktop-nav .nav-funnel-menu li { margin: 0; }
+body .desktop-nav .nav-funnel-menu a {
+  display: flex; align-items: center; width: 100%; white-space: nowrap;
+  min-height: 44px; padding: .55rem .75rem; border-radius: .55rem;
+  color: var(--mg-ink); text-decoration: none; font-weight: 600;
+}
+body .desktop-nav .nav-funnel-menu a:hover,
+body .desktop-nav .nav-funnel-menu a:focus-visible,
+body .desktop-nav .nav-funnel-menu a.is-current { color: var(--mg-lava-deep); background: var(--mg-soft); }
+/* Hover reveal for fine pointers; click state handled via .is-open above. */
+@media (hover: hover) and (pointer: fine) {
+  body .desktop-nav .nav-funnel:hover .nav-funnel-menu:not([hidden]),
+  body .desktop-nav .nav-funnel:focus-within .nav-funnel-menu:not([hidden]) { display: flex; }
+}
+/* Below the unified 1100px breakpoint the burger panel owns navigation; make
+   sure no desktop dropdown fragment leaks into narrow layouts. */
+@media (max-width: 1100px) {
+  body .desktop-nav { display: none !important; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   body .desktop-nav a:not(.btn)::after { transition: none; }
 }
