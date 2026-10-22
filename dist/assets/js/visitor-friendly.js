@@ -237,13 +237,14 @@
   }
 
   function normalizeSafetyNotice() {
+    // This hidden legacy announcement repeats the visible shared notice.
+    $$("body > .visually-hidden").filter((element) => /In a crisis\?|24\/7 Crisis Support Available|24\/7 crisis support resources/i.test(element.textContent || "")).forEach((element) => element.remove());
     if ($(".emergency-banner--static")) { $$(".crisis-banner, .emergency-banner:not(.emergency-banner--static)").forEach((node) => node.remove()); return; }
     $$(".emergency-banner, .crisis-banner").forEach((banner) => banner.remove());
     $$(".visually-hidden").filter((element) => /In a crisis\?|24\/7 Crisis Support Available|24\/7 crisis support resources/i.test(element.textContent || "")).forEach((element) => element.remove());
     const notice = document.createElement("aside");
     notice.className = "emergency-banner emergency-banner--static";
     notice.style.display = "block";
-    notice.setAttribute("role", "note");
     notice.setAttribute("aria-labelledby", "emergency-notice-title");
     notice.innerHTML = `<div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div>`;
     document.body.prepend(notice);
@@ -265,11 +266,20 @@
   }
 
   function setTheme(theme, persist = true) {
-    const value = theme === "dark" ? "dark" : "light";
+    const requested = theme === "dark" ? "dark" : "light";
+    // High contrast has one coherent light palette. Keep the saved theme so
+    // turning it off restores the visitor's choice; an explicit theme choice
+    // exits high contrast instead of mixing two competing color schemes.
+    if (persist && document.documentElement.classList.contains('a11y-contrast')) {
+      document.documentElement.classList.remove('a11y-contrast');
+      preferences.remove('mindgrace-a11y-contrast');
+      document.querySelector('[data-accessibility="contrast"]')?.setAttribute('aria-pressed', 'false');
+    }
+    const value = document.documentElement.classList.contains('a11y-contrast') ? 'light' : requested;
     document.documentElement.dataset.theme = value;
     document.documentElement.style.colorScheme = value === "light" ? "only light" : "dark";
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", value === "dark" ? "#21151b" : "#fffaf9");
-    if (persist) preferences.set(themeKey, value);
+    if (persist) preferences.set(themeKey, requested);
     const toggle = $("#theme-toggle");
     if (toggle) {
       const dark = value === "dark";
@@ -473,12 +483,14 @@
     $$("body > header, body > footer, .masthead, .journal-footer, .site-header, .site-footer, .mobile-nav-panel, .mobile-nav-overlay").filter((node) => !node.hasAttribute("data-shared-shell")).forEach((node) => node.remove());
     const header = $(".site-header[data-shared-shell]") || buildHeader();
     const skip = $(".skip-link");
-    if (skip) skip.after(header); else document.body.prepend(header);
+    const notice = $(".emergency-banner--static");
+    if (notice) notice.after(header); else document.body.prepend(header);
+    if (skip) header.prepend(skip);
     const overlay = document.createElement("div");
     overlay.className = "mobile-nav-overlay";
     overlay.id = "mobile-nav-overlay";
     overlay.hidden = true;
-    const mobileNav = document.createElement("nav");
+    const mobileNav = document.createElement("div");
     mobileNav.className = "mobile-nav-panel";
     mobileNav.id = "mobile-nav-panel";
     mobileNav.setAttribute("data-shared-shell", "");
@@ -502,6 +514,7 @@
       if (enabled) preferences.set(`mindgrace-a11y-${mode}`, "true");
       else preferences.remove(`mindgrace-a11y-${mode}`);
       accessibilityPanel.querySelector(`[data-accessibility="${mode}"]`)?.setAttribute("aria-pressed", String(enabled));
+      if (mode === 'contrast') setTheme(selectedTheme(), false);
     };
     ["larger", "contrast", "motion"].forEach((mode) => setAccessibility(mode, preferences.get(`mindgrace-a11y-${mode}`) === "true"));
     accessibilityPanel.addEventListener("keydown", (event) => {
@@ -865,6 +878,19 @@
     // Old migrated pages placed their summary before the breadcrumbs and
     // headline. Keep it with the introduction so visitors reach the title first.
     const main = shell?.main || $("main");
+    // Wide data remains scrollable with a keyboard, including after text zoom.
+    $$("table", main).forEach((table, index) => {
+      const wrapper = table.closest('.table-scroll, .table-responsive, .table-wrapper, .programme-tables');
+      const scrollTarget = wrapper || table;
+      scrollTarget.setAttribute('tabindex', '0');
+      if (wrapper) {
+        wrapper.setAttribute('role', 'region');
+        if (!wrapper.hasAttribute('aria-label') && !wrapper.hasAttribute('aria-labelledby')) {
+          const heading = table.closest('section')?.querySelector('h2, h3');
+          wrapper.setAttribute('aria-label', (table.caption?.textContent || heading?.textContent || `Data table ${index + 1}`).trim().slice(0, 160));
+        }
+      }
+    });
     const openingAnswer = main?.querySelector(':scope > .seo-answer');
     const pageHeading = main?.querySelector('h1');
     if (openingAnswer && pageHeading) pageHeading.insertAdjacentElement('afterend', openingAnswer);

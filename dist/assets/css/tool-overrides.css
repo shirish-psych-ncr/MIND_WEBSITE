@@ -98,7 +98,7 @@ body:has(#eye-start-btn) #orb { filter: drop-shadow(0 0 .8rem rgb(251 207 232 / 
 body:has(#depth) #fractal-ui,
 body:has(#depth) .fractal-ui,
 body:has(#depth) #ui { color: #f8fafc; }
-body:has(#depth) .row label,
+body:has(#depth) .row label { color: var(--tool-control-ink, #f8fafc) !important; opacity: 1; }
 body:has(#depth) .breath-tag { color: #f8fafc !important; opacity: .9; }
 body:has(#depth) input[type="range"] { accent-color: #fbc6d4; }
 

@@ -25,7 +25,7 @@ const manifest = JSON.parse(await readFile(path.join(root, 'route-manifest.json'
 const routes = process.argv.slice(2).length ? process.argv.slice(2) : [...new Set([...manifest.routes, '/offline.html'])];
 const results = [];
 try {
-  for (const width of [360, 768, 1100, 1440]) {
+  for (const width of [320, 360, 768, 1100, 1440]) {
     const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce', serviceWorkers: 'block' });
     await context.route('**/*', route => route.request().url().startsWith('http://127.0.0.1:8766') ? route.continue() : route.abort());
     const page = await context.newPage();
@@ -57,14 +57,31 @@ try {
         return [...new Set(issues)];
       });
       results.push({ route, width, issues });
+      if (route === '/') {
+        await page.locator('.skip-link').focus();
+        const skipUsable = await page.locator('.skip-link').evaluate(el => {
+          const r = el.getBoundingClientRect();
+          return r.y >= 0 && r.left >= 0 && r.right <= innerWidth && el.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2));
+        });
+        if (!skipUsable) throw new Error('Focused skip link is hidden or covered');
+        await page.locator('.skip-link').press('Enter');
+        if (!await page.locator('main').evaluate(el => el === document.activeElement)) throw new Error('Skip link did not focus main content');
+        await page.evaluate(() => window.scrollTo(0, 0));
+      }
       if (route === '/' || route === '/contact' || route === '/academic-training') {
         await page.screenshot({ path: path.join(out, `${route.replaceAll('/', '') || 'home'}-${width}.png`), fullPage: true });
       }
       if (route === '/' && width <= 1100) {
         await page.locator('#burgerMenuBtn').click();
         await page.locator('.mobile-nav-panel').waitFor({ state: 'visible' });
+        const closeUsable = await page.locator('.close-mobile-menu').evaluate(el => {
+          const r = el.getBoundingClientRect();
+          return el.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2));
+        });
+        if (!closeUsable) throw new Error('Mobile menu close control is covered');
         await page.keyboard.press('Escape');
         if (await page.locator('#burgerMenuBtn').getAttribute('aria-expanded') !== 'false') throw new Error('Menu failed to close');
+        if (!await page.locator('#burgerMenuBtn').evaluate(el => el === document.activeElement)) throw new Error('Menu did not restore keyboard focus');
       }
       if (route === '/' && width > 1100) {
         const funnelTrigger = page.locator('.nav-funnel-trigger').first();
@@ -73,6 +90,23 @@ try {
         await page.locator('.nav-funnel-menu').first().waitFor({ state: 'visible' });
         await page.keyboard.press('Tab');
         if (!await page.locator('.nav-funnel-menu a').first().evaluate(el => el === document.activeElement)) throw new Error('Dropdown keyboard navigation failed');
+        await page.keyboard.press('Escape');
+        if (await funnelTrigger.getAttribute('aria-expanded') !== 'false') throw new Error('Dropdown failed to close with Escape');
+      }
+      if (route === '/' && width === 360) {
+        await page.locator('#theme-toggle').click();
+        await page.locator('#accessibility-toggle').click();
+        await page.locator('[data-accessibility="contrast"]').click();
+        await page.keyboard.press('Escape');
+        if (!await page.locator('html').evaluate(el => el.dataset.theme === 'light' && el.classList.contains('a11y-contrast'))) throw new Error('High contrast did not select its coherent palette');
+        await page.reload({ waitUntil: 'load' });
+        await page.waitForFunction(() => document.body.dataset.shellBound === 'true');
+        if (!await page.locator('html').evaluate(el => el.dataset.theme === 'light' && el.classList.contains('a11y-contrast'))) throw new Error('Contrast preference did not survive reload');
+        await page.locator('#accessibility-toggle').click();
+        await page.locator('[data-accessibility="reset"]').click();
+        await page.keyboard.press('Escape');
+        if (await page.locator('html').getAttribute('data-theme') !== 'dark') throw new Error('Reset did not restore the saved dark theme');
+        await page.locator('#theme-toggle').click();
       }
     }
     console.log(`${width}px: ${results.filter(r => r.width === width && r.issues.length).length} failing routes / ${routes.length}`);

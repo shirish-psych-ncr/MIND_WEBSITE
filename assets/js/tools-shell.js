@@ -84,6 +84,9 @@
     if (document.body.dataset.toolShellReady === "true") return;
     document.body.dataset.toolShellReady = "true";
     document.body.classList.add("tool-page");
+    // The shared navigation and view controls replace these fixed legacy links,
+    // which otherwise cover the window/full-screen controls on narrow screens.
+    document.querySelectorAll('.tool-link-bar').forEach(bar => bar.remove());
     const stage = stageSelectors.map((selector) => document.querySelector(selector)).find(Boolean);
     if (stage) stage.dataset.toolStage = "true";
     addRelatedReading();

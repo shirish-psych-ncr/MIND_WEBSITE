@@ -14,7 +14,7 @@ interface Props {
 
 const { version = 'dropdown-fix2' } = Astro.props;
 
-const themeInit = `try{const t=localStorage.getItem('mindgrace-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}`;
+const themeInit = `try{const t=localStorage.getItem('mindgrace-theme');const c=localStorage.getItem('mindgrace-a11y-contrast')==='true';if(c)document.documentElement.classList.add('a11y-contrast');document.documentElement.dataset.theme=c?'light':t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}`;
 ---
 
 <meta name="color-scheme" content="light dark">

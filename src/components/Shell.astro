@@ -13,7 +13,6 @@
 const navigation = [
   ['Home', '/'],
   ['About', '/about'],
-  ['About', '/about'],
   ['Patient care', '/services'],
   ['Academic training', '/academic-training'],
   ['Online consultations', '/teleconsultation'],
@@ -42,9 +41,9 @@ const academicLinks = [
 // (bindDesktopDropdowns), with aria-expanded/aria-controls for accessibility.
 const funnelMarkup = (id, label, links) => `<li class="nav-funnel"><button type="button" class="nav-funnel-trigger" id="${id}-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="${id}">${label}<svg class="nav-funnel-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><ul class="nav-funnel-menu" id="${id}" hidden>${links.map(([linkLabel, href]) => `<li><a href="${href}">${linkLabel}</a></li>`).join('')}</ul></li>`;
 ---
-<aside class="emergency-banner emergency-banner--static" role="note" aria-labelledby="emergency-notice-title"><div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div></aside>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<aside class="emergency-banner emergency-banner--static" aria-labelledby="emergency-notice-title"><div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div></aside>
 <header class="site-header" data-shared-shell>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="header-inner">
     <a class="logo-link" href="/">
       <img class="logo-img" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
