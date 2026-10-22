@@ -17,7 +17,8 @@ article{max-width:740px;margin:0 auto;padding:30px 0 15px}
 section{margin:0 0 35px}p{margin:0 0 18px}h1,h2,h3{line-height:1.22;font-weight:bold;text-wrap:balance}
 h1{font-size:44px;letter-spacing:-1.1px;margin:14px 0 20px}h2{font-size:29px;margin:36px 0 16px;padding-top:22px;border-top:1px solid var(--line)}h3{font-size:22px;margin:25px 0 12px}
 .eyebrow{font:11px/1.7 Arial,sans-serif;letter-spacing:1.7px;text-transform:uppercase;margin-bottom:14px;color:#6a5d4a}
-.university-logo{display:block;width:170px;height:85px;object-fit:contain;background:white;margin:0 0 16px}
+.university-logo{display:block;width:min(240px,45vw);height:auto;max-height:120px;object-fit:contain;object-fit:scale-down;background:#fff;padding:10px;border:1px solid var(--line);border-radius:12px;margin:0 0 16px}
+@media(max-width:700px){.university-logo{width:min(200px,40vw);max-height:100px}}
 .lead{font-size:21px;line-height:1.6}.article-meta-bar{display:flex;flex-wrap:wrap;gap:8px 18px;font:12px/1.7 Arial,sans-serif;border-block:1px solid var(--line);padding:12px 0;margin:22px 0}
 small{display:block;font:12px/1.7 Arial,sans-serif;color:#665f53}
 .article-toc{background:#f5f0e6;border-block:1px solid var(--line);padding:20px 26px;font-size:16px}.article-toc strong{font-variant:small-caps;letter-spacing:1px}.article-toc ol{margin:10px 0 0;padding-left:22px}

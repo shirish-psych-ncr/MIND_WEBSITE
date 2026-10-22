@@ -785,7 +785,7 @@ footer a:focus-visible { color: var(--rose-serenity-pink); }
 body[data-chrome-normalized="true"] .site-header { z-index: 1000; }
 body[data-chrome-normalized="true"] .site-header .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: min(1180px, calc(100% - 2rem)); margin-inline: auto; }
 body[data-chrome-normalized="true"] .site-header .logo-link { display: inline-flex; align-items: center; gap: .75rem; min-width: 0; text-decoration: none; }
-body[data-chrome-normalized="true"] .site-header .logo-img { width: 58px; height: 46px; object-fit: contain; flex: 0 0 auto; }
+body[data-chrome-normalized="true"] .site-header .logo-img { width: 84px; height: 66px; object-fit: contain; flex: 0 0 auto; }
 body[data-chrome-normalized="true"] .site-header .logo-text { display: block; color: var(--rose-serenity-ink); font: 700 clamp(1rem, 2vw, 1.2rem)/1.15 var(--font-family-heading); }
 body[data-chrome-normalized="true"] .site-header .logo-tagline { display: block; color: var(--rose-serenity-pink); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; margin-top: .25rem; }
 body[data-chrome-normalized="true"] .site-header .desktop-nav ul, body[data-chrome-normalized="true"] .mobile-nav-panel ul { list-style: none; display: flex; align-items: center; gap: clamp(.6rem, 1.6vw, 1.25rem); margin: 0; padding: 0; }
@@ -814,7 +814,7 @@ body[data-chrome-normalized="true"] .site-footer .footer-bottom div { display: f
 @media (min-width: 901px) { body[data-chrome-normalized="true"] .site-header .mobile-nav-trigger { display: none; } }
 @media (max-width: 700px) {
   body[data-chrome-normalized="true"] .site-header .header-inner { width: min(100% - 1rem, 1180px); }
-  body[data-chrome-normalized="true"] .site-header .logo-img { width: 46px; height: 40px; }
+  body[data-chrome-normalized="true"] .site-header .logo-img { width: 64px; height: 54px; }
   body[data-chrome-normalized="true"] .site-header .logo-tagline { font-size: .58rem; }
   body[data-chrome-normalized="true"] .site-footer .footer-container, body[data-chrome-normalized="true"] .site-footer .footer-links { grid-template-columns: 1fr; gap: 1.5rem; }
   body[data-chrome-normalized="true"] .site-footer .footer-bottom { display: grid; }

@@ -4,7 +4,7 @@
 
   const navigation = [
     ["Home", "/"],
-    ["Clinic & training hub", "/landing"],
+    ["About", "/about"],
     ["About", "/about"],
     ["Services", "/services"],
     ["Academic training", "/academic-training"],
@@ -19,7 +19,6 @@
       icon: "compass",
       children: [
         ["Home", "/"],
-        ["Clinic & training hub", "/landing"],
         ["About the clinic", "/about"],
         ["Our care team", "/doctors"],
         ["What to expect", "/process"]
@@ -55,7 +54,7 @@
       icon: "book-open",
       children: [
         ["Academic training hub", "/academic-training"],
-        ["Student programs & workshops", "/landing#academic-stream"],
+        ["Student programs & workshops", "/#academic-stream"],
         ["Internship enquiries", "/clinical-psychology-internship"],
         ["Internship guides by institute", "/student-internship-guides"],
         ["Student resources", "/resources"],
@@ -92,7 +91,7 @@
   ];
   const academicLinks = [
     ["Academic training hub", "/academic-training"],
-    ["Academic programs & workshops", "/landing#academic-stream"],
+    ["Academic programs & workshops", "/#academic-stream"],
     ["Internship enquiries", "/clinical-psychology-internship"],
     ["Internship guides by institute", "/student-internship-guides"],
     ["Student resources", "/resources"],
@@ -347,7 +346,7 @@
     footer.className = "site-footer";
     footer.innerHTML = `<div class="footer-container">
       <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
-      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/landing#patient-stream">Clinic &amp; training hub</a></li><li><a href="/services">Our services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/academic-training">Academic training hub</a></li><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/student-internship-guides">Internship guides by institute</a></li><li><a href="/landing#academic-stream">Student programs &amp; workshops</a></li><li><a href="/faq#common-questions">Frequently asked questions</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
+      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/#patient-stream">Clinic &amp; training hub</a></li><li><a href="/services">Our services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/academic-training">Academic training hub</a></li><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/student-internship-guides">Internship guides by institute</a></li><li><a href="/#academic-stream">Student programs &amp; workshops</a></li><li><a href="/faq#common-questions">Frequently asked questions</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
       <address class="footer-contact"><h2>Visit or call</h2><p>Mind Grace Neuropsychiatric Clinic<br>J123, Gamma II, Greater Noida, 201310</p><p><a href="tel:+919667863295">+91 96678 63295</a><br><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
     </div><div class="footer-bottom"><p>&copy; <span id="year"></span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/consent">Consent</a></div></div>`;
     return footer;
@@ -551,7 +550,7 @@
   }
 
   function enhanceBreadcrumbs(main) {
-    if (!main || currentFile() === "index.html") return;
+    if (!main || pageKey(currentFile()) === "index") return;
     const labels = {
       "about.html": "About the clinic", "services.html": "Services", "process.html": "What to expect",
       "resources.html": "Resources", "location.html": "Find the clinic", "contact.html": "Contact",
@@ -580,6 +579,7 @@
       "learning-disability-assessment.html": "Learning disability assessment"
     };
     const file = currentFile();
+    const legacyKey = pageKey(file) + '.html';
     const title = $("h1", main)?.textContent?.replace(/\s+/g, " ").trim();
     const slugLabel = (value) => value.replace(/\.html$/i, "").split("-").map((part) => part ? part[0].toUpperCase() + part.slice(1) : part).join(" ");
     const entries = [{ label: "Home", href: "/" }];
@@ -591,28 +591,33 @@
     const resourcePages = new Set(["faq.html", "gallery.html", "testimonials.html", "approach.html"]);
     const legalPages = new Set(["terms.html", "disclaimer.html", "consent.html"]);
     if (path.startsWith("/blog")) {
-      entries.push({ label: "Blog", href: "/blog" });
-      if (path.includes("/adult")) entries.push({ label: "Adult mental health", href: "/blog/adult" });
-      else if (path.includes("/child")) entries.push({ label: "Child development", href: "/blog/children" });
+      if (pageKey(file) !== 'blog') entries.push({ label: "Blog", href: "/blog" });
+      if (/psychology-internship|psychiatry-internship/.test(path)) entries.push({ label: "Internship guides", href: "/student-internship-guides" });
+      else if (path.includes("/pages/adult/")) entries.push({ label: "Adult mental health", href: "/blog/adult" });
+      else if (path.includes("/pages/child/")) entries.push({ label: "Child development", href: "/blog/children" });
     } else if (path.startsWith("/tools")) {
       entries.push({ label: "Resources", href: "/resources" });
       entries.push({ label: "Therapeutic tools", href: "/resources#tools" });
-    } else if (carePages.has(pageKey(file))) {
+    } else if (carePages.has(legacyKey)) {
       entries.push({ label: "Care and services", href: "/services" });
-    } else if (conditionPages.has(pageKey(file))) {
+    } else if (conditionPages.has(legacyKey)) {
       entries.push({ label: "Conditions and assessments", href: "/conditions" });
     } else if (pageKey(file) === "psychiatrist-greater-noida" || pageKey(file) === "psychiatrist-in-noida") {
       entries.push({ label: "Locations", href: "/location" });
-    } else if (aboutPages.has(pageKey(file))) {
+    } else if (aboutPages.has(legacyKey)) {
       entries.push({ label: "About the clinic", href: "/about" });
-    } else if (visitPages.has(pageKey(file))) {
+    } else if (visitPages.has(legacyKey)) {
       entries.push({ label: "Visit and contact", href: "/contact" });
-    } else if (resourcePages.has(pageKey(file))) {
+    } else if (resourcePages.has(legacyKey)) {
       entries.push({ label: "Explore and learn", href: "/resources" });
-    } else if (legalPages.has(pageKey(file))) {
+    } else if (legalPages.has(legacyKey)) {
       entries.push({ label: "Legal and privacy", href: "/privacy" });
     }
-    entries.push({ label: title || labels[pageKey(file)] || slugLabel(file), href: null });
+    // Breadcrumbs are navigation labels, so prefer concise route names over
+    // marketing headlines that wrap across half the viewport.
+    const institution = main.querySelector('.institution-identity h1')?.textContent?.split(':')[0]?.trim();
+    const category = { adult: 'Adult mental health', children: 'Child development', blog: 'Blog' }[pageKey(file)];
+    entries.push({ label: institution || category || labels[legacyKey] || slugLabel(file) || title, href: null });
     let nav = $(".breadcrumbs", main) || $("nav[aria-label='Breadcrumb']", main);
     if (!nav) { nav = document.createElement("nav"); nav.className = "breadcrumbs"; main.prepend(nav); }
     nav.setAttribute("aria-label", "Breadcrumb");
@@ -666,7 +671,7 @@
   // intentionally factual and local, so it remains useful without making a
   // diagnosis or promising an outcome.
   function addContentPathway(main) {
-    if (!main || main.querySelector("[data-content-pathway]")) return;
+    if (!main || main.querySelector("[data-content-pathway], .article-next-step, .mg-access")) return;
     const path = window.location.pathname.replace(/\\/g, "/");
     const file = currentFile();
     const pathways = {
@@ -791,7 +796,7 @@
         links: [["Read adult mental health guides", "/blog/adult"], ["Read child development guides", "/blog/children"], ["Book professional support", "/book"]]
       }
     };
-    let content = pathways[path] || pathways[file] || pathways[pageKey(file)] || (path.endsWith("/") ? pathways[path.slice(0, -1)] : null);
+    let content = pathways[path] || pathways[file] || pathways[pageKey(file) + '.html'] || (path.endsWith("/") ? pathways[path.slice(0, -1)] : null);
     if (!content && file === "index.html" && !path.startsWith("/blog")) content = pathways["/"];
     if (path.startsWith("/tools")) {
       const toolCopy = {
@@ -801,7 +806,7 @@
         "hypnos-fractal.html": ["Let a steady visual pattern hold your attention", "The fractal exercise offers a quiet visual focus point for a short pause. Stop if visual movement feels uncomfortable, and contact a professional when distress continues or affects daily life."],
         "horizon-scan.html": ["Orient your attention to the space around you", "Horizon scanning invites you to notice your surroundings in a slow, deliberate way. Use it as a brief grounding exercise, stop if it feels uncomfortable, and seek help when you need more than a self-guided pause."],
         "leaf-on-stream.html": ["Watch thoughts pass without chasing them", "Leaf on Stream offers an imagery-based pause for observing thoughts and feelings. It does not replace assessment or care, and you can stop whenever the exercise feels uncomfortable or unhelpful."]
-      }[file] || ["Use this tool at your own pace", "This exercise offers a brief way to pause, focus, or ground yourself. Stop if it increases discomfort, and choose professional support when symptoms persist, interfere with daily life, or feel unsafe."];
+      }[pageKey(file) + '.html'] || ["Use this tool at your own pace", "This exercise offers a brief way to pause, focus, or ground yourself. Stop if it increases discomfort, and choose professional support when symptoms persist, interfere with daily life, or feel unsafe."];
       content = { title: toolCopy[0], body: toolCopy[1], links: [["See all self-help tools", "/resources#tools"], ["Read practical mental health guides", "/blog"], ["Book a consultation", "/book"]] };
     }
     if (path.startsWith("/blog/pages")) {
@@ -814,7 +819,14 @@
         links: [["Browse all guides", "/blog"], [childArticle ? "See child-development services" : "See adult mental health services", "/services"], ["Try a gentle self-help tool", "/resources#tools"], ["Book a consultation", "/book"]]
       };
     }
-    if (!content || ["privacy.html", "terms.html", "consent.html", "disclaimer.html"].includes(file)) return;
+    if (main.querySelector('.institution-identity')) {
+      content = {
+        title: "Plan your supervised placement",
+        body: "Confirm your department’s requirements, the activities you may observe, supervision, hours and documentation before applying.",
+        links: [["Compare institute guides", "/student-internship-guides"], ["Read internship details", "/clinical-psychology-internship"], ["Ask the academic desk", "/contact"]]
+      };
+    }
+    if (!content || ["privacy", "terms", "consent", "disclaimer"].includes(pageKey(file))) return;
     const panel = document.createElement("section");
     panel.className = "content-pathway";
     panel.dataset.contentPathway = "true";
@@ -850,6 +862,12 @@
     const shell = normalizeSiteChrome();
     normalizeSafetyNotice();
     normalizePublicContactDetails();
+    // Old migrated pages placed their summary before the breadcrumbs and
+    // headline. Keep it with the introduction so visitors reach the title first.
+    const main = shell?.main || $("main");
+    const openingAnswer = main?.querySelector(':scope > .seo-answer');
+    const pageHeading = main?.querySelector('h1');
+    if (openingAnswer && pageHeading) pageHeading.insertAdjacentElement('afterend', openingAnswer);
     enhanceBreadcrumbs(shell?.main || $("main"));
     addContentPathway(shell?.main || $("main"));
     markCurrentNavigation();

@@ -25,6 +25,7 @@ await walk(DIST);
 const failures = [];
 for (const file of htmlFiles) {
   const html = await readFile(file, 'utf8');
+  if (/index\.html$/i.test(file) && /http-equiv=["']refresh["']/i.test(html)) continue;
   const scripts = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   const nodes = [];
   for (const [, source] of scripts) {

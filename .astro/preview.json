@@ -1,0 +1,14 @@
+{
+	"pid": 18180,
+	"port": 8765,
+	"url": "http://127.0.0.1:8765",
+	"urls": {
+		"local": [
+			"http://127.0.0.1:8765/"
+		],
+		"network": [],
+		"networkInterfaceNames": []
+	},
+	"background": false,
+	"startedAt": "2026-10-21T07:16:20.004Z"
+}

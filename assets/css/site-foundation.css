@@ -2160,6 +2160,19 @@ body .site-header[data-shared-shell] .nav-funnel { position: relative; display: 
 body .site-header[data-shared-shell] .nav-funnel > a {
   display: flex; align-items: center; min-height: 44px;
 }
+body .site-header[data-shared-shell] .nav-funnel-trigger {
+  min-height: 44px; display: inline-flex; align-items: center; gap: .35rem;
+  padding: .65rem .75rem; border: 0; border-radius: .7rem;
+  background: transparent; color: var(--mg-ink-strong); font: inherit; font-weight: 700;
+  cursor: pointer;
+}
+body .site-header[data-shared-shell] .nav-funnel-trigger:hover,
+body .site-header[data-shared-shell] .nav-funnel-trigger:focus-visible,
+body .site-header[data-shared-shell] .nav-funnel-trigger[aria-expanded="true"] {
+  color: var(--mg-link); background: var(--mg-surface-soft);
+}
+body .site-header[data-shared-shell] .nav-funnel-chevron { transition: transform .18s ease; }
+body .site-header[data-shared-shell] .nav-funnel-trigger[aria-expanded="true"] .nav-funnel-chevron { transform: rotate(180deg); }
 body .site-header[data-shared-shell] .nav-funnel > .nav-funnel-menu {
   position: absolute; inset: 100% auto auto 0;
   display: none; flex-direction: column; align-items: stretch;
@@ -2173,6 +2186,8 @@ body .site-header[data-shared-shell] .nav-funnel:is(:hover, :focus-within) > .na
 body .site-header[data-shared-shell] .nav-funnel-menu a { white-space: normal; width: 100%; }
 body .site-header[data-shared-shell] :is(.mobile-nav-trigger, .mobile-book-btn) { display: none !important; }
 body .site-header[data-shared-shell] :is(.theme-toggle, .accessibility-toggle, .mobile-nav-trigger) { min-height: 44px; min-width: 44px; }
+body .site-header[data-shared-shell] .theme-toggle { white-space: nowrap; overflow: hidden; }
+html[data-theme] body .emergency-banner--static a[href="/emergency"] { display: inline-flex; align-items: center; min-height: 32px; padding: .2rem .65rem; border-radius: 999px; background: #7a1038; color: #fff !important; text-decoration: none; }
 
 body[data-chrome-normalized="true"] .site-footer[data-shared-shell] {
   position: relative; width: 100%; height: auto; text-align: left;
@@ -2217,6 +2232,15 @@ body[data-chrome-normalized="true"] main :is(
 }
 body[data-chrome-normalized="true"] main :is(.card, .seo-card, .panel, .callout, .info-box) > :first-child { margin-top: 0; }
 body[data-chrome-normalized="true"] main :is(.card, .seo-card, .panel, .callout, .info-box) > :last-child { margin-bottom: 0; }
+body[data-chrome-normalized="true"] main .mg-service-grid .mg-service,
+body[data-chrome-normalized="true"] main .mg-program-grid .mg-program { min-height: 100%; display: flex; flex-direction: column; }
+body[data-chrome-normalized="true"] main .mg-service__links,
+body[data-chrome-normalized="true"] main .mg-card__actions { margin-top: auto; }
+body[data-chrome-normalized="true"] main .mg-note,
+body[data-chrome-normalized="true"] main .mg-program small { color: var(--mg-ink-muted); font-size: .95rem; line-height: 1.6; }
+body[data-chrome-normalized="true"] main .institution-logo { width: clamp(4rem, 8vw, 6rem); height: clamp(4rem, 8vw, 6rem); object-fit: contain; object-position: center; align-self: center; image-rendering: auto; }
+body[data-chrome-normalized="true"] main .mg-tab:not(.mg-tab--active) { border: 2px solid var(--mg-border-strong); background: var(--mg-surface-strong); color: var(--mg-ink-strong); }
+body[data-chrome-normalized="true"] main .mg-tab:hover, body[data-chrome-normalized="true"] main .mg-tab:focus-visible { border-color: var(--mg-link); background: var(--mg-surface-soft); }
 /* These wrappers already subtract the page gutter from their width. */
 body[data-chrome-normalized="true"] main div.container:not(.legal-content) { padding-inline: 0; }
 body[data-chrome-normalized="true"] main .container > .contact-grid { width: 100%; }
@@ -2258,4 +2282,122 @@ body[data-chrome-normalized="true"] main .card.step::before { position: static; 
 body[data-chrome-normalized="true"] .site-footer .footer-contact__title { color: var(--rose-serenity-ink); }
 @media (prefers-color-scheme: dark) {
   body[data-chrome-normalized="true"] .site-footer .footer-contact__title { color: #fff8f7; }
+}
+
+/* Browser review: preserve native visibility even when a component uses grid
+   or flex. This also keeps closed menu branches and enquiry states exclusive. */
+body [hidden]:not([hidden="until-found"]) { display: none !important; }
+body .visually-hidden {
+  position: absolute !important; width: 1px !important; height: 1px !important;
+  padding: 0 !important; margin: -1px !important; overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important; clip-path: inset(50%) !important;
+  white-space: nowrap !important; border: 0 !important;
+}
+body { font-family: "Inter", system-ui, sans-serif; line-height: 1.65; }
+html[data-theme="dark"] {
+  --mg-care-surface: #16393b; --mg-care-ink: #c5f4f2;
+  --mg-learn-surface: #432f24; --mg-learn-ink: #ffdcc3;
+}
+body main .mg-fineprint p { font-size: .95rem; line-height: 1.65; }
+body main .mg-field-help { font-size: .85rem; margin-block: .4rem 0; color: var(--mg-ink-muted); }
+body main .mg-success p { color: inherit; }
+body main .mg-switchbar { position: relative; top: auto; }
+body main .mg-stream { scroll-margin-top: 7rem; }
+body main .mg-card__actions > .btn + .btn { background: transparent; color: var(--mg-link) !important; border-color: var(--mg-border-strong); box-shadow: none; }
+html[data-theme] body main :is(.btn-outline, .btn--outline, .btn-ghost, .btn--ghost, .button-ghost) {
+  background: transparent !important; color: var(--mg-link) !important;
+  border: 1px solid var(--mg-border-strong) !important; box-shadow: none;
+}
+html[data-theme] body main :is(.btn-outline, .btn--outline, .btn-ghost, .btn--ghost, .button-ghost):is(:hover, :focus-visible) {
+  background: var(--mg-surface-soft) !important; color: var(--mg-link-hover) !important;
+}
+html[data-theme] body main .mg-tab--active {
+  background: var(--mg-link) !important; color: var(--mg-surface-strong) !important;
+  border-color: var(--mg-link) !important;
+}
+html[data-theme="dark"] body main .highlight { color: var(--mg-accent) !important; -webkit-text-fill-color: currentColor; }
+body main table caption { color: var(--mg-ink-strong) !important; font-weight: 700; text-align: left; padding: .75rem; }
+body main .discovery-grid > .article-card,
+body main :is([data-pinned-grid], [data-beginner-grid], [data-loop-grid]) > .article-card {
+  width: 100%; margin: 0; min-width: 0; max-width: 100%;
+}
+body .breadcrumbs ol > li::before { content: none !important; }
+body main .form-wrapper:has([data-booking-iframe][hidden]) { padding-bottom: 0; background: var(--mg-surface-strong); }
+body main .form-wrapper:has([data-booking-iframe][hidden])::before { display: none; }
+body main .accordion-trigger { font-family: inherit; }
+body main .accordion-panel:not([hidden]) { padding: 1.25rem; }
+body main h1 + .seo-answer { width: 100%; margin: 1rem 0; }
+@media (min-width: 1101px) {
+  body[data-chrome-normalized="true"] .site-header .header-inner { position: relative; }
+  body .site-header[data-shared-shell] .nav-funnel { position: static; }
+  body .site-header[data-shared-shell] .nav-funnel > .nav-funnel-menu {
+    inset: 100% 0 auto; width: 100%; max-width: none; min-width: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .5rem 1rem; padding: 1.25rem;
+    background: var(--mg-surface-soft);
+  }
+  body .site-header[data-shared-shell] .nav-funnel.is-open > .nav-funnel-menu:not([hidden]),
+  body .site-header[data-shared-shell] .nav-funnel:focus-within > .nav-funnel-menu:not([hidden]) { display: grid; }
+  body .site-header[data-shared-shell] .nav-funnel-menu a { display: flex; align-items: center; min-height: 48px; height: 100%; background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); }
+}
+@media (min-width: 1440px) {
+  body[data-chrome-normalized="true"] .site-header .header-inner { grid-template-columns: auto minmax(0, 1fr) auto; width: min(calc(100% - 3rem), 1440px) !important; }
+  body .site-header[data-shared-shell] .desktop-nav { grid-column: 2; grid-row: 1; font-size: .875rem; }
+  body .site-header[data-shared-shell] .desktop-nav > ul { gap: .15rem; flex-wrap: nowrap !important; }
+  body .site-header[data-shared-shell] .header-actions { grid-column: 3; }
+  body .site-header[data-shared-shell] .logo-link { max-width: 12rem; }
+  body .site-header[data-shared-shell] .logo-img { width: 3rem; }
+}
+body .site-header[data-shared-shell] .theme-toggle { position: relative; }
+body .site-header[data-shared-shell] .theme-toggle > :is(svg, i) { width: 22px; height: 22px; }
+
+/* These articles have no legacy page stylesheet. Supply the same reading
+   measure, gutters, type and identity layout as the rest of the site. */
+body[data-chrome-normalized="true"] main.classic-blog-reading {
+  width: min(100% - 2 * var(--mg-page-gutter, 1.25rem), 72rem);
+  margin-inline: auto; padding-inline: 0;
+  font-family: "Inter", system-ui, sans-serif; line-height: 1.7;
+}
+body[data-chrome-normalized="true"] main.classic-blog-reading > article {
+  width: min(100%, 76ch); margin-inline: auto; padding-block: 1.25rem 3rem;
+}
+body main.classic-blog-reading h1 { font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.2; margin-block: .5rem 1.25rem; }
+body main.classic-blog-reading h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); line-height: 1.3; margin-block: 2rem .75rem; }
+body main.classic-blog-reading h3 { font-size: 1.15rem; line-height: 1.4; }
+body main.classic-blog-reading :is(p, ul, ol) { margin-block: .75rem 1.25rem; }
+body main.classic-blog-reading :is(ul, ol) { padding-inline-start: 1.4rem; }
+body main.classic-blog-reading li { margin-block: .5rem; }
+body main .institution-identity { display: flex; gap: 1.25rem; align-items: center; margin-bottom: 1.5rem; }
+body main .institution-identity > div { min-width: 0; }
+body main .institution-identity :is(.institution-logo, .institution-mark) {
+  flex: 0 0 5rem; width: 5rem; height: 5rem; object-fit: contain;
+  padding: .5rem; border: 1px solid var(--mg-border-strong); border-radius: .75rem;
+  background: #fff; color: #7a1038;
+}
+body main .institution-identity .institution-mark { display: grid; place-items: center; font-weight: 800; }
+body main .institution-identity h1 { margin-bottom: 0; }
+body main .institution-identity .seo-kicker { margin-top: 0; }
+body main .internship-faq { padding-block: .5rem; border-bottom: 1px solid var(--mg-border-strong); }
+body main .institute-directory a { display: inline-block; padding-block: .45rem; text-underline-offset: .2em; }
+body main .institute-directory a:is(:hover, :focus-visible) { background: var(--mg-surface-soft); text-decoration: underline; }
+body main .guide-search { display: grid; gap: .5rem; margin-block: 1.5rem; }
+body main .guide-search input { width: 100%; padding: .85rem 1rem; border: 1px solid var(--mg-border-strong); border-radius: .65rem; font: inherit; background: var(--mg-surface-strong); color: var(--mg-ink-strong); }
+body main .guide-search p { margin: 0; }
+
+/* Keep the booking hero copy in one column beside its bounded image. */
+body:has(#heroStartBooking) main .hero-inner { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); align-items: center; gap: 2rem; }
+body:has(#heroStartBooking) main .hero-content { display: block; min-width: 0; }
+body:has(#heroStartBooking) main .hero-content > * + * { margin-top: 1rem; }
+body:has(#heroStartBooking) main .hero-media img { display: block; width: 100%; height: 20rem; object-fit: cover; border-radius: 1rem; }
+body:has(#heroStartBooking) main .hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+body main .contact-card .contact-icon { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: .75rem; background: var(--mg-surface-soft); color: var(--mg-link); margin-bottom: 1rem; }
+body main .contact-card .contact-icon svg { width: 1.5rem !important; height: 1.5rem !important; }
+body main .seo-hero .seo-answer { border: 1px solid var(--mg-border-strong); border-radius: .85rem; background: var(--mg-surface-strong); box-shadow: none; }
+@media (max-width: 760px) {
+  body:has(#heroStartBooking) main .hero-inner { grid-template-columns: minmax(0, 1fr); }
+  body:has(#heroStartBooking) main .hero-media { display: none; }
+}
+@media (max-width: 480px) {
+  body main .institution-identity { flex-direction: column; align-items: flex-start; gap: .75rem; }
+  body main .institution-identity :is(.institution-logo, .institution-mark) { align-self: flex-start; }
 }

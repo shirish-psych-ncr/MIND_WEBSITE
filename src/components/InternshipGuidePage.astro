@@ -30,8 +30,8 @@ const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity
   <Breadcrumbs canonical={canonical} items={[
     { name: 'Home', href: '/' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Student Internship Guides', href: '/clinical-psychology-internship' },
-    { name: `Internship for ${institution} students` },
+    { name: 'Internship guides', href: '/student-internship-guides' },
+    { name: institution },
   ]} />
   <article>
     <div class="institution-identity">
@@ -66,7 +66,7 @@ const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity
     <h2>Questions about your university requirements</h2>
     <p>Check whether your department requires an internship letter, attendance record, case or project report, reflective notebook, supervisor evaluation, or a particular number of hours. A hospital or clinic name alone does not establish that a placement is available or that it satisfies your course.</p>
     <h2>Mind Grace as a starting option</h2>
-    <p>Mind Grace Neuropsychiatric Clinic in Sector 128, Greater Noida West, can be a starting option for students who want to ask about supervised psychology learning opportunities east of the Yamuna — outpatient neurosis, neuropsychiatric rehabilitation, de-addiction, family counselling, and teleconsultation work. Read the <a href="/clinical-psychology-internship">Mind Grace internship enquiry guide</a> and use the <a href="/contact">contact page</a> to ask about current availability. Any opportunity, supervision, schedule, and documentation must be confirmed directly; students must not independently diagnose, interpret tests for patients, or provide therapy.</p>
+    <p>Mind Grace Neuropsychiatric Clinic in J123, Gamma II, Greater Noida, can be a starting option for students who want to ask about supervised psychology learning opportunities east of the Yamuna — outpatient neurosis, neuropsychiatric rehabilitation, de-addiction, family counselling, and teleconsultation work. Read the <a href="/clinical-psychology-internship">Mind Grace internship enquiry guide</a> and use the <a href="/contact">contact page</a> to ask about current availability. Any opportunity, supervision, schedule, and documentation must be confirmed directly; students must not independently diagnose, interpret tests for patients, or provide therapy.</p>
     {profile && profile.faqs.length > 0 && (
       <>
         <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />

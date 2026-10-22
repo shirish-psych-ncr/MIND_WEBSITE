@@ -49,7 +49,7 @@ const programs = [
   {
     name: 'Clinical psychology internship',
     kind: 'Cohort program · rolling intakes',
-    where: '/landing#academic-stream',
+    where: '/#academic-stream',
     whereLabel: 'See the internship program on the clinic hub',
     summary: 'Supervised outpatient exposure for undergraduate and postgraduate psychology students: MSE orientation, observed OPD sessions under confidentiality protocols, and case discussions.',
     enquiry: '/clinical-psychology-internship',
@@ -117,7 +117,7 @@ const programs = [
           <h3>{location}</h3>
           <ul>
             {profiles.map((profile) => (
-              <li><a href={`/blog/pages/adult/${profile.slug}`}>{profile.institution}</a> — internship and practicum guide{profile.rciPathway ? ', RCI licensing pathway' : ''}.</li>
+              <li><a href={`/blog/pages/adult/${profile.slug}`}>{profile.institution}</a> {profile.rciPathway ? ', RCI licensing pathway' : ''}.</li>
             ))}
           </ul>
         </>
@@ -127,7 +127,7 @@ const programs = [
     <section class="seo-section">
       <h2>How these pages fit together</h2>
       <ul>
-        <li><a href="/landing#academic-stream">Student &amp; academic hub</a> — what each program looks like week to week.</li>
+        <li><a href="/#academic-stream">Student &amp; academic hub</a> — what each program looks like week to week.</li>
         <li><a href="/clinical-psychology-internship">Clinical psychology internship enquiries</a> — how supervision, boundaries, and documentation work at Mind Grace.</li>
         <li><a href="/student-internship-guides">Institute-wise internship guides</a> — the same information matched to your university's rules.</li>
         <li><a href="/blog/iilm-psychology-internship">IILM BA &amp; BSc Psychology internship article</a> — the original case study in the blog series.</li>

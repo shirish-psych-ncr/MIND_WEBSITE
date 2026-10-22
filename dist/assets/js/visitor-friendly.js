@@ -4,7 +4,7 @@
 
   const navigation = [
     ["Home", "/"],
-    ["Clinic & training hub", "/landing"],
+    ["About", "/about"],
     ["About", "/about"],
     ["Services", "/services"],
     ["Academic training", "/academic-training"],
@@ -19,7 +19,6 @@
       icon: "compass",
       children: [
         ["Home", "/"],
-        ["Clinic & training hub", "/landing"],
         ["About the clinic", "/about"],
         ["Our care team", "/doctors"],
         ["What to expect", "/process"]
@@ -55,7 +54,7 @@
       icon: "book-open",
       children: [
         ["Academic training hub", "/academic-training"],
-        ["Student programs & workshops", "/landing#academic-stream"],
+        ["Student programs & workshops", "/#academic-stream"],
         ["Internship enquiries", "/clinical-psychology-internship"],
         ["Internship guides by institute", "/student-internship-guides"],
         ["Student resources", "/resources"],
@@ -81,6 +80,23 @@
     }
   ];
   const themeKey = "mindgrace-theme";
+  // Desktop header dropdown groups (mirror Shell.astro's patientLinks /
+  // academicLinks so runtime-built headers match the pre-rendered shell).
+  const patientLinks = [
+    ["Psychiatry", "/psychiatry"],
+    ["Therapy and counselling", "/therapy"],
+    ["Conditions", "/conditions"],
+    ["Assessments", "/assessments"],
+    ["Teleconsultation", "/teleconsultation"]
+  ];
+  const academicLinks = [
+    ["Academic training hub", "/academic-training"],
+    ["Academic programs & workshops", "/#academic-stream"],
+    ["Internship enquiries", "/clinical-psychology-internship"],
+    ["Internship guides by institute", "/student-internship-guides"],
+    ["Student resources", "/resources"],
+    ["Research and learning", "/blog"]
+  ];
   // Privacy settings and embedded browsers may deny storage access.
   const preferences = {
     get(key) { try { return localStorage.getItem(key); } catch { return null; } },
@@ -106,6 +122,88 @@
 
   function linkMarkup(items = navigation) {
     return items.map(([label, href]) => `<li><a href="${href}">${label}</a></li>`).join("");
+  }
+
+  const CHEVRON_SVG = '<svg class="nav-funnel-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+
+  // FIX (dropdown menu bar): desktop group headers used to be plain <span>s —
+  // not focusable or clickable, so touch devices and keyboard users could never
+  // open the "Patient care" / "Academic training" submenus on any page
+  // (including /book). Upgrade every funnel trigger to a real <button> (legacy
+  // markup is converted in place), then wire click-to-toggle with
+  // Escape/outside-click closing and aria-expanded state. Hover still works
+  // via CSS; this makes the dropdowns usable everywhere.
+  function funnelMenuMarkup(id, label, links) {
+    return `<li class="nav-funnel"><button type="button" class="nav-funnel-trigger" id="${id}-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="${id}">${label}${CHEVRON_SVG}</button><ul class="nav-funnel-menu" id="${id}" hidden>${links.map(([linkLabel, href]) => `<li><a href="${href}">${linkLabel}</a></li>`).join("")}</ul></li>`;
+  }
+
+  function desktopNavMarkup() {
+    return `${navigation.slice(0, 2).map(([label, href]) => `<li><a href="${href}">${label}</a></li>`).join("")}`
+      + funnelMenuMarkup("nav-patient-care", "Patient care", patientLinks)
+      + funnelMenuMarkup("nav-academic-training", "Academic training", academicLinks)
+      + `<li><a href="/teleconsultation">Online consultations</a></li><li><a href="/contact">Contact</a></li><li><a class="btn btn--primary" href="/book">Book an appointment</a></li>`;
+  }
+
+  function upgradeFunnelTriggers(root) {
+    $$(".nav-funnel > span:not(.visually-hidden)", root).forEach((span) => {
+      const funnel = span.parentElement;
+      const menu = funnel.querySelector(".nav-funnel-menu");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "nav-funnel-trigger";
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-haspopup", "true");
+      if (!menu.id) menu.id = `nav-funnel-${pageKey(currentFile()).replace(/[^a-z0-9]+/gi, "-") || "menu"}`;
+      button.setAttribute("aria-controls", menu.id);
+      button.textContent = span.textContent;
+      button.insertAdjacentHTML("beforeend", CHEVRON_SVG);
+      span.replaceWith(button);
+      menu.hidden = true;
+    });
+  }
+
+  function bindDesktopDropdowns(header) {
+    if (header.dataset.funnelsBound === "true") return;
+    header.dataset.funnelsBound = "true";
+    upgradeFunnelTriggers(header);
+    const funnels = $$(".nav-funnel", header);
+    const setOpen = (funnel, open) => {
+      const trigger = funnel.querySelector(".nav-funnel-trigger");
+      const menu = funnel.querySelector(".nav-funnel-menu");
+      if (!trigger || !menu) return;
+      trigger.setAttribute("aria-expanded", String(open));
+      menu.hidden = !open;
+      funnel.classList.toggle("is-open", open);
+    };
+    funnels.forEach((funnel) => {
+      const trigger = funnel.querySelector(".nav-funnel-trigger");
+      if (!trigger) return;
+      trigger.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const willOpen = trigger.getAttribute("aria-expanded") !== "true";
+        funnels.forEach((other) => { if (other !== funnel) setOpen(other, false); });
+        setOpen(funnel, willOpen);
+      });
+    });
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest(".nav-funnel")) funnels.forEach((funnel) => setOpen(funnel, false));
+    });
+    header.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      const funnel = event.target.closest(".nav-funnel");
+      if (!funnel) return;
+      setOpen(funnel, false);
+      funnel.querySelector(".nav-funnel-trigger")?.focus();
+    });
+    // Close an open dropdown when its branch loses focus entirely (keyboard).
+    funnels.forEach((funnel) => {
+      funnel.addEventListener("focusout", () => {
+        requestAnimationFrame(() => {
+          if (!funnel.contains(document.activeElement)) setOpen(funnel, false);
+        });
+      });
+    });
   }
 
   function mobileTreeMarkup(items, level = 0, parentId = "mobile-nav") {
@@ -232,7 +330,7 @@
         <img class="logo-img" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
         <span class="logo-copy"><span class="logo-text" id="site-logo-name">Mind Grace</span><span class="logo-tagline">Neuropsychiatric Clinic | Where You Come First</span></span>
       </a>
-      <nav class="desktop-nav" aria-label="Main navigation"><ul>${linkMarkup()}<li><a class="btn btn--primary" href="/book">Book an appointment</a></li></ul></nav>
+      <nav class="desktop-nav" aria-label="Main navigation"><ul>${desktopNavMarkup()}</ul></nav>
       <div class="header-actions">
         <button type="button" class="accessibility-toggle" id="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-panel">Accessibility</button>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Use dark theme"><i data-lucide="moon" aria-hidden="true"></i><span class="visually-hidden">Dark theme</span></button>
@@ -248,7 +346,7 @@
     footer.className = "site-footer";
     footer.innerHTML = `<div class="footer-container">
       <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
-      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/landing#patient-stream">Clinic &amp; training hub</a></li><li><a href="/services">Our services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/academic-training">Academic training hub</a></li><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/student-internship-guides">Internship guides by institute</a></li><li><a href="/landing#academic-stream">Student programs &amp; workshops</a></li><li><a href="/faq#common-questions">Frequently asked questions</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
+      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/#patient-stream">Clinic &amp; training hub</a></li><li><a href="/services">Our services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/academic-training">Academic training hub</a></li><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/student-internship-guides">Internship guides by institute</a></li><li><a href="/#academic-stream">Student programs &amp; workshops</a></li><li><a href="/faq#common-questions">Frequently asked questions</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
       <address class="footer-contact"><h2>Visit or call</h2><p>Mind Grace Neuropsychiatric Clinic<br>J123, Gamma II, Greater Noida, 201310</p><p><a href="tel:+919667863295">+91 96678 63295</a><br><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
     </div><div class="footer-bottom"><p>&copy; <span id="year"></span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/consent">Consent</a></div></div>`;
     return footer;
@@ -324,6 +422,11 @@
       mobileNav.classList.toggle("is-open", open);
       overlay.classList.toggle("is-active", open);
       document.body.classList.toggle("menu-open", open);
+      // Mirrors the panel state on <body> so scroll listeners in main.js can
+      // check `document.body.classList` (a cached, no-query read) instead of
+      // running a selector query inside their rAF callback, which forced a
+      // synchronous style recalculation ("Forced reflow" console violations).
+      document.body.classList.toggle("mobile-nav-open", open);
       if (open) {
         [...document.body.children].filter((node) => node !== mobileNav && node !== overlay && !node.matches("script, link, style")).forEach((node) => {
           backgroundState.set(node, node.inert);
@@ -360,6 +463,11 @@
 
   function normalizeSiteChrome() {
     if (!document.body || document.body.dataset.shellBound === "true") return { main: $("main") };
+    // Retired per-page chrome (legacy burger dropdowns, hand-authored mobile
+    // nav panels/overlays, orphaned burger buttons). The shared shell owns the
+    // only menu; anything left from older page payloads is removed before the
+    // panel is built so a second, un-styled menu can never appear.
+    $$(".nav-dropdown, .mobile-nav-panel:not([data-shared-shell]), .mobile-nav-overlay:not([data-shared-shell]), .burger-btn:not(#burgerMenuBtn), .scroll-progress").forEach((node) => node.remove());
     const main = preserveMain();
     normalizeSkipLink();
     $$("body > header, body > footer, .masthead, .journal-footer, .site-header, .site-footer, .mobile-nav-panel, .mobile-nav-overlay").filter((node) => !node.hasAttribute("data-shared-shell")).forEach((node) => node.remove());
@@ -373,6 +481,7 @@
     const mobileNav = document.createElement("nav");
     mobileNav.className = "mobile-nav-panel";
     mobileNav.id = "mobile-nav-panel";
+    mobileNav.setAttribute("data-shared-shell", "");
     mobileNav.setAttribute("aria-label", "Mobile navigation");
     mobileNav.setAttribute("role", "dialog");
     mobileNav.setAttribute("aria-modal", "true");
@@ -411,6 +520,11 @@
     const year = footer.querySelector("#year");
     if (year) year.textContent = String(new Date().getFullYear());
     bindMenu(header, mobileNav, overlay);
+    // FIX (dropdown menu bar): wire the desktop "Patient care" / "Academic
+    // training" submenus on every page — including pre-rendered shells that
+    // still carry legacy <span> triggers, which upgradeFunnelTriggers converts
+    // to buttons in place.
+    bindDesktopDropdowns(header);
     $("#theme-toggle", header).addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
     setTheme(selectedTheme(), false);
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
@@ -436,7 +550,7 @@
   }
 
   function enhanceBreadcrumbs(main) {
-    if (!main || currentFile() === "index.html") return;
+    if (!main || pageKey(currentFile()) === "index") return;
     const labels = {
       "about.html": "About the clinic", "services.html": "Services", "process.html": "What to expect",
       "resources.html": "Resources", "location.html": "Find the clinic", "contact.html": "Contact",
@@ -465,6 +579,7 @@
       "learning-disability-assessment.html": "Learning disability assessment"
     };
     const file = currentFile();
+    const legacyKey = pageKey(file) + '.html';
     const title = $("h1", main)?.textContent?.replace(/\s+/g, " ").trim();
     const slugLabel = (value) => value.replace(/\.html$/i, "").split("-").map((part) => part ? part[0].toUpperCase() + part.slice(1) : part).join(" ");
     const entries = [{ label: "Home", href: "/" }];
@@ -476,28 +591,33 @@
     const resourcePages = new Set(["faq.html", "gallery.html", "testimonials.html", "approach.html"]);
     const legalPages = new Set(["terms.html", "disclaimer.html", "consent.html"]);
     if (path.startsWith("/blog")) {
-      entries.push({ label: "Blog", href: "/blog" });
-      if (path.includes("/adult")) entries.push({ label: "Adult mental health", href: "/blog/adult" });
-      else if (path.includes("/child")) entries.push({ label: "Child development", href: "/blog/children" });
+      if (pageKey(file) !== 'blog') entries.push({ label: "Blog", href: "/blog" });
+      if (/psychology-internship|psychiatry-internship/.test(path)) entries.push({ label: "Internship guides", href: "/student-internship-guides" });
+      else if (path.includes("/pages/adult/")) entries.push({ label: "Adult mental health", href: "/blog/adult" });
+      else if (path.includes("/pages/child/")) entries.push({ label: "Child development", href: "/blog/children" });
     } else if (path.startsWith("/tools")) {
       entries.push({ label: "Resources", href: "/resources" });
       entries.push({ label: "Therapeutic tools", href: "/resources#tools" });
-    } else if (carePages.has(pageKey(file))) {
+    } else if (carePages.has(legacyKey)) {
       entries.push({ label: "Care and services", href: "/services" });
-    } else if (conditionPages.has(pageKey(file))) {
+    } else if (conditionPages.has(legacyKey)) {
       entries.push({ label: "Conditions and assessments", href: "/conditions" });
     } else if (pageKey(file) === "psychiatrist-greater-noida" || pageKey(file) === "psychiatrist-in-noida") {
       entries.push({ label: "Locations", href: "/location" });
-    } else if (aboutPages.has(pageKey(file))) {
+    } else if (aboutPages.has(legacyKey)) {
       entries.push({ label: "About the clinic", href: "/about" });
-    } else if (visitPages.has(pageKey(file))) {
+    } else if (visitPages.has(legacyKey)) {
       entries.push({ label: "Visit and contact", href: "/contact" });
-    } else if (resourcePages.has(pageKey(file))) {
+    } else if (resourcePages.has(legacyKey)) {
       entries.push({ label: "Explore and learn", href: "/resources" });
-    } else if (legalPages.has(pageKey(file))) {
+    } else if (legalPages.has(legacyKey)) {
       entries.push({ label: "Legal and privacy", href: "/privacy" });
     }
-    entries.push({ label: title || labels[pageKey(file)] || slugLabel(file), href: null });
+    // Breadcrumbs are navigation labels, so prefer concise route names over
+    // marketing headlines that wrap across half the viewport.
+    const institution = main.querySelector('.institution-identity h1')?.textContent?.split(':')[0]?.trim();
+    const category = { adult: 'Adult mental health', children: 'Child development', blog: 'Blog' }[pageKey(file)];
+    entries.push({ label: institution || category || labels[legacyKey] || slugLabel(file) || title, href: null });
     let nav = $(".breadcrumbs", main) || $("nav[aria-label='Breadcrumb']", main);
     if (!nav) { nav = document.createElement("nav"); nav.className = "breadcrumbs"; main.prepend(nav); }
     nav.setAttribute("aria-label", "Breadcrumb");
@@ -551,7 +671,7 @@
   // intentionally factual and local, so it remains useful without making a
   // diagnosis or promising an outcome.
   function addContentPathway(main) {
-    if (!main || main.querySelector("[data-content-pathway]")) return;
+    if (!main || main.querySelector("[data-content-pathway], .article-next-step, .mg-access")) return;
     const path = window.location.pathname.replace(/\\/g, "/");
     const file = currentFile();
     const pathways = {
@@ -676,7 +796,7 @@
         links: [["Read adult mental health guides", "/blog/adult"], ["Read child development guides", "/blog/children"], ["Book professional support", "/book"]]
       }
     };
-    let content = pathways[path] || pathways[file] || pathways[pageKey(file)] || (path.endsWith("/") ? pathways[path.slice(0, -1)] : null);
+    let content = pathways[path] || pathways[file] || pathways[pageKey(file) + '.html'] || (path.endsWith("/") ? pathways[path.slice(0, -1)] : null);
     if (!content && file === "index.html" && !path.startsWith("/blog")) content = pathways["/"];
     if (path.startsWith("/tools")) {
       const toolCopy = {
@@ -686,7 +806,7 @@
         "hypnos-fractal.html": ["Let a steady visual pattern hold your attention", "The fractal exercise offers a quiet visual focus point for a short pause. Stop if visual movement feels uncomfortable, and contact a professional when distress continues or affects daily life."],
         "horizon-scan.html": ["Orient your attention to the space around you", "Horizon scanning invites you to notice your surroundings in a slow, deliberate way. Use it as a brief grounding exercise, stop if it feels uncomfortable, and seek help when you need more than a self-guided pause."],
         "leaf-on-stream.html": ["Watch thoughts pass without chasing them", "Leaf on Stream offers an imagery-based pause for observing thoughts and feelings. It does not replace assessment or care, and you can stop whenever the exercise feels uncomfortable or unhelpful."]
-      }[file] || ["Use this tool at your own pace", "This exercise offers a brief way to pause, focus, or ground yourself. Stop if it increases discomfort, and choose professional support when symptoms persist, interfere with daily life, or feel unsafe."];
+      }[pageKey(file) + '.html'] || ["Use this tool at your own pace", "This exercise offers a brief way to pause, focus, or ground yourself. Stop if it increases discomfort, and choose professional support when symptoms persist, interfere with daily life, or feel unsafe."];
       content = { title: toolCopy[0], body: toolCopy[1], links: [["See all self-help tools", "/resources#tools"], ["Read practical mental health guides", "/blog"], ["Book a consultation", "/book"]] };
     }
     if (path.startsWith("/blog/pages")) {
@@ -699,7 +819,14 @@
         links: [["Browse all guides", "/blog"], [childArticle ? "See child-development services" : "See adult mental health services", "/services"], ["Try a gentle self-help tool", "/resources#tools"], ["Book a consultation", "/book"]]
       };
     }
-    if (!content || ["privacy.html", "terms.html", "consent.html", "disclaimer.html"].includes(file)) return;
+    if (main.querySelector('.institution-identity')) {
+      content = {
+        title: "Plan your supervised placement",
+        body: "Confirm your department’s requirements, the activities you may observe, supervision, hours and documentation before applying.",
+        links: [["Compare institute guides", "/student-internship-guides"], ["Read internship details", "/clinical-psychology-internship"], ["Ask the academic desk", "/contact"]]
+      };
+    }
+    if (!content || ["privacy", "terms", "consent", "disclaimer"].includes(pageKey(file))) return;
     const panel = document.createElement("section");
     panel.className = "content-pathway";
     panel.dataset.contentPathway = "true";
@@ -735,6 +862,12 @@
     const shell = normalizeSiteChrome();
     normalizeSafetyNotice();
     normalizePublicContactDetails();
+    // Old migrated pages placed their summary before the breadcrumbs and
+    // headline. Keep it with the introduction so visitors reach the title first.
+    const main = shell?.main || $("main");
+    const openingAnswer = main?.querySelector(':scope > .seo-answer');
+    const pageHeading = main?.querySelector('h1');
+    if (openingAnswer && pageHeading) pageHeading.insertAdjacentElement('afterend', openingAnswer);
     enhanceBreadcrumbs(shell?.main || $("main"));
     addContentPathway(shell?.main || $("main"));
     markCurrentNavigation();

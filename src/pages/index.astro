@@ -1,412 +1,654 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const headExtra = String.raw`<!-- Google Tag Manager -->
-<script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5RBGN42B');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
-<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Y5H1B930PQ');
-</script>
-
+const headExtra = String.raw`
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ffffff">
-  
   <meta name="author" content="Mind Grace Neuropsychiatric Clinic">
-  
-  <!-- SEO & Compliance Meta -->
-  <title>Mind Grace Clinic | Psychiatry &amp; Child Development in Greater Noida</title>
-  
-  <meta name="description" content="Mind Grace offers psychiatric, child-development, and counselling consultations in Gamma II, Greater Noida. Clear fees and straightforward first-visit process.">
+  <meta name="robots" content="index, follow">
+
+  <title>Mind Grace Clinic &amp; Training Hub | Greater Noida</title>
+  <meta name="description" content="Psychiatry, counselling, child-development consultations and supervised psychology training at Mind Grace in Gamma II, Greater Noida, Delhi NCR.">
   <link rel="canonical" href="https://mindgracencr.in/">
-  
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Mind Grace Neuropsychiatric Clinic | Greater Noida">
-  <meta property="og:description" content="Confidential psychiatric, child-development, and counselling consultations in Greater Noida. Learn what to expect and request an appointment.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mindgracencr.in/">
-  <meta property="og:image" content="https://mindgracencr.in/assets/images/og-image.webp">
-  <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mind Grace Neuropsychiatric Clinic | Greater Noida">
-  <meta name="twitter:description" content="Confidential mental health consultations for adults, children, adolescents, and families in Greater Noida.">
-  <meta name="twitter:image" content="https://mindgracencr.in/assets/images/og-image.webp">
-<script data-cfasync="false" src="https://analytics.ahrefs.com/analytics.js" data-key="HX3pBVk8PP6kqkUqVkuBhQ" async></script>
-  <!-- Preconnect & Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap">
-  
-  <!-- Stylesheets (Assuming these exist based on your structure) -->
-  <link rel="stylesheet" href="/assets/css/min/base.min.css">
-  <link rel="stylesheet" href="/assets/css/min/layout.min.css">
-  <link rel="stylesheet" href="/assets/css/min/components.min.css">
-  <link rel="stylesheet" href="/assets/css/min/accessibility.min.css">
-  <link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/svg+xml" href="/assets/images/mind-grace-clinic-logo-pink.svg">
-  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icon-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/icon-512.png">
-
-  <!-- Security.txt for vulnerability disclosure -->
-  <link rel="security.txt" href="/.well-known/security.txt">
-
-  <!-- Critical Inline CSS for Audit Compliance & Layout -->
-  <style>
-    :root {
-      --color-primary: #be185d; /* Accessible deep pink */
-      --color-primary-hover: #9d174d;
-      --color-text: #1f2937;
-      --color-text-muted: #4b5563;
-      --color-bg: #ffffff;
-      --color-bg-alt: #fdf2f8;
-      --color-border: #e5e7eb;
-      --color-emergency: #dc2626;
-      --color-emergency-text: #ffffff;
-      --font-sans: 'Inter', system-ui, sans-serif;
-      --font-heading: 'Sora', system-ui, sans-serif;
-      --radius: 0.75rem;
-      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    }
-
-    /* Base & Accessibility */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.6; background: var(--color-bg); }
-    
-    .skip-link {
-      position: absolute; top: -40px; left: 0; background: var(--color-primary); color: white;
-      padding: 8px; z-index: 100; transition: top 0.2s; text-decoration: none; font-weight: 600;
-    }
-    .skip-link:focus { top: 0; }
-    :focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
-
-    /* Emergency Banner: Stark, unambiguous, no false promises */
-    .emergency-banner {
-      background-color: var(--color-emergency); color: var(--color-emergency-text);
-      padding: 0.75rem 1rem; text-align: center; font-weight: 600; font-size: 0.95rem;
-    }
-    .emergency-banner a { color: var(--color-emergency-text); text-decoration: underline; text-underline-offset: 3px; }
-    .emergency-banner a:hover { text-decoration: none; }
-
-    /* Layout Utilities */
-    .container { width: min(1200px, 92vw); margin-inline: auto; }
-    .grid { display: grid; gap: 1.5rem; }
-    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .text-center { text-align: center; }
-    .mt-2 { margin-top: 2rem; }
-    .mb-1 { margin-bottom: 1rem; }
-
-    /* Typography */
-    h1, h2, h3 { font-family: var(--font-heading); color: var(--color-text); line-height: 1.2; }
-    h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 1rem; }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 0.75rem; }
-    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-    p { color: var(--color-text-muted); max-width: 65ch; }
-
-    /* Header & Nav */
-    .site-header { border-bottom: 1px solid var(--color-border); padding: 1rem 0; position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); z-index: 50; }
-    .header-inner { display: flex; justify-content: space-between; align-items: center; }
-    .logo-link { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--color-text); }
-    .logo-text { font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; color: var(--color-primary); }
-    .logo-tagline { display: block; font-size: 0.75rem; color: var(--color-text-muted); font-weight: 500; }
-    
-    .nav-list { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
-    .nav-link { text-decoration: none; color: var(--color-text); font-weight: 500; font-size: 0.95rem; }
-    .nav-link:hover { color: var(--color-primary); }
-    .burger-btn { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-    .burger-btn span { display: block; width: 24px; height: 2px; background: var(--color-text); margin: 5px 0; }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-      padding: 0.75rem 1.5rem; border-radius: var(--radius); font-weight: 600; text-decoration: none;
-      transition: background 0.2s, transform 0.1s; cursor: pointer; border: 2px solid transparent;
-    }
-    .btn-primary { background: var(--color-primary); color: white; }
-    .btn-primary:hover { background: var(--color-primary-hover); }
-    .btn-secondary { background: white; color: var(--color-primary); border-color: var(--color-primary); }
-    .btn-secondary:hover { background: var(--color-bg-alt); }
-    .btn-sm { padding: 0.5rem 1rem; font-size: 0.875rem; }
-
-    /* Hero Section */
-    .hero { padding: 4rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-bg-alt); color: var(--color-primary); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; }
-    .hero-trust { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 1.5rem; font-size: 0.875rem; color: var(--color-text-muted); font-weight: 500; }
-    .hero-trust span { display: inline-flex; align-items: center; gap: 0.4rem; }
-    .hero-contact { margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-text-muted); }
-    .hero-contact a { color: var(--color-primary); font-weight: 600; text-decoration: none; }
-    
-    .hero-visual { position: relative; }
-    .hero-portrait { width: 100%; max-width: 450px; aspect-ratio: 4/5; object-fit: cover; border-radius: 1.5rem; box-shadow: var(--shadow); }
-    .hero-note {
-      position: absolute; bottom: 1.5rem; left: -1rem; background: white; padding: 1rem;
-      border-radius: var(--radius); box-shadow: var(--shadow); display: flex; align-items: center; gap: 0.75rem;
-      border: 1px solid var(--color-border); max-width: 260px;
-    }
-    .hero-note-icon { background: var(--color-bg-alt); color: var(--color-primary); width: 2.5rem; height: 2.5rem; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; }
-
-    /* Cards */
-    .card { background: white; border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s; }
-    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-    .card-icon { width: 3rem; height: 3rem; background: var(--color-bg-alt); color: var(--color-primary); border-radius: 0.75rem; display: grid; place-items: center; margin-bottom: 1rem; }
-    .card a { color: var(--color-primary); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 1rem; }
-    .card a:hover { text-decoration: underline; }
-
-    /* Steps */
-    .step { counter-increment: step; position: relative; padding-left: 3.5rem; }
-    .step::before {
-      content: "0" counter(step); position: absolute; left: 0; top: 0;
-      font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: var(--color-primary); opacity: 0.3;
-    }
-
-    /* Footer */
-    .site-footer { background: var(--color-text); color: #d1d5db; padding: 4rem 0 2rem; margin-top: 4rem; }
-    .site-footer h4 { color: white; font-family: var(--font-heading); margin-bottom: 1rem; }
-    .site-footer ul { list-style: none; }
-    .site-footer li { margin-bottom: 0.5rem; }
-    .site-footer a { color: #d1d5db; text-decoration: none; }
-    .site-footer a:hover { color: white; text-decoration: underline; }
-    .footer-bottom { border-top: 1px solid #374151; margin-top: 3rem; padding-top: 2rem; font-size: 0.875rem; }
-    .disclaimer { background: #374151; padding: 1rem; border-radius: var(--radius); margin-bottom: 1.5rem; line-height: 1.5; }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; text-align: center; }
-      .hero-trust, .hero-actions { justify-content: center; }
-      .hero-note { left: 50%; transform: translateX(-50%); bottom: -1rem; width: 90%; }
-      .nav-list { display: none; } /* Simplified for example; requires JS toggle in production */
-      .burger-btn { display: block; }
-      p { margin-inline: auto; }
-    }
-  </style>
-    
-
-<!-- Cloudflare Zaraz Tracking -->`;
-const bodyStart = String.raw`<aside class="emergency-banner emergency-banner--static" role="note" aria-labelledby="emergency-notice-title"><div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div></aside>`;
+`;
 ---
 
-<Layout headExtra={headExtra} bodyStart={bodyStart}>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"
-title="Google Tag Manager container" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-  <!-- Accessibility: Skip to main content -->
-  <!-- COMPLIANCE: Unambiguous emergency disclaimer. No "24/7" claims. -->
-  
-
-  
-
+<Layout headExtra={headExtra}>
   <main id="main-content" tabindex="-1">
-    
-    <!-- HERO SECTION: Concrete, credential-focused, low cognitive load -->
-    <section class="container hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <span class="hero-badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          Gamma II, Greater Noida
-        </span>
-        <h1 id="hero-title">Psychiatric and child-development care in <span style="color: var(--color-primary);">Greater Noida.</span></h1>
-        <p>Mind Grace provides confidential consultations for adults, children, adolescents, and families. Start with a structured conversation about what you are experiencing, then discuss practical next steps at J123, Gamma II.</p>
-        <div class="seo-answer"><strong>Direct answer:</strong> Mind Grace Neuropsychiatric Clinic is a psychiatric and child-development clinic at J123, Gamma II, Greater Noida, serving adults, adolescents, children, and families. Consultations cover mental-health concerns, ADHD and autism guidance, counselling, and structured assessments; teleconsultations are available.</div>
-        
-        <div class="hero-actions mt-2" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a class="btn btn-primary" href="/book">Book a Consultation</a>
-          <a class="btn btn-secondary" href="/services">Explore services</a>
+
+    <!-- Patient and academic pathways -->
+    <section class="mg-landing mg-hero" aria-labelledby="mg-hero-title">
+      <div class="container">
+        <div class="mg-hero-head">
+          <span class="mg-pill mg-pill--soft"><span class="mg-dot" aria-hidden="true"></span>Neuropsychiatric clinic &amp; training institute · Greater Noida, Delhi NCR</span>
+          <h1 id="mg-hero-title">Care for your mind. <span class="mg-accent">Training for future clinicians.</span></h1>
+          <p>Mind Grace offers confidential psychiatric, child-development, and counselling consultations in Gamma II, Greater Noida — and supervised clinical training for psychology and medical students.</p>
         </div>
 
-        <!-- Patient-facing orientation points; avoid unsupported guarantees. -->
-        <div class="hero-trust" role="list" aria-label="Clinic commitments">
-          <span role="listitem">✓ Led by Dr. Anita Sharma</span>
-          <span role="listitem">✓ Clear appointment process</span>
-          <span role="listitem">✓ Fees shared before care begins</span>
+        <div class="mg-gateways">
+          <!-- Gateway 01: Patients & loved ones -->
+          <article class="mg-card mg-gateway">
+            <div class="mg-card__top">
+              <span class="mg-pill mg-pill--care"><i data-lucide="heart-handshake" aria-hidden="true"></i>For patients &amp; families</span>
+              <span class="mg-eyebrow">Pathway 01</span>
+            </div>
+            <h2>Consultations &amp; counselling</h2>
+            <p>Evidence-based, private assessment and supportive treatment for depression, anxiety, OCD, neurodevelopmental conditions, and psychotherapy.</p>
+            <ul class="mg-badge-grid" role="list">
+              <li><i data-lucide="badge-check" aria-hidden="true"></i>Consultant psychiatrist-led care</li>
+              <li><i data-lucide="badge-check" aria-hidden="true"></i>M.Phil-qualified clinical psychologists</li>
+              <li><i data-lucide="map-pin" aria-hidden="true"></i>In-clinic &amp; teleconsultation</li>
+              <li><i data-lucide="lock" aria-hidden="true"></i>Confidential records handling</li>
+            </ul>
+            <div class="mg-card__actions">
+              <a class="btn btn--primary" href="/book">Book a consultation</a>
+              <a class="btn btn-outline" href="#booking-section">Quick enquiry form</a>
+              <a class="btn btn-outline" href="/services">Explore clinical services</a>
+            </div>
+          </article>
+
+          <!-- Gateway 02: Students & aspiring professionals -->
+          <article class="mg-card mg-gateway">
+            <div class="mg-card__top">
+              <span class="mg-pill mg-pill--learn"><i data-lucide="graduation-cap" aria-hidden="true"></i>For students &amp; academics</span>
+              <span class="mg-eyebrow">Pathway 02</span>
+            </div>
+            <h2>Internships, trainings &amp; workshops</h2>
+            <p>Supervised clinical psychology internships, psychometric testing practice, diagnostic interviewing skills, and workshops for psychology and medical students.</p>
+            <ul class="mg-badge-grid" role="list">
+              <li><i data-lucide="calendar-days" aria-hidden="true"></i>Summer &amp; winter cohorts</li>
+              <li><i data-lucide="clipboard-list" aria-hidden="true"></i>MSE &amp; case-history demonstrations</li>
+              <li><i data-lucide="brain" aria-hidden="true"></i>Psychometrics orientation sessions</li>
+              <li><i data-lucide="file-text" aria-hidden="true"></i>Letter of completion guidance</li>
+            </ul>
+            <div class="mg-card__actions">
+              <a class="btn btn--primary" href="/clinical-psychology-internship">Explore student programs</a>
+              <a class="btn btn-outline" href="#booking-section" data-enquiry-kind="academic">Training enquiry</a>
+              <a class="btn btn-outline" href="/resources">Student resources</a>
+            </div>
+          </article>
         </div>
 
-        <p class="hero-contact">
-          Prefer to ask first? <a href="tel:+9196678-63295">Call +91 96678 63295</a> or 
-          <a rel="nofollow noopener" href="https://wa.me/9196678-63295" target="_blank" rel="noopener" aria-label="WhatsApp the clinic (opens in a new window)">WhatsApp the clinic</a> 
-          <em>(For routine appointment questions only; not for emergencies or detailed clinical histories.)</em>.
-        </p>
+        <!-- Trust strip (edited to verifiable, non-numeric claims) -->
+        <div class="mg-trust" role="list" aria-label="Clinic commitments">
+          <span role="listitem"><strong>Clinician-led care</strong><small>Consultations led by Dr. Anita Sharma</small></span>
+          <span role="listitem"><strong>Clear process</strong><small>Structured first visit, next steps explained</small></span>
+          <span role="listitem"><strong>Transparent fees</strong><small>Fees shared before care begins</small></span>
+          <span role="listitem"><strong>Privacy respected</strong><small>Confidential records, consent-first approach</small></span>
+        </div>
       </div>
+    </section>
 
-      <div class="hero-visual">
-        <img 
-          class="hero-portrait" 
-          src="/assets/images/dr-anita-sharma-personal-photo-768.webp" 
-          srcset="/assets/images/dr-anita-sharma-personal-photo-480.webp 480w, /assets/images/dr-anita-sharma-personal-photo-768.webp 768w"
-          sizes="(max-width: 768px) 90vw, 450px"
-          alt="Dr. Anita Sharma, Lead Neuropsychiatrist at Mind Grace Clinic"
-          width="450" height="562" 
-          fetchpriority="high"
-          loading="eager"
-          decoding="async"
-        >
-        <div class="hero-note">
-          <span class="hero-note-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </span>
+    <!-- STREAM SWITCHER NAVIGATION (anchor links only — works without JS) -->
+    <nav class="mg-switchbar" aria-label="Page sections">
+      <div class="container mg-switchbar__inner">
+        <span class="mg-eyebrow">Jump to:</span>
+        <div class="mg-switchbar__tabs">
+          <a class="mg-tab mg-tab--active" href="#patient-stream"><i data-lucide="stethoscope" aria-hidden="true"></i>Patient care highlights</a>
+          <a class="mg-tab" href="#academic-stream"><i data-lucide="book-open" aria-hidden="true"></i>Student &amp; academic hub</a>
+        </div>
+        <a class="mg-live" href="/contact">Appointment enquiries open during clinic hours</a>
+      </div>
+    </nav>
+
+    <!-- STREAM 1: PATIENT CARE HIGHLIGHTS -->
+    <section class="mg-stream" id="patient-stream" aria-labelledby="patient-stream-title">
+      <div class="container">
+        <div class="mg-section-head">
           <div>
-            <strong style="display: block; color: var(--color-text); font-size: 0.95rem;">Dr. Anita Sharma</strong>
-            <small style="color: var(--color-text-muted); font-size: 0.8rem;">Consultant Psychiatrist</small>
+            <span class="mg-pill mg-pill--care"><i data-lucide="hospital" aria-hidden="true"></i>Evidence-based psychiatry &amp; therapy</span>
+            <h2 id="patient-stream-title">Specialized neuropsychiatric &amp; psychological care</h2>
+            <p>Personalized treatment plans that combine medical evaluation, structured talk therapy, and practical family guidance — in a respectful, non-judgmental setting.</p>
+          </div>
+          <a class="btn btn-outline" href="#booking-section">Request an appointment</a>
+        </div>
+
+        <div class="mg-service-grid">
+          <article class="mg-card mg-service">
+            <span class="mg-icon-chip" aria-hidden="true"><i data-lucide="activity"></i></span>
+            <h3>Adult &amp; geriatric psychiatry</h3>
+            <p>Careful diagnostic assessment and medication review, when appropriate, for depression, bipolar disorder, anxiety, schizophrenia-spectrum conditions, and later-life memory concerns.</p>
+            <ul class="mg-bullets">
+              <li><a href="/depression-anxiety">Depression &amp; anxiety care</a></li>
+              <li><a href="/bipolar-mood-disorders">Bipolar mood disorders</a></li>
+              <li><a href="/psychosis-schizophrenia">Schizophrenia-spectrum support</a></li>
+              <li><a href="/depression-in-older-adults">Later-life depression &amp; memory</a></li>
+            </ul>
+            <div class="mg-service__links">
+              <a class="mg-more-link" href="/psychiatry">Explore adult psychiatry<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+              <a class="mg-more-link" href="/specialized-consultations">Specialized consultations<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="mg-card mg-service">
+            <span class="mg-icon-chip" aria-hidden="true"><i data-lucide="sprout"></i></span>
+            <h3>Clinical psychology &amp; psychotherapy</h3>
+            <p>Individual talk therapy for emotional regulation, grief, trauma, and persistent obsessive or intrusive thoughts, planned around your goals and pace.</p>
+            <ul class="mg-bullets">
+              <li><a href="/evidence-based-therapies">Evidence-based therapy approaches</a></li>
+              <li><a href="/ocd-panic-ptsd">OCD, panic &amp; PTSD care</a></li>
+              <li><a href="/trauma-grief-support">Trauma &amp; grief support</a></li>
+              <li><a href="/psychology-counselling">Counselling services</a></li>
+            </ul>
+            <div class="mg-service__links">
+              <a class="mg-more-link" href="/therapy">Explore therapy options<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+              <a class="mg-more-link" href="/online-therapy-india">Therapy online in India<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="mg-card mg-service">
+            <span class="mg-icon-chip" aria-hidden="true"><i data-lucide="baby"></i></span>
+            <h3>Child &amp; adolescent development</h3>
+            <p>Compassionate evaluation of attention, social communication, mood, and school-related distress, with practical conversations for parents and caregivers.</p>
+            <ul class="mg-bullets">
+              <li><a href="/adhd-autism-assessment">ADHD &amp; autism assessment</a></li>
+              <li><a href="/learning-disability-assessment">Learning disability assessment</a></li>
+              <li><a href="/child-student-mental-health">Student mental health</a></li>
+              <li><a href="/child-development">Child development services</a></li>
+            </ul>
+            <div class="mg-service__links">
+              <a class="mg-more-link" href="/aasha">Explore the Aasha child wing<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="mg-card mg-service">
+            <span class="mg-icon-chip" aria-hidden="true"><i data-lucide="moon-star"></i></span>
+            <h3>De-addiction &amp; lifestyle wellness</h3>
+            <p>Support for substance-use concerns, sleep difficulties, and burnout — coordinated with medical review and relapse-prevention planning.</p>
+            <ul class="mg-bullets">
+              <li><a href="/addiction-substance-use">Addiction &amp; substance-use support</a></li>
+              <li><a href="/sleep-eating-disorders">Sleep &amp; eating disorders</a></li>
+              <li><a href="/assessments">Psychometric assessments</a></li>
+              <li><a href="/conditions#anxiety">Stress &amp; anxiety care</a></li>
+            </ul>
+            <div class="mg-service__links">
+              <a class="mg-more-link" href="/conditions">View conditions we treat<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Clinical team spotlight (real, site-consistent clinician) -->
+        <div class="mg-team">
+          <div class="mg-team__intro">
+            <span class="mg-eyebrow">Faculty leadership</span>
+            <h3>Clinicians who lead every consultation</h3>
+            <p>Care at Mind Grace is led by our consultant psychiatrist, with counselling and assessments delivered by trained members of the clinical team.</p>
+          </div>
+          <div class="mg-team__grid">
+            <article class="mg-card mg-doctor">
+              <img src="/assets/images/dr-anita-sharma-personal-photo-480.webp" alt="Dr. Anita Sharma, Consultant Psychiatrist at Mind Grace Neuropsychiatric Clinic" width="96" height="120" loading="lazy" decoding="async">
+              <div>
+                <p class="mg-doctor__name">Dr. Anita Sharma <span class="mg-chip">Consultant Psychiatrist</span></p>
+                <p class="mg-doctor__role">Founder &amp; Lead Psychiatrist</p>
+                <p class="mg-doctor__bio">Leads psychiatric evaluation, medication review, and combined care plans for adults, adolescents, and children at Mind Grace in Greater Noida.</p>
+                <p class="mg-doctor__meta"><a href="/dr-anita-sharma">Read full profile</a><span aria-hidden="true">·</span><a href="/doctors">Meet the team</a></p>
+              </div>
+            </article>
+            <article class="mg-card mg-doctor">
+              <span class="mg-avatar-fallback" role="img" aria-label="Profile illustration for Dr. Sana Firdous">SF</span>
+              <div>
+                <p class="mg-doctor__name">Dr. Sana Firdous <span class="mg-chip">M.Phil Clinical Psychology</span></p>
+                <p class="mg-doctor__role">Clinical Psychologist · 7+ years experience</p>
+                <p class="mg-doctor__bio">Provides psychotherapy, psychodiagnostic assessment, and psychological testing for children, adolescents, and adults.</p>
+                <p class="mg-doctor__meta"><a href="/doctors">Meet the team</a><span aria-hidden="true">·</span><a href="/therapy">Therapy services</a></p>
+              </div>
+            </article>
+            <aside class="mg-note">
+              <h3>Not sure where to start?</h3>
+              <p>Psychiatry addresses medical evaluation and medication when needed. Psychology and counselling focus on therapy and coping skills. A short conversation with the clinic can help you choose.</p>
+              <a class="btn btn-secondary" href="/psychiatrist-vs-psychologist">Compare care roles</a>
+            </aside>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container section" aria-labelledby="pathways-title">
-      <div class="section-header"><h2 id="pathways-title">Choose your pathway</h2><p>Start with the information that matches what you need today.</p></div>
-      <div class="services-grid">
-        <article class="service-card"><h3>Patient care</h3><p>Explore psychiatry, therapy, assessments, conditions, and teleconsultation information.</p><a class="btn btn-outline" href="/services">Explore patient care</a><a class="btn btn-outline" href="/landing#patient-stream">Clinic &amp; training hub</a></article>
-        <article class="service-card"><h3>Academic training</h3><p>Students can review internship guidance, learning resources, and ethical questions to ask before applying.</p><a class="btn btn-outline" href="/clinical-psychology-internship">Explore academic training</a><a class="btn btn-outline" href="/landing#academic-stream">Student programs overview</a></article>
-      </div>
-    </section>
-    <section class="container section" aria-labelledby="collaborative-care-title">
-      <div class="section-header"><h2 id="collaborative-care-title">How psychiatry and psychology may work together</h2><p>Different concerns call for different kinds of support.</p></div>
-      <p>Psychiatric assessment may consider medical factors and medication when appropriate. Psychological assessment and therapy may focus on emotions, behaviour, relationships, and coping. A clinician can help you decide which starting point or combination is suitable.</p>
-      <p>Mind Grace serves people in Greater Noida and the wider Noida, Ghaziabad, and Delhi NCR area. Availability, clinician scope, and treatment plans are confirmed individually.</p>
-      <div class="seo-actions"><a class="btn" href="/psychiatrist-vs-psychologist">Compare care roles</a><a class="btn btn-outline" href="/contact">Ask the clinic</a></div>
-    </section>
-
-    <!-- QUICK ACTIONS: High-contrast, clear intent -->
-    <section class="container home-quick-actions">
-      <div class="grid grid-3">
-        <a class="card" href="/book" style="text-decoration: none; color: inherit; display: flex; align-items: flex-start; gap: 1rem;">
-          <div class="card-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          </div>
+    <!-- STREAM 2: ACADEMIC & TRAINING HIGHLIGHTS -->
+    <section class="mg-stream mg-stream--alt" id="academic-stream" aria-labelledby="academic-stream-title">
+      <div class="container">
+        <div class="mg-section-head">
           <div>
-            <h2 style="font-size:1.125rem; margin-bottom: 0.25rem;">Book a Visit</h2>
-            <p style="font-size: 0.9rem; margin: 0;">Request a visit and share only basic appointment details.</p>
+            <span class="mg-pill mg-pill--learn"><i data-lucide="graduation-cap" aria-hidden="true"></i>Institutional training wing</span>
+            <h2 id="academic-stream-title">Programs that connect theory with clinical reality</h2>
+            <p>Students observe ethical practice, practise core assessment skills, and discuss cases with supervision — with clear boundaries around confidentiality and scope.</p>
           </div>
-        </a>
-          <a class="card" href="/fees" style="text-decoration: none; color: inherit; display: flex; align-items: flex-start; gap: 1rem;">
-          <div class="card-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          </div>
-          <div>
-            <h2 style="font-size:1.125rem; margin-bottom: 0.25rem;">Fees & Insurance</h2>
-            <p style="font-size: 0.9rem; margin: 0;">Review consultation fees, payment options, and policies.</p>
-          </div>
-        </a>
-        <a class="card" href="/emergency" style="text-decoration: none; color: inherit; display: flex; align-items: flex-start; gap: 1rem; border-color: var(--color-emergency);">
-          <div class="card-icon" style="background: #fef2f2; color: var(--color-emergency);" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-          </div>
-          <div>
-            <h2 style="font-size:1.125rem; margin-bottom: 0.25rem; color: var(--color-emergency);">Emergency help</h2>
-            <p style="font-size: 0.9rem; margin: 0;">What to do if there is immediate danger or urgent risk.</p>
-          </div>
-        </a>
+          <a class="btn btn--primary" href="/clinical-psychology-internship">Review internship guide and terms</a>
+        </div>
+
+        <div class="mg-program-grid">
+          <article class="mg-card mg-program">
+            <div class="mg-card__top">
+              <span class="mg-chip">Cohort program</span>
+              <span class="mg-chip mg-chip--accent"><i data-lucide="clock" aria-hidden="true"></i>Flexible duration</span>
+            </div>
+            <h3>Clinical psychology internship</h3>
+            <p>Structured outpatient exposure designed for undergraduate and postgraduate psychology students.</p>
+            <ul class="mg-checks">
+              <li><i data-lucide="circle-check" aria-hidden="true"></i>Mental status examination (MSE) orientation.</li>
+              <li><i data-lucide="circle-check" aria-hidden="true"></i>Familiarity with DSM-5-TR and ICD-11 diagnostic frameworks.</li>
+              <li><i data-lucide="circle-check" aria-hidden="true"></i>Observed OPD sessions under confidentiality protocols.</li>
+            </ul>
+            <div class="mg-meta-strip"><span>Rolling intakes</span><span>Limited seats per batch</span></div>
+            <div class="mg-card__actions">
+              <a class="btn btn-outline w-full" href="/clinical-psychology-internship">See internship details</a>
+              <a class="btn btn--primary w-full" href="#booking-section" data-enquiry-kind="academic">Apply via enquiry form</a>
+            </div>
+          </article>
+
+          <article class="mg-card mg-program">
+            <div class="mg-card__top">
+              <span class="mg-chip">Skill workshop</span>
+              <span class="mg-chip mg-chip--accent"><i data-lucide="calendar-days" aria-hidden="true"></i>Weekend sessions</span>
+            </div>
+            <h3>Psychometric assessment orientation</h3>
+            <p>Demonstration-led sessions on the purpose, ethics, and interpretation basics of common assessment tools.</p>
+            <ul class="mg-checks">
+              <li><i data-lucide="circle-check" aria-hidden="true"></i>Overview of projective and intelligence batteries.</li>
+              <li><i data-lucide="circle-check" aria-hidden="true"></i>Report-writing and case-formulation practice tasks.</li>
+              <li><i data-lucide="circle-check" aria-hidden="true"></i>Guidance on test-user qualifications and limits.</li>
+            </ul>
+            <div class="mg-meta-strip"><span>Materials listed in advance</span><span>Hands-on demos</span></div>
+            <a class="btn btn-outline w-full" href="/resources#tools">Browse student resources</a>
+          </article>
+
+          <article class="mg-card mg-program">
+            <div class="mg-card__top">
+              <span class="mg-chip">Brief course</span>
+              <span class="mg-chip mg-chip--accent"><i data-lucide="users" aria-hidden="true"></i>Small groups</span>
+            </div>
+            <h3>Diagnostic interviewing practicum</h3>
+            <p>Role-play and observed-practice sessions for history-taking, MSE documentation, and referral etiquette.</p>
+            <ul class="mg-checks">
+              <li><i data-lucide="circle-check" aria-hidden="true"></i>Sample MSE templates and case-discussion format.</li>
+              <li><i data-lucide="circle-check" aria-hidden="true"></i>Ethics, consent, and boundaries discussion.</li>
+              <li><i data-lucide="circle-check" aria-hidden="true"></i>Feedback from supervising clinicians.</li>
+            </ul>
+            <div class="mg-meta-strip"><span>Questions to ask before applying</span><span>FAQ included</span></div>
+            <a class="btn btn-outline w-full" href="/faq">Read training FAQs</a>
+          </article>
+        </div>
+
+        <div class="mg-fineprint">
+          <p>Training involves observation and supervised learning activities. It does not confer licensure, prescription rights, or independent clinical practice. Eligibility, tool access, and any certification terms are confirmed individually before enrollment.</p>
+          <p><a href="/faq#common-questions">Questions about eligibility?</a> See the FAQ or <a href="/contact">contact the academic desk</a>.</p>
+        </div>
       </div>
     </section>
 
-    <!-- SERVICES: Concrete descriptions, resolving "Aasha" brand fragmentation -->
-    <section class="container" style="padding-block: 4rem;" aria-labelledby="services-title">
-      <div class="text-center mb-1">
-        <span style="color: var(--color-primary); font-weight: 600; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Clinical Services</span>
-        <h2 id="services-title">Choose the right place to begin.</h2>
-        <p style="margin-inline: auto;">Explore the clinic’s adult psychiatry, child-development, and counselling pathways before you request an appointment.</p>
-      </div>
-
-      <div class="grid grid-3 mt-2">
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+    <!-- FAST CONNECT: PATIENT APPOINTMENT & TRAINING ENQUIRY FORMS (edited copy) -->
+    <section class="mg-booking" id="booking-section" aria-labelledby="booking-title">
+      <div class="container">
+        <div class="mg-card mg-portal">
+          <div class="mg-portal__head">
+            <div>
+              <span class="mg-eyebrow">Fast connect</span>
+              <h2 id="booking-title">Request an appointment or a training callback</h2>
+              <p>Share only basic details here — please don't include medical history or emergency information in these forms.</p>
+            </div>
+            <div class="mg-switchbar__tabs" role="group" aria-label="Choose form type">
+              <button type="button" class="mg-tab mg-tab--active" id="form-tab-patient" data-form-target="patient-form-container" aria-pressed="true"><i data-lucide="stethoscope" aria-hidden="true"></i>Patient consultation</button>
+              <button type="button" class="mg-tab" id="form-tab-academic" data-form-target="academic-form-container" aria-pressed="false"><i data-lucide="graduation-cap" aria-hidden="true"></i>Student &amp; training</button>
+            </div>
           </div>
-          <h3>Adult Psychiatry</h3>
-          <p>Consultations for concerns such as anxiety, depression, mood changes, OCD, sleep difficulties, and related mental health needs.</p>
-          <a href="/psychiatry">Explore adult care →</a>
-        </article>
 
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+          <!-- FORM CONTAINER: PATIENT OPD -->
+          <div id="patient-form-container">
+            <p class="mg-notice mg-notice--care"><i data-lucide="shield-check" aria-hidden="true"></i>Enquiry details are used only to coordinate your appointment and are handled confidentially by the clinical team.</p>
+            <form class="mg-form" data-contact-form="patient">
+              <div class="mg-form__row">
+                <div>
+                  <label for="pt-name">Patient name (or family representative) *</label>
+                  <input id="pt-name" name="name" type="text" autocomplete="name" placeholder="e.g. Rohini Gupta" required>
+                </div>
+                <div>
+                  <label for="pt-phone">Mobile / WhatsApp number *</label>
+                  <input id="pt-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 9XXXXXXXXX" required>
+                </div>
+              </div>
+              <div class="mg-form__row">
+                <div>
+                  <label for="pt-specialty">Area of concern *</label>
+                  <select id="pt-specialty" name="specialty" required>
+                    <option value="">Select primary concern / service</option>
+                    <option value="psychiatry">Psychiatric consultation (mood, anxiety, bipolar)</option>
+                    <option value="psychotherapy">Counselling &amp; psychotherapy</option>
+                    <option value="child">Child &amp; adolescent evaluation</option>
+                    <option value="deaddiction">Substance-use support</option>
+                    <option value="geriatric">Later-life memory concerns</option>
+                    <option value="unsure">Not sure — please guide me</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="pt-mode">Preferred mode *</label>
+                  <select id="pt-mode" name="mode" required>
+                    <option value="">Choose consultation mode</option>
+                    <option value="clinic">In-clinic: Gamma II, Greater Noida</option>
+                    <option value="tele">Online teleconsultation</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mg-form__full">
+                <label for="pt-note">Preferred day/time &amp; brief note (optional)</label>
+                <textarea id="pt-note" name="note" rows="3" aria-describedby="pt-note-help"></textarea>
+                <p id="pt-note-help" class="mg-field-help">For example: weekday evenings after 5:30 PM. Share appointment preferences only.</p>
+              </div>
+              <div class="mg-form__footer">
+                <p>Clinic hours: Mon–Sat, 10:00 AM–4:00 PM and 5:30–7:30 PM. A team member will call or message you during working hours.</p>
+                <button type="submit" class="btn btn--primary"><span>Send enquiry via WhatsApp</span><i data-lucide="send" aria-hidden="true"></i></button>
+              </div>
+            </form>
           </div>
-          <h3>Child Development (Aasha Wing)</h3>
-          <p>Developmental assessment, ADHD support, early-intervention guidance, and practical conversations with parents and caregivers.</p>
-          <a href="/aasha">Explore child development →</a>
-        </article>
 
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <!-- FORM CONTAINER: ACADEMIC ENQUIRY -->
+          <div id="academic-form-container" hidden>
+            <p class="mg-notice mg-notice--learn"><i data-lucide="badge-check" aria-hidden="true"></i>Internship and workshop enquiries are reviewed by the academic desk; eligibility and terms are confirmed individually before enrollment.</p>
+            <form class="mg-form" data-contact-form="academic">
+              <div class="mg-form__row">
+                <div>
+                  <label for="ac-name">Applicant name *</label>
+                  <input id="ac-name" name="name" type="text" autocomplete="name" placeholder="e.g. Siddharth Verma" required>
+                </div>
+                <div>
+                  <label for="ac-phone">WhatsApp / phone number *</label>
+                  <input id="ac-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 9XXXXXXXXX" required>
+                </div>
+              </div>
+              <div class="mg-form__row">
+                <div>
+                  <label for="ac-college">University / college *</label>
+                  <input id="ac-college" name="college" type="text" placeholder="e.g. Delhi University" required>
+                </div>
+                <div>
+                  <label for="ac-degree">Current program &amp; year *</label>
+                  <input id="ac-degree" name="degree" type="text" placeholder="e.g. BA Psychology, 2nd year" required>
+                </div>
+              </div>
+              <div class="mg-form__full">
+                <label for="ac-program">Program of interest *</label>
+                <select id="ac-program" name="program" required>
+                  <option value="">Select a program</option>
+                  <option value="internship">Clinical psychology internship</option>
+                  <option value="observership">Psychiatric clinical observership</option>
+                  <option value="workshop">Psychometric assessment orientation</option>
+                  <option value="practicum">Diagnostic interviewing practicum</option>
+                  <option value="syllabus">Request program details &amp; schedule</option>
+                </select>
+              </div>
+              <div class="mg-form__footer">
+                <p>The academic desk will reply with the syllabus overview, schedule, and next steps.</p>
+                <button type="submit" class="btn btn--primary"><span>Send enquiry via WhatsApp</span><i data-lucide="send" aria-hidden="true"></i></button>
+              </div>
+            </form>
           </div>
-          <h3>Counselling & Therapy</h3>
-          <p>Confidential counselling support for individuals, couples, and families working through emotional or relationship concerns.</p>
-          <a href="/psychology-counselling">Discover therapy options →</a>
-        </article>
+
+          <div class="mg-success" id="form-success-banner" role="status" tabindex="-1" hidden>
+            <p><i data-lucide="circle-check" aria-hidden="true"></i>Continue in WhatsApp</p>
+            <span>Send your prepared message in WhatsApp to complete the enquiry. If it did not open, contact the clinic directly at <a href="tel:+919667863295">+91 96678 63295</a> or use the <a href="/book">full booking flow</a>.</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- PROCESS: Reduces anxiety through predictability (Neurodivergent-friendly) -->
-    <section class="container" style="padding-block: 4rem; background: var(--color-bg-alt); border-radius: 1.5rem;" aria-labelledby="process-title">
-      <div class="text-center mb-1">
-        <span style="color: var(--color-primary); font-weight: 600; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Your First Visit</span>
-        <h2 id="process-title">Know what to expect before you visit.</h2>
-        <p style="margin-inline: auto;">You do not need a prior diagnosis to request an appointment. We explain the next step, what to bring, and how follow-up is planned.</p>
-      </div>
+    <!-- QUICK ACCESS SUMMARY (edited copy) -->
+    <section class="mg-access" aria-labelledby="access-title">
+      <h2 id="access-title" class="visually-hidden">Quick clinic access summary</h2>
+      <div class="container">
+        <div class="mg-access__grid">
+          <article class="mg-card mg-access__item">
+            <span class="mg-icon-chip" aria-hidden="true"><i data-lucide="map-pin"></i></span>
+            <h3>Clinic location</h3>
+            <p>Conveniently located in Gamma II, Greater Noida, with easy access from across Delhi NCR.</p>
+            <a class="mg-more-link" href="/location">Directions &amp; clinic details<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="mg-card mg-access__item">
+            <span class="mg-icon-chip" aria-hidden="true"><i data-lucide="video"></i></span>
+            <h3>Teleconsultation</h3>
+            <p>Patients across India can request secure video consultations with follow-up plans shared digitally.</p>
+            <a class="mg-more-link" href="/teleconsultation">How online consultations work<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="mg-card mg-access__item">
+            <span class="mg-icon-chip" aria-hidden="true"><i data-lucide="award"></i></span>
+            <h3>Training completion</h3>
+            <p>Completion documentation is issued per the institute's terms and clarified with each trainee in advance.</p>
+            <a class="mg-more-link" href="/clinical-psychology-internship">Internship guide &amp; terms<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
 
-      <div class="grid grid-3 mt-2" style="counter-reset: step;">
-        <article class="card step" style="background: transparent; border: none; box-shadow: none; padding-left: 3.5rem;">
-          <h3>Request an appointment</h3>
-          <p>Use the form or contact the clinic by phone or WhatsApp. Share basic contact details and a short description of what you need help with.</p>
-        </article>
-        <article class="card step" style="background: transparent; border: none; box-shadow: none; padding-left: 3.5rem;">
-          <h3>Have a focused first visit</h3>
-          <p>Your first session is a structured conversation with Dr. Sharma about your history, current concerns, daily functioning, and goals.</p>
-        </article>
-        <article class="card step" style="background: transparent; border: none; box-shadow: none; padding-left: 3.5rem;">
-          <h3>Discuss next steps</h3>
-          <p>You will have time to discuss options, which may include treatment, counselling, a prescription, or further assessment where appropriate.</p>
-        </article>
+        <!-- First-visit essentials strip (links deeper pages into the landing flow) -->
+        <div class="mg-essentials" aria-label="First-visit essentials">
+          <a href="/fees"><i data-lucide="indian-rupee" aria-hidden="true"></i>Fees &amp; costs</a>
+          <a href="/process"><i data-lucide="route" aria-hidden="true"></i>What to expect</a>
+          <a href="/approach"><i data-lucide="heart-handshake" aria-hidden="true"></i>Our approach</a>
+          <a href="/testimonials"><i data-lucide="message-square-quote" aria-hidden="true"></i>Patient experiences</a>
+          <a href="/emergency"><i data-lucide="siren" aria-hidden="true"></i>Emergency help</a>
+        </div>
       </div>
-
-      <div class="text-center mt-2">
-        <a class="btn btn-secondary" href="/process">Read the full new-patient guide</a>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="container text-center" style="padding-block: 6rem;" aria-labelledby="cta-title">
-      <h2 id="cta-title">Ready to take the next step?</h2>
-      <p style="margin-inline: auto; margin-bottom: 1.5rem;">
-        Appointments are available Monday to Saturday, 10:00 AM–4:00 PM and 5:30–7:30 PM. Review the process and request a consultation when you are ready.
-      </p>
-      <a class="btn btn-primary" href="/book" style="font-size: 1.1rem; padding: 1rem 2rem;">Book an Appointment</a>
     </section>
 
   </main>
 
-  <!-- FOOTER: Compliance, Legal, and Operational Transparency -->
-  
+  <style is:global>
+    /* Homepage styles — edited adaptation of the dual-gateway design */
+    .mg-landing { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+    .mg-hero { background: linear-gradient(180deg, var(--mg-surface-soft) 0%, var(--mg-bg) 70%); }
+    .mg-hero-head { max-width: 52rem; margin: 0 auto 2.5rem; text-align: center; display: grid; gap: 1rem; justify-items: center; }
+    .mg-hero-head h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.15; margin: 0; }
+    .mg-accent { color: var(--mg-link); }
+    .mg-hero-head p { font-size: 1.05rem; margin: 0 auto; }
 
-  <!-- SCHEMA.ORG: Comprehensive Local SEO & Medical Markup -->
+    .mg-pill { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 999px; padding: 0.4rem 0.9rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; }
+    .mg-pill svg, .mg-pill i svg { width: 15px; height: 15px; }
+    .mg-pill--soft { background: var(--mg-surface-soft); color: var(--mg-link); }
+    .mg-pill--care { background: var(--mg-care-surface, #ecfeff); color: var(--mg-care-ink, #155e75); }
+    .mg-pill--learn { background: var(--mg-learn-surface, #fff7ed); color: var(--mg-learn-ink, #9a3412); }
+    .mg-dot { width: 8px; height: 8px; border-radius: 50%; background: #0d9488; display: inline-block; }
 
-  
-  <!-- Shared shell: responsive navigation, accessibility controls, safety
-       notice, contact normalization, and the clinic footer. -->
-  <script src="/assets/js/min/icon-init.min.js" defer></script>
-  <!-- Crisis Banner for emergency support -->
-  <link rel="stylesheet" href="/assets/css/min/crisis-banner.min.css">
-  <script src="/assets/js/min/crisis-banner.min.js" defer></script>
-  <!-- Simple script for the dynamic year in this legacy homepage shell. -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => { const year = document.getElementById('year'); if (year) year.textContent = String(new Date().getFullYear()); });
-    // Mobile nav toggle logic should be implemented in /assets/js/main.js
+    .mg-eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; font-weight: 700; color: var(--mg-ink-muted); }
+
+    .mg-gateways { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 1.5rem; margin-bottom: 2rem; align-items: stretch; }
+    .mg-card { background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 1rem; padding: 1.75rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.06); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .mg-gateway:hover { transform: translateY(-3px); box-shadow: 0 10px 24px -12px rgb(0 0 0 / 0.2); }
+    .mg-card__top { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .mg-gateway h2 { margin: 0 0 0.5rem; font-size: 1.5rem; }
+    .mg-gateway > p { margin: 0 0 1.25rem; }
+
+    .mg-badge-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.6rem 1rem; padding: 0; margin: 0 0 1.5rem; }
+    .mg-badge-grid li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; font-weight: 600; color: var(--mg-ink-strong); }
+    .mg-badge-grid svg { width: 18px; height: 18px; color: #0d9488; flex-shrink: 0; }
+    .mg-gateway:last-child .mg-badge-grid svg { color: #c2410c; }
+
+    .mg-card__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: auto; }
+    .w-full { width: 100%; }
+
+    .mg-trust { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 1rem; padding: 1.25rem; }
+    .mg-trust > span { display: grid; gap: 0.2rem; text-align: center; padding: 0.5rem; }
+    .mg-trust strong { color: var(--mg-link); font-size: 0.95rem; }
+    .mg-trust small { color: var(--mg-ink-muted); font-size: 0.8rem; }
+
+    .mg-switchbar { position: sticky; top: 0; z-index: 40; background: var(--mg-surface-strong); backdrop-filter: blur(8px); border-block: 1px solid var(--mg-border-strong); padding-block: 0.6rem; }
+    .mg-switchbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .mg-switchbar__tabs { display: inline-flex; gap: 0.4rem; background: var(--mg-surface-soft); border-radius: 999px; padding: 0.3rem; flex-wrap: wrap; }
+    .mg-tab { display: inline-flex; align-items: center; gap: 0.4rem; border-radius: 999px; padding: 0.45rem 1rem; font-size: 0.85rem; font-weight: 600; color: var(--mg-ink-muted); text-decoration: none; transition: background 0.2s, color 0.2s; }
+    .mg-tab svg { width: 15px; height: 15px; }
+    .mg-tab:hover { color: var(--mg-ink-strong); }
+    .mg-tab--active, .mg-tab:focus-visible { background: var(--mg-link); color: #fff; }
+    .mg-live { font-size: 0.8rem; font-weight: 600; color: #0d9488; text-decoration: none; }
+    .mg-live:hover { text-decoration: underline; }
+
+    .mg-stream { padding-block: clamp(2.5rem, 6vw, 4rem); scroll-margin-top: 4.5rem; }
+    .mg-stream--alt { background: var(--mg-surface-soft); }
+    .mg-section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 2.25rem; }
+    .mg-section-head h2 { margin: 0.75rem 0 0.5rem; font-size: clamp(1.5rem, 3vw, 2.1rem); }
+    .mg-section-head p { margin: 0; max-width: 44rem; }
+
+    .mg-service-grid, .mg-program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+    .mg-service h3, .mg-program h3 { margin: 0 0 0.5rem; }
+    .mg-service > p, .mg-program > p { margin: 0 0 1rem; font-size: 0.92rem; }
+    .mg-icon-chip { width: 3rem; height: 3rem; border-radius: 0.75rem; background: var(--mg-surface-soft); color: var(--mg-link); display: grid; place-items: center; margin-bottom: 1rem; }
+    .mg-icon-chip svg { width: 24px; height: 24px; }
+    .mg-bullets, .mg-checks { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 0.45rem; }
+    .mg-bullets li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 500; }
+    .mg-bullets li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #0d9488; flex-shrink: 0; }
+    .mg-bullets li a { color: inherit; text-decoration: none; }
+    .mg-bullets li a:hover { color: var(--mg-link); text-decoration: underline; }
+    .mg-service__links { display: grid; gap: 0.35rem; margin-top: auto; }
+    .mg-checks li { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: var(--mg-ink-strong); }
+    .mg-checks svg { width: 17px; height: 17px; color: #0d9488; flex-shrink: 0; margin-top: 2px; }
+    .mg-more-link { display: inline-flex; align-items: center; gap: 0.25rem; margin-top: auto; font-size: 0.88rem; font-weight: 700; color: var(--mg-link); text-decoration: none; }
+    .mg-more-link:hover { text-decoration: underline; }
+    .mg-more-link svg { width: 16px; height: 16px; }
+
+    .mg-chip { display: inline-flex; align-items: center; gap: 0.3rem; border-radius: 999px; padding: 0.25rem 0.7rem; font-size: 0.75rem; font-weight: 700; background: var(--mg-surface-soft); color: var(--mg-ink-muted); }
+    .mg-chip svg { width: 13px; height: 13px; }
+    .mg-chip--accent { background: var(--mg-care-surface, #ecfeff); color: var(--mg-care-ink, #155e75); }
+
+    .mg-meta-strip { display: flex; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; background: var(--mg-surface-strong); border-radius: 0.6rem; padding: 0.6rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--mg-ink-muted); margin-bottom: 1rem; }
+
+    .mg-team { background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 1rem; padding: clamp(1.25rem, 3vw, 2rem); }
+    .mg-team__intro { max-width: 40rem; margin-bottom: 1.5rem; }
+    .mg-team__intro h3 { margin: 0.5rem 0 0.25rem; font-size: 1.25rem; }
+    .mg-team__intro p { margin: 0; font-size: 0.92rem; }
+    .mg-team__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 1.25rem; align-items: stretch; }
+    .mg-doctor { display: flex; gap: 1rem; align-items: flex-start; padding: 1.25rem; }
+    .mg-doctor img { width: 96px; height: 120px; object-fit: cover; border-radius: 0.75rem; flex-shrink: 0; }
+    .mg-avatar-fallback { width: 96px; height: 120px; border-radius: 0.75rem; flex-shrink: 0; display: grid; place-items: center; background: var(--mg-surface-soft); color: var(--mg-link); font-weight: 700; font-size: 1.5rem; }
+    .mg-doctor__name { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; font-weight: 700; color: var(--mg-ink-strong); font-size: 1.05rem; margin: 0 0 0.25rem; }
+    .mg-doctor__role { color: #0d9488; font-size: 0.82rem; font-weight: 700; margin: 0 0 0.5rem; }
+    .mg-doctor__bio { font-size: 0.88rem; margin: 0 0 0.5rem; }
+    .mg-doctor__meta { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; margin: 0; }
+    .mg-doctor__meta a { color: var(--mg-link); font-weight: 700; text-decoration: none; }
+    .mg-doctor__meta a:hover { text-decoration: underline; }
+    .mg-note { background: var(--mg-surface-strong); border: 1px dashed #fbcfe8; border-radius: 1rem; padding: 1.25rem; display: grid; gap: 0.5rem; align-content: start; }
+    .mg-note h3 { margin: 0; font-size: 1.05rem; }
+    .mg-note p { margin: 0; font-size: 0.88rem; }
+    .mg-note .btn { justify-self: start; margin-top: 0.5rem; }
+
+    .mg-fineprint { background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 0.75rem; padding: 1rem 1.25rem; }
+    .mg-fineprint p { margin: 0; font-size: 0.95rem; color: var(--mg-ink-muted); }
+
+    .mg-booking { padding-block: clamp(2.5rem, 6vw, 4rem); }
+    .mg-portal { max-width: 60rem; margin-inline: auto; }
+    .mg-portal__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.25rem; flex-wrap: wrap; padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--mg-border-strong); }
+    .mg-portal__head h2 { margin: 0.5rem 0 0.25rem; font-size: clamp(1.4rem, 3vw, 1.9rem); }
+    .mg-portal__head p { margin: 0; font-size: 0.9rem; color: var(--mg-ink-muted); max-width: 34rem; }
+
+    .mg-notice { display: flex; align-items: center; gap: 0.6rem; border-radius: 0.6rem; padding: 0.7rem 1rem; font-size: 0.85rem; margin: 0 0 1.25rem; }
+    .mg-notice svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .mg-notice--care { background: var(--mg-care-surface, #ecfeff); color: var(--mg-care-ink, #155e75); }
+    .mg-notice--learn { background: var(--mg-learn-surface, #fff7ed); color: var(--mg-learn-ink, #9a3412); }
+
+    .mg-form { display: grid; gap: 1rem; }
+    .mg-form__row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1rem; }
+    .mg-form label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--mg-ink-strong); margin-bottom: 0.35rem; }
+    .mg-form input, .mg-form select, .mg-form textarea { width: 100%; box-sizing: border-box; padding: 0.7rem 0.85rem; border: 1px solid var(--mg-border-strong); border-radius: 0.6rem; background: var(--mg-surface-strong); color: var(--mg-ink-strong); font: inherit; font-size: 0.92rem; transition: background 0.2s, border-color 0.2s, box-shadow 0.2s; }
+    .mg-form textarea { resize: vertical; min-height: 4.5rem; }
+    .mg-form input:focus-visible, .mg-form select:focus-visible, .mg-form textarea:focus-visible { outline: none; background: var(--mg-surface-strong); border-color: var(--mg-link); box-shadow: 0 0 0 3px rgb(190 24 93 / 0.15); }
+    .mg-form__footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-top: 0.5rem; }
+    .mg-form__footer p { margin: 0; font-size: 0.82rem; color: var(--mg-ink-muted); max-width: 30rem; }
+    .mg-form button[type="submit"] { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .mg-form button[type="submit"] svg { width: 17px; height: 17px; }
+
+    .mg-success { margin-top: 1.25rem; background: var(--mg-care-surface, #ecfdf5); border: 1px solid var(--mg-border-strong); color: var(--mg-care-ink, #065f46); border-radius: 0.75rem; padding: 1rem 1.25rem; text-align: center; display: grid; gap: 0.25rem; }
+    .mg-success p { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin: 0; font-weight: 700; }
+    .mg-success p svg { width: 20px; height: 20px; }
+    .mg-success span { font-size: 0.85rem; }
+    .mg-success a { color: var(--mg-care-ink, #065f46); font-weight: 700; }
+
+    .mg-access { padding-block: clamp(2rem, 5vw, 3rem); background: var(--mg-surface-soft); }
+    .mg-access__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.5rem; }
+    .mg-access__item h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .mg-access__item p { margin: 0 0 0.75rem; font-size: 0.88rem; }
+
+    .mg-essentials { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 2rem; }
+    .mg-essentials a { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 999px; padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 600; color: var(--mg-ink-muted); text-decoration: none; transition: border-color 0.2s ease, color 0.2s ease; }
+    .mg-essentials a:hover { border-color: var(--mg-link); color: var(--mg-link); }
+    .mg-essentials svg { width: 16px; height: 16px; }
+
+    @media (max-width: 640px) {
+      .mg-switchbar__inner { justify-content: center; }
+      .mg-live { display: none; }
+      .mg-doctor { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mg-card, .mg-gateway:hover { transition: none; transform: none; }
+    }
+  </style>
+
+  <script is:inline>
+    // Progressive enhancement only: highlight the nearest section tab while scrolling.
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = Array.from(document.querySelectorAll('.mg-tab[href]'));
+      if ('IntersectionObserver' in window && tabs.length) {
+        const setActive = (id) => tabs.forEach((t) => t.classList.toggle('mg-tab--active', t.getAttribute('href') === '#' + id));
+        const observer = new IntersectionObserver((entries) => {
+          entries.filter((e) => e.isIntersecting).forEach((e) => setActive(e.target.id));
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        ['patient-stream', 'academic-stream'].forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) observer.observe(el);
+        });
+      }
+
+      // Fast-connect portal: patient / academic form tabs.
+      const CLINIC_WHATSAPP = '919667863295';
+      const formTabs = Array.from(document.querySelectorAll('[data-form-target]'));
+      const panels = {
+        'patient-form-container': document.getElementById('patient-form-container'),
+        'academic-form-container': document.getElementById('academic-form-container'),
+      };
+      const showForm = (targetId) => {
+        if (successBanner) successBanner.hidden = true;
+        formTabs.forEach((btn) => {
+          const isActive = btn.dataset.formTarget === targetId;
+          btn.classList.toggle('mg-tab--active', isActive);
+          btn.setAttribute('aria-pressed', String(isActive));
+        });
+        Object.entries(panels).forEach(([id, panel]) => {
+          if (panel) {
+            panel.hidden = id !== targetId;
+            if (id === targetId) {
+              const form = panel.querySelector('form');
+              if (form) {
+                form.hidden = false;
+                const submit = form.querySelector('button[type="submit"]');
+                if (submit) { submit.disabled = false; submit.removeAttribute('aria-busy'); submit.querySelector('span').textContent = 'Send enquiry via WhatsApp'; }
+              }
+            }
+          }
+        });
+      };
+      formTabs.forEach((btn) => btn.addEventListener('click', () => showForm(btn.dataset.formTarget)));
+      document.querySelectorAll('.mg-switchbar__tabs a[href^="#"]').forEach((tab) => tab.addEventListener('click', (event) => {
+        const target = document.getElementById(tab.hash.slice(1));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+      }));
+
+      // Submission: compose a WhatsApp enquiry (no data stored or sent elsewhere).
+      const successBanner = document.getElementById('form-success-banner');
+      document.querySelectorAll('[data-enquiry-kind="academic"]').forEach((link) => link.addEventListener('click', () => showForm('academic-form-container')));
+      if (new URLSearchParams(location.search).get('enquiry') === 'training') showForm('academic-form-container');
+      document.querySelectorAll('form[data-contact-form]').forEach((form) => {
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if (!form.reportValidity()) return;
+          const submit = form.querySelector('button[type="submit"]');
+          if (submit) { submit.disabled = true; submit.setAttribute('aria-busy', 'true'); submit.querySelector('span').textContent = 'Opening WhatsApp…'; }
+          const kind = form.dataset.contactForm === 'academic' ? 'Training enquiry' : 'Appointment enquiry';
+          const lines = Array.from(form.elements)
+            .filter((el) => el.name && el.value && el.type !== 'submit')
+            .map((el) => `${el.tagName === 'SELECT' ? el.selectedOptions[0].text : el.value}`);
+          const message = encodeURIComponent(`${kind} (Mind Grace landing page)\n` + lines.join('\n'));
+          window.open(`https://wa.me/${CLINIC_WHATSAPP}?text=${message}`, '_blank', 'noopener');
+          form.reset();
+          form.hidden = true;
+          if (successBanner) {
+            successBanner.hidden = false;
+            successBanner.focus({ preventScroll: true });
+            successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+      });
+    });
   </script>
 </Layout>

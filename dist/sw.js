@@ -4,7 +4,7 @@
  * Essential for users in crisis areas with poor connectivity
  */
 
-const CACHE_NAME = 'mindgrace-astro-v14'; // Astro migration: evict stale pages and bundles
+const CACHE_NAME = 'mindgrace-astro-v15'; // Evict stale page shells after the homepage and shared-shell refresh
 const OFFLINE_CACHE = 'mindgrace-offline-v1';
 
 // Core assets to cache immediately

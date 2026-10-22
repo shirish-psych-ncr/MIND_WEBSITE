@@ -4,18 +4,18 @@ const headExtra = String.raw`
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ffffff">
   <meta name="author" content="Mind Grace Neuropsychiatric Clinic">
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="index, follow">
 
-  <title>Landing preview | Mind Grace Neuropsychiatric Clinic</title>
-  <meta name="description" content="Edited landing-page preview for Mind Grace Neuropsychiatric Clinic: dual gateways for patient care and academic training in Greater Noida, Delhi NCR.">
-  <link rel="canonical" href="https://mindgracencr.in/landing">
+  <title>Mind Grace Clinic &amp; Training Hub | Greater Noida</title>
+  <meta name="description" content="Psychiatry, counselling, child-development consultations and supervised psychology training at Mind Grace in Gamma II, Greater Noida, Delhi NCR.">
+  <link rel="canonical" href="https://mindgracencr.in/">
 `;
 ---
 
 <Layout headExtra={headExtra}>
   <main id="main-content" tabindex="-1">
 
-    <!-- DUAL HERO & GATEWAY (edited copy) -->
+    <!-- Patient and academic pathways -->
     <section class="mg-landing mg-hero" aria-labelledby="mg-hero-title">
       <div class="container">
         <div class="mg-hero-head">
@@ -62,7 +62,7 @@ const headExtra = String.raw`
             </ul>
             <div class="mg-card__actions">
               <a class="btn btn--primary" href="/clinical-psychology-internship">Explore student programs</a>
-              <a class="btn btn-outline" href="#booking-section">Training enquiry</a>
+              <a class="btn btn-outline" href="#booking-section" data-enquiry-kind="academic">Training enquiry</a>
               <a class="btn btn-outline" href="/resources">Student resources</a>
             </div>
           </article>
@@ -211,7 +211,7 @@ const headExtra = String.raw`
             <h2 id="academic-stream-title">Programs that connect theory with clinical reality</h2>
             <p>Students observe ethical practice, practise core assessment skills, and discuss cases with supervision — with clear boundaries around confidentiality and scope.</p>
           </div>
-          <a class="btn btn--primary" href="/clinical-psychology-internship">Review the internship guide</a>
+          <a class="btn btn--primary" href="/clinical-psychology-internship">Review internship guide and terms</a>
         </div>
 
         <div class="mg-program-grid">
@@ -230,7 +230,7 @@ const headExtra = String.raw`
             <div class="mg-meta-strip"><span>Rolling intakes</span><span>Limited seats per batch</span></div>
             <div class="mg-card__actions">
               <a class="btn btn-outline w-full" href="/clinical-psychology-internship">See internship details</a>
-              <a class="btn btn--primary w-full" href="#booking-section">Apply via enquiry form</a>
+              <a class="btn btn--primary w-full" href="#booking-section" data-enquiry-kind="academic">Apply via enquiry form</a>
             </div>
           </article>
 
@@ -320,6 +320,7 @@ const headExtra = String.raw`
                 <div>
                   <label for="pt-mode">Preferred mode *</label>
                   <select id="pt-mode" name="mode" required>
+                    <option value="">Choose consultation mode</option>
                     <option value="clinic">In-clinic: Gamma II, Greater Noida</option>
                     <option value="tele">Online teleconsultation</option>
                   </select>
@@ -327,7 +328,8 @@ const headExtra = String.raw`
               </div>
               <div class="mg-form__full">
                 <label for="pt-note">Preferred day/time &amp; brief note (optional)</label>
-                <textarea id="pt-note" name="note" rows="3" placeholder="e.g. Weekday evening after 5:30 PM; two lines about the concern"></textarea>
+                <textarea id="pt-note" name="note" rows="3" aria-describedby="pt-note-help"></textarea>
+                <p id="pt-note-help" class="mg-field-help">For example: weekday evenings after 5:30 PM. Share appointment preferences only.</p>
               </div>
               <div class="mg-form__footer">
                 <p>Clinic hours: Mon–Sat, 10:00 AM–4:00 PM and 5:30–7:30 PM. A team member will call or message you during working hours.</p>
@@ -379,8 +381,8 @@ const headExtra = String.raw`
           </div>
 
           <div class="mg-success" id="form-success-banner" role="status" tabindex="-1" hidden>
-            <p><i data-lucide="circle-check" aria-hidden="true"></i>Enquiry sent — thank you!</p>
-            <span>If WhatsApp didn't open, contact the clinic directly at <a href="tel:+919667863295">+91 96678 63295</a> or use the <a href="/book">full booking flow</a>.</span>
+            <p><i data-lucide="circle-check" aria-hidden="true"></i>Continue in WhatsApp</p>
+            <span>Send your prepared message in WhatsApp to complete the enquiry. If it did not open, contact the clinic directly at <a href="tel:+919667863295">+91 96678 63295</a> or use the <a href="/book">full booking flow</a>.</span>
           </div>
         </div>
       </div>
@@ -425,55 +427,55 @@ const headExtra = String.raw`
   </main>
 
   <style is:global>
-    /* Landing preview styles — edited adaptation of the dual-gateway design */
+    /* Homepage styles — edited adaptation of the dual-gateway design */
     .mg-landing { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
-    .mg-hero { background: linear-gradient(180deg, #fdf2f8 0%, #ffffff 70%); }
+    .mg-hero { background: linear-gradient(180deg, var(--mg-surface-soft) 0%, var(--mg-bg) 70%); }
     .mg-hero-head { max-width: 52rem; margin: 0 auto 2.5rem; text-align: center; display: grid; gap: 1rem; justify-items: center; }
     .mg-hero-head h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.15; margin: 0; }
-    .mg-accent { color: var(--color-primary, #be185d); }
+    .mg-accent { color: var(--mg-link); }
     .mg-hero-head p { font-size: 1.05rem; margin: 0 auto; }
 
     .mg-pill { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 999px; padding: 0.4rem 0.9rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; }
     .mg-pill svg, .mg-pill i svg { width: 15px; height: 15px; }
-    .mg-pill--soft { background: #fce7f3; color: #9d174d; }
-    .mg-pill--care { background: #ecfeff; color: #155e75; }
-    .mg-pill--learn { background: #fff7ed; color: #9a3412; }
+    .mg-pill--soft { background: var(--mg-surface-soft); color: var(--mg-link); }
+    .mg-pill--care { background: var(--mg-care-surface, #ecfeff); color: var(--mg-care-ink, #155e75); }
+    .mg-pill--learn { background: var(--mg-learn-surface, #fff7ed); color: var(--mg-learn-ink, #9a3412); }
     .mg-dot { width: 8px; height: 8px; border-radius: 50%; background: #0d9488; display: inline-block; }
 
-    .mg-eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; font-weight: 700; color: #6b7280; }
+    .mg-eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; font-weight: 700; color: var(--mg-ink-muted); }
 
     .mg-gateways { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 1.5rem; margin-bottom: 2rem; align-items: stretch; }
-    .mg-card { background: #fff; border: 1px solid var(--color-border, #e5e7eb); border-radius: 1rem; padding: 1.75rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.06); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .mg-card { background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 1rem; padding: 1.75rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.06); transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .mg-gateway:hover { transform: translateY(-3px); box-shadow: 0 10px 24px -12px rgb(0 0 0 / 0.2); }
     .mg-card__top { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
     .mg-gateway h2 { margin: 0 0 0.5rem; font-size: 1.5rem; }
     .mg-gateway > p { margin: 0 0 1.25rem; }
 
     .mg-badge-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.6rem 1rem; padding: 0; margin: 0 0 1.5rem; }
-    .mg-badge-grid li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; font-weight: 600; color: #1f2937; }
+    .mg-badge-grid li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; font-weight: 600; color: var(--mg-ink-strong); }
     .mg-badge-grid svg { width: 18px; height: 18px; color: #0d9488; flex-shrink: 0; }
     .mg-gateway:last-child .mg-badge-grid svg { color: #c2410c; }
 
     .mg-card__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: auto; }
     .w-full { width: 100%; }
 
-    .mg-trust { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; background: #f9fafb; border: 1px solid var(--color-border, #e5e7eb); border-radius: 1rem; padding: 1.25rem; }
+    .mg-trust { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 1rem; padding: 1.25rem; }
     .mg-trust > span { display: grid; gap: 0.2rem; text-align: center; padding: 0.5rem; }
-    .mg-trust strong { color: var(--color-primary, #be185d); font-size: 0.95rem; }
-    .mg-trust small { color: #4b5563; font-size: 0.8rem; }
+    .mg-trust strong { color: var(--mg-link); font-size: 0.95rem; }
+    .mg-trust small { color: var(--mg-ink-muted); font-size: 0.8rem; }
 
-    .mg-switchbar { position: sticky; top: 0; z-index: 40; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(8px); border-block: 1px solid var(--color-border, #e5e7eb); padding-block: 0.6rem; }
+    .mg-switchbar { position: sticky; top: 0; z-index: 40; background: var(--mg-surface-strong); backdrop-filter: blur(8px); border-block: 1px solid var(--mg-border-strong); padding-block: 0.6rem; }
     .mg-switchbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-    .mg-switchbar__tabs { display: inline-flex; gap: 0.4rem; background: #f3f4f6; border-radius: 999px; padding: 0.3rem; flex-wrap: wrap; }
-    .mg-tab { display: inline-flex; align-items: center; gap: 0.4rem; border-radius: 999px; padding: 0.45rem 1rem; font-size: 0.85rem; font-weight: 600; color: #4b5563; text-decoration: none; transition: background 0.2s, color 0.2s; }
+    .mg-switchbar__tabs { display: inline-flex; gap: 0.4rem; background: var(--mg-surface-soft); border-radius: 999px; padding: 0.3rem; flex-wrap: wrap; }
+    .mg-tab { display: inline-flex; align-items: center; gap: 0.4rem; border-radius: 999px; padding: 0.45rem 1rem; font-size: 0.85rem; font-weight: 600; color: var(--mg-ink-muted); text-decoration: none; transition: background 0.2s, color 0.2s; }
     .mg-tab svg { width: 15px; height: 15px; }
-    .mg-tab:hover { color: #111827; }
-    .mg-tab--active, .mg-tab:focus-visible { background: var(--color-primary, #be185d); color: #fff; }
+    .mg-tab:hover { color: var(--mg-ink-strong); }
+    .mg-tab--active, .mg-tab:focus-visible { background: var(--mg-link); color: #fff; }
     .mg-live { font-size: 0.8rem; font-weight: 600; color: #0d9488; text-decoration: none; }
     .mg-live:hover { text-decoration: underline; }
 
     .mg-stream { padding-block: clamp(2.5rem, 6vw, 4rem); scroll-margin-top: 4.5rem; }
-    .mg-stream--alt { background: #fdf2f8; }
+    .mg-stream--alt { background: var(--mg-surface-soft); }
     .mg-section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 2.25rem; }
     .mg-section-head h2 { margin: 0.75rem 0 0.5rem; font-size: clamp(1.5rem, 3vw, 2.1rem); }
     .mg-section-head p { margin: 0; max-width: 44rem; }
@@ -481,84 +483,84 @@ const headExtra = String.raw`
     .mg-service-grid, .mg-program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
     .mg-service h3, .mg-program h3 { margin: 0 0 0.5rem; }
     .mg-service > p, .mg-program > p { margin: 0 0 1rem; font-size: 0.92rem; }
-    .mg-icon-chip { width: 3rem; height: 3rem; border-radius: 0.75rem; background: #fce7f3; color: var(--color-primary, #be185d); display: grid; place-items: center; margin-bottom: 1rem; }
+    .mg-icon-chip { width: 3rem; height: 3rem; border-radius: 0.75rem; background: var(--mg-surface-soft); color: var(--mg-link); display: grid; place-items: center; margin-bottom: 1rem; }
     .mg-icon-chip svg { width: 24px; height: 24px; }
     .mg-bullets, .mg-checks { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 0.45rem; }
     .mg-bullets li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 500; }
     .mg-bullets li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #0d9488; flex-shrink: 0; }
     .mg-bullets li a { color: inherit; text-decoration: none; }
-    .mg-bullets li a:hover { color: var(--color-primary, #be185d); text-decoration: underline; }
+    .mg-bullets li a:hover { color: var(--mg-link); text-decoration: underline; }
     .mg-service__links { display: grid; gap: 0.35rem; margin-top: auto; }
-    .mg-checks li { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: #1f2937; }
+    .mg-checks li { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.88rem; color: var(--mg-ink-strong); }
     .mg-checks svg { width: 17px; height: 17px; color: #0d9488; flex-shrink: 0; margin-top: 2px; }
-    .mg-more-link { display: inline-flex; align-items: center; gap: 0.25rem; margin-top: auto; font-size: 0.88rem; font-weight: 700; color: var(--color-primary, #be185d); text-decoration: none; }
+    .mg-more-link { display: inline-flex; align-items: center; gap: 0.25rem; margin-top: auto; font-size: 0.88rem; font-weight: 700; color: var(--mg-link); text-decoration: none; }
     .mg-more-link:hover { text-decoration: underline; }
     .mg-more-link svg { width: 16px; height: 16px; }
 
-    .mg-chip { display: inline-flex; align-items: center; gap: 0.3rem; border-radius: 999px; padding: 0.25rem 0.7rem; font-size: 0.75rem; font-weight: 700; background: #f3f4f6; color: #374151; }
+    .mg-chip { display: inline-flex; align-items: center; gap: 0.3rem; border-radius: 999px; padding: 0.25rem 0.7rem; font-size: 0.75rem; font-weight: 700; background: var(--mg-surface-soft); color: var(--mg-ink-muted); }
     .mg-chip svg { width: 13px; height: 13px; }
-    .mg-chip--accent { background: #ecfeff; color: #155e75; }
+    .mg-chip--accent { background: var(--mg-care-surface, #ecfeff); color: var(--mg-care-ink, #155e75); }
 
-    .mg-meta-strip { display: flex; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; background: #f9fafb; border-radius: 0.6rem; padding: 0.6rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: #4b5563; margin-bottom: 1rem; }
+    .mg-meta-strip { display: flex; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; background: var(--mg-surface-strong); border-radius: 0.6rem; padding: 0.6rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--mg-ink-muted); margin-bottom: 1rem; }
 
-    .mg-team { background: #f9fafb; border: 1px solid var(--color-border, #e5e7eb); border-radius: 1rem; padding: clamp(1.25rem, 3vw, 2rem); }
+    .mg-team { background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 1rem; padding: clamp(1.25rem, 3vw, 2rem); }
     .mg-team__intro { max-width: 40rem; margin-bottom: 1.5rem; }
     .mg-team__intro h3 { margin: 0.5rem 0 0.25rem; font-size: 1.25rem; }
     .mg-team__intro p { margin: 0; font-size: 0.92rem; }
     .mg-team__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 1.25rem; align-items: stretch; }
     .mg-doctor { display: flex; gap: 1rem; align-items: flex-start; padding: 1.25rem; }
     .mg-doctor img { width: 96px; height: 120px; object-fit: cover; border-radius: 0.75rem; flex-shrink: 0; }
-    .mg-avatar-fallback { width: 96px; height: 120px; border-radius: 0.75rem; flex-shrink: 0; display: grid; place-items: center; background: #fce7f3; color: var(--color-primary, #be185d); font-weight: 700; font-size: 1.5rem; }
-    .mg-doctor__name { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; font-weight: 700; color: #111827; font-size: 1.05rem; margin: 0 0 0.25rem; }
+    .mg-avatar-fallback { width: 96px; height: 120px; border-radius: 0.75rem; flex-shrink: 0; display: grid; place-items: center; background: var(--mg-surface-soft); color: var(--mg-link); font-weight: 700; font-size: 1.5rem; }
+    .mg-doctor__name { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; font-weight: 700; color: var(--mg-ink-strong); font-size: 1.05rem; margin: 0 0 0.25rem; }
     .mg-doctor__role { color: #0d9488; font-size: 0.82rem; font-weight: 700; margin: 0 0 0.5rem; }
     .mg-doctor__bio { font-size: 0.88rem; margin: 0 0 0.5rem; }
     .mg-doctor__meta { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; margin: 0; }
-    .mg-doctor__meta a { color: var(--color-primary, #be185d); font-weight: 700; text-decoration: none; }
+    .mg-doctor__meta a { color: var(--mg-link); font-weight: 700; text-decoration: none; }
     .mg-doctor__meta a:hover { text-decoration: underline; }
-    .mg-note { background: #fff; border: 1px dashed #fbcfe8; border-radius: 1rem; padding: 1.25rem; display: grid; gap: 0.5rem; align-content: start; }
+    .mg-note { background: var(--mg-surface-strong); border: 1px dashed #fbcfe8; border-radius: 1rem; padding: 1.25rem; display: grid; gap: 0.5rem; align-content: start; }
     .mg-note h3 { margin: 0; font-size: 1.05rem; }
     .mg-note p { margin: 0; font-size: 0.88rem; }
     .mg-note .btn { justify-self: start; margin-top: 0.5rem; }
 
-    .mg-fineprint { background: #fff; border: 1px solid var(--color-border, #e5e7eb); border-radius: 0.75rem; padding: 1rem 1.25rem; }
-    .mg-fineprint p { margin: 0; font-size: 0.82rem; color: #6b7280; }
+    .mg-fineprint { background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 0.75rem; padding: 1rem 1.25rem; }
+    .mg-fineprint p { margin: 0; font-size: 0.95rem; color: var(--mg-ink-muted); }
 
     .mg-booking { padding-block: clamp(2.5rem, 6vw, 4rem); }
     .mg-portal { max-width: 60rem; margin-inline: auto; }
-    .mg-portal__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.25rem; flex-wrap: wrap; padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border, #e5e7eb); }
+    .mg-portal__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.25rem; flex-wrap: wrap; padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--mg-border-strong); }
     .mg-portal__head h2 { margin: 0.5rem 0 0.25rem; font-size: clamp(1.4rem, 3vw, 1.9rem); }
-    .mg-portal__head p { margin: 0; font-size: 0.9rem; color: #4b5563; max-width: 34rem; }
+    .mg-portal__head p { margin: 0; font-size: 0.9rem; color: var(--mg-ink-muted); max-width: 34rem; }
 
     .mg-notice { display: flex; align-items: center; gap: 0.6rem; border-radius: 0.6rem; padding: 0.7rem 1rem; font-size: 0.85rem; margin: 0 0 1.25rem; }
     .mg-notice svg { width: 18px; height: 18px; flex-shrink: 0; }
-    .mg-notice--care { background: #ecfeff; color: #155e75; }
-    .mg-notice--learn { background: #fff7ed; color: #9a3412; }
+    .mg-notice--care { background: var(--mg-care-surface, #ecfeff); color: var(--mg-care-ink, #155e75); }
+    .mg-notice--learn { background: var(--mg-learn-surface, #fff7ed); color: var(--mg-learn-ink, #9a3412); }
 
     .mg-form { display: grid; gap: 1rem; }
     .mg-form__row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1rem; }
-    .mg-form label { display: block; font-size: 0.82rem; font-weight: 700; color: #1f2937; margin-bottom: 0.35rem; }
-    .mg-form input, .mg-form select, .mg-form textarea { width: 100%; box-sizing: border-box; padding: 0.7rem 0.85rem; border: 1px solid var(--color-border, #d1d5db); border-radius: 0.6rem; background: #f9fafb; color: #111827; font: inherit; font-size: 0.92rem; transition: background 0.2s, border-color 0.2s, box-shadow 0.2s; }
+    .mg-form label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--mg-ink-strong); margin-bottom: 0.35rem; }
+    .mg-form input, .mg-form select, .mg-form textarea { width: 100%; box-sizing: border-box; padding: 0.7rem 0.85rem; border: 1px solid var(--mg-border-strong); border-radius: 0.6rem; background: var(--mg-surface-strong); color: var(--mg-ink-strong); font: inherit; font-size: 0.92rem; transition: background 0.2s, border-color 0.2s, box-shadow 0.2s; }
     .mg-form textarea { resize: vertical; min-height: 4.5rem; }
-    .mg-form input:focus-visible, .mg-form select:focus-visible, .mg-form textarea:focus-visible { outline: none; background: #fff; border-color: var(--color-primary, #be185d); box-shadow: 0 0 0 3px rgb(190 24 93 / 0.15); }
+    .mg-form input:focus-visible, .mg-form select:focus-visible, .mg-form textarea:focus-visible { outline: none; background: var(--mg-surface-strong); border-color: var(--mg-link); box-shadow: 0 0 0 3px rgb(190 24 93 / 0.15); }
     .mg-form__footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-top: 0.5rem; }
-    .mg-form__footer p { margin: 0; font-size: 0.82rem; color: #6b7280; max-width: 30rem; }
+    .mg-form__footer p { margin: 0; font-size: 0.82rem; color: var(--mg-ink-muted); max-width: 30rem; }
     .mg-form button[type="submit"] { display: inline-flex; align-items: center; gap: 0.5rem; }
     .mg-form button[type="submit"] svg { width: 17px; height: 17px; }
 
-    .mg-success { margin-top: 1.25rem; background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; border-radius: 0.75rem; padding: 1rem 1.25rem; text-align: center; display: grid; gap: 0.25rem; }
+    .mg-success { margin-top: 1.25rem; background: var(--mg-care-surface, #ecfdf5); border: 1px solid var(--mg-border-strong); color: var(--mg-care-ink, #065f46); border-radius: 0.75rem; padding: 1rem 1.25rem; text-align: center; display: grid; gap: 0.25rem; }
     .mg-success p { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin: 0; font-weight: 700; }
     .mg-success p svg { width: 20px; height: 20px; }
     .mg-success span { font-size: 0.85rem; }
-    .mg-success a { color: #065f46; font-weight: 700; }
+    .mg-success a { color: var(--mg-care-ink, #065f46); font-weight: 700; }
 
-    .mg-access { padding-block: clamp(2rem, 5vw, 3rem); background: #fdf2f8; }
+    .mg-access { padding-block: clamp(2rem, 5vw, 3rem); background: var(--mg-surface-soft); }
     .mg-access__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.5rem; }
     .mg-access__item h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
     .mg-access__item p { margin: 0 0 0.75rem; font-size: 0.88rem; }
 
     .mg-essentials { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 2rem; }
-    .mg-essentials a { display: inline-flex; align-items: center; gap: 0.4rem; background: #fff; border: 1px solid var(--color-border, #e5e7eb); border-radius: 999px; padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 600; color: #374151; text-decoration: none; transition: border-color 0.2s ease, color 0.2s ease; }
-    .mg-essentials a:hover { border-color: var(--color-primary, #be185d); color: var(--color-primary, #be185d); }
+    .mg-essentials a { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--mg-surface-strong); border: 1px solid var(--mg-border-strong); border-radius: 999px; padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 600; color: var(--mg-ink-muted); text-decoration: none; transition: border-color 0.2s ease, color 0.2s ease; }
+    .mg-essentials a:hover { border-color: var(--mg-link); color: var(--mg-link); }
     .mg-essentials svg { width: 16px; height: 16px; }
 
     @media (max-width: 640px) {
@@ -594,23 +596,44 @@ const headExtra = String.raw`
         'academic-form-container': document.getElementById('academic-form-container'),
       };
       const showForm = (targetId) => {
+        if (successBanner) successBanner.hidden = true;
         formTabs.forEach((btn) => {
           const isActive = btn.dataset.formTarget === targetId;
           btn.classList.toggle('mg-tab--active', isActive);
           btn.setAttribute('aria-pressed', String(isActive));
         });
         Object.entries(panels).forEach(([id, panel]) => {
-          if (panel) panel.hidden = id !== targetId;
+          if (panel) {
+            panel.hidden = id !== targetId;
+            if (id === targetId) {
+              const form = panel.querySelector('form');
+              if (form) {
+                form.hidden = false;
+                const submit = form.querySelector('button[type="submit"]');
+                if (submit) { submit.disabled = false; submit.removeAttribute('aria-busy'); submit.querySelector('span').textContent = 'Send enquiry via WhatsApp'; }
+              }
+            }
+          }
         });
       };
       formTabs.forEach((btn) => btn.addEventListener('click', () => showForm(btn.dataset.formTarget)));
+      document.querySelectorAll('.mg-switchbar__tabs a[href^="#"]').forEach((tab) => tab.addEventListener('click', (event) => {
+        const target = document.getElementById(tab.hash.slice(1));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+      }));
 
       // Submission: compose a WhatsApp enquiry (no data stored or sent elsewhere).
       const successBanner = document.getElementById('form-success-banner');
+      document.querySelectorAll('[data-enquiry-kind="academic"]').forEach((link) => link.addEventListener('click', () => showForm('academic-form-container')));
+      if (new URLSearchParams(location.search).get('enquiry') === 'training') showForm('academic-form-container');
       document.querySelectorAll('form[data-contact-form]').forEach((form) => {
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (!form.reportValidity()) return;
+          const submit = form.querySelector('button[type="submit"]');
+          if (submit) { submit.disabled = true; submit.setAttribute('aria-busy', 'true'); submit.querySelector('span').textContent = 'Opening WhatsApp…'; }
           const kind = form.dataset.contactForm === 'academic' ? 'Training enquiry' : 'Appointment enquiry';
           const lines = Array.from(form.elements)
             .filter((el) => el.name && el.value && el.type !== 'submit')
@@ -618,6 +641,7 @@ const headExtra = String.raw`
           const message = encodeURIComponent(`${kind} (Mind Grace landing page)\n` + lines.join('\n'));
           window.open(`https://wa.me/${CLINIC_WHATSAPP}?text=${message}`, '_blank', 'noopener');
           form.reset();
+          form.hidden = true;
           if (successBanner) {
             successBanner.hidden = false;
             successBanner.focus({ preventScroll: true });

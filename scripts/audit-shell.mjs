@@ -67,7 +67,9 @@ try {
         if (await page.locator('#burgerMenuBtn').getAttribute('aria-expanded') !== 'false') throw new Error('Menu failed to close');
       }
       if (route === '/' && width > 1100) {
-        await page.locator('.nav-funnel > a').first().focus();
+        const funnelTrigger = page.locator('.nav-funnel-trigger').first();
+        await funnelTrigger.focus();
+        await funnelTrigger.press('Enter');
         await page.locator('.nav-funnel-menu').first().waitFor({ state: 'visible' });
         await page.keyboard.press('Tab');
         if (!await page.locator('.nav-funnel-menu a').first().evaluate(el => el === document.activeElement)) throw new Error('Dropdown keyboard navigation failed');

@@ -43,6 +43,8 @@ def main():
             if target not in pages: errors.append(f'blog manifest destination missing: {target}')
     dynamic={'mobile-nav-panel','accessibility-panel'}
     for route,p in pages.items():
+        if route == '/' and 'http-equiv="refresh"' in (DIST/'index.html').read_text(encoding='utf-8').lower():
+            continue
         for cls in ('emergency-banner','site-header','site-footer'):
             if p.classes[cls]!=1: errors.append(f'{route}: expected one {cls}, found {p.classes[cls]}')
         for tag in ('main','h1','footer'):

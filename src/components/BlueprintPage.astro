@@ -10,7 +10,7 @@ const headExtra = String.raw`<link rel="canonical" href="${canonical}"><title>${
 <Layout headExtra={headExtra}>
   <main id="main-content" class="seo-page blueprint-page">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{kicker}</span></nav>
-    <section class="seo-hero"><p class="seo-kicker">{kicker}</p><h1>{title}</h1><div class="seo-answer"><strong>Direct answer:</strong> {answer}</div><p class="seo-lead">Mind Grace provides information to help you decide what to ask about next. Diagnosis, suitability, treatment, and follow-up are discussed individually.</p></section>
+    <section class="seo-hero"><p class="seo-kicker">{kicker}</p><h1>{title}</h1><div class="seo-answer"><strong>Direct answer:</strong> {answer}</div><p class="seo-lead">{description}</p></section>
     {sections.map((section) => <section class="seo-section"><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}{section.bullets && <ul>{section.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}</section>)}
     {faq.length > 0 && <section class="seo-section" aria-labelledby="faq-title"><h2 id="faq-title">Common questions</h2>{faq.map((item) => <article class="seo-card"><h3>{item.question}</h3><p>{item.answer}</p></article>)}</section>}
     <section class="seo-section"><h2>Related pathways</h2><div class="seo-actions">{links.map((link) => <a class="btn btn-outline" href={link.href}>{link.label}</a>)}</div></section>

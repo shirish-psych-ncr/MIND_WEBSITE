@@ -59,19 +59,27 @@ const itemListLd = {
     <h1>Student internship guides by institute</h1>
     <div class="blog-answer"><strong>In short:</strong> These Mind Grace blog guides are written for students of specific Delhi NCR universities, colleges, and hospitals. Each one covers programmes, syllabus highlights, mandated practicum hours, documentation, and how a supervised clinic placement east of the Yamuna can fit your course requirements.</div>
     <p class="lead">Start with the <a href="/clinical-psychology-internship">internship enquiry guide</a> for how supervision and documentation work at Mind Grace, then open the page for your own institute below. For a wider comparison, read <a href="/blog/pages/adult/psychology-institutions-delhi-ncr">Psychology institutions in Delhi NCR</a>.</p>
+    <div class="guide-search">
+      <label for="institute-search">Find your institute or city</label>
+      <input id="institute-search" type="search" placeholder="Institute name or city" autocomplete="off" aria-controls="institute-directory" />
+      <p id="institute-results" role="status">{INSTITUTE_PROFILES.length} institute guides</p>
+    </div>
+    <div id="institute-directory" class="institute-directory">
     {orderedGroups.map(([location, profiles]) => (
-      <section class="seo-section">
+      <section class="seo-section" data-institute-group>
         <h2>{location}</h2>
         <ul>
           {profiles.map((profile) => (
-            <li>
+            <li data-institute-entry data-search={`${profile.institution} ${location}`.toLocaleLowerCase()}>
               <a href={`/blog/pages/adult/${profile.slug}`}>{profile.institution}</a>
-              {' '}— internship and practicum guide{profile.rciPathway ? ', RCI licensing pathway' : ''}.
+              {profile.rciPathway ? ' · RCI licensing pathway' : ''}
             </li>
           ))}
         </ul>
       </section>
     ))}
+    </div>
+    <p id="institute-empty" hidden>No matching institute. Try a shorter name or search by city.</p>
     <section class="seo-section">
       <h2>Also in this series</h2>
       <ul>
@@ -84,4 +92,24 @@ const itemListLd = {
     </section>
   </article>
 </main>
+<script>
+  const search = document.querySelector<HTMLInputElement>('#institute-search');
+  const status = document.querySelector('#institute-results');
+  const empty = document.querySelector<HTMLElement>('#institute-empty');
+  const filterGuides = () => {
+    const query = search?.value.trim().toLocaleLowerCase() ?? '';
+    let matches = 0;
+    document.querySelectorAll<HTMLElement>('[data-institute-entry]').forEach((entry) => {
+      entry.hidden = !entry.dataset.search?.includes(query);
+      if (!entry.hidden) matches++;
+    });
+    document.querySelectorAll<HTMLElement>('[data-institute-group]').forEach((group) => {
+      group.hidden = !group.querySelector('[data-institute-entry]:not([hidden])');
+    });
+    if (status) status.textContent = `${matches} institute ${matches === 1 ? 'guide' : 'guides'}${query ? ' found' : ''}`;
+    if (empty) empty.hidden = matches > 0;
+  };
+  search?.addEventListener('input', filterGuides);
+  window.addEventListener('pageshow', filterGuides);
+</script>
 </Layout>

@@ -459,6 +459,8 @@ function initDynamicViewport() {
 // Accordion functionality
 function initAccordions(accordionTriggers) {
   accordionTriggers.forEach(trigger => {
+    if (trigger.dataset.accordionBound === 'true') return;
+    trigger.dataset.accordionBound = 'true';
     trigger.addEventListener('click', () => {
       const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
       const controlsId = trigger.getAttribute('aria-controls');
@@ -665,7 +667,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navDropdown: document.getElementById('navDropdown'),
     siteHeader: document.querySelector('.site-header'),
     reveals: document.querySelectorAll('.reveal'),
-    accordionTriggers: document.querySelectorAll('[data-accordion-trigger]'),
+    accordionTriggers: document.querySelectorAll('[data-accordion-trigger], .accordion-trigger[aria-controls]'),
     forms: document.querySelectorAll('form[novalidate]'),
     counters: document.querySelectorAll('.stat-number')
   };
