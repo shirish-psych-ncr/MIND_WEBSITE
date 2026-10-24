@@ -1,3 +1,4 @@
+import aashaData from '../data/aasha.json';
 export const SITE_URL = 'https://mindgracencr.in';
 export const CLINIC_ID = `${SITE_URL}/#clinic`;
 export const PHYSICIAN_ID = `${SITE_URL}/#physician`;
@@ -33,7 +34,7 @@ export const clinic = {
   '@id': CLINIC_ID,
   name: 'Mind Grace Neuropsychiatric Clinic',
   url: `${SITE_URL}/`,
-  description: 'Neuropsychiatric and child-development consultations in Greater Noida for adults, children, adolescents, and families.',
+  description: 'Adult neuropsychiatric care and academic training in Greater Noida, with all child-related care through Aasha Early Intervention Centre.',
   telephone: '+91-9667863295',
   priceRange: '₹₹',
   logo: `${SITE_URL}/assets/images/mind-grace-clinic-logo-pink.svg`,
@@ -53,4 +54,16 @@ export const clinic = {
       'Medication Management',
     ].map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })),
   },
+} as const;
+
+export const AASHA_ID = aashaData.id;
+export const aasha = {
+  '@type': 'MedicalClinic', '@id': AASHA_ID,
+  name: aashaData.name, alternateName: aashaData.shortName,
+  url: aashaData.url, telephone: aashaData.telephone,
+  description: 'Individualised child development assessments, psychiatric consultation, speech and language therapy, occupational therapy, special education and behavioural support in Greater Noida.',
+  logo: `${SITE_URL}${aashaData.logo}`, image: `${SITE_URL}${aashaData.logo}`,
+  address: { '@type': 'PostalAddress', streetAddress: 'J-123, J Block, Gamma 2', addressLocality: 'Greater Noida', addressRegion: 'Uttar Pradesh', postalCode: '201310', addressCountry: 'IN' },
+  areaServed: ['Greater Noida', 'Noida', 'Delhi NCR'],
+  openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '12:00', closes: '20:00' },
 } as const;

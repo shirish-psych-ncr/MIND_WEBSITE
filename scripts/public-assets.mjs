@@ -4,7 +4,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const PUBLIC_FILES = ['assets', 'vendor', 'blog', '.well-known', '_headers', 'CNAME', 'favicon.ico', 'robots.txt', 'site.webmanifest', 'sitemap.xml', 'sw.js', 'offline.html', 'llms.txt', 'llms-blog.txt', 'llms-tools.txt', 'faq-schema.json', 'ahrefs_044e9d2902f7c449b014bda0aedb3cc38fa40208be72ecb2b0e1f95a468133b1'];
+const PUBLIC_FILES = ['assets', 'vendor', 'blog', '.well-known', '_headers', 'CNAME', 'favicon.ico', 'robots.txt', 'site.webmanifest', 'sitemap.xml', 'sw.js', 'offline.html', 'llms.txt', 'llms-blog.txt', 'llms-tools.txt', 'llms-aasha.txt', 'faq-schema.json', 'ahrefs_044e9d2902f7c449b014bda0aedb3cc38fa40208be72ecb2b0e1f95a468133b1'];
 export async function routes() {
   const result = [];
   async function walk(dir, prefix = '') {

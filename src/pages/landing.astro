@@ -1,4 +1,5 @@
 ---
+import AashaCare from '../components/AashaCare.astro';
 import Layout from '../layouts/Layout.astro';
 const headExtra = String.raw`
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -6,14 +7,15 @@ const headExtra = String.raw`
   <meta name="author" content="Mind Grace Neuropsychiatric Clinic">
   <meta name="robots" content="index, follow">
 
-  <title>Mind Grace Clinic &amp; Training Hub | Greater Noida</title>
-  <meta name="description" content="Psychiatry, counselling, child-development consultations and supervised psychology training at Mind Grace in Gamma II, Greater Noida, Delhi NCR.">
+  <title>Find Care or Training | Mind Grace &amp; Aasha, Greater Noida</title>
+  <meta name="description" content="Choose adult psychiatric care at Mind Grace, child development services at Aasha, or supervised psychology training in Greater Noida.">
   <link rel="canonical" href="https://mindgracencr.in/">
 `;
 ---
 
 <Layout headExtra={headExtra}>
   <main id="main-content" tabindex="-1">
+<AashaCare />
 
     <!-- Patient and academic pathways -->
     <section class="mg-landing mg-hero" aria-labelledby="mg-hero-title">
@@ -21,7 +23,7 @@ const headExtra = String.raw`
         <div class="mg-hero-head">
           <span class="mg-pill mg-pill--soft"><span class="mg-dot" aria-hidden="true"></span>Neuropsychiatric clinic &amp; training institute · Greater Noida, Delhi NCR</span>
           <h1 id="mg-hero-title">Care for your mind. <span class="mg-accent">Training for future clinicians.</span></h1>
-          <p>Mind Grace offers confidential psychiatric, child-development, and counselling consultations in Gamma II, Greater Noida — and supervised clinical training for psychology and medical students.</p>
+          <p>Mind Grace offers confidential psychiatric and counselling consultations, with all child-related care through Aasha Early Intervention Centre in Gamma II, Greater Noida — and supervised clinical training for psychology and medical students.</p>
         </div>
 
         <div class="mg-gateways">
@@ -137,8 +139,8 @@ const headExtra = String.raw`
 
           <article class="mg-card mg-service">
             <span class="mg-icon-chip" aria-hidden="true"><i data-lucide="baby"></i></span>
-            <h3>Child &amp; adolescent development</h3>
-            <p>Compassionate evaluation of attention, social communication, mood, and school-related distress, with practical conversations for parents and caregivers.</p>
+            <h3>Aasha Child Development &amp; Early Intervention Centre</h3>
+            <p>Individualised child assessments, speech and occupational therapy, special education, behavioural support and parent guidance through Aasha.</p>
             <ul class="mg-bullets">
               <li><a href="/adhd-autism-assessment">ADHD &amp; autism assessment</a></li>
               <li><a href="/learning-disability-assessment">Learning disability assessment</a></li>
@@ -146,7 +148,7 @@ const headExtra = String.raw`
               <li><a href="/child-development">Child development services</a></li>
             </ul>
             <div class="mg-service__links">
-              <a class="mg-more-link" href="/aasha">Explore the Aasha child wing<i data-lucide="chevron-right" aria-hidden="true"></i></a>
+              <a class="mg-more-link" href="/aasha">Explore Aasha’s team and services<i data-lucide="chevron-right" aria-hidden="true"></i></a>
             </div>
           </article>
 

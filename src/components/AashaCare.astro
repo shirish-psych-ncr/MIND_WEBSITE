@@ -1,0 +1,8 @@
+---
+import aasha from '../data/aasha.json';
+---
+<aside class="aasha-care" aria-label="Aasha child care">
+<a href="/aasha"><img src={aasha.logo} alt={aasha.shortName} width="150" height="100" loading="lazy"></a>
+<div><p><strong>All child-related care comes under {aasha.name}.</strong></p><p>Individualised assessments, speech and occupational therapy, special education and behavioural support in Gamma 2, Greater Noida.</p><p>{aasha.hours}</p><a href="/aasha#services">Explore Aasha services</a> · <a href="/aasha#contact">Book an assessment</a></div>
+</aside>
+<style>.aasha-care{display:flex;align-items:center;gap:1.25rem;max-width:1120px;margin:1.5rem auto;padding:1.25rem;border:1px solid currentColor;border-radius:16px}.aasha-care img{width:150px;height:100px;object-fit:contain;background:white;border-radius:10px}.aasha-care p{margin:0 0 .5rem}.aasha-care a{text-decoration:underline}@media(max-width:540px){.aasha-care{flex-direction:column;align-items:flex-start;margin:1rem}}</style>

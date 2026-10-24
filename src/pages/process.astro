@@ -1,4 +1,5 @@
 ---
+import AashaCare from '../components/AashaCare.astro';
 import Layout from '../layouts/Layout.astro';
 const headExtra = String.raw`<!-- Google Tag Manager -->
 <script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -20,7 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#671B50">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4A1438">
-    
+
     <meta name="author" content="Mind Grace Neuropsychiatric Clinic">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <meta name="publisher" content="Mind Grace Neuropsychiatric Clinic">
@@ -55,20 +56,20 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
   <div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status-message"></span></div>
 
     <!-- OpenGraph / Social Sharing -->
-    <meta property="og:title" content="Your Journey to Wellness | Mind Grace Neuropsychiatric Clinic">
-    <meta property="og:description" content="Clear step-by-step guidance for your mental health journey—transparent, compassionate, personalized.">
-    <meta property="og:image" content="/assets/images/mind-grace-entry-n-reception.webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="675">
-    <meta property="og:image:alt" content="Mind Grace Neuropsychiatric Clinic - Compassionate Mental Health Care">
-    <meta property="og:image:type" content="image/webp">
-    <meta property="og:url" content="https://mindgracencr.in/process">
-    <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic">
-    <meta property="og:type" content="website">
+
+
+
+
+
+
+
+
+
+
 
     <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Your Journey to Wellness | Mind Grace Neuropsychiatric Clinic">
+
+
 
     <!-- Structured Data -->
     <script type="application/ld+json">{
@@ -116,9 +117,9 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
 
     <!-- Network Status Toast -->
 <!-- EMERGENCY BANNER WITH MARQUEE -->
-    
 
-    
+
+
     <!-- MOBILE NAV OVERLAY -->
     <div class="mobile-nav-overlay" id="mobile-nav-overlay" hidden></div>
 
@@ -186,6 +187,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
 
     <!-- MAIN CONTENT -->
     <main id="main-content" tabindex="-1">
+<AashaCare />
       <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Your Care Journey</li></ol></nav>
 
       <!-- HERO SECTION -->

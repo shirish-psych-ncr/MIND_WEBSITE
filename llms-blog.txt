@@ -4,8 +4,7 @@ Part of https://mindgracencr.in/ (see /llms.txt for clinic-wide usage rights).
 All usage-rights terms from llms.txt apply to every file in this llms-*.txt series.
 
 ## Purpose
-Plain-language mental health and child development guides by Mind Grace
-Neuropsychiatric Clinic, Greater Noida. Every article opens with an "In short"
+Plain-language adult mental health guides from Mind Grace and child development guides under Aasha Early Intervention Centre, Greater Noida. Every article opens with an "In short"
 extraction callout and ends with practical next steps.
 
 ## Adult mental health guides (blog/pages/adult/)
@@ -15,7 +14,10 @@ extraction callout and ends with practical next steps.
 - Stimulus control therapy: https://mindgracencr.in/blog/pages/adult/stimulus-control-therapy
 - When to see a psychiatrist: https://mindgracencr.in/blog/pages/adult/when-to-see-a-psychiatrist
 
-## Child development guides (blog/pages/child/)
+## Aasha child development guides (blog/pages/child/)
+
+Centre and services: https://mindgracencr.in/aasha
+Child-care summary: https://mindgracencr.in/llms-aasha.txt
 - Early signs of autism: https://mindgracencr.in/blog/pages/child/early-signs-of-autism
 - School concerns and ADHD: https://mindgracencr.in/blog/pages/child/school-concerns-and-adhd
 - Sensory overload at home: https://mindgracencr.in/blog/pages/child/sensory-overload-at-home

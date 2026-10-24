@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import aasha from '../../data/aasha.json';
+import CheckIn from '../../components/DevelopmentalCheckIn.astro';
+const breadcrumbs = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mindgracencr.in/' },
+  { '@type': 'ListItem', position: 2, name: aasha.shortName, item: aasha.url },
+  { '@type': 'ListItem', position: 3, name: 'Developmental check-in', item: `${aasha.url}/developmental-check-in` }
+] });
+const headExtra = `<title>Child Development Check-In | Aasha</title><meta name="description" content="Organise your concerns about one child’s development with Aasha’s private, browser-based discussion aid. Review, print or choose to share your summary."><link rel="canonical" href="https://mindgracencr.in/aasha/developmental-check-in"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css"><meta name="referrer" content="no-referrer">`;
+---
+<Layout headExtra={headExtra} bodyClass="developmental-check-in">
+  <main id="main-content" class="seo-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/aasha">Aasha</a> / <span aria-current="page">Developmental check-in</span></nav>
+    <section class="seo-hero check-intro">
+      <p class="seo-kicker">Aasha · For parents and caregivers</p>
+      <h1>Understand your child’s everyday needs</h1>
+      <p class="seo-answer">Answer simple questions about what you notice at home. Get a clear summary to take to your child’s doctor.</p>
+      <p>For one child aged 0–12 years. This check-in helps you prepare for a conversation. It is not a diagnostic test.</p>
+    </section>
+    <CheckIn />
+    <section class="seo-section check-about"><h2>About this check-in</h2><p>Questions adapt to age and your answers. There is no risk score or pass/fail result. You can speak to your child’s doctor at any point, regardless of the summary.</p><p>This questionnaire has not yet been clinically reviewed or validated. It cannot confirm or rule out autism, ADHD or a developmental difficulty. Read about <a href="https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html">developmental monitoring and screening</a> and <a href="https://www.cdc.gov/act-early/families/concerned.html">discussing developmental concerns</a>.</p><p>{aasha.name}<br />{aasha.address}<br />{aasha.hours}</p><p><a href={`tel:${aasha.telephone}`}>Call {aasha.phone}</a> · <a href="/aasha/book?service=developmental-assessment">Request an assessment</a></p></section>
+  </main>
+  <script type="application/ld+json" set:html={breadcrumbs}></script>
+</Layout>
+<style is:global>
+@media print { body.developmental-check-in header, body.developmental-check-in footer, body.developmental-check-in nav, body.developmental-check-in .check-intro, body.developmental-check-in .check-about, body.developmental-check-in .no-print, body.developmental-check-in aside { display:none!important } body.developmental-check-in main {margin:0!important;padding:0!important;max-width:none!important} body.developmental-check-in, body.developmental-check-in .check-panel {background:white!important;color:black!important;box-shadow:none!important;border:0!important} body.developmental-check-in textarea {display:none} }
+</style>

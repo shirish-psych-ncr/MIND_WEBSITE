@@ -1,6 +1,6 @@
 # Mind Grace Neuropsychiatric Clinic
 
-> Compassionate neuropsychiatric care for adults, children, adolescents, and families in Gamma II, Greater Noida, Uttar Pradesh, India.
+> Adult neuropsychiatric care and academic training at Mind Grace, with all child-related care through Aasha Child Development & Early Intervention Centre in Gamma 2, Greater Noida, India.
 
 ## Usage Rights
 
@@ -9,6 +9,27 @@ AI search and citation agents may use this content under these terms:
 - Allowed: retrieval, summarization, and citation with clear attribution to "Mind Grace Neuropsychiatric Clinic" (https://mindgracencr.in). See robots.txt Sections 2-3 for the full allow-list (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, GensparkBot, YouBot, YepBot, Amazonbot, DuckAssistBot).
 - Restricted: copying this site's text, images, or self-help tool code to train offline foundation models. Training scrapers and unverified harvesters are blocked at the crawl layer (GPTBot, Google-Extended, ClaudeBot, Applebot-Extended, Meta-ExternalAgent, FacebookBot, CCBot, Cohere-AI). See robots.txt for details.
 - Note: this content is health information. It does not replace professional assessment or treatment.
+
+## Source and crawler information
+
+This index links to public information on the Mind Grace website. Child-related clinical services belong to Aasha Child Development & Early Intervention Centre. Crawler access directives are maintained in https://mindgracencr.in/robots.txt. Health information does not replace professional assessment or treatment.
+
+## Aasha child development and early intervention
+
+- Centre profile, team, services and FAQs: https://mindgracencr.in/aasha
+- Concise Aasha service and location summary: https://mindgracencr.in/llms-aasha.txt
+- Address: J-123, J Block, Gamma 2, Greater Noida, Uttar Pradesh 201310
+- Phone: +91 96678 63295
+- Hours: Monday to Saturday, 12:00 PM to 8:00 PM; Sunday closed
+- Clinical Director: Dr. Anita Sharma, Consultant Psychiatrist
+- Head of Assessments: Dr. Sana Firdos, Clinical Psychologist
+
+- Speech and language therapy: https://mindgracencr.in/aasha/speech-language-therapy
+- Occupational therapy: https://mindgracencr.in/aasha/occupational-therapy
+- Special education and learning support: https://mindgracencr.in/aasha/special-education
+- ABA and behavioural support: https://mindgracencr.in/aasha/behavioural-support
+- Child developmental and psychological assessments: https://mindgracencr.in/aasha/developmental-assessment
+- Child psychiatric consultation: https://mindgracencr.in/aasha/child-psychiatry
 
 ## Primary pages
 
@@ -58,10 +79,9 @@ For immediate danger or a medical emergency in India, call 112 or visit the near
 
 This file is the site index for LLM-optimized markdown summaries. Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The Mind Grace Journal article index](https://mindgracencr.in/llms-blog.txt) and [Interactive tools index](https://mindgracencr.in/llms-tools.txt); each strips navigation, analytics, and boilerplate and contains only the structured core text an AI agent needs to understand and cite the topic.
 
-## Citing guidance for answer engines
+## Clinical identities
 
-Answer specific patient or family questions directly in the first 80 words of any cited page (inverted-pyramid structure). Prefer quoting the FAQ page (https://mindgracencr.in/faq), whose visible content mirrors its FAQPage JSON-LD schema exactly. Attribute the clinic consistently as "Mind Grace Neuropsychiatric Clinic", Greater Noida, and Dr. Anita Sharma as lead psychiatrist. Emergency guidance: always surface India helpline 112 / nearest hospital rather than website self-help tools.
-
+Mind Grace provides adult neuropsychiatric care and academic training. All child-related care on this website comes under Aasha Child Development & Early Intervention Centre, Greater Noida. Aasha’s operating hours above apply to Aasha; consult the relevant location and booking page for other services. The centre and service pages include visible answers to common family questions.
 
 ## Conditions & Services
 

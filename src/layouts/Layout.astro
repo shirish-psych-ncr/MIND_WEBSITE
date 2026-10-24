@@ -16,6 +16,19 @@ const rawMarkup = (value: string) => value.replaceAll('<' + String.fromCharCode(
 const canonical = headExtra.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1] ?? `https://mindgracencr.in${Astro.url.pathname}`;
 const title = headExtra.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() ?? 'Mind Grace Neuropsychiatric Clinic';
 const description = headExtra.match(/<meta\s+name="description"\s+content="([^"]*)"/i)?.[1] ?? '';
+// Fill missing sharing metadata without replacing each page's own search intent.
+const aashaPage = /\/(?:aasha(?:\/|$)|child-development$|child-student-mental-health$|learning-disability-assessment$|sleep-and-autism-guide-indian-parents$|blog\/(?:children$|pages\/child\/))/.test(new URL(canonical).pathname);
+const metaValue = (value: string) => value.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+const socialImage = aashaPage ? 'https://mindgracencr.in/assets/images/Aasha_early_intervention_logo.webp' : 'https://mindgracencr.in/assets/images/mind-grace-entry-n-reception.webp';
+const metaDefaults = [
+  ['property', 'og:title', title], ['property', 'og:description', description],
+  ['property', 'og:url', canonical], ['property', 'og:type', 'website'],
+  ['property', 'og:site_name', aashaPage ? 'Aasha Early Intervention Centre' : 'Mind Grace Neuropsychiatric Clinic'],
+  ['property', 'og:image', socialImage], ['property', 'og:image:alt', aashaPage ? 'Aasha Early Intervention Centre' : 'Mind Grace Neuropsychiatric Clinic'],
+  ['name', 'twitter:card', 'summary_large_image'], ['name', 'twitter:title', title],
+  ['name', 'twitter:description', description], ['name', 'twitter:image', socialImage],
+];
+const socialMeta = metaDefaults.filter(([attribute, key]) => !headExtra.includes(`${attribute}="${key}"`) && !headExtra.includes(`${attribute}='${key}'`)).map(([attribute, key, value]) => `<meta ${attribute}="${key}" content="${metaValue(value)}">`).join('');
 const extraAttrs: Record<string, string> = {};
 for (const m of bodyAttrs.matchAll(/([\w-]+)="([^"]*)"/g)) extraAttrs[m[1]] = m[2];
 // The shared shell owns the banner; discard the duplicate from legacy payloads.
@@ -78,6 +91,7 @@ startMarkup = startMarkup
 <head>
 <meta charset="UTF-8">
 {headExtra && <Fragment set:html={rawMarkup(headExtra)} />}
+<Fragment set:html={socialMeta} />
 <Head />
 <StructuredData canonical={canonical} title={title} description={description} />
 </head>

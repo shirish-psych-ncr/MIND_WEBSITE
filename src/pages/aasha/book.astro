@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import aasha from '../../data/aasha.json';
+const headExtra = `<title>Book an Aasha Child Assessment | Greater Noida</title><meta name="description" content="Request a child assessment or therapy appointment at Aasha in Gamma 2, Greater Noida. Call +91 96678 63295 or prepare a WhatsApp enquiry."><link rel="canonical" href="https://mindgracencr.in/aasha/book"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">`;
+const breadcrumbs = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mindgracencr.in/' },
+  { '@type': 'ListItem', position: 2, name: aasha.shortName, item: aasha.url },
+  { '@type': 'ListItem', position: 3, name: 'Book an Aasha assessment', item: `${aasha.url}/book` }
+] });
+---
+<Layout headExtra={headExtra}>
+  <main id="main-content" class="seo-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/aasha">Aasha</a> / <span aria-current="page">Book an assessment</span></nav>
+    <section class="seo-hero">
+      <img src={aasha.logo} alt={aasha.shortName} width="210" height="140" style="object-fit:contain;background:white;border-radius:12px" />
+      <p class="seo-kicker">Aasha · Child development and early intervention</p>
+      <h1>Request an Aasha appointment</h1>
+      <p class="seo-answer">Call {aasha.phone} or prepare a WhatsApp enquiry for a child assessment or therapy appointment. Aasha is at {aasha.address}. {aasha.hours}. The team will confirm availability, scope and fees before agreeing an appointment.</p>
+      <div class="seo-actions"><a class="btn" href={`tel:${aasha.telephone}`}>Call {aasha.phone}</a><a class="btn btn-outline" href="/location">Find the centre</a></div>
+    </section>
+    <section class="seo-section" id="request" aria-labelledby="request-title">
+      <h2 id="request-title">Prepare your appointment enquiry</h2>
+      <p>Share appointment coordination details only. Please do not include a child’s medical history, reports or emergency information. You will review and send the message yourself in WhatsApp.</p>
+      <noscript><p>To request an appointment, please call <a href={`tel:${aasha.telephone}`}>{aasha.phone}</a>. The enquiry form requires JavaScript.</p></noscript>
+      <form class="aasha-request" id="aasha-request" data-phone={aasha.telephone.replace('+', '')} hidden>
+        <label for="aasha-parent">Parent or caregiver name *<input id="aasha-parent" name="parent" autocomplete="name" required maxlength="100" /></label>
+        <label for="aasha-phone">Contact number *<input id="aasha-phone" name="phone" type="tel" autocomplete="tel" required maxlength="25" /></label>
+        <label for="aasha-service">Service *<select id="aasha-service" name="service" required><option value="">Choose a service</option>{aasha.services.map(service => <option value={service.slug}>{service.name}</option>)}<option value="guidance">Not sure — please guide me</option></select></label>
+        <label for="aasha-preference">Preferred day and time (optional)<input id="aasha-preference" name="preference" maxlength="120" aria-describedby="aasha-time-help" /><span id="aasha-time-help">Monday–Saturday, 12:00 PM–8:00 PM. Availability is confirmed by the team.</span></label>
+        <label class="aasha-consent" for="aasha-consent"><input id="aasha-consent" type="checkbox" required /> <span>I understand this opens WhatsApp with my enquiry details. I have read the <a href="/privacy">Privacy Notice</a> and <a href="/consent">Consent Notice</a>.</span></label>
+        <button type="submit" class="btn">Review enquiry in WhatsApp</button>
+        <p id="aasha-request-status" role="status" tabindex="-1" hidden>Review and send your message in WhatsApp. This page has not confirmed an appointment. If WhatsApp did not open, call <a href={`tel:${aasha.telephone}`}>{aasha.phone}</a>. You can edit the form and try again.</p>
+      </form>
+    </section>
+    <section class="seo-section"><h2>What happens next?</h2><ol><li>Send your enquiry in WhatsApp or call the coordination team.</li><li>The team discusses the appropriate first visit, available times and current fees.</li><li>Your appointment is confirmed only when you and the team agree a date and time.</li></ol><p>Previous reports and school observations may help at the consultation. Read <a href="/aasha#journey">the Aasha care pathway</a> or <a href="/aasha#services">explore services</a>.</p></section>
+  </main>
+  <script type="application/ld+json" set:html={breadcrumbs}></script>
+</Layout>
+<style>
+  .aasha-request{display:grid;gap:1.25rem;max-width:680px}.aasha-request[hidden]{display:none}.aasha-request label{display:grid;gap:.5rem;font-weight:600}.aasha-request input:not([type=checkbox]),.aasha-request select{width:100%;min-height:48px;padding:.75rem;border:1px solid currentColor;border-radius:8px;font:inherit;background:var(--mg-surface);color:var(--mg-ink)}.aasha-request .aasha-consent{grid-template-columns:auto 1fr;align-items:start}.aasha-consent input{width:24px;height:24px;margin-top:3px}.aasha-request span,.aasha-request p{font-weight:400}.aasha-request button{justify-self:start;white-space:normal}.aasha-request a{text-decoration:underline}
+</style>
+<script>
+  const form = document.querySelector<HTMLFormElement>('#aasha-request');
+  const service = document.querySelector<HTMLSelectElement>('#aasha-service');
+  if (form && service) {
+    const requested = new URLSearchParams(location.search).get('service');
+    if (requested && Array.from(service.options).some(option => option.value === requested)) service.value = requested;
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const values = new FormData(form);
+      const message = ['Aasha appointment enquiry', `Parent/caregiver: ${values.get('parent')}`, `Contact number: ${values.get('phone')}`, `Service: ${service.selectedOptions[0].text}`, ...(values.get('preference') ? [`Preferred day/time: ${values.get('preference')}`] : [])].join('\n');
+      window.open(`https://wa.me/${form.dataset.phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+      const status = document.querySelector<HTMLElement>('#aasha-request-status');
+      if (status) { status.hidden = false; status.focus(); }
+    });
+    form.hidden = false;
+  }
+</script>

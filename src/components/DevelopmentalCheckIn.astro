@@ -1,0 +1,227 @@
+---
+import aasha from '../data/aasha.json';
+---
+<section id="check-in" class="check-panel" data-phone={aasha.telephone.replace('+', '')} aria-label="Child development check-in">
+  <noscript><p>This check-in needs JavaScript. You can still <a href="/aasha/book">contact Aasha</a> or discuss your observations with your child’s doctor.</p></noscript>
+  <div id="check-app" hidden>
+    <form id="check-details" autocomplete="off">
+      <p class="check-kicker">1. Your child &nbsp; / &nbsp; 2. Questions &nbsp; / &nbsp; 3. Your summary</p>
+      <h2 tabindex="-1">Start with your child’s age</h2>
+      <p>We’ll show questions that fit their age, one at a time. Think about a usual day. You can go back or choose “Not sure” at any point.</p>
+      <p class="privacy-note">No name is needed. Answers stay in this tab unless you choose to save or share them. Refreshing the page clears unsaved progress.</p>
+      <label>Nickname (optional)<input name="nickname" maxlength="40" /></label>
+      <div class="age-fields"><label>Age: years<input name="years" type="number" min="0" max="12" step="1" required inputmode="numeric" /></label><label>Additional months<input name="months" type="number" min="0" max="11" step="1" value="0" required inputmode="numeric" /></label></div>
+      <p id="age-help" class="check-help">For a baby under 1 year, enter 0 years and their age in months.</p>
+      <p id="check-length" aria-live="polite"></p>
+      <label>You are the child’s<select name="caregiver"><option>Parent</option><option>Caregiver</option><option>Teacher</option><option>Other</option></select></label>
+      <label>Hearing check status<select name="hearing"><option>Not sure</option><option>Checked</option><option>Not checked</option><option>Appointment pending</option></select></label>
+      <label>Nursery or school attendance<select name="school"><option>Not attending</option><option>Attending</option><option>Not applicable</option></select></label>
+      <button class="btn" type="submit" id="check-begin">Start questions</button>
+    </form>
+    <div id="check-question" hidden>
+      <div class="question-meta"><p id="check-progress" class="check-kicker"></p><button type="button" id="check-review-now" class="text-button">Review answers</button></div>
+      <progress id="section-progress" max="1" value="0" aria-label="Sections completed"></progress>
+      <p id="check-domain" class="domain-label"></p>
+      <form id="check-answer" novalidate><fieldset aria-describedby="question-hint check-guidance"><legend id="check-prompt" tabindex="-1"></legend><p id="question-hint" class="question-hint"></p><div id="check-options"></div></fieldset><p id="check-guidance" class="check-help">Choose one answer, then select Next.</p><p id="answer-error" role="alert" hidden>Please choose an answer. “Not sure” is fine.</p><div class="check-actions question-actions"><button type="button" id="check-back" class="btn btn-outline">Back</button><button type="submit" id="check-next" class="btn">Next</button></div><p id="loss-note" class="result-note" hidden>You noticed a skill your child has lost. Contact your child’s doctor promptly. You do not need to finish these questions first.</p></form>
+    </div>
+    <div id="check-review" hidden><h2 tabindex="-1">Check your answers</h2><p>You can change an answer below. We’ll ask any new follow-up questions, then bring you back here.</p><p id="review-progress" role="status"></p><button class="btn" id="check-resume" hidden>Continue unanswered questions</button><div id="review-list"></div><button class="btn" id="check-finish">See my summary</button></div>
+    <div id="check-result" hidden>
+      <p class="check-kicker">Your next conversation</p><h2 tabindex="-1">Here’s what you told us</h2><p id="result-context"></p><p id="result-next" class="result-note"></p>
+      <p>This summary records your answers. It is not a diagnosis and does not give a risk score.</p>
+      <h3>What to talk about</h3><ul id="result-highlights"></ul>
+      <details id="result-details"><summary>View all questions and answers</summary><div id="result-list"></div></details>
+      <p id="result-version"></p>
+      <div class="no-print"><div class="check-actions"><button class="btn" id="check-print">Print / save PDF</button><button class="btn btn-outline" id="check-edit">Change an answer</button><a class="btn btn-outline" href="/aasha/book?service=developmental-assessment">Talk to Aasha</a></div>
+        <details class="share-panel"><summary>Share a short summary with Aasha</summary><p>You choose what to share. Edit the message below, then open it in WhatsApp. You will still need to press Send there.</p><p>The draft includes your child’s age and areas you want to discuss. Use the printable summary if you want to share every answer.</p><label for="check-message">Your message</label><textarea id="check-message" rows="7" maxlength="2500"></textarea><label class="check-choice"><input id="share-consent" type="checkbox" /> I agree to share this text with WhatsApp.</label><button class="btn" id="check-share" disabled>Open WhatsApp draft</button><p id="share-status" role="status"></p></details>
+      </div>
+    </div>
+    <details class="check-tools no-print"><summary>Save progress or start again</summary><label class="check-choice"><input id="check-save" type="checkbox" /> Remember this check-in on this device</label><p>Only use this on a device you trust. Someone else using this browser could see the saved answers. Turn this off to remove the saved copy.</p><button type="button" class="btn btn-outline" id="check-reset">Clear answers and start again</button></details><p id="check-status" role="status" class="no-print"></p>
+  </div>
+</section>
+<style is:global>
+#check-in{max-width:800px;margin:2rem auto;padding:clamp(1.25rem,4vw,2.5rem);border:1px solid var(--mg-border,#c6aebb);border-radius:20px;background:var(--mg-surface,#fff);color:var(--mg-ink,#291b24);box-shadow:0 12px 36px #56273d08}
+#check-in [hidden]{display:none!important}
+#check-in form,#check-in label{display:grid;gap:.6rem}#check-in form{gap:1.25rem}#check-in p{max-width:65ch;line-height:1.6}#check-in h2{margin-top:0;line-height:1.25}#check-in .check-kicker{font-size:.85rem;font-weight:600;font-variant-numeric:tabular-nums;margin:0}
+#check-in input:not([type=radio]):not([type=checkbox]),#check-in select,#check-in textarea{width:100%;min-height:48px;padding:.8rem;border:1px solid currentColor;border-radius:8px;background:var(--mg-surface,#fff);color:inherit;font:inherit;box-sizing:border-box}#check-in textarea{resize:vertical}
+#check-in .age-fields{display:grid;grid-template-columns:1fr 1fr;gap:1rem}#check-in .check-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.25rem 0}#check-in .btn{white-space:normal;min-height:48px;font-size:1rem}#check-in .question-actions{display:grid;grid-template-columns:1fr 1.5fr;margin:0}#check-in .question-actions .btn{width:100%}
+#check-in fieldset{border:0;padding:0;min-width:0;margin:0}#check-in legend{font-size:clamp(1.25rem,3vw,1.7rem);font-weight:650;line-height:1.35;margin:0;min-height:3.1em;padding:0;width:100%;text-wrap:pretty}#check-in .question-hint{min-height:3.2em;font-size:.95rem;margin:.6rem 0 1rem}
+#check-in .question-meta{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:44px}#check-in .domain-label{font-weight:650;font-size:.95rem;margin:1rem 0}#check-in progress{display:block;width:100%;height:6px;border:0;border-radius:5px;overflow:hidden;accent-color:#934067;margin:.5rem 0}#check-in progress::-webkit-progress-bar{background:#9f748533}#check-in progress::-webkit-progress-value{background:#934067}
+#check-in #check-options{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}#check-in #check-options label{display:flex;align-items:center;gap:.75rem;padding:1rem;min-height:62px;border:1px solid var(--mg-border,#c6aebb);border-radius:10px;cursor:pointer;font-weight:550;transition:background-color .12s,border-color .12s;box-sizing:border-box}#check-in #check-options label:hover{border-color:currentColor}#check-in #check-options label:has(:checked){background:color-mix(in srgb,var(--mg-ink,#291b24) 8%,var(--mg-surface,#fff));border:2px solid currentColor;padding:calc(1rem - 1px)}
+#check-in input[type=radio],#check-in input[type=checkbox]{width:22px;height:22px;margin:0;flex-shrink:0;accent-color:#934067}#check-in .check-choice{display:flex;align-items:flex-start;gap:.8rem;padding:.8rem 0}#check-in .check-tools{border-top:1px solid var(--mg-border,#c6aebb);margin-top:2rem;padding-top:1rem}#check-in .check-tools p,#check-in .check-help,#check-in .privacy-note{font-size:.9rem}#check-in .check-help{margin:0}
+#check-in .result-note{font-weight:600;padding:1.25rem;border-left:4px solid #ab426e;background:color-mix(in srgb,var(--mg-ink,#291b24) 5%,var(--mg-surface,#fff));border-radius:0 8px 8px 0}#check-in .text-button{border:0;background:none;color:inherit;text-decoration:underline;text-underline-offset:3px;min-height:44px;padding:.4rem;font:inherit;cursor:pointer}#check-in summary{padding:.9rem 0;cursor:pointer;font-weight:600;min-height:44px}#check-in .share-panel{border-top:1px solid var(--mg-border,#c6aebb);padding-top:.5rem}
+#check-in .answer-group{margin:1.5rem 0}#check-in .answer-group h3{font-size:1.05rem;padding-bottom:.6rem;border-bottom:1px solid var(--mg-border,#c6aebb)}#check-in .answer-row{display:grid;grid-template-columns:1fr auto auto;gap:.75rem;align-items:center;padding:.75rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 15%,transparent)}#check-in .answer-row p{margin:0;font-size:.95rem}#check-in .answer-label{font-size:.85rem;white-space:nowrap}#check-in #result-highlights{padding-left:1.25rem}#check-in #result-highlights li{margin:.6rem 0}
+#check-in button:disabled{opacity:.6;cursor:not-allowed}#check-in :focus-visible{outline:3px solid #b5467b;outline-offset:4px}#check-in #answer-error{font-weight:600;margin:0}#check-in #check-status:empty{display:none}
+@media(max-width:480px){#check-in{padding:1.1rem;margin:1.5rem 0;border-radius:14px}#check-in .question-meta{gap:.4rem}#check-in .question-meta .text-button{font-size:.8rem}#check-in .check-kicker{font-size:.75rem}#check-in .answer-row{grid-template-columns:1fr auto}#check-in .answer-row p{grid-column:1 / -1}#check-in #check-options label{padding:.85rem;min-height:58px}#check-in #check-options label:has(:checked){padding:calc(.85rem - 1px)}#check-in .question-hint{min-height:4.8em}#check-in legend{min-height:4.05em}}
+@media(prefers-reduced-motion:reduce){#check-in *{transition:none!important}}
+@media print{#check-in .answer-row{break-inside:avoid}#check-in .answer-group{break-inside:auto}#check-in #result-details>summary{display:none}#check-in .answer-row,#check-in .answer-label{color:black!important}#check-in .result-note{background:white!important}}
+</style>
+<script>
+import { activeQuestions, pruneAnswers, nextStep, hasSkillLoss, labels, version, type Answer } from '../data/developmental-check-in';
+const root = document.querySelector<HTMLElement>('#check-in')!;
+const el = <T extends HTMLElement>(id: string) => root.querySelector<T>(`#${id}`)!;
+const key = 'aasha-check-in-v1';
+type Details = { nickname: string; months: number; caregiver: string; hearing: string; school: string };
+let details: Details | null = null;
+let answers: Record<string, Answer> = {};
+let index = 0;
+let stage = 'details';
+let editing = false;
+let restoreIndex = 0;
+const save = el<HTMLInputElement>('check-save');
+const form = el<HTMLFormElement>('check-details');
+function persist() {
+  try { if (save.checked && details) localStorage.setItem(key, JSON.stringify({ version, details, answers, index })); else localStorage.removeItem(key); }
+  catch { save.checked = false; el('check-status').textContent = 'We could not update this browser’s saved data. You can keep going in this tab. Previously saved data may remain; clear it in your browser settings if needed.'; }
+}
+function show(next: string, moveFocus = true) {
+  stage = next;
+  for (const name of ['details', 'question', 'review', 'result']) el(`check-${name}`).hidden = name !== next;
+  el('check-app').hidden = false;
+  if (!moveFocus) return;
+  // Native focus scrolling + the shared smooth-scroll rule used to move the
+  // viewport unpredictably. Anchor every step below the actual sticky header.
+  root.querySelector<HTMLElement>(`#check-${next} h2, #check-${next} legend`)?.focus({ preventScroll: true });
+  requestAnimationFrame(() => {
+    const header = document.querySelector<HTMLElement>('.site-header');
+    const offset = header ? header.getBoundingClientRect().height + 16 : 24;
+    const target = el(`check-${next}`);
+    window.scrollTo({ top: window.scrollY + target.getBoundingClientRect().top - offset, behavior: 'instant' });
+  });
+}
+function fillDetails() {
+  if (!details) return;
+  for (const [name, value] of Object.entries({ nickname: details.nickname, years: Math.floor(details.months / 12), months: details.months % 12, caregiver: details.caregiver, hearing: details.hearing, school: details.school })) (form.elements.namedItem(name) as HTMLInputElement).value = String(value);
+}
+function renderQuestion() {
+  const list = activeQuestions(details!.months, answers);
+  if (index >= list.length) { renderReview(); return; }
+  const q = list[index];
+  const domains = [...new Set(list.map(item => item.domain))];
+  const section = domains.indexOf(q.domain);
+  el('check-progress').textContent = `Section ${section + 1} of ${domains.length} · Question ${index + 1}`;
+  el('check-domain').textContent = q.domain;
+  el<HTMLProgressElement>('section-progress').max = domains.length;
+  el<HTMLProgressElement>('section-progress').value = section;
+  el('question-hint').textContent = q.hint || 'Think about what you usually notice.';
+  el('check-guidance').textContent = q.parent ? 'A follow-up to your earlier answer. Choose one, then select Next.' : 'Choose one answer, then select Next.';
+  el('answer-error').hidden = true;
+  el('check-next').textContent = editing ? 'Save answer' : index === list.length - 1 ? 'Review answers' : 'Next';
+  el('check-prompt').textContent = q.text;
+  el('check-options').replaceChildren();
+  for (const [value, label] of Object.entries(labels)) {
+    const wrap = document.createElement('label'); const input = document.createElement('input');
+    input.type = 'radio'; input.name = 'answer'; input.value = value; input.required = true; input.checked = answers[q.id] === value;
+    wrap.append(input, document.createTextNode(label)); el('check-options').append(wrap);
+  }
+  el('loss-note').hidden = !hasSkillLoss(answers); show('question');
+}
+function renderList(target: string, edit: boolean) {
+  el(target).replaceChildren();
+  let domain = ''; let group: HTMLElement = el(target);
+  activeQuestions(details!.months, answers).forEach((q, i) => {
+    if (q.domain !== domain) {
+      domain = q.domain;
+      const section = document.createElement('section'); section.className = 'answer-group';
+      const heading = document.createElement('h3'); heading.textContent = domain; section.append(heading); el(target).append(section); group = section;
+    }
+    const row = document.createElement('div'); row.className = 'answer-row';
+    const text = document.createElement('p'); text.textContent = q.text;
+    const answer = document.createElement('strong'); answer.className = 'answer-label'; answer.textContent = labels[answers[q.id]] || 'Not answered';
+    row.append(text, answer);
+    if (edit) { const button = document.createElement('button'); button.type = 'button'; button.textContent = answers[q.id] ? 'Change' : 'Answer'; button.className = 'text-button'; button.setAttribute('aria-label', `Change answer: ${q.text}`); button.addEventListener('click', () => { index = i; editing = true; renderQuestion(); }); row.append(button); }
+    group.append(row);
+  });
+}
+function renderReview() {
+  editing = false;
+  const list = activeQuestions(details!.months, answers); const left = list.filter(q => !answers[q.id]).length;
+  el('review-progress').textContent = left ? `${left} questions still need an answer. You can choose “Not sure” or “Does not apply”.` : `All ${list.length} questions answered. Ready when you are.`;
+  el('check-resume').hidden = !left; el<HTMLButtonElement>('check-finish').disabled = !!left;
+  renderList('review-list', true); show('review');
+}
+function context() { return `${details!.nickname || 'Your child'} · ${Math.floor(details!.months / 12)} years ${details!.months % 12} months · Answered by: ${details!.caregiver} · Hearing check: ${details!.hearing} · Nursery/school: ${details!.school}`; }
+function updateLength() {
+  const data = new FormData(form); const years = String(data.get('years')); const months = Number(years) * 12 + Number(data.get('months'));
+  el('check-length').textContent = years && months >= 0 && months <= 155 ? `${activeQuestions(months, {}).length} main questions for this age, plus follow-ups where needed. There is no time limit.` : '';
+}
+form.addEventListener('input', updateLength);
+form.addEventListener('submit', event => {
+  event.preventDefault(); if (!form.reportValidity()) return;
+  const data = new FormData(form); const months = Number(data.get('years')) * 12 + Number(data.get('months'));
+  details = { nickname: String(data.get('nickname')).trim(), months, caregiver: String(data.get('caregiver')), hearing: String(data.get('hearing')), school: String(data.get('school')) };
+  answers = pruneAnswers(months, answers); index = Math.min(restoreIndex, activeQuestions(months, answers).length - 1); restoreIndex = 0; editing = false; persist(); renderQuestion();
+});
+el('check-review-now').addEventListener('click', renderReview);
+el('check-resume').addEventListener('click', () => { index = activeQuestions(details!.months, answers).findIndex(q => !answers[q.id]); renderQuestion(); });
+el('check-answer').addEventListener('change', () => {
+  const chosen = new FormData(el<HTMLFormElement>('check-answer')).get('answer') as Answer;
+  if (!chosen) return;
+  answers[activeQuestions(details!.months, answers)[index].id] = chosen;
+  answers = pruneAnswers(details!.months, answers); el('answer-error').hidden = true;
+  el('loss-note').hidden = !hasSkillLoss(answers); persist();
+});
+el<HTMLFormElement>('check-answer').addEventListener('submit', event => {
+  event.preventDefault(); const chosen = new FormData(el<HTMLFormElement>('check-answer')).get('answer') as Answer;
+  if (!chosen) { el('answer-error').hidden = false; el<HTMLInputElement>('check-options').querySelector('input')?.focus({ preventScroll: true }); return; }
+  const q = activeQuestions(details!.months, answers)[index]; answers[q.id] = chosen;
+  answers = pruneAnswers(details!.months, answers);
+  if (editing) {
+    const list = activeQuestions(details!.months, answers);
+    const follow = list.findIndex(item => item.parent === q.id && !answers[item.id]);
+    const sibling = q.parent ? list.findIndex(item => item.parent === q.parent && !answers[item.id]) : -1;
+    if (follow >= 0 || sibling >= 0) { index = follow >= 0 ? follow : sibling; persist(); renderQuestion(); } else { persist(); renderReview(); }
+  } else { index++; persist(); renderQuestion(); }
+});
+el('check-back').addEventListener('click', () => { if (editing) { renderReview(); return; } if (index === 0) { fillDetails(); show('details'); } else { index--; persist(); renderQuestion(); } });
+el('check-finish').addEventListener('click', () => {
+  const list = activeQuestions(details!.months, answers); const missing = list.findIndex(q => !answers[q.id]);
+  if (missing !== -1) { index = missing; renderQuestion(); return; }
+  el('result-context').textContent = context(); el('result-next').textContent = nextStep(answers); renderList('result-list', false);
+  el('result-highlights').replaceChildren();
+  const domains = [...new Set(list.filter(q => answers[q.id] === 'yes' || answers[q.id] === 'unsure').map(q => q.domain))];
+  for (const domain of domains) {
+    const relevant = list.filter(q => q.domain === domain);
+    const yes = relevant.filter(q => answers[q.id] === 'yes').length;
+    const unsure = relevant.filter(q => answers[q.id] === 'unsure').length;
+    const item = document.createElement('li'); item.textContent = `${domain}: ${[yes ? `${yes} answered “Yes”` : '', unsure ? `${unsure} answered “Not sure”` : ''].filter(Boolean).join(', ')}.`;
+    el('result-highlights').append(item);
+  }
+  if (!domains.length) { const item = document.createElement('li'); item.textContent = 'You did not flag a difficulty or an uncertain answer. You can still discuss anything that worries you.'; el('result-highlights').append(item); }
+  el<HTMLDetailsElement>('result-details').open = false;
+  el('result-version').textContent = `Aasha developmental discussion aid · ${version} · ${new Date().toLocaleDateString('en-IN')}`;
+  el<HTMLTextAreaElement>('check-message').value = ['Hello Aasha, I would like to discuss my child’s development.', context(), 'This is a summary of my observations, not a diagnosis.', nextStep(answers), domains.length ? `Areas to discuss: ${domains.join('; ')}.` : 'I would like guidance on my child’s development.', `Check-in version: ${version}`].join('\n');
+  el<HTMLInputElement>('share-consent').checked = false; el<HTMLButtonElement>('check-share').disabled = true; el('share-status').textContent = ''; show('result');
+});
+el('check-edit').addEventListener('click', renderReview);
+let printWasOpen = false;
+window.addEventListener('beforeprint', () => { printWasOpen = el<HTMLDetailsElement>('result-details').open; el<HTMLDetailsElement>('result-details').open = true; });
+window.addEventListener('afterprint', () => { el<HTMLDetailsElement>('result-details').open = printWasOpen; });
+el('check-print').addEventListener('click', () => window.print());
+el('share-consent').addEventListener('change', () => { el<HTMLButtonElement>('check-share').disabled = !el<HTMLInputElement>('share-consent').checked; });
+el('check-share').addEventListener('click', () => {
+  if (!el<HTMLInputElement>('share-consent').checked) return;
+  const message = el<HTMLTextAreaElement>('check-message').value.trim(); if (!message) { el('share-status').textContent = 'Add a message before opening WhatsApp.'; return; }
+  window.open(`https://wa.me/${root.dataset.phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+  el('share-status').textContent = 'Review and send the message in WhatsApp. Nothing has been sent by this page. If it did not open, you can copy the draft or call Aasha.';
+});
+save.addEventListener('change', persist);
+el('check-reset').addEventListener('click', () => {
+  if (details && !window.confirm('Clear this child’s details and answers and start again?')) return;
+  details = null; answers = {}; index = 0; restoreIndex = 0; editing = false; save.checked = false; el('check-status').textContent = ''; persist(); form.reset();
+  for (const id of ['review-list', 'result-list', 'result-highlights', 'result-context', 'result-next', 'result-version', 'share-status']) el(id).textContent = '';
+  el<HTMLTextAreaElement>('check-message').value = ''; el<HTMLInputElement>('share-consent').checked = false; el<HTMLButtonElement>('check-share').disabled = true;
+  el('check-options').replaceChildren(); el('check-prompt').textContent = ''; el('check-begin').textContent = 'Start questions'; updateLength(); show('details');
+});
+try {
+  const stored = JSON.parse(localStorage.getItem(key) || 'null');
+  if (stored) {
+    const d = stored.details;
+    if (stored.version !== version || !d || !Number.isInteger(d.months) || d.months < 0 || d.months > 155 || !['nickname', 'caregiver', 'hearing', 'school'].every(k => typeof d[k] === 'string' && d[k].length <= 100) || !stored.answers || Array.isArray(stored.answers) || typeof stored.answers !== 'object') throw new Error('Invalid saved data');
+    details = d; answers = pruneAnswers(d.months, Object.fromEntries(Object.entries(stored.answers).filter(([, value]) => typeof value === 'string' && Object.hasOwn(labels, value))) as Record<string, Answer>); save.checked = true; fillDetails();
+    restoreIndex = Number.isInteger(stored.index) && stored.index >= 0 ? Math.min(stored.index, activeQuestions(d.months, answers).length - 1) : 0;
+    el('check-begin').textContent = 'Continue saved check-in';
+    el('check-status').textContent = 'We found a saved check-in for one child. Continue below, or clear it to start again.';
+  }
+} catch { try { localStorage.removeItem(key); } catch {} el('check-status').textContent = 'Saved progress could not be restored. You can begin a new check-in.'; }
+updateLength(); show(stage, false);
+</script>

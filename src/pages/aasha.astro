@@ -1,191 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const headExtra = String.raw`<!-- Google Tag Manager -->
-<script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5RBGN42B');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
-<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H1B930PQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Y5H1B930PQ');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <link rel="canonical" href="https://mindgracencr.in/aasha">
-
-  <title>Aasha Initiative | Mind Grace Neuropsychiatric Clinic</title>
-  <meta name="description" content="Aasha Early Intervention - Bringing hope through child development support, community workshops, and mental health awareness in Greater Noida.">
-    <!-- OpenGraph Meta Tags -->
-    <meta property="og:title" content="Aasha Initiative Neuropsychiatric Clinic">
-    <meta property="og:description" content="Aasha Early Intervention - Comprehensive child development services including speech therapy, occupational therapy, and special education.">
-    <meta property="og:image" content="https://mindgracencr.in/assets/images/aasha-child-development-brochure.webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="675">
-    <meta property="og:image:alt" content="Mind Grace Neuropsychiatric Clinic - Compassionate Mental Health Care">
-    <meta property="og:image:type" content="image/webp">
-    <meta property="og:url" content="https://mindgracencr.in/aasha">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Mind Grace Neuropsychiatric Clinic">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aasha Initiative Neuropsychiatric Clinic">
-    <meta name="twitter:description" content="Aasha Early Intervention - Comprehensive child development services including speech therapy, occupational therapy, and special education.">
-    <meta name="twitter:image" content="https://mindgracencr.in/assets/images/aasha-child-development-brochure.webp">
-
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&#x26;family=Playfair+Display:wght@600;700&#x26;display=swap" rel="stylesheet">
-
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="/assets/css/min/base.min.css">
-  <link rel="stylesheet" href="/assets/css/min/layout.min.css">
-  <link rel="stylesheet" href="/assets/css/min/components.min.css">
-    <link rel="stylesheet" href="/assets/css/min/breadcrumbs.min.css">
-  <link rel="stylesheet" href="/assets/css/min/utilities.min.css">
-  <link rel="stylesheet" href="/assets/css/min/animations.min.css">
-  <link rel="stylesheet" href="/assets/css/min/crisis-banner.min.css">
-  <link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">
-  <!-- JavaScript -->
-  <script src="/assets/js/min/http-client.min.js" type="module"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-  <script defer src="/assets/js/min/carousel-init.min.js"></script>
-  <script src="/assets/js/min/main.min.js" type="module"></script>
-  <!-- MIND GRACE LIBRARY STACK -->
-  <script defer src="/assets/js/min/animations-auto.min.js"></script>
-  <script defer src="/assets/js/min/crisis-banner.min.js"></script>
-  <script defer src="/assets/js/min/icon-init.min.js"></script>
-  <script defer src="/assets/js/min/ui-popovers.min.js"></script>
-  <!-- END LIBRARY STACK -->
-
-  <!-- Network Status Toast -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@400;500;600;700&amp;display=swap">
-  <link rel="stylesheet" href="/assets/css/min/inspiration.min.css">
-  <meta name="theme-color" content="#d81b60">
-<link rel="stylesheet" href="/assets/css/min/accessibility.min.css?v=theme4">
-<link rel="manifest" href="/site.webmanifest">
-      <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/icon-512.png">
-  <!-- Security.txt for vulnerability disclosure -->
-  <link rel="security.txt" href="/.well-known/security.txt">`;
-const bodyStart = String.raw`<aside class="emergency-banner emergency-banner--static" role="note" aria-labelledby="emergency-notice-title"><div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div></aside>`;
+import aasha from '../data/aasha.json';
+import AashaQuestions from '../components/AashaQuestions.astro';
+const headExtra = `<title>Aasha Child Development &amp; Early Intervention Centre | Greater Noida</title><meta name="description" content="Individualised child development care at Aasha, Greater Noida: psychiatric consultation, developmental assessments, speech therapy, occupational therapy, special education and behavioural support."><link rel="canonical" href="https://mindgracencr.in/aasha"><meta property="og:title" content="Aasha Child Development &amp; Early Intervention Centre"><meta property="og:description" content="Where hope meets development. Explore our team, therapies and family-centred care pathway."><meta property="og:image" content="https://mindgracencr.in/assets/images/Aasha_early_intervention_logo.webp"><meta property="og:url" content="https://mindgracencr.in/aasha"><meta property="og:type" content="website"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">`;
+const steps = [
+ ['Connect and consult', 'Begin with Dr. Anita Sharma to discuss your concerns, your child’s development and everyday experiences.'],
+ ['Assess and understand', 'Dr. Sana Firdos plans clinical and psychometric assessments around your child’s strengths, challenges and diagnostic needs.'],
+ ['Plan together', 'The team develops an individualised roadmap with the appropriate combination of occupational therapy, speech therapy, behavioural support or special education.'],
+ ['Intervene and review', 'Therapy begins in a nurturing environment. Progress is reviewed and the plan adjusted as your child’s needs change.'],
+ ['Empower and integrate', 'With your involvement and consent, we work with families and schools to help skills carry into home, learning and community life.']
+];
 ---
-
-<Layout headExtra={headExtra} bodyStart={bodyStart} bodyAttrs=`data-design-system="rose-serenity"`>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RBGN42B"
-title="Google Tag Manager container" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-  <div id="network-status" class="network-status" role="status" aria-live="polite" hidden><span class="network-status-message"></span></div>
-
-<link rel="dns-prefetch" href="">
-  <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mindgracencr.in/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Aasha",
-      "item": "https://mindgracencr.in/aasha"
-    }
-  ]
-}</script>
-  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-
-
-  <!-- EMERGENCY BANNER WITH MARQUEE -->
-  
-
-
-  <!-- SKIP LINK -->
-
-
-<!-- MOBILE NAV OVERLAY -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay" hidden></div>
-
-  <!-- MOBILE NAV PANEL - Simplified -->
-  <nav class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile navigation" inert hidden>
-    <div class="mobile-nav-header">
-      <h2>Menu</h2>
-      <button type="button" class="close-mobile-menu" aria-label="Close menu">
-        <i data-lucide="x" style="width:24px;height:24px" aria-hidden="true"></i>
-      </button>
-    </div>
-    <div class="mobile-nav-content">
-      <div class="mobile-nav-section">
-        <div class="mobile-nav-section-title">Explore</div>
-        <ul class="mobile-nav-list">
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/services">Our Services</a></li>
-          <li><a href="/process">What to Expect</a></li>
-          <li><a href="/location">Find Us</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="mobile-nav-section">
-        <div class="mobile-nav-section-title">Resources &#x26; Tools</div>
-        <ul class="mobile-nav-list">
-          <li><a href="/gallery">Gallery</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/book">Resource Book</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/faq#common-questions">Frequently asked questions</a></li>
-        </ul>
-      </div>
-
-      <div class="mobile-nav-section">
-        <div class="mobile-nav-section-title">Therapeutic Tools</div>
-        <ul class="mobile-nav-list">
-          <li><a href="/tools/guided-breathing">Guided Breathing</a></li>
-          <li><a href="/tools/butterfly-tapper">Butterfly Tapper</a></li>
-          <li><a href="/tools/eye-movement">Eye Movement</a></li>
-          <li><a href="/tools/hypnos-fractal">Hypnotic Fractal</a></li>
-          <li><a href="/tools/horizon-scan">Horizon Scan</a></li>
-          <li><a href="/tools/leaf-on-stream">Leaf on Stream</a></li>
-        </ul>
-      </div>
-
-      <div class="mobile-nav-section">
-        <a href="/book" class="cta-button">Book Appointment</a>
-      </div>
-    </div>
-  </nav>
-
-  <main id="main-content" tabindex="-1" class="page-content">
-      <div class="seo-answer"><strong>Direct answer:</strong> Aasha at Mind Grace Neuropsychiatric Clinic in Greater Noida is the clinic's Early Intervention Center wing, providing occupational therapy, speech and language therapy, ABA, and special education at ₹700 per 45-minute session of any service. If multiple sessions are needed within a week, come and talk to us at the reception — mental health care should be affordable by all.</div>
-<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Aasha Initiative</li></ol></nav>
-
-    <section class="hero-section">
-      <h1>Aasha child-development care for families</h1>
-      <p class="hero-subtitle">A practical pathway for families noticing communication, learning, behaviour, attention, or developmental concerns in Greater Noida.</p>
-    </section>
-
+<Layout headExtra={headExtra}>
+<main id="main-content" class="seo-page">
+<section class="seo-hero">
+<img class="aasha-logo" src="/assets/images/Aasha_early_intervention_logo.webp" alt="Aasha Early Intervention Centre" width="240" height="160" fetchpriority="high">
+<p class="seo-kicker">Aasha: Child Development &amp; Early Intervention Centre · Greater Noida</p>
+<h1>Empowering every child to reach their full potential.</h1>
+<p class="seo-answer">Aasha Child Development &amp; Early Intervention Centre in Gamma 2, Greater Noida provides individualised developmental assessments, speech therapy, occupational therapy, special education, behavioural support and child psychiatric consultation. Care is led by Dr. Anita Sharma and Dr. Sana Firdos. All child-related care on this website comes under Aasha.</p>
+<div class="seo-actions"><a class="btn" href="#contact">Book an Assessment</a><a class="btn btn-outline" href="#services">Explore Our Services</a></div>
+</section>
+<section class="seo-section" id="about"><h2>Welcome to Aasha: where hope meets development</h2><p>Every child holds a unique universe of potential. At Aasha in Greater Noida, we nurture, guide and support children facing developmental, behavioural and learning challenges.</p><p>Our multidisciplinary team brings psychiatry, clinical psychology and therapy together to create individualised plans around each child’s neurological, emotional and everyday needs. We combine clinical care with empathy to help children build skills for school, home and community participation.</p></section>
+<section class="seo-section" id="leadership"><h2>Guided by expertise, driven by compassion</h2><div class="seo-grid"><article class="seo-card"><h3>Dr. Anita Sharma</h3><p><strong>Consultant Psychiatrist &amp; Clinical Director</strong></p><p>Dr. Sharma oversees clinical care and long-term intervention planning, aligning medical, psychological and therapeutic goals. Her approach helps children and parents feel heard and supported from the first consultation.</p><a href="/dr-anita-sharma">Meet Dr. Anita Sharma</a></article><article class="seo-card"><h3>Dr. Sana Firdos</h3><p><strong>Clinical Psychologist &amp; Head of Assessments</strong></p><p>Dr. Firdos leads cognitive, behavioural and developmental evaluations using standardised psychometric and developmental tools. Findings help families understand their child’s needs and guide an individualised intervention plan.</p></article></div></section>
+<section class="seo-section" id="approach"><h2>The Aasha approach</h2><div class="seo-grid"><article class="seo-card"><h3>Individualised therapy</h3><p>Assessment findings and clinical oversight shape a plan for your child’s specific strengths, needs and goals.</p></article><article class="seo-card"><h3>Parents as partners</h3><p>Clear communication and parental coaching help you support your child’s progress beyond the clinic.</p></article><article class="seo-card"><h3>Meaningful milestones</h3><p>We agree practical goals with families and review communication, independence, regulation and participation over time. Progress varies for each child.</p></article><article class="seo-card"><h3>A nurturing environment</h3><p>A warm, sensory-friendly setting helps children feel comfortable, engaged and ready to learn.</p></article></div></section>
+<section class="seo-section" id="services"><h2>Integrated care under one roof</h2><div class="seo-grid">{aasha.services.map(service => <article class="seo-card"><h3><a href={`/aasha/${service.slug}`}>{service.name}</a></h3><p>{service.answer}</p></article>)}</div></section>
+<section class="seo-section" id="conditions"><h2>Conditions and concerns we support</h2><ul><li><strong>Neurodevelopment:</strong> autism spectrum disorder (ASD) and attention deficit hyperactivity disorder (ADHD).</li><li><strong>Motor and sensory needs:</strong> cerebral palsy, sensory processing difficulties, and gross and fine motor delays.</li><li><strong>Cognition and learning:</strong> intellectual disabilities, global developmental delay, dyslexia, dysgraphia and dyscalculia.</li><li><strong>Communication and behaviour:</strong> speech and language delays, aggression, self-injurious behaviour, tantrums and emotional dysregulation.</li><li><strong>School concerns:</strong> academic difficulties, attention and school refusal.</li></ul><p>Assessment helps identify which support is appropriate. Explore <a href="/adhd-autism-assessment">ADHD and autism assessments</a>, <a href="/learning-disability-assessment">learning assessments</a> and <a href="/child-student-mental-health">child and student mental health</a>.</p></section>
+<section class="seo-section" id="journey"><h2>Your roadmap to development</h2><ol>{steps.map(([name, description]) => <li><h3>{name}</h3><p>{description}</p></li>)}</ol></section>
+<section class="seo-section"><h2>A message from our clinical director</h2><blockquote><p>“At Aasha, we understand that receiving a developmental diagnosis for your child can feel overwhelming. Our mission is to replace that anxiety with action, clarity, and hope.”</p><p>— Dr. Anita Sharma, Consultant Psychiatrist</p></blockquote><p>We are committed to walking alongside families, bringing medical expertise and individualised therapies together so children and parents feel supported.</p></section>
+<section class="seo-section" id="referrals"><h2>For medical professionals and referring partners</h2><p>Aasha welcomes collaboration with paediatricians, neurologists and schools across Greater Noida and the NCR region. Contact our coordination team about referrals, professional progress reports and a clinical detailing session.</p><p>Our multidisciplinary approach complements medical management with developmental, behavioural and therapeutic support. Information sharing with referring professionals and schools is coordinated with family consent.</p><a class="btn btn-outline" href="tel:+919667863295">Discuss a referral</a></section>
+<AashaQuestions />
+<section class="seo-section"><h2>A moment to reflect on your child’s development</h2><p>Our single-child check-in helps you organise everyday observations for a conversation with a professional. It is a discussion aid, not a diagnostic test.</p><a class="btn" href="/aasha/developmental-check-in">Start a developmental check-in</a></section>
+<section class="seo-section" id="contact"><h2>Visit Aasha / book an assessment</h2><address>Aasha Child Development &amp; Early Intervention Centre<br>J-123, J Block, Gamma 2, Greater Noida, Uttar Pradesh 201310.</address><p><strong>Monday to Saturday:</strong> 12:00 PM–8:00 PM<br><strong>Sunday:</strong> Closed</p><div class="seo-actions"><a class="btn" href="tel:+919667863295">Call +91 96678 63295</a><a class="btn btn-outline" href="/book">Request an assessment</a><a href="/location">Directions and location</a></div></section>
 </main>
-
-
-
-
-  <!-- MIND GRACE LIBRARY STACK -->
-
-  <!-- END LIBRARY STACK -->
 </Layout>
+<style>.aasha-logo{display:block;width:240px;max-width:100%;height:160px;object-fit:contain;background:white;border-radius:16px;margin-bottom:1.5rem} .seo-section li{margin-bottom:1rem} address{font-style:normal}</style>

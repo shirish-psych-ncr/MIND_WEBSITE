@@ -1,0 +1,242 @@
+- generic [active] [ref=f1e1]:
+  - complementary "Not an emergency service." [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - generic [ref=f1e4]: Not an emergency service.
+      - generic [ref=f1e5]:
+        - text: Immediate danger? Call
+        - link "112" [ref=f1e6] [cursor=pointer]:
+          - /url: tel:112
+        - text: .
+      - link "Emergency resources" [ref=f1e7] [cursor=pointer]:
+        - /url: /emergency
+  - banner [ref=f1e8]:
+    - link "Skip to main content" [ref=f1e9] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=f1e10]:
+      - link "Mind Grace Neuropsychiatric Clinic Mind Grace" [ref=f1e11] [cursor=pointer]:
+        - /url: /
+        - img "Mind Grace Neuropsychiatric Clinic" [ref=f1e12]
+        - generic [ref=f1e13]: Mind Grace
+      - navigation "Main navigation" [ref=f1e15]:
+        - list [ref=f1e16]:
+          - listitem [ref=f1e17]:
+            - link "Home" [ref=f1e18] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f1e19]:
+            - link "About" [ref=f1e20] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=f1e21]:
+            - button "Patient care" [ref=f1e22] [cursor=pointer]
+          - listitem [ref=f1e25]:
+            - button "Academic training" [ref=f1e26] [cursor=pointer]
+          - listitem [ref=f1e29]:
+            - link "Online consultations" [ref=f1e30] [cursor=pointer]:
+              - /url: /teleconsultation
+          - listitem [ref=f1e31]:
+            - link "Contact" [ref=f1e32] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=f1e33]:
+            - link "Book an appointment" [ref=f1e34] [cursor=pointer]:
+              - /url: /book
+      - generic [ref=f1e35]:
+        - button "Accessibility" [ref=f1e36] [cursor=pointer]
+        - button "Use dark theme" [ref=f1e37] [cursor=pointer]:
+          - generic [ref=f1e40]: Dark theme
+  - main [ref=f1e41]:
+    - navigation "Breadcrumb" [ref=f1e42]:
+      - list [ref=f1e43]:
+        - listitem [ref=f1e44]:
+          - link "Home" [ref=f1e45] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f1e46]:
+          - link "Aasha Early Intervention Centre" [ref=f1e50] [cursor=pointer]:
+            - /url: /aasha
+        - listitem [ref=f1e51]:
+          - generic [ref=f1e55]: Developmental Check In
+    - generic [ref=f1e56]:
+      - paragraph [ref=f1e57]: Aasha · For parents and caregivers
+      - heading "Understand your child’s everyday needs" [level=1] [ref=f1e58]
+      - paragraph [ref=f1e59]: Answer simple questions about what you notice at home. Get a clear summary to take to your child’s doctor.
+      - paragraph [ref=f1e60]: For one child aged 0–12 years. This check-in helps you prepare for a conversation. It is not a diagnostic test.
+    - region "Child development check-in" [ref=f1e61]:
+      - generic [ref=f1e62]:
+        - generic [ref=f1e63]:
+          - paragraph [ref=f1e64]: 1. Your child / 2. Questions / 3. Your summary
+          - heading "Start with your child’s age" [level=2] [ref=f1e65]
+          - paragraph [ref=f1e66]: We’ll show questions that fit their age, one at a time. Think about a usual day. You can go back or choose “Not sure” at any point.
+          - paragraph [ref=f1e67]: No name is needed. Answers stay in this tab unless you choose to save or share them. Refreshing the page clears unsaved progress.
+          - generic [ref=f1e68]:
+            - text: Nickname (optional)
+            - textbox "Nickname (optional)" [ref=f1e69]
+          - generic [ref=f1e70]:
+            - generic [ref=f1e71]:
+              - text: "Age: years"
+              - 'spinbutton "Age: years" [ref=f1e72]'
+            - generic [ref=f1e73]:
+              - text: Additional months
+              - spinbutton "Additional months" [ref=f1e74]: "0"
+          - paragraph [ref=f1e75]: For a baby under 1 year, enter 0 years and their age in months.
+          - paragraph
+          - generic [ref=f1e76]:
+            - text: You are the child’s
+            - combobox "You are the child’s" [ref=f1e77]:
+              - option "Parent" [selected]
+              - option "Caregiver"
+              - option "Teacher"
+              - option "Other"
+          - generic [ref=f1e78]:
+            - text: Hearing check status
+            - combobox "Hearing check status" [ref=f1e79]:
+              - option "Not sure" [selected]
+              - option "Checked"
+              - option "Not checked"
+              - option "Appointment pending"
+          - generic [ref=f1e80]:
+            - text: Nursery or school attendance
+            - combobox "Nursery or school attendance" [ref=f1e81]:
+              - option "Not attending" [selected]
+              - option "Attending"
+              - option "Not applicable"
+          - button "Start questions" [ref=f1e82]
+        - group [ref=f1e83]:
+          - generic "Save progress or start again" [ref=f1e84] [cursor=pointer]
+    - generic [ref=f1e85]:
+      - heading "About this check-in" [level=2] [ref=f1e86]
+      - paragraph [ref=f1e87]: Questions adapt to age and your answers. There is no risk score or pass/fail result. You can speak to your child’s doctor at any point, regardless of the summary.
+      - paragraph [ref=f1e88]:
+        - text: This questionnaire has not yet been clinically reviewed or validated. It cannot confirm or rule out autism, ADHD or a developmental difficulty. Read about
+        - link "developmental monitoring and screening" [ref=f1e89] [cursor=pointer]:
+          - /url: https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html
+        - text: and
+        - link "discussing developmental concerns" [ref=f1e90] [cursor=pointer]:
+          - /url: https://www.cdc.gov/act-early/families/concerned.html
+        - text: .
+      - paragraph [ref=f1e91]: Aasha Child Development & Early Intervention CentreJ-123, J Block, Gamma 2, Greater Noida, Uttar Pradesh 201310Monday to Saturday, 12:00 PM–8:00 PM; Sunday closed
+      - paragraph [ref=f1e92]:
+        - link "Call +91 96678 63295" [ref=f1e93] [cursor=pointer]:
+          - /url: tel:+919667863295
+        - text: ·
+        - link "Request an assessment" [ref=f1e94] [cursor=pointer]:
+          - /url: /aasha/book?service=developmental-assessment
+  - contentinfo [ref=f1e95]:
+    - generic [ref=f1e96]:
+      - generic [ref=f1e97]:
+        - img "Mind Grace Neuropsychiatric Clinic" [ref=f1e98]
+        - paragraph [ref=f1e99]: Where You Come First
+        - paragraph [ref=f1e100]: Neuropsychiatric care in Greater Noida. All child-related care is provided through Aasha Early Intervention Centre.
+        - link "Call +91 96678 63295" [ref=f1e101] [cursor=pointer]:
+          - /url: tel:+919667863295
+      - navigation "Footer navigation" [ref=f1e102]:
+        - generic [ref=f1e103]:
+          - heading "Patient care" [level=2] [ref=f1e104]
+          - list [ref=f1e105]:
+            - listitem [ref=f1e106]:
+              - link "Book an appointment" [ref=f1e107] [cursor=pointer]:
+                - /url: /book
+            - listitem [ref=f1e108]:
+              - link "Clinic & training hub" [ref=f1e109] [cursor=pointer]:
+                - /url: /#patient-stream
+            - listitem [ref=f1e110]:
+              - link "Our services" [ref=f1e111] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=f1e112]:
+              - link "Aasha Child Development & Early Intervention Centre" [ref=f1e113] [cursor=pointer]:
+                - /url: /aasha
+            - listitem [ref=f1e114]:
+              - link "What to expect" [ref=f1e115] [cursor=pointer]:
+                - /url: /process
+            - listitem [ref=f1e116]:
+              - link "Find us" [ref=f1e117] [cursor=pointer]:
+                - /url: /location
+        - generic [ref=f1e118]:
+          - heading "Help and resources" [level=2] [ref=f1e119]
+          - list [ref=f1e120]:
+            - listitem [ref=f1e121]:
+              - link "Academic training hub" [ref=f1e122] [cursor=pointer]:
+                - /url: /academic-training
+            - listitem [ref=f1e123]:
+              - link "Internship enquiries" [ref=f1e124] [cursor=pointer]:
+                - /url: /clinical-psychology-internship
+            - listitem [ref=f1e125]:
+              - link "Internship guides by institute" [ref=f1e126] [cursor=pointer]:
+                - /url: /student-internship-guides
+            - listitem [ref=f1e127]:
+              - link "Student programs & workshops" [ref=f1e128] [cursor=pointer]:
+                - /url: /#academic-stream
+            - listitem [ref=f1e129]:
+              - link "Frequently asked questions" [ref=f1e130] [cursor=pointer]:
+                - /url: /faq#common-questions
+            - listitem [ref=f1e131]:
+              - link "Self-help tools" [ref=f1e132] [cursor=pointer]:
+                - /url: /resources#tools
+            - listitem [ref=f1e133]:
+              - link "Clinic gallery" [ref=f1e134] [cursor=pointer]:
+                - /url: /gallery
+            - listitem [ref=f1e135]:
+              - link "Emergency help" [ref=f1e136] [cursor=pointer]:
+                - /url: /emergency
+            - listitem [ref=f1e137]:
+              - link "Contact" [ref=f1e138] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=f1e139]:
+          - heading "Care guides" [level=2] [ref=f1e140]
+          - list [ref=f1e141]:
+            - listitem [ref=f1e142]:
+              - link "Psychiatry" [ref=f1e143] [cursor=pointer]:
+                - /url: /psychiatry
+            - listitem [ref=f1e144]:
+              - link "Psychology and counselling" [ref=f1e145] [cursor=pointer]:
+                - /url: /psychology-counselling
+            - listitem [ref=f1e146]:
+              - link "Child development" [ref=f1e147] [cursor=pointer]:
+                - /url: /child-development
+            - listitem [ref=f1e148]:
+              - link "Assessments" [ref=f1e149] [cursor=pointer]:
+                - /url: /assessments
+            - listitem [ref=f1e150]:
+              - link "Conditions" [ref=f1e151] [cursor=pointer]:
+                - /url: /conditions
+      - generic [ref=f1e152]:
+        - strong [ref=f1e153]: Visit or call
+        - paragraph [ref=f1e154]: Mind Grace Neuropsychiatric ClinicJ123, Gamma II, Greater Noida, 201310
+        - paragraph [ref=f1e155]:
+          - link "+91 96678 63295" [ref=f1e156] [cursor=pointer]:
+            - /url: tel:+919667863295
+          - link "contact@mindgracencr.in" [ref=f1e157] [cursor=pointer]:
+            - /url: mailto:contact@mindgracencr.in
+    - region [ref=f1e158]:
+      - link [ref=f1e159] [cursor=pointer]:
+        - /url: /aasha
+        - img "Aasha Early Intervention Centre" [ref=f1e160]
+      - generic [ref=f1e161]:
+        - heading "Aasha Child Development & Early Intervention Centre" [level=2] [ref=f1e162]
+        - paragraph [ref=f1e163]: All child-related care on this website is provided through Aasha.
+        - paragraph [ref=f1e164]: J-123, J Block, Gamma 2, Greater Noida, Uttar Pradesh 201310Monday to Saturday, 12:00 PM–8:00 PM; Sunday closed
+        - navigation "Aasha services" [ref=f1e165]:
+          - link "About Aasha" [ref=f1e166] [cursor=pointer]:
+            - /url: /aasha
+          - link "Speech and language therapy" [ref=f1e167] [cursor=pointer]:
+            - /url: /aasha/speech-language-therapy
+          - link "Occupational therapy" [ref=f1e168] [cursor=pointer]:
+            - /url: /aasha/occupational-therapy
+          - link "Special education and learning support" [ref=f1e169] [cursor=pointer]:
+            - /url: /aasha/special-education
+          - link "ABA and behavioural support" [ref=f1e170] [cursor=pointer]:
+            - /url: /aasha/behavioural-support
+          - link "Child developmental and psychological assessments" [ref=f1e171] [cursor=pointer]:
+            - /url: /aasha/developmental-assessment
+          - link "Child psychiatric consultation" [ref=f1e172] [cursor=pointer]:
+            - /url: /aasha/child-psychiatry
+          - link "Call +91 96678 63295" [ref=f1e173] [cursor=pointer]:
+            - /url: tel:+919667863295
+    - generic [ref=f1e174]:
+      - paragraph [ref=f1e175]: © 2026 Mind Grace Neuropsychiatric Clinic. Educational information only.
+      - generic [ref=f1e176]:
+        - link "Privacy" [ref=f1e177] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f1e178] [cursor=pointer]:
+          - /url: /terms
+        - link "Disclaimer" [ref=f1e179] [cursor=pointer]:
+          - /url: /disclaimer
+        - link "Consent" [ref=f1e180] [cursor=pointer]:
+          - /url: /consent

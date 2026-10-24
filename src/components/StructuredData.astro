@@ -1,6 +1,8 @@
 ---
 import {
   CLINIC_ID,
+  AASHA_ID,
+  aasha,
   PERSON_ID,
   PHYSICIAN_ID,
   SITE_URL,
@@ -17,9 +19,12 @@ interface Props {
 
 const { canonical, title, description } = Astro.props;
 const pageUrl = canonical || `${SITE_URL}${Astro.url.pathname}`;
+const aashaId = AASHA_ID;
+const isAashaPage = ['/aasha', '/child-development', '/child-student-mental-health', '/learning-disability-assessment', '/sleep-and-autism-guide-indian-parents', '/blog/children'].some(path => pageUrl === `${SITE_URL}${path}`) || pageUrl.includes('/blog/pages/child/') || pageUrl.startsWith(`${SITE_URL}/aasha/`);
 const isPhysicianPage = pageUrl === `${SITE_URL}/dr-anita-sharma`;
 const graph: Record<string, unknown>[] = [
   clinic,
+  aasha,
   {
     '@type': 'WebSite',
     '@id': WEBSITE_ID,
@@ -36,7 +41,7 @@ const graph: Record<string, unknown>[] = [
     description,
     inLanguage: 'en-IN',
     isPartOf: { '@id': WEBSITE_ID },
-    about: { '@id': isPhysicianPage ? PERSON_ID : CLINIC_ID },
+    about: { '@id': isAashaPage ? aashaId : isPhysicianPage ? PERSON_ID : CLINIC_ID },
   },
 ];
 

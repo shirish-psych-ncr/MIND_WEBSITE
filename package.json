@@ -6,7 +6,7 @@
     "lint:html": "html-validate --config config/htmlvalidate.json offline.html",
     "lint:readability": "node scripts/run-python.mjs scripts/a11y_lint/readability_hyphenation.py",
     "report": "node scripts/run-python.mjs scripts/a11y_lint/summarize_report.py",
-    "test": "node scripts/run-python.mjs -m unittest discover -s tests -v && node --test tests/worker-routing.test.mjs",
+    "test": "node scripts/run-python.mjs -m unittest discover -s tests -v && node --test tests/worker-routing.test.mjs tests/developmental-check-in.test.mjs",
     "typecheck": "astro check",
     "check:syntax": "node scripts/check-js-syntax.mjs",
     "check:docs": "node scripts/check-markdown.mjs",
@@ -22,12 +22,13 @@
     "build:min:css": "node scripts/rebuild_min_css.cjs",
     "build:min:js": "node scripts/rebuild_min_js.cjs",
     "dev": "astro dev",
-    "build": "astro build && node scripts/run-python.mjs scripts/build_blog_index.py && node scripts/validate-structured-data.mjs && node scripts/validate-build.mjs",
+    "build": "astro build && node scripts/run-python.mjs scripts/build_blog_index.py && node scripts/validate-structured-data.mjs && node scripts/validate-build.mjs && npm run check:aasha",
     "preview": "astro preview",
     "preview:review": "astro preview --host 127.0.0.1 --port 8765",
     "validate": "node scripts/validate-build.mjs",
     "deploy:cloudflare": "npm run build && wrangler deploy --config wrangler.site.toml",
-    "prebuild": "npm run build:min"
+    "prebuild": "npm run build:min",
+    "check:aasha": "node scripts/run-python.mjs scripts/validate_aasha.py"
   },
   "dependencies": {
     "alex": "^11.0.1",

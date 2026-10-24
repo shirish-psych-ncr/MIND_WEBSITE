@@ -1,0 +1,11 @@
+---
+import aasha from '../data/aasha.json';
+interface Props { items?: { question: string; answer: string }[] }
+const { items = aasha.faqs } = Astro.props;
+const schema = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }).replaceAll('<', '\\u003c');
+---
+<section class="seo-section" id="aasha-questions" aria-labelledby="aasha-questions-title">
+  <h2 id="aasha-questions-title">Questions families ask</h2>
+  {items.map(item => <article><h3>{item.question}</h3><p>{item.answer}</p></article>)}
+</section>
+<script type="application/ld+json" set:html={schema}></script>

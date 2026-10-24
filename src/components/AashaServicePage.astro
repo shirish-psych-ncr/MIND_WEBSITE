@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AashaCare from './AashaCare.astro';
+import AashaQuestions from './AashaQuestions.astro';
+import aasha from '../data/aasha.json';
+interface Props { slug: string }
+const service = aasha.services.find(item => item.slug === Astro.props.slug);
+if (!service) throw new Error(`Unknown Aasha service: ${Astro.props.slug}`);
+const canonical = `${aasha.url}/${service.slug}`;
+const escape = (value: string) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+const headExtra = `<title>${escape(service.title)}</title><meta name="description" content="${escape(service.answer)}"><link rel="canonical" href="${canonical}"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">`;
+const schema = JSON.stringify({ '@context': 'https://schema.org', '@graph': [
+  { '@type': 'Service', '@id': `${canonical}#service`, name: service.name, description: service.answer, url: canonical, provider: { '@id': aasha.id }, areaServed: ['Greater Noida', 'Noida', 'Delhi NCR'] },
+  { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mindgracencr.in/' }, { '@type': 'ListItem', position: 2, name: aasha.shortName, item: aasha.url }, { '@type': 'ListItem', position: 3, name: service.name, item: canonical }] }
+] }).replaceAll('<', '\\u003c');
+---
+<Layout headExtra={headExtra}>
+  <main id="main-content" class="seo-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><a href="/aasha">Aasha</a><span aria-hidden="true"> / </span><span aria-current="page">{service.name}</span></nav>
+    <section class="seo-hero">
+      <p class="seo-kicker">Aasha · Gamma 2, Greater Noida</p>
+      <h1>{service.name} in Greater Noida</h1>
+      <p class="seo-answer">{service.answer}</p>
+      {service.slug === 'developmental-assessment' && <p><a href="/aasha/developmental-check-in">Prepare for your visit with a developmental check-in</a> — organise your observations about one child, then print or choose to share a summary.</p>}
+      <div class="seo-actions"><a class="btn" href={`tel:${aasha.telephone}`}>Call to book an assessment</a><a class="btn btn-outline" href="/book">Request an appointment</a></div>
+    </section>
+    <section class="seo-section"><h2>{service.heading}</h2><ul>{service.areas.map(area => <li>{area}</li>)}</ul><p>Each child’s plan is individualised. The team discusses appropriate goals with the family and reviews progress over time.</p></section>
+    <section class="seo-section"><h2>What to expect at Aasha</h2><p>{service.process}</p><p>Read about <a href="/aasha#leadership">our clinical leadership</a> and <a href="/aasha#journey">the consultation-to-therapy care pathway</a>.</p></section>
+    <section class="seo-section"><h2>Preparing for your first appointment</h2><p>{service.prepare}</p><p>Confirm the assessment scope, session arrangements and current fees with the coordination team before booking. Families can ask questions about the proposed plan and how parents can participate.</p><a href={service.related.href}>{service.related.label}</a></section>
+    <AashaQuestions items={[service.faq, aasha.faqs[0], aasha.faqs[1]]} />
+    <section class="seo-section"><h2>Related Aasha services</h2><div class="seo-grid">{aasha.services.filter(item => item.slug !== service.slug).map(item => <article class="seo-card"><h3><a href={`/aasha/${item.slug}`}>{item.name}</a></h3><p>{item.answer}</p></article>)}</div></section>
+    <AashaCare />
+  </main>
+  <script type="application/ld+json" set:html={schema}></script>
+</Layout>

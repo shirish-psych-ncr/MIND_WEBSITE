@@ -31,7 +31,7 @@
         ["Services", "/services"],
         ["Psychiatry", "/psychiatry"],
         ["Psychology and counselling", "/psychology-counselling"],
-        ["Child development", "/child-development"],
+        ["Aasha child development", "/child-development"],
         ["Assessments", "/assessments"],
         ["Therapy and psychotherapy", "/therapy"],
         ["Teleconsultation", "/teleconsultation"],
@@ -43,7 +43,7 @@
             ["Adult mental health", "/conditions"],
             ["Depression and anxiety", "/depression-anxiety"],
             ["ADHD and autism assessment", "/adhd-autism-assessment"],
-            ["Child development", "/aasha"],
+            ["Aasha Early Intervention Centre", "/aasha"],
             ["Our care approach", "/approach"]
           ]
         }
@@ -83,6 +83,7 @@
   // Desktop header dropdown groups (mirror Shell.astro's patientLinks /
   // academicLinks so runtime-built headers match the pre-rendered shell).
   const patientLinks = [
+    ["Aasha child care", "/aasha"],
     ["Psychiatry", "/psychiatry"],
     ["Therapy and counselling", "/therapy"],
     ["Conditions", "/conditions"],
@@ -355,7 +356,7 @@
     const footer = document.createElement("footer");
     footer.className = "site-footer";
     footer.innerHTML = `<div class="footer-container">
-      <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Compassionate neuropsychiatric care in Greater Noida for adults, children, adolescents, and families.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
+      <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Neuropsychiatric care in Greater Noida. All child-related care is provided through Aasha Early Intervention Centre.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
       <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/#patient-stream">Clinic &amp; training hub</a></li><li><a href="/services">Our services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/academic-training">Academic training hub</a></li><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/student-internship-guides">Internship guides by institute</a></li><li><a href="/#academic-stream">Student programs &amp; workshops</a></li><li><a href="/faq#common-questions">Frequently asked questions</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
       <address class="footer-contact"><h2>Visit or call</h2><p>Mind Grace Neuropsychiatric Clinic<br>J123, Gamma II, Greater Noida, 201310</p><p><a href="tel:+919667863295">+91 96678 63295</a><br><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
     </div><div class="footer-bottom"><p>&copy; <span id="year"></span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/consent">Consent</a></div></div>`;
@@ -603,7 +604,9 @@
     const visitPages = new Set(["book.html", "fees.html", "location.html", "process.html"]);
     const resourcePages = new Set(["faq.html", "gallery.html", "testimonials.html", "approach.html"]);
     const legalPages = new Set(["terms.html", "disclaimer.html", "consent.html"]);
-    if (path.startsWith("/blog")) {
+    if (path.startsWith("/aasha/") || ["child-development.html", "child-student-mental-health.html", "learning-disability-assessment.html", "sleep-and-autism-guide-indian-parents.html"].includes(legacyKey)) {
+      entries.push({ label: "Aasha Early Intervention Centre", href: "/aasha" });
+    } else if (path.startsWith("/blog")) {
       if (pageKey(file) !== 'blog') entries.push({ label: "Blog", href: "/blog" });
       if (/psychology-internship|psychiatry-internship/.test(path)) entries.push({ label: "Internship guides", href: "/student-internship-guides" });
       else if (path.includes("/pages/adult/")) entries.push({ label: "Adult mental health", href: "/blog/adult" });
@@ -690,7 +693,7 @@
     const pathways = {
       "/": {
         title: "A calmer next step in Greater Noida",
-        body: "If anxiety, low mood, sleep changes, or a child’s development are making daily life harder, you can begin with the concern you notice. Mind Grace in Gamma II helps adults, children, adolescents, and families understand what support may fit.",
+        body: "If anxiety, low mood, sleep changes, or a child’s development are making daily life harder, you can begin with the concern you notice. Mind Grace supports adult care in Gamma II; all child-related care is provided through Aasha Early Intervention Centre.",
         links: [["Explore mental health services", "/services"], ["Book a confidential consultation", "/book"], ["Find the clinic in Gamma II", "/location"]]
       },
       "services.html": {
@@ -705,7 +708,7 @@
       },
       "about.html": {
         title: "Care that makes room for your context",
-        body: "Starting care can feel difficult when you have been carrying a concern alone. Mind Grace brings psychiatric and child-development support together in Gamma II, Greater Noida, with space to explain what has changed and what you need next.",
+        body: "Starting care can feel difficult when you have been carrying a concern alone. Mind Grace provides psychiatric care, with child-development support through Aasha Early Intervention Centre in Gamma II, Greater Noida, with space to explain what has changed and what you need next.",
         links: [["Meet Dr Anita Sharma", "/dr-anita-sharma"], ["See the care team", "/doctors"], ["Find the clinic", "/location"], ["Book a consultation", "/book"]]
       },
       "approach.html": {
@@ -756,7 +759,7 @@
       "aasha.html": {
         title: "Support for children starts with noticing",
         body: "Parents may notice differences in communication, learning, behaviour, or development and still feel unsure what they mean. AASHA connects families with child-development information and a route toward appropriate support in Greater Noida.",
-        links: [["Read child-development guides", "/blog/children"], ["See child-development services", "/services"], ["Book a consultation", "/book"]]
+        links: [["Read child-development guides", "/blog/children"], ["Explore Aasha child-development services", "/aasha#services"], ["Book a consultation", "/book"]]
       },
       "gallery.html": {
         title: "See the space before you arrive",
@@ -786,7 +789,7 @@
       "children.html": {
         title: "Child-development guidance for parents and caregivers",
         body: "Parents often notice a concern before they have the words to describe it. These guides cover communication, sensory experiences, school concerns, and early development, with practical routes toward support when a pattern continues.",
-        links: [["Browse all child guides", "/blog"], ["See child-development services", "/services"], ["Explore gentle tools", "/resources#tools"], ["Book a consultation", "/book"]]
+        links: [["Browse all child guides", "/blog"], ["Explore Aasha child-development services", "/aasha#services"], ["Explore gentle tools", "/resources#tools"], ["Book a consultation", "/book"]]
       },
       "emergency.html": {
         title: "If this feels unsafe, act now",
@@ -829,7 +832,7 @@
         body: childArticle
           ? "This guide helps parents put words to a child’s communication, sensory, school, or developmental concerns. If the pattern affects daily life or keeps worrying your family, a child-development conversation can help you decide what support fits."
           : "This guide helps you put words to a pattern affecting mood, worry, sleep, or daily life. If the concern continues or feels difficult to manage, a confidential conversation can help you decide what support fits.",
-        links: [["Browse all guides", "/blog"], [childArticle ? "See child-development services" : "See adult mental health services", "/services"], ["Try a gentle self-help tool", "/resources#tools"], ["Book a consultation", "/book"]]
+        links: [["Browse all guides", "/blog"], [childArticle ? "Explore Aasha child-development services" : "See adult mental health services", childArticle ? "/aasha#services" : "/services"], ["Try a gentle self-help tool", "/resources#tools"], ["Book a consultation", "/book"]]
       };
     }
     if (main.querySelector('.institution-identity')) {
