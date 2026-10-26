@@ -165,7 +165,7 @@ const connections: [string, string, string, string][] = [
   ['mitochondria-and-autism', 'Why a “mitochondrial cocktail” is not a general treatment plan', 'autism-treatment-evidence', 'Compare benefit, harms and the quality of evidence'],
   ['autism-gut-health-and-diets', 'Use a brief diary without turning every meal into an experiment', 'daily-comfort-diary', 'Print the sleep, food and comfort diary'],
   ['autism-gut-health-and-diets', 'What common diet labels leave out', 'autism-treatment-evidence', 'Evaluate the evidence behind a dietary claim'],
-  ['autism-treatment-evidence', 'Apply the method to biomedical claims in the notes', 'folinic-acid-and-autism', 'See a worked research discussion: folinic acid'],
+  ['autism-treatment-evidence', 'Apply the method to biomedical claims about autism', 'folinic-acid-and-autism', 'See a worked research discussion: folinic acid'],
   ['autism-treatment-evidence', 'Agree on a reviewable plan, not an open-ended promise', 'school-support-planner', 'Put a participation goal into a reviewable support plan'],
   ['assessment-visit-planner', 'Before the visit: choose your main question', 'autism-screening-and-assessment', 'Read what to expect during developmental assessment'],
   ['daily-comfort-diary', 'Review the pattern with a clear question', 'autism-gut-health-and-diets', 'Understand the difference between gut symptoms and diet claims'],
