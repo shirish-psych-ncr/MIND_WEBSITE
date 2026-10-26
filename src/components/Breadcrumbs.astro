@@ -26,7 +26,7 @@ const ld = {
     '@type': 'ListItem',
     position: index + 1,
     name: crumb.name,
-    ...(index === items.length - 1 || !crumb.href ? {} : { item: `${base}${crumb.href}` }),
+    item: index === items.length - 1 ? canonical : new URL(crumb.href ?? '/', base).href,
   })),
 };
 ---

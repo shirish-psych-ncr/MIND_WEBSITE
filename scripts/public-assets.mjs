@@ -1,4 +1,5 @@
-import { cp, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readdir, readFile } from 'node:fs/promises';
+import { writeGeneratedFile as writeFile } from './write-generated-file.mjs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 import { createHash } from 'node:crypto';

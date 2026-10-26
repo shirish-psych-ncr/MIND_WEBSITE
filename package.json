@@ -22,13 +22,14 @@
     "build:min:css": "node scripts/rebuild_min_css.cjs",
     "build:min:js": "node scripts/rebuild_min_js.cjs",
     "dev": "astro dev",
-    "build": "astro build && node scripts/run-python.mjs scripts/build_blog_index.py && node scripts/validate-structured-data.mjs && node scripts/validate-build.mjs && npm run check:aasha",
+    "build": "astro build && node scripts/run-python.mjs scripts/build_blog_index.py && node scripts/build-site-navigation.mjs && node scripts/validate-site-navigation.mjs && node scripts/validate-structured-data.mjs && node scripts/validate-build.mjs && npm run check:aasha",
     "preview": "astro preview",
     "preview:review": "astro preview --host 127.0.0.1 --port 8765",
     "validate": "node scripts/validate-build.mjs",
     "deploy:cloudflare": "npm run build && wrangler deploy --config wrangler.site.toml",
     "prebuild": "npm run build:min",
-    "check:aasha": "node scripts/run-python.mjs scripts/validate_aasha.py"
+    "check:aasha": "node scripts/run-python.mjs scripts/validate_aasha.py",
+    "check:navigation": "node scripts/validate-site-navigation.mjs"
   },
   "dependencies": {
     "alex": "^11.0.1",
@@ -50,7 +51,8 @@
     "playwright": "^1.57.0",
     "sharp": "^0.35.5",
     "typescript": "^6.0.3",
-    "wrangler": "4.143.1"
+    "wrangler": "4.143.1",
+    "parse5": "6.0.1"
   },
   "engines": {
     "node": ">=22.19.0"

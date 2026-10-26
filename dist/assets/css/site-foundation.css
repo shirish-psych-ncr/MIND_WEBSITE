@@ -2608,3 +2608,12 @@ body.tool-page .drawer label { font-size: .875rem; line-height: 1.5; letter-spac
 html[data-theme].a11y-contrast body.tool-page .drawer { --tool-control-ink: #111; background: #fff !important; border-color: #111; }
 html[data-theme].a11y-contrast body .skip-link { color: #fff !important; background: #5b0034 !important; }
 body .mobile-nav-kicker { color: var(--mg-link); }
+
+/* Static, build-generated relationships: available without JavaScript. */
+body main .site-connections{max-width:1120px;margin:2.5rem auto;padding:clamp(1.25rem,4vw,2rem);border-top:1px solid currentColor}
+.site-connections h2{font-size:1.4rem}.site-connections>ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;list-style:none;padding:0;margin:1.25rem 0}
+.site-connections>ul>li{padding:1.2rem;border:1px solid currentColor;border-radius:12px;overflow-wrap:anywhere}
+.site-connections li>span{display:block;font-size:.85rem;margin-bottom:.55rem}.site-connections li>a{font-weight:650;text-decoration:underline;line-height:1.6}
+.site-directory-group{padding:1.5rem 0;scroll-margin-top:8rem}.site-directory-group ul{columns:2;column-gap:2.5rem;padding-left:1.25rem}.site-directory-group li{break-inside:avoid;margin-bottom:1rem;line-height:1.65}
+@media(max-width:640px){.site-connections>ul{grid-template-columns:1fr}.site-directory-group ul{columns:1}}
+@media print{.site-connections{display:none!important}}
