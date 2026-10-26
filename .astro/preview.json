@@ -1,14 +1,14 @@
 {
-	"pid": 27724,
-	"port": 4330,
-	"url": "http://127.0.0.1:4330",
+	"pid": 17144,
+	"port": 8770,
+	"url": "http://127.0.0.1:8770",
 	"urls": {
 		"local": [
-			"http://127.0.0.1:4330/"
+			"http://127.0.0.1:8770/"
 		],
 		"network": [],
 		"networkInterfaceNames": []
 	},
 	"background": false,
-	"startedAt": "2026-10-24T11:15:35.651Z"
+	"startedAt": "2026-10-26T06:22:32.104Z"
 }

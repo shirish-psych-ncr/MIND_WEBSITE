@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AashaCare from './AashaCare.astro';
+import aasha from '../data/aasha.json';
+import { entries, entryPath, evidenceDate, sources, readingStats } from '../data/neurodevelopment';
+interface Props { slug: string }
+const entry = entries.find(item => item.slug === Astro.props.slug);
+if (!entry) throw new Error(`Unknown learning page: ${Astro.props.slug}`);
+const canonical = `https://mindgracencr.in${entryPath(entry)}`;
+const image = `https://mindgracencr.in/assets/images/learning/${entry.image}.png`;
+const escape = (text: string) => text.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+const { wordCount, readingMinutes } = readingStats(entry);
+const references = [...new Set(entry.sections.flatMap(section => section.source ? [section.source] : []))].map(key => sources[key]);
+const headExtra = `<title>${escape(entry.title)} | Aasha</title><meta name="description" content="${escape(entry.description)}"><link rel="canonical" href="${canonical}"><meta property="og:type" content="${entry.kind === 'article' ? 'article' : 'website'}"><meta property="og:image" content="${image}"><meta property="og:image:alt" content="${escape(entry.title)} — educational illustration"><meta name="twitter:image" content="${image}"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">`;
+const crumbs = [{ name: 'Home', url: 'https://mindgracencr.in/' }, { name: 'Aasha', url: aasha.url }, { name: 'Learning hub', url: `${aasha.url}/learning` }, { name: entry.title, url: canonical }];
+const schema = JSON.stringify({ '@context': 'https://schema.org', '@graph': [
+  { '@type': entry.kind === 'article' ? 'BlogPosting' : 'LearningResource', '@id': `${canonical}#content`, headline: entry.title, name: entry.title, description: entry.description, url: canonical, inLanguage: 'en-IN', image, mainEntityOfPage: canonical, publisher: { '@id': aasha.id }, citation: references.map(source => source.url), wordCount, timeRequired: `PT${readingMinutes}M`, isAccessibleForFree: true, ...(entry.kind === 'resource' ? { learningResourceType: 'Printable worksheet' } : {}) },
+  { '@type': 'BreadcrumbList', itemListElement: crumbs.map((crumb, i) => ({ '@type': 'ListItem', position: i + 1, name: crumb.name, item: crumb.url })) },
+  { '@type': 'FAQPage', mainEntity: entry.faq.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) },
+]}).replaceAll('<', '\\u003c');
+---
+<Layout headExtra={headExtra} bodyClass="learning-document">
+  <main id="main-content" class="seo-page learning-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" data-authored-breadcrumbs><ol>{crumbs.map((crumb, i) => <li>{i > 0 && <span aria-hidden="true"> / </span>}{i === crumbs.length - 1 ? <span aria-current="page">{crumb.name}</span> : <a href={crumb.url}>{crumb.name}</a>}</li>)}</ol></nav>
+    <article class="learning-article" data-word-count={wordCount}>
+      <header class="seo-hero">
+        <p class="seo-kicker">Aasha learning library · {entry.kind === 'article' ? 'Family guide' : 'Printable resource'}</p>
+        <h1>{entry.title}</h1><p class="seo-answer">{entry.answer}</p>
+        <p class="editorial-note">{readingMinutes} min read · Sources checked <time datetime={evidenceDate}>26 October 2026</time> · <a href="#editorial-note">Editorial information</a></p>
+        {entry.worksheet && <div class="worksheet-actions"><a class="btn" href="#worksheet">Go to the worksheet</a><button class="btn btn-outline print-learning" type="button">Print worksheet / save PDF</button></div>}
+        <img class="learning-illustration" src={`/assets/images/learning/${entry.image}.png`} width="1200" height="630" alt={entry.imageAlt ?? (entry.image === 'care' ? 'Three connected areas of support: communication, comfort and participation.' : 'A pathway from noticing an observation to discussing it and planning support.')} decoding="async" />
+      </header>
+      <div class="article-opening">{entry.intro?.map(paragraph => <p>{paragraph}</p>)}</div>
+      {entry.takeaways && <aside class="key-takeaways" aria-labelledby="takeaway-title"><h2 id="takeaway-title">What you will take away</h2><ul>{entry.takeaways.map(point => <li>{point}</li>)}</ul></aside>}
+      <nav class="seo-section contents" aria-label="On this page"><h2>In this guide</h2><ol>{entry.sections.map((section, i) => <li><a href={`#section-${i + 1}`}>{section.title}</a></li>)}{entry.worksheet && <li><a href="#worksheet">Printable worksheet</a></li>}<li><a href="#questions">Common questions</a></li>{references.length > 0 && <li><a href="#references">Sources and further reading</a></li>}</ol></nav>
+      <div class="article-body">
+      {entry.sections.map((section, i) => <section class="seo-section article-section" id={`section-${i + 1}`}><p class="section-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</p><h2>{section.title}</h2><p>{section.text}</p>{section.paragraphs?.map(paragraph => <p>{paragraph}</p>)}{section.points && <ul>{section.points.map(point => <li>{point}</li>)}</ul>}{section.table && <Fragment><p class="table-hint">Swipe or scroll the table to read all columns.</p><div class="comparison-scroll" role="region" aria-label={section.table.caption} tabindex="0"><table><caption>{section.table.caption}</caption><thead><tr>{section.table.headings.map(heading => <th scope="col">{heading}</th>)}</tr></thead><tbody>{section.table.rows.map(row => <tr>{row.map((cell, index) => index === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>)}</tr>)}</tbody></table></div></Fragment>}{section.example && <aside class="worked-example"><h3>{section.example.title}</h3><p>{section.example.text}</p></aside>}{section.links && <nav class="section-reading" aria-label={`Related to: ${section.title}`}><ul>{section.links.map(link => <li><a href={link.href}>{link.label}</a></li>)}</ul></nav>}{section.source && <p class="source">Source: <a href={sources[section.source].url}>{sources[section.source].name}</a>.</p>}</section>)}
+      </div>
+      {entry.worksheet && <section class="seo-section worksheet" id="worksheet"><h2>{entry.worksheet.title}</h2><p>Print this page or save it as a PDF using your browser. Write on the printed copy. This page does not collect your answers.</p><button class="btn print-learning" type="button">Print worksheet / save PDF</button><div class="worksheet-fields">{entry.worksheet.prompts.map(prompt => <div class="worksheet-field"><h3>{prompt}</h3><div class="writing-space" aria-hidden="true"></div></div>)}</div></section>}
+      <section class="seo-section" id="questions"><h2>Common questions</h2>{entry.faq.map(item => <div><h3>{item.q}</h3><p>{item.a}</p></div>)}</section>
+      {references.length > 0 && <section class="seo-section references" id="references"><h2>Sources and further reading</h2><p>Guidelines, primary research and public health explanations used in this article. Study findings are distinguished from clinical recommendations in the relevant sections.</p><ol>{references.map(source => <li><a href={source.url}>{source.name}</a></li>)}</ol></section>}
+      <aside class="seo-section editorial-note" id="editorial-note"><h2>Editorial information</h2><p>This guide was developed from supplied teaching notes and the linked sources. Worked examples are fictional illustrations, not patient stories. No named clinician review has been recorded; this is general education rather than an individual assessment or prescription. The original presenters are not represented as authors or endorsers. <a href="/aasha/learning#editorial">Read the editorial approach</a>.</p></aside>
+    </article>
+    <section class="seo-section related"><h2>Continue reading</h2><div class="seo-grid">{entry.related.map(slug => { const related = entries.find(item => item.slug === slug)!; return <article class="seo-card"><h3><a href={entryPath(related)}>{related.title}</a></h3><p>{related.description}</p></article>; })}</div></section>
+    <section class="seo-section"><h2>Discuss your child’s needs with Aasha</h2><p>{aasha.name} · {aasha.address}. {aasha.hours}.</p><p><a href="/aasha/developmental-assessment">Explore developmental assessment</a> · <a href="/aasha/book">Request an appointment</a> · <a href={`tel:${aasha.telephone}`}>Call {aasha.phone}</a></p><p>An enquiry is not a confirmed appointment. Confirm scope and current fees with the team.</p></section>
+    <AashaCare />
+  </main>
+  <script type="application/ld+json" set:html={schema}></script>
+</Layout>
+<script>document.querySelectorAll('.print-learning').forEach(button => button.addEventListener('click', () => window.print()));</script>
+<style>
+  .learning-page{max-width:1080px}.learning-page p,.learning-page li{line-height:1.85}.learning-page h1{max-width:27ch}.learning-illustration{display:block;width:min(100%,640px);height:auto;border-radius:18px;margin:1.5rem auto}.editorial-note,.source{font-size:.95rem}.learning-page .seo-section{padding:clamp(1.2rem,4vw,2rem);scroll-margin-top:8rem}.contents ol{padding-left:1.4rem}.contents li{padding-block:.3rem}.worksheet-field{break-inside:avoid;margin-top:1.5rem}.worksheet-field h3{font-size:1rem}.writing-space{height:4rem;border-bottom:1px solid currentColor}.breadcrumbs{overflow-wrap:anywhere}.worksheet-fields{margin-top:1.5rem}
+  .article-opening,.article-body,.contents,.key-takeaways,.references,#questions,#editorial-note{max-width:78ch;margin-inline:auto}.article-opening{padding:1rem clamp(1.2rem,4vw,2rem);font-size:1.1rem}.article-opening p+p,.article-section p+p{margin-top:1.2rem}.key-takeaways,.worked-example{padding:clamp(1.2rem,4vw,2rem);border:1px solid currentColor;border-inline-start:5px solid currentColor;border-radius:12px;margin-block:1.75rem}.key-takeaways h2,.worked-example h3{font-size:1.15rem}.key-takeaways ul{padding-left:1.2rem}.section-number{font-size:.85rem;letter-spacing:.14em;font-weight:700;margin-bottom:.6rem}.comparison-scroll{overflow-x:auto;margin-block:1.5rem;max-width:100%;border:1px solid currentColor;border-radius:10px}.comparison-scroll:focus-visible{outline:3px solid currentColor;outline-offset:4px}.comparison-scroll table{width:100%;min-width:580px;border-collapse:collapse;font-size:.94rem}.comparison-scroll caption{text-align:left;padding:1rem;font-weight:700}.comparison-scroll th,.comparison-scroll td{padding:1rem;vertical-align:top;text-align:left;border-top:1px solid currentColor;line-height:1.65}.comparison-scroll th{font-weight:700}.source{margin-top:1.5rem}.references li{margin-block:.7rem;overflow-wrap:anywhere}
+  .worksheet-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-block:1.2rem}.section-reading{margin-top:1.5rem;padding:1rem 1.2rem;border-inline-start:3px solid currentColor}.section-reading ul{margin:0;padding-left:1.2rem}.section-reading a{font-weight:600}
+  .table-hint{display:none;font-size:.85rem}@media(max-width:640px){.table-hint{display:block}}
+  @media print{.table-hint{display:none!important}.contents,.related,.print-learning,.aasha-care,.learning-illustration{display:none!important}.learning-page{max-width:none;padding:0!important}.learning-page .seo-section{break-inside:avoid;padding:10px!important;border:0!important}.learning-page:has(.worksheet) article> :not(.worksheet){display:none!important}.learning-page:has(.worksheet)> :not(article){display:none!important}.writing-space{height:3rem}.worksheet-field{margin-top:.7rem}.learning-page{color:#111!important;background:white!important}}
+</style>
+<style is:global>
+  @media print {
+    body.learning-document { background: white !important; color: #111 !important; }
+    body.learning-document > :not(main) { display: none !important; }
+    body.learning-document .aasha-care, body.learning-document main:has(.worksheet) > :not(article) { display: none !important; }
+    body.learning-document .worksheet, body.learning-document .worksheet * { color: #111 !important; background: white !important; box-shadow: none !important; }
+  }
+</style>

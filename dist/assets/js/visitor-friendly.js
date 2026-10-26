@@ -565,6 +565,9 @@
 
   function enhanceBreadcrumbs(main) {
     if (!main || pageKey(currentFile()) === "index") return;
+    // Editorial collections supply a deliberate hierarchy and matching JSON-LD.
+    // Keep that server-rendered trail instead of inferring one from the URL.
+    if (main.querySelector('nav[data-authored-breadcrumbs]')) return;
     const labels = {
       "about.html": "About the clinic", "services.html": "Services", "process.html": "What to expect",
       "resources.html": "Resources", "location.html": "Find the clinic", "contact.html": "Contact",
