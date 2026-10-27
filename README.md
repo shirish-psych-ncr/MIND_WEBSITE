@@ -50,7 +50,6 @@ npm test                   # python unittest suite
 npm run typecheck          # Astro and TypeScript diagnostics
 npm run check              # full type, syntax, test, lint, build, and schema gate
 npm run build:ci           # shipping path: build, generated indexes, and build validation
-npm run check:full         # optional exhaustive pre-release quality suite
 npm run audit:console      # browser smoke test; requires dist served on port 8765
 npm run clean              # delete generated audit dirs & __pycache__
 ```
