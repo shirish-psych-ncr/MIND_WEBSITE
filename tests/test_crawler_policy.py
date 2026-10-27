@@ -123,9 +123,20 @@ LD_RE = re.compile(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>
 RAW_RE = re.compile(r'String\.raw`(.*?)`', re.S)
 
 
+SETHTML_LD_RE = re.compile(
+    r'<script[^>]*type="application/ld\+json"[^>]*set:html=\{JSON\.stringify\([^)]*\)\}\s*/?>',
+    re.S)
+
+
 def ld_blocks(text):
     """Yield JSON-LD payloads from rendered HTML and from Astro sources where
-    head markup is stored inside String.raw template literals."""
+    head markup is stored inside String.raw template literals.
+
+    Astro sources that inject pre-serialized schema via
+    `set:html={JSON.stringify(...)}` carry no literal JSON in the file; the
+    payload is valid by construction (JSON.stringify cannot emit invalid
+    JSON), so those empty script tags are stripped rather than parsed."""
+    text = SETHTML_LD_RE.sub("", text)
     seen = set()
     for source in (text, "\n".join(RAW_RE.findall(text))):
         for block in LD_RE.findall(source):
