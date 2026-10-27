@@ -26,7 +26,7 @@ See [the documentation index](docs/README.md) for current operational guidance.
 | `assets/css/` | Global stylesheets (+ `min/` twins, generated) |
 | `assets/css-tools/` | Per-tool stylesheets (+ `min/` twins, generated) |
 | `assets/js/` | Site & tool JavaScript |
-| `scripts/` | Build, audit, and one-time migration scripts |
+| `scripts/` | Build, validation, and audit scripts |
 | `scripts/a11y_lint/` | 12-tool accessibility/readability/adaptability lint suite |
 | `config/` | Linter configs (`htmlvalidate.json`, `eslintrc.jsx-a11y.json`) |
 | `tests/` | Python unittest suite (`npm test`) |
