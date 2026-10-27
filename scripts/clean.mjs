@@ -1,9 +1,11 @@
 import { rmSync } from 'node:fs';
 
 const generatedPaths = [
-  'output/responsive-audit',
-  'output/layout',
-  'output/playwright',
+  'dist',
+  '.astro',
+  'output',
+  '.playwright-cli',
+  'build-ci.log',
   'tests/__pycache__',
   'scripts/__pycache__',
 ];

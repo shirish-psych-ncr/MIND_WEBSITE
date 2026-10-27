@@ -43,7 +43,7 @@ does not represent a production deployment or a complete WCAG conformance claim.
 
 ## Repeatable audit
 
-`npm run audit:accessibility` (also `npm run audit:responsive`) uses the installed
+`npm run audit:accessibility` uses the installed
 Playwright and axe-core modules. The old `AXE_PATH` requirement and repository-wide
 HTML glob have been removed. It reads `dist/route-manifest.json`, serves the built
 site on a temporary local port, blocks external requests and service workers,

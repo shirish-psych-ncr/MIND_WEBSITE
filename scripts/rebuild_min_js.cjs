@@ -1,5 +1,5 @@
 // Rebuilds minified JS twins for assets/js/*.js -> assets/js/min/*.min.js
-// Mirrors scripts/rebuild_min_css.cjs. Run via `npm run build:min:js`.
+// Mirrors scripts/rebuild_min_css.cjs. Run via `npm run build:min`.
 const esbuild = require('esbuild'), fs = require('fs'), path = require('path');
 function walk(d) {
   return fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => {

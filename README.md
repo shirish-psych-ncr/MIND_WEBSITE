@@ -26,7 +26,7 @@ See [the documentation index](docs/README.md) for current operational guidance.
 | `assets/css/` | Global stylesheets (+ `min/` twins, generated) |
 | `assets/css-tools/` | Per-tool stylesheets (+ `min/` twins, generated) |
 | `assets/js/` | Site & tool JavaScript |
-| `scripts/` | Build, audit, and one-time migration scripts |
+| `scripts/` | Build, validation, and audit scripts |
 | `scripts/a11y_lint/` | 12-tool accessibility/readability/adaptability lint suite |
 | `config/` | Linter configs (`htmlvalidate.json`, `eslintrc.jsx-a11y.json`) |
 | `tests/` | Python unittest suite (`npm test`) |
@@ -50,7 +50,6 @@ npm test                   # python unittest suite
 npm run typecheck          # Astro and TypeScript diagnostics
 npm run check              # full type, syntax, test, lint, build, and schema gate
 npm run build:ci           # shipping path: build, generated indexes, and build validation
-npm run check:full         # optional exhaustive pre-release quality suite
 npm run audit:console      # browser smoke test; requires dist served on port 8765
 npm run clean              # delete generated audit dirs & __pycache__
 ```
