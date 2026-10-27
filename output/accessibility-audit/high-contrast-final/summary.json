@@ -1,0 +1,750 @@
+{
+  "scans": 20,
+  "routes": 5,
+  "widths": [
+    390,
+    1440
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "scenario": "high-contrast",
+  "errors": [],
+  "criticalContrast": [
+    {
+      "route": "/resources",
+      "width": 1440,
+      "theme": "light",
+      "nodes": [
+        {
+          "target": [
+            ".skip-link"
+          ],
+          "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    },
+    {
+      "route": "/resources",
+      "width": 1440,
+      "theme": "dark",
+      "nodes": [
+        {
+          "target": [
+            ".skip-link"
+          ],
+          "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    },
+    {
+      "route": "/fees",
+      "width": 1440,
+      "theme": "light",
+      "nodes": [
+        {
+          "target": [
+            ".skip-link"
+          ],
+          "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    },
+    {
+      "route": "/fees",
+      "width": 1440,
+      "theme": "dark",
+      "nodes": [
+        {
+          "target": [
+            ".skip-link"
+          ],
+          "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "target": [
+            "#article-heading-8"
+          ],
+          "html": "<h3 id=\"article-heading-8\">Government Insurance</h3>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "target": [
+            "#article-heading-9"
+          ],
+          "html": "<h3 id=\"article-heading-9\">Private Insurance</h3>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "target": [
+            "#article-heading-10"
+          ],
+          "html": "<h3 id=\"article-heading-10\">Corporate Plans</h3>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    },
+    {
+      "route": "/doctors",
+      "width": 390,
+      "theme": "light",
+      "nodes": [
+        {
+          "target": [
+            ".seo-answer > strong"
+          ],
+          "html": "<strong>Direct answer:</strong>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    },
+    {
+      "route": "/doctors",
+      "width": 1440,
+      "theme": "light",
+      "nodes": [
+        {
+          "target": [
+            ".skip-link"
+          ],
+          "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        },
+        {
+          "target": [
+            ".seo-answer > strong"
+          ],
+          "html": "<strong>Direct answer:</strong>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    },
+    {
+      "route": "/doctors",
+      "width": 1440,
+      "theme": "dark",
+      "nodes": [
+        {
+          "target": [
+            ".skip-link"
+          ],
+          "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    },
+    {
+      "route": "/emergency",
+      "width": 1440,
+      "theme": "light",
+      "nodes": [
+        {
+          "target": [
+            ".skip-link"
+          ],
+          "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    },
+    {
+      "route": "/emergency",
+      "width": 1440,
+      "theme": "dark",
+      "nodes": [
+        {
+          "target": [
+            ".skip-link"
+          ],
+          "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "color-contrast": {
+      "scans": 8,
+      "nodes": 191,
+      "samples": [
+        {
+          "route": "/resources",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "ol > li:nth-child(1) > a[href=\"/\"]"
+              ],
+              "html": "<a href=\"/\">Home</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#5b0034",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.29,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li[aria-current=\"page\"] > span:nth-child(2)"
+              ],
+              "html": "<span>Resources</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#111111",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.03,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1>Simple tools for difficult moments</h1>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 19.2pt (25.6px), font weight: normal). Expected contrast ratio of 3:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 19.2pt (25.6px), font weight: normal). Expected contrast ratio of 3:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.04,
+                    "fontSize": "19.2pt (25.6px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "3:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".seo-answer > strong"
+              ],
+              "html": "<strong>Direct answer:</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.34 (foreground color: #ffd3df, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.34 (foreground color: #ffd3df, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#ffd3df",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.34,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/resources",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "#site-logo-name"
+              ],
+              "html": "<span class=\"logo-text\" id=\"site-logo-name\">Mind Grace</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.66 (foreground color: #ffb4ca, background color: #ffffff, font size: 13.0pt (17.28px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.66 (foreground color: #ffb4ca, background color: #ffffff, font size: 13.0pt (17.28px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#ffb4ca",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.66,
+                    "fontSize": "13.0pt (17.28px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".desktop-nav > ul > li:nth-child(1) > a[href=\"/\"]"
+              ],
+              "html": "<a href=\"/\">Home</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 11.9pt (15.84px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 11.9pt (15.84px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.04,
+                    "fontSize": "11.9pt (15.84px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".desktop-nav > ul > li:nth-child(2) > a[href$=\"about\"]"
+              ],
+              "html": "<a href=\"/about\">About</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 11.9pt (15.84px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 11.9pt (15.84px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.04,
+                    "fontSize": "11.9pt (15.84px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".desktop-nav > ul > li:nth-child(5) > a[href$=\"teleconsultation\"]"
+              ],
+              "html": "<a href=\"/teleconsultation\">Online consultations</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 11.9pt (15.84px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 11.9pt (15.84px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.04,
+                    "fontSize": "11.9pt (15.84px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "ol > li:nth-child(1) > a[href=\"/\"]"
+              ],
+              "html": "<a href=\"/\">Home</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#5b0034",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.29,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li:nth-child(2) > a[href$=\"contact\"]"
+              ],
+              "html": "<a href=\"/contact\">Visit and contact</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#5b0034",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.29,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li[aria-current=\"page\"] > span:nth-child(2)"
+              ],
+              "html": "<span>Fees and payments</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#111111",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.03,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1>Fees, payments, and what your visit includes</h1>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.04,
+                    "fontSize": "21.0pt (28px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "3:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "ol > li:nth-child(1) > a[href=\"/\"]"
+              ],
+              "html": "<a href=\"/\">Home</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#5b0034",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.29,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li:nth-child(2) > a[href$=\"contact\"]"
+              ],
+              "html": "<a href=\"/contact\">Visit and contact</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#5b0034",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.29,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li[aria-current=\"page\"] > span:nth-child(2)"
+              ],
+              "html": "<span>Fees and payments</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#111111",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.03,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1>Fees, payments, and what your visit includes</h1>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 32.4pt (43.2px), font weight: normal). Expected contrast ratio of 3:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 32.4pt (43.2px), font weight: normal). Expected contrast ratio of 3:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.04,
+                    "fontSize": "32.4pt (43.2px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "3:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/doctors",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "ol > li:nth-child(1) > a[href=\"/\"]"
+              ],
+              "html": "<a href=\"/\">Home</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#5b0034",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.29,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "ol > li:nth-child(2) > a[href$=\"about\"]"
+              ],
+              "html": "<a href=\"/about\">About the clinic</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#5b0034",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.29,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li[aria-current=\"page\"] > span:nth-child(2)"
+              ],
+              "html": "<span>Care team</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#111111",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.03,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".seo-answer > strong"
+              ],
+              "html": "<strong>Direct answer:</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.34 (foreground color: #ffd3df, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.34 (foreground color: #ffd3df, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#ffd3df",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.34,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/doctors",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "ol > li:nth-child(1) > a[href=\"/\"]"
+              ],
+              "html": "<a href=\"/\">Home</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#5b0034",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.29,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "ol > li:nth-child(2) > a[href$=\"about\"]"
+              ],
+              "html": "<a href=\"/about\">About the clinic</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.29 (foreground color: #5b0034, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#5b0034",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.29,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li[aria-current=\"page\"] > span:nth-child(2)"
+              ],
+              "html": "<span>Care team</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.03 (foreground color: #111111, background color: #1d1217, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#111111",
+                    "bgColor": "#1d1217",
+                    "contrastRatio": 1.03,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".seo-answer > strong"
+              ],
+              "html": "<strong>Direct answer:</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.34 (foreground color: #ffd3df, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.34 (foreground color: #ffd3df, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#ffd3df",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.34,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "surfaces": {},
+  "overflow": []
+}

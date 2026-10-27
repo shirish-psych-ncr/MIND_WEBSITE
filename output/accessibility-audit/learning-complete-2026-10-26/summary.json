@@ -1,0 +1,25 @@
+{
+  "scans": 48,
+  "routes": 12,
+  "widths": [
+    390,
+    1440
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "scenario": "default",
+  "errors": [
+    {
+      "route": "/blog/pages/child/mitochondria-and-autism",
+      "width": 390,
+      "theme": "light",
+      "error": "Error: page.goto: net::ERR_NETWORK_CHANGED at http://127.0.0.1:62902/blog/pages/child/mitochondria-and-autism\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:62902/blog/pages/child/mitochondria-and-autism\", waiting until \"load\"\u001b[22m\n"
+    }
+  ],
+  "criticalContrast": [],
+  "rules": {},
+  "surfaces": {},
+  "overflow": []
+}

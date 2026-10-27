@@ -1,0 +1,77 @@
+[
+  {
+    "route": "/",
+    "width": 320,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 320,
+    "issues": []
+  },
+  {
+    "route": "/academic-training",
+    "width": 320,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/academic-training",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/academic-training",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/academic-training",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/academic-training",
+    "width": 1440,
+    "issues": []
+  }
+]

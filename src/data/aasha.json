@@ -13,19 +13,20 @@
       "slug": "speech-language-therapy",
       "name": "Speech and language therapy",
       "title": "Speech Therapy in Greater Noida | Aasha",
-      "answer": "Aasha provides individualised speech and language therapy in Gamma 2, Greater Noida, supporting communication, understanding and expressing language, articulation and social communication.",
+      "answer": "Aasha provides individualised speech and language therapy in Gamma 2, Greater Noida, supporting understanding, expression, articulation and social communication—including gesture, pictures and other communication methods, not speech alone.",
       "heading": "Communication in everyday life",
       "areas": [
         "Understanding spoken language and following everyday conversations",
         "Expressing needs, choices and ideas using speech or other communication methods",
         "Articulation and speech clarity",
+        "Pre-linguistic skills such as pointing, gestures, turn-taking and joint attention in early play",
         "Social communication during play, family routines and school activities"
       ],
-      "prepare": "Share what your child currently communicates, which languages are used at home and school, and situations where communication is difficult. Previous reports and observations from teachers can help the team understand everyday needs.",
-      "process": "The team identifies communication priorities with the family and plans individualised activities. Where appropriate, alternative communication methods may be discussed. Parent guidance helps connect session goals with everyday routines.",
+      "prepare": "Share what your child currently communicates, which languages are used at home and school, and situations where communication is difficult. Note any words or gestures your child used before but no longer uses—loss of established communication deserves prompt mention rather than waiting for the appointment. Previous reports and teacher observations help the team understand everyday needs.",
+      "process": "The team identifies communication priorities with the family and plans individualised activities. Where speech is limited or inconsistent, augmentative and alternative communication—gestures, picture supports or devices—may be introduced; usable communication is valued over forced speech. Parent guidance connects session goals with home routines, including how to respond to every communication attempt, not only spoken words.",
       "faq": {
         "question": "Does speech therapy focus only on pronunciation?",
-        "answer": "No. Aasha’s speech and language service also considers understanding language, expressing needs and ideas, social communication and alternative communication methods where appropriate."
+        "answer": "No. Aasha’s speech and language service also considers understanding language, expressing needs and ideas, pre-linguistic skills such as pointing and gesture, social communication and alternative communication methods where appropriate. Support does not wait until a child can speak; it starts from how the child communicates today."
       },
       "related": {
         "href": "/blog/pages/child/speech-delay-red-flags",
@@ -36,19 +37,20 @@
       "slug": "occupational-therapy",
       "name": "Occupational therapy",
       "title": "Occupational Therapy in Greater Noida | Aasha",
-      "answer": "Aasha offers occupational therapy for children in Gamma 2, Greater Noida, focusing on fine motor skills, sensory needs, visual-motor coordination and everyday independence.",
+      "answer": "Aasha offers occupational therapy for children in Gamma 2, Greater Noida, focusing on fine motor skills, sensory responses, visual-motor coordination, play and everyday independence.",
       "heading": "Participation, comfort and independence",
       "areas": [
         "Fine motor activities and hand skills",
-        "Sensory needs that affect participation in daily routines",
+        "Sensory responses that affect participation—what a child finds overwhelming or actively seeks",
         "Visual-motor coordination during play and learning",
+        "Gross motor confidence, posture and movement across familiar environments",
         "Activities of daily living and age-appropriate independence"
       ],
-      "prepare": "Describe routines your child finds easy or difficult, including play, school tasks and daily self-care. Bring earlier therapy or developmental reports if available and share your child’s preferences and sensory needs.",
-      "process": "An individualised plan connects therapy activities with practical goals agreed with the family. Occupational therapy can be coordinated with speech therapy, special education or behavioural support when those services are relevant.",
+      "prepare": "Describe routines your child finds easy or difficult, including play, school tasks and daily self-care. Note reactions to noise, touch, clothing tags, food textures or busy places, and what calms or unsettles your child. Bring earlier therapy or developmental reports if available.",
+      "process": "An individualised plan connects therapy activities with practical goals agreed with the family. Rather than trying to extinguish harmless repetitive movement, the team looks at what a child gains from it—regulation, predictability or enjoyment—and builds communication and participation around genuine needs. Occupational therapy can be coordinated with speech therapy, special education or behavioural support when those services are relevant.",
       "faq": {
         "question": "How are occupational therapy goals chosen?",
-        "answer": "Goals are based on the child’s assessment, daily routines, strengths and family priorities. Progress is reviewed so the plan can respond to changing needs."
+        "answer": "Goals come from the child’s assessment, daily routines, strengths and family priorities—not from making a child look typical. Harmless self-communication or movement is not automatically a target to remove. Progress is reviewed so the plan responds to changing needs."
       },
       "related": {
         "href": "/blog/pages/child/sensory-overload-at-home",
@@ -59,19 +61,20 @@
       "slug": "special-education",
       "name": "Special education and learning support",
       "title": "Special Education in Greater Noida | Aasha",
-      "answer": "Aasha provides individualised special education and academic remediation in Greater Noida for children with learning difficulties, including specific learning disabilities.",
+      "answer": "Aasha provides individualised special education and academic remediation in Greater Noida for children with learning difficulties, including specific learning disabilities such as dyslexia, dysgraphia and dyscalculia.",
       "heading": "Learning support built around the child",
       "areas": [
         "Reading and literacy needs, including dyslexia",
         "Writing needs, including dysgraphia",
         "Mathematics needs, including dyscalculia",
-        "Learning gaps, classroom participation and school-support planning"
+        "Learning gaps, classroom participation and school-support planning",
+        "Adapting instruction for children whose profile is uneven—strong understanding alongside slow written output"
       ],
-      "prepare": "Bring school feedback, examples of schoolwork and previous assessments if available. Share which tasks cause frustration, what your child enjoys learning and the support already tried at home or school.",
-      "process": "Assessment findings inform individualised learning goals and academic remediation. The team can discuss practical home and classroom support with families, and coordinate with schools with family consent.",
+      "prepare": "Bring school feedback, examples of schoolwork and previous assessments if available. Share which tasks cause frustration, what your child enjoys learning and the support already tried at home or school. A child who understands verbally but struggles on paper presents a different plan from one with broad difficulty, so concrete examples matter more than labels.",
+      "process": "Assessment findings inform individualised learning goals and academic remediation. Sessions build on the child’s actual strengths—special interests, visual reasoning or spoken knowledge—rather than working only on weaknesses, and accommodations such as extra time or alternative ways to demonstrate learning can be discussed. The team can explain practical home and classroom support with families and coordinate with schools with family consent.",
       "faq": {
         "question": "Is special education the same as a learning-disability assessment?",
-        "answer": "No. Assessment explores the child’s learning profile and support needs; special education provides individualised learning support. The team can explain whether an assessment would help plan the next step."
+        "answer": "No. Assessment explores the child’s learning profile and support needs; special education provides individualised learning support. Difficulty copying from a board or slow handwriting may have several explanations—the team can explain whether an assessment would help plan the next step."
       },
       "related": {
         "href": "/learning-disability-assessment",
@@ -82,7 +85,7 @@
       "slug": "behavioural-support",
       "name": "ABA and behavioural support",
       "title": "Child Behavioural Support & ABA | Aasha Greater Noida",
-      "answer": "Aasha offers individualised ABA and behavioural support in Greater Noida for communication, emotional regulation, positive social participation and everyday life skills.",
+      "answer": "Aasha offers individualised ABA-informed and behavioural support in Greater Noida for communication, emotional regulation, positive social participation and everyday life skills—planned around each child rather than a fixed programme.",
       "heading": "Understanding behaviour in context",
       "areas": [
         "Communication and functional life skills",
@@ -90,11 +93,11 @@
         "Challenging behaviours that affect home or school life",
         "Positive social interaction and family support"
       ],
-      "prepare": "Describe what happens before, during and after a difficult situation, what your child may be communicating and what helps them feel comfortable. Include relevant health, communication and sensory information.",
-      "process": "The team discusses assessment findings and goals with the family before planning behavioural interventions. Support is coordinated with other services when appropriate, and goals and progress are reviewed with parents.",
+      "prepare": "Describe what happens before, during and after a difficult situation, what your child may be communicating and what helps them feel comfortable. Include relevant health, communication and sensory information—pain, constipation, poor sleep or an inability to ask for help can look like behaviour. Note what has already helped, however briefly.",
+      "process": "The team discusses assessment findings and goals with the family before planning behavioural interventions. Support focuses on teaching useful communication and adjusting environments so difficult behaviour is less necessary, rather than simply suppressing harmless movements or forcing eye contact. Interventions are coordinated with other services when appropriate, and goals and progress are reviewed with parents; a plan that increases distress is reconsidered instead of blamed on the child.",
       "faq": {
         "question": "Does every child need the same behavioural programme?",
-        "answer": "No. Aasha plans support around each child’s assessment, communication, sensory needs and family priorities. The team explains the proposed approach and reviews the plan over time."
+        "answer": "No. Aasha plans support around each child’s assessment, communication, sensory needs and family priorities. Behaviour is treated as information about an unmet need, not defiance. The team explains the proposed approach and reviews the plan over time."
       },
       "related": {
         "href": "/child-student-mental-health",
@@ -105,19 +108,20 @@
       "slug": "developmental-assessment",
       "name": "Child developmental and psychological assessments",
       "title": "Child Developmental Assessment | Aasha Greater Noida",
-      "answer": "Dr. Sana Firdos leads Aasha’s child developmental and psychological assessments in Greater Noida, using cognitive, behavioural and developmental evaluations to guide support.",
+      "answer": "Dr. Sana Firdos leads Aasha’s child developmental and psychological assessments in Greater Noida, using cognitive, behavioural and developmental evaluations to guide support—not a single test that decides a child’s future.",
       "heading": "Clarity before an intervention plan",
       "areas": [
         "Developmental strengths and areas needing support",
         "Cognitive and IQ assessment where relevant",
         "Behavioural and emotional concerns",
-        "Diagnostic questions about learning, attention and development"
+        "Diagnostic questions about learning, attention and development",
+        "Autism and ADHD evaluation, including observations across settings and structured tools where appropriate"
       ],
-      "prepare": "Bring developmental and medical history, earlier reports, school feedback and the questions you want the assessment to address. The team confirms relevant tools, sessions and report arrangements before booking.",
-      "process": "Dr. Sana Firdos, Clinical Psychologist and Head of Assessments, leads the assessment pathway. Findings inform an individualised therapy roadmap with Dr. Anita Sharma’s clinical oversight. The selection of tests depends on the referral question.",
+      "prepare": "Bring developmental and medical history, earlier reports, school feedback and the questions you want the assessment to address. Note early communication signs—pointing, gestures, first words—and any loss of skills previously used consistently, since timing shapes the pathway. The team confirms relevant tools, sessions and report arrangements before booking.",
+      "process": "Dr. Sana Firdos, Clinical Psychologist and Head of Assessments, leads the assessment pathway. Findings inform an individualised therapy roadmap with Dr. Anita Sharma’s clinical oversight. The selection of tests depends on the referral question; results are explained as a profile of strengths and needs rather than a single number, and assessment can proceed even when families begin without a diagnosis or a clear label.",
       "faq": {
         "question": "Will every child receive the same tests?",
-        "answer": "No. The assessment plan depends on the child’s age, developmental history, presenting concerns and referral question. The team confirms the scope and explains the findings with the family."
+        "answer": "No. The assessment plan depends on the child’s age, developmental history, presenting concerns and referral question. Tools answer different questions—a screening checklist, a diagnostic evaluation and a functional assessment are not interchangeable. The team confirms the scope and explains the findings with the family."
       },
       "related": {
         "href": "/adhd-autism-assessment",
@@ -128,19 +132,19 @@
       "slug": "child-psychiatry",
       "name": "Child psychiatric consultation",
       "title": "Child Psychiatric Consultation | Aasha Greater Noida",
-      "answer": "Consult Dr. Anita Sharma at Aasha in Greater Noida for childhood psychiatric and neurodevelopmental concerns, with coordinated psychological assessment and therapy planning.",
+      "answer": "Consult Dr. Anita Sharma at Aasha in Greater Noida for childhood psychiatric and neurodevelopmental concerns, with coordinated psychological assessment and therapy planning—begin with a concern, not necessarily a diagnosis.",
       "heading": "A coordinated starting point for families",
       "areas": [
         "Developmental, behavioural and emotional concerns",
         "Attention and school-related difficulties",
-        "Childhood psychiatric and neurodevelopmental conditions",
+        "Childhood psychiatric and neurodevelopmental conditions, including autism, ADHD and co-occurring anxiety or mood concerns",
         "Coordination of medical, psychological and therapy goals"
       ],
-      "prepare": "Share your main concerns, developmental and medical history, any current medicines, previous reports and school observations. You can begin with a concern even if your child has not received a diagnosis.",
-      "process": "Dr. Anita Sharma, Consultant Psychiatrist and Clinical Director, reviews the child’s needs and discusses next steps with the family. These may include psychological assessment, therapy planning, follow-up or referral, depending on the clinical evaluation.",
+      "prepare": "Share your main concerns, developmental and medical history, any current medicines, previous reports and school observations. You can begin with a concern even if your child has not received a diagnosis. Mention anything that changed quickly—new aggression, lost skills, poor sleep or reduced awareness—so the team can judge urgency before the appointment.",
+      "process": "Dr. Anita Sharma, Consultant Psychiatrist and Clinical Director, reviews the child’s needs and discusses next steps with the family. These may include psychological assessment, therapy planning, follow-up or referral, depending on the clinical evaluation. Where medicine is considered, it forms part of a broader plan with agreed goals and monitoring; treatment decisions are explained rather than presented as fixed protocols.",
       "faq": {
         "question": "Do we need a diagnosis before booking?",
-        "answer": "No. Families can begin by describing their concerns. The consultation helps clarify which assessment, intervention or further referral may be appropriate."
+        "answer": "No. Families can begin by describing their concerns. The consultation helps clarify which assessment, intervention or further referral may be appropriate—and whether any feature needs faster medical attention."
       },
       "related": {
         "href": "/dr-anita-sharma",
@@ -172,6 +176,18 @@
     {
       "question": "How is Aasha related to the services on the Mind Grace website?",
       "answer": "All child-related care on this website comes under Aasha Child Development & Early Intervention Centre. Adult care and academic training continue under Mind Grace."
+    },
+    {
+      "question": "My child lost words or skills they used before. Is that urgent?",
+      "answer": "Loss of an established skill deserves prompt medical discussion—contact your paediatrician or Aasha and say explicitly that skills have been lost. If a child is difficult to wake, has breathing difficulty, sudden weakness or a prolonged seizure, seek emergency care immediately rather than waiting for a developmental appointment."
+    },
+    {
+      "question": "Does Aasha recommend special diets, supplements or biomedical protocols for autism?",
+      "answer": "No. Aasha focuses on assessment, therapy and coordinated medical care. Elimination diets, supplement stacks or tests marketed as autism treatments should be discussed with your clinician first; restriction without a specific medical reason can harm nutrition, and unexplained worsening should be assessed rather than called detoxification."
+    },
+    {
+      "question": "Can my child start therapy before receiving a diagnosis?",
+      "answer": "Often yes. Support planning can begin from observed needs—communication, sensory comfort, learning or regulation—while assessment continues. A diagnosis may help explain needs and access services, but families do not need to wait for one to start a practical conversation about support."
     }
   ]
 }

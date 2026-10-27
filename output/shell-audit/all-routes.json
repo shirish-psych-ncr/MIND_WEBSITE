@@ -1,0 +1,2442 @@
+[
+  {
+    "route": "/404",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/aasha",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/about",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/academic-training",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/addiction-substance-use",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/adhd-autism-assessment",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/anxiety-therapy-near-me",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/approach",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/assessments",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/awareness-and-patient-rights",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/bipolar-mood-disorders",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/adult",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/children",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/iilm-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/aiims-delhi-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-aips-noida-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-greater-noida-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/apeejay-stya-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/aud-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/central-university-haryana-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/christ-delhi-ncr-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/du-jamia-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/galgotias-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gautam-buddha-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gd-goenka-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gims-greater-noida-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/government-colleges-noida-faridabad-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gs-medical-college-psychiatry-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gurugram-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/hrit-ghaziabad-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ibhas-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ignou-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iilm-gurugram-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iilm-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iimt-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ims-ghaziabad-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jamia-hamdard-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jgu-sonipat-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jiit-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/kr-mangalam-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/lingayas-faridabad-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mamc-delhi-psychiatry-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mindfulness-performance-exam-anxiety",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mriirs-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mvn-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/nfsu-delhi-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/nicfs-rohini-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/niu-greater-noida-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/overthinking-vs-anxiety",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/pdm-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/psychiatrist-vs-psychologist-depression",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/psychology-institutions-delhi-ncr",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/santosh-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/scheduled-worry-time-technique",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sgt-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sharda-university-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sleep-and-anxiety-cycle",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/stimulus-control-therapy",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/tiss-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/understanding-anxiety-clinical-treatment",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/vimhans-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/when-to-see-a-psychiatrist",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/early-signs-of-autism",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/school-concerns-and-adhd",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/sensory-overload-at-home",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/speech-delay-red-flags",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/book",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/child-development",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/child-student-mental-health",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/clinical-psychology-internship",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/conditions",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/consent",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/depression-anxiety",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/depression-in-older-adults",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/depression-treatment-ncr",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/disclaimer",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/doctors",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/dr-anita-sharma",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/emergency",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/evidence-based-therapies",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/faq",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/fees",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/gallery",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/high-functioning-depression-guide",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/landing",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/learning-disability-assessment",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/location",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/mind-grace",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/ocd-panic-ptsd",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/online-therapy-india",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/perceived-burdensomeness",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/privacy",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/process",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-greater-noida",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-in-noida",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-vs-psychologist",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/psychiatry",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/psychology-counselling",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/psychosis-schizophrenia",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/resources",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/schizophrenia-bipolar-care",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/services",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/sleep-and-autism-guide-indian-parents",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/sleep-eating-disorders",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/specialized-consultations",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/student-internship-guides",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/teleconsultation",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/terms",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/testimonials",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/thank-you",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/therapy",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/tools/butterfly-tapper",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/tools/eye-movement",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/tools/guided-breathing",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/tools/horizon-scan",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/tools/hypnos-fractal",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/tools/leaf-on-stream",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/trauma-grief-support",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/404",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/aasha",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/about",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/academic-training",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/addiction-substance-use",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/adhd-autism-assessment",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/anxiety-therapy-near-me",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/approach",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/assessments",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/awareness-and-patient-rights",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/bipolar-mood-disorders",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/adult",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/children",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/iilm-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/aiims-delhi-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-aips-noida-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-greater-noida-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/apeejay-stya-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/aud-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/central-university-haryana-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/christ-delhi-ncr-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/du-jamia-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/galgotias-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gautam-buddha-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gd-goenka-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gims-greater-noida-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/government-colleges-noida-faridabad-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gs-medical-college-psychiatry-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gurugram-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/hrit-ghaziabad-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ibhas-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ignou-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iilm-gurugram-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iilm-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iimt-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ims-ghaziabad-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jamia-hamdard-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jgu-sonipat-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jiit-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/kr-mangalam-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/lingayas-faridabad-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mamc-delhi-psychiatry-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mindfulness-performance-exam-anxiety",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mriirs-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mvn-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/nfsu-delhi-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/nicfs-rohini-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/niu-greater-noida-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/overthinking-vs-anxiety",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/pdm-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/psychiatrist-vs-psychologist-depression",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/psychology-institutions-delhi-ncr",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/santosh-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/scheduled-worry-time-technique",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sgt-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sharda-university-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sleep-and-anxiety-cycle",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/stimulus-control-therapy",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/tiss-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/understanding-anxiety-clinical-treatment",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/vimhans-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/when-to-see-a-psychiatrist",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/early-signs-of-autism",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/school-concerns-and-adhd",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/sensory-overload-at-home",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/speech-delay-red-flags",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/book",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/child-development",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/child-student-mental-health",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/clinical-psychology-internship",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/conditions",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/consent",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/depression-anxiety",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/depression-in-older-adults",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/depression-treatment-ncr",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/disclaimer",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/doctors",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/dr-anita-sharma",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/emergency",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/evidence-based-therapies",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/faq",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/fees",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/gallery",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/high-functioning-depression-guide",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/landing",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/learning-disability-assessment",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/location",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/mind-grace",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/ocd-panic-ptsd",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/online-therapy-india",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/perceived-burdensomeness",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/privacy",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/process",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-greater-noida",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-in-noida",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-vs-psychologist",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/psychiatry",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/psychology-counselling",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/psychosis-schizophrenia",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/resources",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/schizophrenia-bipolar-care",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/services",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/sleep-and-autism-guide-indian-parents",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/sleep-eating-disorders",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/specialized-consultations",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/student-internship-guides",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/teleconsultation",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/terms",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/testimonials",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/thank-you",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/therapy",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/tools/butterfly-tapper",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/tools/eye-movement",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/tools/guided-breathing",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/tools/horizon-scan",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/tools/hypnos-fractal",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/tools/leaf-on-stream",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/trauma-grief-support",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/404",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/aasha",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/about",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/academic-training",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/addiction-substance-use",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/adhd-autism-assessment",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/anxiety-therapy-near-me",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/approach",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/assessments",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/awareness-and-patient-rights",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/bipolar-mood-disorders",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/adult",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/children",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/iilm-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/aiims-delhi-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-aips-noida-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-greater-noida-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/apeejay-stya-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/aud-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/central-university-haryana-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/christ-delhi-ncr-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/du-jamia-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/galgotias-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gautam-buddha-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gd-goenka-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gims-greater-noida-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/government-colleges-noida-faridabad-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gs-medical-college-psychiatry-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gurugram-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/hrit-ghaziabad-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ibhas-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ignou-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iilm-gurugram-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iilm-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iimt-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ims-ghaziabad-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jamia-hamdard-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jgu-sonipat-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jiit-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/kr-mangalam-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/lingayas-faridabad-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mamc-delhi-psychiatry-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mindfulness-performance-exam-anxiety",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mriirs-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mvn-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/nfsu-delhi-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/nicfs-rohini-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/niu-greater-noida-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/overthinking-vs-anxiety",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/pdm-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/psychiatrist-vs-psychologist-depression",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/psychology-institutions-delhi-ncr",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/santosh-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/scheduled-worry-time-technique",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sgt-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sharda-university-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sleep-and-anxiety-cycle",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/stimulus-control-therapy",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/tiss-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/understanding-anxiety-clinical-treatment",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/vimhans-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/when-to-see-a-psychiatrist",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/early-signs-of-autism",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/school-concerns-and-adhd",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/sensory-overload-at-home",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/speech-delay-red-flags",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/book",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/child-development",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/child-student-mental-health",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/clinical-psychology-internship",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/conditions",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/consent",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/depression-anxiety",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/depression-in-older-adults",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/depression-treatment-ncr",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/disclaimer",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/doctors",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/dr-anita-sharma",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/emergency",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/evidence-based-therapies",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/faq",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/fees",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/gallery",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/high-functioning-depression-guide",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/landing",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/learning-disability-assessment",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/location",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/mind-grace",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/ocd-panic-ptsd",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/online-therapy-india",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/perceived-burdensomeness",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/privacy",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/process",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-greater-noida",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-in-noida",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-vs-psychologist",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/psychiatry",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/psychology-counselling",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/psychosis-schizophrenia",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/resources",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/schizophrenia-bipolar-care",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/services",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/sleep-and-autism-guide-indian-parents",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/sleep-eating-disorders",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/specialized-consultations",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/student-internship-guides",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/teleconsultation",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/terms",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/testimonials",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/thank-you",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/therapy",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/tools/butterfly-tapper",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/tools/eye-movement",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/tools/guided-breathing",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/tools/horizon-scan",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/tools/hypnos-fractal",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/tools/leaf-on-stream",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/trauma-grief-support",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/404",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/aasha",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/about",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/academic-training",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/addiction-substance-use",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/adhd-autism-assessment",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/anxiety-therapy-near-me",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/approach",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/assessments",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/awareness-and-patient-rights",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/bipolar-mood-disorders",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/adult",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/children",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/iilm-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/aiims-delhi-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-aips-noida-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-greater-noida-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/amity-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/apeejay-stya-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/aud-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/central-university-haryana-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/christ-delhi-ncr-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/du-jamia-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/galgotias-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gautam-buddha-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gd-goenka-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gims-greater-noida-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/government-colleges-noida-faridabad-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gs-medical-college-psychiatry-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/gurugram-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/hrit-ghaziabad-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ibhas-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ignou-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iilm-gurugram-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iilm-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/iimt-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/ims-ghaziabad-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jamia-hamdard-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jgu-sonipat-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/jiit-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/kr-mangalam-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/lingayas-faridabad-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mamc-delhi-psychiatry-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mindfulness-performance-exam-anxiety",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mriirs-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/mvn-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/nfsu-delhi-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/nicfs-rohini-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/niu-greater-noida-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/overthinking-vs-anxiety",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/pdm-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/psychiatrist-vs-psychologist-depression",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/psychology-institutions-delhi-ncr",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/santosh-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/scheduled-worry-time-technique",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sgt-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sharda-university-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/sleep-and-anxiety-cycle",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/stimulus-control-therapy",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/tiss-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/understanding-anxiety-clinical-treatment",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/vimhans-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/adult/when-to-see-a-psychiatrist",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/early-signs-of-autism",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/school-concerns-and-adhd",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/sensory-overload-at-home",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/blog/pages/child/speech-delay-red-flags",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/book",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/child-development",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/child-student-mental-health",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/clinical-psychology-internship",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/conditions",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/consent",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/depression-anxiety",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/depression-in-older-adults",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/depression-treatment-ncr",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/disclaimer",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/doctors",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/dr-anita-sharma",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/emergency",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/evidence-based-therapies",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/faq",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/fees",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/gallery",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/high-functioning-depression-guide",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/landing",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/learning-disability-assessment",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/location",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/mind-grace",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/ocd-panic-ptsd",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/online-therapy-india",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/perceived-burdensomeness",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/privacy",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/process",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-greater-noida",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-in-noida",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/psychiatrist-vs-psychologist",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/psychiatry",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/psychology-counselling",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/psychosis-schizophrenia",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/resources",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/schizophrenia-bipolar-care",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/services",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/sleep-and-autism-guide-indian-parents",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/sleep-eating-disorders",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/specialized-consultations",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/student-internship-guides",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/teleconsultation",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/terms",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/testimonials",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/thank-you",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/therapy",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/tools/butterfly-tapper",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/tools/eye-movement",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/tools/guided-breathing",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/tools/horizon-scan",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/tools/hypnos-fractal",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/tools/leaf-on-stream",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/trauma-grief-support",
+    "width": 1440,
+    "issues": []
+  }
+]

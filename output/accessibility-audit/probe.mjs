@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+const browser=await chromium.launch();
+const page=await browser.newPage({viewport:{width:390,height:900},colorScheme:'dark',serviceWorkers:'block'});
+await page.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:8765')?r.continue():r.abort());
+await page.goto('http://127.0.0.1:8765/');
+await page.waitForFunction(()=>document.body.dataset.shellBound==='true');
+await page.addStyleTag({path:'assets/css/site-foundation.css'});
+await page.evaluate(()=>document.documentElement.classList.add('a11y-contrast'));
+console.log(await page.evaluate(()=>['html','body','.mg-gateway','.site-header'].map(s=>{let e=document.querySelector(s),c=getComputedStyle(e);return {s,cls:e.className,bg:c.backgroundColor,mg:c.getPropertyValue('--mg-surface-strong'),text:c.color};})));
+await page.goto('http://127.0.0.1:8765/tools/leaf-on-stream');
+await page.waitForFunction(()=>document.body.dataset.shellBound==='true');
+console.log(await page.locator('.tool-viewbar__action[data-tool-view="window"]').first().evaluate(e=>{let r=e.getBoundingClientRect();return {rect:r.toJSON(),ancestors:[e.parentElement,e.parentElement.parentElement,e.closest('main')].filter(Boolean).map(a=>{let c=getComputedStyle(a);return {tag:a.className,rect:a.getBoundingClientRect().toJSON(),z:c.zIndex,position:c.position}}),hits:[.2,.5,.8].map(y=>document.elementsFromPoint(r.x+r.width/2,r.y+r.height*y).map(a=>a.tagName+'.'+a.className))};}));
+await browser.close();

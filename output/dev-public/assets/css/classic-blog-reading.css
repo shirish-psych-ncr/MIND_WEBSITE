@@ -1,0 +1,13 @@
+/* Reading aids retained for the older journal articles. */
+.article-related-grid{display:grid;gap:8px;margin-bottom:20px}
+.article-related-link{display:block;padding:8px 0;border-bottom:1px dotted var(--line)}
+.article-feedback{display:flex;flex-wrap:wrap;align-items:center;gap:12px;border-block:1px solid var(--line);padding:18px 0;margin:24px 0;font:14px/1.6 Arial,sans-serif}
+.article-feedback button{font:inherit;color:var(--accent);background:transparent;border:1px solid var(--line);padding:8px 12px;cursor:pointer}
+.article-feedback button:hover{background:#f5f0e6}
+.article-feedback button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.article-feedback-status{flex-basis:100%}
+.article-related .eyebrow{margin:28px 0 0}
+.article-related h2{margin-top:10px}
+.tool-related-reading__footer{font-size:15px}
+article img{max-width:100%;height:auto}
+@media print{.article-feedback{display:none}}

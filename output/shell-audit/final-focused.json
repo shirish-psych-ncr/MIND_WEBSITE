@@ -1,0 +1,102 @@
+[
+  {
+    "route": "/",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/landing",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/fees",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/tools/leaf-on-stream",
+    "width": 360,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/landing",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/fees",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/tools/leaf-on-stream",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/landing",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/fees",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/tools/leaf-on-stream",
+    "width": 1100,
+    "issues": []
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/contact",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/landing",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/fees",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "route": "/tools/leaf-on-stream",
+    "width": 1440,
+    "issues": []
+  }
+]

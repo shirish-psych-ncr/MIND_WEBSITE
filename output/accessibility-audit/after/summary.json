@@ -1,0 +1,807 @@
+{
+  "scans": 492,
+  "routes": 123,
+  "widths": [
+    390,
+    1440
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "scenario": "default",
+  "errors": [],
+  "rules": {
+    "color-contrast": {
+      "scans": 4,
+      "nodes": 14,
+      "samples": [
+        {
+          "route": "/emergency",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".emergency-alert > div > strong"
+              ],
+              "html": "<strong>If one line is busy, try another. Keep trying.</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #fef2f2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #fef2f2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#fef2f2",
+                    "contrastRatio": 1.04,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".emergency-alert > div > p"
+              ],
+              "html": "<p style=\"margin-top: 0.5rem;\">These helplines are staffed by trained counselors who can provide immediate support and guidance.</p>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.19 (foreground color: #f0dce3, background color: #fef2f2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.19 (foreground color: #f0dce3, background color: #fef2f2, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#f0dce3",
+                    "bgColor": "#fef2f2",
+                    "contrastRatio": 1.19,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/emergency",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                ".emergency-alert > div > strong"
+              ],
+              "html": "<strong>If one line is busy, try another. Keep trying.</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #fef2f2, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #fef2f2, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#fef2f2",
+                    "contrastRatio": 1.04,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".emergency-alert > div > p"
+              ],
+              "html": "<p style=\"margin-top: 0.5rem;\">These helplines are staffed by trained counselors who can provide immediate support and guidance.</p>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.19 (foreground color: #f0dce3, background color: #fef2f2, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.19 (foreground color: #f0dce3, background color: #fef2f2, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#f0dce3",
+                    "bgColor": "#fef2f2",
+                    "contrastRatio": 1.19,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/tools/butterfly-tapper",
+          "theme": "light",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1 class=\"tool-page-title\">Butterfly tapping for a brief grounding pause</h1>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.1 (foreground color: #24131a, background color: #080b12, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.1 (foreground color: #24131a, background color: #080b12, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1",
+                  "data": {
+                    "fgColor": "#24131a",
+                    "bgColor": "#080b12",
+                    "contrastRatio": 1.1,
+                    "fontSize": "21.0pt (28px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "3:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "ol > li:nth-child(1) > a[href=\"/\"]"
+              ],
+              "html": "<a href=\"/\">Home</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#580f2d",
+                    "bgColor": "#080b12",
+                    "contrastRatio": 1.42,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li:nth-child(2) > a[href$=\"resources\"]"
+              ],
+              "html": "<a href=\"/resources\">Resources</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#580f2d",
+                    "bgColor": "#080b12",
+                    "contrastRatio": 1.42,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li:nth-child(3) > a[href$=\"resources#tools\"]"
+              ],
+              "html": "<a href=\"/resources#tools\">Therapeutic tools</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#580f2d",
+                    "bgColor": "#080b12",
+                    "contrastRatio": 1.42,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/tools/butterfly-tapper",
+          "theme": "light",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1 class=\"tool-page-title\">Butterfly tapping for a brief grounding pause</h1>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.1 (foreground color: #24131a, background color: #080b12, font size: 40.5pt (54px), font weight: normal). Expected contrast ratio of 3:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.1 (foreground color: #24131a, background color: #080b12, font size: 40.5pt (54px), font weight: normal). Expected contrast ratio of 3:1",
+                  "data": {
+                    "fgColor": "#24131a",
+                    "bgColor": "#080b12",
+                    "contrastRatio": 1.1,
+                    "fontSize": "40.5pt (54px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "3:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "ol > li:nth-child(1) > a[href=\"/\"]"
+              ],
+              "html": "<a href=\"/\">Home</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#580f2d",
+                    "bgColor": "#080b12",
+                    "contrastRatio": 1.42,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li:nth-child(2) > a[href$=\"resources\"]"
+              ],
+              "html": "<a href=\"/resources\">Resources</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#580f2d",
+                    "bgColor": "#080b12",
+                    "contrastRatio": 1.42,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "li:nth-child(3) > a[href$=\"resources#tools\"]"
+              ],
+              "html": "<a href=\"/resources#tools\">Therapeutic tools</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.42 (foreground color: #580f2d, background color: #080b12, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#580f2d",
+                    "bgColor": "#080b12",
+                    "contrastRatio": 1.42,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "target-size": {
+      "scans": 2,
+      "nodes": 2,
+      "samples": [
+        {
+          "route": "/tools/leaf-on-stream",
+          "theme": "light",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".tool-viewbar__action[data-tool-view=\"window\"][type=\"button\"]"
+              ],
+              "html": "<button type=\"button\" class=\"tool-viewbar__action\" data-tool-view=\"window\" aria-pressed=\"true\">",
+              "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 170px by 12px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px.",
+              "checks": [
+                {
+                  "id": "target-size",
+                  "message": "Target has insufficient size because it is partially obscured (smallest space is 170px by 12px, should be at least 24px by 24px)",
+                  "data": {
+                    "messageKey": "partiallyObscured",
+                    "minSize": 24,
+                    "width": 170,
+                    "height": 12
+                  }
+                },
+                {
+                  "id": "target-offset",
+                  "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px.",
+                  "data": {
+                    "closestOffset": 2,
+                    "minOffset": 24
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/tools/leaf-on-stream",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".tool-viewbar__action[data-tool-view=\"window\"][type=\"button\"]"
+              ],
+              "html": "<button type=\"button\" class=\"tool-viewbar__action\" data-tool-view=\"window\" aria-pressed=\"true\">",
+              "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 170px by 12px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px.",
+              "checks": [
+                {
+                  "id": "target-size",
+                  "message": "Target has insufficient size because it is partially obscured (smallest space is 170px by 12px, should be at least 24px by 24px)",
+                  "data": {
+                    "messageKey": "partiallyObscured",
+                    "minSize": 24,
+                    "width": 170,
+                    "height": 12
+                  }
+                },
+                {
+                  "id": "target-offset",
+                  "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px.",
+                  "data": {
+                    "closestOffset": 2,
+                    "minOffset": 24
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "region": {
+      "scans": 4,
+      "nodes": 4,
+      "samples": [
+        {
+          "route": "/offline.html",
+          "theme": "light",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/offline.html",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/offline.html",
+          "theme": "light",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/offline.html",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "surfaces": {
+    "small-text-inset: p.notice": {
+      "count": 36,
+      "samples": [
+        {
+          "route": "/blog/adult",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "p.notice",
+          "text": "Tap a topic to filter articles instantly",
+          "inset": {
+            "left": 1,
+            "right": 56,
+            "top": 4,
+            "bottom": 4.2
+          },
+          "padding": "0px",
+          "html": "<p class=\"notice\">Tap a topic to filter articles instantly</p>"
+        },
+        {
+          "route": "/blog/adult",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "p.notice",
+          "text": "Showing all guides, with trusted starting points first",
+          "inset": {
+            "left": 1,
+            "right": 115,
+            "top": 4,
+            "bottom": 4.2
+          },
+          "padding": "0px",
+          "html": "<p class=\"notice\" data-active-state=\"\">Showing all guides, with trusted starting points first</p>"
+        },
+        {
+          "route": "/blog/adult",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "p.notice",
+          "text": "Mix of essential guides and useful reads",
+          "inset": {
+            "left": 1,
+            "right": 24,
+            "top": 4,
+            "bottom": 4.2
+          },
+          "padding": "0px",
+          "html": "<p class=\"notice\">Mix of essential guides and useful reads</p>"
+        }
+      ]
+    },
+    "small-text-inset: div.notice": {
+      "count": 16,
+      "samples": [
+        {
+          "route": "/blog/children",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "div.notice",
+          "text": "Written in clear, practical language",
+          "inset": {
+            "left": 1,
+            "right": 18,
+            "top": 3,
+            "bottom": 4.4
+          },
+          "padding": "0px",
+          "html": "<div class=\"notice\">Written in clear, practical language</div>"
+        },
+        {
+          "route": "/blog/children",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "div.notice",
+          "text": "Focused on real-life situations in India",
+          "inset": {
+            "left": 1,
+            "right": 33,
+            "top": 3,
+            "bottom": 4.4
+          },
+          "padding": "0px",
+          "html": "<div class=\"notice\">Focused on real-life situations in India</div>"
+        },
+        {
+          "route": "/blog/children",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "div.notice",
+          "text": "Designed to help you decide what to do next",
+          "inset": {
+            "left": 1,
+            "right": 5,
+            "top": 3,
+            "bottom": 4.4
+          },
+          "padding": "0px",
+          "html": "<div class=\"notice\">Designed to help you decide what to do next</div>"
+        }
+      ]
+    },
+    "small-text-inset: span.hero-badge": {
+      "count": 12,
+      "samples": [
+        {
+          "route": "/about",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "span.hero-badge",
+          "text": "About Our Clinic",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.1
+          },
+          "padding": "0px",
+          "html": "<span class=\"hero-badge\">About Our Clinic</span>"
+        },
+        {
+          "route": "/about",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "span.hero-badge",
+          "text": "About Our Clinic",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.1
+          },
+          "padding": "0px",
+          "html": "<span class=\"hero-badge\">About Our Clinic</span>"
+        },
+        {
+          "route": "/about",
+          "theme": "light",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "span.hero-badge",
+          "text": "About Our Clinic",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.8
+          },
+          "padding": "0px",
+          "html": "<span class=\"hero-badge\">About Our Clinic</span>"
+        }
+      ]
+    },
+    "text-outside-surface: div.table-scroll": {
+      "count": 4,
+      "samples": [
+        {
+          "route": "/fees",
+          "theme": "light",
+          "width": 390,
+          "kind": "text-outside-surface",
+          "selector": "div.table-scroll",
+          "text": "Mind Grace Neuropsychiatric Clinic - consultation, therapy, and assessment fees (INR)ServiceFee (INR)DurationW",
+          "inset": {
+            "left": 17,
+            "right": -372.7,
+            "top": 15,
+            "bottom": 16.1
+          },
+          "padding": "0px",
+          "html": "<div class=\"table-scroll\" role=\"region\" aria-label=\"Fee comparison table\" tabindex=\"0\"><table class=\"fee-comparison-table\"><caption>Mind Grace Neuropsychiatric Clinic - consultation, therapy, and assessment fees (INR)</caption><thead><tr><th scope=\"col\">Servic"
+        },
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 390,
+          "kind": "text-outside-surface",
+          "selector": "div.table-scroll",
+          "text": "Mind Grace Neuropsychiatric Clinic - consultation, therapy, and assessment fees (INR)ServiceFee (INR)DurationW",
+          "inset": {
+            "left": 17,
+            "right": -372.7,
+            "top": 15,
+            "bottom": 16.1
+          },
+          "padding": "0px",
+          "html": "<div class=\"table-scroll\" role=\"region\" aria-label=\"Fee comparison table\" tabindex=\"0\"><table class=\"fee-comparison-table\"><caption>Mind Grace Neuropsychiatric Clinic - consultation, therapy, and assessment fees (INR)</caption><thead><tr><th scope=\"col\">Servic"
+        },
+        {
+          "route": "/services",
+          "theme": "light",
+          "width": 390,
+          "kind": "text-outside-surface",
+          "selector": "div.table-scroll",
+          "text": "Mind Grace Neuropsychiatric Clinic service pathways compared (Greater Noida)PathwayWho it is forTypical format",
+          "inset": {
+            "left": 17,
+            "right": -287.8,
+            "top": 15,
+            "bottom": 16.1
+          },
+          "padding": "0px",
+          "html": "<div class=\"table-scroll\" role=\"region\" aria-label=\"Mind Grace service comparison table\" tabindex=\"0\"><table class=\"fee-comparison-table\"><caption>Mind Grace Neuropsychiatric Clinic service pathways compared (Greater Noida)</caption><thead><tr><th scope=\"col\">"
+        }
+      ]
+    },
+    "small-text-inset: div.hero-badge": {
+      "count": 4,
+      "samples": [
+        {
+          "route": "/location",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "div.hero-badge",
+          "text": "Plan your visit",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.1
+          },
+          "padding": "0px",
+          "html": "<div class=\"hero-badge\">Plan your visit</div>"
+        },
+        {
+          "route": "/location",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "div.hero-badge",
+          "text": "Plan your visit",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.1
+          },
+          "padding": "0px",
+          "html": "<div class=\"hero-badge\">Plan your visit</div>"
+        },
+        {
+          "route": "/location",
+          "theme": "light",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "div.hero-badge",
+          "text": "Plan your visit",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.8
+          },
+          "padding": "0px",
+          "html": "<div class=\"hero-badge\">Plan your visit</div>"
+        }
+      ]
+    },
+    "small-text-inset: div.hero-badge.bg-accent.mb-4": {
+      "count": 4,
+      "samples": [
+        {
+          "route": "/location",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "div.hero-badge.bg-accent.mb-4",
+          "text": "Visit Details",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.1
+          },
+          "padding": "0px",
+          "html": "<div class=\"hero-badge bg-accent mb-4\">Visit Details</div>"
+        },
+        {
+          "route": "/location",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "div.hero-badge.bg-accent.mb-4",
+          "text": "Visit Details",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.1
+          },
+          "padding": "0px",
+          "html": "<div class=\"hero-badge bg-accent mb-4\">Visit Details</div>"
+        },
+        {
+          "route": "/location",
+          "theme": "light",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "div.hero-badge.bg-accent.mb-4",
+          "text": "Visit Details",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.8
+          },
+          "padding": "0px",
+          "html": "<div class=\"hero-badge bg-accent mb-4\">Visit Details</div>"
+        }
+      ]
+    }
+  },
+  "overflow": []
+}

@@ -1,0 +1,214 @@
+[
+  {
+    "route": "/",
+    "width": 390,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".mobile-nav-intro"
+            ],
+            "html": "<p class=\"mobile-nav-intro\">Choose a section, then open a branch to see the pages inside it.</p>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it partially overlaps other elements",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "10.8pt (14.4px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscuring",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 34,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".mobile-nav-intro"
+            ],
+            "html": "<p class=\"mobile-nav-intro\">Choose a section, then open a branch to see the pages inside it.</p>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it partially overlaps other elements",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "10.8pt (14.4px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscuring",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 34,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mg-pill--soft"
+            ],
+            "html": "<span class=\"mg-pill mg-pill--soft\"><span class=\"mg-dot\" aria-hidden=\"true\"></span>Neuropsychiatric clinic &amp; training institute · Greater Noida, Delhi NCR</span>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 51,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mg-pill--soft"
+            ],
+            "html": "<span class=\"mg-pill mg-pill--soft\"><span class=\"mg-dot\" aria-hidden=\"true\"></span>Neuropsychiatric clinic &amp; training institute · Greater Noida, Delhi NCR</span>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 51,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  }
+]

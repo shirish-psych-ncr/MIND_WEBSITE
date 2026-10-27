@@ -1,0 +1,46 @@
+{
+ "files": [
+  "/sleep-and-autism-guide-indian-parents",
+  "early-signs-of-autism",
+  "school-concerns-and-adhd",
+  "sensory-overload-at-home",
+  "speech-delay-red-flags"
+ ],
+ "pinned": [
+  "speech-delay-red-flags",
+  "early-signs-of-autism"
+ ],
+ "mostSearched": [
+  "speech-delay-red-flags"
+ ],
+ "symptoms": [
+  "speech-delay",
+  "autism",
+  "school",
+  "adhd",
+  "sensory",
+  "sleep"
+ ],
+ "clusters": [
+  {
+   "label": "Autism & Early Signs",
+   "tags": [
+    "autism",
+    "red-flags"
+   ]
+  },
+  {
+   "label": "Speech & Communication",
+   "tags": [
+    "speech-delay"
+   ]
+  },
+  {
+   "label": "Sleep & Bedtime",
+   "tags": [
+    "sleep",
+    "bedtime"
+   ]
+  }
+ ]
+}

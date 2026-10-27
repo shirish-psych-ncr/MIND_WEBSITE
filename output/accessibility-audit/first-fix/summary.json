@@ -1,0 +1,374 @@
+{
+  "scans": 32,
+  "routes": 8,
+  "widths": [
+    390,
+    1440
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "scenario": "default",
+  "errors": [],
+  "rules": {
+    "color-contrast": {
+      "scans": 6,
+      "nodes": 14,
+      "samples": [
+        {
+          "route": "/",
+          "theme": "light",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                ".mg-live"
+              ],
+              "html": "<a class=\"mg-live\" href=\"/contact\">Appointment enquiries open during clinic hours</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #0d9488, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 3.74 (foreground color: #0d9488, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#0d9488",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 3.74,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                ".mg-live"
+              ],
+              "html": "<a class=\"mg-live\" href=\"/contact\">Appointment enquiries open during clinic hours</a>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #0d9488, background color: #2c1a22, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 4.38 (foreground color: #0d9488, background color: #2c1a22, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#0d9488",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 4.38,
+                    "fontSize": "9.6pt (12.8px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "article[aria-labelledby=\"article-heading-1\"] > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45 minutes</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".featured > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45 minutes</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "article[aria-labelledby=\"article-heading-3\"] > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45-minute session</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "article[aria-labelledby=\"article-heading-1\"] > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45 minutes</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "12.1pt (16.2px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".featured > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45 minutes</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "12.1pt (16.2px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "article[aria-labelledby=\"article-heading-3\"] > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45-minute session</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "12.1pt (16.2px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/doctors",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".credential-list > li:nth-child(1) > strong"
+              ],
+              "html": "<strong>A82170</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#be185d",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 2.72,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".credential-list > li:nth-child(2) > strong"
+              ],
+              "html": "<strong>7+ Years</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#be185d",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 2.72,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".credential-list > li:nth-child(3) > strong"
+              ],
+              "html": "<strong>Sharda Hospital, Greater Noida</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#be185d",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 2.72,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/doctors",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                ".credential-list > li:nth-child(1) > strong"
+              ],
+              "html": "<strong>A82170</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#be185d",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 2.72,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".credential-list > li:nth-child(2) > strong"
+              ],
+              "html": "<strong>7+ Years</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#be185d",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 2.72,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".credential-list > li:nth-child(3) > strong"
+              ],
+              "html": "<strong>Sharda Hospital, Greater Noida</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 2.72 (foreground color: #be185d, background color: #2c1a22, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#be185d",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 2.72,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "surfaces": {},
+  "overflow": []
+}

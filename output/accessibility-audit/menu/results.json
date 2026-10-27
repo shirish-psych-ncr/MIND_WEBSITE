@@ -1,0 +1,458 @@
+[
+  {
+    "route": "/",
+    "width": 390,
+    "theme": "light",
+    "violations": [
+      {
+        "id": "aria-allowed-role",
+        "impact": "minor",
+        "help": "ARIA role should be appropriate for the element",
+        "nodes": [
+          {
+            "target": [
+              "#mobile-nav-panel"
+            ],
+            "html": "<nav class=\"mobile-nav-panel is-open\" id=\"mobile-nav-panel\" data-shared-shell=\"\" aria-label=\"Mobile navigation\" role=\"dialog\" aria-modal=\"true\">",
+            "summary": "Fix any of the following:\n  ARIA role dialog is not allowed for given element",
+            "checks": [
+              {
+                "id": "aria-allowed-role",
+                "message": "ARIA role dialog is not allowed for given element",
+                "data": [
+                  "dialog"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".mobile-nav-kicker"
+            ],
+            "html": "<p class=\"mobile-nav-kicker\">Mind Grace</p>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "8.6pt (11.52px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mobile-nav-intro"
+            ],
+            "html": "<p class=\"mobile-nav-intro\">Choose a section, then open a branch to see the pages inside it.</p>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it partially overlaps other elements",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "10.8pt (14.4px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscuring",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passes": 34,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "aria-allowed-role",
+        "impact": "minor",
+        "help": "ARIA role should be appropriate for the element",
+        "nodes": [
+          {
+            "target": [
+              "#mobile-nav-panel"
+            ],
+            "html": "<nav class=\"mobile-nav-panel is-open\" id=\"mobile-nav-panel\" data-shared-shell=\"\" aria-label=\"Mobile navigation\" role=\"dialog\" aria-modal=\"true\">",
+            "summary": "Fix any of the following:\n  ARIA role dialog is not allowed for given element",
+            "checks": [
+              {
+                "id": "aria-allowed-role",
+                "message": "ARIA role dialog is not allowed for given element",
+                "data": [
+                  "dialog"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".mobile-nav-kicker"
+            ],
+            "html": "<p class=\"mobile-nav-kicker\">Mind Grace</p>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "8.6pt (11.52px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mobile-nav-intro"
+            ],
+            "html": "<p class=\"mobile-nav-intro\">Choose a section, then open a branch to see the pages inside it.</p>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it partially overlaps other elements",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "10.8pt (14.4px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscuring",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passes": 34,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "theme": "light",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mg-pill--soft"
+            ],
+            "html": "<span class=\"mg-pill mg-pill--soft\"><span class=\"mg-dot\" aria-hidden=\"true\"></span>Neuropsychiatric clinic &amp; training institute · Greater Noida, Delhi NCR</span>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "#mg-hero-title"
+            ],
+            "html": "<h1 id=\"mg-hero-title\">Care for your mind. <span class=\"mg-accent\">Training for future clinicians.</span></h1>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined due to a background gradient",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "39.0pt (52px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "3:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mg-accent"
+            ],
+            "html": "<span class=\"mg-accent\">Training for future clinicians.</span>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined due to a background gradient",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "39.0pt (52px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "3:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mg-hero-head > p"
+            ],
+            "html": "<p>Mind Grace offers confidential psychiatric, child-development, and counselling consultations in Gamma II, Greater Noida — and supervised clinical training for psychology and medical students.</p>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined due to a background gradient",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.6pt (16.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".w-full[data-enquiry-kind=\"academic\"][href$=\"#booking-section\"]"
+            ],
+            "html": "<a class=\"btn btn--primary w-full\" href=\"#booking-section\" data-enquiry-kind=\"academic\">Apply via enquiry form</a>",
+            "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element has a 1:1 contrast ratio with the background",
+                "data": {
+                  "fgColor": "#7a1038",
+                  "bgColor": "#7a1038",
+                  "contrastRatio": 1,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": "equalRatio",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passes": 51,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mg-pill--soft"
+            ],
+            "html": "<span class=\"mg-pill mg-pill--soft\"><span class=\"mg-dot\" aria-hidden=\"true\"></span>Neuropsychiatric clinic &amp; training institute · Greater Noida, Delhi NCR</span>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "#mg-hero-title"
+            ],
+            "html": "<h1 id=\"mg-hero-title\">Care for your mind. <span class=\"mg-accent\">Training for future clinicians.</span></h1>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined due to a background gradient",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "39.0pt (52px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "3:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mg-accent"
+            ],
+            "html": "<span class=\"mg-accent\">Training for future clinicians.</span>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined due to a background gradient",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "39.0pt (52px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "3:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".mg-hero-head > p"
+            ],
+            "html": "<p>Mind Grace offers confidential psychiatric, child-development, and counselling consultations in Gamma II, Greater Noida — and supervised clinical training for psychology and medical students.</p>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined due to a background gradient",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.6pt (16.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".w-full[data-enquiry-kind=\"academic\"][href$=\"#booking-section\"]"
+            ],
+            "html": "<a class=\"btn btn--primary w-full\" href=\"#booking-section\" data-enquiry-kind=\"academic\">Apply via enquiry form</a>",
+            "summary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element has a 1:1 contrast ratio with the background",
+                "data": {
+                  "fgColor": "#ffd3df",
+                  "bgColor": "#ffd3df",
+                  "contrastRatio": 1,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": "equalRatio",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "passes": 51,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  }
+]

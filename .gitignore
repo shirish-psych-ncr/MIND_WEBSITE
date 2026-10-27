@@ -1,8 +1,1 @@
-dist/
-*.pyc
-__pycache__/
 node_modules/
-output/dev-public/
-output/shell-audit/
-output/accessibility-audit/
-output/accessibility-build.log

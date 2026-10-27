@@ -1,0 +1,18 @@
+{
+  "scans": 20,
+  "routes": 5,
+  "widths": [
+    390,
+    1440
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "scenario": "default",
+  "errors": [],
+  "criticalContrast": [],
+  "rules": {},
+  "surfaces": {},
+  "overflow": []
+}

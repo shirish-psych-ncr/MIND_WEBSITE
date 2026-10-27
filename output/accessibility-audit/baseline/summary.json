@@ -1,0 +1,1859 @@
+{
+  "scans": 492,
+  "routes": 123,
+  "widths": [
+    390,
+    1440
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "errors": [],
+  "rules": {
+    "region": {
+      "scans": 492,
+      "nodes": 1034,
+      "samples": [
+        {
+          "route": "/404",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".skip-link"
+              ],
+              "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/404",
+          "theme": "light",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".skip-link"
+              ],
+              "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/404",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".skip-link"
+              ],
+              "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/404",
+          "theme": "light",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".skip-link"
+              ],
+              "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/aasha",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".skip-link"
+              ],
+              "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/aasha",
+          "theme": "light",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "aside"
+              ],
+              "html": "<aside class=\"emergency-banner emergency-banner--static\" role=\"note\" aria-labelledby=\"emergency-notice-title\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".skip-link"
+              ],
+              "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+              "checks": [
+                {
+                  "id": "region",
+                  "message": "Some page content is not contained by landmarks",
+                  "data": {
+                    "isIframe": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scope-attr-valid": {
+      "scans": 4,
+      "nodes": 48,
+      "samples": [
+        {
+          "route": "/blog/pages/adult/sharda-university-psychology-internship",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(1) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ba-psychology\">BA – Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(2) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ba-hons\">BA (Hons.) / BA (Hons. with Research) – Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(3) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ma-applied\">MA – Applied Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(4) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ma-clinical\">MA – Clinical Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/blog/pages/adult/sharda-university-psychology-internship",
+          "theme": "light",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(1) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ba-psychology\">BA – Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(2) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ba-hons\">BA (Hons.) / BA (Hons. with Research) – Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(3) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ma-applied\">MA – Applied Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(4) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ma-clinical\">MA – Clinical Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/blog/pages/adult/sharda-university-psychology-internship",
+          "theme": "light",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(1) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ba-psychology\">BA – Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(2) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ba-hons\">BA (Hons.) / BA (Hons. with Research) – Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(3) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ma-applied\">MA – Applied Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(4) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ma-clinical\">MA – Clinical Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/blog/pages/adult/sharda-university-psychology-internship",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(1) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ba-psychology\">BA – Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(2) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ba-hons\">BA (Hons.) / BA (Hons. with Research) – Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(3) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ma-applied\">MA – Applied Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"programmes\"] > .programme-tables > table > tbody > tr:nth-child(4) > td[scope=\"row\"]"
+              ],
+              "html": "<td scope=\"row\"><a href=\"#ma-clinical\">MA – Clinical Psychology</a></td>",
+              "summary": "Fix all of the following:\n  In HTML 5, scope attributes may only be used on table header elements (<th>)",
+              "checks": [
+                {
+                  "id": "html5-scope",
+                  "message": "In HTML 5, scope attributes may only be used on table header elements (<th>)",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "heading-order": {
+      "scans": 8,
+      "nodes": 8,
+      "samples": [
+        {
+          "route": "/contact",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".contact-card:nth-child(1) > h3"
+              ],
+              "html": "<h3>Email</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid",
+              "checks": [
+                {
+                  "id": "heading-order",
+                  "message": "Heading order invalid",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/contact",
+          "theme": "light",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".contact-card:nth-child(1) > h3"
+              ],
+              "html": "<h3>Email</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid",
+              "checks": [
+                {
+                  "id": "heading-order",
+                  "message": "Heading order invalid",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/contact",
+          "theme": "light",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                ".contact-card:nth-child(1) > h3"
+              ],
+              "html": "<h3>Email</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid",
+              "checks": [
+                {
+                  "id": "heading-order",
+                  "message": "Heading order invalid",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/contact",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                ".contact-card:nth-child(1) > h3"
+              ],
+              "html": "<h3>Email</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid",
+              "checks": [
+                {
+                  "id": "heading-order",
+                  "message": "Heading order invalid",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/doctors",
+          "theme": "light",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "h4"
+              ],
+              "html": "<h4 style=\"margin-top: 0; color: var(--text-dark, #2b0d19);\">Credentials &amp; Current Role</h4>",
+              "summary": "Fix any of the following:\n  Heading order invalid",
+              "checks": [
+                {
+                  "id": "heading-order",
+                  "message": "Heading order invalid",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/doctors",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "h4"
+              ],
+              "html": "<h4 style=\"margin-top: 0; color: var(--text-dark, #2b0d19);\">Credentials &amp; Current Role</h4>",
+              "summary": "Fix any of the following:\n  Heading order invalid",
+              "checks": [
+                {
+                  "id": "heading-order",
+                  "message": "Heading order invalid",
+                  "data": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "color-contrast": {
+      "scans": 14,
+      "nodes": 114,
+      "samples": [
+        {
+          "route": "/depression-in-older-adults",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "th:nth-child(1)"
+              ],
+              "html": "<th scope=\"col\">The complaint</th>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#f5f0e6",
+                    "contrastRatio": 1.08,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "th:nth-child(2)"
+              ],
+              "html": "<th scope=\"col\">Could be depression</th>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#f5f0e6",
+                    "contrastRatio": 1.08,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "th:nth-child(3)"
+              ],
+              "html": "<th scope=\"col\">Could be medical illness</th>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#f5f0e6",
+                    "contrastRatio": 1.08,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/depression-in-older-adults",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "th:nth-child(1)"
+              ],
+              "html": "<th scope=\"col\">The complaint</th>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#f5f0e6",
+                    "contrastRatio": 1.08,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "th:nth-child(2)"
+              ],
+              "html": "<th scope=\"col\">Could be depression</th>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#f5f0e6",
+                    "contrastRatio": 1.08,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "th:nth-child(3)"
+              ],
+              "html": "<th scope=\"col\">Could be medical illness</th>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.08 (foreground color: #fff8fa, background color: #f5f0e6, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#f5f0e6",
+                    "contrastRatio": 1.08,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/doctors",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".comparison-card:nth-child(1) > h3"
+              ],
+              "html": "<h3>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 22.4pt (29.85px), font weight: normal). Expected contrast ratio of 3:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 22.4pt (29.85px), font weight: normal). Expected contrast ratio of 3:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.04,
+                    "fontSize": "22.4pt (29.85px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "3:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".comparison-card:nth-child(1) > p:nth-child(2)"
+              ],
+              "html": "<p><strong>Medical doctor</strong> specializing in mental health. Can prescribe medication and manage complex biological aspects of mental illness.</p>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#f0dce3",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.3,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".comparison-card:nth-child(1) > p:nth-child(2) > strong"
+              ],
+              "html": "<strong>Medical doctor</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#f0dce3",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.3,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".comparison-card:nth-child(1) > ul > li:nth-child(1)"
+              ],
+              "html": "<li>Diagnoses medical conditions</li>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#f0dce3",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.3,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/doctors",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                ".comparison-card:nth-child(1) > h3"
+              ],
+              "html": "<h3>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 33.8pt (45px), font weight: normal). Expected contrast ratio of 3:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.04 (foreground color: #fff8fa, background color: #ffffff, font size: 33.8pt (45px), font weight: normal). Expected contrast ratio of 3:1",
+                  "data": {
+                    "fgColor": "#fff8fa",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.04,
+                    "fontSize": "33.8pt (45px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "3:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".comparison-card:nth-child(1) > p:nth-child(2)"
+              ],
+              "html": "<p><strong>Medical doctor</strong> specializing in mental health. Can prescribe medication and manage complex biological aspects of mental illness.</p>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#f0dce3",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.3,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".comparison-card:nth-child(1) > p:nth-child(2) > strong"
+              ],
+              "html": "<strong>Medical doctor</strong>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#f0dce3",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.3,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".comparison-card:nth-child(1) > ul > li:nth-child(1)"
+              ],
+              "html": "<li>Diagnoses medical conditions</li>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.3 (foreground color: #f0dce3, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#f0dce3",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.3,
+                    "fontSize": "13.5pt (18px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "article[aria-labelledby=\"article-heading-1\"] > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45 minutes</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".featured > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45 minutes</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "article[aria-labelledby=\"article-heading-3\"] > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45-minute session</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "10.8pt (14.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 1440,
+          "nodes": [
+            {
+              "target": [
+                "article[aria-labelledby=\"article-heading-1\"] > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45 minutes</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "12.1pt (16.2px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                ".featured > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45 minutes</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "12.1pt (16.2px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "target": [
+                "article[aria-labelledby=\"article-heading-3\"] > .price-amount > .price-period"
+              ],
+              "html": "<span class=\"price-period\">/ 45-minute session</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 1.18 (foreground color: #120a0e, background color: #2c1a22, font size: 12.1pt (16.2px), font weight: normal). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#120a0e",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 1.18,
+                    "fontSize": "12.1pt (16.2px)",
+                    "fontWeight": "normal",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "target-size": {
+      "scans": 4,
+      "nodes": 4,
+      "samples": [
+        {
+          "route": "/resources",
+          "theme": "light",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "a[href$=\"faq\"]"
+              ],
+              "html": "<a href=\"/faq\" class=\"button-ghost\">Read FAQ</a>",
+              "summary": "Fix any of the following:\n  Target has insufficient size (70px by 23px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 6.8px instead of at least 24px.",
+              "checks": [
+                {
+                  "id": "target-size",
+                  "message": "Target has insufficient size (70px by 23px, should be at least 24px by 24px)",
+                  "data": {
+                    "minSize": 24,
+                    "width": 70,
+                    "height": 23
+                  }
+                },
+                {
+                  "id": "target-offset",
+                  "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 6.8px instead of at least 24px.",
+                  "data": {
+                    "closestOffset": 6.8,
+                    "minOffset": 24
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/resources",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                "a[href$=\"faq\"]"
+              ],
+              "html": "<a href=\"/faq\" class=\"button-ghost\">Read FAQ</a>",
+              "summary": "Fix any of the following:\n  Target has insufficient size (70px by 23px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 6.8px instead of at least 24px.",
+              "checks": [
+                {
+                  "id": "target-size",
+                  "message": "Target has insufficient size (70px by 23px, should be at least 24px by 24px)",
+                  "data": {
+                    "minSize": 24,
+                    "width": 70,
+                    "height": 23
+                  }
+                },
+                {
+                  "id": "target-offset",
+                  "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 6.8px instead of at least 24px.",
+                  "data": {
+                    "closestOffset": 6.8,
+                    "minOffset": 24
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/tools/leaf-on-stream",
+          "theme": "light",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".tool-viewbar__action[data-tool-view=\"window\"][type=\"button\"]"
+              ],
+              "html": "<button type=\"button\" class=\"tool-viewbar__action\" data-tool-view=\"window\" aria-pressed=\"true\">",
+              "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 170px by 12px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px.",
+              "checks": [
+                {
+                  "id": "target-size",
+                  "message": "Target has insufficient size because it is partially obscured (smallest space is 170px by 12px, should be at least 24px by 24px)",
+                  "data": {
+                    "messageKey": "partiallyObscured",
+                    "minSize": 24,
+                    "width": 170,
+                    "height": 12
+                  }
+                },
+                {
+                  "id": "target-offset",
+                  "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px.",
+                  "data": {
+                    "closestOffset": 2,
+                    "minOffset": 24
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "route": "/tools/leaf-on-stream",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".tool-viewbar__action[data-tool-view=\"window\"][type=\"button\"]"
+              ],
+              "html": "<button type=\"button\" class=\"tool-viewbar__action\" data-tool-view=\"window\" aria-pressed=\"true\">",
+              "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 170px by 12px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px.",
+              "checks": [
+                {
+                  "id": "target-size",
+                  "message": "Target has insufficient size because it is partially obscured (smallest space is 170px by 12px, should be at least 24px by 24px)",
+                  "data": {
+                    "messageKey": "partiallyObscured",
+                    "minSize": 24,
+                    "width": 170,
+                    "height": 12
+                  }
+                },
+                {
+                  "id": "target-offset",
+                  "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px.",
+                  "data": {
+                    "closestOffset": 2,
+                    "minOffset": 24
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "surfaces": {
+    "small-text-inset: a.button-ghost": {
+      "count": 160,
+      "samples": [
+        {
+          "route": "/404",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button-ghost",
+          "text": "Book appointment",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 1,
+            "bottom": 1
+          },
+          "padding": "0px",
+          "html": "<a class=\"button-ghost\" href=\"/book\">Book appointment</a>"
+        },
+        {
+          "route": "/404",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button-ghost",
+          "text": "Clinic location",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 1,
+            "bottom": 1
+          },
+          "padding": "0px",
+          "html": "<a class=\"button-ghost\" href=\"/location\">Clinic location</a>"
+        },
+        {
+          "route": "/404",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button-ghost",
+          "text": "Book appointment",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 1,
+            "bottom": 1
+          },
+          "padding": "0px",
+          "html": "<a class=\"button-ghost\" href=\"/book\">Book appointment</a>"
+        }
+      ]
+    },
+    "small-text-inset: a.button-primary": {
+      "count": 44,
+      "samples": [
+        {
+          "route": "/404",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button-primary",
+          "text": "Go home",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "padding": "0px",
+          "html": "<a class=\"button-primary\" href=\"/\">Go home</a>"
+        },
+        {
+          "route": "/404",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button-primary",
+          "text": "Go home",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "padding": "0px",
+          "html": "<a class=\"button-primary\" href=\"/\">Go home</a>"
+        },
+        {
+          "route": "/404",
+          "theme": "dark",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "a.button-primary",
+          "text": "Go home",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "padding": "0px",
+          "html": "<a class=\"button-primary\" href=\"/\">Go home</a>"
+        }
+      ]
+    },
+    "small-text-inset: button.button-ghost": {
+      "count": 24,
+      "samples": [
+        {
+          "route": "/blog/adult",
+          "theme": "dark",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "button.button-ghost",
+          "text": "Overthinking",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 13.8,
+            "bottom": 14.2
+          },
+          "padding": "0px",
+          "html": "<button type=\"button\" class=\"button-ghost\" data-filter-tag=\"overthinking\">Overthinking</button>"
+        },
+        {
+          "route": "/blog/adult",
+          "theme": "dark",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "button.button-ghost",
+          "text": "Anxiety",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 13.8,
+            "bottom": 14.2
+          },
+          "padding": "0px",
+          "html": "<button type=\"button\" class=\"button-ghost\" data-filter-tag=\"anxiety\">Anxiety</button>"
+        },
+        {
+          "route": "/blog/adult",
+          "theme": "dark",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "button.button-ghost",
+          "text": "Sleep",
+          "inset": {
+            "left": 4,
+            "right": 4,
+            "top": 13.8,
+            "bottom": 14.2
+          },
+          "padding": "0px",
+          "html": "<button type=\"button\" class=\"button-ghost\" data-filter-tag=\"sleep\">Sleep</button>"
+        }
+      ]
+    },
+    "small-text-inset: a.button.button-outline": {
+      "count": 12,
+      "samples": [
+        {
+          "route": "/emergency",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-outline",
+          "text": "Call Hospital",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "padding": "0px",
+          "html": "<a href=\"tel:+911204515555\" class=\"button button-outline\">Call Hospital</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-outline",
+          "text": "Call Hospital",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "padding": "0px",
+          "html": "<a href=\"tel:+911204020202\" class=\"button button-outline\">Call Hospital</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-outline",
+          "text": "Call Hospital",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "padding": "0px",
+          "html": "<a href=\"tel:+911171771000\" class=\"button button-outline\">Call Hospital</a>"
+        }
+      ]
+    },
+    "small-text-inset: a.button.button-ghost": {
+      "count": 12,
+      "samples": [
+        {
+          "route": "/emergency",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-ghost",
+          "text": "Get Directions",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 1,
+            "bottom": 1
+          },
+          "padding": "0px",
+          "html": "<a href=\"https://maps.google.com/?q=Sharda+Hospital+Greater+Noida\" target=\"_blank\" rel=\"noopener\" class=\"button button-ghost\" aria-label=\"Get directions to Sharda Hospital (opens in a new window)\">Get Directions</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-ghost",
+          "text": "Get Directions",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 1,
+            "bottom": 1
+          },
+          "padding": "0px",
+          "html": "<a href=\"https://maps.google.com/?q=Yatharth+Hospital+Greater+Noida\" target=\"_blank\" rel=\"noopener\" class=\"button button-ghost\" aria-label=\"Get directions to Yatharth Hospital (opens in a new window)\">Get Directions</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-ghost",
+          "text": "Get Directions",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 1,
+            "bottom": 1
+          },
+          "padding": "0px",
+          "html": "<a href=\"https://maps.google.com/?q=Fortis+Hospital+Jasola+Delhi\" target=\"_blank\" rel=\"noopener\" class=\"button button-ghost\" aria-label=\"Get directions to Fortis Hospital (opens in a new window)\">Get Directions</a>"
+        }
+      ]
+    },
+    "small-text-inset: a.button.button-primary.button-full": {
+      "count": 12,
+      "samples": [
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-primary.button-full",
+          "text": "Book Consultation",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "padding": "0px",
+          "html": "<a href=\"/book\" class=\"button button-primary button-full\">Book Consultation</a>"
+        },
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-primary.button-full",
+          "text": "Book Therapy",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "padding": "0px",
+          "html": "<a href=\"/book\" class=\"button button-primary button-full\">Book Therapy</a>"
+        },
+        {
+          "route": "/fees",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-primary.button-full",
+          "text": "Book Aasha Session",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          },
+          "padding": "0px",
+          "html": "<a href=\"/book\" class=\"button button-primary button-full\">Book Aasha Session</a>"
+        }
+      ]
+    },
+    "small-text-inset: a.button": {
+      "count": 8,
+      "samples": [
+        {
+          "route": "/blog/pages/adult/scheduled-worry-time-technique",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button",
+          "text": "Book a consultation",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 3.4
+          },
+          "padding": "0px",
+          "html": "<a class=\"button\" href=\"/book\">Book a consultation</a>"
+        },
+        {
+          "route": "/blog/pages/adult/scheduled-worry-time-technique",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button",
+          "text": "Book a consultation",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 3.4
+          },
+          "padding": "0px",
+          "html": "<a class=\"button\" href=\"/book\">Book a consultation</a>"
+        },
+        {
+          "route": "/blog/pages/adult/scheduled-worry-time-technique",
+          "theme": "light",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "a.button",
+          "text": "Book a consultation",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 2.7
+          },
+          "padding": "0px",
+          "html": "<a class=\"button\" href=\"/book\">Book a consultation</a>"
+        }
+      ]
+    },
+    "small-text-inset: a.button-primary.button-large": {
+      "count": 8,
+      "samples": [
+        {
+          "route": "/contact",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button-primary.button-large",
+          "text": "Request an appointment",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 21
+          },
+          "padding": "0px",
+          "html": "<a href=\"/book\" class=\"button-primary button-large\">Request an appointment</a>"
+        },
+        {
+          "route": "/contact",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button-primary.button-large",
+          "text": "Request an appointment",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 21
+          },
+          "padding": "0px",
+          "html": "<a href=\"/book\" class=\"button-primary button-large\">Request an appointment</a>"
+        },
+        {
+          "route": "/contact",
+          "theme": "light",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "a.button-primary.button-large",
+          "text": "Request an appointment",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 17
+          },
+          "padding": "0px",
+          "html": "<a href=\"/book\" class=\"button-primary button-large\">Request an appointment</a>"
+        }
+      ]
+    },
+    "small-text-inset: a.button.button-large.button-primary": {
+      "count": 8,
+      "samples": [
+        {
+          "route": "/emergency",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-large.button-primary",
+          "text": "Book a Consultation",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 21
+          },
+          "padding": "0px",
+          "html": "<a href=\"/book\" class=\"button button-large button-primary\">Book a Consultation</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-large.button-primary",
+          "text": "Book a Consultation",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 21
+          },
+          "padding": "0px",
+          "html": "<a href=\"/book\" class=\"button button-large button-primary\">Book a Consultation</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "dark",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-large.button-primary",
+          "text": "Book a Consultation",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 17
+          },
+          "padding": "0px",
+          "html": "<a href=\"/book\" class=\"button button-large button-primary\">Book a Consultation</a>"
+        }
+      ]
+    },
+    "small-text-inset: a.button.button-large.button-outline": {
+      "count": 8,
+      "samples": [
+        {
+          "route": "/emergency",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-large.button-outline",
+          "text": "Contact Us",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 21
+          },
+          "padding": "0px",
+          "html": "<a href=\"/contact\" class=\"button button-large button-outline\">Contact Us</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-large.button-outline",
+          "text": "Contact Us",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 21
+          },
+          "padding": "0px",
+          "html": "<a href=\"/contact\" class=\"button button-large button-outline\">Contact Us</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "dark",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-large.button-outline",
+          "text": "Contact Us",
+          "inset": {
+            "left": 0,
+            "right": 0,
+            "top": 2,
+            "bottom": 17
+          },
+          "padding": "0px",
+          "html": "<a href=\"/contact\" class=\"button button-large button-outline\">Contact Us</a>"
+        }
+      ]
+    },
+    "small-text-inset: a.button.button-large.button-ghost": {
+      "count": 8,
+      "samples": [
+        {
+          "route": "/emergency",
+          "theme": "light",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-large.button-ghost",
+          "text": "Back to Homepage",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 3,
+            "bottom": 20
+          },
+          "padding": "0px",
+          "html": "<a href=\"/\" class=\"button button-large button-ghost\">Back to Homepage</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "dark",
+          "width": 390,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-large.button-ghost",
+          "text": "Back to Homepage",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 3,
+            "bottom": 20
+          },
+          "padding": "0px",
+          "html": "<a href=\"/\" class=\"button button-large button-ghost\">Back to Homepage</a>"
+        },
+        {
+          "route": "/emergency",
+          "theme": "dark",
+          "width": 1440,
+          "kind": "small-text-inset",
+          "selector": "a.button.button-large.button-ghost",
+          "text": "Back to Homepage",
+          "inset": {
+            "left": 1,
+            "right": 1,
+            "top": 3,
+            "bottom": 16
+          },
+          "padding": "0px",
+          "html": "<a href=\"/\" class=\"button button-large button-ghost\">Back to Homepage</a>"
+        }
+      ]
+    }
+  },
+  "overflow": []
+}

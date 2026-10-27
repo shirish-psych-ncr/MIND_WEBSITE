@@ -1,0 +1,54 @@
+{
+  "scans": 4,
+  "routes": 1,
+  "widths": [
+    390,
+    1440
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "scenario": "menu",
+  "errors": [],
+  "criticalContrast": [],
+  "rules": {
+    "color-contrast": {
+      "scans": 1,
+      "nodes": 1,
+      "samples": [
+        {
+          "route": "/",
+          "theme": "dark",
+          "width": 390,
+          "nodes": [
+            {
+              "target": [
+                ".mobile-nav-kicker"
+              ],
+              "html": "<p class=\"mobile-nav-kicker\">Mind Grace</p>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.32 (foreground color: #d81b60, background color: #2c1a22, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element has insufficient color contrast of 3.32 (foreground color: #d81b60, background color: #2c1a22, font size: 8.6pt (11.52px), font weight: bold). Expected contrast ratio of 4.5:1",
+                  "data": {
+                    "fgColor": "#d81b60",
+                    "bgColor": "#2c1a22",
+                    "contrastRatio": 3.32,
+                    "fontSize": "8.6pt (11.52px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "surfaces": {},
+  "overflow": []
+}

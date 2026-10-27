@@ -1,0 +1,1430 @@
+[
+  {
+    "route": "/",
+    "width": 390,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 51,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 51,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 51,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 51,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/aasha",
+    "width": 390,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 37,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/aasha",
+    "width": 390,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 37,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/aasha",
+    "width": 1440,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 38,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/aasha",
+    "width": 1440,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 38,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/child-development",
+    "width": 390,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 39,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/child-development",
+    "width": 390,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 39,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/child-development",
+    "width": 1440,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [],
+    "criticalContrast": [],
+    "passes": 40,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/child-development",
+    "width": 1440,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [],
+    "criticalContrast": [],
+    "passes": 40,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/child-student-mental-health",
+    "width": 390,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 37,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/child-student-mental-health",
+    "width": 390,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 37,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/child-student-mental-health",
+    "width": 1440,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 38,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/child-student-mental-health",
+    "width": 1440,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 38,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/services",
+    "width": 390,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "caption"
+            ],
+            "html": "<caption>Mind Grace Neuropsychiatric Clinic service pathways compared (Greater Noida)</caption>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(1) > td:nth-child(2)"
+            ],
+            "html": "<td>Anxiety, depression, ADHD, sleep, and mood concerns</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(1) > td:nth-child(3)"
+            ],
+            "html": "<td>About 45 minutes initial, 30-minute follow-ups</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"psychiatry\"]"
+            ],
+            "html": "<a href=\"/psychiatry\">Psychiatry consultations</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(2) > td:nth-child(2)"
+            ],
+            "html": "<td>Children and adolescents with learning, attention, or communication concerns</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(2) > td:nth-child(3)"
+            ],
+            "html": "<td>Family-inclusive assessment and guidance sessions</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"child-development\"]"
+            ],
+            "html": "<a href=\"/child-development\">Child development</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(3) > td:nth-child(2)"
+            ],
+            "html": "<td>Individuals, couples, families, and young people</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(3) > td:nth-child(3)"
+            ],
+            "html": "<td>Regular one-to-one or joint sessions</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(3) > td:nth-child(4)"
+            ],
+            "html": "<td><a href=\"/therapy\">Therapy</a> and <a href=\"/psychology-counselling\">counselling</a></td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"therapy\"]"
+            ],
+            "html": "<a href=\"/therapy\">Therapy</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"psychology-counselling\"]"
+            ],
+            "html": "<a href=\"/psychology-counselling\">counselling</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(4) > td:nth-child(2)"
+            ],
+            "html": "<td>ADHD, autism, learning, and psychological evaluation questions</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(4) > td:nth-child(3)"
+            ],
+            "html": "<td>Multi-session, tool-based, written report</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(4) > td:nth-child(4)"
+            ],
+            "html": "<td><a href=\"/assessments\">Assessments</a> and <a href=\"/adhd-autism-assessment\">ADHD and autism</a></td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"assessments\"]"
+            ],
+            "html": "<a href=\"/assessments\">Assessments</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"adhd-autism-assessment\"]"
+            ],
+            "html": "<a href=\"/adhd-autism-assessment\">ADHD and autism</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 48,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/services",
+    "width": 390,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".skip-link"
+            ],
+            "html": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "caption"
+            ],
+            "html": "<caption>Mind Grace Neuropsychiatric Clinic service pathways compared (Greater Noida)</caption>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(1) > td:nth-child(2)"
+            ],
+            "html": "<td>Anxiety, depression, ADHD, sleep, and mood concerns</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(1) > td:nth-child(3)"
+            ],
+            "html": "<td>About 45 minutes initial, 30-minute follow-ups</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"psychiatry\"]"
+            ],
+            "html": "<a href=\"/psychiatry\">Psychiatry consultations</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(2) > td:nth-child(2)"
+            ],
+            "html": "<td>Children and adolescents with learning, attention, or communication concerns</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(2) > td:nth-child(3)"
+            ],
+            "html": "<td>Family-inclusive assessment and guidance sessions</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"child-development\"]"
+            ],
+            "html": "<a href=\"/child-development\">Child development</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(3) > td:nth-child(2)"
+            ],
+            "html": "<td>Individuals, couples, families, and young people</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(3) > td:nth-child(3)"
+            ],
+            "html": "<td>Regular one-to-one or joint sessions</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(3) > td:nth-child(4)"
+            ],
+            "html": "<td><a href=\"/therapy\">Therapy</a> and <a href=\"/psychology-counselling\">counselling</a></td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"therapy\"]"
+            ],
+            "html": "<a href=\"/therapy\">Therapy</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"psychology-counselling\"]"
+            ],
+            "html": "<a href=\"/psychology-counselling\">counselling</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(4) > td:nth-child(2)"
+            ],
+            "html": "<td>ADHD, autism, learning, and psychological evaluation questions</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(4) > td:nth-child(3)"
+            ],
+            "html": "<td>Multi-session, tool-based, written report</td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(4) > td:nth-child(4)"
+            ],
+            "html": "<td><a href=\"/assessments\">Assessments</a> and <a href=\"/adhd-autism-assessment\">ADHD and autism</a></td>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"assessments\"]"
+            ],
+            "html": "<a href=\"/assessments\">Assessments</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "td:nth-child(4) > a[href$=\"adhd-autism-assessment\"]"
+            ],
+            "html": "<a href=\"/adhd-autism-assessment\">ADHD and autism</a>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "id": "color-contrast",
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.4pt (15.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "criticalContrast": [],
+    "passes": 48,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/services",
+    "width": 1440,
+    "theme": "light",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [],
+    "criticalContrast": [],
+    "passes": 48,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  },
+  {
+    "route": "/services",
+    "width": 1440,
+    "theme": "dark",
+    "axeVersion": "4.13.0",
+    "violations": [],
+    "incomplete": [],
+    "criticalContrast": [],
+    "passes": 48,
+    "layout": {
+      "issues": [],
+      "overflow": [],
+      "documentOverflow": false
+    }
+  }
+]

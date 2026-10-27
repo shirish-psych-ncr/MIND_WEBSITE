@@ -1,0 +1,392 @@
+/**
+ * Print Stylesheet for Mind Grace Clinical Guides
+ * Optimized for printing blog posts, guides, and assessment checklists
+ * Hides navigation, interactive elements, and non-essential UI
+ */
+
+@media print {
+  /* Global Print Reset */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Hide Non-Essential Elements */
+  .site-header,
+  .site-footer,
+  header,
+  footer,
+  nav,
+  .mobile-nav-overlay,
+  .mobile-nav-panel,
+  .mobile-nav-trigger,
+  .mobile-book-btn,
+  .desktop-nav,
+  .crisis-banner,
+  .emergency-banner,
+  .scroll-progress,
+  .progress,
+  .skip-link,
+  .cookie-banner,
+  .cookie-notice,
+  [class*="cookie"],
+  [class*="banner"]:not(.hero),
+  [role="alert"]:not(article [role="alert"]),
+  .cta-button,
+  .book-now,
+  .appointment-form,
+  .contact-form,
+  .newsletter-signup,
+  .social-share,
+  .share-buttons,
+  [data-analytics],
+  iframe,
+  video,
+  audio,
+  .interactive-tool,
+  [class*="tool-"],
+  .carousel,
+  .slider,
+  .modal,
+  .popup,
+  .advertisement,
+  .ad-container {
+    display: none !important;
+  }
+
+  /* Main Content Optimization */
+  main,
+  .main-content,
+  article,
+  .content-narrow,
+  .shell,
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    float: none !important;
+  }
+
+  /* Typography for Print */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1 {
+    font-size: 24pt;
+    border-bottom: 2pt solid #000000;
+    padding-bottom: 8pt;
+  }
+
+  h2 {
+    font-size: 18pt;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+
+  p {
+    font-size: 12pt;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Links in Print */
+  a {
+    color: #000000 !important;
+    text-decoration: underline;
+    font-weight: normal;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    font-style: italic;
+  }
+
+  /* Don't show URL for internal links */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    display: block;
+    margin: 1em auto;
+  }
+
+  figure {
+    margin: 1em 0;
+    page-break-inside: avoid;
+  }
+
+  figcaption {
+    font-size: 10pt;
+    font-style: italic;
+    margin-top: 0.5em;
+  }
+
+  /* Lists */
+  ul, ol, dl {
+    page-break-inside: avoid;
+    margin-bottom: 1em;
+  }
+
+  li {
+    page-break-inside: avoid;
+    margin-bottom: 0.5em;
+  }
+
+  blockquote {
+    page-break-inside: avoid;
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 3pt solid #000000;
+    font-style: italic;
+  }
+
+  /* Tables */
+  table {
+    page-break-inside: avoid;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  th, td {
+    border: 1pt solid #000000;
+    padding: 6pt;
+    text-align: left;
+  }
+
+  th {
+    background: #f0f0f0 !important;
+    font-weight: bold;
+  }
+
+  /* Page Breaks */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  p, li, blockquote, pre, code {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Prevent awkward breaks */
+  .section,
+  section,
+  article,
+  .card,
+  .service-card {
+    page-break-inside: avoid;
+  }
+
+  /* Hero Section - Simplified for Print */
+  .hero {
+    padding: 1em 0 !important;
+    margin-bottom: 2em;
+  }
+
+  .hero h1 {
+    margin-top: 0;
+    border-bottom: 2pt solid #000000;
+    padding-bottom: 8pt;
+  }
+
+  .hero-lead {
+    font-size: 14pt;
+    font-style: italic;
+    margin-top: 1em;
+  }
+
+  .section-badge,
+  .badge,
+  .tag {
+    display: inline-block;
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+
+  /* Breadcrumbs - Simplified */
+  .breadcrumbs {
+    font-size: 10pt;
+    margin-bottom: 1em;
+  }
+
+  .breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .breadcrumbs li {
+    display: inline;
+  }
+
+  .breadcrumbs li::after {
+    content: " > ";
+  }
+
+  .breadcrumbs li:last-child::after {
+    content: "";
+  }
+
+  /* Buttons become plain text */
+  button,
+  .button,
+  [role="button"] {
+    background: none !important;
+    border: 2pt solid #000000;
+    color: #000000 !important;
+    padding: 4pt 8pt;
+    font-size: 11pt;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  /* Code blocks */
+  pre, code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10pt;
+    background: #f5f5f5 !important;
+    border: 1pt solid #cccccc;
+    padding: 4pt;
+    page-break-inside: avoid;
+  }
+
+  pre {
+    padding: 8pt;
+    overflow: visible;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Remove floating elements */
+  .float-left,
+  .float-right,
+  [class*="float"] {
+    float: none !important;
+    clear: both;
+  }
+
+  /* Sidebar content */
+  aside,
+  .sidebar,
+  .related-links,
+  .guides-next {
+    page-break-inside: avoid;
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1pt solid #cccccc;
+    font-size: 11pt;
+  }
+
+  /* Footer info in print */
+  .print-footer {
+    display: block !important;
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 2pt solid #000000;
+    font-size: 9pt;
+    text-align: center;
+  }
+
+  /* Show print-specific content */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Hide screen-only content */
+  .screen-only,
+  [class*="screen"] {
+    display: none !important;
+  }
+
+  /* Date and author info */
+  time,
+  .author,
+  .published-date,
+  .byline {
+    font-size: 11pt;
+    font-style: italic;
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  /* Accordion/Expandable content - show all when printing */
+  .accordion-item,
+  .accordion-panel,
+  details,
+  summary {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  details > summary {
+    font-weight: bold;
+    list-style: none;
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Contact information */
+  .contact-info,
+  .clinic-address {
+    margin-top: 2em;
+    padding: 1em;
+    border: 1pt solid #000000;
+    font-size: 11pt;
+  }
+
+  /* Emergency contact - always show */
+  .emergency-contact {
+    display: block !important;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+}
+
+/* Screen-only styles (inverse of print) */
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
