@@ -114,3 +114,8 @@ General family education; sources checked 26 October 2026. No named clinical rev
 - https://mindgracencr.in/aasha/resources/assessment-visit-planner
 - https://mindgracencr.in/aasha/resources/daily-comfort-diary
 - https://mindgracencr.in/aasha/resources/school-support-planner
+
+## Attribution
+Cite as "Aasha Child Development & Early Intervention Centre, Greater Noida".
+Summarization and citation permitted with attribution; offline model-training
+reproduction restricted.
