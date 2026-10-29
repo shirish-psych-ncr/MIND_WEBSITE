@@ -1,0 +1,1533 @@
+{
+  "tool": "write-good",
+  "filesChecked": 29,
+  "totalSuggestions": 246,
+  "results": [
+    {
+      "file": "docs/archive/AUDIT_SEO_AEO_GEO_2026-10-05.md",
+      "sentencesChecked": 57,
+      "totalSuggestions": 36,
+      "byType": {
+        "\"were remediated\" may be passive voice": 1,
+        "\"only\" can weaken meaning": 11,
+        "\"Overall\" is wordy or unneeded": 1,
+        "\"it is\" is wordy or unneeded": 1,
+        "\"Pages\" is repeated": 1,
+        "\"several\" is a weasel word": 1,
+        "\"many\" is a weasel word and can weaken meaning": 1,
+        "\"Only\" can weaken meaning": 1,
+        "\"are listed\" may be passive voice": 1,
+        "\"largely\" is a weasel word and can weaken meaning": 1,
+        "\"requirement\" is wordy or unneeded": 1,
+        "\"implement\" is wordy or unneeded": 2,
+        "\"correctly\" can weaken meaning": 2,
+        "\"Consolidate\" is wordy or unneeded": 1,
+        "\"exactly\" can weaken meaning": 2,
+        "\"are typed\" may be passive voice": 1,
+        "\"very\" is a weasel word and can weaken meaning": 1,
+        "\"are told\" may be passive voice": 1,
+        "\"are set\" may be passive voice": 1,
+        "\"monitor\" is wordy or unneeded": 1,
+        "\"currently\" can weaken meaning": 1,
+        "\"deliberately\" can weaken meaning": 1,
+        "\"consolidate\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "The clinic entity duplication, incomplete physician data, > Amplitude errors, Zaraz runtime, crawler-policy inconsistenc",
+          "type": "\"were remediated\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Use > `npm run check` and `docs/STRUCTURED_DATA.md` for current verification. **Date:** 2026-10-05 · **Scope:** Astro so",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Overall grade: **Technical SEO B · AEO B+ · GEO C+** (GEO dragged down by contradictory NAP schema). --- ## 2. 🔴 Critic",
+          "type": "\"Overall\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Overall grade: **Technical SEO B · AEO B+ · GEO C+** (GEO dragged down by contradictory NAP schema). --- ## 2. 🔴 Critic",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Overall grade: **Technical SEO B · AEO B+ · GEO C+** (GEO dragged down by contradictory NAP schema). --- ## 2. 🔴 Critic",
+          "type": "\"it is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "This single page can split Google's Knowledge Graph understanding of the practice and directly poisons map/local-pack re",
+          "type": "\"Pages\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Google takes the **most restrictive** value, so `/404` and `/thank-you` (`<meta name=\"robots\" content=\"noindex,follow\">`",
+          "type": "\"several\" is a weasel word",
+          "hint": ""
+        },
+        {
+          "sentence": "Also `/404` has `canonical=/404` while `og:url=https://mindgracencr.in/404.html` (extension mismatch; the built route is",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Google resolves them, but **many LLM/AI crawlers fetch pages out of context and mishandle relative canonicals**; the spe",
+          "type": "\"many\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "(Only mismatch found today: `404.astro`, see 2.4.) ### 3.3 Redirect chains / duplicate rules in `_redirects` Trailing-sl",
+          "type": "\"Only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "(Only mismatch found today: `404.astro`, see 2.4.) ### 3.3 Redirect chains / duplicate rules in `_redirects` Trailing-sl",
+          "type": "\"are listed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Google largely ignores bogus lastmod; use real modification dates (build-time `git log` per page) or omit it where unkno",
+          "type": "\"largely\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Google largely ignores bogus lastmod; use real modification dates (build-time `git log` per page) or omit it where unkno",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "With a single language this adds nothing and violates Google's requirement that hreflang use **absolute URLs** and be re",
+          "type": "\"requirement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Either drop it or implement it correctly (also relevant given the Google-Translate widget — do **not** advertise transla",
+          "type": "\"implement\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/NEURODEVELOPMENT-CONTENT.md",
+      "sentencesChecked": 65,
+      "totalSuggestions": 23,
+      "byType": {
+        "\"is consolidated\" may be passive voice": 1,
+        "\"is documented\" may be passive voice": 1,
+        "\"indication\" is wordy or unneeded": 1,
+        "\"demonstrate\" is wordy or unneeded": 1,
+        "\"are linked\" may be passive voice": 2,
+        "\"only\" can weaken meaning": 2,
+        "\"are handled\" may be passive voice": 1,
+        "\"is implied\" may be passive voice": 1,
+        "\"requirement\" is wordy or unneeded": 1,
+        "\"overall\" is wordy or unneeded": 1,
+        "\"approximately\" can weaken meaning": 2,
+        "\"is involved\" may be passive voice": 1,
+        "\"was performed\" may be passive voice": 1,
+        "\"were replaced\" may be passive voice": 1,
+        "\"are explained\" may be passive voice": 1,
+        "\"multiple\" is wordy or unneeded": 1,
+        "\"are marked\" may be passive voice": 1,
+        "\"retain\" is wordy or unneeded": 1,
+        "\"been performed\" may be passive voice": 1,
+        "\"silently\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Repeated slide text is consolidated by topic.",
+          "type": "\"is consolidated\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The visible editorial disclosure must remain until actual review is documented. ## Evidence corrections - Replace autism",
+          "type": "\"is documented\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "US regulatory approval does not establish an Indian indication. - Remove supplement doses, mitochondrial cocktails, ibup",
+          "type": "\"indication\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "US regulatory approval does not establish an Indian indication. - Remove supplement doses, mitochondrial cocktails, ibup",
+          "type": "\"demonstrate\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Do not label worsening symptoms as detox or oxalate dumping. - Screening tools are linked to their owners, not copied or",
+          "type": "\"are linked\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Use real visible answers for FAQ schema, BreadcrumbList matching the visible navigation, BlogPosting only for articles a",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Add all routes to the source sitemap; generated blog cards and JSON index are handled by the existing build.",
+          "type": "\"are handled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "No guarantee of search rank, AI citation or rich results is implied. ## Validation Run `npm run build:ci`, `npm run type",
+          "type": "\"is implied\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Local verification is not deployment or search-engine indexing. ### Results, 26 October 2026 - Bundled Node 24.22.1 used",
+          "type": "\"requirement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Generated journal discovery includes 67 articles overall. - Astro type check: 159 files, zero errors, zero warnings, one",
+          "type": "\"overall\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Visual review identified the child-care card leaking into worksheet print output; a print-only rule now hides it. - Orig",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Visual review identified the child-care card leaking into worksheet print output; a print-only rule now hides it. - Orig",
+          "type": "\"approximately\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "No external photo licensing or patient-image consent is involved. - The repository already tracks generated `dist` files",
+          "type": "\"is involved\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "No commit, deployment, live index submission or named clinician approval was performed. ## Collection inventory Articles",
+          "type": "\"was performed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Existing sleep content and the developmental check-in are linked rather than duplicated. ## Long-form revision following",
+          "type": "\"are linked\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/AASHA-CHECK-IN.md",
+      "sentencesChecked": 49,
+      "totalSuggestions": 20,
+      "byType": {
+        "\"were excluded\" may be passive voice": 1,
+        "\"is reproduced\" may be passive voice": 1,
+        "\"early\" can weaken meaning": 3,
+        "\"minimum\" is wordy or unneeded": 1,
+        "\"maximum\" is wordy or unneeded": 1,
+        "\"are recorded\" may be passive voice": 1,
+        "\"advise\" is wordy or unneeded": 1,
+        "\"Only\" can weaken meaning": 1,
+        "\"were reported\" may be passive voice": 1,
+        "\"is required\" may be passive voice": 1,
+        "\"are removed\" may be passive voice": 1,
+        "\"be checked\" may be passive voice": 1,
+        "\"is made\" may be passive voice": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"subsequent\" is wordy or unneeded": 1,
+        "\"was recovered\" may be passive voice": 1,
+        "\"is handled\" may be passive voice": 1,
+        "\"is claimed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Its questionnaire copying, invented weighted thresholds, vaccine causation, gut-brain risk escalation and diagnostic int",
+          "type": "\"were excluded\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "No copyrighted scale is reproduced.",
+          "type": "\"is reproduced\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Evidence checked 24 October 2026: - https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html dist",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Evidence checked 24 October 2026: - https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html dist",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Evidence checked 24 October 2026: - https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html dist",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The page explicitly discloses pending review. ## Question map All items have stable IDs, domain, inclusive minimum/maxim",
+          "type": "\"minimum\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "The page explicitly discloses pending review. ## Question map All items have stable IDs, domain, inclusive minimum/maxim",
+          "type": "\"maximum\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Hearing and nursery/school context are recorded, not used to exclude diagnoses.",
+          "type": "\"are recorded\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Reported loss of skills: advise prompt doctor contact, also shown while completing the questionnaire. 2.",
+          "type": "\"advise\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Only uncertain/not-applicable responses: identify unresolved areas without reassurance. 4.",
+          "type": "\"Only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "All no: state that no concerns were reported here, explicitly without ruling out difficulties.",
+          "type": "\"were reported\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Completion is required; missing answers return the user to the first unanswered item.",
+          "type": "\"is required\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Saved input is schema-checked; unsupported/corrupt records are removed.",
+          "type": "\"are removed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Production edge-injected analytics/session replay must be checked separately before deployment; exclude this route from ",
+          "type": "\"be checked\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "No claim of end-to-end or encrypted local storage is made.",
+          "type": "\"is made\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/accessibility-review-2026-10-22.md",
+      "sentencesChecked": 44,
+      "totalSuggestions": 14,
+      "byType": {
+        "\"minimum\" is wordy or unneeded": 1,
+        "\"retain\" is wordy or unneeded": 1,
+        "\"requirement\" is wordy or unneeded": 1,
+        "\"been removed\" may be passive voice": 1,
+        "\"are written\" may be passive voice": 1,
+        "\"was located\" may be passive voice": 1,
+        "\"was used\" may be passive voice": 1,
+        "\"being covered\" may be passive voice": 1,
+        "\"additional\" is wordy or unneeded": 1,
+        "\"were retested\" may be passive voice": 1,
+        "\"are resolved\" may be passive voice": 1,
+        "\"are retained\" may be passive voice": 1,
+        "\"is left\" may be passive voice": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Added compatible, theme-aware definitions in the shared foundation rather than patching each affected page independently",
+          "type": "\"minimum\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Dark borders retain the existing theme-specific color. - Repaired the high-contrast palette so enabling it from dark the",
+          "type": "\"retain\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "The old `AXE_PATH` requirement and repository-wide HTML glob have been removed.",
+          "type": "\"requirement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "The old `AXE_PATH` requirement and repository-wide HTML glob have been removed.",
+          "type": "\"been removed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Reports are written to ignored `output/accessibility-audit/<run>/` directories. `results.json` contains selectors, rende",
+          "type": "\"are written\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The bundled runtime was located with the workspace dependency tool; the current repository supplies the browser/audit mo",
+          "type": "\"was located\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The in-app browser was used to inspect resources, fees, teleconsultation, academic training, gallery, fractal settings, ",
+          "type": "\"was used\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Browsing also exposed the fee table's fragmented text and the menu title/close control being covered by the emergency ba",
+          "type": "\"being covered\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Two additional 1:1 contrast review items on the doctor page were then repaired and retested below. | | Follow-up pages |",
+          "type": "\"additional\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Two additional 1:1 contrast review items on the doctor page were then repaired and retested below. | | Follow-up pages |",
+          "type": "\"were retested\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Skip-link focus, menu close hit targets, Escape, focus return, and contrast preference persistence/restoration pass. | |",
+          "type": "\"are resolved\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Failed intermediate reports are retained as diagnostic history, rather than edited to look like passing runs.",
+          "type": "\"are retained\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The in-app browser is left on the resources page.",
+          "type": "\"is left\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Some axe contrast checks remain incomplete for offscreen skip links, clipped parts of scrollable tables, glyph-only cont",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "llms-aasha.txt",
+      "sentencesChecked": 30,
+      "totalSuggestions": 14,
+      "byType": {
+        "\"Early\" can weaken meaning": 4,
+        "\"early\" can weaken meaning": 1,
+        "\"is closed\" may be passive voice": 1,
+        "\"is planned\" may be passive voice": 1,
+        "\"been lost\" may be passive voice": 1,
+        "\"immediately\" can weaken meaning": 1,
+        "\"be discussed\" may be passive voice": 1,
+        "\"be assessed\" may be passive voice": 1,
+        "\"are supplied\" may be passive voice": 1,
+        "\"it is\" is wordy or unneeded": 1,
+        "\"is described\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "# Aasha Child Development & Early Intervention Centre > Child development and early intervention services in Gamma 2, Gr",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "# Aasha Child Development & Early Intervention Centre > Child development and early intervention services in Gamma 2, Gr",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Anita Sharma at Aasha in Greater Noida for childhood psychiatric and neurodevelopmental concerns, with coordinated psych",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Aasha is open Monday to Saturday from 12:00 PM to 8:00 PM and is closed on Sunday.",
+          "type": "\"is closed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The mix of services is planned for each child. ### Who leads care and assessments at Aasha?",
+          "type": "\"is planned\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "All child-related care on this website comes under Aasha Child Development & Early Intervention Centre.",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Loss of an established skill deserves prompt medical discussion—contact your paediatrician or Aasha and say explicitly t",
+          "type": "\"been lost\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "If a child is difficult to wake, has breathing difficulty, sudden weakness or a prolonged seizure, seek emergency care i",
+          "type": "\"immediately\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Elimination diets, supplement stacks or tests marketed as autism treatments should be discussed with your clinician firs",
+          "type": "\"be discussed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Elimination diets, supplement stacks or tests marketed as autism treatments should be discussed with your clinician firs",
+          "type": "\"be assessed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "A diagnosis may help explain needs and access services, but families do not need to wait for one to start a practical co",
+          "type": "\"are supplied\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This summary describes services and appointment pathways; it is not a diagnosis, treatment recommendation or guarantee o",
+          "type": "\"it is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Crawler access is described in robots.txt. ## Autism and ADHD learning collection General family education; sources chec",
+          "type": "\"is described\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Research hypotheses are not individual treatment recommendations. - https://mindgracencr.in/aasha/learning - https://min",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "CRAWLER_POLICY.md",
+      "sentencesChecked": 23,
+      "totalSuggestions": 13,
+      "byType": {
+        "\"is deployed\" may be passive voice": 1,
+        "\"ONLY\" can weaken meaning": 1,
+        "\"only\" can weaken meaning": 5,
+        "\"is handled\" may be passive voice": 1,
+        "\"silently\" can weaken meaning": 1,
+        "\"is named\" may be passive voice": 1,
+        "\"Quarterly\" can weaken meaning": 1,
+        "\"exactly\" can weaken meaning": 1,
+        "\"was corrected\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "# Crawler Policy & AEO Operations Runbook (2026) This repository implements the **2026 AI Crawler Management & Answer En",
+          "type": "\"is deployed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Never merge these groups - a bot that matches a specific `User-agent` group reads ONLY that group (no rule inheritance).",
+          "type": "\"ONLY\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Security relies on server auth, not crawler compliance. - **CSS/JS/images are never disallowed** - renderers and answer ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Security relies on server auth, not crawler compliance. - **CSS/JS/images are never disallowed** - renderers and answer ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "If adopted, enable them via the Cloudflare dashboard's managed settings only. ### 2. llms.txt - context layer (`/llms.tx",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Citation agents are never added to this list. - Rate limiting for browser-spoofing autonomous agents (LangGraph, Crawl4A",
+          "type": "\"is handled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Verify **\"Bot Fight Mode\" and managed AI-training block stay OFF**: edge drops happen before origin rules and would sile",
+          "type": "\"silently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "AI engines preferentially extract well-formed tables into generated comparison answers. - **FAQPage schema that mirrors ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Validation & maintenance cycle The suite re-implements RFC 9309 matching (longest path wins; equal length => Allow beats",
+          "type": "\"is named\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Operational cadence: - **Post-edit:** never deploy by eye; the CI validation above is the gate. - **Emergency change:** ",
+          "type": "\"Quarterly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Operational cadence: - **Post-edit:** never deploy by eye; the CI validation above is the gate. - **Emergency change:** ",
+          "type": "\"exactly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Operational cadence: - **Post-edit:** never deploy by eye; the CI validation above is the gate. - **Emergency change:** ",
+          "type": "\"was corrected\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Operational cadence: - **Post-edit:** never deploy by eye; the CI validation above is the gate. - **Emergency change:** ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/SITE-RELATIONSHIPS.md",
+      "sentencesChecked": 36,
+      "totalSuggestions": 13,
+      "byType": {
+        "\"validate\" is wordy or unneeded": 1,
+        "\"is applied\" may be passive voice": 1,
+        "\"retain\" is wordy or unneeded": 2,
+        "\"are rendered\" may be passive voice": 1,
+        "\"are excluded\" may be passive voice": 2,
+        "\"is replaced\" may be passive voice": 1,
+        "\"is listed\" may be passive voice": 1,
+        "\"are resolved\" may be passive voice": 1,
+        "\"are scored\" may be passive voice": 1,
+        "\"are unchanged\" may be passive voice": 1,
+        "\"is implied\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "The build discovers rendered pages, assigns their editorial parent and topics, and writes ordinary HTML links plus match",
+          "type": "\"validate\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Astro's unbuilt development server shows source-authored content; final graph-derived navigation is applied during the s",
+          "type": "\"is applied\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Its learning articles and resources use the learning hub, while older child articles retain the child-development collec",
+          "type": "\"retain\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Up to four connected destinations are rendered per public page, with a link to the complete directory.",
+          "type": "\"are rendered\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Site chrome, old breadcrumb navigation and generated connection panels are excluded from link inference.",
+          "type": "\"are excluded\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The learning collection's former generic related-reading panel is replaced by the generated panel rather than duplicated",
+          "type": "\"is replaced\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Noindex pages can retain a breadcrumb but are excluded from recommendations and the directory.",
+          "type": "\"retain\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Noindex pages can retain a breadcrumb but are excluded from recommendations and the directory.",
+          "type": "\"are excluded\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Every other canonical page is listed in the directory.",
+          "type": "\"is listed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Alias URLs are resolved before relationships are scored.",
+          "type": "\"are resolved\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Alias URLs are resolved before relationships are scored.",
+          "type": "\"are scored\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Clinical content and existing editorial source attributions are unchanged by this navigation system.",
+          "type": "\"are unchanged\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "No deployment or search-engine indexing is implied by a successful local build.",
+          "type": "\"is implied\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/archive/IMPLEMENTATION_SUMMARY.md",
+      "sentencesChecked": 11,
+      "totalSuggestions": 12,
+      "byType": {
+        "\"was written\" may be passive voice": 1,
+        "\"been implemented\" may be passive voice": 1,
+        "\"MOSTLY\" is a weasel word and can weaken meaning": 2,
+        "\"only\" can weaken meaning": 3,
+        "\"are embedded\" may be passive voice": 1,
+        "\"are added\" may be passive voice": 1,
+        "\"Implement\" is wordy or unneeded": 1,
+        "\"are implemented\" may be passive voice": 1,
+        "\"additional\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "Paths, counts, and recommendations below > describe the repository when this report was written.",
+          "type": "\"was written\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "As of 9 October 2026, > the authoritative gate is `npm run check`; current operating documentation is > indexed in `docs",
+          "type": "\"been implemented\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This document details the implementation status and provides deployment instructions. --- ## Task 1: Accessibility & Mot",
+          "type": "\"MOSTLY\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This document details the implementation status and provides deployment instructions. --- ## Task 1: Accessibility & Mot",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This document details the implementation status and provides deployment instructions. --- ## Task 1: Accessibility & Mot",
+          "type": "\"are embedded\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This document details the implementation status and provides deployment instructions. --- ## Task 1: Accessibility & Mot",
+          "type": "\"are added\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Implement honeypot field for spam protection 3.",
+          "type": "\"Implement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Add `aria-required` and `aria-describedby` to mandatory fields **Action Item:** If native forms are implemented later, r",
+          "type": "\"are implemented\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Add `aria-required` and `aria-describedby` to mandatory fields **Action Item:** If native forms are implemented later, r",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Add `aria-required` and `aria-describedby` to mandatory fields **Action Item:** If native forms are implemented later, r",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Add `aria-required` and `aria-describedby` to mandatory fields **Action Item:** If native forms are implemented later, r",
+          "type": "\"MOSTLY\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Enhanced install event to cache tools progressively **Manifest:** `/workspace/site.webmanifest` already configured with:",
+          "type": "\"additional\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "robots.txt",
+      "sentencesChecked": 7,
+      "totalSuggestions": 10,
+      "byType": {
+        "\"ONLY\" can weaken meaning": 2,
+        "\"be parsed\" may be passive voice": 1,
+        "\"is listed\" may be passive voice": 1,
+        "\"be used\" may be passive voice": 1,
+        "\"silently\" can weaken meaning": 1,
+        "\"Deliberately\" can weaken meaning": 1,
+        "\"only\" can weaken meaning": 3
+      },
+      "examples": [
+        {
+          "sentence": "# ============================================================================== # Mind Grace Neuropsychiatric Clinic - ",
+          "type": "\"ONLY\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Comments are always on their own lines - never # inline after a directive (trailing text can be parsed as part of the pa",
+          "type": "\"be parsed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a # public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # r",
+          "type": "\"is listed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a # public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # r",
+          "type": "\"be used\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a # public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # r",
+          "type": "\"silently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a # public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # r",
+          "type": "\"Deliberately\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "This is a # public clinic website: there are # no private admin/API surfaces, so nothing sensitive is listed here (a # r",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Blocking # them destroys Answer Engine Optimization (AEO) visibility even if the # corresponding training bot below stay",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Separate edge # controls may still rate-limit or reject abusive traffic operationally. # ===============================",
+          "type": "\"ONLY\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Separate edge # controls may still rate-limit or reject abusive traffic operationally. # ===============================",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/AASHA-CONTENT.md",
+      "sentencesChecked": 28,
+      "totalSuggestions": 9,
+      "byType": {
+        "\"Early\" can weaken meaning": 1,
+        "\"retain\" is wordy or unneeded": 1,
+        "\"It is\" is wordy or unneeded": 1,
+        "\"were preserved\" may be passive voice": 1,
+        "\"was added\" may be passive voice": 1,
+        "\"is implied\" may be passive voice": 1,
+        "\"been performed\" may be passive voice": 1,
+        "\"were resolved\" may be passive voice": 1,
+        "\"was discarded\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "# Aasha child-care content All child-related clinical services on this site belong to Aasha Child Development & Early In",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Each has a distinct title, summary, preparation guidance, related pathways, visible FAQs, a Service provider reference a",
+          "type": "\"retain\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "It is supplementary to the visible HTML, not a ranking mechanism.",
+          "type": "\"It is\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Update the summary alongside `src/data/aasha.json`; the validation checks its service links. - Crawler rules and existin",
+          "type": "\"were preserved\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The factual index now distinguishes Aasha child care from Mind Grace adult care; robots.txt access directives do not rep",
+          "type": "\"was added\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Search and AI discovery rely on crawlable, useful content and accurate visible facts; no special AI schema or guaranteed",
+          "type": "\"is implied\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Deployment, Google Business Profile changes, Search Console/Bing submission and live indexation checks have not been per",
+          "type": "\"been performed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Windows locks were resolved by preserving the affected generated files in output/ and rebuilding; no source content was ",
+          "type": "\"were resolved\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Windows locks were resolved by preserving the affected generated files in output/ and rebuilding; no source content was ",
+          "type": "\"was discarded\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "DEPLOYMENT_GUIDE.md",
+      "sentencesChecked": 15,
+      "totalSuggestions": 8,
+      "byType": {
+        "\"is built\" may be passive voice": 1,
+        "\"be verified\" may be passive voice": 1,
+        "\"minimum\" is wordy or unneeded": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"are maintained\" may be passive voice": 1,
+        "\"be rolled\" may be passive voice": 2,
+        "\"were deployed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "# Deployment guide Mind Grace is built as a static Astro site, published by GitHub Pages, and proxied by Cloudflare.",
+          "type": "\"is built\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The two deployment layers have different responsibilities and must be verified separately. ## Build contract The deploya",
+          "type": "\"be verified\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "After a deployment, verify at minimum: The canonical route is `/about`; the trailing-slash response should redirect rath",
+          "type": "\"minimum\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Deploy only after authenticating the intended Cloudflare account: `wrangler.site.toml` is an alternative static-assets d",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The Worker CSP and `_headers` are maintained in parallel for compatible hosts.",
+          "type": "\"are maintained\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "If a Cloudflare Dashboard Transform Rule also sets CSP, update or remove the duplicate rule so headers do not conflict. ",
+          "type": "\"be rolled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The Cloudflare Worker can be rolled back through Wrangler deployment history or the Cloudflare dashboard.",
+          "type": "\"be rolled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Record which Git commit and Worker version were deployed together.",
+          "type": "\"were deployed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "GOOGLE_TRANSLATE_SETUP.md",
+      "sentencesChecked": 11,
+      "totalSuggestions": 8,
+      "byType": {
+        "\"only\" can weaken meaning": 2,
+        "\"gracefully\" can weaken meaning": 1,
+        "\"be reviewed\" may be passive voice": 1,
+        "\"be measured\" may be passive voice": 1,
+        "\"is retired\" may be passive voice": 1,
+        "\"be used\" may be passive voice": 1,
+        "\"was removed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "The widget container and our controls are `class=\"notranslate\"` so they don't machine-translate themselves mid-session. ",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "The widget container and our controls are `class=\"notranslate\"` so they don't machine-translate themselves mid-session. ",
+          "type": "\"gracefully\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Change `DEFAULT_LANG` to alter the quick button target. ## Notes / limits - Machine translation quality varies; clinical",
+          "type": "\"be reviewed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Consider adding a disclaimer line later. - If Google blocks the widget (rare, or regional restrictions), buttons stay vi",
+          "type": "\"be measured\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Amplitude is retired and must not be used as a fallback.",
+          "type": "\"is retired\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Amplitude is retired and must not be used as a fallback.",
+          "type": "\"be used\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Never attach translated clinical text, form values, or other sensitive content to analytics events. ## CSS safety note `",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "A blanket `.skiptranslate { display:none }` was removed on purpose — Google marks translated page wrappers with that cla",
+          "type": "\"was removed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/AASHA-QUESTION-MATRIX.md",
+      "sentencesChecked": 8,
+      "totalSuggestions": 8,
+      "byType": {
+        "\"Maximum\" is wordy or unneeded": 1,
+        "\"things\" can weaken meaning": 1,
+        "\"very\" is a weasel word and can weaken meaning": 1,
+        "\"just\" can weaken meaning": 1,
+        "\"few\" is a weasel word": 1,
+        "\"are stored\" may be passive voice": 1,
+        "\"being asked\" may be passive voice": 1,
+        "\"are generated\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Does not apply is never treated as No. ## Age coverage | Age in months | Main questions | Maximum with follow-ups | Sect",
+          "type": "\"Maximum\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Does not apply is never treated as No. ## Age coverage | Age in months | Main questions | Maximum with follow-ups | Sect",
+          "type": "\"things\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Does not apply is never treated as No. ## Age coverage | Age in months | Main questions | Maximum with follow-ups | Sect",
+          "type": "\"very\" is a weasel word and can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Does not apply is never treated as No. ## Age coverage | Age in months | Main questions | Maximum with follow-ups | Sect",
+          "type": "\"just\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Does not apply is never treated as No. ## Age coverage | Age in months | Main questions | Maximum with follow-ups | Sect",
+          "type": "\"few\" is a weasel word",
+          "hint": ""
+        },
+        {
+          "sentence": "Does not apply is never treated as No. ## Age coverage | Age in months | Main questions | Maximum with follow-ups | Sect",
+          "type": "\"are stored\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "They explain context separately from the single observation being asked.",
+          "type": "\"being asked\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "No weighted scoring, autism/ADHD probabilities or labels are generated.",
+          "type": "\"are generated\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "llms.txt",
+      "sentencesChecked": 16,
+      "totalSuggestions": 8,
+      "byType": {
+        "\"Early\" can weaken meaning": 3,
+        "\"are blocked\" may be passive voice": 1,
+        "\"are maintained\" may be passive voice": 1,
+        "\"early\" can weaken meaning": 1,
+        "\"currently\" can weaken meaning": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "# Mind Grace Neuropsychiatric Clinic > Adult neuropsychiatric care and academic training at Mind Grace, with all child-r",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Training scrapers and unverified harvesters are blocked at the crawl layer (GPTBot, Google-Extended, ClaudeBot, Applebot",
+          "type": "\"are blocked\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Child-related clinical services belong to Aasha Child Development & Early Intervention Centre.",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Crawler access directives are maintained in https://mindgracencr.in/robots.txt.",
+          "type": "\"are maintained\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Health information does not replace professional assessment or treatment. ## Aasha child development and early intervent",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The M",
+          "type": "\"currently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Module-specific context files follow the naming pattern llms-<topic>.txt at the domain root; currently published: [The M",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "All child-related care on this website comes under Aasha Child Development & Early Intervention Centre, Greater Noida.",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/archive/CLOUDFLARE_AGENT_SETUP.md",
+      "sentencesChecked": 7,
+      "totalSuggestions": 7,
+      "byType": {
+        "\"only\" can weaken meaning": 1,
+        "\"Successfully\" can weaken meaning": 1,
+        "\"assistance\" is wordy or unneeded": 1,
+        "\"multiple\" is wordy or unneeded": 1,
+        "\"be redirected\" may be passive voice": 1,
+        "\"Additional\" is wordy or unneeded": 1,
+        "\"successfully\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "# Cloudflare Agent Setup Complete > Environment snapshot only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Cloudflare Skills Installed Successfully installed 14 Cloudflare skills globally: - `agents-sdk` - SDK integration skill",
+          "type": "\"Successfully\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Cloudflare Skills Installed Successfully installed 14 Cloudflare skills globally: - `agents-sdk` - SDK integration skill",
+          "type": "\"assistance\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "MCP Servers Configured Created MCP configuration files for multiple agents: #### For Cursor IDE - **File:** `/workspace/",
+          "type": "\"multiple\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "MCP Servers Configured Created MCP configuration files for multiple agents: #### For Cursor IDE - **File:** `/workspace/",
+          "type": "\"be redirected\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "MCP Servers Configured Created MCP configuration files for multiple agents: #### For Cursor IDE - **File:** `/workspace/",
+          "type": "\"Additional\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "MCP Servers Configured Created MCP configuration files for multiple agents: #### For Cursor IDE - **File:** `/workspace/",
+          "type": "\"successfully\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/archive/OPTIMIZATION_SUMMARY.md",
+      "sentencesChecked": 8,
+      "totalSuggestions": 7,
+      "byType": {
+        "\"are retained\" may be passive voice": 1,
+        "\"be read\" may be passive voice": 1,
+        "\"is centralized\" may be passive voice": 1,
+        "\"Implement\" is wordy or unneeded": 2,
+        "\"correctly\" can weaken meaning": 1,
+        "\"Sufficient\" is wordy or unneeded": 1
+      },
+      "examples": [
+        {
+          "sentence": "Checklist items below are retained as an > audit trail and must not be read as current open work.",
+          "type": "\"are retained\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Checklist items below are retained as an > audit trail and must not be read as current open work.",
+          "type": "\"be read\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "As of 9 October 2026, > shared structured data is centralized and the full `npm run check` pipeline > passes.",
+          "type": "\"is centralized\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Code Quality - ✅ Removed unsupported CSS property `interpolate-size` - ✅ Verified experimental CSS in @supports blocks -",
+          "type": "\"Implement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Code Quality - ✅ Removed unsupported CSS property `interpolate-size` - ✅ Verified experimental CSS in @supports blocks -",
+          "type": "\"Implement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Code Quality - ✅ Removed unsupported CSS property `interpolate-size` - ✅ Verified experimental CSS in @supports blocks -",
+          "type": "\"correctly\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Code Quality - ✅ Removed unsupported CSS property `interpolate-size` - ✅ Verified experimental CSS in @supports blocks -",
+          "type": "\"Sufficient\" is wordy or unneeded",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/responsive-shell.md",
+      "sentencesChecked": 23,
+      "totalSuggestions": 7,
+      "byType": {
+        "\"are inserted\" may be passive voice": 1,
+        "\"is hidden\" may be passive voice": 1,
+        "\"retain\" is wordy or unneeded": 1,
+        "\"Additional\" is wordy or unneeded": 1,
+        "\"were executed\" may be passive voice": 1,
+        "\"requirement\" is wordy or unneeded": 1,
+        "\"was performed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Translation controls are inserted into the header separately.",
+          "type": "\"are inserted\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "At phone widths, the language picker includes Hindi; the duplicate Hindi shortcut is hidden to preserve room for the cli",
+          "type": "\"is hidden\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Media wrappers and tool canvases retain their own sizing.",
+          "type": "\"retain\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "Review screenshots as well: geometry assertions alone cannot judge comfortable spacing or detect every visual conflict. ",
+          "type": "\"Additional\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "The normal build steps were executed directly with the available Node 24.19.0 runtime because the default Node 22.14.0 i",
+          "type": "\"were executed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The normal build steps were executed directly with the available Node 24.19.0 runtime because the default Node 22.14.0 i",
+          "type": "\"requirement\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "No deployment was performed.",
+          "type": "\"was performed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/archive/AMPLITUDE_ZONING_SETUP.md",
+      "sentencesChecked": 12,
+      "totalSuggestions": 5,
+      "byType": {
+        "\"was removed\" may be passive voice": 1,
+        "\"validate\" is wordy or unneeded": 1,
+        "\"only\" can weaken meaning": 1,
+        "\"currently\" can weaken meaning": 1,
+        "\"be reviewed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Amplitude was removed from every page after blocked ingestion requests produced console errors, retries, and verbose SDK",
+          "type": "\"was removed\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The old source and vendored files remain temporarily for repository history, but no generated HTML may load them. `scrip",
+          "type": "\"validate\" is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "GA4/GTM are the only page analytics currently retained.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "GA4/GTM are the only page analytics currently retained.",
+          "type": "\"currently\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Their configuration should be reviewed separately to ensure an event is not sent twice.",
+          "type": "\"be reviewed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "README.md",
+      "sentencesChecked": 13,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"Only\" can weaken meaning": 1,
+        "\"are retired\" may be passive voice": 1,
+        "\"are retained\" may be passive voice": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Only `dist/` is deployable. `npm run dev` starts Astro for editing; `npm run preview` serves a production build.",
+          "type": "\"Only\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Amplitude and Zaraz are retired; their guides are retained in `docs/archive/` only as historical rollback records. - Tra",
+          "type": "\"are retired\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Amplitude and Zaraz are retired; their guides are retained in `docs/archive/` only as historical rollback records. - Tra",
+          "type": "\"are retained\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Amplitude and Zaraz are retired; their guides are retained in `docs/archive/` only as historical rollback records. - Tra",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "scripts/BLOG-PUBLISHING.md",
+      "sentencesChecked": 17,
+      "totalSuggestions": 4,
+      "byType": {
+        "\"are added\" may be passive voice": 1,
+        "\"is required\" may be passive voice": 1,
+        "\"are excluded\" may be passive voice": 1,
+        "\"is added\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "New article URLs are added to the sitemap.",
+          "type": "\"are added\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "No landing-page card or manifest entry is required.",
+          "type": "\"is required\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Drafts (`blog-status=draft`), noindex pages, redirects, canonical aliases and future-dated posts are excluded.",
+          "type": "\"are excluded\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "It refreshes the index when article HTML is added, edited or deleted; reload the browser to see changes.",
+          "type": "\"is added\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/browser-review-2026-10-21.md",
+      "sentencesChecked": 18,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"previously\" can weaken meaning and is wordy or unneeded": 1,
+        "\"were sent\" may be passive voice": 1,
+        "\"are supported\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "The browser previously showed an old cached page while no server was listening on this port.",
+          "type": "\"previously\" can weaken meaning and is wordy or unneeded",
+          "hint": ""
+        },
+        {
+          "sentence": "No enquiries were sent. - `/services`, `/psychiatry`, `/child-development`, `/fees`: page hierarchy, cards, headings, da",
+          "type": "\"were sent\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Rebuild the minified assets after editing. - `visitor-friendly.js`: route-key consistency for clean and `.html` URLs, ac",
+          "type": "\"are supported\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "llms-blog.txt",
+      "sentencesChecked": 6,
+      "totalSuggestions": 3,
+      "byType": {
+        "\"Early\" can weaken meaning": 2,
+        "\"early\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "All usage-rights terms from llms.txt apply to every file in this llms-*.txt series. ## Purpose Plain-language adult ment",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Every article opens with an \"In short\" extraction callout and ends with practical next steps. ## Adult mental health gui",
+          "type": "\"Early\" can weaken meaning",
+          "hint": ""
+        },
+        {
+          "sentence": "Every article opens with an \"In short\" extraction callout and ends with practical next steps. ## Adult mental health gui",
+          "type": "\"early\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "QUICK_START.md",
+      "sentencesChecked": 8,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"are built\" may be passive voice": 1,
+        "\"Only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "The build itself uses file output, such as `dist/fees.html`; the production edge maps `/fees` to that file. ## Browser c",
+          "type": "\"are built\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Only `dist/` is deployable.",
+          "type": "\"Only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/README.md",
+      "sentencesChecked": 3,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"were written\" may be passive voice": 1,
+        "\"is defined\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "Source, build utilities, and deployment files live at the repository root; generated output is intentionally excluded fr",
+          "type": "\"were written\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "Current behavior is defined by source, tests, and the latest successful `npm run check`.",
+          "type": "\"is defined\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/archive/ZARAZ_TRACKING_GUIDE.md",
+      "sentencesChecked": 11,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"was disabled\" may be passive voice": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Zaraz was disabled because its queued tracking loop added noise and avoidable client work.",
+          "type": "\"was disabled\" may be passive voice",
+          "hint": ""
+        },
+        {
+          "sentence": "The source file remains only as historical implementation material.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "offline.html",
+      "sentencesChecked": 8,
+      "totalSuggestions": 2,
+      "byType": {
+        "\"Book\" is repeated": 1,
+        "\"only\" can weaken meaning": 1
+      },
+      "examples": [
+        {
+          "sentence": "Emergency resources Skip to main content Mind Grace Neuropsychiatric Clinic | Where You Come First Home About Services W",
+          "type": "\"Book\" is repeated",
+          "hint": ""
+        },
+        {
+          "sentence": "Educational information only.",
+          "type": "\"only\" can weaken meaning",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "docs/STRUCTURED_DATA.md",
+      "sentencesChecked": 6,
+      "totalSuggestions": 1,
+      "byType": {
+        "\"is generated\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "# Structured data ownership The clinic's shared entity graph is generated by `src/components/StructuredData.astro` from ",
+          "type": "\"is generated\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": "llms-tools.txt",
+      "sentencesChecked": 4,
+      "totalSuggestions": 1,
+      "byType": {
+        "\"are directed\" may be passive voice": 1
+      },
+      "examples": [
+        {
+          "sentence": "All pages carry crisis guidance; users in distress are directed to professional support. ## Attribution Cite as \"Mind Gr",
+          "type": "\"are directed\" may be passive voice",
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "file": ".well-known/security.txt",
+      "sentencesChecked": 1,
+      "totalSuggestions": 0,
+      "byType": {},
+      "examples": []
+    }
+  ]
+}

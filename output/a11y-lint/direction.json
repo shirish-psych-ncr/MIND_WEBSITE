@@ -1,0 +1,35 @@
+{
+  "tool": "direction",
+  "rtlContentFiles": [],
+  "rtlSnippets": 0,
+  "langDirIssues": [
+    {
+      "file": "src/components/DevelopmentalCheckIn.astro",
+      "issue": "missing lang attribute on <html>"
+    },
+    {
+      "file": "src/layouts/Layout.astro",
+      "issue": "missing lang attribute on <html>"
+    },
+    {
+      "file": "src/pages/aasha/book.astro",
+      "issue": "missing lang attribute on <html>"
+    },
+    {
+      "file": "src/pages/contact.astro",
+      "issue": "missing lang attribute on <html>"
+    },
+    {
+      "file": "src/pages/student-internship-guides.astro",
+      "issue": "missing lang attribute on <html>"
+    }
+  ],
+  "details": [
+    {
+      "file": "src/layouts/Layout.astro",
+      "element": "html",
+      "declaredDir": "ltr",
+      "kind": "attr"
+    }
+  ]
+}
