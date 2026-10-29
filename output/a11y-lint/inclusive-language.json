@@ -1,0 +1,99 @@
+{
+  "tool": "alex",
+  "filesWithFlags": 23,
+  "totalFindings": 0,
+  "results": [
+    {
+      "file": "CRAWLER_POLICY.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "DEPLOYMENT_GUIDE.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "README.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/AASHA-CHECK-IN.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/AASHA-CONTENT.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/AASHA-QUESTION-MATRIX.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/NEURODEVELOPMENT-CONTENT.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/SITE-RELATIONSHIPS.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/STRUCTURED_DATA.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/accessibility-review-2026-10-22.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/archive/AMPLITUDE_ZONING_SETUP.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/archive/AUDIT_SEO_AEO_GEO_2026-10-05.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/archive/IMPLEMENTATION_SUMMARY.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/archive/OPTIMIZATION_SUMMARY.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/archive/ZARAZ_TRACKING_GUIDE.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/browser-review-2026-10-21.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "docs/responsive-shell.md",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "llms-aasha.txt",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "llms-blog.txt",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "llms.txt",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "offline.html",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "robots.txt",
+      "error": "(m.actual || []).some is not a function"
+    },
+    {
+      "file": "scripts/BLOG-PUBLISHING.md",
+      "error": "(m.actual || []).some is not a function"
+    }
+  ]
+}

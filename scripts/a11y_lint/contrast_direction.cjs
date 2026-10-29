@@ -83,6 +83,10 @@ function oklchToHex(L, C, H) {
   const m_ = L - 0.1055613458 * a - 0.0638541728 * b;
   const s_ = L - 0.0894841775 * a - 1.2914855480 * b;
   const l = l_ ** 3, m = m_ ** 3, s = s_ ** 3;
+  // OKLab -> linear sRGB matrix (Björn Ottosson's reference implementation).
+  // NOTE: the second row must use the -1.2684410026 coefficient for `l`; a
+  // mistyped sign here silently inverted every green channel and made all
+  // oklch() colors look like bright cyans, hiding real contrast failures.
   let r = 4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s;
   let g = -1.2684410026 * l + 2.6092602764 * m - 0.3413193965 * s;
   let bl = -0.0041960863 * l - 0.7034186147 * m + 1.7076147010 * s;
@@ -132,7 +136,13 @@ function parseColor(value, tokens, depth = 0) {
   m = v.match(/^hsla?\(\s*([\d.]+)(?:deg)?[,\s]+([\d.]+)%[,\s]+([\d.]+)%/);
   if (m) return hslToHex(parseFloat(m[1]) % 360, parseFloat(m[2]), parseFloat(m[3]));
   m = v.match(/oklch\(\s*([\d.]+)(%?)\s+([\d.]+)(%?)\s+(-?[\d.]+)/);
-  if (m) return oklchToHex(parseFloat(m[1]), parseFloat(m[3]), parseFloat(m[5]));
+  if (m) {
+    // Percent-form lightness ("52%") must be scaled to 0..1 before conversion;
+    // passing the raw number treated it as an absolute L and clamped to white.
+    const lRaw = m[1] === '%' ? 50 : parseFloat(m[1]);
+    const L = m[2] === '%' ? lRaw / 100 : lRaw;
+    return oklchToHex(L, parseFloat(m[3]), parseFloat(m[5]));
+  }
   // color-mix(in srgb, <A> P%, <B>) -> blend A/B by percentage
   m = v.match(/color-mix\(\s*in\s+srgb\s*,\s*([^,]+?)\s+([\d.]+)%\s*,\s*(.+)\s*\)$/);
   if (m && depth <= 8) {

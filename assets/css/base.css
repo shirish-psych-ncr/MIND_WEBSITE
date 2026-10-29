@@ -553,7 +553,7 @@
 
     .card:hover {
       background: oklch(25% 0.08 340 / 0.5);
-      box-shadow: var(--shadow-lg), 0 0 0 1px oklch(340 0.12 0.7 / 0.2);
+      box-shadow: var(--shadow-lg), 0 0 0 1px oklch(70% 0.12 340 / 0.2);
     }
   }
 
@@ -938,7 +938,7 @@
 
     .service-item:hover {
       background: oklch(25% 0.08 340 / 0.6);
-      box-shadow: var(--shadow-xl), 0 0 0 1px oklch(340 0.12 0.7 / 0.2);
+      box-shadow: var(--shadow-xl), 0 0 0 1px oklch(70% 0.12 340 / 0.2);
     }
   }
 
@@ -987,6 +987,8 @@
 @layer components {
   .site-footer {
     background: var(--slate-900);
+    /* --slate-300 (10.2:1) clears WCAG AA; do not darken — the footer is a
+       dark surface in both themes, so light ink is required everywhere. */
     color: var(--slate-300);
     padding-block: var(--footer-padding);
   }
@@ -1017,6 +1019,8 @@
   }
 
   .footer-column a {
+    /* --slate-400 = 5.89:1 on the slate-900 footer (AA). --slate-500/600 are
+       NOT safe here — this background stays dark in both themes. */
     color: var(--slate-400);
     text-decoration: none;
     font-size: var(--font-size-sm);
@@ -1034,14 +1038,16 @@
 
   .disclaimer {
     font-size: var(--font-size-xs);
-    color: var(--slate-500);
+    /* Lightened from --slate-500 (3.17:1, AA fail) to --slate-400 (5.89:1). */
+    color: var(--slate-400);
     line-height: var(--line-height-relaxed);
     margin-bottom: var(--space-4);
   }
 
   .footer-copyright {
     font-size: var(--font-size-xs);
-    color: var(--slate-600);
+    /* Lightened from --slate-600 (2.07:1, AA fail) to --slate-400 (5.89:1). */
+    color: var(--slate-400);
   }
 }
 
