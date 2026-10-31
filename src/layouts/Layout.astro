@@ -16,6 +16,14 @@ const rawMarkup = (value: string) => value.replaceAll('<' + String.fromCharCode(
 const canonical = headExtra.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1] ?? `https://mindgracencr.in${Astro.url.pathname}`;
 const title = headExtra.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() ?? 'Mind Grace Neuropsychiatric Clinic';
 const description = headExtra.match(/<meta\s+name="description"\s+content="([^"]*)"/i)?.[1] ?? '';
+// Editorial metadata for the Article node in StructuredData. Pages opt in via
+// og:type="article" (and an optional blog-date publication meta). Hub pages
+// that aggregate article listings use CollectionPage instead of Article so a
+// page never carries two conflicting editorial types.
+const canonicalPath = new URL(canonical).pathname.replace(/\/+$/, '') || '/';
+const isCollectionHub = canonicalPath === '/aasha/learning';
+const isArticlePage = !isCollectionHub && /<meta\s+property="og:type"\s+content="article"/i.test(headExtra);
+const articleDate = headExtra.match(/<meta\s+name="blog-date"\s+content="(\d{4}-\d{2}-\d{2})"/i)?.[1];
 // Fill missing sharing metadata without replacing each page's own search intent.
 const aashaPage = /\/(?:aasha(?:\/|$)|child-development$|child-student-mental-health$|learning-disability-assessment$|sleep-and-autism-guide-indian-parents$|blog\/(?:children$|pages\/child\/))/.test(new URL(canonical).pathname);
 const metaValue = (value: string) => value.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
@@ -93,7 +101,7 @@ startMarkup = startMarkup
 {headExtra && <Fragment set:html={rawMarkup(headExtra)} />}
 <Fragment set:html={socialMeta} />
 <Head />
-<StructuredData canonical={canonical} title={title} description={description} />
+<StructuredData canonical={canonical} title={title} description={description} isArticle={isArticlePage} articleDate={articleDate} />
 </head>
 <body class={bodyClass || undefined} data-chrome-normalized="true" {...extraAttrs}>
 {startMarkup && <Fragment set:html={rawMarkup(startMarkup)} />}

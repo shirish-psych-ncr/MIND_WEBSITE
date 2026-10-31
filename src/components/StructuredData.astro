@@ -15,13 +15,18 @@ interface Props {
   canonical: string;
   title: string;
   description: string;
+  /** Editorial pages (guides, articles) ship an Article schema node. */
+  isArticle?: boolean;
+  /** ISO publication date; defaults to the evidence-review date when absent. */
+  articleDate?: string;
 }
 
-const { canonical, title, description } = Astro.props;
+const { canonical, title, description, isArticle = false, articleDate } = Astro.props;
 const pageUrl = canonical || `${SITE_URL}${Astro.url.pathname}`;
 const aashaId = AASHA_ID;
 const isAashaPage = ['/aasha', '/child-development', '/child-student-mental-health', '/learning-disability-assessment', '/sleep-and-autism-guide-indian-parents', '/blog/children'].some(path => pageUrl === `${SITE_URL}${path}`) || pageUrl.includes('/blog/pages/child/') || pageUrl.startsWith(`${SITE_URL}/aasha/`);
 const isPhysicianPage = pageUrl === `${SITE_URL}/dr-anita-sharma`;
+const publisherId = isAashaPage ? aashaId : CLINIC_ID;
 const graph: Record<string, unknown>[] = [
   clinic,
   aasha,
@@ -44,6 +49,47 @@ const graph: Record<string, unknown>[] = [
     about: { '@id': isAashaPage ? aashaId : isPhysicianPage ? PERSON_ID : CLINIC_ID },
   },
 ];
+
+// The Aasha learning hub is a curated listing of guides, so it ships a
+// CollectionPage node (with authorship and review dates) instead of an
+// Article node; its per-item BlogPosting/LearningResource markup lives in the
+// page's own #content graph.
+if (pageUrl === `${SITE_URL}/aasha/learning`) {
+  graph.push({
+    '@type': 'CollectionPage',
+    '@id': `${pageUrl}#collection`,
+    url: pageUrl,
+    name: title,
+    description,
+    inLanguage: 'en-IN',
+    isPartOf: { '@id': `${pageUrl}#webpage` },
+    author: { '@id': aashaId },
+    publisher: { '@id': aashaId },
+    datePublished: '2026-10-26',
+    dateModified: '2026-10-26',
+  });
+}
+
+// Article markup declares authorship and dates in machine-readable form —
+// freshness and attribution signals that search engines and AI tools read.
+if (isArticle && !isPhysicianPage) {
+  const published = articleDate ?? '2026-10-26';
+  graph.push({
+    '@type': 'Article',
+    '@id': `${pageUrl}#article`,
+    headline: title,
+    name: title,
+    description,
+    url: pageUrl,
+    mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+    author: { '@id': isAashaPage ? aashaId : PERSON_ID },
+    publisher: { '@id': publisherId },
+    datePublished: published,
+    dateModified: published,
+    inLanguage: 'en-IN',
+    isPartOf: { '@id': `${pageUrl}#webpage` },
+  });
+}
 
 if (isPhysicianPage) {
   graph.push(

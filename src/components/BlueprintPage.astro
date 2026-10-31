@@ -5,7 +5,7 @@ interface LinkItem { label: string; href: string }
 interface Props { title: string; description: string; canonical: string; kicker: string; answer: string; sections: Section[]; links: LinkItem[]; faq?: { question: string; answer: string }[] }
 const { title, description, canonical, kicker, answer, sections, links, faq = [] } = Astro.props;
 const faqJson = faq.length ? `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })}</script>` : '';
-const headExtra = String.raw`<link rel="canonical" href="${canonical}"><title>${title}</title><meta name="description" content="${description}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:type" content="website"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">${faqJson}`;
+const headExtra = String.raw`<link rel="canonical" href="${canonical}"><title>${title}</title><meta name="description" content="${description}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:type" content="article"><meta name="blog-date" content="2026-10-26"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">${faqJson}`;
 ---
 <Layout headExtra={headExtra}>
   <main id="main-content" class="seo-page blueprint-page">
