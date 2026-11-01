@@ -1,5 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+// Quiet landing page: one clear promise, two primary paths (patient care and
+// training), and a compact "find your way in" directory of breadcrumbs so the
+// home page orients visitors instead of overwhelming them. Detail lives on the
+// section pages; the home page only names the doors.
+const trails = [
+  { label: 'Care', href: '/services', crumbs: ['Home', 'Care', 'Services & treatments'] },
+  { label: 'Care', href: '/assessments', crumbs: ['Home', 'Care', 'Assessments'] },
+  { label: 'Care', href: '/aasha', crumbs: ['Home', 'Care', 'Aasha Early Intervention'] },
+  { label: 'Care', href: '/conditions', crumbs: ['Home', 'Care', 'Conditions we treat'] },
+  { label: 'Care', href: '/process', crumbs: ['Home', 'Care', 'How visits work'] },
+  { label: 'Care', href: '/fees', crumbs: ['Home', 'Care', 'Fees'] },
+  { label: 'Care', href: '/teleconsultation', crumbs: ['Home', 'Care', 'Online consultations'] },
+  { label: 'Care', href: '/book', crumbs: ['Home', 'Care', 'Book an appointment'] },
+  { label: 'Learning', href: '/academic-training', crumbs: ['Home', 'Learning', 'Academic training hub'] },
+  { label: 'Learning', href: '/clinical-psychology-internship', crumbs: ['Home', 'Learning', 'Internship enquiries'] },
+  { label: 'Reading', href: '/blog', crumbs: ['Home', 'Reading', 'The journal'] },
+  { label: 'Reading', href: '/tools', crumbs: ['Home', 'Reading', 'Self-help tools'] },
+  { label: 'The clinic', href: '/about', crumbs: ['Home', 'The clinic', 'About Mind Grace'] },
+  { label: 'The clinic', href: '/doctors', crumbs: ['Home', 'The clinic', 'The clinical team'] },
+  { label: 'The clinic', href: '/location', crumbs: ['Home', 'The clinic', 'Visit the clinic'] },
+  { label: 'The clinic', href: '/faq', crumbs: ['Home', 'The clinic', 'Questions, answered'] },
+];
+const trailGroups = ['Care', 'Learning', 'Reading', 'The clinic'].map((label) => ({ label, trails: trails.filter((t) => t.label === label) }));
+
 const headExtra = String.raw`
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f7f4ed" media="(prefers-color-scheme: light)">
@@ -19,92 +44,18 @@ const headExtra = String.raw`
       <div class="pn-hero-copy">
         <p class="eyebrow"><span class="mini-line" aria-hidden="true"></span> PSYCHOLOGY. PEOPLE. PRACTICE.</p>
         <h1 id="pn-hero-title">Care that stays<br><em>human.</em></h1>
-        <p class="pn-intro">Mind Grace turns complex ideas about the mind into clear consultations, useful resources, and more thoughtful ways of working — from the therapy room to everyday life.</p>
+        <p class="pn-intro">Mind Grace is a psychiatry and counselling clinic in Gamma II, Greater Noida — child care runs through Aasha, and we train psychology students. Below are short paths into every part of the site.</p>
         <div class="pn-actions">
           <a class="btn btn--primary" href="/book">Book a consultation <span aria-hidden="true">↗</span></a>
-          <a class="pn-text-link" href="#notes">Explore the notebook <span aria-hidden="true">→</span></a>
+          <a class="pn-text-link" href="#doors">Find your way in <span aria-hidden="true">↓</span></a>
         </div>
         <p class="pn-footnote">Gamma II, Greater Noida · In-clinic and online across India.</p>
-      </div>
-      <div class="pn-art" role="img" aria-label="An illustrated clinic notebook with a flowering branch, a magenta bookmark and a handwritten note: understand first.">
-        <div class="pn-circle" aria-hidden="true"></div>
-        <div class="pn-paper" aria-hidden="true"><span>Ideas worth<br>making room for.</span></div>
-        <div class="pn-book" aria-hidden="true">
-          <div class="pn-spine"></div>
-          <div class="pn-book-top">MIND GRACE CLINIC <span>VOL. 01</span></div>
-          <p class="pn-book-title">Small steps.<br>Meaningful<br><em>shifts.</em></p>
-          <svg class="pn-botanical" viewBox="0 0 270 300" aria-hidden="true"><g fill="none" stroke="#616b50" stroke-width="1.8" stroke-linecap="round"><path d="M75 290C95 250 125 216 142 171S159 73 222 28M142 172C114 151 82 145 58 111M157 133C185 118 210 97 222 66M121 214C153 212 184 204 205 175M103 242C78 225 55 211 39 185"/><path d="M91 147C54 151 36 129 36 105c27-5 51 7 55 42zm46 32c-33-1-54-18-57-45 27-5 53 15 57 45zm28-52c-1-35 18-56 44-58 6 23-13 52-44 58zm-43 87c17-30 43-38 67-24-9 27-37 33-67 24zm-21 26c-25 5-47-10-51-34 22-3 45 9 51 34z" fill="#c9cdb7" fill-opacity=".68"/><path d="M208 47c-19-2-31-14-26-26 7-8 20-3 26 4-7-18-2-28 7-26 11 2 10 17 8 25 11-12 24-13 29-5 5 12-9 24-23 24 12 7 16 19 7 24-12 7-23-6-23-17-11 11-25 13-29 4-3-10 12-16 24-7z" fill="#ecd5d8" stroke="#a35c78"/><path d="M216 34l-2 14m-3-8 11 2" stroke="#9a4b68"/><path d="M217 66c-2-8-2-14-1-20M61 112C39 102 25 89 20 70c24-2 42 16 41 42z" fill="#c9cdb7"/></g></svg>
-          <div class="pn-book-bottom">OBSERVE · UNDERSTAND · CONNECT</div>
-          <span class="pn-bookmark"></span>
-        </div>
-        <div class="pn-sticky" aria-hidden="true"><span class="pn-tape"></span>Understand<br><em>first.</em><svg viewBox="0 0 92 32" aria-hidden="true"><path d="M3 20c18 5 40 1 65-7m-13-5 16 3-10 11"/></svg></div>
-        <div class="pn-caption"><span>01 /</span> A place where care becomes understandable.</div>
-      </div>
-    </section>
-
-    <div class="pn-thread"><div class="wrap"><span>THE THREAD THROUGH OUR WORK</span><p>Clinician-led care <i aria-hidden="true">✳</i> Visual education <i aria-hidden="true">✳</i> Better care systems</p></div></div>
-
-    <section id="notes" class="pn-section wrap" aria-labelledby="pn-notes-title">
-      <div class="pn-heading">
-        <div><p class="eyebrow">01 / THE NOTEBOOK</p><h2 id="pn-notes-title">Ideas you can<br><em>take with you.</em></h2></div>
-        <p class="pn-heading-intro">A growing collection of visual explainers and reading notes from the clinic — for the person making sense of things, and the professional helping them.</p>
-      </div>
-      <div class="pn-grid">
-        <article class="pn-card">
-          <a class="pn-card-art pn-art-worry" href="/blog/pages/adult/scheduled-worry-time-technique" aria-label="Read: Scheduled worry time — a technique for recurring worries">
-            <span class="pn-image-label">A LITTLE SPACE TO THINK</span><span class="pn-image-open" aria-hidden="true">↗</span>
-          </a>
-          <div class="pn-meta"><span>EVERYDAY PSYCHOLOGY</span><span>SHORT READ</span></div>
-          <h3><a href="/blog/pages/adult/scheduled-worry-time-technique">A thought is not<br>a deadline.</a></h3>
-          <p>Giving a recurring worry a place, a time, and a little perspective.</p>
-          <a class="pn-read" href="/blog/pages/adult/scheduled-worry-time-technique">Read the note <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="pn-card">
-          <a class="pn-card-art pn-art-speech" href="/blog/pages/child/speech-delay-red-flags" aria-label="Read: Speech delay red flags every parent should know">
-            <span class="pn-image-label">THE WORK BEHIND A WORD</span><span class="pn-image-open" aria-hidden="true">↗</span>
-          </a>
-          <div class="pn-meta"><span>CHILDREN &amp; FAMILIES</span><span>SHORT READ</span></div>
-          <h3><a href="/blog/pages/child/speech-delay-red-flags">More than just<br>saying a word.</a></h3>
-          <p>A clearer way to think about speech, language, and being understood.</p>
-          <a class="pn-read" href="/blog/pages/child/speech-delay-red-flags">Read the note <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="pn-card">
-          <a class="pn-card-art pn-art-session" href="/process" aria-label="Read: What to expect at your first visit to Mind Grace">
-            <span class="pn-session-small">FROM THE PRACTICE DESK</span>
-            <span class="pn-session-note">A useful note<br>makes room<br>for <em>what’s next.</em></span>
-            <span class="pn-session-line"><span>01</span> What did we notice?</span>
-            <span class="pn-session-line"><span>02</span> What did we try?</span>
-            <span class="pn-session-line"><span>03</span> What comes next?</span>
-            <span class="pn-image-label">LESS FRICTION. MORE CONTINUITY.</span><span class="pn-image-open" aria-hidden="true">↗</span>
-          </a>
-          <div class="pn-meta"><span>IN PRACTICE</span><span>SHORT READ</span></div>
-          <h3><a href="/process">The note after<br>the session.</a></h3>
-          <p>Thoughtful documentation that helps the next conversation begin.</p>
-          <a class="pn-read" href="/process">Read the note <span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-      <p class="pn-caption-note"><span aria-hidden="true">↳</span> Made to explain, not overwhelm. English and Hindi, where they help.</p>
-    </section>
-
-    <section id="about" class="pn-about" aria-labelledby="pn-about-title">
-      <div class="wrap pn-about-grid">
-        <div class="pn-about-mark" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M100 17v166M17 100h166M41 41l118 118M41 159 159 41"/><circle cx="100" cy="100" r="61"/></svg><span>PEOPLE BEFORE<br>THE PROCESS.</span></div>
-        <div>
-          <p class="eyebrow">02 / THE PEOPLE BEHIND THE WORK</p>
-          <h2 id="pn-about-title">Care is human.<br><em>The work should be, too.</em></h2>
-          <div class="pn-about-text">
-            <p>Our work sits where psychology, education, and the everyday running of a clinic meet. We are interested in what happens between a good idea and something a person can actually understand or use.</p>
-            <p>That has led us to visual patient education, resources for families, and systems that help care teams keep the person in view. This practice spans Mind Grace Neuropsychiatric Clinic and Aasha Early Intervention Centre in Greater Noida.</p>
-            <p>This notebook brings those threads together: careful explanations, practical guidance, and a willingness to keep learning.</p>
-          </div>
-          <div class="pn-tags"><span>Psychiatry &amp; counselling</span><span>Early intervention</span><span>Care operations</span></div>
-        </div>
       </div>
     </section>
 
     <section id="streams" class="pn-section wrap" aria-labelledby="pn-work-title">
       <div class="pn-heading">
-        <div><p class="eyebrow">03 / BEYOND THE PAGE</p><h2 id="pn-work-title">Thoughtful care.<br><em>Thoughtful systems.</em></h2></div>
+        <div><p class="eyebrow">01 / TWO STREAMS</p><h2 id="pn-work-title">Thoughtful care.<br><em>Thoughtful systems.</em></h2></div>
         <p class="pn-heading-intro">Some problems need a clear explanation. Others need a better way to work. These are the two streams on our desk.</p>
       </div>
       <div class="pn-list">
@@ -133,134 +84,67 @@ const headExtra = String.raw`
       </div>
     </section>
 
-    <section class="pn-approach wrap" aria-label="Our guiding principle">
-      <span class="pn-quote-mark" aria-hidden="true">“</span>
-      <blockquote>A good explanation should leave<br>someone feeling <em>more capable.</em></blockquote>
-      <p>THE PRINCIPLE BEHIND OUR WORK</p>
-    </section>
-
-    <section id="connections" class="pn-connections wrap" aria-labelledby="pn-connections-title">
-      <div>
-        <p class="eyebrow">04 / FIND YOUR WAY IN</p>
-        <h2 id="pn-connections-title">A useful place<br><em>to begin.</em></h2>
-        <p>Follow an idea, explore the services, or find the clinic.</p>
+    <section id="doors" class="pn-section wrap" aria-labelledby="pn-connections-title">
+      <div class="pn-heading">
+        <div><p class="eyebrow">02 / FIND YOUR WAY IN</p><h2 id="pn-connections-title">Every path,<br><em>one line each.</em></h2></div>
+        <p class="pn-heading-intro">No scrolling mazes. Follow one short trail — Home to section to page — and read the details there.</p>
       </div>
-      <div class="pn-links">
-        <a href="/services"><div><span>FOR A LITTLE UNDERSTANDING</span><h3>Explore the services</h3><p>Care pathways, conditions we treat, and how visits work.</p></div><b aria-hidden="true">↗</b></a>
-        <a href="/location"><div><span>FOR CLINIC INFORMATION</span><h3>Visit Mind Grace</h3><p>For services, the clinical team, and appointment details.</p></div><b aria-hidden="true">↗</b></a>
+      <div class="pn-groups">
+        {trailGroups.map((group) => (
+          <nav class="pn-group" aria-label={group.label}>
+            <p class="pn-group-label">{group.label}</p>
+            <ul class="pn-doors">
+              {group.trails.map((trail) => (
+                <li className="pn-crumb"><a href={trail.href}><span class="pn-trail">{trail.crumbs.join(' › ')}</span><span class="pn-door-arrow" aria-hidden="true">→</span></a></li>
+              ))}
+            </ul>
+          </nav>
+        ))}
       </div>
     </section>
   </main>
 
   <style is:global>
-    .pn-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,5vw,4rem);align-items:center;width:min(100% - 2rem,var(--mg-wide-max,1220px));margin-inline:auto;padding-block:clamp(2.5rem,6vw,4.5rem)}
-    .pn-hero .eyebrow,.pn-heading .eyebrow,#about .eyebrow,#streams .pn-heading .eyebrow,#connections .eyebrow{display:flex;align-items:center;gap:.6rem;margin:0 0 1rem;color:var(--mg-link);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .pn-hero{display:block;width:min(100% - 2rem,var(--mg-wide-max,1220px));margin-inline:auto;padding-block:clamp(2.5rem,6vw,4.5rem)}
+    .pn-hero .eyebrow,.pn-heading .eyebrow{display:flex;align-items:center;gap:.6rem;margin:0 0 1rem;color:var(--mg-link);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
     .mini-line{display:inline-block;width:2rem;height:2px;background:currentColor;flex:0 0 auto}
     .pn-hero h1{margin:0 0 1.25rem;font-size:clamp(2.3rem,5.5vw,3.9rem);line-height:1.05;letter-spacing:-.03em;text-wrap:balance}
-    .pn-hero h1 em,.pn-heading h2 em,.pn-about h2 em,.pn-approach em,.pn-connections h2 em,.pn-session-note em{font-style:normal;color:var(--mg-accent)}
+    .pn-hero h1 em,.pn-heading h2 em{font-style:normal;color:var(--mg-accent)}
     .pn-intro{max-width:46ch;margin:0 0 1.6rem;font-size:clamp(1.02rem,1.6vw,1.2rem);line-height:1.65;color:var(--mg-ink-muted)}
     .pn-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.25rem}
     .pn-text-link{color:var(--mg-link);font-weight:800;text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:.1rem}
     .pn-text-link:hover,.pn-text-link:focus-visible{color:var(--mg-link-hover)}
     .pn-footnote{margin:1.4rem 0 0;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mg-ink-muted)}
-    .pn-art{position:relative;display:grid;place-items:center;min-height:min(72vw,30rem)}
-    .pn-circle{position:absolute;width:min(78%,26rem);aspect-ratio:1;border-radius:50%;background:var(--mg-surface-soft);border:1px solid var(--mg-border-strong)}
-    .pn-paper{position:absolute;inset:0;display:grid;place-items:start center;padding-top:6%;text-align:center;color:var(--mg-ink-muted);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;background-image:linear-gradient(var(--mg-border-strong) 0 100%),linear-gradient(90deg,var(--mg-border-strong) 0 100%);background-blend-mode:normal;opacity:.5;-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 62%,transparent 72%);mask-image:radial-gradient(circle at 50% 50%,#000 62%,transparent 72%)}
-    .pn-paper span{white-space:pre-line;line-height:1.8}
-    .pn-book{position:relative;width:min(64%,20rem);aspect-ratio:5/6.4;border-radius:.9rem 1.1rem 1.1rem .9rem;background:var(--mg-surface-strong);border:1px solid var(--mg-border-strong);box-shadow:0 22px 44px -24px rgb(40 23 29/.45);padding:1.1rem 1.25rem;display:grid;grid-template-rows:auto 1fr auto;gap:.5rem;overflow:hidden}
-    .pn-spine{position:absolute;left:0;top:0;bottom:0;width:.7rem;background:linear-gradient(90deg,var(--mg-surface-soft),transparent);border-right:1px solid var(--mg-border-strong)}
-    .pn-book-top{display:flex;justify-content:space-between;gap:.5rem;font-size:.6rem;font-weight:800;letter-spacing:.14em;color:var(--mg-ink-muted);text-transform:uppercase}
-    .pn-book-title{margin:0;font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.15;font-weight:800;letter-spacing:-.02em;color:var(--mg-ink-strong)}
-    .pn-botanical{position:absolute;right:-8%;bottom:8%;width:72%;height:auto;opacity:.9}
-    .pn-book-bottom{position:relative;font-size:.58rem;font-weight:800;letter-spacing:.16em;color:var(--mg-link);text-transform:uppercase}
-    .pn-bookmark{position:absolute;top:0;right:22%;width:1.4rem;height:34%;background:var(--mg-accent);clip-path:polygon(0 0,100% 0,100% 100%,50% 82%,0 100%)}
-    .pn-sticky{position:absolute;right:2%;bottom:6%;width:min(38%,10.5rem);aspect-ratio:1.35;background:#fdf3c8;color:#4a3b16;border:1px solid #e8d98a;box-shadow:0 14px 26px -14px rgb(40 23 29/.5);transform:rotate(4deg);display:grid;place-items:center;text-align:center;font-size:clamp(.9rem,2vw,1.1rem);font-weight:700;line-height:1.35;padding:1rem}
-    .pn-sticky em{font-style:normal;color:#8c173d}
-    .pn-sticky svg{width:64%;height:auto;fill:none;stroke:#8c173d;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-top:.35rem}
-    .pn-tape{position:absolute;top:-.8rem;left:50%;translate:-50% 0;width:4.6rem;height:1.5rem;background:rgb(164 116 134/.35);rotate:-3deg;border-inline:1px dashed rgb(255 255 255/.6)}
-    .pn-caption{position:absolute;left:4%;bottom:2%;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mg-ink-muted)}
-    .pn-caption span{color:var(--mg-accent);font-weight:800}
-    .pn-thread{border-block:1px solid var(--mg-border-strong);background:var(--mg-surface-soft)}
-    .pn-thread .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 2rem;width:min(100% - 2rem,var(--mg-wide-max,1220px));margin-inline:auto;padding-block:1rem}
-    .pn-thread span{font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mg-ink-muted)}
-    .pn-thread p{margin:0;font-weight:700;color:var(--mg-ink-strong);font-size:.95rem}
-    .pn-thread i{font-style:normal;color:var(--mg-accent);margin-inline:.5rem}
     .pn-section{padding-block:clamp(2.75rem,6vw,4.5rem)}
-    .pn-heading{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.25rem 2rem;margin-bottom:2.25rem}
+    .pn-heading{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.25rem 2rem;margin-bottom:2rem}
     .pn-heading h2{margin:0;font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.1;letter-spacing:-.025em;text-wrap:balance}
     .pn-heading-intro{max-width:38rem;margin:0;color:var(--mg-ink-muted);line-height:1.65}
-    .pn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:1.5rem;align-items:stretch}
-    .pn-card{display:flex;flex-direction:column;gap:.6rem;background:var(--mg-surface-strong);border:1px solid var(--mg-border-strong);border-radius:1rem;padding:1.15rem;transition:transform .2s ease,box-shadow .2s ease}
-    .pn-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgb(40 23 29/.4)}
-    .pn-card-art{position:relative;display:grid;align-content:end;gap:.3rem;min-height:15rem;border-radius:.8rem;overflow:hidden;padding:.9rem;text-decoration:none;color:#fff}
-    .pn-art-worry{background:radial-gradient(circle at 30% 20%,#ffd3df,transparent 55%),linear-gradient(160deg,#7a1038,#28171d)}
-    .pn-art-speech{background:radial-gradient(circle at 70% 15%,#c9cdb7,transparent 50%),linear-gradient(160deg,#3f4a35,#1d1217)}
-    .pn-art-session{background:linear-gradient(160deg,var(--mg-surface-soft),var(--mg-surface-strong));color:var(--mg-ink-strong);align-content:start;gap:.45rem}
-    .pn-image-label{position:relative;z-index:2;font-size:.62rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-    .pn-image-open{position:absolute;top:.8rem;right:.8rem;width:2rem;height:2rem;display:grid;place-items:center;border-radius:50%;background:rgb(255 255 255/.22);font-weight:800}
-    .pn-session-small{font-size:.6rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mg-link)}
-    .pn-session-note{font-size:1.15rem;font-weight:800;line-height:1.25;color:var(--mg-ink-strong)}
-    .pn-session-line{display:flex;gap:.5rem;align-items:baseline;font-size:.82rem;color:var(--mg-ink-muted);border-bottom:1px dashed var(--mg-border-strong);padding-block:.3rem}
-    .pn-session-line span{font-weight:800;color:var(--mg-accent);font-size:.7rem}
-    .pn-meta{display:flex;justify-content:space-between;gap:.75rem;font-size:.64rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mg-ink-muted)}
-    .pn-card h3{margin:0;font-size:1.25rem;line-height:1.2;letter-spacing:-.01em}
-    .pn-card h3 a{color:var(--mg-ink-strong);text-decoration:none}
-    .pn-card h3 a:hover{color:var(--mg-link)}
-    .pn-card>p{margin:0;color:var(--mg-ink-muted);font-size:.92rem;line-height:1.6}
-    .pn-read{margin-top:auto;color:var(--mg-link);font-weight:800;font-size:.88rem;text-decoration:none}
-    .pn-read:hover,.pn-read:focus-visible{text-decoration:underline}
-    .pn-caption-note{margin:1.75rem 0 0;font-size:.85rem;color:var(--mg-ink-muted)}
-    .pn-caption-note span{color:var(--mg-accent);font-weight:800;margin-right:.35rem}
-    .pn-about{border-block:1px solid var(--mg-border-strong);background:var(--mg-surface-soft)}
-    .pn-about-grid{display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center;width:min(100% - 2rem,var(--mg-wide-max,1220px));margin-inline:auto;padding-block:clamp(2.75rem,6vw,4.5rem)}
-    .pn-about-mark{position:relative;display:grid;place-items:center;aspect-ratio:1;max-width:17rem;margin-inline:auto;width:100%}
-    .pn-about-mark svg{width:100%;height:100%;fill:none;stroke:var(--mg-border-strong);stroke-width:2}
-    .pn-about-mark span{position:absolute;text-align:center;font-size:.72rem;font-weight:800;letter-spacing:.14em;line-height:1.8;color:var(--mg-link)}
-    .pn-about h2{margin:0 0 1.25rem;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
-    .pn-about-text p{margin:0 0 1rem;max-width:62ch;line-height:1.7;color:var(--mg-ink-muted)}
-    .pn-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.25rem}
-    .pn-tags span{border:1px solid var(--mg-border-strong);border-radius:999px;background:var(--mg-surface-strong);color:var(--mg-link);font-size:.78rem;font-weight:800;padding:.4rem .85rem}
     .pn-list{display:grid;gap:1.1rem}
-    .pn-row{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;gap:1.25rem;align-items:center;background:var(--mg-surface-strong);border:1px solid var(--mg-border-strong);border-radius:1rem;padding:1.4rem clamp(1.1rem,3vw,1.75rem);text-decoration:none;color:inherit;transition:border-color .2s ease,box-shadow .2s ease}
+    .pn-row{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;gap:1.25rem;align-items:center;background:var(--mg-surface-strong);border:1px solid var(--mg-border-strong);border-radius:1rem;padding:1.25rem 1.5rem;text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s}
     .pn-row:hover{border-color:var(--mg-link);box-shadow:0 14px 30px -20px rgb(40 23 29/.45)}
     .pn-number{font-size:1rem;font-weight:800;color:var(--mg-border-strong)}
-    .pn-icon{width:3rem;height:3rem;border-radius:.7rem;background:var(--mg-surface-soft);border:1px solid var(--mg-border-strong);display:grid;place-items:center;gap:3px;padding:.55rem}
+    .pn-icon{width:3rem;height:3rem;border-radius:.7rem;background:var(--mg-surface-soft);border:1px solid var(--mg-border);display:grid;place-items:center;padding:.6rem}
     .pn-icon span{display:block;width:100%;height:2px;border-radius:2px;background:var(--mg-link)}
     .pn-icon-care{grid-template-rows:repeat(3,auto)}
     .pn-icon-care span:nth-child(2){width:70%}
     .pn-icon-care span:nth-child(3){width:45%}
     .pn-icon-learn{grid-template-columns:repeat(2,1fr);gap:5px}
     .pn-icon-learn span{width:100%;height:100%;background:transparent;border:2px solid var(--mg-link);border-radius:4px}
-    .pn-status{display:inline-flex;align-items:center;gap:.45rem;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mg-link)}
+    .pn-status{display:inline-flex;align-items:center;gap:.45rem;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mg-ink-muted)}
     .pn-status i{width:.5rem;height:.5rem;border-radius:50%;background:#0d9488;display:inline-block}
-    .pn-h3{display:block;margin:.35rem 0 .3rem;font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:800;color:var(--mg-ink-strong);line-height:1.25}
+    .pn-h3{display:block;margin:.35rem 0 .3rem;font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:800;color:var(--mg-ink-strong)}
     .pn-p{display:block;color:var(--mg-ink-muted);font-size:.92rem;line-height:1.6;max-width:56ch}
-    .pn-rowtags{display:block;margin-top:.5rem;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mg-ink-muted)}
-    .pn-rowtags span{color:var(--mg-accent);margin-inline:.3rem}
     .pn-arrow{font-size:1.2rem;font-weight:800;color:var(--mg-link)}
-    .pn-approach{position:relative;text-align:center;padding-block:clamp(3rem,7vw,5rem)}
-    .pn-quote-mark{position:absolute;top:clamp(.5rem,3vw,1.5rem);left:50%;translate:-150% 0;font-size:5rem;line-height:1;color:var(--mg-border-strong)}
-    .pn-approach blockquote{margin:0 auto;max-width:34ch;font-size:clamp(1.5rem,3.6vw,2.4rem);line-height:1.3;font-weight:800;letter-spacing:-.02em;color:var(--mg-ink-strong)}
-    .pn-approach p{margin:1.25rem 0 0;font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mg-ink-muted)}
-    .pn-connections{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1.5rem,4vw,3rem);align-items:center;padding-block:clamp(2.75rem,6vw,4.5rem)}
-    .pn-connections h2{margin:0 0 .75rem;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
-    .pn-connections>div>p{margin:0;color:var(--mg-ink-muted);line-height:1.65}
-    .pn-links{display:grid;gap:1rem}
-    .pn-links a{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--mg-surface-strong);border:1px solid var(--mg-border-strong);border-radius:1rem;padding:1.25rem 1.4rem;text-decoration:none;transition:border-color .2s ease}
-    .pn-links a:hover{border-color:var(--mg-link)}
-    .pn-links span{display:block;font-size:.64rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mg-ink-muted)}
-    .pn-links h3{margin:.35rem 0 .2rem;font-size:1.15rem;color:var(--mg-ink-strong)}
-    .pn-links p{margin:0;font-size:.88rem;color:var(--mg-ink-muted)}
-    .pn-links b{font-size:1.2rem;color:var(--mg-link)}
-    @media(max-width:860px){.pn-hero{grid-template-columns:1fr}.pn-art{order:2;min-height:24rem}.pn-about-grid,.pn-connections{grid-template-columns:1fr}}
-    @media(max-width:640px){.pn-row{grid-template-columns:auto minmax(0,1fr);}.pn-number{grid-row:1}.pn-icon{display:none}.pn-arrow{display:none}.pn-copy{grid-column:2}}
-    @media(prefers-reduced-motion:reduce){.pn-card,.pn-card:hover,.pn-row{transition:none;transform:none}}
-    html[data-theme=dark] .pn-sticky{background:#f7e9a8;color:#3c2f0d;border-color:#d9c56a}
-    html[data-theme=dark] .pn-sticky em{color:#7c0f38}
-    html[data-theme=dark] .pn-sticky svg{stroke:#7c0f38}
-    html.a11y-contrast .pn-sticky{background:#fff!important;color:#111!important;border:2px solid #111!important}
-    html.a11y-contrast .pn-sticky em,html.a11y-contrast .pn-sticky svg{color:#111!important;stroke:#111!important}
-    html.a11y-contrast .pn-art-worry,html.a11y-contrast .pn-art-speech{background:#fff!important;color:#111!important;border:2px solid #111}
-    html.a11y-contrast .pn-art-worry .pn-image-label,html.a11y-contrast .pn-art-speech .pn-image-label,html.a11y-contrast .pn-art-worry .pn-image-open,html.a11y-contrast .pn-art-speech .pn-image-open{color:#111!important}
+    .pn-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1.5rem}
+    .pn-group{background:var(--mg-surface-strong);border:1px solid var(--mg-border-strong);border-radius:1rem;padding:1.1rem 1.25rem}
+    .pn-group-label{margin:0 0 .5rem;padding-bottom:.6rem;border-bottom:1px solid var(--mg-border);font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mg-link)}
+    .pn-doors{list-style:none;margin:0;padding:0}
+    .pn-crumb a{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;padding:.55rem 0;border-bottom:1px solid var(--mg-border);text-decoration:none}
+    .pn-crumb:last-child a{border-bottom:0}
+    .pn-trail{font-size:.9rem;font-weight:700;color:var(--mg-ink-strong)}
+    .pn-door-arrow{flex:0 0 auto;font-weight:800;color:var(--mg-link)}
+    .pn-crumb a:hover .pn-trail,.pn-crumb a:focus-visible .pn-trail{color:var(--mg-link)}
+    @media(max-width:640px){.pn-row{grid-template-columns:auto minmax(0,1fr)}.pn-number{grid-row:1}.pn-icon{display:none}.pn-arrow{display:none}.pn-copy{grid-column:2}}
+    @media(prefers-reduced-motion:reduce){.pn-row{transition:none;transform:none}}
   </style>
 </Layout>
