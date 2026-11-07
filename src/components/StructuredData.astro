@@ -19,9 +19,11 @@ interface Props {
   isArticle?: boolean;
   /** ISO publication date; defaults to the evidence-review date when absent. */
   articleDate?: string;
+  /** ISO last substantive edit date; falls back to the publication date. */
+  articleModifiedDate?: string;
 }
 
-const { canonical, title, description, isArticle = false, articleDate } = Astro.props;
+const { canonical, title, description, isArticle = false, articleDate, articleModifiedDate } = Astro.props;
 const pageUrl = canonical || `${SITE_URL}${Astro.url.pathname}`;
 const aashaId = AASHA_ID;
 const isAashaPage = ['/aasha', '/child-development', '/child-student-mental-health', '/learning-disability-assessment', '/sleep-and-autism-guide-indian-parents', '/blog/children'].some(path => pageUrl === `${SITE_URL}${path}`) || pageUrl.includes('/blog/pages/child/') || pageUrl.startsWith(`${SITE_URL}/aasha/`);
@@ -85,7 +87,7 @@ if (isArticle && !isPhysicianPage) {
     author: { '@id': isAashaPage ? aashaId : PERSON_ID },
     publisher: { '@id': publisherId },
     datePublished: published,
-    dateModified: published,
+    dateModified: articleModifiedDate ?? published,
     inLanguage: 'en-IN',
     isPartOf: { '@id': `${pageUrl}#webpage` },
   });

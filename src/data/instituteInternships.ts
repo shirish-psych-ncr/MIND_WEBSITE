@@ -31,11 +31,11 @@ const FAQ_BASE: InstituteFaq[] = [
   },
   {
     question: 'What can psychology interns realistically do at Mind Grace?',
-    answer: 'Interns typically observe assessments, assist with record keeping and psychoeducation under supervision, support intake workflows, and co-conduct research or awareness projects. Interns never independently diagnose, interpret test protocols for patients, or deliver therapy.',
+    answer: 'Permitted activities depend on the supervisor, placement agreement, and university rules. Confirm every activity in writing before starting; interns must not independently diagnose, interpret tests for patients, or provide therapy.',
   },
   {
     question: 'Will Mind Grace provide an internship completion letter?',
-    answer: 'Placements that run to completion generally receive an official letter describing your tenure, supervised activities, and conduct. Share your university template early so the letter satisfies your department\u2019s exact requirements for hours, signatures, and letterhead.',
+    answer: 'Ask before accepting a placement whether a completion letter can be provided and what it will document. Share your department\u2019s required format early; a letter cannot replace your university\u2019s approval or hour requirements.',
   },
 ];
 
