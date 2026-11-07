@@ -1,4 +1,5 @@
 ---
+import ClarityOptIn from '../components/ClarityOptIn.astro';
 import Head from '../components/Head.astro';
 import Shell from '../components/Shell.astro';
 import StructuredData from '../components/StructuredData.astro';
@@ -107,6 +108,7 @@ startMarkup = startMarkup
 <body class={bodyClass || undefined} data-chrome-normalized="true" {...extraAttrs}>
 {startMarkup && <Fragment set:html={rawMarkup(startMarkup)} />}
 <Shell><slot /></Shell>
+{canonicalPath === '/location' && <ClarityOptIn />}
 {bodyEnd && <Fragment set:html={rawMarkup(bodyEnd)} />}
 </body>
 </html>

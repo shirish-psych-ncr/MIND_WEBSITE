@@ -1,0 +1,46 @@
+<details class="wrap">
+  <summary>Optional page analytics</summary>
+  <p>Allow Microsoft Clarity to record how you use this directions page during this visit. This is optional.</p>
+  <button type="button" id="clarity-start">Allow page analytics</button>
+  <button type="button" id="clarity-stop" hidden>Stop page analytics</button>
+  <p id="clarity-status" role="status"></p>
+</details>
+
+<script is:inline>
+  (() => {
+    const start = document.getElementById('clarity-start');
+    const stop = document.getElementById('clarity-stop');
+    const status = document.getElementById('clarity-status');
+
+    start.addEventListener('click', () => {
+      if (location.search || location.hash) {
+        status.textContent = 'Open the directions page directly to enable analytics.';
+        return;
+      }
+
+      start.disabled = true;
+      document.body.setAttribute('data-clarity-mask', 'true');
+      window.clarity = window.clarity || function () {
+        (window.clarity.q = window.clarity.q || []).push(arguments);
+      };
+      window.clarity('consentv2', { analytics_Storage: 'denied', ad_Storage: 'denied' });
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.clarity.ms/tag/z9yvh8qcgc';
+      script.addEventListener('load', () => {
+        status.textContent = 'Page analytics is on for this visit.';
+      });
+      script.addEventListener('error', () => {
+        start.disabled = false;
+        stop.hidden = true;
+        status.textContent = 'Page analytics could not load.';
+        script.remove();
+      });
+      stop.hidden = false;
+      document.head.append(script);
+    });
+
+    stop.addEventListener('click', () => location.reload());
+  })();
+</script>
