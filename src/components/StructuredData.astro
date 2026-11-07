@@ -93,14 +93,14 @@ if (isArticle && !isPhysicianPage) {
   });
 }
 
-if (isPhysicianPage) {
+if (isPhysicianPage || pageUrl === `${SITE_URL}/doctors`) {
   graph.push(
     {
       '@type': 'Person',
       '@id': PERSON_ID,
       name: 'Dr Anita Sharma',
       jobTitle: 'Consultant Psychiatrist',
-      url: pageUrl,
+      url: `${SITE_URL}/dr-anita-sharma`,
       image: `${SITE_URL}/assets/images/dr-anita-sharma-personal-photo.webp`,
       knowsLanguage: ['English', 'Hindi'],
       worksFor: { '@id': CLINIC_ID },
@@ -109,7 +109,7 @@ if (isPhysicianPage) {
       '@type': 'Physician',
       '@id': PHYSICIAN_ID,
       name: 'Dr Anita Sharma',
-      url: pageUrl,
+      url: `${SITE_URL}/dr-anita-sharma`,
       image: `${SITE_URL}/assets/images/dr-anita-sharma-personal-photo.webp`,
       telephone: '+91-9667863295',
       priceRange: '₹₹',

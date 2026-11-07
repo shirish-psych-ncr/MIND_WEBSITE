@@ -101,8 +101,8 @@ const headExtra = String.raw`
 
     <section id="doors" class="pn-section wrap" aria-labelledby="pn-connections-title">
       <div class="pn-heading">
-        <div><p class="eyebrow">02 / FIND YOUR WAY IN</p><h2 id="pn-connections-title">Every path,<br><em>one line each.</em></h2></div>
-        <p class="pn-heading-intro">No scrolling mazes. Follow one short trail — Home to section to page — and read the details there.</p>
+        <div><p class="eyebrow">02 / FIND YOUR WAY IN</p><h2 id="pn-connections-title">Explore Mind Grace</h2></div>
+        <p class="pn-heading-intro">Find care, training, resources and clinic information.</p>
       </div>
       <div class="pn-groups">
         {trailGroups.map((group) => (
@@ -110,7 +110,7 @@ const headExtra = String.raw`
             <p class="pn-group-label">{group.label}</p>
             <ul class="pn-doors">
               {group.trails.map((trail) => (
-                <li className="pn-crumb"><a href={trail.href}><span class="pn-trail">{trail.crumbs.join(' › ')}</span><span class="pn-door-arrow" aria-hidden="true">→</span></a></li>
+                <li className="pn-crumb"><a href={trail.href}><span class="pn-trail">{trail.crumbs.at(-1)}</span><span class="pn-door-arrow" aria-hidden="true">→</span></a></li>
               ))}
             </ul>
           </nav>
@@ -159,6 +159,54 @@ const headExtra = String.raw`
     .pn-trail{font-size:.9rem;font-weight:700;color:var(--mg-ink-strong)}
     .pn-door-arrow{flex:0 0 auto;font-weight:800;color:var(--mg-link)}
     .pn-crumb a:hover .pn-trail,.pn-crumb a:focus-visible .pn-trail{color:var(--mg-link)}
+    .pn-hero-copy {
+      padding: clamp(1.25rem, 5vw, 3.5rem);
+      border: 1px solid var(--mg-border);
+      border-radius: 1.5rem;
+      background: linear-gradient(145deg, color-mix(in srgb, var(--mg-accent) 9%, var(--mg-surface-strong)), var(--mg-surface-strong));
+    }
+    .pn-actions a, .pn-crumb a {
+      min-height: 44px;
+      align-items: center;
+    }
+    .pn-actions .pn-text-link {
+      display: inline-flex;
+      gap: .5rem;
+      border-bottom: 0;
+      text-decoration: underline;
+      text-underline-offset: .2em;
+    }
+    .pn-hero a:focus-visible, .pn-section a:focus-visible {
+      outline: 2px solid var(--mg-link);
+      outline-offset: 3px;
+    }
+    #care-options { scroll-margin-top: calc(var(--header-height, 5rem) + 1rem); }
+    #care-options ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+      gap: .75rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    #care-options li {
+      padding: .75rem 1rem;
+      border: 1px solid var(--mg-border);
+      border-radius: .8rem;
+      background: var(--mg-surface-strong);
+    }
+    #care-options a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      color: var(--mg-link);
+      font-weight: 700;
+      text-underline-offset: .2em;
+    }
+    @media (max-width: 480px) {
+      .pn-actions { align-items: stretch; flex-direction: column; gap: .5rem; }
+      .pn-actions a { justify-content: center; }
+    }
     @media(max-width:640px){.pn-row{grid-template-columns:auto minmax(0,1fr)}.pn-number{grid-row:1}.pn-icon{display:none}.pn-arrow{display:none}.pn-copy{grid-column:2}}
     @media(prefers-reduced-motion:reduce){.pn-row{transition:none;transform:none}}
   </style>
