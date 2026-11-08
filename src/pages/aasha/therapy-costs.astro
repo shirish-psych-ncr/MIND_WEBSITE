@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import aasha from '../../data/aasha.json';
+const canonical = `${aasha.url}/therapy-costs`;
+const description = 'Planning affordable autism therapy in Greater Noida? Compare assessment fees, session costs, travel and review dates. Ask Aasha about current charges and availability.';
+const headExtra = `<title>Affordable Autism Therapy in Greater Noida | Aasha Cost Guide</title><meta name="description" content="${description}"><link rel="canonical" href="${canonical}"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">`;
+---
+<Layout headExtra={headExtra}>
+  <main id="main-content" class="seo-page">
+    <Breadcrumbs canonical={canonical} items={[{name:'Home', href:'/'}, {name:'Aasha', href:'/aasha'}, {name:'Therapy costs'}]} />
+    <section class="seo-hero">
+      <p class="seo-kicker">Family planning guide · Greater Noida</p>
+      <h1>How to plan affordable autism therapy in Greater Noida</h1>
+      <p class="seo-answer">Compare the total cost through the first progress review. Ask what the initial visit includes, which sessions are recommended, how often they are planned and whether reports or materials cost extra. Contact Aasha for current fees before booking.</p>
+      <a class="btn" href="/aasha/book">Ask Aasha about fees and availability</a>
+    </section>
+    <section class="seo-section">
+      <h2>What should I ask before paying for an assessment?</h2>
+      <p>Describe the concern in one sentence so the coordinator can explain which first visit to ask about. If your child has difficulty communicating needs, you might ask about <a href="/aasha/speech-language-therapy">speech and language therapy</a>. If they struggle with dressing, play or handling classroom materials, ask about <a href="/aasha/occupational-therapy">occupational therapy</a>. If you have concerns across several areas, ask how a <a href="/aasha/developmental-assessment">developmental assessment</a> would help decide where to begin. Bring previous reports so the clinician can explain what information remains useful.</p>
+      <ul>
+        <li>What does the quoted fee include, and who will see my child?</li>
+        <li>Is the feedback given in the same visit? Is a written report included?</li>
+        <li>Could there be a separate follow-up visit or additional assessment fee?</li>
+        <li>When will I hear the options for the next step?</li>
+      </ul>
+      <h2>How can I compare therapy plans with different prices?</h2>
+      <p>Write down each recommended service, the fee per visit and the number of planned visits before the first review. Multiply each session fee by its own visit count. Add the assessment and any separately quoted reports, materials or other charges. Include transport and any time away from work or school that affects your household. If a provider gives you a package price, ask what is included, when unused visits expire, and what happens if the plan changes.</p>
+      <p>For example, if one plan proposes speech therapy and OT and another starts with a single priority, compare the purpose of each visit and the total cost through its review date. Ask whether clinicians will coordinate around a shared routine. A child who wants to join snack time might need both a way to ask for help and a lunch container they can manage. The family should understand which clinician is working on each part and how to practise without overloading the week.</p>
+      <h2>What questions help me judge quality?</h2>
+      <p>Ask who will provide the service, how the clinician chooses goals and what happens if your child becomes uncomfortable during an activity. Ask for an example of a useful goal and how progress would be measured at home or school. For communication, progress could mean asking for a break with a gesture or picture. For daily living, it could mean putting on a preferred shirt with less assistance. A concrete example makes it easier to understand what you are paying for and to judge whether the support is helping.</p>
+      <p>Find out how parents can participate and what feedback you will receive after visits. At the first review, discuss what your child is doing more comfortably or independently, what has stayed difficult, and what the team plans to change. Ask how the team will respond if a goal does not carry over to your child's usual routine.</p>
+      <h2>What if I cannot commit to the proposed schedule?</h2>
+      <p>Tell the clinician what you can manage before agreeing to a schedule. Name the actual limit, such as one reliable visit a week, school pickup times or a fixed monthly budget. Ask which goal to prioritize, which parts could fit into ordinary home routines, and what the trade-offs of a different schedule would be. If the recommended plan remains out of reach, ask whether the clinician can suggest other appropriate services or referral options.</p>
+      <h2>How do I compare a package with individual sessions?</h2>
+      <p>Ask the provider to write down how many sessions the package covers, which services it includes and when the visits must be used. Ask whether the assessment, feedback and progress review are part of the price. If your child is ill, the clinician is away or school exams interrupt the schedule, find out how rescheduling works. A package that fits your calendar is easier to evaluate than a low per-session price that depends on attending every available slot.</p>
+      <p>Ask what happens if the first review suggests that the goals, clinician or appointment frequency should change. Write down any cancellation, expiry or refund terms before paying. Compare that commitment with paying through the first review and deciding on the next set of visits afterward.</p>
+      <h2>What should I take to the first progress review?</h2>
+      <p>Bring your original goal and two examples from a typical week. If the goal was asking for help at lunch, describe how your child asks now, which adult noticed the request and whether the support was available at school. Include a situation that still feels difficult. These examples help you ask whether the plan should continue, change or focus on a different priority.</p>
+      <p>Once the team proposes the next step, ask for the revised schedule and expected cost through the next review. Record which charges are confirmed and which depend on further assessment. If costs are difficult to sustain, ask the clinician which part of the plan addresses the most pressing need and what would be gained or lost by changing the schedule.</p>
+      <h2>How do I get a current fee quote from Aasha?</h2>
+      <p>Call <a href={`tel:${aasha.telephone}`}>{aasha.phone}</a> or use the <a href="/aasha/book">appointment enquiry page</a>. Ask for the first visit that fits your concern, its current fee, what it includes and available appointment times. Aasha is at {aasha.address}. See the <a href="/aasha/autism-early-intervention">autism early intervention guide</a> for help choosing where to start.</p>
+    </section>
+  </main>
+</Layout>

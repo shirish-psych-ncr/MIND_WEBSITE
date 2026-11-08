@@ -18,7 +18,13 @@ const breadcrumbs = JSON.stringify({ '@context': 'https://schema.org', '@type': 
       <p class="seo-answer">Call {aasha.phone} or prepare a WhatsApp enquiry for a child assessment or therapy appointment. Aasha is at {aasha.address}. {aasha.hours}. The team will confirm availability, scope and fees before agreeing an appointment.</p>
       <div class="seo-actions"><a class="btn" href={`tel:${aasha.telephone}`}>Call {aasha.phone}</a><a class="btn btn-outline" href="/location">Find the centre</a></div>
     </section>
-    <section class="seo-section" id="request" aria-labelledby="request-title">
+    <section class="seo-section">
+<h2>How should I prepare for a first visit?</h2>
+<p>If you are unsure which service to choose, select the guidance option in the enquiry form. Before the visit, think of two examples from an ordinary day. Choose one activity your child handles comfortably and one where they need help. Bring any relevant reports or teacher observations to discuss with the clinician.</p>
+<ul><li>Confirm the appointment time, who will see your child and how long to allow.</li><li>Ask whether the quoted fee includes feedback or a written report.</li><li>Tell the team about language preferences and any access needs before arriving.</li></ul>
+<p>Use the <a href="/aasha/resources/assessment-visit-planner">printable assessment visit planner</a> to organize your questions.</p>
+</section>
+<section class="seo-section" id="request" aria-labelledby="request-title">
       <h2 id="request-title">Prepare your appointment enquiry</h2>
       <p>Share appointment coordination details only. Please do not include a child’s medical history, reports or emergency information. You will review and send the message yourself in WhatsApp.</p>
       <noscript><p>To request an appointment, please call <a href={`tel:${aasha.telephone}`}>{aasha.phone}</a>. The enquiry form requires JavaScript.</p></noscript>
@@ -32,7 +38,7 @@ const breadcrumbs = JSON.stringify({ '@context': 'https://schema.org', '@type': 
         <p id="aasha-request-status" role="status" tabindex="-1" hidden>Review and send your message in WhatsApp. This page has not confirmed an appointment. If WhatsApp did not open, call <a href={`tel:${aasha.telephone}`}>{aasha.phone}</a>. You can edit the form and try again.</p>
       </form>
     </section>
-    <section class="seo-section"><h2>What happens next?</h2><ol><li>Send your enquiry in WhatsApp or call the coordination team.</li><li>The team discusses the appropriate first visit, available times and current fees.</li><li>Your appointment is confirmed only when you and the team agree a date and time.</li></ol><p>Previous reports and school observations may help at the consultation. Read <a href="/aasha#journey">the Aasha care pathway</a> or <a href="/aasha#services">explore services</a>.</p></section>
+    <section class="seo-section"><h2>What happens next?</h2><p>Before booking, see <a href="/aasha/therapy-costs">what to ask about fees and session costs</a>.</p><ol><li>Send your enquiry in WhatsApp or call the coordination team.</li><li>The team discusses the appropriate first visit, available times and current fees.</li><li>Your appointment is confirmed only when you and the team agree a date and time.</li></ol><p>Previous reports and school observations may help at the consultation. Read <a href="/aasha#journey">the Aasha care pathway</a> or <a href="/aasha#services">explore services</a>.</p></section>
   </main>
   <script type="application/ld+json" set:html={breadcrumbs}></script>
 </Layout>

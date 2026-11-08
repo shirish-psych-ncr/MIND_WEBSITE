@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import aasha from '../../data/aasha.json';
+const canonical = `${aasha.url}/autism-early-intervention`;
+const description = 'Explore autism early intervention in Gamma 2, Greater Noida. Learn when to ask about developmental assessment, speech therapy, occupational therapy and family support at Aasha.';
+const headExtra = `<title>Autism Early Intervention in Greater Noida | Aasha</title><meta name="description" content="${description}"><link rel="canonical" href="${canonical}"><link rel="stylesheet" href="/assets/css/min/seo-pages.min.css">`;
+---
+<Layout headExtra={headExtra}>
+  <main id="main-content" class="seo-page">
+    <Breadcrumbs canonical={canonical} items={[{name:'Home', href:'/'}, {name:'Aasha', href:'/aasha'}, {name:'Autism early intervention'}]} />
+    <section class="seo-hero">
+      <p class="seo-kicker">Aasha · Gamma 2, Greater Noida</p>
+      <h1>Autism early intervention in Greater Noida</h1>
+      <p class="seo-answer">Early intervention helps young autistic children participate in everyday life. At Aasha, families can ask which support fits their child's priorities, from developmental assessment to speech and language therapy, occupational therapy or behavioural support. Start with a concern from home, preschool or play.</p>
+      <a class="btn" href="/aasha/book">Ask about a first appointment</a>
+    </section>
+    <section class="seo-section">
+      <h2>Where should we start if we suspect autism?</h2>
+      <p>Start by describing what you see across different situations. Your child might play comfortably alone but have trouble joining another child. They might communicate readily at home and rarely do so in a busy classroom. They might find changes especially distressing or need help being understood when they want an activity to stop. Tell the clinician about interests and abilities as well as concerns. A child who remembers routes, builds elaborate patterns or draws to communicate is showing strengths the team can use when planning support.</p>
+      <p>Ask whether you should begin with a <a href="/aasha/developmental-assessment">developmental assessment</a> or a visit focused on a specific concern. Take school observations, previous reports and a few examples from everyday routines. If your child has lost a skill they previously used, bring that up promptly. The <a href="/aasha/developmental-check-in">Aasha developmental check-in</a> is an optional discussion aid for organizing observations. For more on assessment and referral, see <a href="https://www.nice.org.uk/guidance/cg128/chapter/Recommendations">NICE guidance on autism recognition and diagnosis</a>.</p>
+      <h2>Which type of support might help first?</h2>
+      <p>Pick a situation where a change would make daily life easier for the child. A single routine can reveal whether the biggest barrier is communication, movement, sensory comfort, understanding what comes next or something else. During a preschool transition, for example, a child might need a way to request more time, a quieter place to put on shoes, or a clear picture showing where the group is going. Begin with the most useful change and observe how the child responds.</p>
+      <dl>
+        <dt><a href="/aasha/speech-language-therapy">Speech and language therapy</a></dt>
+        <dd>Consider this when a child needs more ways to understand others, express a preference, ask for a break or repair a misunderstanding. The child may communicate through speech, gesture, pictures or a device. Ask how the same method would be available with family and at school.</dd>
+        <dt><a href="/aasha/occupational-therapy">Occupational therapy</a></dt>
+        <dd>Consider this when the task or environment makes an everyday activity difficult. Examples include getting dressed, opening a lunch container, joining play or working comfortably at a classroom table. Ask what could change in the environment as well as what skill the child might want to practise.</dd>
+        <dt><a href="/aasha/behavioural-support">Behavioural support</a></dt>
+        <dd>Ask how the team understands a recurring difficult situation. Describe the setting, what happened beforehand and what relieved distress. Ask how the team would consider factors such as pain, sensory demands, communication barriers and changes in routine before choosing strategies.</dd>
+      </dl>
+      <p>If your child often repeats words or phrases they have heard, see <a href="/aasha/echolalia">the guide to echolalia</a> for examples to discuss with a therapist.</p>
+<h2>What should an early intervention goal look like?</h2>
+      <p>Agree on an everyday goal the family and child can recognize. Suppose leaving a favourite activity is hard. The adults might offer a consistent warning, show what comes next and give the child a way to ask for another minute. The team and family can then see whether the child understands the transition and can express a preference. The same approach could be tried with a different adult once it becomes familiar. If the child is still distressed, look again at the activity they are moving toward and the demands involved.</p>
+      <p>Ask the team what it will record, how it will consider your child's comfort, and when it will discuss the results with you. A count can help if it measures something meaningful, such as how often a child can independently ask for help during snack. Observations about fatigue, willingness to join in and use of the skill in different places also matter. A goal may need to change when it brings little benefit to everyday life.</p>
+      <h2>How can we include school and other caregivers?</h2>
+      <p>With your consent, share a short description of the goal with the teacher and other caregivers. Include what works, what makes participation harder and which cues the child understands. For example, a teacher might keep a picture showing the next activity where the child can reach it. A grandparent might use the same gesture the child uses to ask for a pause. Ask each adult to report what happened in their setting. The plan should be simple enough to use during an ordinary day.</p>
+      <p>The <a href="/aasha/resources/school-support-planner">school support planner</a> can help organize a conversation about classroom routines. NICE also discusses involving caregivers and adapting environments in its <a href="https://www.nice.org.uk/guidance/cg170/chapter/recommendations">autism support and management guidance</a>.</p>
+      <h2>How many sessions will my child need?</h2>
+      <p>Ask about the first goal, the proposed schedule and the date for an initial review. The appropriate plan depends on the child's priorities, how the family and school can participate, and whether the current approach is helping. If someone proposes several sessions each week, ask what each one is for and whether the goals can be coordinated. Discuss travel, school hours and budget before agreeing to the schedule. Use the <a href="/aasha/therapy-costs">therapy costs guide</a> to compare the assessment and expected session costs through the first review.</p>
+      <h2>Can we discuss support while an assessment is underway?</h2>
+      <p>Ask the clinician which everyday supports you can discuss now and which decisions need more information. If your child struggles to show that an activity is too loud, for example, the immediate question is how they can signal discomfort and how adults will respond. The assessment can explore the wider developmental picture while the family and school describe the situations where help is needed.</p>
+      <p>Keep the information you collect manageable. Note one routine that goes well and one that regularly causes difficulty. Include the child’s preferred way of communicating, what makes participation easier and any questions you want the clinician to answer. Use the <a href="/aasha/resources/assessment-visit-planner">assessment visit planner</a> if a written summary would help.</p>
+      <h2>What should we discuss when progress is hard to see?</h2>
+      <p>Return to the original goal and ask where the skill was meant to help. Suppose a child can request a break with a picture in the clinic but rarely does so at school. Check where the picture is kept, whether the child can reach it and what happens when they use it. A small change in how adults provide the support may be more useful than adding another practice session.</p>
+      <p>Ask your child what helps, using whichever communication method they prefer. Bring examples of comfort, effort and participation alongside any session records. Agree on one adjustment, who will make it and when you will talk again. If the original goal has stopped being useful, ask what concern the next goal should address.</p>
+      <h2>Where is Aasha?</h2>
+      <p>Aasha is at {aasha.address}. Call <a href={`tel:${aasha.telephone}`}>{aasha.phone}</a> or use <a href="/aasha/book">Aasha booking</a> to ask about appointment availability, the right starting service and current fees. Bring a short description of the routine you want help with and any earlier reports you would like the clinician to see.</p>
+    </section>
+  </main>
+</Layout>

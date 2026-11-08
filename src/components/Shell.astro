@@ -1,5 +1,7 @@
 ---
 import aasha from '../data/aasha.json';
+interface Props { brandLogo?: string; brandName?: string; brandAlt?: string; }
+const { brandLogo, brandName, brandAlt } = Astro.props;
 /**
  * Static site chrome (emergency banner, skip link, header, footer).
  *
@@ -48,8 +50,8 @@ const funnelMarkup = (id: string, label: string, links: string[][]) => `<li clas
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="header-inner">
     <a class="logo-link" href="/">
-      <img class="logo-img" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="eager" decoding="async">
-      <span class="logo-copy"><span class="logo-text" id="site-logo-name">Mind Grace</span><span class="logo-tagline">Neuropsychiatric Clinic | Where You Come First</span></span>
+      <img class="logo-img" src={brandLogo ?? '/assets/images/mind-grace-clinic-logo-pink.svg'} alt={brandAlt ?? 'Mind Grace Neuropsychiatric Clinic'} width="180" height="60" loading="eager" decoding="async">
+      <span class="logo-copy"><span class="logo-text" id="site-logo-name">{brandName ?? 'Mind Grace'}</span><span class="logo-tagline">{brandName ? 'Independent student guide' : 'Neuropsychiatric Clinic | Where You Come First'}</span></span>
     </a>
     <nav class="desktop-nav" aria-label="Main navigation"><ul>{navigation.slice(0, 2).map(([label, href]) => <li><a href={href}>{label}</a></li>)}<Fragment set:html={funnelMarkup('nav-patient-care', 'Patient care', patientLinks)} /><Fragment set:html={funnelMarkup('nav-academic-training', 'Academic training', academicLinks)} /><li><a href="/teleconsultation">Online consultations</a></li><li><a href="/contact">Contact</a></li><li><a class="btn btn--primary" href="/book">Book an appointment</a></li></ul></nav>
     <div class="header-actions">

@@ -3,23 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { getInstituteProfile, type InstituteProfile } from '../data/instituteInternships';
 
-interface Props { institution: string; location: string; slug: string; focus?: string; guidance?: string; }
-const { institution, location, slug } = Astro.props;
+interface Props { institution: string; location: string; slug: string; focus?: string; guidance?: string; skipProfile?: boolean; sourceUrl?: string; }
+const { institution, location, slug, focus, guidance, skipProfile, sourceUrl } = Astro.props;
 const profile: InstituteProfile | undefined = getInstituteProfile(slug);
-const fallbackFocus = profile ? profile.short : 'Its psychology offerings may include clinical, behavioural, and evidence-informed components.';
-const fallbackGuidance = profile ? profile.angle : 'Confirm the exact degree, recognition status, required hours, and whether fieldwork is hospital, clinic, laboratory, school, corporate, or community based.';
-const title = `${institution} Psychology Internship Guide | Mind Grace`;
-const description = `Psychology internship guide for ${institution} students: check current practicum hours, supervision, placement rules and documentation with your department.`;
+const fallbackFocus = focus ?? profile?.short ?? `A practical guide for ${institution} psychology students planning supervised field experience.`;
+const fallbackGuidance = guidance ?? 'Confirm the exact programme, required hours, approved placement settings, supervisor qualifications, and submission format with your department.';
+const title = `${institution} Psychology Internship Guide | Delhi NCR | Mind Grace`;
+const description = `A practical psychology internship guide for ${institution} students: confirm department approval, supervision, permitted activities, hours and documentation before starting a placement in ${location}.`;
 const canonical = `https://mindgracencr.in/blog/pages/adult/${slug}`;
 const mark = institution.split(/\s+/).filter(Boolean).map((word) => word.replace(/[^A-Za-z]/g, '')[0]).filter(Boolean).slice(0, 3).join('').toUpperCase();
 const logoSrc = profile?.logo ? `/assets/images/institute_logos/${profile.logo}` : '';
-// The FAQ extraction callout is authored as literal markup (never inside a
-// String.raw payload) so structural validators can count it statically.
-const answerText = `Before accepting a psychology internship, confirm that the placement, supervisor, permitted activities, hours and required records meet your department's current rules. Get approval in writing.`;
+const safeLogo = logoSrc || `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><rect width="96" height="96" rx="48" fill="#f3edf8"/><text x="48" y="57" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#45304f">${mark}</text></svg>`)}`;
 // Head metadata is assembled from fragments so no backtick ever appears
 // inside the String.raw template below (the raw delimiter cannot contain one).
-const headExtra = String.raw`<link rel="canonical" href="${canonical}"><title>${title}</title><meta name="description" content="${description}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:type" content="article"><meta name="blog-title" content="${institution}: psychology internship guide"><meta name="blog-description" content="${description}"><meta name="blog-date" content="2026-10-09"><meta property="article:modified_time" content="2026-11-07T00:00:00+05:30"><meta name="blog-tags" content="students, psychology, internship, ${location}">`;
-const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: (profile?.faqs ?? []).map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) };
+const faqs = [
+  { question: `How should ${institution} students choose a psychology internship?`, answer: 'First confirm your current programme requirements and placement approval with your department in writing. Then compare the placement setting, supervisor, permitted activities, hours and documentation against those requirements.' },
+  { question: 'Does an enquiry to Mind Grace guarantee an internship place?', answer: 'No. Availability, supervision, dates, permitted activities and documentation are confirmed case by case. Obtain written confirmation from the clinic and approval from your department before starting or logging hours.' },
+  { question: 'What may a psychology intern do in a clinical setting?', answer: 'Only activities specifically agreed with the supervisor, placement setting and university, with appropriate consent and confidentiality safeguards. Interns must not independently diagnose, interpret psychological tests for patients, or provide therapy.' },
+];
+const headExtra = String.raw`<link rel="canonical" href="${canonical}"><link rel="icon" href="${logoSrc || safeLogo}"><link rel="apple-touch-icon" href="${logoSrc || safeLogo}"><meta name="page-brand-logo" content="${logoSrc || safeLogo}"><meta name="page-brand-name" content="${institution}"><meta name="page-brand-alt" content="${profile?.alt ?? `${institution} logo`}"><title>${title}</title><meta name="description" content="${description}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:type" content="article"><meta name="blog-title" content="${institution}: supervised psychology internship guide"><meta name="blog-description" content="${description}"><meta name="blog-date" content="2026-10-09"><meta property="article:modified_time" content="2026-11-08T00:00:00+05:30"><meta name="blog-tags" content="${institution}, psychology students, supervised internship, ${location}, Delhi NCR">`;
+const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) };
 ---
 <Layout headExtra={headExtra}>
 <main id="main-content" class="seo-page classic-blog-reading">
@@ -36,41 +39,49 @@ const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity
         : <span class="institution-mark" aria-hidden="true">{mark}</span>}
       <div><p class="seo-kicker">Student internship guide · {location}{profile?.rciPathway ? ' · RCI licensing pathway' : ''}</p><h1>{institution}: psychology internship guide</h1></div>
     </div>
-    <div class="blog-answer"><strong>In short:</strong> {answerText}</div>
+    <div class="blog-answer"><strong>In short:</strong> Psychology students at {institution} should first confirm their department’s current internship rules in writing. Then compare a placement’s supervision, permitted learning activities, hours and documentation with those requirements. Students considering Greater Noida can enquire with Mind Grace, subject to current availability and written agreement.</div>
     <p class="lead">{fallbackFocus}</p>
     <p class="editorial-note">Programme names, recognition, curricula and placement rules can change. Verify current details with the institution and your department; this guide is independent and is not an official university statement.</p>
-    {profile && (
+    <h2>Begin with your department’s requirements</h2>
+    <p>Before contacting a clinic or hospital, check the handbook and ask your coordinator to confirm the requirements for your own programme and intake. Record the required hours, start and completion dates, eligible placement settings, supervisor criteria, attendance method, reports or reflective work, evaluation forms, and letter format. Ask for approval in writing; a placement’s reputation does not establish that your department will accept it.</p>
+    <h2>Choose a placement that matches your learning goals</h2>
+    <p>{fallbackGuidance} Internal practicum, campus counselling work, research placements and external clinical exposure can serve different learning goals. Treat them as complementary options, and do not assume that one can replace another unless your department confirms this.</p>
+    <h2>Four steps before you log any hours</h2>
+    <ol>
+      <li><strong>Write down the rules:</strong> bring the current university template, hour target and deadlines.</li>
+      <li><strong>Ask about current availability:</strong> state your programme, duration, dates and learning goals.</li>
+      <li><strong>Agree on supervision and scope in writing:</strong> confirm the named supervisor, schedule, permitted activities and records.</li>
+      <li><strong>Align documents early:</strong> have your department review the proposed logbook, evaluation and completion-letter format before the placement ends.</li>
+    </ol>
+    <h2>Keep the student role within clear boundaries</h2>
+    <p>Any observation or support tasks must be specifically permitted by the supervisor, placement setting and university, with confidentiality and consent safeguards in place. Students must not independently diagnose, interpret psychological test results for patients, or provide therapy. Ask what you may observe or assist with before any patient-facing activity.</p>
+    {sourceUrl && <p>Check the <a href={sourceUrl}>official institution information</a> for your current programme and placement rules.</p>}
+    {profile && !skipProfile && (
       <>
-        <h2>Programmes offered</h2>
+        <h2>Programme details to verify for {institution}</h2>
+        <p>The following profile is a starting point for your own checks, not a substitute for the current official prospectus or handbook. Course names, recognition and practicum rules may differ by programme and intake.</p>
         <ul>{profile.programs.map((program) => <li>{program}</li>)}</ul>
-        <h2>Syllabus highlights</h2>
+        <h2>Possible syllabus areas to check</h2>
         <ul>{profile.syllabus.map((line) => <li>{line}</li>)}</ul>
-        <h2>Internship and practicum requirements</h2>
+        <h2>Practicum details to confirm with your department</h2>
         <ul>{profile.practicum.map((line) => <li>{line}</li>)}</ul>
-        <h2>Special features</h2>
+        <h2>Questions to ask about available learning settings</h2>
         <ul>{profile.features.map((line) => <li>{line}</li>)}</ul>
         <h2>Compare a placement with your learning goals</h2>
         <p>Programme information can change between admission cycles. Use the current university handbook to confirm course names, recognition, practicum requirements and placement approval. A programme page alone cannot confirm that a particular clinic has a current opening.</p>
       </>
     )}
-    {!profile && (
+    {(!profile || skipProfile) && (
       <>
         <h2>What to verify before applying</h2>
-        <p>{fallbackGuidance}</p>
         <p>Ask whether the placement is clinical, counselling, educational, organisational, research, or forensic. Confirm the supervisor’s role, the hours that count, privacy and safeguarding expectations, and whether students observe, assist with research, or have any other clearly defined responsibility.</p>
       </>
     )}
-    <h2>Questions about your university requirements</h2>
-    <p>Check whether your department requires an internship letter, attendance record, case or project report, reflective notebook, supervisor evaluation, or a particular number of hours. A hospital or clinic name alone does not establish that a placement is available or that it satisfies your course.</p>
-    <h2>Asking Mind Grace about an opportunity</h2>
-    <p>Students may use the <a href="/clinical-psychology-internship">Mind Grace internship enquiry guide</a> to ask about current availability in Greater Noida. An enquiry is not a placement offer. Confirm the supervisor, dates, permitted activities, hours and documentation in writing, and obtain department approval before starting. Students must not independently diagnose, interpret tests for patients, or provide therapy.</p>
-    {profile && profile.faqs.length > 0 && (
-      <>
-        <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
-        <h2>Frequently asked questions</h2>
-        {profile.faqs.map((item) => <div class="internship-faq"><h3>{item.question}</h3><p>{item.answer}</p></div>)}
-      </>
-    )}
+    <h2>Asking Mind Grace about an opportunity in Greater Noida</h2>
+    <p>Mind Grace Neuropsychiatric Clinic is one possible enquiry for students exploring supervised psychology internship opportunities in Greater Noida. It is not a guaranteed placement, and proximity does not mean that a university will approve it. Clinical supervision and any training opportunity, schedule, activities and documentation must be discussed and confirmed directly with the clinic and your department before you make plans or record hours. Read the <a href="/clinical-psychology-internship">Mind Grace internship enquiry guide</a> and contact the <a href="/contact">academic desk</a> with your programme, dates and university requirements.</p>
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+    <h2>Frequently asked questions</h2>
+    {faqs.map((item) => <div class="internship-faq"><h3>{item.question}</h3><p>{item.answer}</p></div>)}
     <p>For a general regional comparison, see <a href="/blog/pages/adult/psychology-institutions-delhi-ncr">the Delhi NCR institutions guide</a>.</p>
   </article>
 </main></Layout>

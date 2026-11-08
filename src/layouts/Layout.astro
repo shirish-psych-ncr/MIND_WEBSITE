@@ -17,6 +17,9 @@ const rawMarkup = (value: string) => value.replaceAll('<' + String.fromCharCode(
 const canonical = headExtra.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1] ?? `https://mindgracencr.in${Astro.url.pathname}`;
 const title = headExtra.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() ?? 'Mind Grace Neuropsychiatric Clinic';
 const description = headExtra.match(/<meta\s+name="description"\s+content="([^"]*)"/i)?.[1] ?? '';
+const pageBrandLogo = headExtra.match(/<meta\s+name="page-brand-logo"\s+content="([^"]*)"/i)?.[1];
+const pageBrandName = headExtra.match(/<meta\s+name="page-brand-name"\s+content="([^"]*)"/i)?.[1];
+const pageBrandAlt = headExtra.match(/<meta\s+name="page-brand-alt"\s+content="([^"]*)"/i)?.[1];
 // Editorial metadata for the Article node in StructuredData. Pages opt in via
 // og:type="article" (and an optional blog-date publication meta). Hub pages
 // that aggregate article listings use CollectionPage instead of Article so a
@@ -107,7 +110,7 @@ startMarkup = startMarkup
 </head>
 <body class={bodyClass || undefined} data-chrome-normalized="true" {...extraAttrs}>
 {startMarkup && <Fragment set:html={rawMarkup(startMarkup)} />}
-<Shell><slot /></Shell>
+<Shell brandLogo={pageBrandLogo} brandName={pageBrandName} brandAlt={pageBrandAlt}><slot /></Shell>
 {canonicalPath === '/location' && <ClarityOptIn />}
 {bodyEnd && <Fragment set:html={rawMarkup(bodyEnd)} />}
 </body>
