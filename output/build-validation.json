@@ -1,8 +1,5 @@
 {
-  "routes": 143,
-  "references": 14976,
-  "errors": [
-    "/: missing href /tools",
-    "/clinical-psychology-internship: missing anchor /?enquiry=training#booking-section"
-  ]
+  "routes": 146,
+  "references": 13614,
+  "errors": []
 }

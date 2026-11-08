@@ -45,17 +45,17 @@ const academicLinks = [
 // (bindDesktopDropdowns), with aria-expanded/aria-controls for accessibility.
 const funnelMarkup = (id: string, label: string, links: string[][]) => `<li class="nav-funnel"><button type="button" class="nav-funnel-trigger" id="${id}-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="${id}">${label}<svg class="nav-funnel-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><ul class="nav-funnel-menu" id="${id}" hidden>${links.map(([linkLabel, href]) => `<li><a href="${href}">${linkLabel}</a></li>`).join('')}</ul></li>`;
 ---
-<aside class="emergency-banner emergency-banner--static" aria-labelledby="emergency-notice-title"><div class="emergency-banner__content"><span id="emergency-notice-title">Not an emergency service.</span><span>Immediate danger? Call <a href="tel:112">112</a>.</span><a href="/emergency">Emergency resources</a></div></aside>
+<aside class="emergency-banner emergency-banner--static" aria-label="Emergency help"><div class="emergency-banner__content"><span>Need urgent help?</span><a href="tel:112">Call 112</a><a href="/emergency">Other emergency support</a></div></aside>
 <header class="site-header" data-shared-shell>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="header-inner">
     <a class="logo-link" href="/">
       <img class="logo-img" src={brandLogo ?? '/assets/images/mind-grace-clinic-logo-pink.svg'} alt={brandAlt ?? 'Mind Grace Neuropsychiatric Clinic'} width="180" height="60" loading="eager" decoding="async">
-      <span class="logo-copy"><span class="logo-text" id="site-logo-name">{brandName ?? 'Mind Grace'}</span><span class="logo-tagline">{brandName ? 'Independent student guide' : 'Neuropsychiatric Clinic | Where You Come First'}</span></span>
+      <span class="logo-copy"><span class="logo-text" id="site-logo-name">{brandName ?? 'Mind Grace'}</span><span class="logo-tagline">{brandName ? 'Independent student guide' : 'Care that starts with you'}</span></span>
     </a>
     <nav class="desktop-nav" aria-label="Main navigation"><ul>{navigation.slice(0, 2).map(([label, href]) => <li><a href={href}>{label}</a></li>)}<Fragment set:html={funnelMarkup('nav-patient-care', 'Patient care', patientLinks)} /><Fragment set:html={funnelMarkup('nav-academic-training', 'Academic training', academicLinks)} /><li><a href="/teleconsultation">Online consultations</a></li><li><a href="/contact">Contact</a></li><li><a class="btn btn--primary" href="/book">Book an appointment</a></li></ul></nav>
     <div class="header-actions">
-      <button type="button" class="accessibility-toggle" id="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-panel">Accessibility</button>
+      <button type="button" class="accessibility-toggle" id="accessibility-toggle" aria-expanded="false" aria-controls="accessibility-panel" aria-label="Accessibility settings">Accessibility</button>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Use dark theme"><i data-lucide="moon" aria-hidden="true"></i><span class="visually-hidden">Dark theme</span></button>
       <button type="button" class="mobile-nav-trigger" id="burgerMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel"><i data-lucide="menu" aria-hidden="true"></i></button>
       <a class="mobile-book-btn" href="/book" aria-label="Book an appointment"><i data-lucide="calendar-days" aria-hidden="true"></i><span class="mobile-book-label">Book</span><span class="visually-hidden">Book an appointment</span></a>
@@ -74,18 +74,18 @@ const funnelMarkup = (id: string, label: string, links: string[][]) => `<li clas
 <slot />
 <footer class="site-footer" data-shared-shell>
   <div class="footer-container">
-    <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Neuropsychiatric care in Greater Noida. All child-related care is provided through Aasha Early Intervention Centre.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
-    <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/#patient-stream">Clinic &amp; training hub</a></li><li><a href="/services">Our services</a></li><li><a href="/aasha">Aasha Child Development &amp; Early Intervention Centre</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/academic-training">Academic training hub</a></li><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/student-internship-guides">Internship guides by institute</a></li><li><a href="/#academic-stream">Student programs &amp; workshops</a></li><li><a href="/faq#common-questions">Frequently asked questions</a></li><li><a href="/site-map">Explore all pages</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
-    <address class="footer-contact"><strong class="footer-contact__title">Visit or call</strong><p>Mind Grace Neuropsychiatric Clinic<br>J123, Gamma II, Greater Noida, 201310</p><p><a href="tel:+919667863295">+91 96678 63295</a><br><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
+    <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="Mind Grace Neuropsychiatric Clinic" width="180" height="60" loading="lazy"><p class="footer-tagline">Care that starts with you</p><p class="footer-description">Psychiatry and counselling in Greater Noida, with child development care through Aasha.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
+    <nav class="footer-links" aria-label="Footer navigation"><div><h2>Care</h2><ul><li><a href="/services">Services</a></li><li><a href="/aasha">Aasha child development</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Visit the clinic</a></li><li><a href="/book">Book an appointment</a></li></ul></div><div><h2>Explore</h2><ul><li><a href="/resources">Resources and tools</a></li><li><a href="/blog">Mental health guides</a></li><li><a href="/academic-training">Academic training</a></li><li><a href="/faq">Frequently asked questions</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
+    <address class="footer-contact"><strong class="footer-contact__title">Mind Grace Clinic</strong><p>J123, Gamma II<br>Greater Noida, 201310</p><p><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
   </div><section class="footer-aasha" aria-labelledby="footer-aasha-title">
-    <a href="/aasha"><img src={aasha.logo} alt={aasha.shortName} width="180" height="120" loading="lazy" /></a>
-    <div><h2 id="footer-aasha-title">{aasha.name}</h2><p>All child-related care on this website is provided through Aasha.</p><p>{aasha.address}<br />{aasha.hours}</p><nav aria-label="Aasha services"><a href="/aasha">About Aasha</a>{aasha.services.map(service => <a href={`/aasha/${service.slug}`}>{service.name}</a>)}<a href={`tel:${aasha.telephone}`}>Call {aasha.phone}</a></nav></div>
-  </section><div class="footer-bottom"><p>&copy; <span id="year">2026</span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/consent">Consent</a></div></div>
+    <a href="/aasha"><img src={aasha.logo} alt={aasha.shortName} width="120" height="80" loading="lazy" /></a>
+    <div><h2 id="footer-aasha-title">Aasha Early Intervention Centre</h2><p>Child development care in Gamma 2, Greater Noida.</p><nav aria-label="Aasha information"><a href="/aasha">Explore Aasha care</a><a href="/aasha/book">Enquire about an appointment</a></nav></div>
+  </section><div class="footer-bottom"><p>&copy; <span id="year">2026</span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a></div></div>
 </footer>
 
 <style>
-.footer-aasha{display:flex;gap:1.5rem;align-items:flex-start;width:min(100% - 2rem,1180px);margin:2rem auto;padding-top:1.5rem;border-top:1px solid currentColor}
-.footer-aasha img{width:180px;height:120px;object-fit:contain;background:#fff;border-radius:12px}
+.footer-aasha{display:flex;gap:1rem;align-items:center;width:min(100% - 2rem,1180px);margin:1.5rem auto 0;padding-top:1.25rem;border-top:1px solid currentColor}
+.footer-aasha img{width:120px;height:80px;object-fit:contain;background:#fff;border-radius:10px}
 .footer-aasha h2{font-size:1.15rem;margin:0 0 .75rem}.footer-aasha p{margin:.5rem 0}.footer-aasha nav{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;margin-top:1rem}.footer-aasha a{text-decoration:underline}
 @media(max-width:600px){.footer-aasha{flex-direction:column}.footer-aasha nav{display:grid;grid-template-columns:1fr}}
 </style>

@@ -18,5 +18,28 @@
 .seo-answer strong { color: var(--mg-lava-deep); }
 .seo-links { display: flex; flex-wrap: wrap; gap: .7rem 1.1rem; margin-top: 1rem; }
 .seo-links a { color: var(--mg-lava-deep); font-weight: 800; text-underline-offset: .18em; }
-@media (max-width: 760px) { .seo-grid { grid-template-columns: 1fr; } .seo-page { width: min(100% - 1.25rem, 1180px); } .seo-actions > * { width: 100%; } }
+/* Aasha and other SEO pages share this shell. Keep each content track shrinkable
+   and let cards reflow based on available space rather than device labels. */
+.seo-page, .seo-page :is(section, article, nav, aside, div) { min-width: 0; box-sizing: border-box; }
+.seo-page :is(p, li, a, h1, h2, h3, address) { overflow-wrap: anywhere; }
+.seo-page .seo-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+.seo-page .seo-card { height: 100%; }
+.seo-page .seo-actions { align-items: stretch; }
+.seo-page .seo-actions > * { max-width: 100%; min-width: 0; }
+.seo-page .breadcrumbs { max-width: 100%; }
+.seo-page :is(img, video, iframe, table) { max-width: 100%; }
+.seo-page img { height: auto; }
+@media (max-width: 760px) {
+  .seo-page { width: min(100% - 1.25rem, 1180px); }
+  .seo-page .seo-grid { grid-template-columns: minmax(0, 1fr); }
+  .seo-page .seo-actions { flex-direction: column; align-items: stretch; }
+  .seo-page .seo-actions > * { width: 100%; }
+  .seo-page .seo-hero { padding-block: 1.75rem 2rem; }
+  .seo-page .seo-section { padding-block: 1.5rem; }
+}
+@media (max-width: 380px) {
+  .seo-page { width: calc(100% - 1rem); }
+  .seo-page .seo-answer { padding: .85rem; }
+  .seo-page .seo-kicker { letter-spacing: .08em; }
+}
 @media (prefers-reduced-motion: reduce) { .seo-card { transition: none !important; } }
