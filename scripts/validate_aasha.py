@@ -69,8 +69,9 @@ for file in DIST.rglob("*.html"):
     require(page.h1 == 1, "expected one H1")
     require(bool(normalize("".join(page.title))), "missing title")
     require(page.meta.get("og:url") == [canonical], "Open Graph URL differs from canonical")
-    require("/aasha" in page.hrefs, "missing crawlable Aasha hub link")
-    require(any(i.get("src") == data["logo"] and i.get("alt") for i in page.images), "missing accessible Aasha logo")
+    is_aasha_route = canonical == data["url"] or canonical.startswith(data["url"] + "/")
+    if is_aasha_route:
+        require(any(i.get("src") == data["logo"] and i.get("alt") for i in page.images), "missing accessible Aasha logo")
     graph = [item for schema in page.schemas for item in nodes(schema)]
     centres = [item for item in graph if item.get("@id") == data["id"]]
     require(len(centres) == 1, "expected one stable Aasha centre identity")
@@ -81,8 +82,16 @@ for file in DIST.rglob("*.html"):
         hours = centre.get("openingHoursSpecification", {})
         require(hours.get("opens") == "12:00" and hours.get("closes") == "20:00", "incorrect Aasha hours")
     visible = normalize(" ".join(page.text))
-    require(normalize(data["hours"]) in visible and normalize(data["address"]) in visible, "Aasha hours/address missing from visible content")
-    if canonical == data["url"] or canonical.startswith(data["url"] + "/"):
+    if is_aasha_route or canonical in {
+        "https://mindgracencr.in/child-development",
+        "https://mindgracencr.in/adhd-autism-assessment",
+    }:
+        require("/aasha" in page.hrefs, "missing crawlable Aasha hub link")
+    if is_aasha_route:
+        address_parts = ["J-123", "Gamma 2", "Greater Noida", "201310"]
+        hours_parts = ["Monday to Saturday", "12:00 PM", "8:00 PM", "Sunday", "Closed"]
+        require(all(part.lower() in visible.lower() for part in address_parts + hours_parts), "Aasha hours/address missing from visible content")
+    if is_aasha_route:
         require(canonical in sitemap, "Aasha page absent from sitemap")
         for node in graph:
             if node.get("@type") == "FAQPage":

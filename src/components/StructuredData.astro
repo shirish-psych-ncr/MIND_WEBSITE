@@ -52,6 +52,37 @@ const graph: Record<string, unknown>[] = [
   },
 ];
 
+if (isPhysicianPage) {
+  graph.push({
+    '@type': 'ProfilePage',
+    '@id': `${pageUrl}#profile`,
+    url: pageUrl,
+    name: title,
+    mainEntity: { '@id': PERSON_ID },
+    isPartOf: { '@id': WEBSITE_ID },
+    inLanguage: 'en-IN',
+  });
+}
+
+const servicePages: Record<string, { name: string; provider: string }> = {
+  [`${SITE_URL}/psychiatrist-greater-noida`]: { name: 'Psychiatry consultation in Greater Noida', provider: PERSON_ID },
+  [`${SITE_URL}/psychiatry`]: { name: 'Psychiatry consultation and follow-up', provider: PERSON_ID },
+  [`${SITE_URL}/therapy`]: { name: 'Clinical psychology and therapy', provider: CLINIC_ID },
+  [`${SITE_URL}/aasha`]: { name: 'Child development and early intervention', provider: aashaId },
+};
+if (servicePages[pageUrl]) {
+  const service = servicePages[pageUrl];
+  graph.push({
+    '@type': 'Service',
+    '@id': `${pageUrl}#service`,
+    name: service.name,
+    url: pageUrl,
+    provider: { '@id': service.provider },
+    areaServed: { '@type': 'City', name: 'Greater Noida' },
+    mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+  });
+}
+
 // The Aasha learning hub is a curated listing of guides, so it ships a
 // CollectionPage node (with authorship and review dates) instead of an
 // Article node; its per-item BlogPosting/LearningResource markup lives in the
