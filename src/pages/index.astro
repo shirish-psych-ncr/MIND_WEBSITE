@@ -1,30 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// Quiet landing page: one clear promise, two primary paths (patient care and
-// training), and a compact "find your way in" directory of breadcrumbs so the
-// home page orients visitors instead of overwhelming them. Detail lives on the
-// section pages; the home page only names the doors.
-const trails = [
-  { label: 'Care', href: '/services', crumbs: ['Home', 'Care', 'Services & treatments'] },
-  { label: 'Care', href: '/assessments', crumbs: ['Home', 'Care', 'Assessments'] },
-  { label: 'Care', href: '/aasha', crumbs: ['Home', 'Care', 'Aasha Early Intervention'] },
-  { label: 'Care', href: '/conditions', crumbs: ['Home', 'Care', 'Conditions we treat'] },
-  { label: 'Care', href: '/process', crumbs: ['Home', 'Care', 'How visits work'] },
-  { label: 'Care', href: '/fees', crumbs: ['Home', 'Care', 'Fees'] },
-  { label: 'Care', href: '/teleconsultation', crumbs: ['Home', 'Care', 'Online consultations'] },
-  { label: 'Care', href: '/book', crumbs: ['Home', 'Care', 'Book an appointment'] },
-  { label: 'Learning', href: '/academic-training', crumbs: ['Home', 'Learning', 'Academic training hub'] },
-  { label: 'Learning', href: '/clinical-psychology-internship', crumbs: ['Home', 'Learning', 'Internship enquiries'] },
-  { label: 'Reading', href: '/blog', crumbs: ['Home', 'Reading', 'The journal'] },
-  { label: 'Reading', href: '/resources#tools', crumbs: ['Home', 'Reading', 'Self-help tools'] },
-  { label: 'The clinic', href: '/about', crumbs: ['Home', 'The clinic', 'About Mind Grace'] },
-  { label: 'The clinic', href: '/doctors', crumbs: ['Home', 'The clinic', 'The clinical team'] },
-  { label: 'The clinic', href: '/location', crumbs: ['Home', 'The clinic', 'Visit the clinic'] },
-  { label: 'The clinic', href: '/faq', crumbs: ['Home', 'The clinic', 'Questions, answered'] },
-];
-const trailGroups = ['Care', 'Learning', 'Reading', 'The clinic'].map((label) => ({ label, trails: trails.filter((t) => t.label === label) }));
-
 const headExtra = String.raw`
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f7f4ed" media="(prefers-color-scheme: light)">
@@ -32,101 +8,34 @@ const headExtra = String.raw`
   <meta name="author" content="Mind Grace Neuropsychiatric Clinic">
   <meta name="robots" content="index, follow">
   <title>Mind Grace Neuropsychiatric Clinic, Greater Noida</title>
-  <meta name="description" content="Explore psychiatry, clinical psychology and therapy at Mind Grace in Greater Noida. Find fees, meet Dr Anita Sharma and request an appointment.">
+  <meta name="description" content="Mind Grace offers psychiatry, psychology, and therapy in Greater Noida. Find mental health care, child development support, parent guidance, student training, and appointments.">
   <link rel="canonical" href="https://mindgracencr.in/">`;
 ---
 
 <Layout headExtra={headExtra}>
   <main id="main-content" tabindex="-1">
-    <div class="seo-answer"><strong>Mind Grace is a psychiatry and mental-health clinic in Greater Noida.</strong> Meet with our care team for psychiatric consultation, counselling, therapy and assessment. Child development services are provided through Aasha, our early intervention centre; online consultations are also available.</div>
-
     <section class="pn-hero wrap" aria-labelledby="pn-hero-title">
       <div class="pn-hero-copy">
-        <p class="eyebrow"><span class="mini-line" aria-hidden="true"></span> PSYCHOLOGY. PEOPLE. PRACTICE.</p>
+        <p class="eyebrow"><span class="mini-line" aria-hidden="true"></span> MIND GRACE · GREATER NOIDA</p>
         <h1 id="pn-hero-title">Mind Grace Neuropsychiatric Clinic<br><em>in Greater Noida</em></h1>
-        <p class="pn-intro">A clear next step starts with being heard. Mind Grace offers psychiatric consultation and counselling in Gamma II, Greater Noida, with online consultations available. For children, Aasha brings developmental assessment and therapy together around each child and family.</p>
+        <p class="pn-intro">Psychiatry, psychology, and therapy for adults and families. Find the path that fits you.</p>
         <div class="pn-actions">
-          <a class="btn btn--primary" href="/book">Book a consultation <span aria-hidden="true">↗</span></a>
-          <a class="pn-text-link" href="#care-options">Choose your care <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--primary" href="/services">Explore care <span aria-hidden="true">↗</span></a>
+          <a class="pn-text-link" href="#start-here">Choose your path <span aria-hidden="true">↓</span></a>
         </div>
-        <p class="pn-footnote">Gamma II, Greater Noida · In-clinic and online consultations</p>
+        <p class="pn-footnote">Gamma II, Greater Noida · In-clinic and online</p>
       </div>
     </section>
 
-    <section id="care-options" class="pn-section wrap" aria-labelledby="care-options-title">
+    <section id="start-here" class="pn-section wrap" aria-labelledby="care-options-title">
       <div class="pn-heading">
         <h2 id="care-options-title">Where would you like to start?</h2>
-        <p class="pn-heading-intro">If you’re unsure whom to see, start with the care team’s guide to each role.</p>
       </div>
-      <ul>
-        <li><a href="/dr-anita-sharma">Meet Dr Anita Sharma, consultant psychiatrist</a></li>
-        <li><a href="/assessments">Compare mental health assessment options</a></li>
-        <li><a href="/therapy">Find clinical psychology and therapy in Greater Noida</a></li>
-        <li><a href="/psychiatrist-greater-noida">See local psychiatry consultations</a></li>
-        <li><a href="/aasha#first-visit">Plan a first visit for your child at Aasha</a></li>
-        <li><a href="/psychiatrist-vs-psychologist">Understand psychiatrist and psychologist roles</a></li>
-        <li><a href="/fees">See fees before booking</a> or <a href="/location">get directions to the clinic</a></li>
-      </ul>
-    </section>
-
-    <section class="pn-section wrap" aria-labelledby="local-care-title">
-      <div class="pn-heading">
-        <div><p class="eyebrow">CARE IN GREATER NOIDA</p><h2 id="local-care-title">Mental health and behavioural care, with a clear route in</h2></div>
-        <p class="pn-heading-intro">Mind Grace provides psychiatry and adult mental-health services in Gamma II. Child development and child-related care are coordinated through Aasha Early Intervention Centre.</p>
-      </div>
-      <p>People often arrive with a question rather than a diagnosis: whether a change in mood needs attention, how to find a psychiatrist, whether therapy may help, or which appointment is appropriate for a family member. You can begin by describing what has changed in sleep, work, relationships, daily routines, learning, or communication. The clinician or coordination team can then explain which service is a reasonable place to start. Reading a page cannot determine a diagnosis or replace an individual consultation.</p>
-      <p>For an adult psychiatric consultation, see <a href="/psychiatrist-greater-noida">psychiatry in Greater Noida</a> and <a href="/psychiatry">what a psychiatry visit may involve</a>. For therapy and psychological support, visit <a href="/therapy">clinical psychology and therapy</a>. Families seeking child development support can review <a href="/aasha">Aasha's services and first-visit information</a>. Meet <a href="/dr-anita-sharma">Dr. Anita Sharma, Consultant Psychiatrist</a>, and use the <a href="/psychiatrist-vs-psychologist">care-role guide</a> if you are deciding between psychiatry and psychology.</p>
-      <p>Before requesting a visit, you can check the current <a href="/fees">consultation and assessment fees</a>, read <a href="/process">what to expect at a first appointment</a>, and find the clinic on the <a href="/location">directions page</a>. A request lets the team coordinate a suitable time; it is not a confirmed slot until the clinic contacts you and agrees a date and time. If you are unsure which route fits, contact the clinic with a general appointment question and avoid sending detailed clinical information through a routine enquiry.</p>
-      <div class="pn-actions"><a class="btn btn--primary" href="/book">Request an appointment</a><a class="pn-text-link" href="/fees">View fees and visit information</a></div>
-    </section>
-
-    <section id="streams" class="pn-section wrap" aria-labelledby="pn-work-title">
-      <div class="pn-heading">
-        <div><p class="eyebrow">01 / TWO STREAMS</p><h2 id="pn-work-title">Thoughtful care.<br><em>Thoughtful systems.</em></h2></div>
-        <p class="pn-heading-intro">Some problems need a clear explanation. Others need a better way to work. These are the two streams on our desk.</p>
-      </div>
-      <div class="pn-list">
-        <a class="pn-row" id="patient-stream" href="/services">
-          <span class="pn-number">01</span>
-          <span class="pn-icon pn-icon-care" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span class="pn-copy">
-            <span class="pn-status"><i aria-hidden="true"></i> PATIENT CARE</span>
-            <span class="pn-h3">One person. A connected team.</span>
-            <span class="pn-p">Psychiatric consultations, counselling and psychotherapy, with all child-related care through Aasha Early Intervention Centre.</span>
-            <span class="pn-rowtags">PSYCHIATRY <span aria-hidden="true">·</span> THERAPY <span aria-hidden="true">·</span> ASSESSMENTS</span>
-          </span>
-          <span class="pn-arrow" aria-hidden="true">↗</span>
-        </a>
-        <a class="pn-row" id="academic-stream" href="/clinical-psychology-internship">
-          <span class="pn-number">02</span>
-          <span class="pn-icon pn-icon-learn" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
-          <span class="pn-copy">
-            <span class="pn-status"><i aria-hidden="true"></i> TRAINING</span>
-            <span class="pn-h3">From theory to defensible practice.</span>
-            <span class="pn-p">Supervised clinical psychology internships, psychometric orientation, and interviewing practicums for students and academics.</span>
-            <span class="pn-rowtags">INTERNSHIPS <span aria-hidden="true">·</span> WORKSHOPS <span aria-hidden="true">·</span> SUPERVISION</span>
-          </span>
-          <span class="pn-arrow" aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </section>
-
-    <section id="doors" class="pn-section wrap" aria-labelledby="pn-connections-title">
-      <div class="pn-heading">
-        <div><p class="eyebrow">02 / FIND YOUR WAY IN</p><h2 id="pn-connections-title">Explore Mind Grace</h2></div>
-        <p class="pn-heading-intro">Find care, training, resources and clinic information.</p>
-      </div>
-      <div class="pn-groups">
-        {trailGroups.map((group) => (
-          <nav class="pn-group" aria-label={group.label}>
-            <p class="pn-group-label">{group.label}</p>
-            <ul class="pn-doors">
-              {group.trails.map((trail) => (
-                <li className="pn-crumb"><a href={trail.href}><span class="pn-trail">{trail.crumbs.at(-1)}</span><span class="pn-door-arrow" aria-hidden="true">→</span></a></li>
-              ))}
-            </ul>
-          </nav>
-        ))}
+      <div class="pn-audience-paths">
+        <a href="/services"><strong>Patients</strong><span>Psychiatry, psychology, and therapy</span></a>
+        <a href="/child-development"><strong>Parents and families</strong><span>Child development and family support</span></a>
+        <a href="/academic-training"><strong>Students</strong><span>Internships, workshops, and guides</span></a>
+        <a href="/blog"><strong>Readers</strong><span>Mental health articles and self-help tools</span></a>
       </div>
     </section>
   </main>
@@ -162,15 +71,11 @@ const headExtra = String.raw`
     .pn-h3{display:block;margin:.35rem 0 .3rem;font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:800;color:var(--mg-ink-strong)}
     .pn-p{display:block;color:var(--mg-ink-muted);font-size:.92rem;line-height:1.6;max-width:56ch}
     .pn-arrow{font-size:1.2rem;font-weight:800;color:var(--mg-link)}
-    .pn-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1.5rem}
-    .pn-group{background:var(--mg-surface-strong);border:1px solid var(--mg-border-strong);border-radius:1rem;padding:1.1rem 1.25rem}
-    .pn-group-label{margin:0 0 .5rem;padding-bottom:.6rem;border-bottom:1px solid var(--mg-border);font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mg-link)}
-    .pn-doors{list-style:none;margin:0;padding:0}
-    .pn-crumb a{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;padding:.55rem 0;border-bottom:1px solid var(--mg-border);text-decoration:none}
-    .pn-crumb:last-child a{border-bottom:0}
-    .pn-trail{font-size:.9rem;font-weight:700;color:var(--mg-ink-strong)}
-    .pn-door-arrow{flex:0 0 auto;font-weight:800;color:var(--mg-link)}
-    .pn-crumb a:hover .pn-trail,.pn-crumb a:focus-visible .pn-trail{color:var(--mg-link)}
+    .pn-audience-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2rem;border-top:1px solid var(--mg-border);max-width:58rem}
+    .pn-audience-paths a{display:grid;gap:.2rem;min-width:0;padding:1.05rem .25rem;border-bottom:1px solid var(--mg-border);text-decoration:none}
+    .pn-audience-paths strong{font-size:1.1rem;color:var(--mg-link)}
+    .pn-audience-paths span{font-size:.9rem;line-height:1.45;color:var(--mg-ink-muted)}
+    .pn-audience-paths a:hover strong,.pn-audience-paths a:focus-visible strong{text-decoration:underline;text-underline-offset:.18em}
     .pn-hero-copy {
       padding: clamp(1.25rem, 5vw, 3.5rem);
       border: 1px solid var(--mg-border);
@@ -220,6 +125,7 @@ const headExtra = String.raw`
       .pn-actions a { justify-content: center; }
     }
     @media(max-width:640px){.pn-row{grid-template-columns:auto minmax(0,1fr)}.pn-number{grid-row:1}.pn-icon{display:none}.pn-arrow{display:none}.pn-copy{grid-column:2}}
+    @media(max-width:560px){.pn-audience-paths{grid-template-columns:1fr}}
     @media(prefers-reduced-motion:reduce){.pn-row{transition:none;transform:none}}
   </style>
 </Layout>

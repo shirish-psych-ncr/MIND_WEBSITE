@@ -64,11 +64,11 @@ function connected(record) {
       const backlink = candidate.outgoing.has(record.route);
       const score = (isParent ? 35 : 0) + (isChild ? 25 : 0) + (contextual ? 18 : 0) + (backlink ? 10 : 0) + common.length * 8;
       return { candidate, score, reason: isParent ? 'Explore this collection' : isChild ? 'In this collection' : contextual ? 'Continue this topic' : backlink ? 'More context' : 'Related reading' };
-    }).filter(item => item.score > 0).sort((a,b) => b.score - a.score || a.candidate.route.localeCompare(b.candidate.route)).slice(0,4);
+    }).filter(item => item.score > 0).sort((a,b) => b.score - a.score || a.candidate.route.localeCompare(b.candidate.route)).slice(0,3);
 }
 const publicNodes = [];
 for (const record of records.values()) {
-  const crumbs = trail(record), related = connected(record);
+  const crumbs = trail(record), related = record.route === '/' ? [] : connected(record);
   const patches = [];
   const replace = (node, value) => {
     const loc = node.sourceCodeLocation;

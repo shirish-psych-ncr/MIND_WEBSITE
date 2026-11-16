@@ -4,13 +4,9 @@
 
   const navigation = [
     ["Home", "/"],
-    ["About", "/about"],
-    ["About", "/about"],
-    ["Services", "/services"],
-    ["Academic training", "/academic-training"],
-    ["What to expect", "/process"],
-    ["Resources", "/resources"],
-    ["Location", "/location"],
+    ["Care", "/services"],
+    ["Explore", "/resources"],
+    ["Training", "/academic-training"],
     ["Contact", "/contact"]
   ];
   const mobileNavigation = [
@@ -54,11 +50,21 @@
       icon: "book-open",
       children: [
         ["Academic training hub", "/academic-training"],
-        ["Student programs & workshops", "/#academic-stream"],
+        ["Student programs & workshops", "/academic-training"],
         ["Internship enquiries", "/clinical-psychology-internship"],
         ["Internship guides by institute", "/student-internship-guides"],
-        ["Student resources", "/resources"],
         ["Research and learning", "/blog"]
+      ]
+    },
+    {
+      label: "Explore articles and resources",
+      icon: "book-open",
+      children: [
+        ["All articles", "/blog"],
+        ["Adult mental health guides", "/blog/adult"],
+        ["Child development guides", "/blog/children"],
+        ["Resources and self-help tools", "/resources"],
+        ["Frequently asked questions", "/faq"]
       ]
     },
     {
@@ -66,7 +72,10 @@
       icon: "sparkles",
       href: "/resources#tools",
       children: [
-        ["All self-help tools", "/resources#tools"]
+        ["Guided breathing", "/tools/guided-breathing"],
+        ["Eye movement grounding", "/tools/eye-movement"],
+        ["Butterfly tapper", "/tools/butterfly-tapper"],
+        ["See all tools", "/resources#tools"]
       ]
     },
     {
@@ -92,11 +101,16 @@
   ];
   const academicLinks = [
     ["Academic training hub", "/academic-training"],
-    ["Academic programs & workshops", "/#academic-stream"],
+    ["Academic programs & workshops", "/academic-training"],
     ["Internship enquiries", "/clinical-psychology-internship"],
-    ["Internship guides by institute", "/student-internship-guides"],
-    ["Student resources", "/resources"],
-    ["Research and learning", "/blog"]
+    ["Internship guides by institute", "/student-internship-guides"]
+  ];
+  const exploreLinks = [
+    ["Mental health articles", "/blog"],
+    ["Adult mental health guides", "/blog/adult"],
+    ["Child development guides", "/blog/children"],
+    ["Resources and self-help tools", "/resources"],
+    ["Frequently asked questions", "/faq"]
   ];
   // Privacy settings and embedded browsers may deny storage access.
   const preferences = {
@@ -141,8 +155,9 @@
   function desktopNavMarkup() {
     return `${navigation.slice(0, 2).map(([label, href]) => `<li><a href="${href}">${label}</a></li>`).join("")}`
       + funnelMenuMarkup("nav-patient-care", "Patient care", patientLinks)
-      + funnelMenuMarkup("nav-academic-training", "Academic training", academicLinks)
-      + `<li><a href="/teleconsultation">Online consultations</a></li><li><a href="/contact">Contact</a></li><li><a class="btn btn--primary" href="/book">Book an appointment</a></li>`;
+      + funnelMenuMarkup("nav-explore", "Explore", exploreLinks)
+      + funnelMenuMarkup("nav-academic-training", "Training", academicLinks)
+      + `<li><a href="/contact">Contact</a></li><li><a class="btn btn--primary" href="/book">Book an appointment</a></li>`;
   }
 
   function upgradeFunnelTriggers(root) {
@@ -357,7 +372,7 @@
     footer.className = "site-footer";
     footer.innerHTML = `<div class="footer-container">
       <div class="footer-brand"><img class="footer-logo" src="/assets/images/mind-grace-clinic-logo-pink.svg" alt="" width="180" height="60" loading="lazy"><p class="footer-tagline">Where You Come First</p><p class="footer-description">Neuropsychiatric care in Greater Noida. All child-related care is provided through Aasha Early Intervention Centre.</p><a class="footer-phone" href="tel:+919667863295">Call +91 96678 63295</a></div>
-      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/#patient-stream">Clinic &amp; training hub</a></li><li><a href="/services">Our services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Help and resources</h2><ul><li><a href="/academic-training">Academic training hub</a></li><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/student-internship-guides">Internship guides by institute</a></li><li><a href="/#academic-stream">Student programs &amp; workshops</a></li><li><a href="/faq#common-questions">Frequently asked questions</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/gallery">Clinic gallery</a></li><li><a href="/emergency">Emergency help</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
+      <nav class="footer-links" aria-label="Footer navigation"><div><h2>Patient care</h2><ul><li><a href="/book">Book an appointment</a></li><li><a href="/services">Care and services</a></li><li><a href="/process">What to expect</a></li><li><a href="/location">Find us</a></li></ul></div><div><h2>Explore</h2><ul><li><a href="/academic-training">Academic training</a></li><li><a href="/clinical-psychology-internship">Internship enquiries</a></li><li><a href="/student-internship-guides">Internship guides by institute</a></li><li><a href="/blog">Mental health guides</a></li><li><a href="/blog/children">Parent guides</a></li><li><a href="/resources#tools">Self-help tools</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
       <address class="footer-contact"><h2>Visit or call</h2><p>Mind Grace Neuropsychiatric Clinic<br>J123, Gamma II, Greater Noida, 201310</p><p><a href="tel:+919667863295">+91 96678 63295</a><br><a href="mailto:contact@mindgracencr.in">contact@mindgracencr.in</a></p></address>
     </div><div class="footer-bottom"><p>&copy; <span id="year"></span> Mind Grace Neuropsychiatric Clinic. Educational information only.</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/consent">Consent</a></div></div>`;
     return footer;

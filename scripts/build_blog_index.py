@@ -179,7 +179,9 @@ def discover(root):
 
 def cards(posts):
     output = ['<section aria-labelledby="latest"><h2 id="latest">All articles · newest first</h2>', f'<p class="entry-date">{len(posts)} articles in the journal</p>']
-    for i, p in enumerate(posts):
+    # Keep the landing page skimmable; deeper browsing continues in the
+    # focused adult and parent collections.
+    for i, p in enumerate(posts[:8]):
         href, title = escape(urlsplit(p["url"]).path, quote=True), escape(p["title"])
         stamp = f'<time datetime="{p["date"]}">{p["date"]}</time>' if p["date"] else "Practical guide"
         if p["readtime"]:
@@ -191,6 +193,7 @@ def cards(posts):
             output.append(f'<img src="{escape(image, quote=True)}" alt="{escape(p["alt"], quote=True)}" loading="lazy" decoding="async">')
         output.append('</article>')
     output.append('</section>')
+    output.append('<p class="journal-all-articles"><a href="/blog/adult">Browse all adult mental health guides</a><span aria-hidden="true"> · </span><a href="/blog/children">Browse all parent and child development guides</a></p>')
     return "\n".join(output)
 
 

@@ -6,6 +6,7 @@ export const labels = {
   '/services': 'Care and services', '/conditions': 'Conditions', '/about': 'About the clinic',
   '/academic-training': 'Academic training', '/student-internship-guides': 'Internship guides',
   '/resources': 'Resources and tools', '/blog': 'Journal', '/blog/adult': 'Adult mental health',
+  '/blog/quetiapine-prescription-greater-noida': 'Quetiapine Prescription in Greater Noida',
   '/blog/children': 'Child development articles', '/contact': 'Visit and contact', '/site-map': 'Explore the site',
 };
 export const groups = {
@@ -34,7 +35,7 @@ export function classify(route) {
   if (/internship|psychology-institutions/.test(route)) return { parent: '/student-internship-guides', group: 'academic' };
   if (route === '/blog') return { parent: '/', group: 'resources' };
   if (route === '/blog/adult') return { parent: '/blog', group: 'adult' };
-  if (route.startsWith('/blog/pages/adult/')) return { parent: '/blog/adult', group: 'adult' };
+  if (route.startsWith('/blog/pages/adult/') || route === '/blog/quetiapine-prescription-greater-noida') return { parent: '/blog/adult', group: 'adult' };
   if (route === '/services') return { parent: '/', group: 'adult' };
   if (route === '/conditions') return { parent: '/services', group: 'adult' };
   if (conditions.has(route)) return { parent: '/conditions', group: 'adult' };
@@ -48,7 +49,7 @@ export function classify(route) {
 }
 // Intentional bridges are allowed across groups; inferred links stay within one.
 export const bridges = {
-  '/': ['/services','/aasha','/academic-training','/resources'],
+  '/': ['/services','/aasha','/academic-training','/resources','/blog','/tools/guided-breathing'],
   '/services': ['/aasha','/psychiatry','/therapy','/assessments'],
   '/aasha': ['/aasha/learning','/aasha/developmental-assessment','/aasha/speech-language-therapy','/aasha/book'],
   '/aasha/learning': ['/blog/children','/aasha/developmental-check-in','/aasha/developmental-assessment'],
