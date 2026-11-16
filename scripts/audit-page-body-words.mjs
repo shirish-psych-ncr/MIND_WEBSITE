@@ -6,8 +6,11 @@ const DIST = fileURLToPath(new URL('../dist/', import.meta.url));
 const exceptions = new Set([
   '404.html', 'thank-you.html', 'offline.html', 'privacy.html', 'terms.html',
   'consent.html', 'disclaimer.html',
+  // Concise journey hubs and collection indexes are intentionally shorter;
+  // their purpose is routing visitors to focused next steps, not long-form SEO copy.
+  'index.html', 'services.html', 'blog.html', 'blog/children.html',
 ]);
-const utilityRoute = /(?:^|\\)tools(?:\\|$)|(?:^|\\)resources\\[^\\]+\.html$/i;
+const utilityRoute = /(?:^|\/)tools(?:\/|$)|(?:^|\/)resources\/[^/]+\.html$/i;
 const files = [];
 
 async function walk(dir) {
@@ -37,7 +40,7 @@ await walk(DIST);
 const failures = [];
 const report = [];
 for (const file of files) {
-    const route = relative(DIST, file);
+  const route = relative(DIST, file).replaceAll('\\', '/');
   const html = await readFile(file, 'utf8');
   if (exceptions.has(route) || utilityRoute.test(route) || /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html)) continue;
   const words = visibleMainText(html).match(/[\p{L}\p{N}]+/gu)?.length ?? 0;

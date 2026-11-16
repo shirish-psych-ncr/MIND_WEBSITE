@@ -2698,6 +2698,7 @@ body main .site-connections{max-width:1120px;margin:2.5rem auto;padding:clamp(1.
 .site-connections h2{font-size:1.4rem}.site-connections>ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;list-style:none;padding:0;margin:1.25rem 0}
 .site-connections>ul>li{padding:1.2rem;border:1px solid currentColor;border-radius:12px;overflow-wrap:anywhere}
 .site-connections li>span{display:block;font-size:.85rem;margin-bottom:.55rem}.site-connections li>a{font-weight:650;text-decoration:underline;line-height:1.6}
+.site-map-details{margin-top:.75rem}.site-map-details>summary{display:inline-flex;align-items:center;min-height:44px;cursor:pointer;color:var(--mg-link);font-weight:700;text-decoration:underline;text-underline-offset:.18em}.site-map-details p{margin:.25rem 0 .75rem}
 .site-directory-group{padding:1.5rem 0;scroll-margin-top:8rem}.site-directory-group ul{columns:2;column-gap:2.5rem;padding-left:1.25rem}.site-directory-group li{break-inside:avoid;margin-bottom:1rem;line-height:1.65}
 @media(max-width:640px){.site-connections>ul{grid-template-columns:1fr}.site-directory-group ul{columns:1}}
 
@@ -2754,7 +2755,7 @@ body .site-footer .footer-links { min-width: 0; }
   body .mobile-nav-trigger, body .theme-toggle { width: 40px; min-width: 40px; height: 40px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body main :where(.advanced-guide-filters, .more-ways-to-read, .resources-all-tools, .training-guide-directory, .institute-directory-disclosure, .journal-student-guides) { margin-block: 1rem 1.5rem; border-block: 1px solid var(--mg-border-strong); padding-block: .65rem; }
+body main :where(.advanced-guide-filters, .more-ways-to-read, .resources-all-tools, .training-guide-directory, .institute-directory-disclosure, .journal-student-guides, .resource-more-help) { margin-block: 1rem 1.5rem; border-block: 1px solid var(--mg-border-strong); padding-block: .65rem; }
 body main :where(.advanced-guide-filters, .more-ways-to-read, .resources-all-tools, .training-guide-directory, .institute-directory-disclosure, .journal-student-guides) > summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; color: var(--mg-link); font-weight: 750; text-decoration: underline; text-underline-offset: .18em; }
 body main :where(.more-ways-to-read, .resources-all-tools) section { margin-block: 1rem; }
 body main .training-program { margin-block: .75rem; border-bottom: 1px solid var(--mg-border-strong); padding: .5rem 0 1rem; }
@@ -2765,17 +2766,19 @@ body main .training-program[open] > summary { margin-bottom: .75rem; }
 body main .resources-featured-tools { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
 body main .resource-tool-link { display: flex; align-items: center; min-height: 44px; padding: .75rem; border-bottom: 1px solid var(--mg-border-strong); font-weight: 700; }
 body main .pn-audience-paths { max-width: 58rem; }
-body main .service-detail-section { margin-block: 1rem; border-block: 1px solid var(--mg-border-strong); }
-body main .service-detail-section > summary { display: grid; gap: .35rem; min-height: 44px; padding: 1rem 0; cursor: pointer; list-style-position: inside; }
-body main .service-detail-section > summary h2 { display: inline; margin: 0; font-size: clamp(1.35rem, 3vw, 1.8rem); }
-body main .service-detail-section > summary > span:last-child { color: var(--mg-ink-muted); }
-body main .service-detail-section[open] > summary { margin-bottom: 1rem; }
-body main .service-detail-section > .section-header { padding-inline: 0; }
-body main .service-detail-section .services-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
-body main .service-detail-section .service-card { min-width: 0; padding: clamp(1rem, 3vw, 1.5rem); }
-body main .service-detail-section .card-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
-body main .service-detail-section .card-actions a { max-width: 100%; white-space: normal; }
-body main .service-detail-section .hero-buttons { display: flex; flex-wrap: wrap; gap: .5rem; }
-body main .service-detail-section .hero-buttons a { max-width: 100%; white-space: normal; }
-@media (max-width: 600px) { body main .service-detail-section .services-grid { grid-template-columns: 1fr; } body main .service-detail-section .section-header { padding-inline: 0; } }
+body main .service-pathway-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem 1.25rem; max-width: 72rem; margin: 0; padding: 0; list-style: none; }
+body main .service-pathway-list li { position: relative; min-width: 0; border-block: 1px solid var(--mg-border-strong); }
+body main .service-pathway-list a { display: grid; gap: .35rem; min-height: 6rem; align-content: center; padding: .75rem .25rem; text-decoration: none; }
+body main .service-pathway-list strong { color: var(--mg-link); font-size: 1.05rem; }
+body main .service-pathway-list a span { color: var(--mg-ink-muted); font-size: .9rem; line-height: 1.5; }
+body main .service-pathway-list a:hover strong, body main .service-pathway-list a:focus-visible strong { text-decoration: underline; text-underline-offset: .18em; }
+body main .service-extra { max-width: 72rem; border-bottom: 1px solid var(--mg-border); }
+body main .service-extra > summary { display: flex; align-items: center; min-height: 48px; cursor: pointer; color: var(--mg-link); font-weight: 700; }
+body main .service-extra p { margin-block: .25rem 1rem; }
+body main .services-hero .hero-buttons > a { min-height: 48px; padding: .75rem 1rem; white-space: normal; }
+body main .service-pathway-list :is([id="counseling"], [id="aba-therapy"]) { position: absolute; inset-block-start: 0; scroll-margin-top: 6rem; }
+body main .family-journey-detail { margin-block: 1.25rem; border-block: 1px solid var(--mg-border-strong); padding-block: .5rem; }
+body main .family-journey-detail > summary { display: flex; align-items: center; min-height: 48px; cursor: pointer; color: var(--mg-link); font-weight: 700; text-decoration: underline; text-underline-offset: .18em; }
+body main .family-journey-detail[open] > summary { margin-bottom: 1rem; }
+@media (max-width: 720px) { body main .service-pathway-list { grid-template-columns: 1fr; gap: 0; } body main .service-pathway-list a { min-height: 4.5rem; } }
 @media print{.site-connections{display:none!important}}

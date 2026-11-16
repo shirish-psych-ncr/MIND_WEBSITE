@@ -1,5 +1,4 @@
 ---
-import AashaCare from '../components/AashaCare.astro';
 import Layout from '../layouts/Layout.astro';
 const headExtra = String.raw`<!-- Google Tag Manager -->
 <script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -189,7 +188,7 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
 
     <!-- MAIN CONTENT -->
     <main id="main-content" tabindex="-1">
-<AashaCare />
+
       <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Services</li></ol></nav>
 
       <!-- HERO SECTION -->
@@ -199,16 +198,12 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
             <span class="hero-badge">Care options in Greater Noida</span>
             <h1 id="page-title">Mental health care in Greater Noida</h1>
 
-<div class="seo-answer"><strong>Direct answer:</strong> Mind Grace Neuropsychiatric Clinic in Greater Noida provides adult psychiatric consultations, child development care through Aasha Early Intervention Centre, counselling for individuals, couples, and families, and structured assessments. You do not need a diagnosis to begin &mdash; the first visit clarifies the concern and the next step.</div>
-            <p class="hero-subtitle">Explore psychiatry, therapy, assessment, or child development support.</p>
+<div class="seo-answer"><strong>Direct answer:</strong> Mind Grace offers psychiatry, therapy, and psychological assessment in Greater Noida, with child development support through Aasha.</div>
+            <p class="hero-subtitle">Find adult care or child and family support.</p>
             <div class="hero-buttons">
               <a href="/book" class="btn btn-primary">
                 <i data-lucide="calendar" aria-hidden="true"></i>
-                Book Consultation
-              </a>
-              <a href="/process" class="btn btn-secondary">
-                How It Works
-                <i data-lucide="arrow-right" class="icon icon-sm" aria-hidden="true"></i>
+                Book adult care
               </a>
             </div>
           </div>
@@ -216,301 +211,34 @@ title="Google Tag Manager container" height="0" width="0" style="display:none;vi
       </section>
 
       <!-- ADULT SERVICES SECTION -->
-      <section class="main-section" aria-labelledby="service-table-title">
+      <section class="main-section service-overview" aria-labelledby="service-pathway-title">
         <div class="section-header">
-          <h2 id="service-table-title">Service comparison at a glance</h2>
-          <p>The table below summarizes what each Mind Grace pathway involves, typical session length, and where to read more. Current fees for every line are listed on the <a href="/fees">fees page</a>.</p>
+          <h2 id="service-pathway-title">Choose a care pathway</h2>
+          <p>Start with the kind of support you are looking for. You can explore details, fees, and visit information when you need them.</p>
         </div>
-        <div class="table-scroll" role="region" aria-label="Mind Grace service comparison table" tabindex="0">
-          <table class="fee-comparison-table">
-            <caption>Mind Grace Neuropsychiatric Clinic service pathways compared (Greater Noida)</caption>
-            <thead>
-              <tr>
-                <th scope="col">Pathway</th>
-                <th scope="col">Who it is for</th>
-                <th scope="col">Typical format</th>
-                <th scope="col">More information</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Adult psychiatry consultation</th>
-                <td>Anxiety, depression, ADHD, sleep, and mood concerns</td>
-                <td>About 45 minutes initial, 30-minute follow-ups</td>
-                <td><a href="/psychiatry">Psychiatry consultations</a></td>
-              </tr>
-              <tr>
-                <th scope="row">Aasha child development support</th>
-                <td>Children and adolescents with learning, attention, or communication concerns</td>
-                <td>Family-inclusive assessment and guidance sessions</td>
-                <td><a href="/child-development">Child development</a></td>
-              </tr>
-              <tr>
-                <th scope="row">Counselling and psychotherapy</th>
-                <td>Individuals, couples, families, and young people</td>
-                <td>Regular one-to-one or joint sessions</td>
-                <td><a href="/therapy">Therapy</a> and <a href="/psychology-counselling">counselling</a></td>
-              </tr>
-              <tr>
-                <th scope="row">Structured assessments</th>
-                <td>ADHD, autism, learning, and psychological evaluation questions</td>
-                <td>Multi-session, tool-based, written report</td>
-                <td><a href="/assessments">Assessments</a> and <a href="/adhd-autism-assessment">ADHD and autism</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <ul class="service-pathway-list">
+          <li><a id="psychiatry" href="/psychiatry"><strong>Adult psychiatric care</strong><span>Consultations, medication reviews, and mood or anxiety concerns</span></a></li>
+          <li><a id="psychology" href="/therapy"><strong>Therapy and counselling</strong><span>Psychological support for individuals, couples, and families</span></a><span id="counseling" class="service-anchor" aria-hidden="true"></span></li>
+          <li><a id="speech-therapy" href="/child-development"><strong>Child and family support</strong><span>Assessment, development, learning, and parent guidance through Aasha</span></a><span id="aba-therapy" class="service-anchor" aria-hidden="true"></span></li>
+        </ul>
+        <details class="service-extra">
+          <summary>Explore assessments and concerns</summary>
+          <p>For a focused question, browse <a href="/assessments">psychological assessments</a>, <a href="/conditions">conditions and concerns</a>, or <a href="/adhd-autism-assessment">ADHD and autism assessment</a>.</p>
+        </details>
+        <details class="service-extra">
+          <summary>Plan a visit</summary>
+          <p>Check <a href="/fees">fees</a>, <a href="/process">what to expect</a>, or <a href="/teleconsultation">online appointments</a>, then <a href="/book">request a consultation</a>.</p>
+        </details>
       </section>
-
-      <details class="service-detail-section main-section section-plum">
-        <summary><span class="section-badge">Mind Grace Neuropsychiatric Clinic</span><h2 id="adult-title">Adult Psychiatry Services</h2><span>Explore consultations, medication reviews, and care by concern</span></summary>
-        <div class="section-header">
-          <span id="psychiatry" class="topic-anchor" aria-hidden="true"></span>
-          <span id="psychology" class="topic-anchor" aria-hidden="true"></span>
-          <span id="counseling" class="topic-anchor" aria-hidden="true"></span>
-          <p>
-            Consultations for anxiety, depression, ADHD, sleep concerns, mood changes, and related mental health needs.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="file-text" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Psychiatric Consultation</h3>
-            <p>
-              You might start here if you are not fully sure what is going on
-              but want a structured first conversation. Often useful for
-              anxiety, mood changes, sleep concerns, attention problems, or
-              overlapping symptoms.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Book Consultation</a>
-              <a href="/process" class="btn btn-outline btn-sm">See what to expect</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="flask-conical" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Medication Review</h3>
-            <p>
-              Useful if you are already on medication, adjusting to treatment,
-              or trying to understand whether the current plan still fits.
-              Follow-up visits focus on response, side effects, daily
-              functioning, and practical next steps.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Book Follow-up</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="zap" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Anxiety and Panic Care</h3>
-            <p>
-              You might relate to this if there is constant worry, panic,
-              overthinking, physical tension, or avoidance. Support may include
-              explanation, coping strategy planning, therapy guidance, and
-              medication when appropriate.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Get Help</a>
-              <a href="/conditions#anxiety" class="btn btn-outline btn-sm">See Symptoms</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="smile" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Mood Support</h3>
-            <p>
-              You might start here if there is loss of interest, heaviness,
-              irritability, exhaustion, or difficulty functioning. The first
-              step is understanding the pattern and daily impact before deciding
-              what kind of treatment fits best.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Get Help</a>
-              <a href="/conditions#depression" class="btn btn-outline btn-sm">See Symptoms</a>
-              <a href="/bipolar-mood-disorders" class="btn btn-outline btn-sm">Bipolar Resources</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="brain" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Psychosis & Schizophrenia Care</h3>
-            <p>
-              Specialized support for unusual perceptions, belief changes, or thought difficulties. Early intervention and consistent care can significantly improve outcomes.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Book Consultation</a>
-              <a href="/psychosis-schizophrenia" class="btn btn-outline btn-sm">Learn More</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="heart-handshake" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Trauma & Grief Support</h3>
-            <p>
-              Compassionate care for traumatic experiences, loss, and bereavement. Evidence-based therapies help process difficult memories and rebuild safety.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Get Support</a>
-              <a href="/trauma-grief-support" class="btn btn-outline btn-sm">Resources</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="wine" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Addiction & Substance Use</h3>
-            <p>
-              Non-judgmental support for alcohol, drug, or behavioral addictions. Treatment includes assessment, harm reduction, and recovery planning.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Confidential Help</a>
-              <a href="/addiction-substance-use" class="btn btn-outline btn-sm">Learn More</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="moon" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Sleep & Eating Disorders</h3>
-            <p>
-              Support for insomnia, irregular sleep patterns, and eating concerns. Integrated approaches address both physical and psychological factors.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Book Assessment</a>
-              <a href="/sleep-eating-disorders" class="btn btn-outline btn-sm">View Guide</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="clipboard-list" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Adult ADHD Assessment</h3>
-            <p>
-              You might relate to this if concentration, organisation,
-              task-starting, forgetfulness, or overwhelm have been long-standing
-              problems. Assessment can include pattern review, practical
-              support, and discussion of treatment options.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Book Assessment</a>
-              <a href="/blog" class="btn btn-outline btn-sm">Read Articles</a>
-            </div>
-          </article>
-        </div>
-      </details>
-
-      <!-- CHILD SERVICES SECTION -->
-      <details class="service-detail-section main-section section-white">
-        <summary><span class="section-badge">Aasha Early Intervention</span><h2 id="child-title">Child Development Support</h2><span>Explore assessment, therapy, and parent guidance</span></summary>
-        <div class="section-header">
-          <span id="speech-therapy" class="topic-anchor" aria-hidden="true"></span>
-          <span id="aba-therapy" class="topic-anchor" aria-hidden="true"></span>
-          <p>
-            Child-development assessment, parent guidance, and referrals or support for communication, learning, and daily participation concerns.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="message-square" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Speech and Language Support</h3>
-            <p>
-              Useful when talking seems delayed, unclear, inconsistent, or
-              harder than expected for age. Early support is often most helpful
-              when communication is affecting learning, interaction, or
-              confidence.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Book an Aasha Assessment</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="target" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Occupational Therapy</h3>
-            <p>
-              Useful for sensory regulation, coordination, attention, self-help
-              tasks, and daily participation concerns. Parents often notice
-              these concerns in routines, play, school transitions, or
-              behaviour.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Book an Aasha Assessment</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <i data-lucide="users" class="icon icon-lg" aria-hidden="true"></i>
-            </div>
-            <h3>Parent Guidance</h3>
-            <p>
-              Useful when families need practical ways to understand behaviour,
-              routines, school demands, or communication patterns. This often
-              works best when parents, caregivers, and therapists are aligned
-              around one clear plan.
-            </p>
-            <div class="card-actions">
-              <a href="/book" class="btn btn-primary btn-sm">Book Parent Session</a>
-              <a href="/blog" class="btn btn-outline btn-sm">Read Articles</a>
-            </div>
-          </article>
-        </div>
-      </details>
-
-      <details class="service-detail-section main-section">
-        <summary><h2 id="pathways-title">Explore care by concern</h2><span>Browse focused guides by service or topic</span></summary>
-        <div class="content-narrow">
-          <p class="hero-subtitle">Use these focused guides to understand common pathways before you contact the clinic.</p>
-          <div class="hero-buttons">
-            <a href="/psychiatry" class="btn btn-outline">Psychiatry</a>
-                <a href="/psychiatrist-in-noida" class="btn btn-outline">Psychiatrist in Noida</a>
-                <a href="/psychiatrist-greater-noida" class="btn btn-outline">Psychiatrist in Greater Noida</a>
-            <a href="/psychology-counselling" class="btn btn-outline">Psychology and counselling</a>
-            <a href="/therapy" class="btn btn-outline">Therapy</a>
-            <a href="/assessments" class="btn btn-outline">Assessments</a>
-            <a href="/teleconsultation" class="btn btn-outline">Teleconsultation</a>
-            <a href="/specialized-consultations" class="btn btn-outline">Specialized Consultations</a>
-            <a href="/mind-grace" class="btn btn-outline">About Mind Grace Clinic</a>
-            <a href="/blog/iilm-psychology-internship" class="btn btn-outline">Psychology Internship</a>
-          </div>
-        </div>
-      </details>
-
       <!-- CTA SECTION -->
       <section class="main-section section-blush" aria-labelledby="cta-title">
         <div class="content-narrow text-center">
           <h2 id="cta-title">Not sure which service fits?</h2>
           <p class="hero-subtitle">
-            If several concerns overlap, a first consultation can help clarify what to explore next. You can also contact the clinic with a routine question before booking.
+            A routine question is welcome if you are unsure where to begin.
           </p>
           <div class="hero-buttons">
-            <a href="/book" class="btn btn-primary">
-              Start with Consultation
-            </a>
-            <a href="/faq" class="btn btn-secondary"> Read FAQ First </a>
+            <a href="/contact" class="btn btn-primary">Ask us where to start</a>
           </div>
         </div>
       </section>

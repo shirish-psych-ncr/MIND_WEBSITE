@@ -707,6 +707,10 @@
   function addContentPathway(main) {
     if (!main || main.querySelector("[data-content-pathway], .article-next-step, .mg-access")) return;
     const path = window.location.pathname.replace(/\\/g, "/");
+    // The static relationship builder already renders a small, contextual
+    // next-step panel on each public route. Avoid appending a second set of
+    // choices, and let the homepage keep its four audience paths uncluttered.
+    if (path === "/" || main.querySelector("[data-site-connections]")) return;
     const file = currentFile();
     const pathways = {
       "/": {
@@ -848,8 +852,8 @@
       content = {
         title: childArticle ? "For parents, a clearer way to notice what is changing" : "Information is a starting point, not a diagnosis",
         body: childArticle
-          ? "This guide helps parents put words to a child’s communication, sensory, school, or developmental concerns. If the pattern affects daily life or keeps worrying your family, a child-development conversation can help you decide what support fits."
-          : "This guide helps you put words to a pattern affecting mood, worry, sleep, or daily life. If the concern continues or feels difficult to manage, a confidential conversation can help you decide what support fits.",
+          ? "Describe concerns about communication, sensory needs, school or development. A child-development conversation can help clarify what support may fit."
+          : "Describe changes in mood, worry, sleep or daily life. A confidential conversation can help you consider which support may fit.",
         links: [["Browse all guides", "/blog"], [childArticle ? "Explore Aasha child-development services" : "See adult mental health services", childArticle ? "/aasha#services" : "/services"], ["Try a gentle self-help tool", "/resources#tools"], ["Book a consultation", "/book"]]
       };
     }

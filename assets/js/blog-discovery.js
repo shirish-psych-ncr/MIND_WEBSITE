@@ -20,7 +20,7 @@
     if (!target) return;
     target.innerHTML = posts.length ? posts.map((post) => {
       const tags = post.tags.filter((tag) => !["adult", "child", "children", "beginner", "most-searched"].includes(tag)).slice(0, 4);
-      return `<article class="article-card"><div class="article-meta"><span>${escapeHtml(post.date || "Practical guide")}</span><span>${escapeHtml(post.readtime || "Read at your pace")}</span></div><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.description || "A clear, practical guide from Mind Grace Clinic.")}</p><div class="tag-row">${tags.map((tag) => `<span class="tag">${escapeHtml(label(tag))}</span>`).join("")}</div><a class="button button-primary" href="${escapeHtml(post.href)}">Read this guide</a></article>`;
+      return `<article class="article-card"><div class="article-meta"><span>${escapeHtml(post.date || "Practical guide")}</span><span>${escapeHtml(post.readtime || "Read at your pace")}</span></div><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.description || "A clear, practical guide from Mind Grace Clinic.")}</p><div class="tag-row">${tags.map((tag) => `<span class="tag">${escapeHtml(label(tag))}</span>`).join("")}</div><a class="button button-primary" href="${escapeHtml(post.href)}">Read article</a></article>`;
     }).join("") : `<div class="empty-state">${escapeHtml(emptyMessage)}</div>`;
   }
 

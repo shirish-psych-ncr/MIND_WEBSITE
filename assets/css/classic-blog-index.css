@@ -2,7 +2,7 @@
 .journal-categories{display:flex;flex-wrap:wrap;gap:10px 24px;font:14px/1.6 Arial,sans-serif;border-block:1px solid var(--line);padding:15px 0;margin:10px 0 30px}
 .journal-parent-path{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.35rem 1rem;max-width:52rem;margin:0 0 1.5rem;padding:.9rem 1rem;border-left:3px solid var(--accent,var(--ink));background:var(--surface,#f7f4ed)}
 .journal-parent-path strong{grid-column:1;color:var(--ink)}.journal-parent-path span{grid-column:1;color:var(--muted,#665f53);font-size:.92rem}.journal-parent-path a{grid-column:2;grid-row:1/3;align-self:center;font-weight:700}
-.journal-categories a{min-height:44px;display:inline-flex;align-items:center}.journal-categories a[href="#parents"]{font-weight:700;text-decoration-thickness:2px;text-underline-offset:.2em}
+.journal-categories a{min-height:44px;display:inline-flex;align-items:center}.journal-categories a[href="/blog/children"]{font-weight:700;text-decoration-thickness:2px;text-underline-offset:.2em}
 .journal-student-guides{margin:1rem 0 2rem;border-block:1px solid var(--line);padding:.8rem 0}.journal-student-guides summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font-weight:700}.journal-student-guides p{margin:.5rem 0 0}
 .journal-all-articles{margin:1rem 0 2rem;line-height:1.7}
 .journal-index article{max-width:none;padding:22px 0;margin:0;border-bottom:1px solid var(--line)}

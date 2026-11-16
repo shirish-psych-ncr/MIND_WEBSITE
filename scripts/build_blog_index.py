@@ -178,7 +178,7 @@ def discover(root):
 
 
 def cards(posts):
-    output = ['<section aria-labelledby="latest"><h2 id="latest">All articles · newest first</h2>', f'<p class="entry-date">{len(posts)} articles in the journal</p>']
+    output = ['<section aria-labelledby="latest"><h2 id="latest">Latest articles</h2>', f'<p class="entry-date">Showing {min(8, len(posts))} of {len(posts)} journal articles</p>']
     # Keep the landing page skimmable; deeper browsing continues in the
     # focused adult and parent collections.
     for i, p in enumerate(posts[:8]):

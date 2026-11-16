@@ -96,7 +96,7 @@ for (const record of records.values()) {
   const breadcrumb = record.route === '/' ? '' : `<nav class="breadcrumbs" aria-label="Breadcrumb" data-authored-breadcrumbs data-site-breadcrumbs><ol>${crumbs.map((item,i)=>`<li>${i ? '<span aria-hidden="true"> / </span>' : ''}${i === crumbs.length-1 ? `<span aria-current="page">${escape(item.name)}</span>` : `<a href="${item.route}">${escape(item.name)}</a>`}</li>`).join('')}</ol></nav>`;
   patches.push({start:record.main.sourceCodeLocation.startTag.endOffset,end:record.main.sourceCodeLocation.startTag.endOffset,value:breadcrumb+`<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>`});
   if (related.length) {
-    const panel = `<section class="site-connections" data-site-connections aria-labelledby="connected-pages-title"><h2 id="connected-pages-title">Explore connected pages</h2><ul>${related.map(({candidate,reason})=>`<li><span>${escape(reason)}</span><a href="${candidate.route}">${escape(candidate.name)}</a></li>`).join('')}</ul><p><a href="/site-map">Explore all topics and pages</a></p></section>`;
+    const panel = `<section class="site-connections" data-site-connections aria-labelledby="connected-pages-title"><h2 id="connected-pages-title">Explore connected pages</h2><ul>${related.map(({candidate,reason})=>`<li><span>${escape(reason)}</span><a href="${candidate.route}">${escape(candidate.name)}</a></li>`).join('')}</ul><details class="site-map-details"><summary>Browse the full directory</summary><p><a href="/site-map">Explore all topics and pages</a></p></details></section>`;
     const end = record.main.sourceCodeLocation.endTag.startOffset;
     patches.push({start:end,end,value:panel});
   }

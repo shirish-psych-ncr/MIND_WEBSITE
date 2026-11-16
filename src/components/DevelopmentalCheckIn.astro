@@ -204,7 +204,7 @@ el('check-share').addEventListener('click', () => {
   if (!el<HTMLInputElement>('share-consent').checked) return;
   const message = el<HTMLTextAreaElement>('check-message').value.trim(); if (!message) { el('share-status').textContent = 'Add a message before opening WhatsApp.'; return; }
   window.open(`https://wa.me/${root.dataset.phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
-  el('share-status').textContent = 'Review and send the message in WhatsApp. Nothing has been sent by this page. If it did not open, you can copy the draft or call Aasha.';
+  el('share-status').textContent = 'Review and send the message in WhatsApp. It has not been sent yet. If WhatsApp did not open, copy the draft or call Aasha.';
 });
 save.addEventListener('change', persist);
 el('check-reset').addEventListener('click', () => {

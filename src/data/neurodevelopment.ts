@@ -138,7 +138,7 @@ for (const entry of entries) {
   if (expanded) Object.assign(entry, expanded);
   if (entry.kind === 'article') {
     entry.image = entry.slug;
-    entry.imageAlt = `${entry.title}: a guide map of the key questions explored in this article.`;
+    entry.imageAlt = `${entry.title}: key questions to consider.`;
   }
 }
 export const entryPath = (entry: LearningEntry) => entry.kind === 'article' ? `/blog/pages/child/${entry.slug}` : `/aasha/resources/${entry.slug}`;

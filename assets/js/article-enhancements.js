@@ -82,9 +82,9 @@
     headings.forEach((heading) => { if (!heading.id) heading.id = slug(heading.textContent || "section"); });
     const nav = document.createElement("nav");
     nav.className = "article-toc";
-    nav.setAttribute("aria-label", "On this page");
+    nav.setAttribute("aria-label", "Contents");
     const title = document.createElement("strong");
-    title.textContent = "On this page";
+    title.textContent = "Contents";
     const list = document.createElement("ol");
     headings.forEach((heading) => {
       const item = document.createElement("li");
@@ -104,14 +104,14 @@
     const panel = document.createElement("section");
     panel.className = "article-next-step surface-soft panel";
     panel.setAttribute("aria-labelledby", "article-next-step-title");
-    panel.innerHTML = `<p class="eyebrow">A practical next step</p><h2 id="article-next-step-title">You do not need a perfect explanation before asking for help</h2><p>Use this guide to notice patterns, not to diagnose yourself or your child. If the concern is persistent, distressing, or affecting daily life, a confidential first conversation can help you decide what to do next.</p><div class="cta-row"><a class="button-primary" href="/book">Book a consultation</a><a class="button-ghost" href="https://wa.me/919667863295" target="_blank" rel="noopener" aria-label="Ask on WhatsApp (opens in a new tab)">Ask on WhatsApp</a><a class="button-ghost" href="/emergency">Urgent help</a></div>`;
+    panel.innerHTML = `<p class="eyebrow">A practical next step</p><h2 id="article-next-step-title">You do not need a perfect explanation before asking for help</h2><p>Notice patterns without trying to diagnose yourself or your child. If a concern persists, causes distress, or affects daily life, a confidential first conversation can help you decide what support may fit.</p><div class="cta-row"><a class="button-primary" href="/book">Book a consultation</a><a class="button-ghost" href="https://wa.me/919667863295" target="_blank" rel="noopener" aria-label="Ask on WhatsApp (opens in a new tab)">Ask on WhatsApp</a><a class="button-ghost" href="/emergency">Urgent help</a></div>`;
     article.appendChild(panel);
 
     const choices = document.createElement("div");
     choices.className = "article-feedback";
     choices.setAttribute("role", "group");
     choices.setAttribute("aria-labelledby", "article-feedback-title");
-    choices.innerHTML = `<span id="article-feedback-title">Was this guide useful?</span><button type="button" data-article-feedback="clearer">Yes, clearer now</button><button type="button" data-article-feedback="question">I still have a question</button><span class="article-feedback-status" aria-live="polite"></span>`;
+    choices.innerHTML = `<span id="article-feedback-title">Was this helpful?</span><button type="button" data-article-feedback="clearer">Yes, clearer now</button><button type="button" data-article-feedback="question">I still have a question</button><span class="article-feedback-status" aria-live="polite"></span>`;
     choices.addEventListener("click", (event) => {
       const button = event.target.closest("[data-article-feedback]");
       if (!button) return;
